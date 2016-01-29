@@ -1,0 +1,19 @@
+
+Operacje na macierzach
+----------------------
+
+Macierze permutacji
+~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Twierdzenie 1. :math:`\,`
+   
+   Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ ` to 
+   :math:`\ \,O_\sigma\,(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   (O_\sigma\,\boldsymbol{A})\,\boldsymbol{B}\,,\quad\sigma\in S_m.`
+
+
+**Zadanie 1.** :math:`\,` Udowodnij, że :math:`\\`
+jeżeli :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ \ ` 
+to :math:`\ \,O_\sigma\,(\boldsymbol{A}\boldsymbol{B})\ =\ 
+(O_\sigma\boldsymbol{A})\,\boldsymbol{B}\,,\quad\sigma\in S_m.`
+

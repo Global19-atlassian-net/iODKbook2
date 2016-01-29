@@ -1,0 +1,78 @@
+.. -*- coding: utf-8 -*-
+
+Wektory i macierze w systemie Sage
+----------------------------------
+|
+| W poprzedniej sekcji przyjmowaliśmy, że elementami macierzy są
+  liczby rzeczywiste z ciała :math:`\ R\ ` albo liczby zespolone z ciała :math:`\ C.`
+  Tymczasem działania na macierzach są możliwe, a własności tych działań są zachowane, 
+  gdy elementy należą do prostszej struktury - pierścienia z jednością (którym w szczególności może być ciało).
+  Właśnie pierścień jest w systemie Sage podstawową strukturą algebraiczną,
+  na której zbudowana jest algebra wielomianów i macierzy.
+
+Poniżej znajduje się przegląd pierścieni stosowanych w Sage:
+
++------+-------------------------------+----------------------------+
+|Symbol|         Określenie            | Obliczenia i zastosowanie  |
++======+===============================+============================+
+|ZZ    | Pierścień liczb całkowitych   |dokładne, ograniczona       |
+|      |                               |liczba działań              |
++------+-------------------------------+----------------------------+
+|QQ    |Ciało liczb wymiernych         |dokładne, ograniczona       |
+|      |                               |liczba działań              |
++------+-------------------------------+----------------------------+
+|RR    |Ciało liczb rzeczywistych      |arytmetyka interwałowa      |
+|      |o pojedynczej precyzji         |                            |
++------+-------------------------------+----------------------------+
+|CC    |Ciało liczb zespolonych        |arytmetyka interwałowa      |
+|      |o pojedynczej precyzji         |                            |
++------+-------------------------------+----------------------------+
+|RDF   |Ciało liczb rzeczywistych      |rachunki numeryczne         |
+|      |o podwójnej precyzji           |                            |
++------+-------------------------------+----------------------------+
+|CDF   |Ciało liczb zespolonych        |rachunki numeryczne         |
+|      |o podwójnej precyzji           |                            |
++------+-------------------------------+----------------------------+
+|SR    |Pierścień symboliczny          |dokładne, ograniczona       |
+|      |                               |liczba działań              |
++------+-------------------------------+----------------------------+
+
+Warto również zapoznać się z oryginalną terminologią:
+
+.. sagecellserver::
+
+   ZZ, QQ, RR, CC, RDF, CDF, SR, RealField(12), ComplexField(248)
+
+Ostatnie dwie pozycje pokazują, że obliczenia na liczbach rzeczywistych i zespolonych
+można prowadzić z dowolną zadaną dokładnością.
+
+W tej sytuacji istnieją dwie strategie rachunków na macierzach i wektorach:
+
+* Numeryczna algebra liniowa: elementami macierzy i wektorów są
+  liczby o skończonej precyzji. Błędy zaokrągleń kumulują się,
+  co należy brać pod uwagę przy wykonywaniu różnych operacji.
+
+* Dokładna algebra liniowa: elementy macierzy należą do zbiorów ZZ, QQ, SR;
+  operacje są dokładne, ale nie wszystkie mogą być wykonane
+  i wydajność jest ograniczona.
+
+W odróżnieniu od stylu przyjętego w poprzedniej sekcji o działaniach na macierzach
+(a także w większości pozycji literatury) Sage preferuje podejście wierszowe
+do wektorów i macierzy: wektor jako taki jest wektorem wierszowym,
+a macierz jest układem (listą) wierszy. Ponadto przy wyświetlaniu wektorów i macierzy
+używane są nawiasy zaokrąglone (nawiasy prostokątne wykorzystuje się przy zapisie list).
+
+Inaczej niż w poprzednich sekcjach tego skryptu
+i w większości pozycji literatury z dziedziny algebry linowej, 
+przy zapisie wektorów i macierzy Sage używa nawiasów okrągłych, a nie prostokątnych
+(nawiasy prostokątne wykorzystuje się do zapisu list).
+Ponadto wektory i macierze interpretowane są wierszowo, a nie kolumnowo:
+wektor jest wektorem wierszowym, a macierz jest układem (konkretnie: listą) wierszy.
+
+W systemie Sage wektory i macierze są obiektami języka Python, należącymi do odpowiedniej klasy (typu).
+Obiekty takie powołuje się do życia używając odpowiednich konstruktorów.
+W tym wypadku będą to polecenia ``vector`` i ``matrix``.
+
+
+
+   
