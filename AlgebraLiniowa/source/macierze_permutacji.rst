@@ -1,6 +1,6 @@
 
-Permutation Matrices
---------------------
+Macierze permutacji
+-------------------
 
 Niech będzie dana macierz 
 :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)\,` o postaci wierszowej

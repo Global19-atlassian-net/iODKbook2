@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Geometry of Linear Equations
-----------------------------
+Geometria układów równań liniowych
+----------------------------------
 
 Badanym w tej sekcji układom dwóch albo trzech równań liniowych odpowiadają 
 określone sytuacje na płaszczyźnie albo w trójwymiarowej przestrzeni.
@@ -13,8 +13,10 @@ która wespół z kolumną wolnych wyrazów reprezentuje dany układ równań.
 Dyskusja taka pozwoli wyrobić intuicję, pomocną przy analizie większych układów równań,
 których obrazem są obiekty geometryczne w przestrzeniach wielowymiarowych.
 
-Row Picture
-~~~~~~~~~~~
+
+
+Obraz wierszowy
+~~~~~~~~~~~~~~~
 
 Rozważmy układ dwóch równań liniowych:
 
@@ -61,8 +63,8 @@ co łatwo sprawdzić ręcznie lub komputerowo:
 | b.) :math:`\ ` ma nieskończenie wiele rozwiązań (układ nieoznaczony),
 | c.) :math:`\ ` nie ma żadnych rozwiązań (układ sprzeczny).
 
-Column Picture
-~~~~~~~~~~~~~~
+Obraz kolumnowy
+~~~~~~~~~~~~~~~
  
 Rozważany układ równań
 
@@ -171,8 +173,8 @@ macierzy :math:`\,\boldsymbol{A},\ ` a obraz kolumnowy :math:`\ -\ ` odczytując
 
 :math:`\ `
 
-Consistent System: a unique solution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Układ oznaczony: dokładnie jedno rozwiązanie
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy teraz układ trzech równań o trzech niewiadomych:
 
@@ -233,7 +235,7 @@ można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column
        pretty_print(html(comp % (1, L[0][0],L[0][1],L[0][2]) + ' $+$ ' +\
             comp % (2, L[1][0],L[1][1],L[1][2]) + ' $+$ ' +\
             comp % (3, L[2][0],L[2][1],L[2][2]) + ' $=$ ' +\
-            clmn %    (L[3][0],L[3][1],L[3][2])))            
+            clmn %    (L[3][0],L[3][1],L[3][2])))
 
 Aby wywołać funkcję, trzeba utworzyć listę równań :math:`\ ` ``Eqns`` :math:`\ ` 
 i podać ją jako argument:
@@ -284,8 +286,8 @@ Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` nie są komplanarne
 
 
 
-Consistent System: infinitely many solutions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Układ nieoznaczony: nieskończenie wiele rozwiązań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Zajmiemy się z kolei rozwiązaniami układu równań liniowych
 
@@ -381,8 +383,8 @@ Zachęcamy do analizy kodu i zapoznania się z użytymi zaawansowanymi narzędzi
 
    line(pts, axes_labels=['x1','x2'], color='green', figsize=5)
 
-Inconsistent System: no solution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Układ sprzeczny: brak rozwiązań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
 

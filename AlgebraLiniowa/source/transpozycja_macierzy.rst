@@ -1,6 +1,6 @@
 
-Matrix Transposition
---------------------
+Transpozycja macierzy
+---------------------
 
 .. *Macierzą transponowaną* względem macierzy 
    :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)`
@@ -126,8 +126,8 @@ Dowód twierdzenia 2.:
 
 
 
-Symmetric and skew-symmetric matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Macierze symetryczne i antysymetryczne
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Macierz :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\,` 
 nazywa się :math:`\,` *macierzą symetryczną*, :math:`\\`

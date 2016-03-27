@@ -1,6 +1,6 @@
 
-The Permutation Expansion
--------------------------
+Rozwinięcie permutacyjne
+------------------------
 
 Kwestię istnienia i jednoznaczności wyznacznika
 rozstrzyga następujące twierdzenie, które podajemy bez dowodu:

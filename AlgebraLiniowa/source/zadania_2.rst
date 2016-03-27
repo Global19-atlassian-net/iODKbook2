@@ -1,5 +1,5 @@
 
-Matrices
+Macierze
 --------
 
 **Zadanie 0.** :math:`\,`

@@ -1,6 +1,6 @@
 
-Problems
---------
+Zadania
+-------
 
 **Zadanie 1.**
 

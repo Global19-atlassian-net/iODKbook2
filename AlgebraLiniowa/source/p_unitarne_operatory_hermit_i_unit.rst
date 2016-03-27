@@ -1,6 +1,6 @@
 
-Hermitian and Unitary Operators
--------------------------------
+Operatory hermitowskie i unitarne
+---------------------------------
 
 .. Rozważamy skończenie wymiarową przestrzeń unitarną :math:`\,V(C).\ `
 
@@ -102,8 +102,8 @@ Rzeczywiście, warunek :math:`\ \langle\,x,Fy\,\rangle\,=\,\langle\,x,Gy\,\rangl
    \qquad\Leftrightarrow\qquad F=G\,.`
 
 
-Hermitian Conjugation of a Linear Operator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sprzężenie hermitowskie operatora liniowego
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    
@@ -408,8 +408,8 @@ W świetle Twierdzenia 8. i wynikającego z niego wniosku analogia między włas
 operacji sprzężenia hermitowskiego macierzy i operatorów liniowych jest nieprzypadkowa. :math:`\\`
 
 
-Hermitian Operators
-~~~~~~~~~~~~~~~~~~~
+Operatory hermitowskie
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    
@@ -531,8 +531,8 @@ układ ortonormalny. Wynika stąd
 .. (faktycznie, warunek :math:`\,n\,` różnych wartości własnych 
    nie jest konieczny do istnienia takiej bazy)
 
-Unitary Operators
-~~~~~~~~~~~~~~~~~
+Operatory unitarne
+~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    

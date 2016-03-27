@@ -1,4 +1,4 @@
-Matrix Inversion
+Macierz odwrotna
 ----------------
 
 Jednością (czyli elementem neutralnym ze względu na mnożenie) 

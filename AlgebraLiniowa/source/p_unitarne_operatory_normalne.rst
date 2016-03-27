@@ -1,9 +1,9 @@
 
-Normal Operators
-----------------
+Operatory normalne
+------------------
 
-Commutator and its Properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Komutatory i ich własności
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Niech :math:`\,A,\,B\ ` będą elementami nieprzemiennej algebry,
 np. zespolonymi bądź rzeczywistymi macierzami kwadratowymi stopnia :math:`\,n\ ` 
@@ -84,8 +84,8 @@ Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` można odnotować da
    [\,A,B\,]^{\,*}\ \,=\ \ [\,A^*,B^*\,]\,,\qquad
    [\,A,B\,]^{\,+}\ \,=\ \ [\,B^+,A^+\,]\,.
 
-Normal Matrices and Normal Operators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Macierze i operatory normalne
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    

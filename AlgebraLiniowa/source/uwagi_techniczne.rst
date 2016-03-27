@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Technical remarks
------------------
+Uwagi techniczne
+----------------
 
 Komórki Sage'a uruchamiane przyciskiem "Wykonaj" są ze sobą powiązane (linked) w tym sensie,
 że obiekty wprowadzone w danej komórce są dostępne w komórkach następnych.

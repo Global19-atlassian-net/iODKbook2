@@ -1,6 +1,6 @@
 
-Unitary Spaces
---------------
+Przestrzenie unitarne
+---------------------
 
 .. admonition:: Twierdzenie 1.
    

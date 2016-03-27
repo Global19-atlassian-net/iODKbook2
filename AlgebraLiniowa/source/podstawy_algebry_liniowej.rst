@@ -1,6 +1,6 @@
 
-Fundamental Concepts in Linear Algebra
---------------------------------------
+Podstawy algebry liniowej
+-------------------------
 
 Zakładamy, że dana jest przestrzeń wektorowa :math:`\,V\,` nad ciałem 
 :math:`\,K :\ V(K)\,,\,` gdzie :math:`\,K\,` jest ciałem liczb rzeczywistych :math:`\,R\,`
@@ -23,8 +23,8 @@ w odpowiedniej grupie addytywnej:
 
    v - w\ :\,=\ v\,+\,(-w)\,,\qquad v,w\in V\,.
 
-A Few Simple Theorems
-~~~~~~~~~~~~~~~~~~~~~
+Proste twierdzenia
+~~~~~~~~~~~~~~~~~~
 
 1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu; :math:`\\`
 pomnożenie wektora zerowego przez dowolną liczbę daje w wyniku wektor zerowy:
@@ -169,8 +169,8 @@ to :math:`\ \,\alpha\cdot v\ =\ \alpha\cdot \theta\ =\ \theta\,.`
 Stwierdziliśmy w ten sposób, że równoważność :eq:`fourth` jest prawdziwa
 w każdym przypadku, co kończy dowód twierdzenia 4.).
 
-Linear Combination of Vectors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Kombinacje liniowe wektorów
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Jeżeli dla pewnego wektora :math:`\,x\in V\,` jest spełniony warunek 
 
@@ -252,8 +252,8 @@ Podprzestrzenie te są związane relacją:
    
    L(\vec{v}_1)\,<\,L(\vec{v}_1,\vec{v}_2)\,<\,L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,.
 
-Linear Dependence and Independence
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Liniowa zależność i niezależność wektorów
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mówimy, że układ wektorów :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo zależny*
 (lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo zależne*), :math:`\,`
@@ -436,8 +436,8 @@ A zatem wektory :math:`\ x,y\ ` spełniają warunek
 
 co oznacza ich liniową niezależność.
 
-Basis of a Vector Space
-~~~~~~~~~~~~~~~~~~~~~~~
+Baza przestrzeni wektorowej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Układ :math:`\ \mathcal{B}\ ` wektorów przestrzeni :math:`\,V\,` jest *bazą* 
 tej przestrzeni, gdy dowolny wektor :math:`\,v\in V\,` można przedstawić jednoznacznie
@@ -602,8 +602,8 @@ Jednak sama liniowa niezależność nie jest warunkiem wystarczającym. :math:`\
 Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele, :math:`\\`
 aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
 
-Dimension of a Vector Space
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wymiar przestrzeni wektorowej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pojęcie wymiaru przestrzeni można wprowadzić w oparciu o
 

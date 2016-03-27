@@ -1,6 +1,9 @@
 
-Problems
---------
+Zadania
+-------
+
+Przykład eliminacji dla układu równań
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | **Zadanie.**
 | Stosując metodę eliminacji, rozwiąż odręcznie

@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Vectors and Matrices in Sage
-----------------------------
+Wektory i macierze w systemie Sage
+----------------------------------
 
 W poprzedniej sekcji przyjmowaliśmy, że elementami macierzy są
 liczby rzeczywiste z ciała :math:`\ R\ ` albo liczby zespolone z ciała :math:`\ C.`
@@ -128,8 +128,8 @@ jak i jednokolumnowej (czyli różnym od wektora kolumnowego).
 Jest to po prostu skończony ciąg elementów pewnego pierścienia.
 Dopiero odpowiednie funkcje przekształcają go w wymienione macierze.
 
-Creation of Vectors and Matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Konstrukcja wektorów i macierzy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Programowanie obiektowe.
 
@@ -361,8 +361,8 @@ oraz do następującego potem przykładu.
    A = matrix([[a, 2, 3.], [4/3, 5, 6]])
    show(A)
 
-Properties of Vectors and Matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Własności wektorów i macierzy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Wskaźniki.**
 
@@ -573,8 +573,8 @@ to wycinanie daje następujące wyniki:
    print type(v)
    print type(C)     
 
-Operations on Vectors and Matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Działania na wektorach i macierzach
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Kombinacja liniowa wektorów.**
 
@@ -812,8 +812,8 @@ mnożenie skalarne wektorów, :math:`\,`
 mnożenie wektora przez macierz bądź macierzy przez wektor, :math:`\,`
 mnożenie macierzy przez macierz.
 
-Block Matrices
-~~~~~~~~~~~~~~
+Mnożenie macierzy blokowych
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Każdą macierz o rozmiarach nie mniejszych od 2
 można podzielić na cztery (lub więcej) prostokątnych bloków. 

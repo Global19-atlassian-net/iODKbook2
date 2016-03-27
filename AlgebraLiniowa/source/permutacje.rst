@@ -1,9 +1,9 @@
 
-Permutations
-------------
+Permutacje
+----------
 
-Groups of Permutations
-~~~~~~~~~~~~~~~~~~~~~~
+Grupa permutacji :math:`\,n\,` elementów
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Permutacja* skończonego zbioru :math:`\,X=\{1,2,\dots,n\}\,` 
 jest (wzajemnie jednoznacznym) :math:`\\` odwzorowaniem tego zbioru na siebie.
@@ -145,8 +145,8 @@ a złożenie permutacji będziemy nazywać ich iloczynem:
 Grupa :math:`\ S_n\ ` liczy :math:`\,n!\,` permutacji, :math:`\,` 
 przy czym dla :math:`\,n>2\,` jest to grupa nieprzemienna.
 
-Cyclic Permutations and Parity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Permutacje cykliczne i parzystość
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Permutacja :math:`\ \sigma\in S_n\ ` jest *cyklem* :math:`\,k`-*wyrazowym*,
 gdy w zbiorze :math:`\,X=\{1,2,\dots,n\}\,` 

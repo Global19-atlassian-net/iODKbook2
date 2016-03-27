@@ -1,7 +1,7 @@
 .. -*- coding: utf-8 -*-
 
-Column Vectors
---------------
+Wektory kolumnowe
+-----------------
 
 :math:`n`-elementowy wektor kolumnowy nad ciałem :math:`\,K\,` ma ogólną postać
 

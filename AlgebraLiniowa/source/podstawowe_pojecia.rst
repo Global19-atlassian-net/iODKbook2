@@ -1,9 +1,9 @@
 
-Preliminaries and Notation
---------------------------
+Podstawowe pojęcia i oznaczenia
+-------------------------------
 
-Rudiments of Logic
-~~~~~~~~~~~~~~~~~~
+Elementy logiki
+~~~~~~~~~~~~~~~
 
 *Zdanie* (w sensie logicznym) jest wypowiedzią, o której można stwierdzić
 (na gruncie pewnej wiedzy, teorii), że jest prawdziwa albo fałszywa,
@@ -67,8 +67,8 @@ wartości logicznych zdań :math:`\,p\ \,\text{i}\ \ q,\ \ ` np.:
    \quad & \text{(prawo negacji koniunkcji)}
    \end{array}
  
-Set Theory Symbols
-~~~~~~~~~~~~~~~~~~
+Oznaczenia teoriomnogościowe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. | Najbardziej podstawowe pojęcia matematyki to: :math:`\,`
    *zbiór*, *element zbioru*, *przynależność do zbioru*. :math:`\,`
@@ -101,8 +101,8 @@ Set Theory Symbols
   dla których :math:`\,x^2+x-2=0,\ ` jest zbiorem dwuelementowym, składającym się z liczb 
   :math:`\,-2\ \ \text{i}\ \ 1\,.`
 
-Mappings and Operations
-~~~~~~~~~~~~~~~~~~~~~~~
+Odwzorowania i działania
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Odwzorowanie* :math:`\ f: X\to Y\ ` zbioru :math:`\,X\,` w zbiór :math:`\,Y\,`
 jest przyporządkowaniem każdemu elementowi zbioru :math:`\,X\,` 

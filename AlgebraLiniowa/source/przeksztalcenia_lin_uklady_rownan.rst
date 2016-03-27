@@ -1,6 +1,6 @@
 
-Application to Homogeneous Systems of Equations
------------------------------------------------
+Rozwiązania jednorodnych układów równań
+---------------------------------------
 
 Zastosujemy teraz teorię przekształceń liniowych przestrzeni wektorowych do określenia 
 zbioru rozwiązań jednorodnego układu równań liniowych nad ciałem :math:`\,K`:

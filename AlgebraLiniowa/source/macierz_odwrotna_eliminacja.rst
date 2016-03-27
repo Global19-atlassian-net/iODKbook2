@@ -1,6 +1,6 @@
 
-Calculation of the Matrix Inverse by the Elimination Method
------------------------------------------------------------
+Wyznaczenie macierzy odwrotnej metodą eliminacji
+------------------------------------------------
 
 Niech będą dane macierze
 :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\,,\,

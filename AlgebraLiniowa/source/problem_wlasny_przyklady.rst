@@ -1,9 +1,9 @@
 
-Examples of Eigenproblems
--------------------------
+Przykłady problemów własnych
+----------------------------
 
-A Linear Operator in the Space of Vectors on a Plane
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Operator w przestrzeni wektorów na płaszczyźnie
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W dwuwymiarowej przestrzeni wektorów geometrycznych :math:`\,V\ ` z bazą 
 :math:`\,\mathcal{B}=\{\vec{e}_1,\vec{e}_2\}\,,\ ` gdzie :math:`\\`
@@ -285,8 +285,8 @@ rozkłada się na sumę prostą podprzestrzeni :math:`\ V_1\ \ \text{i}\ \ V_2\,
 odpowiadających dwóm wartościom własnym :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2\ `
 tego operatora.
 
-Transposition of :math:`\ 2\times 2\ ` square matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Transpozycja macierzy kwadratowych 2. stopnia
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Definiujemy operator transpozycji :math:`\ T\ ` określony na algebrze :math:`\ M_2(R)` :math:`\\`
 rzeczywistych kwadratowych macierzy 2. stopnia:

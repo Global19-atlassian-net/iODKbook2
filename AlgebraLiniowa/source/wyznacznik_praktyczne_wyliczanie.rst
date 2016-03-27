@@ -1,9 +1,9 @@
 
-Practical Calculation of Determinants
--------------------------------------
+Praktyczne wyliczanie wyznaczników
+----------------------------------
 
-Elementary Operations
-~~~~~~~~~~~~~~~~~~~~~
+Przekształcenia elementarne
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wykonując przekształcenia elementarne na wierszach macierzy kwadratowej można doprowadzić ją do postaci schodkowej, która jest górną macierzą trójkątną. Wyliczenie wyznacznika macierzy trójkątnej jest już zadaniem trywialnym :math:`\,` - :math:`\,` równa się on iloczynowi elementów na głównej przekątnej. Zastosowanie przekształceń elementarnych może więc być praktycznym sposobem wyliczania wyznaczników. Trzeba przy tym uwzględnić fakt, że przekształcenia elementarne macierzy mogą zmienić jej wyznacznik.
 
@@ -186,7 +186,7 @@ nie zmienia wartości wyznacznika. W wyniku otrzymujemy:
          \end{array}
    \right|\,.
 
-The Laplace Expansion
+Rozwinięcie Laplace'a
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. .. admonition:: Definicja.

@@ -1,6 +1,6 @@
 
-Linear Transformations
-----------------------
+Przekształcenia liniowe
+-----------------------
 
 .. admonition:: Twierdzenie 1. :math:`\\`
    

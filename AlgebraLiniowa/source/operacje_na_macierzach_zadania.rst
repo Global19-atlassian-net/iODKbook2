@@ -1,9 +1,9 @@
 
-Problems
---------
+Zadania
+-------
 
-Elementary Operations and Elementary Matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Operacje i macierze elementarne
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\\` 
 Udowodnij, że aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
@@ -44,8 +44,8 @@ gdzie
 Zapisz :math:`\,\boldsymbol{A} = \boldsymbol{I}_m\boldsymbol{A}\ \ ` 
 i :math:`\,` zastosuj twierdzenie z poprzedniego zadania.
 
-Permutation Matrices
-~~~~~~~~~~~~~~~~~~~~
+Macierze permutacji
+~~~~~~~~~~~~~~~~~~~
 
 **Zadanie 1.** :math:`\,`
 Pokaż, że:
@@ -82,8 +82,8 @@ Udowodnij, że iloczyn dwóch macierzy permutacji jest macierzą permutacji, prz
    \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
    \qquad\rho,\sigma\in S_m\,.
 
-Column Version of Permutation Matrices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Macierze permutacji w wersji kolumnowej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W tym ujęciu operacja :math:`\,O_\sigma\,` permutuje kolumny (a nie - jak poprzednio - wiersze)
 zadanej macierzy prostokątnej.
@@ -164,8 +164,8 @@ kolejność permutacji :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` w :eq:`PP_col` jes
 Oznacza to, że macierze :math:`\ \boldsymbol{P}_\sigma\ ` tworzą 
 :math:`\,` *reprezentację* :math:`\,` grupy permutacji :math:`\ S_n.`
  
-Inversion of a Matrix by Elimination Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wyliczanie macierzy odwrotnej metodą eliminacji
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 W sekcji 4.5 wynik zestawienia dwóch macierzy kwadratowych stopnia :math:`\,n\,`
 (nazywany tam agregatem) jest jednorodną macierzą prostokątną o :math:`\,n\,` wierszach
@@ -195,7 +195,7 @@ Porównaj swój wynik z wynikiem komputerowym.
    
    n=3
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
+   html.table([["Znajdź macierz odwrotną do macierzy:", 'A', '=', A]])
 
    print "Rozwiązanie:"
 
@@ -208,16 +208,16 @@ Porównaj swój wynik z wynikiem komputerowym.
    def _(h=('Krok:', ["Agregat [A| I ]", "Agregat [ I |A_1]", "Sprawdzenie"])):
 
        if h=="Agregat [A| I ]": 
-           html.table([["", "", "B = [A| I ]$\;$ jest rozszerzeniem A :"], 
-                       ["B", '=', B]])
+           pretty_print(html.table([["", "", "B = [A| I ]$\;$ jest rozszerzeniem A :"], 
+                       ["B", '=', B]]))
 
        elif h=="Agregat [ I |A_1]": 
-           html.table([["", "", "Zredukowana postać schodkowa B:"], 
-                       ["B.rref()", '=', R]])
+           pretty_print(html.table([["", "", "Zredukowana postać schodkowa B:"], 
+                       ["B.rref()", '=', R]]))
 
        elif h=="Sprawdzenie":
-           html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
-                       [A, '*', A_1, '=', A*A_1]])
+           pretty_print(html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
+                       [A, '*', A_1, '=', A*A_1]]))
 
 .. sagecellserver::
 

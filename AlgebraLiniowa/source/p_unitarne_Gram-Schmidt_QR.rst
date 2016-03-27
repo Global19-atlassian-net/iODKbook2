@@ -1,6 +1,6 @@
 
-Gram-Schmidt Orthonormalization and QR Decomposition of a Matrix
-----------------------------------------------------------------
+Ortogonalizacja Grama-Schmidta. Rozkład QR
+------------------------------------------
 
 .. admonition:: Twierdzenie 4.
    
@@ -9,8 +9,8 @@ Gram-Schmidt Orthonormalization and QR Decomposition of a Matrix
 **Dowód** twierdzenia, który podaje efektywną metodę konstrukcji takiej bazy,
 przebiega w dwóch realizowanych równolegle etapach. Biorąc za punkt wyjścia dowolną bazę, buduje się metodą *ortogonalizacji Grama-Schmidta* bazę ortogonalną, z której po unormowaniu powstaje baza ortonormalna.
 
-Construction of the Orthonormal Basis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Konstrukcja bazy ortonormalnej
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Niech :math:`\,\dim\,V=n.\ ` Dowód przebiega według następującego schematu:
 
@@ -181,8 +181,8 @@ i :math:`\,` bazę ortonormalną :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
                                \dots\ 
                        \right)
 
-Orthogonal Matrices and the QR Decomposition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Macierze ortogonalne i rozkład QR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Rozważania w tej sekcji dotyczą dziedziny rzeczywistej, 
 a więc macierzy rzeczywistych :math:`\\` i :math:`\,` przestrzeni euklidesowych.

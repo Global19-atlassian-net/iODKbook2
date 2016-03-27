@@ -1,6 +1,6 @@
 
-Systems of Linear Equations
----------------------------
+Układy równań liniowych - eliminacja Gaussa
+-------------------------------------------
 
 **Zadanie 0.** :math:`\\`
 Zapisz następujące problemy w postaci układu równań liniowych :math:`\\`

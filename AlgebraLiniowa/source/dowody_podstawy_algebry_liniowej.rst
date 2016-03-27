@@ -1,6 +1,6 @@
 
-Fundamental Concepts in Linear Algebra
---------------------------------------
+Podstawy algebry liniowej
+-------------------------
 
 .. admonition:: Twierdzenie.
    

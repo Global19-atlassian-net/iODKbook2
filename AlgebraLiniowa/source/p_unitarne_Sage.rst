@@ -1,9 +1,9 @@
 
-Application of Sage
--------------------
+Zastosowanie pakietu Sage
+-------------------------
 
-Inner Product
-~~~~~~~~~~~~~
+Iloczyn skalarny
+~~~~~~~~~~~~~~~~
 
 Iloczyn skalarny wektorów :math:`\quad
 \boldsymbol{x}\,=\,
@@ -156,8 +156,8 @@ Przestawienie czynników daje więc inny wynik
    Iloczyn skalarny z macierzą A: <x,y> = -55 True
    Zwykły iloczyn skalarny:       <y,x> =  -7 True
 
-Norm
-~~~~
+Norma
+~~~~~
 
 Funkcja (metoda) :math:`\,` ``norm()`` :math:`\,` oblicza :math:`\,p`-normę 
 rzeczywistego albo zespolonego wektora
@@ -341,8 +341,8 @@ wektora albo jednoelementowej macierzy:
 
    (5, 2.2360679775, 2.2360679775)
 
-Operations on Matrices
-~~~~~~~~~~~~~~~~~~~~~~
+Działania na macierzach
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Operacje na macierzach rzeczywistych bądź zespolonych obsługiwane przez metody Sage'a:
 

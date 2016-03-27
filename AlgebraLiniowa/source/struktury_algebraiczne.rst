@@ -1,10 +1,10 @@
 .. -*- coding: utf-8 -*-
 
-Algebraic Structures
---------------------
+Najważniejsze struktury algebraiczne
+------------------------------------
 
-Definitions and Examples
-~~~~~~~~~~~~~~~~~~~~~~~~
+Definicje i przykłady
+~~~~~~~~~~~~~~~~~~~~~
 
 **Struktura algebraiczna** składa się z jednego albo kilku zbiorów oraz działań określonych na tych zbiorach. 
 Definicja konkretnej struktury wymienia te zbiory i podaje postulaty, które powinny spełniać działania.
@@ -367,8 +367,8 @@ Najprostszym przykładem algebry jest dowolne ciało: jest to 1-wymiarowa przemi
 z jednością nad tymże ciałem. Nieprzemienną algebrę z jednością tworzą macierze kwadratowe stopnia :math:`\,n\,` nad ciałem :math:`\,K\,` ze względu na dodawanie i mnożenie macierzowe
 oraz mnożenie macierzy przez liczby z :math:`\,K.`
 
-Substructures
-~~~~~~~~~~~~~
+Podstruktury
+~~~~~~~~~~~~
  
 Załóżmy, że struktura :math:`\,\mathbb{G} = (G,\,\,\bot\,)\,` jest grupą.
 Może się zdarzyć, że podzbiór :math:`H` zbioru :math:`G`

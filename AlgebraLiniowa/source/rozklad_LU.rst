@@ -1,6 +1,6 @@
 
-LU Factorization of a Matrix
-----------------------------
+Rozkład LU
+----------
 
 Naszym celem będzie teraz przedstawienie odwracalnej macierzy kwadratowej :math:`\,\boldsymbol{A}\,`
 w postaci iloczynu dolnej i górnej macierzy trójkątnej:
@@ -256,10 +256,10 @@ Jak widać, rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` w ogólności nie 
    Przy obliczeniach numerycznych należy użyć ciała RDF albo CDF 
    liczb rzeczywistych albo zespolonych o podwójnej precyzji.
 
-Applications of the LU Decomposition
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Zastosowania rozkładu LU
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Solving Systems of Equations
+Rozwiązywanie układów równań
 ............................
 
 Rozważmy układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem :math:`\,K,\,`
@@ -373,8 +373,8 @@ a drugi :math:`\ ` - :math:`\ ` podstawianiem "wstecz":
 
 Ostatecznie, :math:`\,` rozwiązaniem układu jest: :math:`\ x_1=2,\ x_2=-1,\ x_3=3\,.` 
 
-Inversion of a Matrix
-.....................
+Wyliczanie macierzy odwrotnej
+.............................
 
 Niech :math:`\,\boldsymbol{A}\in M_n(K)\,` będzie macierzą odwracalną.
 Zadanie wyznaczenia jej odwrotności sprowadza się do rozwiązania równania macierzowego
@@ -403,8 +403,8 @@ różnią się tylko wolnymi wyrazami. Jak zauważyliśmy już wcześniej,
 jest to sytuacja dogodna dla użycia metody rozwiązania opartej na rozkładzie 
 :math:`\,\boldsymbol{L}\boldsymbol{U}.`
 
-Calculation of Determinants
-...........................
+Obliczanie wyznaczników
+.......................
 
 Zauważmy na wstępie, że wyznacznik macierzy permutacji równa się znakowi tej permutacji.
 Dokładnie ujmuje to

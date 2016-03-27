@@ -1,9 +1,9 @@
 
-Hermitian and Unitary Matrices
-------------------------------
+Macierze hermitowskie i unitarne
+--------------------------------
 
-Hermitian Conjugation of a Matrix
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sprzężenie hermitowskie macierzy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
 
@@ -183,8 +183,8 @@ Przywołując rozwinięcie permutacyjne wyznacznika łatwo uzasadnić, że wyzna
 :math:`\ \,\det\boldsymbol{A}^*\equiv\det[\,\alpha_{ij}^*\,]\ =\ (\det\boldsymbol{A})^*\,,\ \,`
 co bezpośrednio prowadzi do tezy.
 
-Hermitian Matrices
-~~~~~~~~~~~~~~~~~~
+Macierze hermitowskie
+~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
 
@@ -324,8 +324,8 @@ dla :math:`\ \boldsymbol{A}\in M_n(R)`
    
    \boldsymbol{A}=\boldsymbol{A}^+\quad\Leftrightarrow\quad\boldsymbol{A}=\boldsymbol{A}^T\,.
 
-Unitary Matrices
-~~~~~~~~~~~~~~~~
+Macierze unitarne
+~~~~~~~~~~~~~~~~~
 
 .. admonition:: Definicja.
    
