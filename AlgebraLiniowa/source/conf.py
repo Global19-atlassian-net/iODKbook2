@@ -36,9 +36,9 @@ PygmentsBridge.latex_formatter = CustomLatexFormatter
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.coverage',
-'sphinx.ext.mathjax', 'icsecontrib.sagecellserver']
+'sphinx.ext.mathjax', 'icsecontrib.sagecellserver', 'sphinx.ext.viewcode']
 #'sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx',
-#'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 
+#'sphinx.ext.ifconfig',
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Lectures on Linear Algebra'
-copyright = u'2015, Marcin Kostur'
+copyright = u'2013, J.A. \& M.K.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -139,7 +139,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -153,16 +153,16 @@ html_static_path = ['_static']
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_domain_indices = True
+html_domain_indices = True
 
 # If false, no index is generated.
-html_use_index = False
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-html_show_sourcelink = False
+html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
@@ -197,7 +197,7 @@ latex_elements = {
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [('index', 'AlgebraLiniowa.tex', u'Linear Algebra', u'M.K. \& J.A.', 'manual')]
+latex_documents = [('index', 'AlgebraLiniowa.tex', u'Linear Algebra', u'J.A. \& M.K.', 'manual')]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -264,7 +264,7 @@ epub_copyright = u'2013, Marcin Kostur'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
-# epub_language = 'pl'
+epub_language = 'pl'
 
 # The scheme of the identifier. Typical schemes are ISBN or URL.
 #epub_scheme = ''
