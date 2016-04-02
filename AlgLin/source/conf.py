@@ -185,16 +185,13 @@ html_show_sourcelink = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'AlgLin'
 
-
 # -- Options for LaTeX output --------------------------------------------------
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 	'papersize': 'a4paper',
-
 # The font size ('10pt', '11pt' or '12pt').
 	'pointsize': '12pt',
-
 # Additional stuff for the LaTeX preamble.
 	'preamble': '\usepackage{amsmath,amssymb}\n' + '\usepackage{babel}\n' + '\usepackage{tcolorbox}\n\n' + '\makeatletter\n\g@addto@macro\@verbatim\\footnotesize\n\makeatother\n\n'+ '\definecolor{niceblue}{HTML}{E7F0FE}\n' +  '\definecolor{nicedarkerblue}{HTML}{93B7EC}\n\n' + '\makeatletter\\newenvironment{icsebox}{\\begin{tcolorbox}[colframe=nicedarkerblue,colback=niceblue,leftrule=3mm]}{\end{tcolorbox}}\n' + '\\renewenvironment{notice}[2]{\\begin{icsebox}\def\py@noticetype{#1}\par\strong{#2}}{\end{icsebox}}\makeatother\n'
 	+ u'\hyphenation{zde-fi-nio-wa-na prze-mien-ną}',
@@ -203,10 +200,8 @@ latex_elements = {
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-  ('index', 'AlgLin.tex', u'Wykłady z Algebry Liniowej',
-   u'J.A. \& M.K.', 'manual'),
-]
+latex_documents = [('index', 'AlgLin.tex', u'Wykłady z Algebry Liniowej',
+   u'J.A. \& M.K.', 'manual')]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -233,25 +228,20 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    ('index', 'AlgLin', u'Wykłady z Algebry Liniowej',
-     [u'J.A. \& M.K.'], 1)
-]
+man_pages = [('index', 'AlgLin', u'Wykłady z Algebry Liniowej',
+     [u'J.A. \& M.K.'], 1)]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
-
 
 # -- Options for Texinfo output ------------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'AlgLin', u'Wykłady z Algebry Liniowej',
+texinfo_documents = [('index', 'AlgLin', u'Wykłady z Algebry Liniowej',
    u'J.A. \& M.K.', 'AlgLin', 'One line description of project.',
-   'Miscellaneous'),
-]
+   'Miscellaneous')]
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
@@ -261,7 +251,6 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
-
 
 # -- Options for Epub output ---------------------------------------------------
 
