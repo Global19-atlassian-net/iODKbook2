@@ -90,13 +90,13 @@ gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierz
 .. math::
    :label: ATA
    
-   \boldsymbol{A}^T=\boldsymbol{A}\,,\qquad\
+   \boldsymbol{A}^T=\boldsymbol{A}\,;\qquad\
    \left[\ 
    \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{x}\geq 0
    \quad\land\quad
    \left(\ \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{x}=0
    \ \ \Leftrightarrow\ \ 
-   \boldsymbol{x}=\boldsymbol{0}\ \right)\ \right]\,,\ \ 
+   \boldsymbol{x}=\boldsymbol{0}\ \right)\ \right],\ \ 
    \boldsymbol{x}\in R^n\,.
 
 (warunek :eq:`ATA` będzie spełniony wtedy i tylko wtedy, gdy 

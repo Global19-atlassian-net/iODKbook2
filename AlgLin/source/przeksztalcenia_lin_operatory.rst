@@ -132,7 +132,8 @@ multiplikatywne w sensie :eq:`multi`. Pozwala to sformułować
 Obowiązująca definicja mnożenia macierzowego została przyjęta m.in. dlatego,
 że przy niej odwzorowanie :math:`\,M_{\mathcal{B}}\,` jest multiplikatywne:
 iloczynowi (tzn. złożeniu) operatorów odpowiada iloczyn ich macierzy.
-Innym uzasadnieniem takiej definicji jest to, że wyznacznik iloczynu macierzy równa się iloczynowi ich wyznaczników.
+Innym uzasadnieniem takiej definicji jest to, że wyznacznik iloczynu 
+dwóch macierzy kwadratowych tego samego stopnia równa się iloczynowi ich wyznaczników.
 
 **Przykład.**
 

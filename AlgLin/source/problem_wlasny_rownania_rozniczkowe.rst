@@ -43,7 +43,7 @@ Wprowadzając oznaczenia
    \end{array}\right]\,,\qquad
    \boldsymbol{x}\ =\ 
    \left[\begin{array}{c} x_1 \\ x_2 \\ \ldots \\ x_n \end{array}\right]\,,\qquad
-   \boldsymbol{\dot{x}}\ =\ 
+   \dot{\boldsymbol{x}}\ =\ 
    \left[\begin{array}{c} \dot{x}_1 \\ \dot{x}_2 \\ \ldots \\ \dot{x}_n \end{array}\right]\,,
 
 
@@ -52,7 +52,11 @@ można układ :eq:`set_diff` zapisać w zwartej postaci macierzowej:
 .. math::
    :label: mat_eqn
    
-   \boldsymbol{\dot{x}}\ =\ \boldsymbol{A}\,\boldsymbol{x}\,.
+   \dot{\boldsymbol{x}}\ =\ \boldsymbol{A}\,\boldsymbol{x}\,.
+
+.. Poprzedni zapis \boldsymbol{\dot{x}}
+   stawiał w wersji .html kropkę nad 'x' przesuniętą w górę
+   (w wersji .pdf wynik był poprawny)
 
 Szukamy rozwiązań postaci 
 
@@ -62,7 +66,7 @@ Szukamy rozwiązań postaci
    \boldsymbol{x}(t)\,=\,\boldsymbol{v}\,e^{\,\lambda\,t}\,,\qquad
    \lambda\in C\,,\quad\boldsymbol{v}=[\,\beta_i\,]_n\in C^n\,.
 
-Wtedy :math:`\ \,\boldsymbol{\dot{x}}(t)=\lambda\,\boldsymbol{v}\,e^{\,\lambda\,t}\ `
+Wtedy :math:`\ \,\dot{\boldsymbol{x}}(t)=\lambda\,\boldsymbol{v}\,e^{\,\lambda\,t}\ `
 i podstawienie do :eq:`mat_eqn` daje
 
 .. math::
@@ -312,8 +316,8 @@ są też rozwiązaniami równania :eq:`mat_eqn`. :math:`\,` Istotnie,
 
 .. math::
    
-   \boldsymbol{\dot{x}}_1(t)+i\ \boldsymbol{\dot{x}}_2(t)\ =\ 
-   \boldsymbol{\dot{x}}(t)\ =\ 
+   \dot{\boldsymbol{x}}_1(t)+i\ \dot{\boldsymbol{x}}_2(t)\ =\ 
+   \dot{\boldsymbol{x}}(t)\ =\ 
    \boldsymbol{A}\ \boldsymbol{x}(t)\ =\ 
    \boldsymbol{A}\ [\,\boldsymbol{x}_1(t)+i\ \boldsymbol{x}_2(t)\,]\ =\
    \boldsymbol{A}\ \boldsymbol{x}_1(t)+i\ \boldsymbol{A}\ \boldsymbol{x}_2(t)
@@ -322,8 +326,8 @@ i z przyrównania części rzeczywistych oraz części urojonych skrajnych wyra�
 
 .. math::
    
-   \boldsymbol{\dot{x}}_1(t)\ =\ \boldsymbol{A}\ \boldsymbol{x}_1(t)\,,\qquad
-   \boldsymbol{\dot{x}}_2(t)\ =\ \boldsymbol{A}\ \boldsymbol{x}_2(t)\,.
+   \dot{\boldsymbol{x}}_1(t)\ =\ \boldsymbol{A}\ \boldsymbol{x}_1(t)\,,\qquad
+   \dot{\boldsymbol{x}}_2(t)\ =\ \boldsymbol{A}\ \boldsymbol{x}_2(t)\,.
 
 Zauważmy jeszcze, że liniowa niezależność rozwiązań 
 :math:`\ \boldsymbol{x}(t)\,,\ \boldsymbol{x}^*(t)\ `
@@ -676,13 +680,15 @@ Sprawdzimy obecnie, że funkcja
    \boldsymbol{x}^2(t)\ \,=\ \,
    \exp{(\lambda_{1,2}\;t)}\,\cdot\,(t\,\boldsymbol{w}_1\,+\,\boldsymbol{w}_2)
 
+.. Poprzednie wyrażenie \boldsymbol{x}^2(t)
+
 jest rozwiązaniem rozważanego układu równań różniczkowych. Istotnie, wobec :eq:`w1_w2` mamy
 
 .. math::
    :nowrap:
 
    \begin{eqnarray*}   
-   \boldsymbol{\dot{x}}^2(t) & = &
+   \dot{\boldsymbol{x}}^2(t) & = &
    \lambda_{1,2}\ \exp{(\lambda_{1,2}\;t)}\,\cdot\,(t\,\boldsymbol{w}_1\,+\,\boldsymbol{w}_2)\ +\ 
    \exp{(\lambda_{1,2}\;t)}\,\cdot\,\boldsymbol{w}_1\ =
    \\

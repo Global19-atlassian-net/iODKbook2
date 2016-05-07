@@ -175,6 +175,91 @@ O_2(i,a)\,\boldsymbol{A}\ =\ O_2(i,a)\,(\boldsymbol{I}_m\boldsymbol{A})\ =\
 O_3(i,j,a)\,\boldsymbol{A}\ =\ O_3(i,j,a)\,(\boldsymbol{I}_m\boldsymbol{A})\ =\ 
 [\,O_3(i,j,a)\,\boldsymbol{I}_m\,]\,\boldsymbol{A}\ =\ \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,.`
 
+Macierze elementarne są odwracalne, przy czym odwrotność macierzy elementarnej
+jest macierzą elementarną. Dokładnie przedstawia to
+
+.. admonition:: Twierdzenie. :math:`\,`
+   
+   Jeżeli :math:`\ i,j=0,1,\ldots,m-1;\ i \neq j\,,\ m=1,2,\ldots ,\ ` to
+   
+   #. :math:`\,[\boldsymbol{E}_1(i,j)]^{-1}\,=\ \boldsymbol{E}_1(i,j),`
+   #. :math:`\,[\boldsymbol{E}_2(i,a)]^{-1}\,=\ \boldsymbol{E}_2(i,a^{-1}),\qquad (a\ne 0)`
+   #. :math:`\,[\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
+
+**Dowód** przebiega podobnie dla wszystkich trzech rodzajów macierzy elementarnych.
+
+1. :math:`\:` Dwukrotne przestawienie :math:`i`-tego oraz :math:`j`-tego wiersza
+jest operacją identycznościową:
+
+.. math::
+   
+   [\,O_1(i,j)\,\circ\,O_1(i,j)\,]\ \ \boldsymbol{I}_m\ \ =\ \ \boldsymbol{I}_m\,.
+
+Lewą stronę można przekształcić następująco:
+
+.. math::
+   
+   [\,O_1(i,j)\,\circ\,O_1(i,j)\,]\ \,\boldsymbol{I}_m\ =\ 
+   O_1(i,j)\ [\,O_1(i,j)\,\boldsymbol{I}_m\,]\ =\ 
+   O_1(i,j)\,\boldsymbol{E}_1(i,j)\ =
+   
+   =\ O_1(i,j)\ [\,\boldsymbol{I}_m\,\boldsymbol{E}_1(i,j)\,]\ =\ 
+   [\,O_1(i,j)\ \boldsymbol{I}_m\,]\ \boldsymbol{E}_1(i,j)\ =\ 
+   \boldsymbol{E}_1(i,j) \cdot \boldsymbol{E}_1(i,j)
+
+W ten sposób 
+:math:`\ \ \boldsymbol{E}_1(i,j) \cdot \boldsymbol{E}_1(i,j)\ =\ \boldsymbol{I}_m\,,\ `
+co oznacza, że
+:math:`\ [\boldsymbol{E}_1(i,j)]^{-1} =\ \boldsymbol{E}_1(i,j)\,.`
+
+2. :math:`\:` Złożenie operacji :math:`\,O_2(i,a)\ \,` i :math:`\ \ O_2(i,a^{-1})\,`
+jest operacją identycznościową:
+
+.. math::
+   
+   [\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,]\ \ \boldsymbol{I}_m\ \ =\ \ \boldsymbol{I}_m\,.
+
+Lewą stronę można przepisać jako
+
+.. math::
+   
+   [\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,]\ \,\boldsymbol{I}_m\ =\ 
+   O_2(i,a^{-1})\ [\,O_2(i,a)\,\boldsymbol{I}_m\,]\ =\ 
+   O_2(i,a^{-1})\,\boldsymbol{E}_2(i,a)\ =
+   
+   =\ O_2(i,a^{-1})\ [\,\boldsymbol{I}_m\,\boldsymbol{E}_2(i,a)\,]\ =\ 
+   [\,O_2(i,a^{-1})\ \boldsymbol{I}_m\,]\ \boldsymbol{E}_2(i,a)\ =\ 
+   \boldsymbol{E}_2(i,a^{-1}) \cdot \boldsymbol{E}_2(i,a)
+
+A zatem
+:math:`\ \ \boldsymbol{E}_2(i,a^{-1}) \cdot \boldsymbol{E}_2(i,a)\ =\ \boldsymbol{I}_m\,,\ `
+wobec czego
+:math:`\ [\boldsymbol{E}_2(i,a)]^{-1} =\ \boldsymbol{E}_2(i,a^{-1})\,.`
+
+3. :math:`\ ` Złożenie operacji :math:`\,O_3(i,j,a)\ \,` i :math:`\ \ O_3(i,j,-a)\,`
+jest operacją identycznościową:
+
+.. math::
+   
+   [\,O_3(i,j,-a)\,\circ\,O_3(i,j,a)\,]\ \ \boldsymbol{I}_m\ \ =\ \ \boldsymbol{I}_m\,.
+
+Lewa strona przyjmuje teraz postać
+   
+.. math::
+   
+   [\,O_3(i,j,-a)\,\circ\,O_3(i,j,a)\,]\ \,\boldsymbol{I}_m\ =\ 
+   O_3(i,j,-a)\ [\,O_3(i,j,a)\,\boldsymbol{I}_m\,]\ =\ 
+   O_3(i,j,-a)\,\boldsymbol{E}_3(i,j,a)\ =
+   
+   =\ O_3(i,j,-a)\ [\,\boldsymbol{I}_m\,\boldsymbol{E}_3(i,j,a)\,]\ =\ 
+   [\,O_3(i,j,-a)\ \boldsymbol{I}_m\,]\ \boldsymbol{E}_3(i,j,a)\ =\ 
+   \boldsymbol{E}_3(i,j,-a) \cdot \boldsymbol{E}_3(i,j,a)
+   
+Tak więc
+:math:`\ \ \boldsymbol{E}_3(i,j,-a) \cdot \boldsymbol{E}_3(i,j,a)\ =\ \boldsymbol{I}_m\,,\ `
+skąd
+:math:`\ [\boldsymbol{E}_3(i,j,a)]^{-1} =\ \boldsymbol{E}_3(i,j,-a)\,.`
+
 
 Macierze permutacji
 ~~~~~~~~~~~~~~~~~~~

@@ -210,7 +210,8 @@ Stosując Twierdzenie 7. otrzymujemy:
 
 :math:`\Leftarrow\ :\ ` Niech :math:`\ \,\dim\,V=\,\dim\,W=n.`
 
-Oznacza to, że każda baza przestrzeni :math:`\,V\ \,\text{i}\ \ W\ ` liczy :math:`\,n\ ` elementów.
+Oznacza to, że każda baza przestrzeni :math:`\,V\ `
+i :math:`\,` każda baza przestrzeni :math:`\,W\ ` liczy :math:`\,n\ ` elementów.
 Załóżmy, że układ :math:`\ \mathcal{B}=(v_1,v_2,\,\dots,\,v_n)\ ` jest bazą przestrzeni :math:`\,V,\ `
 a :math:`\ \ \mathcal{C}=(w_1,w_2,\,\dots,\,w_n)\ ` :math:`\,` - :math:`\,` 
 bazą przestrzeni :math:`\,W.\ ` 

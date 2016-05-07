@@ -227,7 +227,7 @@ równanie :eq:`prod_col` przyjmuje więc postać
 
    Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,,\ \boldsymbol{x}\in K^n\,,\ ` 
    to iloczyn :math:`\,\boldsymbol{A}\,\boldsymbol{x}\ ` jest kombinacją liniową kolumn  
-   macierzy :math:`\,\boldsymbol{A}.\ ` Współczynnikami tej kombinacji są kolejne elementy 
+   macierzy :math:`\,\boldsymbol{A}\,`, której współczynnikami są kolejne elementy 
    wektora :math:`\,\boldsymbol{x}\,.`  
 
 Wracając do wyjściowego ogólnego układu równań :eq:`set_eqn`, zapiszmy go w postaci równości dwóch wektorów kolumnowych:

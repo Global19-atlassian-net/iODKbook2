@@ -709,7 +709,7 @@ W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej za
    R = B.rref().factor()
    B.subdivide(n,n); R.subdivide(n,n)
 
-   html.table([[B, '$\\rightarrow$', R]])
+   show(table([[B, '$\\rightarrow$', R]]))
    for i in range(n): show(R[i,n])
 
 

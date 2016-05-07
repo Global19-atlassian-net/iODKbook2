@@ -246,7 +246,7 @@ Jak widać, rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` w ogólności nie 
    A = random_matrix(QQ, 3, 4, rank=3, upper_bound=10,
                      algorithm='echelonizable')
    (P,L,U) = A.LU()
-   html.table([[A, '=', P, L, U]])
+   table([[A, '=', P, L, U]])
 
 :math:`\;`
 

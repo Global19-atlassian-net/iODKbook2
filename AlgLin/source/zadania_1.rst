@@ -181,7 +181,7 @@ tworzą fundamentalny układ rozwiązań.
 .. (4.4.30)
 
 **Zadanie 5.** :math:`\,`
-Czy istnieje jednorodny układ równań liniowych, 
+Czy istnieje jednorodny układ równań liniowych nad ciałem :math:`Q`, 
 którego fundamentalnym układem rozwiązań jest układ wektorów
 :math:`\ (\boldsymbol{x}_1,\boldsymbol{x}_2,\boldsymbol{x}_3),\ ` a także
 :math:`\ (\boldsymbol{y}_1,\boldsymbol{y}_2,\boldsymbol{y}_3),\ ` gdzie

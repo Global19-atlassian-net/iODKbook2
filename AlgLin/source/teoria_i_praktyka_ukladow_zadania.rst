@@ -18,7 +18,7 @@ Sprawdź następnie wynik stosując metodę ``rref()``.
 
    n = 4
    A = random_matrix(QQ, n, algorithm='echelonizable', rank=n, upper_bound=6)
-   html.table([["A","=",A]])
+   table([["A","=",A]])
 
 :math:`\;`
 
@@ -45,6 +45,6 @@ Rozwiąż następnie ten układ dwoma sposobami:
    m = 4; n = 5
    B = random_matrix(QQ, m,n+1, algorithm='echelonizable', 
                                 rank=3, upper_bound=6)
-   html.table([["B","=",B]])
+   table([["B","=",B]])
 
 

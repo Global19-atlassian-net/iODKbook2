@@ -484,7 +484,7 @@ Poniżej podane są dwa przykłady takiego automatycznego generowania macierzy z
 **Wycinanie.**
 
 Do wektorów i macierzy można zastosować technikę wycinania (ang. slicing),
-ogólnie zde-finiowaną dla *sekwencji*. :math:`\,` Jeżeli np. :math:`\ L\ ` jest listą,
+ogólnie zdefiniowaną dla *sekwencji*. :math:`\,` Jeżeli np. :math:`\ L\ ` jest listą,
 to wycinanie daje następujące wyniki:
 
 * ``L[p:q]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów o numerach od p do q-1; 
@@ -892,8 +892,8 @@ można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``.
    B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
    B2 = block_matrix([[A],[identity_matrix(2)]])
    
-   html.table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",
-                "$\\quad B1\ \\ast\ B2$"], [B1,"*",B2,"=",B1*B2]])
+   table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",
+           "$\\quad B1\ \\ast\ B2$"], [B1,"*",B2,"=",B1*B2]])
 
 
 

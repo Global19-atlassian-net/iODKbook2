@@ -2,17 +2,17 @@ Macierze elementarne
 --------------------
 
 Macierz :math:`\,\boldsymbol{E}\in M_m(K)\ ` nazywa się *macierzą elementarną*,
-jeżeli jest ona wynikiem wykonania jednej operacji elementarnej na wierszach
-macierzy jednostkowej :math:`\,\boldsymbol{I}_m\,.`
+jeżeli jest wynikiem wykonania jednej operacji elementarnej na wierszach
+macierzy jednostkowej :math:`\,\boldsymbol{I}_m\ (m=1,2,\ldots)\,.`
 
-Ponieważ zdefiniowaliśmy trzy rodzaje operacji elementarnych :math:`\ (i,j=0,1,\ldots,m-1):`
+Zdefiniowaliśmy trzy rodzaje operacji elementarnych :math:`\ (i,j=0,1,\ldots,m-1;\ i \neq j):`
 
 #. :math:`\ O_1(i,j):\ ` przestawienie :math:`\,i`-tego oraz :math:`\,j`-tego wiersza,
 #. :math:`\ O_2(i,a):\ ` pomnożenie :math:`\,i`-tego wiersza przez liczbę :math:`\,a \neq 0\,,`
 #. :math:`\ O_3(i,j,a):\ ` dodanie do :math:`\,i`-tego wiersza :math:`\,j`-tego wiersza 
-   pomnożonego przez liczbę :math:`\,a\,,`
+   pomnożonego przez liczbę :math:`\,a\,.`
 
-to istnieją trzy rodzaje macierzy elementarnych: 
+Odpowiednio istnieją trzy rodzaje macierzy elementarnych: 
 
 #. | :math:`\ \boldsymbol{E}_1(i,j)\,` powstaje przez zamianę miejscami
      :math:`\,i`-tego oraz :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{I}_m:`
@@ -42,12 +42,6 @@ Przykłady macierzy elementarnych dla :math:`\,K=Q,\ m=3:`
    \left[\begin{array}{ccc}
    1 & 0 & 0 \\ 0 & 1 & \textstyle{7\over 4} \\ 0 & 0 & 1
    \end{array}\right].
-
-Łatwo zauważyć, że macierze elementarne są odwracalne, przy czym odwrotność macierzy elementarnej jest macierzą elementarną. Mianowicie :math:`\ (i,j=0,1,\ldots,m-1):`
-
-#. :math:`\,[\boldsymbol{E}_1(i,j)]^{-1}\,=\ \boldsymbol{E}_1(i,j),`
-#. :math:`\,[\boldsymbol{E}_2(i,a)]^{-1}\,=\ \boldsymbol{E}_2(i,a^{-1}),\qquad (a\ne 0)`
-#. :math:`\,[\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
   
 Wykonanie operacji elementarnej na prostokątnej macierzy 
 :math:`\,\boldsymbol{A}\ ` jest równoważne pomnożeniu (z lewej strony)
@@ -56,7 +50,7 @@ tej macierzy przez odpowiednią macierz elementarną. Można to zapisać jako
 .. admonition:: Twierdzenie 3. :math:`\,` 
 
    Niech :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
-   Wtedy :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1:`
+   Wtedy :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1;\ i \neq j:`
 
    #. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =\ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
    #. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =\ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,\qquad (a\ne 0)`
@@ -64,6 +58,13 @@ tej macierzy przez odpowiednią macierz elementarną. Można to zapisać jako
 
    gdzie 
    :math:`\ \boldsymbol{E}_1(i,j),\ \boldsymbol{E}_2(i,a),\ \boldsymbol{E}_3(i,j,a)\in M_m(K).`
+
+Łatwo teraz pokazać, że macierze elementarne są odwracalne, przy czym odwrotność macierzy elementarnej jest macierzą elementarną. 
+Mianowicie :math:`\ (i,j=0,1,\ldots,m-1;\ i \neq j):`
+
+#. :math:`\,[\boldsymbol{E}_1(i,j)]^{-1}\,=\ \boldsymbol{E}_1(i,j),`
+#. :math:`\,[\boldsymbol{E}_2(i,a)]^{-1}\,=\ \boldsymbol{E}_2(i,a^{-1}),\qquad (a\ne 0)`
+#. :math:`\,[\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
 
 W Sage macierze elementarne zwraca funkcja ``elementary_matrix()``. Argumentami są:
 pierścień bazowy (domyślnie ZZ), stopień macierzy oraz numery wierszy i czynnik skali. 

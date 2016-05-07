@@ -75,8 +75,10 @@ Zauważmy, że :math:`\\`
 
    \;
 
-Jak widać, macierz :math:`\ M(F)\ ` składa się z kolumn, które są obrazami odpowiednich wektorów bazy kanonicznej przestrzeni :math:`\ R^3:\ ` 
-:math:`\ M(F)\ =\ [\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,F\boldsymbol{e}_3\,]\,.`
+Zgodnie z kolumnową regułą mnożenia macierzowego,
+kolumny macierzy :math:`\ M(F)\ ` są obrazami odpowiednich wektorów 
+bazy kanonicznej przestrzeni :math:`\ R^3:\ \ M(F)\ =\ 
+[\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,F\boldsymbol{e}_3\,]\,.`
 
 .. Uogólnienie tego przykładu opiera się na stwierdzeniu, że każde przekształcenie liniowe 
    przestrzeni :math:`\,K^n\ ` w przestrzeń :math:`\,K^m\ ` ma postać :eq:`ex_0`,
@@ -293,7 +295,8 @@ Niech układy
 
 będą bazami kanonicznymi przestrzeni :math:`\,K^n\ \,\text{i}\ \ K^m.`
 
-Wtedy odwzorowania :math:`\ I_{\mathcal{B}}:\,V\rightarrow K^n \ \ \text{oraz}\ \ \,
+Wtedy odwzorowania liniowe 
+:math:`\ I_{\mathcal{B}}:\,V\rightarrow K^n \ \ \text{oraz}\ \ \,
 I_{\mathcal{C}}:\,W\rightarrow K^m\,,\ \,`
 określone poprzez zadanie obrazów wektorów bazy (odpowiednio 
 bazy :math:`\,\mathcal{B}\ ` albo bazy :math:`\ \mathcal{C}):`
@@ -306,7 +309,7 @@ bazy :math:`\,\mathcal{B}\ ` albo bazy :math:`\ \mathcal{C}):`
    \qquad
    I_{\mathcal{C}}(w_i)\ :\,=\ f_i\,,\quad i=1,2,\dots,m\,,
 
-są przykładami izomorfizmów: 
+są izomorfizmami: 
 :math:`\ I_{\mathcal{B}}\in\text{Izo}(V,K^n)\,,\ \,I_{\mathcal{C}}\in\text{Izo}(W,K^m)\,.`
 
 .. Odwzorowania :math:`\ I_{\mathcal{B}}\ \ \text{oraz}\ \ I_{\mathcal{C}}\ \,` 
@@ -338,8 +341,8 @@ w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma teraz w zapisie
 .. math::
    
    M_{\mathcal{B}\mathcal{C}}(F)\ \,=\ \,
-   \left[\;I_{\mathcal{C}}(Fv_1\,|\,I_{\mathcal{C}}(Fv_2\,|\ \dots\ |\,
-   I_{\mathcal{C}}(Fv_n\,\right]\,.
+   \left[\;I_{\mathcal{C}}(Fv_1)\,|\,I_{\mathcal{C}}(Fv_2)\,|\ \dots\ |\,
+   I_{\mathcal{C}}(Fv_n)\,\right]\,.
 
 Podstawowe twierdzenia
 ~~~~~~~~~~~~~~~~~~~~~~

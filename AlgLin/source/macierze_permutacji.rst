@@ -132,7 +132,8 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
    pewnej liczby transpozycji, którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
 2. Macierze permutacji są :math:`\,` *ortogonalne*:
-   :math:`\quad\boldsymbol{P}_\sigma^{\,T}\,\boldsymbol{P}_\sigma\ = 
+   :math:`\quad\boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^{\,T}\, =\:
+   \boldsymbol{P}_\sigma^{\,T}\,\boldsymbol{P}_\sigma\ = 
    \ \boldsymbol{I}_m\,,\quad\sigma\in S_m\,.`
 
 3. Iloczyn dwóch macierzy permutacji jest macierzą permutacji, przy czym

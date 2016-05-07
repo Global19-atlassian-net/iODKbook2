@@ -39,7 +39,7 @@ v_3\,-\,\langle u_1,v_3\rangle\ u_1 - \langle u_2,v_3\rangle\ u_2\,,`
 
 gdzie :math:`\ \beta_1,\,\beta_2\ ` zostały wyznaczone z warunków 
 :math:`\,\langle\,y_1,y_3\rangle = \langle\,y_2,y_3\rangle = 0\,;\qquad
-u_3\,=\,\displaystyle\frac{y_3}{\|y_3\|}\,;`
+u_3\,=\,\displaystyle\frac{y_3}{\|y_3\|}\,.`
 
 Przypuśćmy, że zbudowaliśmy w ten sposób układ ortogonalny 
 :math:`\ (y_1,y_2,\dots,y_{j-1}),\ ` przy czym, jak wynika z przyjętej metody konstrukcji

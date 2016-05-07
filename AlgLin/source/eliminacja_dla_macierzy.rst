@@ -259,10 +259,13 @@ które wykonują operacje elementarne na macierzach:
 #. ``rescale_row(i,a)`` mnoży i-ty wiersz przez czynnik a;
 #. ``add_multiple_of_row(i,j,a)`` do i-tego wiersza dodaje wiersz j-ty pomnożony przez czynnik a.
 
-Jeżeli :math:`\,\boldsymbol{A}\,` jest macierzą, :math:`\ \,\boldsymbol{b}\ \ \,\text{-}\ `
-macierzą albo wektorem, :math:`\,` to polecenie ``A.augment(b)`` zwraca macierz, 
-otrzymaną z :math:`\,\boldsymbol{A}\,` przez dopisanie  z prawej strony kolumny
-:math:`\,\boldsymbol{b}\,` (wektor :math:`\,\boldsymbol{b}\,` jest przekształcony wcześniej do macierzy 1-kolumnowej). Metodę ``augment()`` można więc użyć do utworzenia macierzy rozszerzonej 
+Jeżeli :math:`\,\boldsymbol{A}\,` jest macierzą, 
+:math:`\ \,\boldsymbol{b}\ \ \,\text{-}\ ` wektorem albo macierzą o zgodnej 
+z :math:`\,\boldsymbol{A}\,` liczbie wierszy, :math:`\,` to polecenie 
+``A.augment(b)`` zwraca macierz, otrzymaną przez dopisanie :math:`\,\boldsymbol{b}\,`
+z prawej strony do :math:`\,\boldsymbol{A}\,`
+(wektor :math:`\,\boldsymbol{b}\,` jest przekształcony wcześniej do macierzy 1-kolumnowej). 
+Metodę ``augment()`` można więc użyć do utworzenia macierzy rozszerzonej 
 z macierzy współczynników i kolumny wolnych wyrazów. 
 
 Metoda ``echelon_form()`` zwraca macierz (zadaną nad dowolnym pierścieniem z jednością)

@@ -228,9 +228,9 @@ Wtedy układ :math:`\,\mathcal{X}\,` generuje przestrzeń :math:`\,V\ `
 
 **Przykład.**
 
-Załóżmy, że :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` są trzema niekomplanarnymi 
-(czyli nie leżącymi w jednej płaszczyżnie) wektorami geometrycznymi,
-zaczepionymi w ustalonym punkcie :math:`\,\boldsymbol{O}.\ ` Wtedy:
+Załóżmy, że :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` są trzema 
+niezerowymi niekomplanarnymi (czyli nie leżącymi w jednej płaszczyżnie) 
+wektorami geometrycznymi, zaczepionymi w ustalonym punkcie :math:`\,\boldsymbol{O}.\ ` Wtedy:
 
 1. :math:`L(\vec{v}_1)\,=\,\left\{\ \alpha\,\vec{v}_1 :\ \alpha\in R\ \right\}\ ` 
    jest zbiorem wektorów leżących na prostej przechodzącej przez punkt :math:`\,\boldsymbol{O}\ \,`
@@ -341,7 +341,7 @@ Ponieważ :math:`\,-1\neq 0\,,\ ` kombinacja liniowa po lewej stronie jest nietr
 a to oznacza, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo zależne.
 
 **Wniosek:** :math:`\ `
-Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wtedy, gdy żadnego z nich nie można zapisać w postaci kombinacji liniowej pozostałych.
+Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wtedy, gdy żadnego z nich nie można zapisać w postaci kombinacji liniowej wektorów pozostałych.
 
 .. Łatwo można uzasadnić następujące użyteczne stwierdzenia
    (l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
@@ -627,9 +627,9 @@ W praktyce przydatne bywa
 
 **Twierdzenie 5.** :math:`\ ` W :math:`\,n`-wymiarowej przestrzeni wektorowej:
 
-a. każdy układ liczący więcej niż :math:`\,n\,` wektorów
+a. :math:`\;` każdy układ liczący więcej niż :math:`\,n\,` wektorów
    jest liniowo zależny;
-b. każdy liniowo niezależny układ :math:`\,n\,` wektorów jest bazą.
+b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest bazą.
 
 **Przykłady.**
 
