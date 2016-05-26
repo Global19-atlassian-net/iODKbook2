@@ -27,28 +27,28 @@ gdy :math:`\ F(\vec{r})\parallel\vec{r}\ `
 
    e1 = vector([1,0]); e2 = vector([0,1])
 
-   P0 = point((0,0), color='white', 
-              faceted=True, size=20, zorder=8)
-   
-   n = 24          # określa liczbę klatek animacji
-   dt = 2*pi/n     # krok parametru między kolejnymi klatkami
-   L = []          # inicjacja listy klatek
-   
+   P0 = point((0,0), color='white', faceted=True, size=20, zorder=8)
+
+   n = 24          # defines number of frames
+   dt = 2*pi/n     # step between two consecutive frames
+   L = []          # initialization of the list of frames
+
    for k in range(1,n+1):
-    
+
        a1 = cos(k*dt); a2 = sin(k*dt)
-       
-       plt = P0 + arrow((0,0),a1*e1+a2*e2, color='green', 
-                        legend_label=' $\\ \\ \\vec{r}$', zorder=5) +\
-                  arrow((0,0),(2*a1+a2)*e1+(a1+2*a2)*e2, 
-                        color='red', legend_label=' $F(\\vec{r})$', zorder=5)
-   
+
+       plt = P0 +\
+             arrow((0,0),a1*e1+a2*e2, color='green',
+              legend_label=' $\\ \\ \\vec{r}$', legend_color='black', zorder=5) +\
+             arrow((0,0),(2*a1+a2)*e1+(a1+2*a2)*e2, color='red', 
+              legend_label=' $F(\\vec{r})$', legend_color='black', zorder=5)
+
        for l in range(1+3*(not mod(k-3,6))): L.append(plt)
-   
-   a = animate(L, aspect_ratio=1, axes_labels=['x','y'], figsize=6, 
+        
+   a = animate(L, aspect_ratio=1, axes_labels=['x','y'], figsize=6,
                xmin=-2.25, xmax=+2.25, ymin=-2.25, ymax=+2.25)
-   
-   a; a.show(delay=25, iterations=5)
+
+   print a; a.show(delay=25, iterations=5)
 
 Problem własny dla operatora :math:`\,F\ ` rozwiążemy w tym przykładzie bezpośrednio,
 nie odwołując się do ogólnych wzorów z poprzedniej sekcji.

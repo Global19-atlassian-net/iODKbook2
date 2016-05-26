@@ -23,8 +23,10 @@ Introduction to Systems of Linear Equations
 ===========================================
 
 | *Space of the column vectors over a field.*
-| *Geometric interpretation of consistent and inconsistent systems of equations.*
-| *Transformation of a system of equations to the echelon form by elementary operations.*
+| *Geometric interpretation of consistent 
+  and inconsistent systems of equations.*
+| *Transformation of a system of equations 
+  to the echelon form by elementary operations.*
 
 .. toctree::
    :maxdepth: 2
@@ -39,7 +41,8 @@ Algebra of Matrices
 
 | *Matrix as a rectangular layout of elements from a field.*
 | *Matrix addition and matrix multiplication by a scalar.*
-| *The* :math:`\,m\times n\,` *matrices over a field* :math:`K` *form the vector space over* :math:`K`.
+| *The* :math:`\,m\times n\,` *matrices over a field* :math:`K` 
+  *form the vector space over* :math:`K`.
 | *Row and column rules defining product of two matrices.*
 | *Practical vector and matrix operations in Sage.*
 
@@ -55,11 +58,16 @@ Operations upon Matrices
 ========================
 
 | *Row-echelon and reduced row-echelon form of a matrix.*
-| *Elimination method applied to the augmented matrix of a system of linear equations.*
-| *Transpose of a matrix and its properties. Symmetric and skew-symmetric matrices.*
-| *Inverse of a matrix. Elementary matrices. Permutation matrices.*
-| *A practical algorithm for the matrix inversion by Gauss-Jordan elimination.*
-| *LU decomposition of a matrix into the product of lower- and upper-triangular factors.*
+| *Elimination method applied to the augmented matrix 
+  of a system of linear equations.*
+| *Transpose of a matrix and its properties. 
+  Symmetric and skew-symmetric matrices.*
+| *Inverse of a matrix. Elementary matrices. 
+  Permutation matrices.*
+| *A practical algorithm for the matrix inversion 
+  by Gauss-Jordan elimination.*
+| *LU decomposition of a matrix 
+  into the product of lower- and upper-triangular factors.*
 
 .. toctree::
    :maxdepth: 3
@@ -93,7 +101,8 @@ Systems of Linear Equations: Theory and Practice
 ================================================
 
 | *Rank of a matrix and the Kronecker-Capelli consistency condition.*
-| *Practical implementation of the general theorems on systems of linear equations.*
+| *Practical implementation of the general theorems 
+  on systems of linear equations.*
 | *An instructive example with comprehensive discussion.*
 | *Application to mechanics: Equilibrium of a set of masses on springs.* 
 | *Solving systems of linear equations in Sage.*
@@ -130,7 +139,8 @@ Eigenvalues and Eigenvectors
 ============================
 
 | *General solution of the eigenproblem in finite-dimensional vector spaces.*
-| *Application to the theory of systems of ordinary 1st order differential equations.*
+| *Application to the theory of systems 
+  of ordinary 1st order differential equations.*
 | *Similarity and diagonalization of matrices.*
 
 .. toctree::
@@ -148,7 +158,8 @@ Unitary Spaces
 | *Schwarz inequality and its specific implementations.*
 | *Orthogonality of vectors. Orthogonal complement of a subspace.*
 | *Orthogonal and orthonormal basis of a unitary space.* 
-| *Gram-Schmidt method for orthonormalizing a set of vectors and the QR decomposition.*
+| *Gram-Schmidt method for orthonormalizing 
+  a set of vectors and the QR decomposition.*
 | *Hermitian and unitary matrices vs Hermitian and unitary operators.*
 | *Properties of normal matrices and operators.*
 

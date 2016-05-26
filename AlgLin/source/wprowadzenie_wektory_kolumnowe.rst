@@ -121,28 +121,28 @@ Analogicznie określa się izomorfizm bardziej zaawansowanych struktur algebraic
    def _(x1=('$$x_1:$$', slider(-3, 3, 1/4, default=3)),
          x2=('$$x_2:$$', slider(-2, 3, 1/4, default=2))):
 
-       plt = arrow((0,0),e1, color='red',
-                   legend_label=' $\\vec{e}_1$', zorder=6) +\
-             arrow((0,0),e2, color='green',
-                   legend_label=' $\\vec{e}_2$', zorder=6) +\
-             arrow((0,0),x1*e1, color='red',
-                   width=1, arrowsize=3, zorder=7) +\
-             arrow((0,0),x2*e2, color='green',
-                   width=1, arrowsize=3, zorder=7) +\
+       plt = arrow((0,0),e1, color='green',
+              legend_label=' $\\vec{e}_1$', legend_color='black', zorder=6) +\
+             arrow((0,0),e2, color='red',
+              legend_label=' $\\vec{e}_2$', legend_color='black', zorder=6) +\
+             arrow((0,0),x1*e1, color='green',
+              width=1, arrowsize=3, zorder=7) +\
+             arrow((0,0),x2*e2, color='red',
+              width=1, arrowsize=3, zorder=7) +\
              arrow((0,0),x1*e1+x2*e2, color='black',
-                   legend_label=' $\\vec{v}$', zorder=8) +\
+              legend_label=' $\\vec{v}$', legend_color='black', zorder=8) +\
              line([x1*e1,x1*e1+x2*e2], color='black',
-                  linestyle='dashed', thickness=0.5) +\
+              linestyle='dashed', thickness=0.5) +\
              line([x2*e2,x1*e1+x2*e2], color='black',
-                  linestyle='dashed', thickness=0.5) +\
+              linestyle='dashed', thickness=0.5) +\
              point((0,0), color='white',
-                   faceted=True, size=18, zorder=9)
-          
-       html("$\\qquad\\qquad\\qquad\\qquad\\vec{v}\\,=\\,\
-       x_1\\,\\vec{e}_1+x_2\\,\\vec{e}_2$"); print ''
+              faceted=True,  size=18, zorder=9)
+
+       pretty_print(html("$\\qquad\\qquad\\qquad\\qquad\\qquad\
+                    \\vec{v}\\,=\\,\ x_1\\,\\vec{e}_1+x_2\\,\\vec{e}_2$"))
+       print ''
        plt.set_axes_range(-3,5,-2,3)
-       plt.show(aspect_ratio=1, axes_labels=['x','y'],
-             ticks=[1,1], figsize=7)
+       plt.show(aspect_ratio=1, axes_labels=['x','y'], ticks=[1,1], figsize=7)
 
 :math:`\;`
 

@@ -6,11 +6,13 @@ Geometry of Linear Equations
 Badanym w tej sekcji układom dwóch albo trzech równań liniowych odpowiadają 
 określone sytuacje na płaszczyźnie albo w trójwymiarowej przestrzeni.
 
-Omówione będą dwie interpretacje takich układów równań: obraz wierszowy i kolumnowy.
+Omówione będą dwie interpretacje takich układów równań: 
+obraz wierszowy i kolumnowy.
 Określenia te odnoszą się do wierszy i kolumn macierzy współczynników, 
 która wespół z kolumną wolnych wyrazów reprezentuje dany układ równań.
 
-Dyskusja taka pozwoli wyrobić intuicję, pomocną przy analizie większych układów równań,
+Dyskusja taka pozwoli wyrobić intuicję, 
+pomocną przy analizie większych układów równań,
 których obrazem są obiekty geometryczne w przestrzeniach wielowymiarowych.
 
 Row Picture
@@ -103,10 +105,13 @@ Wykorzystując działania na wektorach kolumnowych otrzymujemy
 Sens takiego zapisu jest następujący: :math:`\;` dla jakich współczynników 
 :math:`\;x_{1},\,x_{2}\ \;` kombinacja
 
-liniowa wektorów :math:`\ \ \boldsymbol{v}_1=\left[\begin{array}{r} 2 \\ 1 \end{array}\right]
-\ \ \,\text{i}\quad\boldsymbol{v}_2=\left[\begin{array}{r} -1 \\ 1 \end{array}\right]\ \,`
+liniowa wektorów 
+:math:`\ \ \boldsymbol{v}_1=\left[\begin{array}{r} 2 \\ 1 \end{array}\right]
+\ \ \,\text{i}\quad\boldsymbol{v}_2=
+\left[\begin{array}{r} -1 \\ 1 \end{array}\right]\ \,`
 równa się wektorowi 
-:math:`\ \,\boldsymbol{w}\,=\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `? :math:`\\ \\`
+:math:`\ \,\boldsymbol{w}\,=
+\left[ \begin{array}{r} 1 \\5 \end{array} \right]\ `? :math:`\\ \\`
 
 .. .. sidebar:: Kombinacja liniowa.
 
@@ -124,7 +129,8 @@ równa się wektorowi
    :math:`\;\boldsymbol{v}_1,\,\boldsymbol{v}_2\ \ \text{i}\ \ \boldsymbol{w}\ `
    są reprezentowane przez wektory geometryczne 
    :math:`\;\vec{v}_1,\,\vec{v}_2\ \ \,\text{i}\ \ \,\vec{w}.\ `
-   Operując suwakami, dobierz wartości współczynników :math:`\ x_1\ \ \text{i}\ \ \,x_2\ \,`
+   Operując suwakami, dobierz wartości współczynników 
+   :math:`\ x_1\ \ \text{i}\ \ \,x_2\ \,`
    tak, aby wektor :math:`\;x_1\,\vec{v}_1 + x_2\,\vec{v}_2\;` 
    (oznaczony kolorem szarym) pokrył się z wektorem :math:`\,\vec{w}`.
 
@@ -137,23 +143,26 @@ równa się wektorowi
    def _(x1=('$$x_1:$$', slider(0,3,1/2, default=3)),
          x2=('$$x_2:$$', slider(0,3,1/2, default=2))):
 
-       plt = arrow((0,0),v1,color='red',legend_label=' $v_1$', zorder=5) +\
-             arrow((0,0),v2,color='green',legend_label=' $v_2$', zorder=5) +\
-             arrow((0,0),w,color='black',legend_label=' $w$',   zorder=5) +\
-             arrow((0,0),x1*v1,color='gray',width=1,arrowsize=3) +\
-             arrow((0,0),x2*v2,color='gray',width=1,arrowsize=3) +\
-             arrow((0,0),x1*v1+x2*v2,color='gray',width=1.75,arrowsize=3) +\
-             line([x1*v1,x2*v2+x1*v1],color='black',
-                  linestyle='dashed',thickness=0.5) +\
-             line([x2*v2,x2*v2+x1*v1],color='black',
-                  linestyle='dashed',thickness=0.5) +\
-             point((0,0),color='white',
-                   faceted=True,size=18,zorder=7)
+       plt = arrow((0,0),v1, color='green',
+              legend_label=' $v_1$', legend_color='black', zorder=5) +\
+             arrow((0,0),v2, color='red',
+              legend_label=' $v_2$', legend_color='black', zorder=5) +\
+             arrow((0,0),w, color='black',
+              legend_label=' $w$', legend_color='black', zorder=5) +\
+             arrow((0,0),x1*v1, color='gray', width=1, arrowsize=3) +\
+             arrow((0,0),x2*v2, color='gray', width=1, arrowsize=3) +\
+             arrow((0,0),x1*v1+x2*v2, color='gray', 
+              width=1.75, arrowsize=3) +\
+             line([x1*v1,x2*v2+x1*v1], color='black',
+              linestyle='dashed', thickness=0.5) +\
+             line([x2*v2,x2*v2+x1*v1], color='black',
+              linestyle='dashed', thickness=0.5) +\
+             point((0,0), color='white', faceted=True, size=18, zorder=7)
 
-       plt.set_axes_range(-3,7,-1,6)   
-    
-       if x1*v1+x2*v2==w: html("SUKCES!!!")
-       plt.show(aspect_ratio=1,ticks=[1,1],figsize=5)
+       plt.set_axes_range(-3,7,-1,6)
+
+       if x1*v1+x2*v2==w: pretty_print(html("DONE!!!"))
+       plt.show(aspect_ratio=1, ticks=[1,1], figsize=5)
 
 W ogólności, układ równań liniowych jest całkowicie określony 
 przez zadanie macierzy współczynników :math:`\,\boldsymbol{A}\ \ `
@@ -162,12 +171,14 @@ W tym wypadku są to:
 
 .. math::
 
-   \boldsymbol{A}\ =\ \left[\begin{array}{rr} 2 & -1 \\ 1 & 1 \end{array}\right]\,,\qquad
+   \boldsymbol{A}\ =
+   \ \left[\begin{array}{rr} 2 & -1 \\ 1 & 1 \end{array}\right]\,,\qquad
    \boldsymbol{w}\ =\ \left[\begin{array}{c} 1 \\ 5 \end{array}\right]\,.
 
-Obraz wierszowy układu równań otrzymamy, odczytując wiersze (czyli poziome rzędy) 
-macierzy :math:`\,\boldsymbol{A},\ ` a obraz kolumnowy :math:`\ -\ ` odczytując kolumny
-(pionowe rzędy) tej macierzy.
+Obraz wierszowy układu równań otrzymamy, 
+odczytując wiersze (czyli poziome rzędy) 
+macierzy :math:`\,\boldsymbol{A},\ ` 
+a obraz kolumnowy :math:`\ -\ ` odczytując kolumny (pionowe rzędy) tej macierzy.
 
 :math:`\ `
 
@@ -189,8 +200,9 @@ Ma on rozwiązanie w punkcie
 :math:`\ \ x_1 = -\frac{1}{4},\ \ x_2 = \frac{3}{4},\ \ x_3 = \frac{3}{4}\,.`
 
 
-W trójwymiarowej przestrzeni współrzędnych :math:`\ x_1,\,x_2,\,x_3\ ` równanie liniowe
-przedstawia płaszczyznę. W obrazie wierszowym rozwiązanie układu równań jest więc wyznaczone
+W trójwymiarowej przestrzeni współrzędnych :math:`\ x_1,\,x_2,\,x_3\ ` 
+równanie liniowe przedstawia płaszczyznę. 
+W obrazie wierszowym rozwiązanie układu równań jest więc wyznaczone
 przez  miejsce geometryczne przecięcia się trzech płaszczyzn.
 
 .. figure:: figures/Rys_11.jpg
@@ -199,21 +211,25 @@ przez  miejsce geometryczne przecięcia się trzech płaszczyzn.
    :scale: 90 %
    :align: center
 
-Na rysunku płaszczyzny odpowiadające kolejnym równaniom układu są oznaczone kolorem czerwonym,
-zielonym i niebieskim, a punkt wspólny tych płaszczyzn :math:`\ -\ ` kolorem białym.
+Na rysunku płaszczyzny odpowiadające kolejnym równaniom układu są oznaczone 
+kolorem czerwonym, zielonym i niebieskim, 
+a punkt wspólny tych płaszczyzn :math:`\ -\ ` kolorem białym.
 
-W obrazie kolumnowym rozwiązanie układu równań sprowadza się do wyznaczenia współczynników
-:math:`\ x_1,\,x_2,\,x_3\ \,` kombinacji liniowej wektorów kolumnowych 
+W obrazie kolumnowym rozwiązanie układu równań sprowadza się 
+do wyznaczenia współczynników :math:`\ x_1,\,x_2,\,x_3\ \,` 
+kombinacji liniowej wektorów kolumnowych 
 :math:`\ \boldsymbol{v}_1,\,\boldsymbol{v}_2,\,\boldsymbol{v}_3\,,\ `
 która równałaby się wektorowi :math:`\,\boldsymbol{w}:` 
 
 .. math::
    :label: col
    
-   x_1\,\boldsymbol{v}_1\,+\,x_2\,\boldsymbol{v}_2\,+\,x_3\,\boldsymbol{v}_3\ =\ \boldsymbol{w}\,.
+   x_1\,\boldsymbol{v}_1\,+\,x_2\,\boldsymbol{v}_2\,+\,x_3\,\boldsymbol{v}_3\ =
+   \ \boldsymbol{w}\,.
 
-Przejście do postaci kolumnowej :eq:`col` układu trzech równań o współczynnikach całkowitych
-można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column()``
+Przejście do postaci kolumnowej :eq:`col` układu trzech równań 
+o współczynnikach całkowitych można wykonać automatycznie przy użyciu 
+podanej niżej funkcji ``verse3column()`` 
 (wykonanie kodu definiującego funkcję nie wyprowadzi na razie żadnego wyniku):
 
 .. sagecellserver::
@@ -249,7 +265,7 @@ i podać ją jako argument:
    Eqns = [eq1,eq2,eq3]
    
    try: verse3colmn(Eqns)
-   except NameError: pretty_print(html("Wykonaj kod w poprzedniej komórce!"))
+   except NameError: pretty_print(html("Execute the previous cell!"))
 
 .. figure:: figures/Rys_21.jpg
    :height: 10 cm
@@ -264,7 +280,8 @@ odpowiadające wektorom kolumnowym
 są oznaczone odpowiednio kolorem czerwonym, zielonym i niebieskim, 
 wektor :math:`\,\vec{w}\;` jest szary. :math:`\,`
 Wektory :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` nie są komplanarne 
-(nie leżą w jednej płaszczyźnie), przez co układ równań ma dokładnie jedno rozwiązanie.
+(nie leżą w jednej płaszczyźnie), 
+przez co układ równań ma dokładnie jedno rozwiązanie.
 
 .. Tak jak w poprzednim przykładzie z układem dwóch równań, obraz wierszowy układu równań
    można odczytać z postaci macierzy współczynników :math:`\,\boldsymbol{A}\ \,` 
