@@ -3,9 +3,9 @@ Podstawy algebry liniowej
 -------------------------
 
 Zakładamy, że dana jest przestrzeń wektorowa :math:`\,V\,` nad ciałem 
-:math:`\,K :\ V(K)\,,\,` gdzie :math:`\,K\,` jest ciałem liczb rzeczywistych :math:`\,R\,`
-bądź ciałem liczb zespolonych :math:`\,C\ ` (omawiane pojęcia i twierdzenia można jednak
-odnieść do dowolnego abstrakcyjnego ciała :math:`\,K).`
+:math:`\,K :\ V(K)\,,\,` gdzie :math:`\,K\,` jest ciałem liczb rzeczywistych 
+:math:`\,R\,` bądź ciałem liczb zespolonych :math:`\,C\ ` (omawiane pojęcia i 
+twierdzenia można jednak odnieść do dowolnego abstrakcyjnego ciała :math:`\,K).`
 
 Układ elementów pewnego zbioru jest z definicji ciągiem o wyrazach należących do tego zbioru.
 Inaczej niż w przypadku zbioru, kolejność elementów w układzie jest więc istotna.

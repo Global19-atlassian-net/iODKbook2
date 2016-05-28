@@ -1,7 +1,5 @@
 .. Algebra Liniowa documentation master file, created by
    sphinx-quickstart on Mon May  6 21:02:54 2013.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 ==========================
 Wykłady z Algebry Liniowej
@@ -24,8 +22,10 @@ Wprowadzenie do układów równań liniowych
 ========================================
 
 | *Przestrzeń wektorów kolumnowych nad ciałem* :math:`\,K.`
-| *Geometryczna interpretacja oznaczonych, nieoznaczonych i sprzecznych układów równań.*
-| *Doprowadzenie układu równań do postaci schodkowej poprzez operacje elementarne.*
+| *Geometryczna interpretacja oznaczonych, nieoznaczonych 
+  i sprzecznych układów równań.*
+| *Doprowadzenie układu równań do postaci schodkowej 
+  poprzez operacje elementarne.*
 
 .. toctree::
 
@@ -38,7 +38,8 @@ Algebra macierzy
 ================
 
 | *Wprowadzenie macierzy jako prostokątnej tablicy elementów z pewnego ciała.*
-| *Definicja dodawania macierzy, mnożenia ich przez liczbę i mnożenia macierzy przez macierz.*
+| *Definicja dodawania macierzy, mnożenia ich przez liczbę 
+  i mnożenia macierzy przez macierz.*
 | *Praktyczne operacje na wektorach i macierzach w systemie Sage.*
 
 .. toctree::
@@ -177,18 +178,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -8,50 +8,57 @@ Operator w przestrzeni wektorów na płaszczyźnie
 W dwuwymiarowej przestrzeni wektorów geometrycznych :math:`\,V\ ` z bazą 
 :math:`\,\mathcal{B}=\{\vec{e}_1,\vec{e}_2\}\,,\ ` gdzie :math:`\\`
 :math:`\,|\vec{e}_1|=|\vec{e}_2|=1,\  \ \vec{e}_1\perp\vec{e}_2\,,\ `
-zadajemy operator liniowy :math:`\,F\ ` podając obrazy wektorów bazy :math:`\,\mathcal{B}:`
+zadajemy operator liniowy :math:`\,F\ ` 
+podając obrazy wektorów bazy :math:`\,\mathcal{B}:`
 
 .. math::
    
    F\vec{e}_1\,=\,2\,\vec{e}_1+\vec{e}_2\,,\qquad 
    F\vec{e}_2\,=\,\vec{e}_1+2\,\vec{e}_2\,.
 
-Szukamy wektorów :math:`\ \vec{r}\,\in\,V\!\smallsetminus\!\{\vec{0}\}\ ` spełniających równanie
-:math:`\,F\vec{r}=\lambda\,\vec{r}\ ` dla pewnego :math:`\ \lambda\in R\,.\ `
-Działając na te wektory, operator :math:`\,F\ ` nie zmienia ich kierunku, chociaż może
-zmienić długość lub zwrot. Pewną orientację w sytuacji daje program, który wyświetla kolejne 
-wektory :math:`\ \vec{r}\ ` z pewnego zbioru oraz ich obrazy, eksponując przypadki, 
-gdy :math:`\ F(\vec{r})\parallel\vec{r}\ ` 
-(po uruchomieniu programu przygotowanie animacji trwa kilkadziesiąt sekund). :math:`\\`
+Szukamy wektorów :math:`\ \vec{r}\,\in\,V\!\smallsetminus\!\{\vec{0}\}\ ` 
+spełniających równanie :math:`\,F\vec{r}=\lambda\,\vec{r}\ ` 
+dla pewnego :math:`\ \lambda\in R\,.\ ` 
+Działając na te wektory, operator :math:`\,F\ ` nie zmienia ich kierunku, 
+chociaż może zmienić długość lub zwrot. 
+Pewną orientację w sytuacji daje program, który wyświetla kolejne 
+wektory :math:`\ \vec{r}\ ` z pewnego zbioru oraz ich obrazy, 
+eksponując przypadki, gdy :math:`\ F(\vec{r})\parallel\vec{r}\ ` 
+(po uruchomieniu programu przygotowanie animacji może trwać 
+kilkadziesiąt sekund).
+
+.. :math:`\\`
 
 .. sagecellserver::
 
    e1 = vector([1,0]); e2 = vector([0,1])
 
-   P0 = point((0,0), color='white', 
-              faceted=True, size=20, zorder=8)
-   
-   n = 24          # określa liczbę klatek animacji
-   dt = 2*pi/n     # krok parametru między kolejnymi klatkami
-   L = []          # inicjacja listy klatek
-   
-   for k in range(1,n+1):
-    
-       a1 = cos(k*dt); a2 = sin(k*dt)
-       
-       plt = P0 + arrow((0,0),a1*e1+a2*e2, color='green', 
-                        legend_label=' $\\ \\ \\vec{r}$', zorder=5) +\
-                  arrow((0,0),(2*a1+a2)*e1+(a1+2*a2)*e2, 
-                        color='red', legend_label=' $F(\\vec{r})$', zorder=5)
-   
-       for l in range(1+3*(not mod(k-3,6))): L.append(plt)
-   
-   a = animate(L, aspect_ratio=1, axes_labels=['x','y'], figsize=6, 
-               xmin=-2.25, xmax=+2.25, ymin=-2.25, ymax=+2.25)
-   
-   a; a.show(delay=25, iterations=5)
+   P0 = point((0,0), color='white', faceted=True, size=20, zorder=8)
 
-Problem własny dla operatora :math:`\,F\ ` rozwiążemy w tym przykładzie bezpośrednio,
-nie odwołując się do ogólnych wzorów z poprzedniej sekcji.
+   n = 24          # liczba klatek animacji
+   dt = 2*pi/n     # krok animacji
+   L = []          # inicjalizacja listy ramek
+
+   for k in range(1,n+1):
+
+       a1 = cos(k*dt); a2 = sin(k*dt)
+
+       plt = P0 +\
+             arrow((0,0),a1*e1+a2*e2, color='green',
+              legend_label=' $\\ \\ \\vec{r}$', 
+              legend_color='black', zorder=5) +\
+             arrow((0,0),(2*a1+a2)*e1+(a1+2*a2)*e2, color='red', 
+              legend_label=' $F(\\vec{r})$', legend_color='black', zorder=5)
+
+       for l in range(1+3*(not mod(k-3,6))): L.append(plt)
+        
+   a = animate(L, aspect_ratio=1, axes_labels=['x','y'], figsize=6,
+               xmin=-2.25, xmax=+2.25, ymin=-2.25, ymax=+2.25)
+
+   print a; a.show(delay=25, iterations=5)
+
+Problem własny dla operatora :math:`\,F\ ` rozwiążemy w tym przykładzie 
+bezpośrednio, nie odwołując się do ogólnych wzorów z poprzedniej sekcji.
 
 Podstawiając :math:`\ \vec{r}=\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2\ ` 
 do równania własnego otrzymujemy kolejno:
@@ -80,7 +87,8 @@ gdy jej współczynniki znikają:
    \alpha_1+(2-\lambda)\,\alpha_2\,=\,0
    \end{array}\end{cases}
 
-Wzór :eq:`2_set` przedstawia jednorodny układ dwóch równań liniowych na niewiadome 
+Wzór :eq:`2_set` przedstawia 
+jednorodny układ dwóch równań liniowych na niewiadome 
 :math:`\ \alpha_1,\,\alpha_2` :math:`\\` z parametrem :math:`\ \lambda.\ `
 Rozwiązania niezerowe: :math:`\ \alpha_1^2+\alpha_2^2\,>\,0\,,\ `
 istnieją wtedy i tylko wtedy, gdy
@@ -116,7 +124,8 @@ Wektory własne odpowiadające tej wartości:
 
 tworzą :math:`\,` (wespół z wektorem zerowym :math:`\,\vec{0}`) :math:`\,` 
 1-wymiarową podprzestrzeń :math:`\,V_1\ ` przestrzeni :math:`\,V,` :math:`\\`
-generowaną przez wektor :math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:` :math:`\ V_1=L(\vec{f}_1)\,.`
+generowaną przez wektor 
+:math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:` :math:`\ V_1=L(\vec{f}_1)\,.`
 
 Podstawiając :math:`\ \lambda=\lambda_2=3\ ` w :math:`\,` :eq:`2_set` :math:`\,`
 otrzymujemy układ
@@ -138,19 +147,23 @@ Odpowiednie wektory własne
 
 również tworzą :math:`\,` (łącznie z wektorem zerowym) :math:`\,` 
 1-wymiarową podprzestrzeń, :math:`\\`
-generowaną tym razem przez wektor :math:`\,\vec{f}_2=\vec{e}_1+\vec{e}_2:\ \ V_2=L(\vec{f}_2)\,.`
+generowaną tym razem przez wektor 
+:math:`\,\vec{f}_2=\vec{e}_1+\vec{e}_2:\ \ V_2=L(\vec{f}_2)\,.`
 
 Zauważmy, że wektory :math:`\,\vec{f}_1\,,\ \vec{f}_2\ \,`
 są wzajemnie prostopadłe oraz mają tę samą długość:
 
 .. math::
    
-   \vec{f}_1\cdot\vec{f}_2\ =\ (\vec{e}_1-\vec{e}_2)\cdot(\vec{e}_1+\vec{e}_2)\ =\ 
-   \vec{e}_1\cdot\vec{e}_1-\vec{e}_2\cdot\vec{e}_2\ =\ |\vec{e}_1|^2-|\vec{e}_2|^2\ =\ 
-   1-1\ =\ 0\,,
+   \vec{f}_1\cdot\vec{f}_2\ =
+   \ (\vec{e}_1-\vec{e}_2)\cdot(\vec{e}_1+\vec{e}_2)\ =
+   \ \vec{e}_1\cdot\vec{e}_1-\vec{e}_2\cdot\vec{e}_2\ =
+   \ |\vec{e}_1|^2-|\vec{e}_2|^2\ =\ 1-1\ =\ 0\,,
    
-   |\,\vec{f}_{1,2}\,|^2\ =\ (\vec{e}_1\mp\vec{e}_2)^2\ =\ 
-   \vec{e}_1\cdot\vec{e}_1\mp 2\ \,\vec{e}_1\cdot\vec{e}_2+\vec{e}_2\cdot\vec{e}_2\ =\ 2\,.
+   |\,\vec{f}_{1,2}\,|^2\ =
+   \ (\vec{e}_1\mp\vec{e}_2)^2\ =
+   \ \vec{e}_1\cdot\vec{e}_1\mp 2\ \,\vec{e}_1\cdot
+   \vec{e}_2+\vec{e}_2\cdot\vec{e}_2\ =\ 2\,.
 
 Dzieląc każdy z wektorów :math:`\ \vec{f}_1,\,\vec{f}_2\ ` przez jego długość:
 
@@ -175,6 +188,7 @@ złożona z wektorów własnych operatora :math:`\,F:`
    :align: center
    :scale: 65%
 
+
 **Uwagi i komentarze.**
 
 Operator :math:`\,F\ ` jest hermitowski, 
@@ -183,25 +197,29 @@ bo jego macierz w ortonormalnej bazie :math:`\,\mathcal{B}:`
 .. math::
    :label: mat_AF
    
-   \boldsymbol{A}\ =\ M_{\mathcal{B}}(F)\ =\ 
-   \left[\,I_{\mathcal{B}}(F\vec{e}_1)\,|\,I_{\mathcal{B}}(F\vec{e}_2)\,\right]\ =\ 
-   \left[\begin{array}{cc} 2 & 1 \\ 1 & 2 \end{array}\right]
+   \boldsymbol{A}\ =\ M_{\mathcal{B}}(F)\ = \ \left[
+   \,I_{\mathcal{B}}(F\vec{e}_1)\,|\,I_{\mathcal{B}}(F\vec{e}_2)\,\right]\ =
+   \ \left[\begin{array}{cc} 2 & 1 \\ 1 & 2 \end{array}\right]
 
-jest rzeczywista i symetryczna, a więc hermitowska. Ortogonalność należących do różnych wartości 
-wektorów własnych :math:`\ \,\vec{f}_1\ \ \text{i}\ \ \vec{f}_2\ \,` 
-oraz istnienie ortonormalnej bazy :math:`\ \mathcal{F}\ \,` przestrzeni :math:`\,V,\ ` 
-złożonej z wektorów własnych operatora :math:`\,F,\ \,` jest konsekwencją tej hermitowskości.
+jest rzeczywista i symetryczna, a więc hermitowska. 
+Ortogonalność należących do różnych wartości wektorów własnych 
+:math:`\ \,\vec{f}_1\ \ \text{i}\ \ \vec{f}_2\ \,` oraz istnienie 
+ortonormalnej bazy :math:`\ \mathcal{F}\ \,` przestrzeni :math:`\,V,\ ` 
+złożonej z wektorów własnych operatora :math:`\,F,\ \,` 
+jest konsekwencją tej hermitowskości.
 
-Wzór :eq:`det_eqn` przedstawia równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}.\ `
+Wzór :eq:`det_eqn` przedstawia równanie charakterystyczne macierzy 
+:math:`\,\boldsymbol{A}.\ ` 
 Stąd, a także ze wzorów :math:`\,` :eq:`eigen_vectors_1` :math:`\,` i :math:`\,` :eq:`eigen_vectors_2` :math:`\,` wynika, że obydwie wartości własne, 
 :math:`\,` :math:`\ \lambda_1=1\ \ \text{i}\ \ \lambda_2=3\,,\ \ `
-są algebraicznie i geometrycznie 1-krotne. To, że krotność algebraiczna każdej wartości własnej
-równa się jej krotności geometrycznej, jest również cechą operatorów hermitowskich.
+są algebraicznie i geometrycznie 1-krotne. To, że krotność algebraiczna 
+każdej wartości własnej równa się jej krotności geometrycznej, 
+jest również cechą operatorów hermitowskich.
 
 Baza :math:`\,\mathcal{F}\ ` jest wynikiem obrotu bazy :math:`\,\mathcal{B}\ `
 o kąt :math:`\,\pi/4.\ ` 
-Jak należało oczekiwać, macierz przejścia między tymi dwiema ortonormalnymi bazami,
-wyznaczona przez związki :eq:`normal`:
+Jak należało oczekiwać, macierz przejścia między tymi dwiema ortonormalnymi 
+bazami, wyznaczona przez związki :eq:`normal`:
 
 .. math::
    
@@ -209,15 +227,19 @@ wyznaczona przez związki :eq:`normal`:
    \left[\begin{array}{rr} 1 & 1 \\ -1 & 1 \end{array}\right]
 
 jest unitarna (w tym wypadku: rzeczywista ortogonalna): 
-:math:`\ \,\boldsymbol{S}^+\boldsymbol{S}=\boldsymbol{S}^{\,T}\boldsymbol{S}=\boldsymbol{I}_2\,.`
+:math:`\ \,\boldsymbol{S}^+\boldsymbol{S}=
+\boldsymbol{S}^{\,T}\boldsymbol{S}=\boldsymbol{I}_2\,.`
 
-Wzór :eq:`mat_AF` przedstawia macierz :math:`\,\boldsymbol{A}\ ` operatora :math:`\,F\ `
-w wyjściowej bazie :math:`\ \mathcal{B}.` :math:`\\`
-Wyliczymy teraz dwoma sposobami macierz :math:`\,\boldsymbol{F}=[\varphi_{ij}]\ ` 
+Wzór :eq:`mat_AF` przedstawia macierz :math:`\,\boldsymbol{A}\ ` 
+operatora :math:`\,F\ ` w wyjściowej bazie :math:`\ \mathcal{B}.` :math:`\\`
+Wyliczymy teraz dwoma sposobami macierz 
+:math:`\,\boldsymbol{F}=[\varphi_{ij}]\ ` 
 tego operatora w bazie :math:`\ \mathcal{F}.`
 
-.. Macierz :math:`\,\boldsymbol{F}=M_{\mathcal{F}}(F)=[\,\varphi_{ij}\,]_{2\times 2}\in M_2(R)\ ` 
-   operatora :math:`\,F\ ` w bazie :math:`\ \mathcal{F}\ ` wyliczymy dwoma sposobami.
+.. Macierz :math:`\,\boldsymbol{F}=
+   M_{\mathcal{F}}(F)=[\,\varphi_{ij}\,]_{2\times 2}\in M_2(R)\ ` 
+   operatora :math:`\,F\ ` w bazie :math:`\ \mathcal{F}\ ` 
+   wyliczymy dwoma sposobami.
 
 * Według wzorów transformacyjnych dla przejścia 
   od bazy :math:`\,\mathcal{B}\ ` do bazy :math:`\,\mathcal{F}:`
@@ -248,7 +270,8 @@ tego operatora w bazie :math:`\ \mathcal{F}.`
      3\ \ \boldsymbol{f}_2\cdot\boldsymbol{f}_2\,=\,3\,.
 
 Macierz operatora :math:`\,F\ ` w ortonormalnej bazie :math:`\ \mathcal{F}\ `
-złożonej z jego wektorów własnych jest diagonalna, z wartościami własnymi na przekątnej.
+złożonej z jego wektorów własnych jest diagonalna, 
+z wartościami własnymi na przekątnej.
 
 **Dygresja.**
 
@@ -259,37 +282,43 @@ wektorów bazowych :math:`\,\vec{f}_1,\,\vec{f}_2:`
 
 .. math::
    
-   \vec{r}\,=\,\beta_1\,\vec{f}_1+\beta_2\,\vec{f}_2\,,\qquad\beta_1,\,\beta_1\in R\,.
+   \vec{r}\,=
+   \,\beta_1\,\vec{f}_1+\beta_2\,\vec{f}_2\,,\qquad\beta_1,\,\beta_1\in R\,.
 
 Ale :math:`\ \,\beta_1\,\vec{f}_1\in V_1\,,\ \ \beta_2\,\vec{f}_2\in V_2\,,\ \,`
 gdzie :math:`\ \,V_1=L(\vec{f}_1)\ \ \text{i}\ \ \,V_2=L(\vec{f}_2)\ \,` 
 są podprzestrzeniami wektorów własnych operatora :math:`\,F\ `
 odpowiednio dla wartości :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2.\ \,`
-Wobec tego dla każdego wektora :math:`\,\vec{r}\in V\ ` zachodzi jednoznaczny rozkład
+Wobec tego dla każdego wektora :math:`\,\vec{r}\in V\ ` 
+zachodzi jednoznaczny rozkład
 
 .. math::
    
-   \vec{r}\,=\,\vec{r}_1\,+\,\vec{r}_2\,,\qquad\vec{r}_1\in V_1\,,\ \ \vec{r}_2\in V_2\,.
+   \vec{r}\,=
+   \,\vec{r}_1\,+\,\vec{r}_2\,,\qquad\vec{r}_1\in V_1\,,\ \ \vec{r}_2\in V_2\,.
 
 .. admonition:: Definicja.
    
    Niech :math:`\ V_1\,,\ \,V_2\ \,` będą podprzestrzeniami 
    przestrzeni wektorowej :math:`\,V.\ ` :math:`\\`
-   Jeżeli każdy wektor :math:`\,x\in V\ ` można przedstawić jednoznacznie w postaci 
-   :math:`\,x_1+x_2\,,\ ` gdzie :math:`\,x_1\in V_1\ \ \text{i}\ \ x_2\in V_2\,,\ `
-   to mówimy, że przestrzeń :math:`\,V\ ` *rozkłada się na sumę prostą* swoich podprzestrzeni
-   :math:`\,V_1\ \ \text{i}\ \ V_2\,,\ ` co zapisujemy: :math:`\ \  V\,=\,V_1\,\oplus\,V_2\,.`
+   Jeżeli każdy wektor :math:`\,x\in V\ ` można przedstawić jednoznacznie 
+   w postaci :math:`\,x_1+x_2\,,\ ` 
+   gdzie :math:`\,x_1\in V_1\ \ \text{i}\ \ x_2\in V_2\,,\ `
+   to mówimy, że przestrzeń :math:`\,V\ ` *rozkłada się na sumę prostą* 
+   swoich podprzestrzeni :math:`\,V_1\ \ \text{i}\ \ V_2\,,\ ` 
+   co zapisujemy: :math:`\ \  V\,=\,V_1\,\oplus\,V_2\,.`
 
-W naszym przykładzie przestrzeń :math:`\ V,\ ` w której działa operator :math:`\,F,\ `
-rozkłada się na sumę prostą podprzestrzeni :math:`\ V_1\ \ \text{i}\ \ V_2\,,\ `
-odpowiadających dwóm wartościom własnym :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2\ `
+W naszym przykładzie przestrzeń :math:`\ V,\ ` 
+w której działa operator :math:`\,F,\ ` rozkłada się na sumę prostą 
+podprzestrzeni :math:`\ V_1\ \ \text{i}\ \ V_2\,,\ ` odpowiadających 
+dwóm wartościom własnym :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2\ `
 tego operatora.
 
 Transpozycja macierzy kwadratowych 2. stopnia
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Definiujemy operator transpozycji :math:`\ T\ ` określony na algebrze :math:`\ M_2(R)` :math:`\\`
-rzeczywistych kwadratowych macierzy 2. stopnia:
+Definiujemy operator transpozycji :math:`\ T\ ` określony na algebrze 
+:math:`\ M_2(R)` :math:`\\` rzeczywistych kwadratowych macierzy 2. stopnia:
 
 .. math::
    
@@ -313,7 +342,8 @@ z poprzedniej sekcji.
 
 0.) Konstrukcja macierzy :math:`\,\boldsymbol{A}=M_{\mathcal{B}}(T)\ ` 
 automorfizmu :math:`\,T\ ` w bazie 
-:math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,,\ `
+:math:`\ \mathcal{B}=
+(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,,\ `
 gdzie
    
 .. math::
@@ -436,9 +466,8 @@ Wstawiając :math:`\,\lambda=\lambda_1=1\ ` do równania :eq:`hom_eqn` otrzymuje
    -\ \alpha_2+\alpha_3\,=\,0\,, \\ \alpha_2-\alpha_3\,=\,0\,.
    \end{array}\end{cases}
 
-Rozwiązanie ma postać: 
-:math:`\quad\alpha_1=\alpha\,,\ \ \alpha_2=\alpha_3=\beta\,,\ \ \alpha_4=\gamma\,,\quad
-\alpha,\,\beta,\,\gamma\in R.`
+Rozwiązanie ma postać: :math:`\quad\alpha_1=\alpha\,,\ \ \alpha_2=
+\alpha_3=\beta\,,\ \ \alpha_4=\gamma\,,\quad\alpha,\,\beta,\,\gamma\in R.`
 
 Macierze własne operatora :math:`\,T\ ` dla wartości :math:`\,\lambda_1=1\,:`
 
@@ -485,7 +514,8 @@ wektorowej :math:`\ V=M_2(R),\ ` generowaną przez liniowo niezależne macierze
    \end{array}\right]\,:\qquad
    V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\,.
 
-Wartość własna :math:`\ \lambda_1=1\ ` jest zatem algebraicznie i geometrycznie 3-krotna.
+Wartość własna :math:`\ \lambda_1=1\ ` jest zatem 
+algebraicznie i geometrycznie 3-krotna.
 
 Podstawienie :math:`\ \lambda=\lambda_2=-1\ ` do równania :eq:`hom_eqn` daje
 
@@ -508,7 +538,8 @@ Podstawienie :math:`\ \lambda=\lambda_2=-1\ ` do równania :eq:`hom_eqn` daje
    \alpha_2+\alpha_3\,=\,0\,, \\ 2\,\alpha_4\,=\,0\,.
    \end{array}\end{cases}
 
-Stąd :math:`\ \ \alpha_1=\alpha_4=0\,,\ \ \alpha_2=-\ \alpha_3=\delta\,,\ \ \delta\in R\,,\ \,`
+Stąd :math:`\ \ \alpha_1=\alpha_4=0\,,\ \ \alpha_2=
+-\ \alpha_3=\delta\,,\ \ \delta\in R\,,\ \,`
 a macierze własne dla wartości :math:`\ \lambda_2=-1:`
 
 .. math::
@@ -536,7 +567,8 @@ równa się jej krotności algebraicznej i wynosi 1.
 **Uwagi i komentarze.**
 
 Macierze własne 
-:math:`\ \boldsymbol{t}_1,\,\boldsymbol{t}_2,\,\boldsymbol{t}_3,\,\boldsymbol{t}_4\ `
+:math:`\ \boldsymbol{t}_1,\,\boldsymbol{t}_2,
+\,\boldsymbol{t}_3,\,\boldsymbol{t}_4\ `
 są liniowo niezależne. :math:`\\`
 Rzeczywiście, jeżeli ich kombinacja liniowa równa się macierzy zerowej:
 
@@ -563,9 +595,11 @@ to, wykonując działania po lewej stronie równości, otrzymujemy
    \alpha=0\,, \\ \beta=0\,, \\ \gamma=0\,, \\ \delta=0\,.
    \end{array}\end{cases}
 
-Układ :math:`\ \mathcal{T}=(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3,\boldsymbol{t}_4)\ `
+Układ :math:`\ \mathcal{T}=(\boldsymbol{t}_1,\boldsymbol{t}_2,
+\boldsymbol{t}_3,\boldsymbol{t}_4)\ `
 jest więc bazą algebry :math:`\,M_2(R),\ ` alternatywną względem wyjściowej bazy
-:math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,.\ `
+:math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,
+\boldsymbol{e}_3,\boldsymbol{e}_4)\,.\ `
 Związki między wektorami tych baz:
 
 .. math::
@@ -590,8 +624,8 @@ Związki między wektorami tych baz:
                                         0\cdot\boldsymbol{e}_4 \,,
    \end{alignat*}
 
-dają macierz przejścia :math:`\,\boldsymbol{S}\ ` od bazy :math:`\,\mathcal{B}\ ` 
-do bazy :math:`\,\mathcal{T}:`
+dają macierz przejścia :math:`\,\boldsymbol{S}\ ` 
+od bazy :math:`\,\mathcal{B}\ ` do bazy :math:`\,\mathcal{T}:`
 
 .. math::
    
@@ -609,8 +643,8 @@ w wyjściowej bazie :math:`\ \mathcal{B}.` :math:`\\`
 Macierz :math:`\ \boldsymbol{T}=[\tau_{ij}]\ ` operatora :math:`\ T\ `
 w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
 
-* Z definicji, :math:`\,` elementy :math:`\,\tau_{ij}\ ` macierzy :math:`\,\boldsymbol{T}\ `
-  określone są przez związki
+* Z definicji, :math:`\,` elementy :math:`\,\tau_{ij}\ ` 
+  macierzy :math:`\,\boldsymbol{T}\ ` określone są przez związki
   
   .. math::
      
@@ -663,8 +697,8 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      \end{array}\right]\,.
 
 * | Wzory transformacyjne dla przejścia od bazy :math:`\ \mathcal{B}\ ` 
-    do bazy :math:`\ \mathcal{T}\ ` dają:
-    :math:`\ \ \boldsymbol{T}\ =\ \boldsymbol{S}^{-1}\boldsymbol{A}\,\boldsymbol{S}\,.`
+    do bazy :math:`\ \mathcal{T}\ ` dają: :math:`\ \ \boldsymbol{T}\ =
+    \ \boldsymbol{S}^{-1}\boldsymbol{A}\,\boldsymbol{S}\,.`
   | W rachunkach macierzowych wykorzystamy pakiet Sage:
   
   .. code-block:: python
@@ -685,57 +719,14 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      [ 0  0  1  0]
      [ 0  0  0 -1]
 
-Powtarzając argumentację z poprzedniego przykładu
-można stwierdzić, że przestrzeń :math:`\ M_2(R)\ ` 
-rozkłada się na sumę prostą podprzestrzeni 
-:math:`\,V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\ ` macierzy symetrycznych
-oraz podprzestrzeni :math:`\,V_{-1}=L(\boldsymbol{t}_4)\ ` macierzy antysymetrycznych:
+Powtarzając argumentację z poprzedniego przykładu można stwierdzić, 
+że przestrzeń :math:`\ M_2(R)\ ` rozkłada się na sumę prostą podprzestrzeni 
+:math:`\,V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\ ` 
+macierzy symetrycznych oraz podprzestrzeni 
+:math:`\,V_{-1}=L(\boldsymbol{t}_4)\ ` macierzy antysymetrycznych:
 
 .. math::
    
    M_2(R)\ =\ V_1\,\oplus\,V_{-1}\,.
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
