@@ -7,15 +7,16 @@ Zakładamy, że dana jest przestrzeń wektorowa :math:`\,V\,` nad ciałem
 :math:`\,R\,` bądź ciałem liczb zespolonych :math:`\,C\ ` (omawiane pojęcia i 
 twierdzenia można jednak odnieść do dowolnego abstrakcyjnego ciała :math:`\,K).`
 
-Układ elementów pewnego zbioru jest z definicji ciągiem o wyrazach należących do tego zbioru.
-Inaczej niż w przypadku zbioru, kolejność elementów w układzie jest więc istotna.
-Wszystkie rozważane dalej układy skalarów bądź wektorów będą układami skończonymi.
+Układ elementów pewnego zbioru jest z definicji ciągiem o wyrazach należących 
+do tego zbioru. Inaczej niż w przypadku zbioru, kolejność elementów w układzie 
+jest więc istotna. Wszystkie rozważane dalej układy skalarów bądź wektorów 
+będą układami skończonymi.
 
-Dla odróżnienia od zera ciała :math:`\,K\,,\,` wektor zerowy przestrzeni :math:`\,V\,`
-będzie oznaczony :math:`\,\theta\,.`
+Dla odróżnienia od zera ciała :math:`\,K\,,\,` wektor zerowy przestrzeni 
+:math:`\,V\,` będzie oznaczony :math:`\,\theta\,.`
 
-Odejmowanie w ciele bądź w przestrzeni wektorowej jest z definicji dodawaniem elementu przeciwnego
-w odpowiedniej grupie addytywnej:
+Odejmowanie w ciele bądź w przestrzeni wektorowej jest z definicji 
+dodawaniem elementu przeciwnego w odpowiedniej grupie addytywnej:
 
 .. math::
    
@@ -26,7 +27,8 @@ w odpowiedniej grupie addytywnej:
 Proste twierdzenia
 ~~~~~~~~~~~~~~~~~~
 
-1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu; :math:`\\`
+1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu; 
+:math:`\\`
 pomnożenie wektora zerowego przez dowolną liczbę daje w wyniku wektor zerowy:
 
 .. math::
@@ -39,13 +41,16 @@ Dowód. Z rozdzielności mnożenia wektorów przez skalary względem dodawania m
 
    0\cdot v\,+\,0\cdot v\ \,=\ \,(0+0)\cdot v\ \,=\ \,0\cdot v\,.
 
-Do obydwu stron otrzymanej równości dodajemy wektor przeciwny do wektora :math:`\,0\cdot v\,`:
+Do obydwu stron otrzymanej równości dodajemy wektor przeciwny do wektora 
+:math:`\,0\cdot v\,`:
 
 .. math::
 
-   [\,0\cdot v\,+\,0\cdot v\,]\,+\,[\,-(0\cdot v)\,]\ \,=\ \,0\cdot v\,+\,[\,-(0\cdot v)\,]\,.
+   [\,0\cdot v\,+\,0\cdot v\,]\,+\,[\,-(0\cdot v)\,]\ \,=
+   \ \,0\cdot v\,+\,[\,-(0\cdot v)\,]\,.
 
-Korzystając z łączności dodawania i z definicji odejmowania wektorów otrzymujemy:
+Korzystając z łączności dodawania i z definicji odejmowania wektorów 
+otrzymujemy:
 
 .. math::
 
@@ -57,7 +62,8 @@ Różnica dwóch takich samych wektorów równa się wektorowi zerowemu:
 
    0\cdot v\,+\,\theta\ \,=\ \,\theta\,.
 
-Wektor :math:`\,\theta\,` jest elementem neutralnym dla dodawania wektorów, wobec czego ostatecznie: 
+Wektor :math:`\,\theta\,` jest elementem neutralnym dla dodawania wektorów, 
+wobec czego ostatecznie: 
 
 .. math::
 
@@ -67,10 +73,12 @@ Analogicznie dowodzi się drugą część twierdzenia:
 
 .. math::
    
-   \alpha\cdot\theta\,+\,\alpha\cdot\theta\ \,=\ \,\alpha\cdot(\theta+\theta)\ =\ \alpha\cdot\theta\,,
+   \alpha\cdot\theta\,+\,\alpha\cdot\theta\ \,=
+   \ \,\alpha\cdot(\theta+\theta)\ =\ \alpha\cdot\theta\,,
    
-   [\,\alpha\cdot\theta\,+\,\alpha\cdot\theta\,]\,+\,[\,-(\alpha\cdot\theta)\,]\ \,=\ \,
-   \alpha\cdot\theta\,+\,[\,-(\alpha\cdot\theta)\,]\,,
+   [\,\alpha\cdot\theta\,+\,\alpha\cdot\theta\,]\,+
+   \,[\,-(\alpha\cdot\theta)\,]\ \,=
+   \ \,\alpha\cdot\theta\,+\,[\,-(\alpha\cdot\theta)\,]\,,
 
    \alpha\cdot\theta\,+\,[\,\alpha\cdot\theta\,-\,\alpha\cdot\theta\,]\ =\ 
    \alpha\cdot\theta\,-\,\alpha\cdot\theta\,,
@@ -80,8 +88,9 @@ Analogicznie dowodzi się drugą część twierdzenia:
    \alpha\cdot\theta\,=\,\theta\,.
 
 2.) Iloczyn wektora :math:`\,v\,` przez liczbę przeciwną do :math:`\,\alpha\,` 
-równa się iloczynowi wektora przeciwnego do :math:`\,v\,` przez :math:`\,\alpha\,`
-i równa się wektorowi przeciwnemu do iloczynu wektora :math:`\,v\,` przez :math:`\,\alpha:`
+równa się iloczynowi wektora przeciwnego do :math:`\,v\,` 
+przez :math:`\,\alpha\,` i równa się wektorowi przeciwnemu do iloczynu wektora 
+:math:`\,v\,` przez :math:`\,\alpha:`
 
 .. math::
    
@@ -91,20 +100,25 @@ Dowód. Korzystając z poprzedniego twierdzenia 1.) można zapisać:
 
 .. math::
 
-   (-\alpha)\cdot v \,+\, \alpha\cdot v\ \,=\ \,[\,(-\alpha) + \alpha\,]\cdot v\ \,=\ \,
-   0\cdot v\ =\ \theta\,;
+   (-\alpha)\cdot v \,+\, \alpha\cdot v\ \,=
+   \ \,[\,(-\alpha) + \alpha\,]\cdot v\ \,=
+   \ \, 0\cdot v\ =\ \theta\,;
 
    \alpha\cdot (-v)\,+\,\alpha\cdot v\ \,=\ \,\alpha\cdot[\,(-v)+v\,]\ \,=\ \,
    \alpha\cdot\theta\ =\ \theta\,.
 
 A zatem wektory :math:`\ (-\alpha)\cdot v\ \ \;\text{i}\ \ \;\alpha\cdot v\,,\ `
-oraz :math:`\ \alpha\cdot (-v)\ \ \;\text{i}\ \ \;\alpha\cdot v\,,\ ` są wzajemnie przeciwne:
+oraz :math:`\ \alpha\cdot (-v)\ \ \;\text{i}\ \ \;\alpha\cdot v\,,\ ` 
+są wzajemnie przeciwne:
 
 .. math::
 
-   (-\alpha)\cdot v\ =\ -\,(\alpha\cdot v)\,,\qquad\alpha\cdot (-v)\ =\ -\,(\alpha\cdot v)\,.
+   (-\alpha)\cdot v\ =
+   \ -\,(\alpha\cdot v)\,,\qquad\alpha\cdot (-v)\ =
+   \ -\,(\alpha\cdot v)\,.
 
-Wniosek: :math:`\ ` kładąc :math:`\,\alpha = 1\,` otrzymujemy: :math:`\ \ (-1)\,v\,=\,-\,v\,.`
+Wniosek: :math:`\ ` kładąc :math:`\,\alpha = 1\,` 
+otrzymujemy: :math:`\ \ (-1)\,v\,=\,-\,v\,.`
 
 
 3.) Mnożenie wektorów przez skalary jest rozdzielne względem odejmowania:
@@ -115,7 +129,8 @@ Wniosek: :math:`\ ` kładąc :math:`\,\alpha = 1\,` otrzymujemy: :math:`\ \ (-1)
    \alpha\cdot v\,-\,\beta\cdot v\,,\quad\alpha\cdot (v-w)\ =\ 
    \alpha\cdot v\,-\,\alpha\cdot w\,.
 
-Dowód. Skorzystamy z definicji odejmowania, z rozdzielności mnożenia wektorów przez skalary względem dodawania oraz z udowodnionego już twierdzenia 2.):
+Dowód. Skorzystamy z definicji odejmowania, z rozdzielności mnożenia wektorów 
+przez skalary względem dodawania oraz z udowodnionego już twierdzenia 2.):
 
 .. math::
 
@@ -138,8 +153,8 @@ gdy skalar jest zerem lub gdy wektor jest wektorem zerowym:
    \alpha\cdot v\,=\,\theta\quad\Leftrightarrow\quad\
    \left(\ \alpha\,=\,0\ \ \lor\ \ v\,=\,\theta\ \right)\,.
 
-Dowód. Twierdzenie w postaci równoważności można potraktować jako koniunkcję dwóch implikacji,
-które udowadnia się oddzielnie.
+Dowód. Twierdzenie w postaci równoważności można potraktować 
+jako koniunkcję dwóch implikacji, które udowadnia się oddzielnie.
 
 :math:`\Rightarrow\ :\ ` Zakładamy, że :math:`\ \,\alpha\cdot v\,=\,\theta\,.\ `
 Oczywiście :math:`\,\alpha = 0\,` albo :math:`\,\alpha \neq 0\,.`
@@ -181,14 +196,16 @@ Jeżeli dla pewnego wektora :math:`\,x\in V\,` jest spełniony warunek
 
 gdzie :math:`\ \ \alpha_1,\,\alpha_2,\,\ldots,\,\alpha_m\in K\,,\ \  
 x_1,\,x_2,\,\ldots,\,x_m\in V,\ \,`
-to wektor :math:`\,x\,` jest *kombinacją liniową* wektorów :math:`\ x_1,\,x_2,\,\ldots,\,x_m\ `
+to wektor :math:`\,x\,` jest *kombinacją liniową* wektorów 
+:math:`\ x_1,\,x_2,\,\ldots,\,x_m\ `
 o współczynnikach :math:`\ \alpha_1,\,\alpha_2,\,\ldots,\,\alpha_m\,.`
 
 Mówimy też, że wektor :math:`\,x\,` *wyraża się liniowo*
 przez wektory :math:`\ x_1,\,x_2,\,\ldots,\,x_m\,.`
 
 Gdy wszystkie współczynniki są równe zeru, to kombinację nazywamy *trywialną*.
-Trywialna kombinacja liniowa jakichkolwiek wektorów równa się wektorowi zerowemu:
+Trywialna kombinacja liniowa jakichkolwiek wektorów 
+równa się wektorowi zerowemu:
 
 .. math::
    :label: triv
@@ -202,11 +219,12 @@ Kombinację liniową :eq:`lin` można też napisać używając skróconego zapis
    
    x\ =\ \sum_{k=1}^m\ \alpha_k\,x_k\,.
 
-Niech :math:`\ \mathcal{X} = (x_1,x_2,\ldots,x_m)\ ` będzie skończonym układem wektorów
-przestrzeni :math:`\,V(K)\,.`
+Niech :math:`\ \mathcal{X} = (x_1,x_2,\ldots,x_m)\ ` 
+będzie skończonym układem wektorów przestrzeni :math:`\,V(K)\,.`
 
-Zbiór wszystkich kombinacji liniowych wektorów tego układu nazywamy *powłoką liniową*
-(lub *domknięciem liniowym*) układu :math:`\,\mathcal{X}\,` i oznaczamy :math:`\,L(\mathcal{X})\,:`
+Zbiór wszystkich kombinacji liniowych wektorów tego układu 
+nazywamy *powłoką liniową* (lub *domknięciem liniowym*) układu 
+:math:`\,\mathcal{X}\,` i oznaczamy :math:`\,L(\mathcal{X})\,:`
 
 .. math:: 
 
@@ -214,13 +232,16 @@ Zbiór wszystkich kombinacji liniowych wektorów tego układu nazywamy *powłok�
    \left\{\ \alpha_1\,x_1 + \alpha_2\,x_2 + \ldots + \alpha_m\,x_m:\ 
    \alpha_1,\alpha_2,\ldots,\alpha_m\in K\ \right\}\,.
 
-Łatwo zauważyć, że :math:`\,L(\mathcal{X})\,` jest podprzestrzenią: :math:`\,L(\mathcal{X}) < V\,.\ `
-W tej sytuacji mówimy, że
+Łatwo zauważyć, że :math:`\,L(\mathcal{X})\,` jest podprzestrzenią: 
+:math:`\,L(\mathcal{X}) < V\,.\ ` W tej sytuacji mówimy, że
 
-* układ :math:`\,\mathcal{X}\,` *rozpina* (*generuje*) podprzestrzeń :math:`\ L(\mathcal{X})\,;`
-* podprzestrzeń :math:`\,L(\mathcal{X})\,` jest *rozpięta* na układzie :math:`\,\mathcal{X}\,` 
+* układ :math:`\,\mathcal{X}\,` *rozpina* (*generuje*) podprzestrzeń 
+  :math:`\ L(\mathcal{X})\,;`
+* podprzestrzeń :math:`\,L(\mathcal{X})\,` jest *rozpięta* 
+  na układzie :math:`\,\mathcal{X}\,` 
   (*generowana* przez układ :math:`\,\mathcal{X})\,;`
-* :math:`\,\mathcal{X}\,` jest *układem generatorów* podprzestrzeni :math:`\,L(\mathcal{X})\,.`
+* :math:`\,\mathcal{X}\,` jest *układem generatorów* 
+  podprzestrzeni :math:`\,L(\mathcal{X})\,.`
 
 Może się zdarzyć, że :math:`\ L(\mathcal{X}) = V\,.\ ` 
 Wtedy układ :math:`\,\mathcal{X}\,` generuje przestrzeń :math:`\,V\ `
@@ -230,50 +251,58 @@ Wtedy układ :math:`\,\mathcal{X}\,` generuje przestrzeń :math:`\,V\ `
 
 Załóżmy, że :math:`\ \vec{v}_1,\,\vec{v}_2,\,\vec{v}_3\ ` są trzema 
 niezerowymi niekomplanarnymi (czyli nie leżącymi w jednej płaszczyżnie) 
-wektorami geometrycznymi, zaczepionymi w ustalonym punkcie :math:`\,\boldsymbol{O}.\ ` Wtedy:
+wektorami geometrycznymi, zaczepionymi w ustalonym punkcie 
+:math:`\,\boldsymbol{O}.\ ` Wtedy:
 
-1. :math:`L(\vec{v}_1)\,=\,\left\{\ \alpha\,\vec{v}_1 :\ \alpha\in R\ \right\}\ ` 
-   jest zbiorem wektorów leżących na prostej przechodzącej przez punkt :math:`\,\boldsymbol{O}\ \,`
-   i wyznaczonej przez wektor :math:`\,\vec{v}_1\,;`
+1. :math:`\ L(\vec{v}_1)\,=
+   \,\left\{\ \alpha\,\vec{v}_1 :\ \alpha\in R\ \right\}\ ` jest zbiorem 
+   wektorów leżących na prostej przechodzącej przez punkt 
+   :math:`\,\boldsymbol{O}\ \,` i wyznaczonej przez wektor 
+   :math:`\,\vec{v}_1\,;`
 
-2. :math:`L(\vec{v}_1,\vec{v}_2)\,=\,\left\{\ \alpha_1\,\vec{v}_1 + \alpha_2\,\vec{v}_2 :\ \alpha_1,
+2. :math:`\ L(\vec{v}_1,\vec{v}_2)\,=
+   \,\left\{\ \alpha_1\,\vec{v}_1 + \alpha_2\,\vec{v}_2 :\ \alpha_1,
    \alpha_2\in R\ \right\}\ ` jest zbiorem wektorów leżących na płaszczyźnie 
    przechodzącej przez punkt :math:`\,\boldsymbol{O}\ \,` i wyznaczonej przez
    wektory :math:`\,\vec{v}_1,\,\vec{v}_2\,;`
 
-3. :math:`L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,=\,
+3. :math:`\ L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,=\,
    \left\{\ \alpha_1\,\vec{v}_1+\alpha_2\,\vec{v}_2+\alpha_3\,\vec{v}_3 :\  
    \alpha_1,\alpha_2,\alpha_3\in R\ \right\}\ `
-   przedstawia całą przestrzeń wektorów zaczepionych w punkcie :math:`\,\boldsymbol{O}.`
+   przedstawia całą przestrzeń wektorów zaczepionych w punkcie 
+   :math:`\,\boldsymbol{O}.`
 
 Podprzestrzenie te są związane relacją:
 
 .. math::
    
-   L(\vec{v}_1)\,<\,L(\vec{v}_1,\vec{v}_2)\,<\,L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,.
+   L(\vec{v}_1)\,<\,L(\vec{v}_1,\vec{v}_2)\,<
+   \,L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,.
 
 Liniowa zależność i niezależność wektorów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mówimy, że układ wektorów :math:`\,(x_1,x_2,\ldots,x_r)\,` jest *liniowo zależny*
-(lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo zależne*), :math:`\,`
-gdy istnieje nietrywialna kombinacja liniowa tych wektorów równa wektorowi zerowemu :math:`\,\theta.`
+Mówimy, że układ wektorów :math:`\,(x_1,x_2,\ldots,x_r)\,` 
+jest *liniowo zależny* (lub, że wektory :math:`\,x_1,x_2,\ldots,x_r\ ` są 
+:math:`\,` *liniowo zależne*), :math:`\,` gdy istnieje nietrywialna kombinacja 
+liniowa tych wektorów równa wektorowi zerowemu :math:`\,\theta.`
 
 Układ :math:`\ (x_1,x_2,\ldots,x_r)\ ` jest *liniowo niezależny*
 (wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są :math:`\,` *liniowo niezależne*),
-gdy nie jest on liniowo zależny, czyli gdy każda nietrywialna kombinacja liniowa tych wektorów 
-jest różna od wektora zerowego.
+gdy nie jest on liniowo zależny, czyli gdy każda nietrywialna kombinacja 
+liniowa tych wektorów jest różna od wektora zerowego.
 
-A zatem układ :math:`\,(x_1,x_2,\ldots,x_r)\,` jest liniowo zależny wtedy i tylko wtedy,
-gdy istnieje układ :math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_r)\,` skalarów, 
-z których co najmniej jeden jest różny od zera, taki że
+A zatem układ :math:`\,(x_1,x_2,\ldots,x_r)\,` jest liniowo zależny wtedy i 
+tylko wtedy, gdy istnieje układ :math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_r)\,` 
+skalarów, z których co najmniej jeden jest różny od zera, taki że
 
 .. math::
    :label: lindep
 
    \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\,.
 
-Natomiast układ ten jest liniowo niezależny, gdy jedyną kombinacją liniową jego wektorów, równą wektorowi zerowemu, jest kombinacja trywialna:
+Natomiast układ ten jest liniowo niezależny, gdy jedyną kombinacją liniową 
+jego wektorów, równą wektorowi zerowemu, jest kombinacja trywialna:
 
 .. math::
    :label: linindep
@@ -281,13 +310,14 @@ Natomiast układ ten jest liniowo niezależny, gdy jedyną kombinacją liniową 
    \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\qquad
    \Rightarrow\qquad\alpha_1=\alpha_2=\ldots=\alpha_r=0\,.
 
-Warto zauważyć, że warunek :eq:`linindep` jest implikacją odwrotną do :eq:`triv`.
+Warto zauważyć, że warunek :eq:`linindep` 
+jest implikacją odwrotną do :eq:`triv`.
 
 **Twierdzenie 1.** :math:`\,` 
 Wektory :math:`\ x_1,x_2,\ldots,x_r\,,\ ` gdzie :math:`\ r \geq 2,\ `
-są liniowo zależne wtedy i tylko wtedy, :math:`\,` gdy co najmniej jeden z nich wyraża się
-liniowo przez wektory pozostałe, :math:`\,` czyli gdy dla pewnego wskaźnika 
-:math:`\,i\in\{\,1,2,\ldots,r\,\}\,` zachodzi warunek
+są liniowo zależne wtedy i tylko wtedy, :math:`\,` gdy co najmniej jeden z nich 
+wyraża się liniowo przez wektory pozostałe, :math:`\,` czyli gdy 
+dla pewnego wskaźnika :math:`\,i\in\{\,1,2,\ldots,r\,\}\,` zachodzi warunek
 
 .. math::
    :label: detach
@@ -299,15 +329,18 @@ Uwaga: :math:`\ ` co najmniej jeden, to znaczy niekoniecznie każdy.
 
 **Dowód.**
 
-:math:`\Rightarrow\,:\ ` Zakładamy, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo zależne:
+:math:`\Rightarrow\,:\ ` Zakładamy, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` 
+są liniowo zależne:
 
 .. math::
    
    \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\,,
 
-przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika :math:`\ i\in\{\,1,2,\ldots,r\,\}\,.`
+przy czym :math:`\ \alpha_i\neq 0\ ` dla pewnego wskaźnika 
+:math:`\ i\in\{\,1,2,\ldots,r\,\}\,.`
 
-Po przeniesieniu na prawą stronę wszystkich składników z wyjątkiem :math:`\,i`-tego otrzymujemy
+Po przeniesieniu na prawą stronę wszystkich składników 
+z wyjątkiem :math:`\,i`-tego otrzymujemy
 
 .. math::
    :label: ith
@@ -315,8 +348,9 @@ Po przeniesieniu na prawą stronę wszystkich składników z wyjątkiem :math:`\
    \alpha_i\,x_i\ =\ -\,\alpha_1\,x_1\,-\,\ldots\,-\,\alpha_{i-1}\,x_{i-1}\,-\,
    \alpha_{i+1}\,x_{i+1}\,-\,\ldots\,-\,\alpha_r\,x_r\,.
 
-Z założenia :math:`\,\alpha_i\neq 0\,` wynika, że w ciele :math:`\,K\,` istnieje element
-:math:`\,\alpha_i^{-1}\,` taki, że :math:`\,\alpha_i\cdot\alpha_i^{-1}=1.\ `
+Z założenia :math:`\,\alpha_i\neq 0\,` wynika, że w ciele :math:`\,K\,` 
+istnieje element :math:`\,\alpha_i^{-1}\,` taki, że 
+:math:`\,\alpha_i\cdot\alpha_i^{-1}=1.\ `
 Mnożąc obustronnie :eq:`ith` przez :math:`\,\alpha_i^{-1}\ \,` 
 i :math:`\,` oznaczając :math:`\ \beta_j\,=\,-\,\alpha_i^{-1}\,\alpha_j\,`
 dla :math:`\ j\,=\,1,\ldots,i-1,\ i+1,\ldots,r\,,\ `
@@ -337,11 +371,14 @@ Przenosząc wyraz :math:`\,x_i\,` na prawą stronę i biorąc pod uwagę,
    \beta_1\,x_1\,+\,\ldots\,+\,\beta_{i-1}\,x_{i-1}\,+\,(-1)\,x_i\,+\,
    \beta_{i+1}\,x_{i+1}\,+\,\ldots\,+\,\beta_r\,x_r\ = \theta\,.
 
-Ponieważ :math:`\,-1\neq 0\,,\ ` kombinacja liniowa po lewej stronie jest nietrywialna,
+Ponieważ :math:`\,-1\neq 0\,,\ ` 
+kombinacja liniowa po lewej stronie jest nietrywialna,
 a to oznacza, że wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo zależne.
 
 **Wniosek:** :math:`\ `
-Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wtedy, gdy żadnego z nich nie można zapisać w postaci kombinacji liniowej wektorów pozostałych.
+Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne 
+wtedy i tylko wtedy, gdy żadnego z nich nie można zapisać w postaci 
+kombinacji liniowej wektorów pozostałych.
 
 .. Łatwo można uzasadnić następujące użyteczne stwierdzenia
    (l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
@@ -349,9 +386,11 @@ Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wte
    1. | Układ :math:`\,(x),\,` składający się z jednego wektora, jest l.z. wtedy
         i tylko wtedy, gdy :math:`\,x = \theta\,.`
 
-   2. | Jeżeli jakiś podukład danego układu jest l.z., to cały układ jest też l.z.
+   2. | Jeżeli jakiś podukład danego układu jest l.z., 
+        to cały układ jest też l.z.
       | Wniosek 1.: Każdy układ zawierający wektor zerowy jest l.z.
-      | Wniosek 2.: Jeżeli w układzie jakieś dwa wektory są sobie równe, to układ jest l.z.
+      | Wniosek 2.: Jeżeli w układzie jakieś dwa wektory są sobie równe, 
+        to układ jest l.z.
       | Wniosek 3.: Jeżeli dwa wektory są proporcjonalne:
         :math:`\ x_j = \lambda\,x_i\,,\ ` to układ jest l.z.
 
@@ -359,7 +398,8 @@ Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wte
       | Wniosek: :math:`\ ` Układ l.n. nie zawiera wektora zerowego 
         ani wektorów identycznych lub proporcjonalnych.
 
-   4. | Kolejność wektorów nie ma wpływu na ich liniową zależność albo niezależność.
+   4. | Kolejność wektorów nie ma wpływu 
+        na ich liniową zależność albo niezależność.
 
 Łatwo można uzasadnić następujące użyteczne stwierdzenia :math:`\\`
 (l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
@@ -368,23 +408,28 @@ Wektory :math:`\ x_1,x_2,\ldots,x_r\ ` są liniowo niezależne wtedy i tylko wte
      i tylko wtedy, gdy :math:`\,x = \theta\,.`
 2. | Jeżeli jakiś podukład danego układu jest l.z., to cały układ jest też l.z.
    | Wniosek 1.: Każdy układ zawierający wektor zerowy jest l.z.
-   | Wniosek 2.: Jeżeli w układzie jakieś dwa wektory są sobie równe, to układ jest l.z.
+   | Wniosek 2.: Jeżeli w układzie jakieś dwa wektory są sobie równe, 
+     to układ jest l.z.
    | Wniosek 3.: Jeżeli dwa wektory są proporcjonalne:
      :math:`\ x_j = \lambda\,x_i\,,\ ` to układ jest l.z.
 3. | Każdy podukład układu liniowo niezależnego jest l.n.
    | Wniosek: :math:`\ ` Układ l.n. nie zawiera wektora zerowego 
      ani wektorów identycznych lub proporcjonalnych.
-4. | Kolejność wektorów nie ma wpływu na ich liniową zależność albo niezależność.
+4. | Kolejność wektorów nie ma wpływu 
+     na ich liniową zależność albo niezależność.
 
 **Przykład 0.** :math:`\ `
-Rozważmy przestrzeń :math:`\,C(R)\,` liczb zespolonych nad ciałem liczb rzeczywistych.
+Rozważmy przestrzeń :math:`\,C(R)\,` liczb zespolonych 
+nad ciałem liczb rzeczywistych.
 
-Wektory (tu: liczby) :math:`\ 1\ ` oraz :math:`\ i\ \,` są :math:`\,` l.n., :math:`\,`
+Wektory (tu: liczby) :math:`\ 1\ ` oraz :math:`\ i\ \,` 
+są :math:`\,` l.n., :math:`\,`
 bo dla dowolnych :math:`\,\alpha,\beta\in R\ ` zachodzi warunek :eq:`linindep`:
 
 .. math::
    
-   \alpha\cdot 1\,+\,\beta\cdot i\ =\ 0\qquad\Rightarrow\qquad\alpha = \beta = 0\,.
+   \alpha\cdot 1\,+\,\beta\cdot i\ =
+   \ 0\qquad\Rightarrow\qquad\alpha = \beta = 0\,.
 
 **Przykład 1.** :math:`\ `
 Niech :math:`\quad 
@@ -432,22 +477,27 @@ A zatem wektory :math:`\ x,y\ ` spełniają warunek
 
 .. math::
 
-   \alpha\,x\,+\,\beta\,y\,=\,\theta\qquad\Rightarrow\qquad\alpha = \beta = 0\,,
+   \alpha\,x\,+\,\beta\,y\,=
+   \,\theta\qquad\Rightarrow\qquad\alpha = \beta = 0\,,
 
 co oznacza ich liniową niezależność.
 
 Baza przestrzeni wektorowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Układ :math:`\ \mathcal{B}\ ` wektorów przestrzeni :math:`\,V\,` jest *bazą* 
-tej przestrzeni, gdy dowolny wektor :math:`\,v\in V\,` można przedstawić jednoznacznie
-w postaci kombinacji liniowej wektorów układu :math:`\,\mathcal{B}\,.`
+
+Układ :math:`\ \mathcal{B}\ ` wektorów przestrzeni :math:`\,V\,` 
+jest *bazą* tej przestrzeni, gdy dowolny wektor :math:`\,v\in V\,` 
+można przedstawić jednoznacznie w postaci kombinacji liniowej 
+wektorów układu :math:`\,\mathcal{B}\,.`
 
 Jeśli więc układ :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,` 
-jest bazą przestrzeni :math:`\,V,\ ` to dla każdego wektora :math:`\,v\in V\,`
-istnieje dokładnie jeden układ skalarów :math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_n)\,`
-taki, że :math:`\,v\,` równa się kombinacji liniowej wektorów :math:`\,v_1,\,v_2,\,\ldots,\,v_n\,`
-o współczynnikach :math:`\,\alpha_1,\,\alpha_2,\,\ldots,\,\alpha_n\,:`
+jest bazą przestrzeni :math:`\,V,\ ` to dla każdego wektora 
+:math:`\,v\in V\,` istnieje dokładnie jeden układ skalarów 
+:math:`\,(\alpha_1,\alpha_2,\ldots,\alpha_n)\,` taki, że 
+:math:`\,v\,` równa się kombinacji liniowej wektorów 
+:math:`\,v_1,\,v_2,\,\ldots,\,v_n\,` o współczynnikach 
+:math:`\,\alpha_1,\,\alpha_2,\,\ldots,\,\alpha_n\,:`
 
 .. math::
    :label: baza
@@ -458,13 +508,13 @@ Skalary :math:`\,\alpha_1,\,\alpha_2,\,\ldots,\,\alpha_n\,` nazywają się
 *współrzędnymi* wektora :math:`\,v\,` w bazie :math:`\,\mathcal{B}.`
 
 Jeżeli w przestrzeni :math:`\,V\,` istnieje baza :math:`\,n`-elementowa,
-to każdy wektor jest scharakteryzowany jednoznacznie poprzez układ :math:`\,n\,`
-swoich współrzędnych w tej bazie. W różnych bazach ten sam wektor będzie miał
-na ogół różne współrzędne.
+to każdy wektor jest scharakteryzowany jednoznacznie poprzez układ 
+:math:`\,n\,` swoich współrzędnych w tej bazie. W różnych bazach 
+ten sam wektor będzie miał na ogół różne współrzędne.
 
-**Twierdzenie 2.** :math:`\ ` Układ :math:`\,\mathcal{B}\,` jest bazą przestrzeni :math:`\,V\,` 
-wtedy i tylko wtedy, gdy :math:`\,\mathcal{B}\,` jest liniowo niezależnym układem generatorów 
-tej przestrzeni.
+**Twierdzenie 2.** :math:`\ ` Układ :math:`\,\mathcal{B}\,` jest bazą 
+przestrzeni :math:`\,V\,` wtedy i tylko wtedy, gdy :math:`\,\mathcal{B}\,` 
+jest liniowo niezależnym układem generatorów tej przestrzeni.
 
 **Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
@@ -476,25 +526,28 @@ Z drugiej strony oczywiście :math:`\ L(\mathcal{B}) \subset V\,.\ `
 Wobec tego :math:`\ V = L(\mathcal{B})\,,\ `
 czyli :math:`\,\mathcal{B}\,` jest układem generatorów przestrzeni :math:`\,V.`
 
-Aby wykazać liniową niezależność układu :math:`\,\mathcal{B}\,,` zauważmy , że tożsamość
+Aby wykazać liniową niezależność układu :math:`\,\mathcal{B}\,,` 
+zauważmy , że tożsamość
 
 .. math::
    
    0\cdot v_1\,+\,0\cdot v_2\,+\,\ldots\,+\,0\cdot v_n\ =\ \theta
 
-można zinterpretować jako przedstawienie wektora zerowego w bazie :math:`\,\mathcal{B}.\ `
-Z jednoznaczności tego przedstawienia wynika, że kombinacja trywialna jest jedyną
-kombinacją liniową wektorów układu :math:`\,\mathcal{B}\,,\ ` równą wektorowi :math:`\,\theta.\ `
+można zinterpretować jako przedstawienie wektora zerowego w bazie 
+:math:`\,\mathcal{B}.\ ` Z jednoznaczności tego przedstawienia wynika, 
+że kombinacja trywialna jest jedyną kombinacją liniową wektorów układu 
+:math:`\,\mathcal{B}\,,\ ` równą wektorowi :math:`\,\theta.\ `
 Oznacza to, że :math:`\,\mathcal{B}\,` jest układem liniowo niezależnym. 
 
 :math:`\Leftarrow\,:\ ` Zakładamy, że :math:`\,\mathcal{B}\ `
 jest liniowo niezależnym układem generatorów przestrzeni :math:`\,V.`
 
-Z samego faktu, że :math:`\,\mathcal{B}\,` generuje przestrzeń :math:`\,V\,` wynika,
-że każdy wektor :math:`\,v\in V\,` ma postać :eq:`baza`. :math:`\ `
-Pozostaje udowodnić, że przedstawienie takie jest jednoznaczne.
+Z samego faktu, że :math:`\,\mathcal{B}\,` generuje przestrzeń 
+:math:`\,V\,` wynika, że każdy wektor :math:`\,v\in V\,` ma postać :eq:`baza`. 
+:math:`\ ` Pozostaje udowodnić, że przedstawienie takie jest jednoznaczne.
 
-Przypuśćmy, że tak nie jest, czyli że wektor :math:`\,v\,` ma dwa różne takie przedstawienia:
+Przypuśćmy, że tak nie jest, czyli że wektor :math:`\,v\,` 
+ma dwa różne takie przedstawienia:
 
 .. math::
    
@@ -502,7 +555,8 @@ Przypuśćmy, że tak nie jest, czyli że wektor :math:`\,v\,` ma dwa różne ta
 
    v\ =\ \beta_1\,v_1\,+\,\beta_2\,v_2\,+\,\ldots\,+\,\beta_n\,v_n\,,
 
-przy czym :math:`\ \beta_i\neq\alpha_i\ ` dla pewnego :math:`\ i\in\{1,2,\ldots,n\}\,.`
+przy czym :math:`\ \beta_i\neq\alpha_i\ ` dla pewnego 
+:math:`\ i\in\{1,2,\ldots,n\}\,.`
 
 Odejmując stronami otrzymujemy
 
@@ -521,7 +575,8 @@ jest bazą przestrzeni :math:`\,V.`
 
 Twierdzenie 2. podaje warunek konieczny i wystarczający dla bazy,
 mogłoby zatem być alternatywną definicją tego pojęcia.
-Możliwe jest jeszcze inne podejście, oparte na podanej niżej definicji i twierdzeniu 3.
+Możliwe jest jeszcze inne podejście, 
+oparte na podanej niżej definicji i twierdzeniu 3.
 
 .. Liniowo niezależny układ wektorów przestrzeni :math:`\ V\ ` nazywa się
    *maksymalnym liniowo niezależnym układem*, gdy nie można do niego dołączyć
@@ -533,7 +588,8 @@ jakiegokolwiek wektora z :math:`\,V\,` daje układ liniowo zależny.
 
 **Twierdzenie 3.** :math:`\,` Układ :math:`\,\mathcal{B}\,` 
 wektorów przestrzeni :math:`\,V\,` jest bazą tej przestrzeni
-wtedy i tylko wtedy, :math:`\,` gdy jest on maksymalnym liniowo niezależnym układem.
+wtedy i tylko wtedy, :math:`\,` gdy jest on 
+maksymalnym liniowo niezależnym układem.
 
 **Dowód.** :math:`\,` Niech :math:`\,\mathcal{B} = (v_1,v_2,\ldots,v_n)\,.`
 
@@ -560,9 +616,11 @@ układ :math:`\,(v,v_1,v_2,\ldots,v_n)\,` jest liniowo zależny:
 .. math::
    :label: presume
 
-   \alpha_0\,v\,+\,\alpha_1\,v_1\,+\,\alpha_2\,v_2\,+\,\ldots\,+\,\alpha_n\,v_n\,=\,\theta\,,
+   \alpha_0\,v\,+\,\alpha_1\,v_1\,+\,\alpha_2\,v_2\,+
+   \,\ldots\,+\,\alpha_n\,v_n\,=\,\theta\,,
 
-gdzie nie wszystkie współczynniki :math:`\,\alpha_0,\,\alpha_1,\,\ldots,\,\alpha_n\,` znikają.
+gdzie nie wszystkie współczynniki 
+:math:`\,\alpha_0,\,\alpha_1,\,\ldots,\,\alpha_n\,` znikają.
 
 Gdyby :math:`\,\alpha_0=0,\ ` to miałaby miejsce równość
 
@@ -570,37 +628,51 @@ Gdyby :math:`\,\alpha_0=0,\ ` to miałaby miejsce równość
 
    \alpha_1\,v_1\,+\,\alpha_2\,v_2\,+\,\ldots\,+\,\alpha_n\,v_n\,=\,\theta\,,
 
-w której nie wszystkie współczynniki :math:`\,\alpha_1,\,\ldots,\,\alpha_n\,` znikają.
-Stoi to w sprzeczności z założeniem o liniowej niezależności układu :math:`\,\mathcal{B}.\ `
+w której nie wszystkie współczynniki :math:`\,\alpha_1,\,\ldots,\,\alpha_n\,` 
+znikają. Stoi to w sprzeczności z założeniem o liniowej niezależności układu 
+:math:`\,\mathcal{B}.\ `
 
-A zatem :math:`\ \alpha_0\neq 0.\ \,` W tej sytuacji równanie :eq:`presume` można przepisać w postaci
+A zatem :math:`\ \alpha_0\neq 0.\ \,` W tej sytuacji równanie :eq:`presume` 
+można przepisać w postaci
 
 .. math::
 
    v\ =\ \beta_1\,v_1\,+\,\beta_2\,v_2\,+\,\ldots\,+\,\beta_n\,v_n\,,
 
-gdzie :math:`\ \,\beta_i\,=\,-\,\alpha_0^{-1}\,\alpha_i\ \,` dla :math:`\ i\,=\,1,\ldots,n\,.\ `
+gdzie :math:`\ \,\beta_i\,=\,-\,\alpha_0^{-1}\,\alpha_i\ \,` 
+dla :math:`\ i\,=\,1,\ldots,n\,.\ ` 
 Warunek ten, spełniony dla każdego :math:`\,v\in V,\ ` oznacza 
 że :math:`\,\mathcal{B}\ ` jest liniowo niezależnym układem generatorów 
-przestrzeni :math:`\,V,\ ` czyli bazą :math:`\,V.` :math:`\\`
+przestrzeni :math:`\,V,\ ` czyli bazą :math:`\,V.` 
 
 .. | **Uwagi i komentarze.**
-   |
    | Każda baza przestrzeni wektorowej jest układem liniowo niezależnym.
    | Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą:
-   | żaden układ liniowo zależny nie jest bazą.
+     (żaden układ liniowo zależny nie jest bazą).
    | Jednak sama liniowa niezależność nie jest warunkiem wystarczającym.
-   | Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele,
+   | Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie 
+     dostatecznie wiele,
    | aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
 
-**Uwagi i komentarze.**
+.. **Uwagi i komentarze.**
 
-Każda baza przestrzeni wektorowej jest układem liniowo niezależnym. :math:`\\`
-Liniowa niezależność jest warunkiem koniecznym do tego, aby układ był bazą: :math:`\\`
-żaden układ liniowo zależny nie może być bazą. :math:`\\`
-Jednak sama liniowa niezależność nie jest warunkiem wystarczającym. :math:`\\`
-Mówiąc obrazowo, liniowo niezależnych wektorów musi być w bazie dostatecznie wiele, :math:`\\`
-aby generowały one całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
+   - | Każda baza przestrzeni wektorowej jest układem liniowo niezależnym.
+   - | Liniowa niezależność jest warunkiem koniecznym do tego, 
+       aby układ był bazą (żaden układ liniowo zależny nie może być bazą).
+   - | Jednak sama liniowa niezależność nie jest warunkiem wystarczającym.
+       Mówiąc obrazowo, liniowo niezależnych wektorów 
+       musi być w bazie dostatecznie wiele, aby generowały one 
+       całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
+
+**Wnioski.**
+
+- Każda baza przestrzeni wektorowej jest układem liniowo niezależnym.
+- Liniowa niezależność jest warunkiem koniecznym do tego, aby układ 
+  wektorów był bazą, ale nie jest to warunek wystarczający.
+  Mówiąc obrazowo, liniowo niezależnych wektorów 
+  powinno być w układzie dostatecznie wiele, aby generowały one 
+  całą przestrzeń, a nie jakąś jej właściwą podprzestrzeń.
+
 
 Wymiar przestrzeni wektorowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -635,19 +707,22 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
 
 0. W rzeczywistej przestrzeni :math:`\,R(R)\,,\ ` 
    jak również w zespolonej przestrzeni :math:`\,C(C)\,,`
-   bazą może być każdy 1-elementowy układ zawierający różną od zera liczbę rzeczywistą
-   (odpowiednio: zespoloną), :math:`\,` np. :math:`\ \mathcal{B} = (1)\,.\,`
-   Wobec tego :math:`\ \text{dim}\,R(R) = \text{dim}\,C(C) = \,1\,.`
+   bazą może być każdy 1-elementowy układ zawierający różną od zera liczbę 
+   rzeczywistą (odpowiednio: zespoloną), :math:`\,` 
+   np. :math:`\ \mathcal{B} = (1)\,.\,` Wobec tego 
+   :math:`\ \text{dim}\,R(R) = \text{dim}\,C(C) = \,1\,.`
    Natomiast w przestrzeni :math:`\,C(R)\,` liczb zespolonych  nad ciałem
-   liczb rzeczywistych bazą może być np. układ :math:`\ \mathcal{B} = (1,\,i)\,,\ `
-   z czego wynika, że :math:`\ \text{dim}\,C(R) = 2\,.` 
+   liczb rzeczywistych bazą może być np. układ 
+   :math:`\ \mathcal{B} = (1,\,i)\,,\ ` z czego wynika, że 
+   :math:`\ \text{dim}\,C(R) = 2\,.` 
 
 1. W przestrzeni :math:`\,V\,` wektorów geometrycznych zaczepionych
-   w punkcie :math:`\,\boldsymbol{O}\,` bazą jest każdy układ trzech wektorów niekomplanarnych.
-   Najczęściej używana jest baza ortonormalna w postaci trójki wzajemnie prostopadłych wektorów
-   jednostkowych: :math:`\ \mathcal{B} = (\vec{e}_1,\vec{e}_2,\vec{e}_3)\,.`
-   A zatem również w algebraicznym sensie fizyczna przestrzeń jest trójwymiarowa:
-   :math:`\ \text{dim}\,V = 3\,.`
+   w punkcie :math:`\,\boldsymbol{O}\,` bazą jest każdy układ 
+   trzech wektorów niekomplanarnych. Najczęściej używana jest baza 
+   ortonormalna w postaci trójki wzajemnie prostopadłych wektorów jednostkowych: 
+   :math:`\ \mathcal{B} = (\vec{e}_1,\vec{e}_2,\vec{e}_3)\,.`
+   A zatem również w algebraicznym sensie fizyczna przestrzeń 
+   jest trójwymiarowa: :math:`\ \text{dim}\,V = 3\,.`
 
 2. W przestrzeni :math:`\,K^n\,` złożonej z :math:`\,n`-elementowych
    wektorów kolumnowych o wyrazach z ciała :math:`\,K\,`
@@ -656,55 +731,27 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
 
    .. math::
    
-      e_1\ =\ \left[\begin{array}{c} 1 \\ 0 \\ \cdots \\ 0 \end{array}\right]\,,\quad
-      e_2\ =\ \left[\begin{array}{c} 0 \\ 1 \\ \cdots \\ 0 \end{array}\right]\,,\quad
+      e_1\ =\ \left[\begin{array}{c}
+                     1 \\ 0 \\ \cdots \\ 0 
+                    \end{array}\right]\,,\quad
+      e_2\ =\ \left[\begin{array}{c} 
+                     0 \\ 1 \\ \cdots \\ 0 
+                     \end{array}\right]\,,\quad
       \ldots,\quad
-      e_n\ =\ \left[\begin{array}{c} 0 \\ 0 \\ \cdots \\ 1 \end{array}\right]\,.
+      e_n\ =\ \left[\begin{array}{c} 
+                     0 \\ 0 \\ \cdots \\ 1 
+                    \end{array}\right]\,.
 
    Wynika stąd, że :math:`\ \text{dim}\,K^n = n\,,\ \ n=1,2,\ldots`
 
 3. W podprzestrzeni 
    :math:`\ \ W_p\ =\ \left\{\ \,\left[\begin{array}{c}
    x_1 \\ \ldots \\ x_p \\ 0 \\ \ldots \\ 0
-   \end{array}\right]\ :\quad x_i\in K\,,\ \ i = 1,2,\ldots,p.\;\right\}\ \ <\ \ K^n\,,\ `
+   \end{array}\right]\ :\quad x_i\in K\,,\ \ i =
+   1,2,\ldots,p.\;\right\}\ \ <\ \ K^n\,,\ `
 
    gdzie :math:`\ 1 \leq p < n\,,\ `
    bazą będzie układ :math:`\ \mathcal{E}_p = (e_1,e_2,\ldots,e_p)\,,\ `
    skąd :math:`\ \text{dim}\,W_p = p.`
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

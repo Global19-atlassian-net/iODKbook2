@@ -326,8 +326,8 @@ przy czym spełnione są warunki rozdzielności i łączności :math:`\,` 3. - 5
 Definicję prawostronnego :math:`\,P`-modułu otrzymamy 
 zastępując postulat 4. przez
 
-4. :math:`\ \ a\,\boxdot\,(b\,\boxdot\,m) \ \,=\ \,(b\cdot a)\,\boxdot\,m\,;\qquad 
-   a,b\in P\,,\quad m\in M.`
+4. :math:`\ \ a\,\boxdot\,(b\,\boxdot\,m) \ \,=
+   \ \,(b\cdot a)\,\boxdot\,m\,;\qquad a,b\in P\,,\quad m\in M.`
 
 Wtedy bardziej naturalny będzie zmieniony zapis: 
 :math:`\quad\boxdot\,:\ M\times P\rightarrow M\,,`

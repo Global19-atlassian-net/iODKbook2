@@ -8,11 +8,13 @@ Przykład eliminacji dla układu równań
 | **Zadanie.**
 | Stosując metodę eliminacji, rozwiąż odręcznie
   układ trzech równań o trzech niewiadomych.
-| Rozwiąż również, ewentualnie z pomocą Sage'a, układ czterech równań o czterech niewiadomych.
+| Rozwiąż również, ewentualnie z pomocą Sage'a, 
+  układ czterech równań o czterech niewiadomych.
 |
 | Aby wygenerować układ równań, naciśnij "Wykonaj"; :math:`\,`
 | aby zadać inną liczbę równań, wpisz nową wartość n.
-| Pod układem będzie podane rozwiązanie :math:`\,` - :math:`\,` wykorzystaj je do sprawdzenia wyniku.
+| Pod układem będzie podane rozwiązanie :math:`\,` - :math:`\,` 
+  wykorzystaj je do sprawdzenia wyniku.
 
 .. sagecellserver::
 
@@ -22,8 +24,11 @@ Przykład eliminacji dla układu równań
    b = random_vector(ZZ, n, x=-5, y=6)
    
    X = vector([var('x%d'%i) for i in range(1,n+1)])
-   t = ["\ " + latex(l) + " & \!\! = & \!\! " + latex(r) for (l,r) in zip(A*X,b)]
-   pretty_print(html("<center>$\\left\{\\begin{array}{rcr} %s \\end{array}\\right.$"
-   % " \\\ ".join(t)))
-   
+
+   t = ["\ " + latex(l) + " & \!\! = & \!\! " + latex(r) 
+        for (l,r) in zip(A*X,b)]
+
+   pretty_print(html("<center>$\\left\{\
+                     \\begin{array}{rcr} %s \\end{array}\\right.$"
+                     % " \\\ ".join(t)))
    show(A\b)
