@@ -3,11 +3,12 @@
 Wektory i macierze w systemie Sage
 ----------------------------------
 
-W poprzedniej sekcji przyjmowaliśmy, że elementami macierzy są
-liczby rzeczywiste z ciała :math:`\ R\ ` albo liczby zespolone z ciała :math:`\ C.`
-Tymczasem działania na macierzach są możliwe, a własności tych działań są zachowane 
-również wtedy, gdy elementy należą do prostszej struktury 
-:math:`\,` - :math:`\,` pierścienia z jednością (którym w szczególności może być ciało).
+W poprzedniej sekcji przyjmowaliśmy, że elementami macierzy są liczby 
+rzeczywiste z ciała :math:`\ R\ ` albo liczby zespolone z ciała :math:`\ C.`
+Tymczasem działania na macierzach są możliwe, 
+a własności tych działań są zachowane również wtedy, 
+gdy elementy należą do prostszej struktury :math:`\,` - :math:`\,` 
+pierścienia z jednością (którym w szczególności może być ciało).
 
 Właśnie pierścień jest w systemie Sage podstawową strukturą algebraiczną,
 na której zbudowana jest algebra wielomianów i macierzy.
@@ -49,11 +50,12 @@ Poniżej znajduje się przegląd najważniejszych pierścieni stosowanych w Sage
 
 Istnieją dwie strategie rachunków na wektorach i macierzach:
 
-* dokładna algebra liniowa: elementy wektorów i macierzy należą do zbiorów ZZ, QQ, SR;
-  operacje są dokładne, ale nie wszystkie mogą być wykonane i wydajność jest ograniczona.
+* dokładna algebra liniowa: 
+  elementy wektorów i macierzy należą do zbiorów ZZ, QQ, SR; operacje są 
+  dokładne, ale nie wszystkie mogą być wykonane i wydajność jest ograniczona.
 
-* numeryczna algebra liniowa: elementami wektorów i macierzy są
-  liczby o skończonej precyzji
+* numeryczna algebra liniowa: 
+  elementami wektorów i macierzy są liczby o skończonej precyzji
   ze zbiorów RR, CC, RDF, CDF; błędy zaokrągleń kumulują się,
   co należy brać pod uwagę przy wykonywaniu różnych operacji.
 
@@ -61,10 +63,11 @@ Istnieją dwie strategie rachunków na wektorach i macierzach:
 
 .. important::
    Pierścieniem bazowym macierzy, której elementy zależą od pewnych zmiennych,
-   jest pierścień symboliczny SR. Po nadaniu konkretnych wartości liczbowych tym zmiennym,
-   pierścieniem bazowym jest nadal SR, chociaż macierz składa się z samych liczb.
-   Aby skorzystać z metod numerycznych dostępnych tylko dla macierzy liczbowych,
-   należy jawnie zmienić pierścień przy użyciu funkcji ``change_ring()``.
+   jest pierścień symboliczny SR. Po nadaniu konkretnych wartości liczbowych 
+   tym zmiennym, pierścieniem bazowym jest nadal SR, chociaż macierz składa się 
+   z samych liczb. Aby skorzystać z metod numerycznych dostępnych tylko dla 
+   macierzy liczbowych, należy jawnie zmienić pierścień przy użyciu funkcji 
+   ``change_ring()``.
 
 Poniżej mamy przykład takiego postępowania:
 
@@ -72,9 +75,9 @@ Poniżej mamy przykład takiego postępowania:
 
    sage: var('phi')
    sage: A = matrix([[cos(phi),-sin(phi)],
-   ...               [sin(phi), cos(phi)]])
+                     [sin(phi), cos(phi)]])
 
-   sage: html.table([['A', '=', A]])
+   sage: pretty_print(html.table([['A', '=', A]]))
    sage: print "Pierścień bazowy macierzy A:", A.base_ring()
 
 :math:`\begin{array}{ccc}
@@ -91,7 +94,7 @@ A & = &
 
    sage: B = A.subs(phi=pi/4)
 
-   sage: html.table([['B', '=', B]])
+   sage: pretty_print(html.table([['B', '=', B]]))
    sage: print "Pierścień bazowy macierzy B:", B.base_ring()
 
 :math:`\begin{array}{ccc}
@@ -108,7 +111,7 @@ B & = &
 
    sage: C = B.change_ring(RDF)
 
-   sage: html.table([['C', '=', C]])
+   sage: pretty_print(html.table([['C', '=', C]]))
    sage: print "Pierścień bazowy macierzy C:", C.base_ring()
 
 :math:`\begin{array}{ccc}
@@ -122,8 +125,10 @@ C & = &
 ``Pierścień bazowy macierzy C: Real Double Field``
 
 Sage preferuje podejście wierszowe do wektorów i macierzy. 
-Wektor wyświetlany jest w postaci "poziomej", a macierz jest układem (listą) wierszy. 
-Trzeba też podkreślić, że w Sage wektor jest obiektem różnym zarówno od macierzy jednowierszowej, 
+Wektor wyświetlany jest w postaci "poziomej", 
+a macierz jest układem (listą) wierszy. 
+Trzeba też podkreślić, że w Sage wektor jest obiektem różnym 
+zarówno od macierzy jednowierszowej, 
 jak i jednokolumnowej (czyli różnym od wektora kolumnowego).
 Jest to po prostu skończony ciąg elementów pewnego pierścienia.
 Dopiero odpowiednie funkcje przekształcają go w wymienione macierze.
@@ -143,27 +148,28 @@ należącymi do odpowiedniej klasy.
 Obiekty te powołuje się do życia używając konstruktorów ``vector()``
 :math:`\ \ \text{i}\ \ ` ``matrix()``. :math:`\\`
 
-W podanych dalej przykładach zastosowana jest standardowa składnia programowania obiektowego:
-jeżeli funkcja ``func()`` jest metodą pewnej klasy, to wynik jej zastosowania do obiektu ``obj``
+W podanych dalej przykładach zastosowana jest standardowa składnia 
+programowania obiektowego: jeżeli funkcja ``func()`` jest metodą pewnej klasy, 
+to wynik jej zastosowania do obiektu ``obj``
 tej klasy zapisuje się jako ``obj.func()``. :math:`\\`
 
 **Wektory.**
 
 Przy wywołaniu konstruktora ``vector()`` podaje się pierścień bazowy,
 do którego należą elementy wektora, liczbę elementów i listę tych elementów.
-Przy braku określenia pierścienia zostanie wybrana struktura,
-w której znajdują się wszystkie elementy (domyślnie pierścień liczb całkowitych).
-Gdy lista wartości elementów nie jest podana, powstanie wektor zerowy. :math:`\\`
+Przy braku określenia pierścienia zostanie wybrana struktura, w której 
+znajdują się wszystkie elementy (domyślnie pierścień liczb całkowitych). Gdy 
+lista wartości elementów nie jest podana, powstanie wektor zerowy. :math:`\\`
 
 W poniższych przykładach metoda ``base_ring()`` podaje pierścień bazowy,
-:math:`\ ` a :math:`\ ` ``parent()`` :math:`\ `- :math:`\ ` strukturę nadrzędną (klasę),
-do której należy badany obiekt. :math:`\\`
+:math:`\ ` a :math:`\ ` ``parent()`` :math:`\ `- :math:`\ ` 
+strukturę nadrzędną (klasę), do której należy badany obiekt. :math:`\\`
 
 .. code-block:: python
 
    sage: # Typowe użycie konstruktora:
    sage: v = vector(QQ, [1.2, 3.6, -0.48])
-   sage: v; v.base_ring(); v.parent()
+   sage: print v; print v.base_ring(); v.parent()
 
    (6/5, 18/5, -12/25)
    Rational Field
@@ -173,7 +179,7 @@ do której należy badany obiekt. :math:`\\`
 
    sage: # Wywołanie bez deklaracji pierścienia:
    sage: v = vector([3, 5, -11])
-   sage: v; v.base_ring()
+   sage: print v; v.base_ring()
 
    (3, 5, -11)
    Integer Ring
@@ -182,20 +188,21 @@ do której należy badany obiekt. :math:`\\`
 
    sage: # Zadana tylko liczba elementów, bez ich wartości:
    sage: v = vector(RDF,5)
-   sage: v; v.parent()
+   sage: print v; v.parent()
 
    (0.0, 0.0, 0.0, 0.0, 0.0)
    Vector space of dimension 5 over Real Double Field
 
-Polecenie systemu Sage ``VectorSpace(K,n)`` konstruuje :math:`n`-wymiarową przestrzeń wektorową,
-złożoną z :math:`n`-elementowych wektorów nad ciałem :math:`\,K.`
-Dysponując taką przestrzenią, można tworzyć wektory jako jej instancje:
+Polecenie systemu Sage ``VectorSpace(K,n)`` konstruuje :math:`n`-wymiarową 
+przestrzeń wektorową, złożoną z :math:`n`-elementowych wektorów nad ciałem 
+:math:`\,K.` Dysponując taką przestrzenią, można tworzyć wektory 
+jako jej instancje:
 
 .. code-block:: python
 
    sage: VS = VectorSpace(QQ,3)
    sage: v = VS([-1, 4, 3.5])
-   sage: VS; v
+   sage: print VS; v
    
    Vector space of dimension 3 over Rational Field
    (-1, 4, 7/2)
@@ -204,8 +211,10 @@ Dysponując taką przestrzenią, można tworzyć wektory jako jej instancje:
 
 **Macierze.**
 
-Konstruktor ``matrix()`` macierzy działa według tych samych zasad co ``vector()``.
-Opcjonalnymi argumentami są: pierścień bazowy (domyślnie pierścień liczb całkowitych),
+Konstruktor ``matrix()`` macierzy działa 
+według tych samych zasad co ``vector()``.
+Opcjonalnymi argumentami są: pierścień bazowy 
+(domyślnie pierścień liczb całkowitych),
 liczba wierszy, liczba kolumn (domyślnie równa liczbie wierszy),
 elementy macierzy w postaci płaskiej listy albo listy list (wierszy)
 albo listy wektorów (jako wierszy).
@@ -214,29 +223,29 @@ albo listy wektorów (jako wierszy).
 
    sage: # Konstruktor domyślny tworzy pustą macierz:
    sage: M = matrix()   
-   sage: M; M.base_ring(); M.parent()
+   sage: print M.parent(); print M.base_ring(); M
 
-   []
-   Integer Ring
    Full MatrixSpace of 0 by 0 dense matrices over Integer Ring
+   Integer Ring
+   []   
 
 .. code-block:: python
 
    sage: # Typowe użycie konstruktora macierzy:
    sage: M1 = matrix(RDF, 2,3, [1,2,3,4,5,6]) 
    sage: M2 = matrix(RDF, [[1,2,3],[4,5,6]])   
-   sage: M1,M2; M1.parent()
+   sage: print M1.parent(); M1,M2
 
+   Full MatrixSpace of 2 by 3 dense matrices over Real Double Field
    (
    [1.0 2.0 3.0]  [1.0 2.0 3.0]
    [4.0 5.0 6.0], [4.0 5.0 6.0]
    )
-   Full MatrixSpace of 2 by 3 dense matrices over Real Double Field
 
 .. code-block:: python
    
    sage: # Konstrukcja macierzy kwadratowej
-   ...   # o elementach całkowitych:
+         # o elementach całkowitych:
    sage: M = matrix(3,range(9)); M
 
    [0 1 2]
@@ -246,7 +255,7 @@ albo listy wektorów (jako wierszy).
 .. code-block:: python
 
    sage: # Elementy macierzy zadane
-   ...   # w postaci listy wektorów:
+         # w postaci listy wektorów:
    sage: v1 = vector([1,2,3,-1])
    sage: v2 = vector([4,5,6,-2])
    sage: v3 = vector([7,8,9,-3])
@@ -256,15 +265,17 @@ albo listy wektorów (jako wierszy).
    [ 4  5  6 -2]
    [ 7  8  9 -3]
 
-Polecenie ``MatrixSpace()`` kreuje przestrzeń macierzy o zadanych rozmiarach nad danym pierścieniem.
-Obowiązkowymi argumentami są: pierścień bazowy, liczba wierszy.
-Opcjonalnym argumentem jest liczba kolumn (domyślnie równa liczbie wierszy).
-Odpowiednie metody dają dostęp do danych przestrzeni takich jak wymiar, rozmiary macierzy, baza. 
+Polecenie ``MatrixSpace()`` kreuje przestrzeń macierzy o zadanych rozmiarach 
+nad danym pierścieniem. Obowiązkowymi argumentami są: pierścień bazowy, liczba 
+wierszy. Opcjonalnym argumentem jest liczba kolumn 
+(domyślnie równa liczbie wierszy). Odpowiednie metody dają dostęp do danych 
+przestrzeni takich jak wymiar, rozmiary macierzy, baza. 
 
 .. code-block:: python
 
    sage: MS32 = MatrixSpace(ZZ,3,2); 
-   sage: MS32; MS32.dimension(); MS32.dims(); MS32.basis()
+   sage: print MS32; print MS32.dimension()
+   sage: print MS32.dims(); MS32.basis()
 
    Full MatrixSpace of 3 by 2 dense matrices over Integer Ring
    6
@@ -279,7 +290,7 @@ Odpowiednie metody dają dostęp do danych przestrzeni takich jak wymiar, rozmia
 
    sage: # Mat() jest aliasem dla MatrixSpace():
    sage: MS = Mat(RealField(12),2) 
-   sage: MS; MS.basis()
+   sage: print MS; MS.basis()
 
    Full MatrixSpace of 2 by 2 dense matrices over Real Field with 12 bits
    of precision
@@ -344,7 +355,8 @@ użytecznymi funkcjami do tworzenia pewnych szczególnych macierzy:
 :math:`\;`
 
 **Ćwiczenie.** :math:`\\` 
-Zadanie nawiązuje do uwagi zapisanej w tej sekcji po tabeli podstawowych pierścieni :math:`\\`
+Zadanie nawiązuje do uwagi zapisanej w tej sekcji 
+po tabeli podstawowych pierścieni :math:`\\`
 oraz do następującego potem przykładu.
 
 * | Sprawdź, nad jakim pierścieniem jest zbudowana macierz A 
@@ -367,8 +379,9 @@ Własności wektorów i macierzy
 **Wskaźniki.**
 
 W tradycyjnym zapisie matematycznym numeracja elementów jakiegoś układu
-zaczyna się od jedności. Wektor :math:`\,n`-elementowy oraz macierz o :math:`\ m\,` wierszach
-:math:`\,` i :math:`\ \,n\;` kolumnach przedstawiają się następująco:
+zaczyna się od jedności. Wektor :math:`\,n`-elementowy 
+oraz macierz o :math:`\ m\,` wierszach :math:`\,` i :math:`\ \,n\;` kolumnach 
+przedstawiają się następująco:
 
 .. math::
 
@@ -384,8 +397,8 @@ zaczyna się od jedności. Wektor :math:`\,n`-elementowy oraz macierz o :math:`\
       a_{m1} & a_{m2} & \ldots & a_{mn} \\
    \end{array}\right]\,.
   
-W systemie Sage numerem początkowym elementów wektorów oraz wierszy i kolumn macierzy
-jest zero. Wobec tego wektor i macierz mają następującą strukturę:
+W systemie Sage numerem początkowym elementów wektorów oraz wierszy i kolumn 
+macierzy jest zero. Wobec tego wektor i macierz mają następującą strukturę:
 
 .. math::
    
@@ -406,15 +419,16 @@ jest zero. Wobec tego wektor i macierz mają następującą strukturę:
   Natomiast w innych tekstach (np. komentarzach) będzie stosowana
 |
 | **Umowa:**
-| numer podany słownie: :math:`\ ` pierwszy, drugi, itd. :math:`\ ` odnosi się do numeracji 
-  tradycyjnej;
-| numer zapisany cyfrą: :math:`\ ` 0., 1., itd. :math:`\ ` dotyczy numeracji w systemie Sage.
+| numer podany słownie: :math:`\ ` pierwszy, drugi, itd. :math:`\ ` 
+  odnosi się do numeracji tradycyjnej; 
+| numer zapisany cyfrą: :math:`\ ` 0., 1., itd. :math:`\ ` 
+  dotyczy numeracji w systemie Sage.
 |
 | A zatem:
 | :math:`a_{13}\ ` jest elementem z pierwszego wiersza i trzeciej kolumny 
   macierzy :math:`\,A=[a_{ij}]_{m\times n}\,;`
-| zapis :math:`\,` ``x=v[2]`` :math:`\,` oznacza, że :math:`\,x\,` jest trzecim elementem 
-  wektora :math:`\,v\,;`
+| zapis :math:`\,` ``x=v[2]`` :math:`\,` oznacza, że :math:`\,x\,` 
+  jest trzecim elementem wektora :math:`\,v\,;`
 | 0. element (element o numerze 0) jest pierwszym elementem,
 | 1. wiersz (wiersz o numerze 1) jest drugim wierszem,
 | 2. kolumna (kolumna o numerze 2) jest trzecią kolumną itd.
@@ -423,12 +437,14 @@ jest zero. Wobec tego wektor i macierz mają następującą strukturę:
    
    :math:`\,` :math:`\!`
 
-   Numer podany słownie: :math:`\ ` pierwszy, drugi, itd. :math:`\ ` odnosi się do numeracji 
-   tradycyjnej;
+   Numer podany słownie: :math:`\ ` pierwszy, drugi, itd. :math:`\ ` 
+   odnosi się do numeracji tradycyjnej;
 
-   Numer zapisany cyfrą: :math:`\ ` 0., 1., itd. :math:`\ ` dotyczy numeracji w systemie Sage.
+   Numer zapisany cyfrą: :math:`\ ` 0., 1., itd. :math:`\ ` 
+   dotyczy numeracji w systemie Sage.
 
-Na tej zasadzie można wydobyć jakiś element wektora albo wiersz, kolumnę bądź element macierzy:
+Na tej zasadzie można wydobyć jakiś element wektora 
+albo wiersz, kolumnę bądź element macierzy:
 
 .. code-block:: python
 
@@ -447,7 +463,7 @@ Na tej zasadzie można wydobyć jakiś element wektora albo wiersz, kolumnę bą
    sage: A = matrix([[0,2,4,6],[1,3,5,7],[2,4,6,8]])
    sage: print 'Wybrany wiersz, kolumna i elementy:'
    sage: print '\n1. wiersz  =', A.row(1),\
-   ...         '\n0. kolumna =', A.column(0)
+         '\n0. kolumna =', A.column(0)
    sage: print '\nA[0,0] =', A[0,0], '  A[1,3] =', A[1,3], '  A[2,2] =', A[2,2]
 
    Wybrany wiersz, kolumna i elementy:
@@ -461,8 +477,10 @@ Elementy macierzy mogą być pewną funkcją ich wskaźników.
 W takim przypadku możemy skonstruować macierz tworząc automatycznie listę
 wierszy i przekazując ją do konstruktora macierzy.
 
-Poniżej podane są dwa przykłady takiego automatycznego generowania macierzy z zagnieżdżeniem list.
-:math:`A\ ` jest ogólną macierzą prostokątną o zadanych rozmiarach, :math:`\ B\ ` - :math:`\,` macierzą zespoloną (:math:`\,i\,` jest jednostką urojoną) o elementach:
+Poniżej podane są dwa przykłady takiego automatycznego generowania macierzy 
+z zagnieżdżeniem list. :math:`A\ ` jest ogólną macierzą prostokątną o zadanych 
+rozmiarach, :math:`\ B\ ` - :math:`\,` macierzą zespoloną (:math:`\,i\,` 
+jest jednostką urojoną) o elementach:
 
 .. math::
 
@@ -484,14 +502,19 @@ Poniżej podane są dwa przykłady takiego automatycznego generowania macierzy z
 **Wycinanie.**
 
 Do wektorów i macierzy można zastosować technikę wycinania (ang. slicing),
-ogólnie zdefiniowaną dla *sekwencji*. :math:`\,` Jeżeli np. :math:`\ L\ ` jest listą,
-to wycinanie daje następujące wyniki:
+ogólnie zdefiniowaną dla *sekwencji*. :math:`\,` 
+Jeżeli np. :math:`\ L\ ` jest listą, to wycinanie daje następujące wyniki:
 
-* ``L[p:q]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów o numerach od p do q-1; 
-* ``L[:q]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów od początku listy do numeru q-1;
-* ``L[p:]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów od numeru p do końca listy;
-* ``L[p:q:r]`` :math:`\ ` - :math:`\ ` lista elementów o numerach od p do q-1 z krokiem r;
-* ``L[-2]`` , ``L[-1]`` :math:`\ ` - :math:`\ ` przedostatni i ostatni element listy L.
+* ``L[p:q]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów 
+  o numerach od p do q-1; 
+* ``L[:q]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów 
+  od początku listy do numeru q-1;
+* ``L[p:]`` :math:`\ ` - :math:`\ ` lista kolejnych elementów 
+  od numeru p do końca listy;
+* ``L[p:q:r]`` :math:`\ ` - :math:`\ ` lista elementów 
+  o numerach od p do q-1 z krokiem r;
+* ``L[-2]`` , ``L[-1]`` :math:`\ ` - :math:`\ ` przedostatni i ostatni 
+  element listy L.
 
 :math:`\ `
 
@@ -520,21 +543,28 @@ to wycinanie daje następujące wyniki:
    )
 
 | **Uwaga.** :math:`\,` 
-  Jeżeli :math:`\,A\,` jest macierzą o :math:`\,m\,` wierszach i :math:`\ n\,` kolumnach,
-  to jej :math:`\,k`-ty wiersz można otrzymać na trzy sposoby, przy czym różny będzie typ wyniku:
+  Jeżeli :math:`\,A\,` jest macierzą o :math:`\,m\,` wierszach i :math:`\ n\,` 
+  kolumnach, to jej :math:`\,k`-ty wiersz można otrzymać na trzy sposoby, 
+  przy czym różny będzie typ wyniku:
 |     
-| ``A[k]``, :math:`\ ` ``A.row(k)``  :math:`\ ` - :math:`\ ` wektor :math:`\,n`-elementowy;
-| ``A[k,:]`` :math:`\ ` - :math:`\ ` 1-wierszowa macierz o :math:`\,n\,` elementach.
+| ``A[k]``, :math:`\ ` ``A.row(k)``  :math:`\ ` - :math:`\ ` 
+  wektor :math:`\,n`-elementowy;
+| ``A[k,:]`` :math:`\ ` - :math:`\ ` 
+  1-wierszowa macierz o :math:`\,n\,` elementach.
 |
 | Dla :math:`\,k`-tej kolumny pozostają dwie możliwości:
 |
-| ``A.column(k)`` :math:`\ ` - :math:`\ ` wektor `\ m`-elementowy (zapisany poziomo);
-| ``A[:,k]`` :math:`\ ` - :math:`\ ` 1-kolumnowa macierz o :math:`\,m` elementach.
+| ``A.column(k)`` :math:`\ ` - :math:`\ ` 
+  wektor `\ m`-elementowy (zapisany poziomo);
+| ``A[:,k]`` :math:`\ ` - :math:`\ ` 
+  1-kolumnowa macierz o :math:`\,m` elementach.
 
 .. code-block:: python
 
    sage: A = random_matrix(ZZ,3,4); print A, '\n'
-   sage: A[0]; type(A[0]); A.row(0); type(A.row(0)); A[0,:]; type(A[0,:])
+   sage: print A[0]; print type(A[0])
+   sage: print A.row(0); print type(A.row(0)) 
+   sage: print A[0,:]; print type(A[0,:])
 
    [ -3   0   1  -3]
    [  1   1   1 -36]
@@ -555,9 +585,11 @@ to wycinanie daje następujące wyniki:
     nad pierścieniem liczb całkowitych poleceniem ``random_matrix()``.
 * | Stosując technikę wycinania utwórz macierz B, której kolejne wiersze będą
   | ostatnim, środkowym i pierwszym (czyli początkowym) wierszem macierzy A.
-  | *Wskazówka*: :math:`\,` Użyj wzorca ``[p:q:r]`` z domyślną wartością q: :math:`\ ` ``[p::r]``
+  | *Wskazówka*: :math:`\,` Użyj wzorca ``[p:q:r]`` 
+    z domyślną wartością q: :math:`\ ` ``[p::r]``
   | przyjmując :math:`\ ` p = -1, r = -2. :math:`\,` Ile faktycznie wynosi q? 
-* | Zapisz wybraną kolumnę macierzy A jako wektor v oraz jako macierz 1-kolumnową C.
+* | Zapisz wybraną kolumnę macierzy A jako wektor v 
+    oraz jako macierz 1-kolumnową C.
   | Sprawdż typ otrzymanych obiektów.
 
 :math:`\ `
@@ -583,7 +615,8 @@ i :math:`\,` mnożenie ich przez liczby należące do :math:`\,P\,`
 określone jest analogicznie do działań na wektorach kolumnowych.
 
 Jeżeli wektor :math:`\ w = (w_1,w_2,\ldots,w_n)\ ` jest kombinacją liniową
-wektorów :math:`\\ \,x = (x_1,x_2,\ldots,x_n)\ ` oraz :math:`\ \,y = (y_1,y_2,\ldots,y_n)\ `
+wektorów :math:`\\ \,x = (x_1,x_2,\ldots,x_n)\ ` 
+oraz :math:`\ \,y = (y_1,y_2,\ldots,y_n)\ `
 o współczynnikach :math:`\,a\ ` i :math:`\ \,b\,:`
 
 .. math::
@@ -618,30 +651,30 @@ Przykład kombinacji liniowej i iloczynu skalarnego wektorów:
    sage: x = vector([-1,2,5])
    sage: y = vector([3,0,4])
    # Kombinacja liniowa w wektorów x, y o współczynnikach 3, -2:
-   sage: w = 3*x-2*y  
-   # Iloczyn skalarny p wektorów x, y:  
+   sage: w = 3*x-2*y
+   # Iloczyn skalarny p wektorów x, y:
    sage: p = x*y
-   sage: html.table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]])
-   sage: html.table([[x,'$\cdot$',y,'=',p]])
+   sage: pretty_print(html.table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]]))
+   sage: pretty_print(html.table([[x,'$\cdot$',y,'=',p]]))
 
 :math:`\begin{array}{ccccccccc}
-3 & \cdot & \left(-1,\,2,\,5\right) & - & 2 & \cdot & \left(3,\,0,\,4\right) & = & 
-\left(-9,\,6,\,7\right)\end{array}`
+3 & \cdot & \left(-1,\,2,\,5\right) & - & 2 & \cdot & \left(3,\,0,\,4\right) & =
+& \left(-9,\,6,\,7\right)\end{array}`
 
 :math:`\begin{array}{ccccc}
 \left(-1,\,2,\,5\right) & \cdot & \left(3,\,0,\,4\right) & = & 17
 \end{array}`
 
 Zdefiniowany w ten sposób iloczyn skalarny wektorów można powiązać z operacją 
-mnożenia macierzowego jednowierszowej macierzy otrzymanej z wektora :math:`\,x\,` 
-przez jednokolumnową macierz otrzymaną z wektora :math:`\,y:`
+mnożenia macierzowego jednowierszowej macierzy otrzymanej z wektora 
+:math:`\,x\,` przez jednokolumnową macierz otrzymaną z wektora :math:`\,y:`
 
 .. code-block:: python
    
    sage: x = matrix(1,3,[-1,2,5])
    sage: y = matrix(3,1,[3,0,4])
    sage: p = x*y
-   sage: html.table([[x,'$\cdot$',y,'=',p]])
+   sage: pretty_print(html.table([[x,'$\cdot$',y,'=',p]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{ccc} -1 & 2 & 5 \end{array}\right) & \cdot &
@@ -663,9 +696,11 @@ a :math:`\ \,A\ ` - :math:`\ ` macierzą kwadratową stopnia :math:`\,n:`
        a_{n1} & a_{n2} & \ldots & a_{nn}
    \end{array}\right]\,,
 
-to istnieją iloczyny :math:`\ \ v = x\cdot A\ \ ` oraz :math:`\ \ w = A\cdot x\,.`
+to istnieją iloczyny :math:`\ \ v = x\cdot A\ \ ` 
+oraz :math:`\ \ w = A\cdot x\,.`
 
-Obydwa wyniki, :math:`\ v\ \ \text{i}\ \ w\,,\ ` są wektorami, :math:`\,` przy czym
+Obydwa wyniki, :math:`\ v\ \ \text{i}\ \ w\,,\ ` 
+są wektorami, :math:`\,` przy czym
 
 .. math::
 
@@ -686,26 +721,24 @@ Sprawdźmy to na przykładzie:
    sage: x = vector(range(3))
    sage: A = matrix(3,range(9))
    sage: v = x*A; w = A*x
-   sage: html.table([[x,'$\cdot$',A,'=',v]])
-   sage: html.table([[A,'$\cdot$',x,'=',w]])
+   sage: pretty_print(html.table([[x,'$\cdot$',A,'=',v]]))
+   sage: pretty_print(html.table([[A,'$\cdot$',x,'=',w]]))
 
 :math:`\begin{array}{ccccc}
 \left(0,\,1,\,2\right) & \cdot & 
-\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) &
-= & \left(15,\,18,\,21\right) 
-\end{array}`
+\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) 
+& = & \left(15,\,18,\,21\right) \end{array}`
 
 :math:`\begin{array}{ccccc}
-\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) &
-\cdot & \left(0,\,1,\,2\right) &
-= & \left(5,\,14,\,23\right)
-\end{array}`
+\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) 
+& \cdot & \left(0,\,1,\,2\right) & = & \left(5,\,14,\,23\right)\end{array}`
 
 Zauważmy, że jeżeli zastąpić wektory przez macierze jednowierszowe,
 a iloczyn wektora i macierzy przez iloczyn macierzowy,
 to pierwsze równanie pozostanie prawdziwe, podczas gdy drugie straci sens
 (nie istnieje iloczyn macierzy kwadratowej przez macierz jednowierszową).
-Aby otrzymać poprawną wersję macierzową drugiego równania, w miejsce wektorów należy podstawić macierze jednokolumnowe.
+Aby otrzymać poprawną wersję macierzową drugiego równania, 
+w miejsce wektorów należy podstawić macierze jednokolumnowe.
 
 .. Otrzymane równania pozostaną prawdziwe, gdy występujące w nich wektory
    zastąpi się odpowiednimi macierzami 1-wierszowymi albo 1-kolumnowymi,
@@ -745,22 +778,21 @@ oraz wyświetla poprzednie równania w wersji macierzowej:
    sage: xr = x.row()
    sage: xc = x.column()    
    sage: vr = xr*A; wc = A*xc
-   sage: html.table([[xr,'$\cdot$',A,'=',vr]])
-   sage: html.table([[A,'$\cdot$',xc,'=',wc]])
+   sage: pretty_print(html.table([[xr,'$\cdot$',A,'=',vr]]))
+   sage: pretty_print(html.table([[A,'$\cdot$',xc,'=',wc]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \end{array}\right) & \cdot & 
-\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) &
-= & \left(\begin{array}{rrr} 15 & 18 & 21 \end{array}\right)
-\end{array}` 
+\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) 
+& = & \left(\begin{array}{rrr} 15 & 18 & 21 \end{array}\right) \end{array}` 
 
 :math:`\begin{array}{ccccc}
-\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) &
-\cdot & \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) &
-= & \left(\begin{array}{r} 5 \\ 14 \\ 23 \end{array}\right)
-\end{array}`
+\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) 
+& \cdot & \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) 
+& = & \left(\begin{array}{r} 5 \\ 14 \\ 23 \end{array}\right) \end{array}`
 
-Pierwsze równanie można przepisać w postaci kolumnowej poprzez obustronną transpozycję:
+Pierwsze równanie można przepisać w postaci kolumnowej 
+poprzez obustronną transpozycję:
 
 .. code-block:: python
 
@@ -769,48 +801,49 @@ Pierwsze równanie można przepisać w postaci kolumnowej poprzez obustronną tr
    sage: xc = x.column()
    sage: At = A.transpose()
    sage: vc = At*xc
-   sage: html.table([[At,'$\cdot$',xc,'=',vc]])
+   sage: pretty_print(html.table([[At,'$\cdot$',xc,'=',vc]]))
 
 :math:`\begin{array}{ccccc}
-\left(\begin{array}{rrr} 0 & 3 & 6 \\ 1 & 4 & 7 \\ 2 & 5 & 8 \end{array}\right) &
-\cdot & \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) &
-= & \left(\begin{array}{r} 15 \\ 18 \\ 21 \end{array}\right)
-\end{array}`
+\left(\begin{array}{rrr} 0 & 3 & 6 \\ 1 & 4 & 7 \\ 2 & 5 & 8 \end{array}\right) 
+& \cdot & \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) 
+& = & \left(\begin{array}{r} 15 \\ 18 \\ 21 \end{array}\right) \end{array}`
 
 :math:`\;`
 
 **Iloczyn macierzy.**
 
-Sage oczywiście obsługuje mnożenie dowolnych dwóch macierzy o odpowiednio dobranych rozmiarach
-(ilość kolumn pierwszej musi równać się ilości wierszy drugiej):
+Sage oczywiście obsługuje mnożenie dowolnych dwóch macierzy o odpowiednio 
+dobranych rozmiarach (ilość kolumn pierwszej musi równać się ilości wierszy 
+drugiej):
 
 .. code-block:: python
 
    sage: A = matrix(2,3,range(6))
    sage: B = matrix(3,range(9))
    sage: C = A*B
-   sage: html.table([[A,'$\cdot$',B,'=',C]])
+   sage: pretty_print(html.table([[A,'$\cdot$',B,'=',C]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \end{array}\right) & \cdot &
-\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) & = &
-\left(\begin{array}{rrr} 15 & 18 & 21 \\ 42 & 54 & 66 \end{array}\right)
+\left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 \end{array}\right) 
+& = & \left(\begin{array}{rrr} 15 & 18 & 21 \\ 42 & 54 & 66 \end{array}\right)
 \end{array}`
 
 :math:`\;`
   
-Pokazane przykłady pozwalają zauważyć, że występujące w kodzie programu symbole :math:`\\`  
-dodawania, odejmowania i mnożenia mają różne znaczenie zależne od kontekstu:
+Pokazane przykłady pozwalają zauważyć, że występujące w kodzie programu symbole 
+:math:`\\` dodawania, odejmowania i mnożenia mają różne znaczenie 
+zależne od kontekstu:
 
-symbole :math:`\,` ``+``/``-`` :math:`\,` oznaczają 
-dodawanie/odejmowanie liczb, wektorów albo macierzy;
+* symbole :math:`\,` ``+``/``-`` :math:`\,` oznaczają 
+  dodawanie/odejmowanie liczb, wektorów albo macierzy;
 
-symbol :math:`\,` ``*`` :math:`\,` oznacza mnożenie liczb, :math:`\,` 
-mnożenie wektora przez liczbę, :math:`\,`
-mnożenie macierzy przez liczbę, :math:`\,` 
-mnożenie skalarne wektorów, :math:`\,`
-mnożenie wektora przez macierz bądź macierzy przez wektor, :math:`\,`
-mnożenie macierzy przez macierz.
+* symbol :math:`\,` ``*`` :math:`\,` oznacza mnożenie liczb, :math:`\,` 
+  mnożenie wektora przez liczbę, :math:`\,`
+  mnożenie macierzy przez liczbę, :math:`\,` 
+  mnożenie skalarne wektorów, :math:`\,`
+  mnożenie wektora przez macierz bądź macierzy przez wektor, :math:`\,`
+  mnożenie macierzy przez macierz.
 
 Mnożenie macierzy blokowych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -844,13 +877,15 @@ zapisać w taki sam sposób, jak mnożenie macierzy elementarnych:
        \boldsymbol{C} \boldsymbol{X} + \boldsymbol{D} \boldsymbol{Y}
    \end{array}\right]\,.
 
-Bloki :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D},\boldsymbol{X},\boldsymbol{Y}\ `
-są tutaj macierzami o dowolnych rozmiarach pod warunkiem, że liczby kolumn i wierszy umożliwiają ich mnożenie. 
-Wykonanie mnożenia w powyższy sposób na macierzach gęstych zasadniczo nie zmniejsza liczby operacji. 
-Jeżeli jednak pewne bloki (podmacierze) są zerowe lub są macierzami jednostkowymi, 
-to rachunki mogą istotnie się uprościć. 
+Bloki :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D},
+\boldsymbol{X},\boldsymbol{Y}\ ` są tutaj macierzami o dowolnych rozmiarach 
+pod warunkiem, że liczby kolumn i wierszy umożliwiają ich mnożenie. 
+Wykonanie mnożenia w powyższy sposób na macierzach gęstych zasadniczo 
+nie zmniejsza liczby operacji. Jeżeli jednak pewne bloki (podmacierze) są 
+zerowe lub są macierzami jednostkowymi, to rachunki mogą istotnie się uprościć. 
 
-Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \boldsymbol{O}`). :math:`\ ` Wtedy:
+Weźmy na przykład sytuację, gdy dwa bloki są zerowe 
+(oznaczone :math:`\ \boldsymbol{O}`). :math:`\ ` Wtedy:
 
 .. math::
 
@@ -871,7 +906,8 @@ Weźmy na przykład sytuację, gdy dwa bloki są zerowe (oznaczone :math:`\ \bol
        \boldsymbol{D} \boldsymbol{Y}
    \end{array}\right]
 
-.. | W systemie Sage istnieje możliwość wykonywania operacji na macierzach blokowych:
+.. | W systemie Sage istnieje możliwość wykonywania operacji 
+     na macierzach blokowych:
    | można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``. 
    |
    | **Poeksperymentuj z Sage:**     
@@ -889,7 +925,10 @@ można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``.
 .. sagecellserver::
 
    A  = random_matrix(ZZ,2)
-   B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
+
+   B1 = block_matrix([[identity_matrix(2),A],
+                      [zero_matrix(1,2),zero_matrix(1,2)]])
+
    B2 = block_matrix([[A],[identity_matrix(2)]])
    
    table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",

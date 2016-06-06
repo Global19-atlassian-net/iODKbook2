@@ -7,9 +7,11 @@ Przykłady mnożenia macierzy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Zadanie.**
-Sprawdź odręcznym rachunkiem wynik :math:`\boldsymbol{A}\boldsymbol{B}` mnożenia komputerowego.
+Sprawdź odręcznym rachunkiem wynik :math:`\boldsymbol{A}\boldsymbol{B}` 
+mnożenia komputerowego.
 Dopisz wiersz kodu przedstawiający polecenie wyświetlenia tabelki dla iloczynu
-:math:`\boldsymbol{B}\boldsymbol{A}\,` i przekonaj się na przykładach, że mnożenie macierzy jest nieprzemienne.
+:math:`\boldsymbol{B}\boldsymbol{A}\,` i przekonaj się na przykładach, 
+że mnożenie macierzy jest nieprzemienne.
 
 .. Przećwicz odręczne mnożenie macierzy drugiego i trzeciego stopnia.
 

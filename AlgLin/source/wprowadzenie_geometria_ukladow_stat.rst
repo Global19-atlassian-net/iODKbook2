@@ -242,8 +242,7 @@ można wykonać automatycznie przy użyciu podanej niżej funkcji ``verse3column
        L = [vector([eq.lhs().coefficient(x) 
                    for eq in Eqns]) for x in [x1,x2,x3]]
        
-       b = vector([eq.rhs() for eq in Eqns])
-       L.append(b)
+       b = vector([eq.rhs() for eq in Eqns]); L.append(b)
        
        clmn = '$\\left[\\begin{array}{r} %d \\\ %d \\\ %d \\end{array}\\right]$'
        comp = '$x_%i$' + clmn
