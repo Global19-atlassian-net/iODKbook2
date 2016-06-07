@@ -3,9 +3,12 @@
 Metoda eliminacji w ujęciu macierzowym
 --------------------------------------
 
-Omówiona wcześniej metoda eliminacji wykorzystuje przekształcenia elementarne dla doprowadzenia układu równań liniowych do postaci schodkowej. 
+Omówiona wcześniej metoda eliminacji wykorzystuje przekształcenia elementarne 
+dla doprowadzenia układu równań liniowych do postaci schodkowej. 
 
-Ten sam efekt można osiągnąć, zastępując operacje elementarne na równaniach odpowiednimi operacjami na wierszach macierzy rozszerzonej, reprezentującej układ równań.
+Ten sam efekt można osiągnąć, zastępując operacje elementarne na równaniach 
+odpowiednimi operacjami na wierszach macierzy rozszerzonej, 
+reprezentującej układ równań.
 
 Macierz rozszerzona układu równań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,10 +19,10 @@ Dla układu :math:`\,m\,` równań o :math:`\,n\,` niewiadomych:
    :label: 01
 
    \begin{array}{c}
-      a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
-      a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
-      \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots    \\
-      a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ b_m
+   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
+   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
+   \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots  \\
+   a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ b_m
    \end{array}
 
 gdzie współczynniki :math:`\,a_{ij}\,` 
@@ -37,8 +40,12 @@ definiujemy :math:`\,` *macierz współczynników* :math:`\,\boldsymbol{A},\ \ `
                            \ldots & \ldots & \ldots & \ldots \\
                            a_{m1} & a_{m2} & \ldots & a_{mn}
                         \end{array}\right]\,,\qquad
-   \boldsymbol{b}\,=\,\left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{m} \end{array}\right]\,,\qquad
-   \boldsymbol{x}\,=\,\left[\begin{array}{c} x_{1} \\ x_{2} \\ \ldots \\ x_{n} \end{array}\right]\,.
+   \boldsymbol{b}\,=\,\left[\begin{array}{c} 
+                          b_{1} \\ b_{2} \\ \ldots \\ b_{m} 
+                      \end{array}\right]\,,\qquad
+   \boldsymbol{x}\,=\,\left[\begin{array}{c} 
+                          x_{1} \\ x_{2} \\ \ldots \\ x_{n} 
+                      \end{array}\right]\,.
 
 Układ :eq:`01` można wtedy zapisać zwięźle jako
 
@@ -56,9 +63,11 @@ układ równań jest *jednorodny*. Jednorodny układ równań
 
 jest :math:`\,` *stowarzyszony* :math:`\,` z niejednorodnym układem :eq:`02`.
 
-Dwa układy równań są :math:`\,` *równoważne*, :math:`\,` gdy mają ten sam zbiór rozwiązań. :math:`\\`
+Dwa układy równań są :math:`\,` *równoważne*, :math:`\,` 
+gdy mają ten sam zbiór rozwiązań. :math:`\\`
 
-Dla układu :eq:`01` definiujemy również :math:`\,` *macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
+Dla układu :eq:`01` definiujemy również :math:`\,` 
+*macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
 
 .. math::
 
@@ -82,9 +91,10 @@ analogiczne operacje na wierszach tej macierzy:
 
 Przekształcenia te dają układ równoważny wyjściowemu.
 Operacje elementarne na kolumnach macierzy :math:`\,\boldsymbol{B}\,`
-zmieniają na ogół zbiór rozwiązań, a więc nie są dopuszczalne przy rozwiązywaniu problemów liniowych.
-Czasem warto jednak zmienić kolejność kolumn macierzy :math:`\,\boldsymbol{A},\,`
-co prowadzi do układu równań różniącego się od wyjściowego jedynie numeracją niewiadomych.
+zmieniają na ogół zbiór rozwiązań, a więc nie są dopuszczalne 
+przy rozwiązywaniu problemów liniowych. Czasem warto jednak zmienić kolejność 
+kolumn macierzy :math:`\,\boldsymbol{A},\,` co prowadzi do układu równań 
+różniącego się od wyjściowego jedynie numeracją niewiadomych.
 
 Postać schodkowa macierzy
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,16 +108,17 @@ Zaczniemy od kilku definicji.
 
 Macierz ma :math:`\,` *wierszową postać schodkową*, :math:`\,` gdy:
 
-1. wszystkie wiersze zerowe (jeśli takie występują) są pod wierszami niezerowymi;
+1. wszystkie wiersze zerowe (jeśli takie występują) 
+   są pod wierszami niezerowymi;
 2. jeżeli dwa sąsiednie wiersze są niezerowe, to element wiodący wiersza dolnego
    jest przesunięty w prawo względem elementu wiodącego wiersza górnego.
 
 .. (począwszy od wiersza drugiego, element wiodący każdego wiersza niezerowego
    jest przesunięty w prawo względem elementu wiodącego wiersza leżącego bezpośrednio nad nim)
 
-Wynika stąd, że jeżeli w danej kolumnie występuje element wiodący pewnego wiersza,
-to wszystkie elementy tej kolumny leżące pod tym elementem wiodącym są równe zeru
-(a zatem poniżej głównej przekątnej macierzy występują tylko zera).
+Wynika stąd, że jeżeli w danej kolumnie występuje element wiodący pewnego 
+wiersza, to wszystkie elementy tej kolumny leżące pod tym elementem wiodącym są 
+równe zeru (a zatem poniżej głównej przekątnej macierzy występują tylko zera).
 
 .. | (nie ma elementów niezerowych poniżej głównej przekątnej macierzy).
 
@@ -126,12 +137,15 @@ Przykład macierzy w wierszowej postaci schodkowej (zaznaczone elementy wiodące
 
    \;
 
-Macierz jest w :math:`\,` *zredukowanej wierszowej postaci schodkowej*, :math:`\,` gdy dodatkowo:
+Macierz jest w :math:`\,` *zredukowanej wierszowej postaci schodkowej*, 
+:math:`\,` gdy dodatkowo:
 
-3. wszystkie elementy wiodące są równe 1 :math:`\,` (nazywamy je wtedy jedynkami wiodącymi);
+3. wszystkie elementy wiodące są równe 1 :math:`\,` 
+   (nazywamy je wtedy jedynkami wiodącymi);
 4. każda jedynka wiodąca jest jedynym elementem niezerowym w swojej kolumnie.
 
-Przykład zredukowanej wierszowej postaci schodkowej (zaznaczone jedynki wiodące):
+Przykład zredukowanej wierszowej postaci schodkowej 
+(zaznaczone jedynki wiodące):
 
 .. math::
    
@@ -146,12 +160,14 @@ Przykład zredukowanej wierszowej postaci schodkowej (zaznaczone jedynki wiodąc
    
    \;
 
-W analogiczny sposób można zdefiniować (*zredukowaną*) *kolumnową postać schodkową* macierzy.
+W analogiczny sposób można zdefiniować (*zredukowaną*) 
+*kolumnową postać schodkową* macierzy.
 Macierz będzie w (zredukowanej) kolumnowej postaci schodkowej wtedy,
 gdy jej transpozycja ma (zredukowaną) wierszową postać schodkową.
 
-Ponieważ operacjom na równaniach odpowiadają odpowiednie operacje na wierszach macierzy rozszerzonej,
-w dalszym ciągu interesować nas będzie wyłącznie wierszowa wersja postaci schodkowej. :math:`\\`
+Ponieważ operacjom na równaniach odpowiadają odpowiednie operacje na wierszach 
+macierzy rozszerzonej, w dalszym ciągu interesować nas będzie wyłącznie 
+wierszowa wersja postaci schodkowej. :math:`\\`
 
 Rozważania te można uogólnić na przypadek macierzy
 określonej nad dowolnym pierścieniem :math:`\,P\,` z jednością
@@ -161,11 +177,13 @@ Operacje elementarne na wierszach są teraz następujące:
 
 #. przestawienie dwóch wierszy,
 #. pomnożenie wybranego wiersza przez dowolny *odwracalny* element pierścienia,
-#. dodanie do jednego z wierszy innego wiersza, pomnożonego przez dowolny element pierścienia
+#. dodanie do jednego z wierszy innego wiersza, 
+   pomnożonego przez dowolny element pierścienia 
    (w szczególności: dodanie bądź odjęcie dwóch wierszy).
 
-Wykonując operacje elementarne na wierszach, można każdą macierz nad pierścieniem :math:`\,P\,` 
-z jednością przekształcić do postaci schodkowej. Postępowanie takie nazywa się eliminacją Gaussa.
+Wykonując operacje elementarne na wierszach, można każdą macierz 
+nad pierścieniem :math:`\,P\,` z jednością przekształcić do postaci schodkowej. 
+Postępowanie takie nazywa się eliminacją Gaussa.
 Natomiast każdą macierz nad ciałem :math:`\,K\,` da się w ten sposób doprowadzić
 do (jednoznacznie określonej) zredukowanej postaci schodkowej
 :math:`\,` - :math:`\,` mówi się wtedy o eliminacji Gaussa-Jordana.
@@ -213,10 +231,12 @@ da się ją doprowadzić jedynie do postaci schodkowej:
    \end{array}
 
 Postać schodkowa jest faktycznie osiągnięta już w pierwszym kroku.
-Dalsze przekształcenia zmierzają do postaci zredukowanej, której jednak nie da się otrzymać
+Dalsze przekształcenia zmierzają do postaci zredukowanej, 
+której jednak nie da się otrzymać
 w ramach operacji elementarnych w pierścieniu :math:`\,Z.`
 
-Jeżeli przyjąć, że :math:`\,\boldsymbol{A}\,` jest macierzą nad ciałem :math:`\,Q,\,`
+Jeżeli przyjąć, że :math:`\,\boldsymbol{A}\,` 
+jest macierzą nad ciałem :math:`\,Q,\,`
 to przekształcenia można kontynuować aż do zredukowanej postaci schodkowej:
 
 .. math::
@@ -257,21 +277,23 @@ które wykonują operacje elementarne na macierzach:
 
 #. ``swap_rows(i,j)`` przestawia wiersze i-ty oraz j-ty;
 #. ``rescale_row(i,a)`` mnoży i-ty wiersz przez czynnik a;
-#. ``add_multiple_of_row(i,j,a)`` do i-tego wiersza dodaje wiersz j-ty pomnożony przez czynnik a.
+#. ``add_multiple_of_row(i,j,a)`` do i-tego wiersza 
+   dodaje wiersz j-ty pomnożony przez czynnik a.
 
 Jeżeli :math:`\,\boldsymbol{A}\,` jest macierzą, 
 :math:`\ \,\boldsymbol{b}\ \ \,\text{-}\ ` wektorem albo macierzą o zgodnej 
 z :math:`\,\boldsymbol{A}\,` liczbie wierszy, :math:`\,` to polecenie 
-``A.augment(b)`` zwraca macierz, otrzymaną przez dopisanie :math:`\,\boldsymbol{b}\,`
-z prawej strony do :math:`\,\boldsymbol{A}\,`
-(wektor :math:`\,\boldsymbol{b}\,` jest przekształcony wcześniej do macierzy 1-kolumnowej). 
-Metodę ``augment()`` można więc użyć do utworzenia macierzy rozszerzonej 
-z macierzy współczynników i kolumny wolnych wyrazów. 
+``A.augment(b)`` zwraca macierz, otrzymaną przez dopisanie 
+:math:`\,\boldsymbol{b}\,` z prawej strony do :math:`\,\boldsymbol{A}\,`
+(wektor :math:`\,\boldsymbol{b}\,` jest przekształcony wcześniej do macierzy 
+1-kolumnowej). Metodę ``augment()`` można więc użyć do utworzenia macierzy 
+rozszerzonej z macierzy współczynników i kolumny wolnych wyrazów. 
 
-Metoda ``echelon_form()`` zwraca macierz (zadaną nad dowolnym pierścieniem z jednością)
-przekształconą do postaci schodkowej, natomiast ``rref()`` (ang.: reduced row echelon form)
-daje w wyniku zredukowaną postać schodkową. Jeżeli pierścieniem bazowym macierzy nie jest ciało,
-to operacja ``rref()`` jest wykonywana na równoważnej macierzy nad ciałem liczb wymiernych.
+Metoda ``echelon_form()`` zwraca macierz (zadaną nad dowolnym pierścieniem 
+z jednością) przekształconą do postaci schodkowej, natomiast ``rref()`` 
+(ang.: reduced row echelon form) daje w wyniku zredukowaną postać schodkową. 
+Jeżeli pierścieniem bazowym macierzy nie jest ciało, to operacja ``rref()`` 
+jest wykonywana na równoważnej macierzy nad ciałem liczb wymiernych.
 
 Wykorzystamy opisane operacje do sprawdzenia wyniku z końca poprzedniej sekcji:
    
@@ -324,7 +346,8 @@ oraz macierz rozszerzona :math:`\,\boldsymbol{B}:`
 
    \;
 
-Operacje elementarne na wierszach :math:`\,r0,\,r1,\,r2\,` macierzy :math:`\,\boldsymbol{B}:`
+Operacje elementarne na wierszach :math:`\,r0,\,r1,\,r2\,` 
+macierzy :math:`\,\boldsymbol{B}:`
 
 .. math::
    
@@ -388,8 +411,8 @@ Program, wykonujący krok po kroku te operacje, przedstawia się następująco:
 .. code-block:: python
 
    sage: A = matrix(QQ,[[2,-1,-1],      # macierz współczynników
-   ...                  [3, 4,-2],
-   ...                  [3,-2, 4]])
+                        [3, 4,-2],
+                        [3,-2, 4]])
 
    sage: b = vector([4,11,11])          # wektor wolnych wyrazów
 
@@ -400,7 +423,8 @@ Program, wykonujący krok po kroku te operacje, przedstawia się następująco:
    sage: B.add_multiple_of_row(1,0,-1)  # od drugiego wiersza odejmij pierwszy
    sage: B.rescale_row(2,-1/6)          # trzeci wiersz podziel przez -6
                                         
-   sage: B.add_multiple_of_row(0,1,-2)  # od pierwszego wiersza odejmij podwojony drugi
+   sage: B.add_multiple_of_row(0,1,-2)  # od pierwszego wiersza 
+                                        # odejmij podwojony drugi
                                         
    sage: B.swap_rows(0,1)               # przestaw wiersz pierwszy z drugim
    sage: B.swap_rows(1,2)               # przestaw wiersz drugi z trzecim 
@@ -423,14 +447,15 @@ Funkcja ``rref()`` daje wynik bezpośrednio:
 .. code-block:: python
 
    sage: A = matrix(QQ,[[2,-1,-1],      # macierz współczynników
-   ...                  [3, 4,-2],
-   ...                  [3,-2, 4]])
+                        [3, 4,-2],
+                        [3,-2, 4]])
 
    sage: b = vector([4,11,11])          # wektor wolnych wyrazów
 
    sage: B = A.augment(b)               # macierz rozszerzona   
 
-   sage: B.rref()                       # pokaż zredukowaną schodkową postać macierzy B
+   sage: B.rref()                       # pokaż zredukowaną 
+                                        # schodkową postać macierzy B
 
    [1 0 0 3]
    [0 1 0 1]
@@ -449,32 +474,35 @@ odpowiada trywialna postać układu równań:
    \end{alignat*}
 
 
-z której odczytujemy od razu rozwiązanie: :math:`\ \ x_1 = 3,\ x_2=x_3 = 1.` :math:`\\`
+z której odczytujemy od razu rozwiązanie: 
+:math:`\ \ x_1 = 3,\ x_2=x_3 = 1.` :math:`\\`
 
 **Ćwiczenie.** :math:`\,`
-W komórce z kodem programu zadana jest macierz współczynników :math:`\boldsymbol{A}\,`
-i wektor wolnych wyrazów :math:`\,\boldsymbol{b}\,` pewnego układu czterech równań
-o czterech niewiadomych nad ciałem liczb wymiernych.
+W komórce z kodem programu zadana jest macierz współczynników 
+:math:`\boldsymbol{A}\,` i wektor wolnych wyrazów :math:`\,\boldsymbol{b}\,` 
+pewnego układu czterech równań o czterech niewiadomych 
+nad ciałem liczb wymiernych.
 
 1. Utwórz macierz rozszerzoną :math:`\,\boldsymbol{B}\,`
    i sprowadź ją do zredukowanej postaci schodkowej.
 
 2. Dla sprawdzenia otrzymanego rozwiązania zbadaj,
-   czy iloczyn macierzy :math:`\boldsymbol{A}\,` przez kolumnę wyliczonych wartości niewiadomych
+   czy iloczyn macierzy :math:`\boldsymbol{A}\,` 
+   przez kolumnę wyliczonych wartości niewiadomych
    równa się kolumnie wolnych wyrazów.
 
 Wskazówki do punktu 2.: :math:`\,`
 Kolumna wartości niewiadomych jest ostatnią kolumną
 macierzy rozszerzonej w zredukowanej postaci schodkowej;
-można ją wyodrębnić operacją wycinania.
-Do przekształcenia wektora w macierz jednokolumnową służy metoda ``column()``. :math:`\\`
+można ją wyodrębnić operacją wycinania. Do przekształcenia wektora w macierz 
+jednokolumnową służy metoda ``column()``. :math:`\\`
 
 .. sagecellserver::
 
    sage: A = matrix(QQ,[[1, 2, 3,-2],
-   ...                  [2,-1,-2,-3],
-   ...                  [3, 2,-1, 2],
-   ...                  [2,-3, 2, 1]])
+                        [2,-1,-2,-3],
+                        [3, 2,-1, 2],
+                        [2,-3, 2, 1]])
                
    sage: b = vector([6,8,4,-8])
 
@@ -501,10 +529,10 @@ Macierz rozszerzoną przekształcamy od razu do zredukowanej postaci schodkowej:
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1,-1, 2,-1, 1],
-   ...                  [2,-3,-1, 1,-1],
-   ...                  [1, 0, 7,-4, 4]])
+                        [2,-3,-1, 1,-1],
+                        [1, 0, 7,-4, 4]])
 
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
 
 .. math::
 
@@ -520,8 +548,9 @@ Macierz rozszerzoną przekształcamy od razu do zredukowanej postaci schodkowej:
 
    \;
 
-której odpowiada równoważny wyjściowemu układ dwóch równań o czterech niewiadomych
-(trzecie równanie o wszystkich współczynnikach zerowych jest spełnione tożsamościowo):
+której odpowiada równoważny wyjściowemu układ dwóch równań 
+o czterech niewiadomych (trzecie równanie o wszystkich współczynnikach zerowych 
+jest spełnione tożsamościowo):
 
 .. .. math::
    :nowrap:
@@ -557,7 +586,8 @@ Przepisując go w postaci
    \end{alignat*}
 
 stwierdzamy, że każdemu układowi wartości :math:`\,x_3,\,x_4\,`
-odpowiada dokładnie jedna para wartości :math:`\,x_1,\,x_2,` dla których układ jest spełniony.
+odpowiada dokładnie jedna para wartości :math:`\,x_1,\,x_2,` 
+dla których układ jest spełniony. 
 W tej sytuacji przyjmujemy :math:`\,x_3,\,x_4\,` za dowolne parametry:
 :math:`\ x_3 = s,\ x_4 = t,\ ` a rozwiązanie zapisujemy jako
 
@@ -571,8 +601,8 @@ W tej sytuacji przyjmujemy :math:`\,x_3,\,x_4\,` za dowolne parametry:
       x_4 & {\;} = {\;} & t
    \end{alignat*}
 
-gdzie :math:`\,s\ \,\text{i}\ \,t\,` są dowolnymi liczbami wymiernymi. :math:`\,` 
-W zapisie wektorowym:
+gdzie :math:`\,s\ \,\text{i}\ \,t\,` są dowolnymi liczbami wymiernymi. 
+:math:`\,` W zapisie wektorowym:
 
 .. math::
    :label: 03
@@ -591,10 +621,11 @@ W zapisie wektorowym:
 
    \;
 
-Omówiony przykład sugeruje ogólną metodę postępowania z nieoznaczonym układem równań:
-po doprowadzeniu macierzy rozszerzonej do zredukowanej postaci schodkowej
-niewiadome, odpowiadające kolumnom z jedynkami wiodącymi wyrażamy poprzez pozostałe niewiadome, 
-po czym te ostatnie przyjmujemy za parametry o dowolnych wartościach. :math:`\\`
+Omówiony przykład sugeruje ogólną metodę postępowania z nieoznaczonym układem 
+równań: po doprowadzeniu macierzy rozszerzonej do zredukowanej 
+postaci schodkowej niewiadome, odpowiadające kolumnom z jedynkami wiodącymi 
+wyrażamy poprzez pozostałe niewiadome, po czym te ostatnie przyjmujemy 
+za parametry o dowolnych wartościach. :math:`\\`
 
 **Przykład 3.** :math:`\,` **Układ sprzeczny.**
 
@@ -611,13 +642,14 @@ Zbadamy układ równań, różniący się od poprzedniego tylko jednym wolnym wy
 
 Ta drobna zmiana powoduje, że układ staje się sprzeczny.
 
-Rzeczywiście, macierzy rozszerzonej przekształconej do zredukowanej postaci schodkowej:
+Rzeczywiście, macierzy rozszerzonej przekształconej 
+do zredukowanej postaci schodkowej:
 
 .. .. code-block:: python
 
    sage: B = matrix(QQ,[[1,-1, 2,-1, 1],
-   ...                  [2,-3,-1, 1, 1],
-   ...                  [1, 0, 7,-4, 4]])
+                        [2,-3,-1, 1, 1],
+                        [1, 0, 7,-4, 4]])
 
    sage: html.table([[B, '$\\rightarrow$', B.rref()]])
 
@@ -667,10 +699,10 @@ Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1,-1, 2,-1, 0],
-   ...                  [2,-3,-1, 1, 0],
-   ...                  [1, 0, 7,-4, 0]])
+                        [2,-3,-1, 1, 0],
+                        [1, 0, 7,-4, 0]])
 
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
 
 .. math::
 
@@ -711,8 +743,8 @@ Przepisujemy go jako
       x_2 & {\;} = {\,} - {\,} & 5\,x_3 & {\,} + {\,} & 3\,x_4
    \end{alignat*}
 
-i :math:`\,` tak jak w przykładzie 2., :math:`\,` 
-przyjmujemy :math:`\,x_3,\,x_4\,` za dowolne parametry: :math:`\ x_3 = s,\ x_4 = t :` 
+i :math:`\,` tak jak w przykładzie 2., :math:`\,` przyjmujemy 
+:math:`\,x_3,\,x_4\,` za dowolne parametry: :math:`\ x_3 = s,\ x_4 = t :` 
 
 .. math::
 
@@ -729,7 +761,9 @@ Ostatecznie, rozwiązanie w postaci wektorowej dane jest przez :math:`\\`
 .. math::
    :label: 04
 
-   \left[\begin{array}{c} x_1 \\ x_2 \\ x_3 \\ x_4 \end{array}\right]\quad =\quad  
+   \left[\begin{array}{c} 
+       x_1 \\ x_2 \\ x_3 \\ x_4 
+   \end{array}\right]\quad =\quad  
    \left[\begin{array}{c}
       - 7\,s + 4\,t \\
       - 5\,s + 3\,t \\
@@ -742,9 +776,9 @@ Ostatecznie, rozwiązanie w postaci wektorowej dane jest przez :math:`\\`
 
    \;
 
-Porównanie rozwiązań :eq:`03` i :eq:`04` układów w przykładach 2. i 4. sugeruje związek
-pomiędzy rozwiązaniami układu niejednorodnego i stowarzyszonego z nim układu jednorodnego.
-Sprawa ta będzie omówiona ogólnie w dalszym rozdziale.
+Porównanie rozwiązań :eq:`03` i :eq:`04` układów w przykładach 2. i 4. sugeruje 
+związek pomiędzy rozwiązaniami układu niejednorodnego i stowarzyszonego z nim 
+układu jednorodnego. Sprawa ta będzie omówiona ogólnie w dalszym rozdziale.
 
 
 

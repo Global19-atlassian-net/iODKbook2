@@ -6,7 +6,8 @@ Transpozycja macierzy
    :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)`
    jest macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
 
-Niech będzie dana macierz :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K).` 
+Niech będzie dana macierz 
+:math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K).` 
 :math:`\\`
 *Macierzą transponowaną* względem :math:`\,\boldsymbol{A}\,`
 nazywamy macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
@@ -45,9 +46,9 @@ a_{1n} & a_{2n} & \ldots & a_{mn}
       a_{1n} & a_{2n} & \ldots & a_{mn}
    \end{array}\right]\,.
 
-Tak więc :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}^T\,`
-składa się z elementów :math:`\,i`-tej kolumny macierzy :math:`\,\boldsymbol{A},` :math:`\\`
-a :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}^T\,`
+Tak więc :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}^T\,` 
+składa się z elementów :math:`\,i`-tej kolumny macierzy :math:`\,\boldsymbol{A},` 
+:math:`\\` a :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}^T\,` 
 składa się z elementów :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{A}.`
 
 .. \ \ i=1,2,\ldots,n;\ j=1,2,\ldots,m.`
@@ -79,9 +80,9 @@ a_1 & a_2 & a_3 & a_4
 :math:`\\` **Własności operacji transponowania macierzy.** 
 
 1.) :math:`\,` Niech 
-:math:`\,\boldsymbol{A},\boldsymbol{B}\in M_{m \times n}(K),\ c\in K.\ \ ` Wtedy
-:math:`\ \ (\boldsymbol{A}+\boldsymbol{B})^T =\,\boldsymbol{A}^T + \boldsymbol{B}^T,\ \ 
-(c\boldsymbol{A})^T =\,c\boldsymbol{A}^T\,.`
+:math:`\,\boldsymbol{A},\boldsymbol{B}\in M_{m \times n}(K),\ c\in K.\ \ ` 
+Wtedy :math:`\ \ (\boldsymbol{A}+\boldsymbol{B})^T =\,\boldsymbol{A}^T + 
+\boldsymbol{B}^T,\ \ (c\boldsymbol{A})^T =\,c\boldsymbol{A}^T\,.`
 
 (transpozycja sumy macierzy równa się sumie macierzy transponowanych, 
 czynnik liczbowy można wyłączyć przed symbol transpozycji: :math:`\,`
@@ -94,9 +95,9 @@ transpozycja jest operacją liniową)
 
    Oznacza to, że transpozycja jest operacją liniową.
 
-2.) :math:`\,` Niech 
-:math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K).\ ` Wtedy 
-:math:`\ \ (\boldsymbol{A}\boldsymbol{B})^T =\,\boldsymbol{B}^T\boldsymbol{A}^T\,.`
+2.) :math:`\,` Niech :math:`\,\boldsymbol{A}\in M_{m\times p}(K),
+\ \boldsymbol{B}\in M_{p\times n}(K).\ ` Wtedy :math:`\ \ (\boldsymbol{A}
+\boldsymbol{B})^T =\,\boldsymbol{B}^T\boldsymbol{A}^T\,.`
 
 (transpozycja iloczynu macierzy równa się iloczynowi macierzy transponowanych
 z odwróceniem kolejności czynników)
@@ -115,7 +116,8 @@ Dowód twierdzenia 2.:
     \boldsymbol{B}^T\boldsymbol{A}^T:\ n\times m\,.`
 
 * | Porównanie odpowiednich elementów macierzy. :math:`\,`
-    Dla :math:`\boldsymbol{A} = [a_{ij}]_{m\times p}\,,\ \boldsymbol{B}=[b_{ij}]_{p\times n}:`
+    Dla :math:`\boldsymbol{A} = [a_{ij}]_{m\times p}\,,
+    \ \boldsymbol{B}=[b_{ij}]_{p\times n}:`
   | :math:`(\boldsymbol{A}\boldsymbol{B})^T|_{ij}\ =\ 
     (\boldsymbol{A}\boldsymbol{B})|_{ji}\ =\ 
     \sum\limits_{s=1}^p \,a_{js}\,b_{si}\,,` 
@@ -134,9 +136,11 @@ nazywa się :math:`\,` *macierzą symetryczną*, :math:`\\`
 gdy :math:`\,\boldsymbol{A}^T=\boldsymbol{A}\,,\ `
 czyli gdy :math:`\ a_{ij} = a_{ji}\,,\ \ i,j=1,2,\ldots,n.`
  
-Taka macierz nie zmienia się przy odbiciu jej elementów względem głównej przekątnej.
+Taka macierz nie zmienia się przy odbiciu jej elementów 
+względem głównej przekątnej.
 
-Jeżeli dla pewnej macierzy :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\,`
+Jeżeli dla pewnej macierzy 
+:math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\,`
 spełniony jest warunek :math:`\,\boldsymbol{A}^T=-\boldsymbol{A}\,,` :math:`\\`
 to nazywamy ją :math:`\,` *macierzą antysymetryczną*.
 
@@ -157,7 +161,8 @@ ogólna postać macierzy symetrycznych i antysymetrycznych jest następująca:
                          0 & a & \ \ b \\ -a & 0 & \ \ c \\ -b & -c & \ \ 0
                       \end{array}\,\right]\,.
 
-Z tożsamości, spełnionej dla dowolnej macierzy :math:`\,\boldsymbol{A}\in M_n(K):`
+Z tożsamości, spełnionej dla dowolnej macierzy 
+:math:`\,\boldsymbol{A}\in M_n(K):`
 
 .. math::
 
@@ -171,7 +176,8 @@ a drugi macierzą antysymetryczną, wynika
 w postaci sumy macierzy symetrycznej i antysymetrycznej.
 Można uzasadnić, że rozkład taki jest jednoznaczny.  
 
-W systemie Sage operacji transpozycji macierzy odpowiada metoda ``transpose()`` (w skrócie ``T``).
+W systemie Sage operacji transpozycji macierzy odpowiada metoda ``transpose()`` 
+(w skrócie ``T``).
 Dostępne są również metody ``is_symmetric()`` oraz ``is_skew_symmetric()``,
 które sprawdzają, czy dana macierz jest symetryczna bądź antysymetryczna.
 
@@ -196,7 +202,7 @@ w postaci sumy macierzy symetrycznej i macierzy antysymetrycznej.
    sage: As = (A + A.T)/2 
    sage: Aa = (A - A.T)/2
 
-   sage: html.table([[A, '=', As, '+', Aa]])
+   sage: pretty_print(html.table([[A, '=', As, '+', Aa]]))
    sage: (As.is_symmetric(), Aa.is_skew_symmetric())
 
 .. math::

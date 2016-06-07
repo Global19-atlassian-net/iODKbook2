@@ -3,7 +3,8 @@ Macierze permutacji
 -------------------
 
 Niech będzie dana macierz 
-:math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)\,` o postaci wierszowej
+:math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)\,` 
+o postaci wierszowej
 
 .. math::
    
@@ -12,9 +13,9 @@ Niech będzie dana macierz
                           \boldsymbol{A}_2 \\
                           \ldots           \\
                           \boldsymbol{A}_m\end{array}\right],\qquad
-   \text{gdzie}\quad\boldsymbol{A}_i\ =\ [\,a_{i1}\ \,a_{i2}\ \,\dots\ \,a_{in}\,]\,,\quad 
+   \text{gdzie}\quad
+   \boldsymbol{A}_i\ =\ [\,a_{i1}\ \,a_{i2}\ \,\dots\ \,a_{in}\,]\,,\quad 
    i=1,2,\dots,m\,,
-
 
 oraz permutacja 
 :math:`\ \ \sigma\ =\ 
@@ -56,9 +57,10 @@ Zastosowanie operacji :math:`\,O_\sigma\,` do macierzy jednostkowej
                             \boldsymbol{e}_m
                             \end{array}\right]\,,
 
-(:math:`\,\boldsymbol{e}_i\,` jest wierszem zawierającym jedynkę na :math:`\,i`-tym miejscu, 
-poza tym zera) daje macierz :math:`\,\boldsymbol{P}_\sigma\,` 
-nazywaną *macierzą permutacji* :math:`\,\sigma:`
+(:math:`\,\boldsymbol{e}_i\,` jest wierszem zawierającym jedynkę 
+na :math:`\,i`-tym miejscu, poza tym zera) daje macierz 
+:math:`\,\boldsymbol{P}_\sigma\,` nazywaną *macierzą permutacji* 
+:math:`\,\sigma:`
 
 .. math::
    
@@ -103,9 +105,10 @@ Macierz tej permutacji przedstawia się następująco:
                               0 & 1 & 0 & 0 & 0
    \end{array}\right]\,.
 
-.. Wykorzystując wierszową regułę mnożenia macierzowego można stwierdzić, że wykonanie operacji 
-   :math:`\,O_\sigma\,` na macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` jest
-   równoważne     pomnożeniu :math:`\,\boldsymbol{A}  \,` z lewej strony przez 
+.. Wykorzystując wierszową regułę mnożenia macierzowego można stwierdzić, 
+   że wykonanie operacji :math:`\,O_\sigma\,` na macierzy 
+   :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` jest równoważne pomnożeniu 
+   :math:`\,\boldsymbol{A}  \,` z lewej strony przez 
    :math:`\,\boldsymbol{P}_\sigma:`
 
 :math:`\;`
@@ -113,7 +116,8 @@ Macierz tej permutacji przedstawia się następująco:
 W analogii do Twierdzenia 3. o operacjach i macierzach elementarnych,
 wykonanie operacji :math:`\,O_\sigma\,` na macierzy 
 :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` jest równoważne pomnożeniu 
-:math:`\,\boldsymbol{A}  \,` z lewej strony przez :math:`\,\boldsymbol{P}_\sigma:`
+:math:`\,\boldsymbol{A}  \,` z lewej strony przez 
+:math:`\,\boldsymbol{P}_\sigma:`
 
 .. math::
 
@@ -125,11 +129,12 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
 
 **Własności macierzy permutacji.**
 
-1. Każda macierz permutacji jest iloczynem macierzy elementarnych pierwszego rodzaju
-   (odpowiadających przestawieniom wierszy macierzy).
+1. Każda macierz permutacji jest iloczynem macierzy elementarnych 
+   pierwszego rodzaju (odpowiadających przestawieniom wierszy macierzy).
 
-   Wynika to stąd, że każdą permutację :math:`\,\sigma\in S_m\,` można zapisać jako złożenie
-   pewnej liczby transpozycji, którym odpowiadają operacje elementarne pierwszego rodzaju. 
+   Wynika to stąd, że każdą permutację :math:`\,\sigma\in S_m\,` 
+   można zapisać jako złożenie pewnej liczby transpozycji, 
+   którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
 2. Macierze permutacji są :math:`\,` *ortogonalne*:
    :math:`\quad\boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^{\,T}\, =\:
@@ -140,19 +145,20 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
 
    .. math::
       
-      \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
+      \boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =
+      \ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
       \qquad\rho,\sigma\in S_m\,.
 
-4. Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` odpowiada macierz jednostkowa
-   :math:`\,\boldsymbol{I}_m.`
+4. Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` 
+   odpowiada macierz jednostkowa :math:`\,\boldsymbol{I}_m.`
 
 5. Macierze permutacji są odwracalne, przy czym
    odwrotność macierzy permutacji jest macierzą permutacji odwrotnej:
    
    .. math::
       
-      \boldsymbol{P}_\sigma^{-1}\ =\ \boldsymbol{P}_{\sigma^{-1}}\ =\ \,\boldsymbol{P}_\sigma^T\,,
-      \qquad\sigma\in S_m\,.
+      \boldsymbol{P}_\sigma^{-1}\ =\ \boldsymbol{P}_{\sigma^{-1}}\ =
+      \ \,\boldsymbol{P}_\sigma^T\,,\qquad\sigma\in S_m\,.
 
 .. admonition:: Wniosek. :math:`\,`
 
@@ -177,8 +183,9 @@ Polecenie ``SymmetricGroup(n)`` konstruuje grupę permutacji zbioru
    (1,3)(2,4), (1,3,2,4), (1,4,3,2), (1,4,2), (1,4,3), (1,4), (1,4,2,3),
    (1,4)(2,3)]
 
-Metoda ``matrix()`` zastosowana do elementu grupy permutacji daje macierz tego elementu.
-Dla przykładu znajdziemy macierz transpozycji :math:`\,\tau=(2,4)\in S_4\,:`
+Metoda ``matrix()`` zastosowana do elementu grupy permutacji 
+daje macierz tego elementu. Dla przykładu znajdziemy macierz transpozycji 
+:math:`\,\tau=(2,4)\in S_4\,:`
 
 .. math::
    
