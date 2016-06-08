@@ -4,14 +4,14 @@ Zastosowania wyznaczników
 
 Badanie liniowej zależności wektorów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+ 
 .. admonition:: Twierdzenie 5. :math:`\\`
    
    Wyznacznik macierzy znika wtedy i tylko wtedy, 
    gdy jej kolumny są liniowo zależne. :math:`\\`
 
-   A zatem jeżeli :math:`\ \boldsymbol{A}\,=\,
-   [\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,\in\,M_n(K),\ \,` to
+   A zatem jeżeli :math:`\ \boldsymbol{A}\,=\,[\,\boldsymbol{A}_1\,|\;
+   \boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_n\,]\,\in\,M_n(K),\ \,` to
 
    .. math::
       
@@ -21,26 +21,28 @@ Badanie liniowej zależności wektorów
 
 **Dowód.**
 
-:math:`\Leftarrow\ :\ \ `
-Zakładamy, że kolumny :math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ `
+:math:`\Leftarrow\ :\ \ ` Zakładamy, że kolumny 
+:math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ `
 są liniowo zależne.
 
 Wtedy jedna spośród nich jest kombinacją liniową pozostałych. Niech na przykład
 
 .. math::
    
-   \boldsymbol{A}_n\ =\ \lambda_1\,\boldsymbol{A}_1\,+\;\lambda_2\,\boldsymbol{A}_2\,+\;\ldots\,+
-                        \lambda_{n-1}\,\boldsymbol{A}_{n-1}\,.
+   \boldsymbol{A}_n\ =
+   \ \lambda_1\,\boldsymbol{A}_1\,+\;\lambda_2\,\boldsymbol{A}_2\,+\;\ldots\,+
+   \lambda_{n-1}\,\boldsymbol{A}_{n-1}\,.
 
-Wówczas, :math:`\,` na podstawie postulatów :math:`\,` 1. :math:`\,` i :math:`\,` 2. :math:`\,` 
-definicji aksjomatycznej
+Wówczas, :math:`\,` na podstawie postulatów :math:`\,` 1. :math:`\,` 
+i :math:`\,` 2. :math:`\,` definicji aksjomatycznej
 
 .. math::
    
    \det\boldsymbol{A}\ \ =\ \ 
-   \det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,\boldsymbol{A}_{n-1}\,|\; 
-   \lambda_1\,\boldsymbol{A}_1\,+\,\lambda_2\,\boldsymbol{A}_2\,+\,\ldots\,+\,
-                        \lambda_{n-1}\,\boldsymbol{A}_{n-1}\,]\ \ =
+   \det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots
+   \,|\,\boldsymbol{A}_{n-1}\,|\;\lambda_1\,\boldsymbol{A}_1\,+
+   \,\lambda_2\,\boldsymbol{A}_2\,+\,\ldots\,+
+   \,\lambda_{n-1}\,\boldsymbol{A}_{n-1}\,]\ \ =
 
    =\ \ \lambda_1\,\det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
                           \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_1\,]\ \ +
@@ -50,20 +52,24 @@ definicji aksjomatycznej
 
    \ldots
 
-   +\ \ \lambda_{n-1}\,\det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
-                          \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_{n-1}\,]\,.
+   +\ \ \lambda_{n-1}\,
+   \det\,[\,\boldsymbol{A}_1\,|\;\boldsymbol{A}_2\,|\,\dots\,|\,
+   \boldsymbol{A}_{n-1}\,|\,\boldsymbol{A}_{n-1}\,]\,.
 
-Każdy ze składników w ostatnim wyrażeniu jest proporcjonalny do wyznacznika macierzy o dwóch jednakowych kolumnach. Z własności IIIa. wynika więc, że 
+Każdy ze składników w ostatnim wyrażeniu jest proporcjonalny do wyznacznika 
+macierzy o dwóch jednakowych kolumnach. Z własności IIIa. wynika więc, że 
 :math:`\ \det\boldsymbol{A} = 0.` :math:`\\`
 
 :math:`\Rightarrow\ :\ \ `
-Zakładamy, że kolumny :math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ `
+Zakładamy, że kolumny 
+:math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ `
 są liniowo niezależne.
 
-Układ tych kolumn, jako liniowo niezależny układ :math:`\,n\,` wektorów w :math:`\,n`-wymiarowej
-przestrzeni, jest bazą przestrzeni :math:`\,K^n.\ ` Oznacza to, że 
-każdy wektor tej przestrzeni można przedstawić jednoznacznie w postaci kombinacji liniowej 
-kolumn :math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\,.\ `
+Układ tych kolumn, jako liniowo niezależny układ :math:`\,n\,` wektorów w 
+:math:`\,n`-wymiarowej przestrzeni, jest bazą przestrzeni :math:`\,K^n.\ ` 
+Oznacza to, że każdy wektor tej przestrzeni można przedstawić jednoznacznie 
+w postaci kombinacji liniowej kolumn 
+:math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\,.\ `
 
 Rozważmy takie przedstawienie dla wektorów bazy kanonicznej 
 :math:`\ \boldsymbol{e}_j:`
@@ -76,11 +82,13 @@ Rozważmy takie przedstawienie dla wektorów bazy kanonicznej
    \left[\begin{array}{c} 0 \\ \dots \\ 1 \\ \dots \\ 0 \end{array}\right]
    \leftarrow j\,,\qquad j=1,2,\ldots,n.
 
-Równania :eq:`eqn_ej` stwierdzają, że :math:`\,j`-ta kolumna macierzy jednostkowej
-:math:`\,\boldsymbol{I}_n = [\,\boldsymbol{e}_1\,|\;\boldsymbol{e}_2\,|\,\dots\,|\,
-\boldsymbol{e}_n\,]\ ` jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}\ `
-o współczynnikach z :math:`\,j`-tej kolumny macierzy :math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}.\ `
-Według kolumnowej reguły mnożenia macierzowego oznacza to, że 
+Równania :eq:`eqn_ej` stwierdzają, że :math:`\,j`-ta kolumna macierzy 
+jednostkowej :math:`\,\boldsymbol{I}_n = [\,\boldsymbol{e}_1\,|\;
+\boldsymbol{e}_2\,|\,\dots\,|\,\boldsymbol{e}_n\,]\ ` 
+jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}\ `
+o współczynnikach z :math:`\,j`-tej kolumny macierzy 
+:math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}.\ ` Według kolumnowej reguły 
+mnożenia macierzowego oznacza to, że 
 :math:`\ \boldsymbol{I}_n = \boldsymbol{A}\boldsymbol{B}.\ ` 
 
 Korzystając z twierdzenia Cauchy'ego o wyznaczniku iloczynu macierzy, mamy
@@ -115,15 +123,18 @@ co przez kontrapozycję jest równoważne stwierdzeniu, :math:`\,` że
 
 **Dygresja.**
 
-Wzory :eq:`eqn_ej` odnoszą się do sytuacji, :math:`\,` gdy w przestrzeni :math:`\,K^n\,` 
-zostały określone dwie bazy: 
-baza :math:`\ \,\mathcal{B}\,=\,(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n),\ \,`
-złożona z liniowo niezależnych kolumn macierzy :math:`\,\boldsymbol{A},\ ` oraz baza kanoniczna
-:math:`\ \mathcal{E}\,=\,(\boldsymbol{e}_1,\boldsymbol{e}_2,\dots,\boldsymbol{e}_n)\,.`
+Wzory :eq:`eqn_ej` odnoszą się do sytuacji, :math:`\,` gdy w przestrzeni 
+:math:`\,K^n\,` zostały określone dwie bazy: baza 
+:math:`\ \,\mathcal{B}\,=\,(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,
+\boldsymbol{A}_n),\ \,` złożona z liniowo niezależnych kolumn macierzy 
+:math:`\,\boldsymbol{A},\ ` oraz baza kanoniczna 
+:math:`\ \mathcal{E}\,=\,(\boldsymbol{e}_1,\boldsymbol{e}_2,\dots,
+\boldsymbol{e}_n)\,.` 
 
-Macierz :math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}\,,\ ` której :math:`\,j`-ta kolumna 
-składa się ze współrzędnych :math:`\,j`-tego wektora bazy :math:`\ \mathcal{E}\ `
-w bazie :math:`\ \mathcal{B}\ \ \ (j=1,2,\ldots,n),\ \,` nazywa się :math:`\,` 
+Macierz :math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}\,,\ ` 
+której :math:`\,j`-ta kolumna składa się ze współrzędnych :math:`\,j`-tego 
+wektora bazy :math:`\ \mathcal{E}\ ` w bazie 
+:math:`\ \mathcal{B}\ \ \ (j=1,2,\ldots,n),\ \,` nazywa się :math:`\,` 
 *macierzą przejścia* :math:`\,` od bazy :math:`\,\mathcal{B}\ ` do bazy 
 :math:`\ \mathcal{E}.` :math:`\\`
 
@@ -153,16 +164,19 @@ tworzą bazę w przestrzeni :math:`\ K^n.`
 
 **Rozwiązanie.**
 
-Ponieważ w :math:`\,n`-wymiarowej przestrzeni wektorowej każdy liniowo niezależny układ :math:`\,n\ `
-wektorów jest bazą, a :math:`\,\text{dim}\,K^n=n,\ ` wystarczy sprawdzić liniową niezależność
-wektorów :math:`\,\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\ldots,\,\boldsymbol{f}_n.`
+Ponieważ w :math:`\,n`-wymiarowej przestrzeni wektorowej każdy liniowo 
+niezależny układ :math:`\,n\ ` wektorów jest bazą, a 
+:math:`\,\text{dim}\,K^n=n,\ ` wystarczy sprawdzić liniową niezależność
+wektorów 
+:math:`\,\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\ldots,\,\boldsymbol{f}_n.`
 
-Wektory są liniowo niezależne, gdy wyznacznik macierzy z nich złożonej jest różny od zera.
-W tym wypadku jest to wyznacznik macierzy trójkątnej:
+Wektory są liniowo niezależne, gdy wyznacznik macierzy z nich złożonej 
+jest różny od zera. W tym wypadku jest to wyznacznik macierzy trójkątnej:
 
 .. math::
    
-   \det\ [\,\boldsymbol{f}_1\,|\;\boldsymbol{f}_2\,|\,\ldots\,|\,\boldsymbol{f}_n\,]\ \ =\ \ 
+   \det\ [\,\boldsymbol{f}_1\,|\;\boldsymbol{f}_2\,|\,\ldots
+   \,|\,\boldsymbol{f}_n\,]\ \ =\ \ 
    \left|
    \begin{array}{ccccc}
      1   &   1   &   1   & \dots &   1   \\
@@ -177,7 +191,8 @@ W tym wypadku jest to wyznacznik macierzy trójkątnej:
 Wyliczanie macierzy odwrotnej
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Twierdzenie 6. :math:`\,` (uogólnione rozwinięcie Laplace'a) :math:`\\`
+.. admonition:: Twierdzenie 6. :math:`\,` (uogólnione rozwinięcie Laplace'a) 
+   :math:`\\`
    
    Dla macierzy :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\ `
    są spełnione następujące równości:
@@ -192,7 +207,9 @@ Wyliczanie macierzy odwrotnej
 
       \text{gdzie}\quad\delta_{pq}\ \,=\ \,
       \left\{\ 
-      \begin{array}{cc} 1 & \text{dla}\ \ p=q, \\ 0 & \text{dla}\ \ p\ne q; \end{array}
+      \begin{array}{cc}
+       1 & \text{dla}\ \ p=q, \\ 0 & \text{dla}\ \ p\ne q; 
+      \end{array}
       \right.\qquad
       p,q=1,2,\ldots,n.\qquad
       \text{(delta Kroneckera)}
@@ -213,21 +230,25 @@ Przy użyciu skróconego zapisu sumy relacje przyjmują zwięzłą postać:
 **Interpretacja** (wersja wierszowa):
 
 * :math:`\ i=j:\ ` suma iloczynów kolejnych elementów wybranego wiersza macierzy 
-  przez dopełnienia algebraiczne *tych samych elementów* równa się wyznacznikowi macierzy;
+  przez dopełnienia algebraiczne *tych samych elementów* 
+  równa się wyznacznikowi macierzy;
 
-* :math:`\ i\ne j:\ ` suma iloczynów kolejnych elementów wybranego wiersza macierzy 
-  przez dopełnienia algebraiczne *odpowiednich elementów innego wiersza* równa się zeru.
+* :math:`\ i\ne j:\ ` suma iloczynów kolejnych elementów wybranego wiersza 
+  macierzy przez dopełnienia algebraiczne *odpowiednich elementów innego 
+  wiersza* równa się zeru.
 
 Analogicznie przedstawia się interpretacja wersji kolumnowej.
 
-**Dowód.** Przy :math:`\ i=j\ ` wzór :eq:`Lap_exp_gen` przechodzi w rozwinięcie Laplace'a względem :math:`\ i`-tego wiersza. Wystarczy więc udowodnić przypadek :math:`\ i\ne j.`
+**Dowód.** Przy :math:`\ i=j\ ` wzór :eq:`Lap_exp_gen` przechodzi w rozwinięcie 
+Laplace'a względem :math:`\ i`-tego wiersza. 
+Wystarczy więc udowodnić przypadek :math:`\ i\ne j.`
 
 .. Twierdzenia 6. :math:`\,` (wersja wierszowa, przypadek :math:`\,i\ne j`)
 
 Biorąc za punkt wyjścia macierz :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ `
 tworzymy pomocniczą macierz :math:`\ \boldsymbol{B}=[b_{ij}]_{n\times n}\,,\ `
-która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem :math:`\,i`-tego wiersza
-na :math:`\,j`-tej pozycji:
+która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem 
+:math:`\,i`-tego wiersza na :math:`\,j`-tej pozycji:
 
 .. math::
    
@@ -279,11 +300,12 @@ macierzy :math:`\,\boldsymbol{B}\,` zachodzą związki:
 .. math::
    :label: elem
    
-   b_{jk}\,=\,b_{ik}\,=\,a_{ik}\,,\qquad B_{jk}\,=\,A_{jk}\,,\qquad k=1,2,\ldots,n.
+   b_{jk}\,=\,b_{ik}\,=\,a_{ik}\,,\qquad B_{jk}\,=\,A_{jk}\,,
+   \qquad k=1,2,\ldots,n.
 
-Wyznacznik macierzy :math:`\,\boldsymbol{B}\,` o dwóch jednakowych wierszach równa się zeru.
-Biorąc pod uwagę równości :eq:`elem` i rozwinięcie :math:`\,\det\boldsymbol{B}\ ` względem 
-:math:`\,j`-tego wiersza otrzymujemy:
+Wyznacznik macierzy :math:`\,\boldsymbol{B}\,` o dwóch jednakowych wierszach 
+równa się zeru. Biorąc pod uwagę równości :eq:`elem` i rozwinięcie 
+:math:`\,\det\boldsymbol{B}\ ` względem :math:`\,j`-tego wiersza otrzymujemy:
 
 .. math::
    
@@ -293,20 +315,21 @@ Biorąc pod uwagę równości :eq:`elem` i rozwinięcie :math:`\,\det\boldsymbol
 
 .. admonition:: Definicja.
    
-   Niech :math:`\,\boldsymbol{A}\in M_n(K)\,.\ \,` Jeżeli :math:`\ \det\boldsymbol{A}=0,\ \,`
-   to :math:`\ \boldsymbol{A}\ \,` jest :math:`\,` *macierzą osobliwą*. :math:`\\`
-   W przeciwnym wypadku, :math:`\,` gdy :math:`\ \det\boldsymbol{A}\ne 0,\ \ \boldsymbol{A}\ \,` 
+   Niech :math:`\,\boldsymbol{A}\in M_n(K)\,.\ \,` 
+   Jeżeli :math:`\ \det\boldsymbol{A}=0,\ \,` to :math:`\ \boldsymbol{A}\ \,` 
+   jest :math:`\,` *macierzą osobliwą*. :math:`\\` W przeciwnym wypadku, 
+   :math:`\,` gdy :math:`\ \det\boldsymbol{A}\ne 0,\ \ \boldsymbol{A}\ \,` 
    jest :math:`\,` *macierzą nieosobliwą*.
 
 .. admonition:: Twierdzenie 7.
    
-   Macierz :math:`\ \boldsymbol{A}\in M_n(K)\ \,` jest odwracalna :math:`\,` wtedy i tylko wtedy, 
-   :math:`\,` gdy jest nieosobliwa.
+   Macierz :math:`\ \boldsymbol{A}\in M_n(K)\ \,` jest odwracalna :math:`\,` 
+   wtedy i tylko wtedy, :math:`\,` gdy jest nieosobliwa.
 
 **Dowód.**
 
-:math:`\Rightarrow\ :\ ` Jeżeli istnieje macierz odwrotna :math:`\,\boldsymbol{A}^{-1},\ \,` to
-na podstawie twierdzenia Cauchy'ego: 
+:math:`\Rightarrow\ :\ ` Jeżeli istnieje macierz odwrotna 
+:math:`\,\boldsymbol{A}^{-1},\ \,` to na podstawie twierdzenia Cauchy'ego: 
 
 .. math::
    
@@ -315,17 +338,18 @@ na podstawie twierdzenia Cauchy'ego:
    \det\boldsymbol{I}_n\ \,=\ \,1\,.
 
 Wynika stąd, że :math:`\ \det\boldsymbol{A}\ne 0,\ \,`
-bo gdyby :math:`\ \det\boldsymbol{A} = 0,\ \,`
-to mielibyśmy :math:`\ \det\boldsymbol{A}\,\cdot\,\det\boldsymbol{A}^{-1}\,=\;0.`
+bo gdyby :math:`\ \det\boldsymbol{A} = 0,\ \,` to mielibyśmy 
+:math:`\ \det\boldsymbol{A}\,\cdot\,\det\boldsymbol{A}^{-1}\,=\;0.`
 
 .. admonition:: Wniosek.
    
-   Jeżeli macierz :math:`\,\boldsymbol{A}\in M_n(K)\ ` jest odwracalna, :math:`\,`
-   to :math:`\ \,\det\boldsymbol{A}^{-1}\,=\ (\det\boldsymbol{A})^{-1}\,.`
+   Jeżeli macierz :math:`\,\boldsymbol{A}\in M_n(K)\ ` jest odwracalna, 
+   :math:`\,` to :math:`\ \,\det\boldsymbol{A}^{-1}\,=
+   \ (\det\boldsymbol{A})^{-1}\,.`
 
 :math:`\Leftarrow\ :\ ` 
-Zakładamy, że macierz :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ ` jest nieosobliwa:
-:math:`\ \det\boldsymbol{A}\ne 0.\ ` Wtedy macierz
+Zakładamy, że macierz :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ ` 
+jest nieosobliwa: :math:`\ \det\boldsymbol{A}\ne 0.\ ` Wtedy macierz
 
 .. math::
    :label: rec_mat
@@ -348,42 +372,51 @@ Zakładamy, że macierz :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ ` jest nie
          \end{array}
    \right],
 
-gdzie :math:`\ A_{ij}\ ` jest dopełnieniem algebraicznym elementu :math:`\ a_{ij}\,,\ \,`
-jest macierzą odwrotną do :math:`\,\boldsymbol{A}\,.\ `
+gdzie :math:`\ A_{ij}\ ` jest dopełnieniem algebraicznym elementu 
+:math:`\ a_{ij}\,,\ \,` jest macierzą odwrotną do :math:`\,\boldsymbol{A}\,.\ `
 
-Istotnie, elementy :math:`\ b_{ij}\ ` macierzy :math:`\ \boldsymbol{B}\ ` dane są przez
+Istotnie, elementy :math:`\ b_{ij}\ ` macierzy :math:`\ \boldsymbol{B}\ ` 
+dane są przez
 
 .. math::
    
-   b_{ij}\ \ =\ \ \frac{1}{\det\boldsymbol{A}}\ \ A_{ji}\,,\qquad i,j=1,2,\ldots,n.
+   b_{ij}\ \ =\ \ \frac{1}{\det\boldsymbol{A}}\ \ A_{ji}\,,
+   \qquad i,j=1,2,\ldots,n.
 
 Niech 
 :math:`\ \boldsymbol{A}\boldsymbol{B}=\boldsymbol{C}=[c_{ij}]_{n\times n}\,,\ `
-:math:`\ \boldsymbol{B}\boldsymbol{A}=\boldsymbol{C'}=[c_{ij}']_{n\times n}\,.\ `
+:math:`\ \boldsymbol{B}\boldsymbol{A}=
+\boldsymbol{C'}=[c_{ij}']_{n\times n}\,.\ `
 Wykorzystując :eq:`Lap_exp_gen` otrzymujemy
 
 .. math::
    
    c_{ij}\ \,=\ \ \sum_{s\,=\,1}^n\ a_{is}\,b_{sj}
-         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}\ \ \sum_{s\,=\,1}^n\ a_{is}\,A_{js}
-         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}\ \cdot\ \delta_{ij}\,\cdot\ \det\boldsymbol{A}
+         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}
+         \ \ \sum_{s\,=\,1}^n\ a_{is}\,A_{js}
+         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}
+         \ \cdot\ \delta_{ij}\,\cdot\ \det\boldsymbol{A}
          \ \,=\ \,\delta_{ij}\,,
 
    c_{ij}'\ \,=\ \ \sum_{s\,=\,1}^n\ b_{is}\,a_{sj}
-         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}\ \ \sum_{s\,=\,1}^n\ a_{sj}\,A_{si}
-         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}\ \cdot\ \delta_{ji}\,\cdot\ \det\boldsymbol{A}
+         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}
+         \ \ \sum_{s\,=\,1}^n\ a_{sj}\,A_{si}
+         \ \,=\ \ \frac{1}{\det\boldsymbol{A}}
+         \ \cdot\ \delta_{ji}\,\cdot\ \det\boldsymbol{A}
          \ \,=\ \,\delta_{ij}\,,
 
-gdzie :math:`\ i,j=1,2,\ldots,n.\ \,` Macierz, której elementy są deltami Kroneckera 
-:math:`\ \delta_{ij}\,,\ ` jest macierzą jednostkową. :math:`\,` Tak więc 
-:math:`\ \boldsymbol{A}\boldsymbol{B}=\boldsymbol{B}\boldsymbol{A}=\boldsymbol{I}_n\,,\ `
-co oznacza, że :math:`\ \boldsymbol{B}=\boldsymbol{A}^{-1}\,.`
+gdzie :math:`\ i,j=1,2,\ldots,n.\ \,` 
+Macierz, której elementy są deltami Kroneckera :math:`\ \delta_{ij}\,,\ ` 
+jest macierzą jednostkową. :math:`\,` Tak więc 
+:math:`\ \boldsymbol{A}\boldsymbol{B}=\boldsymbol{B}\boldsymbol{A}=
+\boldsymbol{I}_n\,,\ ` co oznacza, że 
+:math:`\ \boldsymbol{B}=\boldsymbol{A}^{-1}\,.`
 
 .. admonition:: Definicja.
    
    Transponowana macierz dopełnień algebraicznych elementów macierzy 
-   :math:`\,\boldsymbol{A}\ ` nazywa się :math:`\,` *macierzą dołączoną* :math:`\,` 
-   do macierzy :math:`\ \boldsymbol{A}:`
+   :math:`\,\boldsymbol{A}\ ` nazywa się :math:`\,` *macierzą dołączoną* 
+   :math:`\,` do macierzy :math:`\ \boldsymbol{A}:`
 
    .. math::
       
@@ -397,28 +430,37 @@ co oznacza, że :math:`\ \boldsymbol{B}=\boldsymbol{A}^{-1}\,.`
       \right]\,.
  
 
-Procedura wyliczenia macierzy odwrotnej do :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\ `
+Procedura wyliczenia macierzy odwrotnej do 
+:math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\in M_n(K)\ `
 składa się zatem z następujących etapów:
 
-0. wyliczenie :math:`\ \det\boldsymbol{A}\ \,` i :math:`\,` 
+0. :math:`\,` wyliczenie :math:`\ \det\boldsymbol{A}\ \,` i :math:`\,` 
    sprawdzenie, czy :math:`\ \det\boldsymbol{A}\ne 0\,;`
 
-1. wyliczenie dopełnień algebraicznych :math:`\ A_{ij}\,,\ \ i,j=1,2,\ldots,n;`
+1. :math:`\,` wyliczenie dopełnień algebraicznych 
+   :math:`\ A_{ij}\,,\ \ i,j=1,2,\ldots,n;`
 
-2. konstrukcja macierzy dołączonej :math:`\,\boldsymbol{A}^D:\quad
+2. :math:`\,` konstrukcja macierzy dołączonej :math:`\,\boldsymbol{A}^D:\quad
    a_{ij}\rightarrow A_{ji},\quad i,j=1,2,\ldots,n`;
 
-3. podzielenie macierzy :math:`\,\boldsymbol{A}^D\ ` przez :math:`\ \det\boldsymbol{A}\,:\quad
-   \boldsymbol{A}^{-1}\ =\ \,\frac{1}{\det\boldsymbol{A}}\ \ \boldsymbol{A}^D\,.` :math:`\\`
+3. :math:`\,` podzielenie macierzy :math:`\,\boldsymbol{A}^D\ ` 
+   przez :math:`\ \det\boldsymbol{A}\,:\quad\boldsymbol{A}^{-1}\ =
+   \ \,\frac{1}{\det\boldsymbol{A}}\ \ \boldsymbol{A}^D\,.` :math:`\\`
 
 **Przykład.** :math:`\,` Wyliczenie odwrotności macierzy
-:math:`\ \ \boldsymbol{A}\ =\ 
-\left[\begin{array}{rrr} 2 & 2 & 3 \\ 1 & -1 & 0 \\ -1 & 2 & 1 \end{array}\right]\,.`
+:math:`\ \ \boldsymbol{A}\ =\ \left[\begin{array}{rrr} 
+2 & 2 & 3 \\ 1 & -1 & 0 \\ -1 & 2 & 1 \end{array}\right]\,.`
 
 :math:`\ \det\boldsymbol{A}\ =\ 
-\left|\begin{array}{rrr} 2 & 2 & 3 \\ 1 & -1 & 0 \\ -1 & 2 & 1 \end{array}\right|\ =\
-\left|\begin{array}{rrr} 2 & 4 & 3 \\ 1 &  0 & 0 \\ -1 & 1 & 1 \end{array}\right|\ =\ 
--\ \left|\begin{array}{cc} 4 & 3 \\ 1 & 1 \end{array}\right|\ =\ -1\,.`
+\left|\begin{array}{rrr} 
+2 & 2 & 3 \\ 1 & -1 & 0 \\ -1 & 2 & 1 
+\end{array}\right|\ =\
+\left|\begin{array}{rrr} 
+2 & 4 & 3 \\ 1 &  0 & 0 \\ -1 & 1 & 1 
+\end{array}\right|\ =\ 
+-\ \left|\begin{array}{cc} 
+4 & 3 \\ 1 & 1 
+\end{array}\right|\ =\ -1\,.`
 
 .. :math:`A_{11}=+\left|\begin{array}{rr} -1 &  0 \\  2 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
    :math:`A_{12}=-\left|\begin{array}{rr}  1 &  0 \\ -1 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
@@ -482,19 +524,22 @@ składa się zatem z następujących etapów:
 
    \;
 
-Metoda ``inverse()`` pakietu Sage zastosowana do ogólnej macierzy kwadratowej zadanego stopnia 
-:math:`\,n=2,3,\ldots\ ` podaje wyprowadzone tutaj wzory dla macierzy odwrotnej.
+Metoda ``inverse()`` pakietu Sage zastosowana do ogólnej macierzy kwadratowej 
+zadanego stopnia :math:`\,n=2,3,\ldots\ ` podaje wyprowadzone tutaj wzory dla 
+macierzy odwrotnej.
 
-.. Sage potrafi podać wzory dla odwrotności macierzy kwadratowej stopnia :math:`\,n=2,3,\ldots\ ` 
-   Należy w tym celu użyć metody ``inverse()`` w zastosowaniu do ogólnej macierzy stopnia :math:`\,n.`
+.. Sage potrafi podać wzory dla odwrotności macierzy kwadratowej stopnia 
+   :math:`\,n=2,3,\ldots\ ` Należy w tym celu użyć metody ``inverse()`` 
+   w zastosowaniu do ogólnej macierzy stopnia :math:`\,n.`
 
 .. admonition:: Poeksperymentuj z Sage:
    
    Poniższy program wyświetla ogólną macierz kwadratową 
    :math:`\,\boldsymbol{A}=[a_{ij}]_{n\times n}\ ` 
-   oraz jej odwrotność. W mianownikach elementów macierzy odwrotnej można rozpoznać wyznacznik   
-   macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach :math:`\,`
-   - :math:`\,` odpowiednie dopełnienia algebraiczne. :math:`\\`
+   oraz jej odwrotność. W mianownikach elementów macierzy odwrotnej można 
+   rozpoznać wyznacznik macierzy :math:`\,\boldsymbol{A},\ ` 
+   a w licznikach :math:`\,` - :math:`\,` odpowiednie dopełnienia algebraiczne. 
+   :math:`\\`
 
 .. sagecellserver::
    
@@ -507,7 +552,8 @@ Metoda ``inverse()`` pakietu Sage zastosowana do ogólnej macierzy kwadratowej z
 Wzory Cramera
 ~~~~~~~~~~~~~
 
-Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem :math:`\,K:`
+Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem 
+:math:`\,K:`
 
 .. math::
    :label: cramer_0
@@ -515,13 +561,14 @@ Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem
    \begin{array}{c}
       a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
       a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
-      \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots    \\
+      \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots  \\
       a_{n1}\,x_1\; + \ \,a_{n2}\,x_2\; + \ \,\ldots\  + \ \;a_{nn}\,x_n \ \, = \ \ b_n
    \end{array}
 
-nazywamy :math:`\,` *układem kramerowskim* :math:`\,` (Gabriel Cramer, 1704-52), :math:`\,`
-gdy jego macierz współczynników :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ \,` 
-jest nieosobliwa: :math:`\ \,\det\boldsymbol{A}\ne 0.`
+nazywamy :math:`\,` *układem kramerowskim* :math:`\,` (Gabriel Cramer, 1704-52), 
+:math:`\,` gdy jego macierz współczynników 
+:math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ \,` jest nieosobliwa: 
+:math:`\ \,\det\boldsymbol{A}\ne 0.`
 
 Zapisując go w postaci macierzowej
 
@@ -529,13 +576,17 @@ Zapisując go w postaci macierzowej
    
    \boldsymbol{A}\boldsymbol{X}\ =\ \boldsymbol{b}\,,
 
-.. \qquad
-   \boldsymbol{X}\,=\,\left[\begin{array}{c} x_{1} \\ x_{2} \\ \ldots \\ x_{n} \end{array}\right]\,,
-   \quad
-   \boldsymbol{b}\,=\,\left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{n} \end{array}\right]\,,
+.. \qquad\boldsymbol{X}\,=\,
+   \left[\begin{array}{c} 
+       x_{1} \\ x_{2} \\ \ldots \\ x_{n} 
+   \end{array}\right]\,,\quad
+   \boldsymbol{b}\,=\,
+   \left[\begin{array}{c} 
+       b_{1} \\ b_{2} \\ \ldots \\ b_{n} 
+   \end{array}\right]\,,
 
-i mnożąc obustronnie (z lewej strony) przez macierz :math:`\ \boldsymbol{A}^{-1}\ `
-otrzymamy od razu rozwiązanie:
+i mnożąc obustronnie (z lewej strony) przez macierz 
+:math:`\ \boldsymbol{A}^{-1}\ ` otrzymamy od razu rozwiązanie:
 
 .. math::
    
@@ -591,16 +642,18 @@ Z przyrównania odpowiednich współrzędnych wektorów po obu stronach równoś
 
 .. admonition:: Twierdzenie 8. :math:`\,` (wzory Cramera) 
    
-   Kramerowski układ równań :eq:`cramer_0` ma dokładnie jedno rozwiązanie dane przez
+   Kramerowski układ równań :eq:`cramer_0` 
+   ma dokładnie jedno rozwiązanie dane przez
    
    .. math::
       
       x_j\ \ =\ \ \frac{D_j}{D}\,,\qquad j=1,2,\ldots,n,
 
-   gdzie :math:`\,D\,` jest wyznacznikiem macierzy współczynników :math:`\,\boldsymbol{A},\ ` 
-   a :math:`\,D_j\,` jest wyznacznikiem macierzy otrzymanej z :math:`\,\boldsymbol{A}\ `
-   przez zastąpienie w niej :math:`\,j`-tej kolumny kolumną wolnych wyrazów 
-   :math:`\,\boldsymbol{b}.\ ` Przy kolumnowym zapisie macierzy :math:`\,` (:math:`j=1,2,\ldots,n`) :
+   gdzie :math:`\,D\,` jest wyznacznikiem macierzy współczynników 
+   :math:`\,\boldsymbol{A},\ ` a :math:`\,D_j\,` jest wyznacznikiem macierzy 
+   otrzymanej z :math:`\,\boldsymbol{A}\ ` przez zastąpienie w niej 
+   :math:`\,j`-tej kolumny kolumną wolnych wyrazów :math:`\,\boldsymbol{b}.\ ` 
+   Przy kolumnowym zapisie macierzy :math:`\,` (:math:`j=1,2,\ldots,n`) :
 
    .. math::
       
@@ -658,23 +711,23 @@ ze wzorów Cramera:
 
 .. .. math::
    
-   D_1\ =\ 
-   \left|\begin{array}{rrr} 4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
-   \left|\begin{array}{rrr} 0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
-    -\ \left|\begin{array}{rr} 3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
-   18\ \left|\begin{array}{rr} 1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,
+      D_1\ =\ 
+      \left|\begin{array}{rrr} 4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
+      -\ \left|\begin{array}{rr} 3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
+      18\ \left|\begin{array}{rr} 1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,
 
-   D_2\ =\ 
-   \left|\begin{array}{rrr} 2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
-   \left|\begin{array}{rrr} 0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
-   -\ \left|\begin{array}{rr} -1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
-   3\ \left|\begin{array}{rr}  1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,
+      D_2\ =\ 
+      \left|\begin{array}{rrr} 2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
+      -\ \left|\begin{array}{rr} -1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
+      3\ \left|\begin{array}{rr}  1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,
 
-   D_3\ =\ 
-   \left|\begin{array}{rrr} 2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
-   \left|\begin{array}{rrr} 0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
+      D_3\ =\ 
+      \left|\begin{array}{rrr} 2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
       \left|\begin{array}{rr} 11 & 27 \\ -1 & 3 \end{array}\right|\ =\ 
-   3\ \left|\begin{array}{rr} 11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.
+      3\ \left|\begin{array}{rr} 11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.
 
 Ostatecznie, :math:`\,` jedynym rozwiązaniem układu równań jest
 
@@ -684,17 +737,21 @@ Ostatecznie, :math:`\,` jedynym rozwiązaniem układu równań jest
    x_2\ =\ \textstyle{60\over 60}\ =\ 1\,,\quad
    x_3\ =\ \textstyle{60\over 60}\ =\ 1\,.
 
-W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej zadanej liczby
-:math:`\,n=2,3,\ldots\ ` równań układu kramerowskiego. Należy w tym celu wywołać metodę ``rref()`` dla sprowadzenia macierzy rozszerzonej 
-:math:`\,\boldsymbol{B}=[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,]\ ` do zredukowanej postaci schodkowej.
+W systemie Sage można otrzymać wzory Cramera w ogólnej postaci dla każdej 
+zadanej liczby :math:`\,n=2,3,\ldots\ ` równań układu kramerowskiego. 
+Należy w tym celu wywołać metodę ``rref()`` dla sprowadzenia macierzy 
+rozszerzonej :math:`\,\boldsymbol{B}=[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,]\ ` 
+do zredukowanej postaci schodkowej.
 
 .. admonition:: Poeksperymentuj z Sage:
    
-   Poniższy program dla zadanego stopnia :math:`\,n\,` wyświetla macierz :math:`\,\boldsymbol{B}\ ` 
-   w jej oryginalnej oraz zredukowanej schodkowej postaci.
-   W tym drugim przypadku elementy ostatniej kolumny są wartościami niewiadomych (wartości te są 
-   następnie powtórzone w powiększeniu). Można tam rozpoznać w mianownikach wyznacznik :math:`\,D\,` 
-   macierzy :math:`\,\boldsymbol{A},\ ` a w licznikach wyznaczniki :math:`\,D_j\,` ze wzorów Cramera.
+   Poniższy program dla zadanego stopnia :math:`\,n\,` wyświetla macierz 
+   :math:`\,\boldsymbol{B}\ ` w jej oryginalnej oraz zredukowanej schodkowej 
+   postaci. W tym drugim przypadku elementy ostatniej kolumny są wartościami 
+   niewiadomych (wartości te są następnie powtórzone w powiększeniu). 
+   Można tam rozpoznać w mianownikach wyznacznik :math:`\,D\,` macierzy 
+   :math:`\,\boldsymbol{A},\ ` a w licznikach wyznaczniki :math:`\,D_j\,` 
+   ze wzorów Cramera.
 
 .. sagecellserver::
 
