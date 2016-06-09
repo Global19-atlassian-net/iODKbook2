@@ -6,10 +6,10 @@ Układ równań liniowych w mechanice
 Liniowy łańcuch mas na sprężynach
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rozważmy układ :math:`\,n+1\,` punktów materialnych :math:`\,P_0,\,P_1,\,\ldots,\,P_n\,,\ `
-rozmieszczonych na pionowej osi o początku :math:`\,\boldsymbol{O}.\ ` 
-Każde dwa sąsiednie punkty są połączone sprężyną
-o długości :math:`\,d\,` i stałej sprężystości :math:`\,k.\,`
+Rozważmy układ :math:`\,n+1\,` punktów materialnych 
+:math:`\,P_0,\,P_1,\,\ldots,\,P_n\,,\ ` rozmieszczonych na pionowej osi 
+o początku :math:`\,\boldsymbol{O}.\ ` Każde dwa sąsiednie punkty są połączone 
+sprężyną o długości :math:`\,d\,` i stałej sprężystości :math:`\,k.\,`
 Gdy nie działają siły zewnętrzne, układ jest w pierwotnym stanie równowagi:
 cząstka :math:`\,P_0\,` jest w punkcie :math:`\,\boldsymbol{O},\ `
 a współrzędne :math:`\,X_i\ ` cząstek przyjmują wartości
@@ -19,13 +19,15 @@ a współrzędne :math:`\,X_i\ ` cząstek przyjmują wartości
    X_i^o\,=\,i\cdot d\,,\qquad i = 0,1,\ldots,n\,.
 
 Aby dopuścić inne konfiguracje, wprowadzamy oznaczenie :math:`\,x_i\,`
-dla odchylenia :math:`\,i`-tej cząstki od jej położenia w pierwotnym stanie równowagi:
+dla odchylenia :math:`\,i`-tej cząstki od jej położenia 
+w pierwotnym stanie równowagi:
 
 .. math::
 
    X_i\,=\,X_i^o\,+\,x_i\,=\,i\cdot d\,+\,x_i\,,\qquad i = 0,1,\ldots,n\,.
 
-Siła, wywierana na każdą wewnętrzną :math:`\,i`-tą cząstkę przez jej sąsiadów, wynosi
+Siła, wywierana na każdą wewnętrzną :math:`\,i`-tą cząstkę 
+przez jej sąsiadów, wynosi
 
 .. math::
 
@@ -40,7 +42,8 @@ Siła, wywierana na każdą wewnętrzną :math:`\,i`-tą cząstkę przez jej są
 
 Odwołując się do konkretnej sytuacji fizycznej, założymy dodatkowo że:
 
-* cząstki mają jednakowe masy :math:`\,m\,` i podlegają działaniu siły ciężkości;
+* cząstki mają jednakowe masy :math:`\,m\,` 
+  i podlegają działaniu siły ciężkości;
 
 * skrajne punkty :math:`\,P_0\ \,\text{i}\ \,P_n\,`
   są unieruchomione w ich pierwotnym położeniu równowagi:
@@ -51,22 +54,24 @@ Odwołując się do konkretnej sytuacji fizycznej, założymy dodatkowo że:
      X_0\,=\,0\,,\quad X_n\,=\,n\cdot d\,,
      \qquad\text{czyli}\qquad x_0 = x_n = 0\,;
 
-Obrazowo sytuację tę można opisać następująco: mamy wiszący pionowo łańcuch złożony z :math:`\,n\,`
-jednakowych ciężarków i :math:`\,n\,` rozdzielających je jednakowych sprężyn.
-Pierwszy ciężarek jest zawieszony na sprężynie, przymocowanej górnym końcem bezpośrednio do sufitu
-(punkt materialny :math:`\,P_0\,` jest punktem zamocowania tej sprężyny),
-natomiast ostatni ciężarek spoczywa na podłodze. Wysokość pomieszczenia równa się długości łańcucha, 
-jaką miałby on w stanie nieważkości.
+Obrazowo sytuację tę można opisać następująco: mamy wiszący pionowo łańcuch 
+złożony z :math:`\,n\,` jednakowych ciężarków i :math:`\,n\,` rozdzielających 
+je jednakowych sprężyn. Pierwszy ciężarek jest zawieszony na sprężynie, 
+przymocowanej górnym końcem bezpośrednio do sufitu (punkt materialny 
+:math:`\,P_0\,` jest punktem zamocowania tej sprężyny), natomiast ostatni 
+ciężarek spoczywa na podłodze. Wysokość pomieszczenia równa się długości 
+łańcucha, jaką miałby on w stanie nieważkości.
 
 Wyznaczymy stan równowagi układu, określając go przez zbiór
 odchyleń :math:`\,x_1,\,\ldots,\,x_{n-1}\,.`
 
-W równowadze wypadkowa sił działających na każdą cząstkę wewnętrzną równa się zeru:
+W równowadze wypadkowa sił działających na każdą cząstkę wewnętrzną 
+równa się zeru:
 
 .. math::
    :label: 22
 
-   F_i\ =\ k\ (x_{i-1}\,-\,2\,x_i\,+\,x_{i+1})\ +\ mg\ =\ 0\,,
+   F_i\ =\ k\ (x_{i-1}\,-\,2\,x_i\,+\,x_{i+1})\  +\ mg\ =\ 0\,,
    \qquad i = 1,\ldots,n-1\,.
 
 Łącząc warunki :eq:`21` i :eq:`22` otrzymujemy układ :math:`\,n+1\,` równań
@@ -83,7 +88,8 @@ o :math:`\,n+1\,` niewiadomych:
 
 gdzie :math:`\ p\,=\,mg/k\,` jest parametrem o wymiarze długości.
 
-Dla przykładu, :math:`\,` przy :math:`\ n=5\ ` układ równań przedstawia się następująco:
+Dla przykładu, :math:`\,` przy :math:`\ n=5\ ` układ równań 
+przedstawia się następująco:
 
 .. math::
    :label: 24
@@ -122,7 +128,8 @@ Dla realistycznych wartości:
 otrzymujemy :math:`\ p\,=\,0.01\ \text{m}\,.\\` 
 Zauważmy, że we wzorach nie występuje długość sprężyn :math:`\,d\,.`
 
-Narzędzia systemu Sage pozwalają rozwiązać układ :eq:`23` dla dowolnego zadanego :math:`\,n.`
+Narzędzia systemu Sage pozwalają rozwiązać układ :eq:`23` 
+dla dowolnego zadanego :math:`\,n.`
 Przy dużych :math:`\,n,\,` zamiast wykazu wartości odchyleń :math:`\,x_i\,,\,`
 warto wyświetlić obraz graficzny wyniku przy pomocy funkcji ``list_plot()``:
 
@@ -145,31 +152,6 @@ i maleją symetrycznie w kierunku jego krańców.
 
 **Ćwiczenie.** :math:`\\`
 Wykorzystując powyższy program, znajdź liczbowe rozwiązanie układu :eq:`24`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 
 

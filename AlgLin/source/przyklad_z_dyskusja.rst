@@ -45,10 +45,10 @@ Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1, 3, 0, 2,-1, 2],
-   ...                  [0, 0, 1, 4,-3, 2],
-   ...                  [1, 3, 1, 6,-4, 4]])
+                        [0, 0, 1, 4,-3, 2],
+                        [1, 3, 1, 6,-4, 4]])
    
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
 
 .. math::
    :label: 09
@@ -63,8 +63,9 @@ Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
                                              0 & 0 & 0 & 0 & 0 & 0
                                           \end{array}\right)
 
-Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych dwóch spośród nich
-(co jest zrozumiałe, bo równanie trzecie było po prostu sumą tych dwóch):
+Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych dwóch 
+spośród nich (co jest zrozumiałe, bo równanie trzecie było po prostu sumą 
+tych dwóch):
 
 .. math::
    :nowrap:
@@ -74,9 +75,9 @@ Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych d
           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2 \\
    \end{alignat*}
 
-Warto zauważyć, że ze zredukowanej postaci schodkowej macierzy rozszerzonej :eq:`09`
-można odczytać pewne szczególne rozwiązanie układu wyjściowego: :math:`\,`
-liczby w ostatniej kolumnie tej macierzy dają wartości niewiadomych
+Warto zauważyć, że ze zredukowanej postaci schodkowej macierzy rozszerzonej 
+:eq:`09` można odczytać pewne szczególne rozwiązanie układu wyjściowego: 
+:math:`\,` liczby w ostatniej kolumnie tej macierzy dają wartości niewiadomych
 odpowiadających kolumnom z jedynkami wiodącymi, przy zerowych wartościach 
 pozostałych niewiadomych. Tym szczególnym rozwiązaniem jest 
 
@@ -127,17 +128,17 @@ Ostatecznie, rozwiązanie układu w wersji wektorowej przedstawia się następuj
    \left[\begin{array}{r}  1  \\  0  \\  3  \\  0  \\  1 \end{array}\right]\,,\quad
    s,t,u\,\in\,Q.
 
-.. Pierwszy składnik po znaku równości przedstawia rozwiązanie szczególne :eq:`10`,
-   podczas gdy dalsze wyrazy dają ogólne rozwiązanie układu jednorodnego,
-   stowarzyszonego z niejednorodnym układem wyjściowym. 
+.. Pierwszy składnik po znaku równości przedstawia rozwiązanie szczególne 
+   :eq:`10`, podczas gdy dalsze wyrazy dają ogólne rozwiązanie układu 
+   jednorodnego, stowarzyszonego z niejednorodnym układem wyjściowym. 
    Tę ostatnią interpretację potwierdzą dalsze rachunki w tym przykładzie.
 
 Metoda bezpośrednia
 ~~~~~~~~~~~~~~~~~~~
 
 Użyjemy metod ``solve_right()`` oraz ``right_kernel_matrix()`` do wyznaczenia
-szczególnego rozwiązania wyjściowego układu niejednorodnego oraz ogólnego rozwiązania 
-stowarzyszonego z nim układu jednorodnego:
+szczególnego rozwiązania wyjściowego układu niejednorodnego 
+oraz ogólnego rozwiązania stowarzyszonego z nim układu jednorodnego:
 
 .. code-block:: python
 
@@ -181,8 +182,8 @@ Wzory :eq:`11` i :eq:`12`, przedstawiające ogólne rozwiązanie układu równa�
 nie są identyczne: zawierają takie samo rozwiązanie szczególne, 
 ale różne są wektory rozpinające przestrzenie rozwiązań układu jednorodnego.
 
-Aby sprawdzić wzajemną zgodność tych wzorów, zbudujemy i porównamy obie wymienione
-przestrzenie. Znajdzie tu zastosowanie funkcja ``span()``,
+Aby sprawdzić wzajemną zgodność tych wzorów, zbudujemy i porównamy obie 
+wymienione przestrzenie. Znajdzie tu zastosowanie funkcja ``span()``,
 która zwraca przestrzeń rozpiętą na podanych (w postaci listy) wektorach:
 
 .. code-block:: python
@@ -239,20 +240,22 @@ i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że:
 
 * :math:`\ \text{rz}\boldsymbol{A} < 3,\,` bo wiersze są liniowo zależne
   (trzeci jest sumą pierwszych dwóch);
-* | :math:`\ \text{rz}\boldsymbol{A}\geq 2,\,` bo istnieją niezerowe minory stopnia drugiego
+* | :math:`\ \text{rz}\boldsymbol{A}\geq 2,\,` 
+    bo istnieją niezerowe minory stopnia drugiego
   | :math:`\qquad\qquad\ ` (np. minor wycięty w prawym górnym rogu).
 
-A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0\,,`
-równy różnicy liczby niewiadomych i rzędu macierzy :math:`\,\boldsymbol{A},\,`
-wynosi :math:`\ 5 - 2 = 3.\ `
-Dla określenia przestrzeni :math:`\,S_0\,` wystarczy podać jakąkolwiek jej bazę,
-złożoną z trzech liniowo niezależnych wektorów kolumnowych należących do przestrzeni :math:`\,Q^5.`
+A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni 
+:math:`\,S_0\,,` równy różnicy liczby niewiadomych i rzędu macierzy 
+:math:`\,\boldsymbol{A},\,` wynosi :math:`\ 5 - 2 = 3.\ ` Dla określenia 
+przestrzeni :math:`\,S_0\,` wystarczy podać jakąkolwiek jej bazę, złożoną 
+z trzech liniowo niezależnych wektorów kolumnowych należących do przestrzeni 
+:math:`\,Q^5.`
 
 **Dyskusja ogólna.**
 
-W tej sytuacji zagadnienie rozwiązania układu :eq:`13` jest równoważne wyznaczeniu
-macierzy :math:`\,\boldsymbol{X}\,` o pięciu wierszach i trzech liniowo niezależnych kolumnach,
-spełniającej warunek
+W tej sytuacji zagadnienie rozwiązania układu :eq:`13` jest równoważne 
+wyznaczeniu macierzy :math:`\,\boldsymbol{X}\,` o pięciu wierszach i trzech 
+liniowo niezależnych kolumnach, spełniającej warunek
 
 .. math::
    :label: 14
@@ -269,10 +272,9 @@ i :math:`\ \,` stosując kolumnowy zapis macierzy, mamy
 .. math::
 
    \boldsymbol{A}\,\boldsymbol{X}\ \,=\ \,
-   \boldsymbol{A}\ 
-   \left[\,\boldsymbol{X}_1\,|\;\boldsymbol{X}_2\,|\;\boldsymbol{X}_3\,\right]\ \,=\ \,
-   \left[\,
-   \boldsymbol{A}\boldsymbol{X}_1\,|\;
+   \boldsymbol{A}\ \left[\,
+   \boldsymbol{X}_1\,|\;\boldsymbol{X}_2\,|\;\boldsymbol{X}_3\,\right]\ \,=
+   \ \,\left[\,\boldsymbol{A}\boldsymbol{X}_1\,|\;
    \boldsymbol{A}\boldsymbol{X}_2\,|\;
    \boldsymbol{A}\boldsymbol{X}_3\,\right]\ \,=\ \,
    \left[\,\boldsymbol{0}\,|\,\boldsymbol{0}\,|\,\boldsymbol{0}\,\right]
@@ -285,16 +287,18 @@ skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macier
    \boldsymbol{A}\boldsymbol{X}_2\ =\ \boldsymbol{0},\qquad
    \boldsymbol{A}\boldsymbol{X}_3\ =\ \boldsymbol{0}\,.
 
-A zatem kolumny :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
+A zatem kolumny 
+:math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
 macierzy :math:`\,\boldsymbol{X}\,` spełniają równanie :eq:`13` :math:`\,`
 i :math:`\,` (z założenia ich liniowej niezależności) tworzą poszukiwaną bazę 
 przestrzeni :math:`\,S_0.`
 
 **Wyznaczenie bazy przestrzeni rozwiązań.**
 
-Szukaną macierz :math:`\,\boldsymbol{X}\,` można zbudować, biorąc za punkt wyjścia
-zredukowaną postać schodkową :math:`\,\boldsymbol{C}\,` macierzy współczynników 
-:math:`\,\boldsymbol{A}\,` układu :eq:`13`. :math:`\ ` Według wzoru :eq:`09`:
+Szukaną macierz :math:`\,\boldsymbol{X}\,` można zbudować, 
+biorąc za punkt wyjścia zredukowaną postać schodkową :math:`\,\boldsymbol{C}\,` 
+macierzy współczynników :math:`\,\boldsymbol{A}\,` układu :eq:`13`. :math:`\ ` 
+Według wzoru :eq:`09`:
  
 .. math::
    :label: 15
@@ -327,9 +331,9 @@ daje macierz :math:`\,\boldsymbol{D}\,` o przejrzystej strukturze blokowej
       \boldsymbol{O_{12}}   & \boldsymbol{O_{13}}
    \end{array}\right]\,.
 
-Zauważmy od razu, że :math:`\,\boldsymbol{D}\,` jest (zredukowaną schodkową) macierzą układu,
-otrzymanego z :eq:`13` przez zmianę numeracji niewiadomych: :math:`\ x_2\leftrightarrow x_3.\ \,`
-Wprowadzamy nową macierz
+Zauważmy od razu, że :math:`\,\boldsymbol{D}\,` jest (zredukowaną schodkową) 
+macierzą układu, otrzymanego z :eq:`13` przez zmianę numeracji niewiadomych: 
+:math:`\ x_2\leftrightarrow x_3.\ \,` Wprowadzamy nową macierz
 
 .. math::
    :label: 17
@@ -387,9 +391,10 @@ Z reguł mnożenia macierzy blokowych wynika, że
 Kolumny macierzy :math:`\,\boldsymbol{Y}\,` są więc rozwiązaniami układu
 o zredukowanej schodkowej macierzy :math:`\,\boldsymbol{D},\,` 
 czyli z przestawionymi niewiadomymi :math:`\ x_2,\,x_3.\ `
-Rozwiązaniami wyjściowego układu :eq:`13` będą kolumny macierzy :math:`\,\boldsymbol{X},\,`
-otrzymanej z :math:`\,\boldsymbol{Y}\,` poprzez przestawienie drugiego i trzeciego wiersza
-(bo w tych macierzach wiersze odnoszą się do kolejnych niewiadomych):
+Rozwiązaniami wyjściowego układu :eq:`13` będą kolumny macierzy 
+:math:`\,\boldsymbol{X},\,` otrzymanej z :math:`\,\boldsymbol{Y}\,` poprzez 
+przestawienie drugiego i trzeciego wiersza (bo w tych macierzach wiersze odnoszą 
+się do kolejnych niewiadomych):
 
 .. math::
    :label: 19
@@ -405,8 +410,8 @@ otrzymanej z :math:`\,\boldsymbol{Y}\,` poprzez przestawienie drugiego i trzecie
 
 Trzeba jeszcze sprawdzić, że kolumny macierzy :math:`\,\boldsymbol{X}\,`
 są liniowo niezależne, czyli że :math:`\,\text{rz}\,\boldsymbol{X} = 3.\,`
-Świadczy o tym niezerowy minor 3. stopnia, utworzony z pierwszych trzech wierszy
-macierzy:
+Świadczy o tym niezerowy minor 3. stopnia, utworzony z pierwszych trzech 
+wierszy macierzy:
 
 .. math::
 
@@ -432,16 +437,17 @@ zgodną z rozwiązaniem :eq:`11` układu niejednorodnego. :math:`\\`
 
 **Zastosowanie algebry komputerowej.**
 
-Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji macierzowych.
+Użyjemy teraz narzędzi systemu Sage do przeprowadzenia 
+opisanych operacji macierzowych.
 
-1. Przekształcenie macierzy :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej 
-   :math:`\,\boldsymbol{C}\,` (wzór :eq:`15`):
+1. Przekształcenie macierzy :math:`\,\boldsymbol{A}\,` do zredukowanej postaci 
+   schodkowej :math:`\,\boldsymbol{C}\,` (wzór :eq:`15`):
 
    .. code-block:: python
 
       sage: A = matrix(QQ,[[1, 3, 0, 2,-1],
-      ...                  [0, 0, 1, 4,-3],
-      ...                  [1, 3, 1, 6,-4]])
+                           [0, 0, 1, 4,-3],
+                           [1, 3, 1, 6,-4]])
 
       sage: C = A.rref(); C
 
@@ -451,7 +457,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
 
 2. | Utworzenie macierzy :math:`\,\boldsymbol{D}\,` poprzez przestawienie
      drugiej i trzeciej kolumny macierzy :math:`\,\boldsymbol{C}\,`
-   | i zaznaczenie struktury blokowej macierzy :math:`\,\boldsymbol{D}\,` (wzór :eq:`16`):
+   | i zaznaczenie struktury blokowej macierzy :math:`\,\boldsymbol{D}\,` 
+     (wzór :eq:`16`):
 
    .. code-block:: python
 
@@ -479,7 +486,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [ 0  1  0]
       [ 0  0  1]
 
-4. Sprawdzenie, że iloczyn macierzy :math:`\,\boldsymbol{D}\ \,\text{i}\ \,\boldsymbol{Y}\,`
+4. Sprawdzenie, że iloczyn macierzy 
+   :math:`\,\boldsymbol{D}\ \,\text{i}\ \,\boldsymbol{Y}\,`
    równa się macierzy zerowej 3. stopnia :math:`\\` (wzór :eq:`18`):
 
    .. code-block:: python
@@ -493,7 +501,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
 
 5. | Utworzenie macierzy :math:`\,\boldsymbol{X}\,` przez przestawienie
      drugiego i trzeciego wiersza macierzy :math:`\,\boldsymbol{Y}\,`
-   | i usunięcie struktury blokowej macierzy :math:`\,\boldsymbol{X}\,` (wzór :eq:`19`):
+   | i usunięcie struktury blokowej macierzy :math:`\,\boldsymbol{X}\,` 
+     (wzór :eq:`19`):
 
    .. code-block:: python
 
@@ -506,7 +515,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [ 0  1  0]
       [ 0  0  1]
 
-6. Sprawdzenie, że otrzymana macierz :math:`\,\boldsymbol{X}\,` spełnia równanie :eq:`14`:
+6. Sprawdzenie, że otrzymana macierz :math:`\,\boldsymbol{X}\,` 
+   spełnia równanie :eq:`14`:
 
    .. code-block:: python
 
@@ -523,21 +533,20 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
    użyte tutaj metody ``with_swapped_columns()`` i ``with_swapped_rows()`` 
    zwracają przekształconą macierz zachowując przy tym niezmieniony oryginał.  
 
-.. Na uwagę zasługuje użycie metod ``with_swapped_columns()`` oraz ``with_swapped_rows()`` 
-   zamiast ``swap_columns()`` oraz ``swap_rows()`` w punktach 2. i :math:`\,` 5. :math:`\ `
-   Rzecz w tym, że ``swap_columns()`` i ``swap_rows()`` wykonują operacje bezpośrednio
-   na oryginalnej macierzy, nie zwracając żadnej wartości (inaczej: zwracając obiekt pusty).
-   Natomiast ``with_swapped_columns()`` i ``with_swapped_rows()``
-   zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
+.. Na uwagę zasługuje użycie metod ``with_swapped_columns()`` oraz ``
+   with_swapped_rows()`` zamiast ``swap_columns()`` oraz ``swap_rows()`` 
+   w punktach 2. i :math:`\,` 5. :math:`\ ` Rzecz w tym, że ``swap_columns()`` 
+   i ``swap_rows()`` wykonują operacje bezpośrednio na oryginalnej macierzy, 
+   nie zwracając żadnej wartości (inaczej: zwracając obiekt pusty).
+   Natomiast ``with_swapped_columns()`` i ``with_swapped_rows()`` zwracają 
+   zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
    zachowując przy tym niezmieniony oryginał. :math:`\\` 
 
 Łącząc wszystkie operacje otrzymamy wynik :eq:`20`:
 
 .. sagecellserver::
 
-   A = matrix(QQ,[[1, 3, 0, 2,-1],
-                  [0, 0, 1, 4,-3],
-                  [1, 3, 1, 6,-4]])
+   A = matrix(QQ,[[1, 3, 0, 2,-1],[0, 0, 1, 4,-3],[1, 3, 1, 6,-4]])
    C = A.rref()
    D = copy(C).with_swapped_columns(1,2)
    D.subdivide(2,2)
@@ -546,23 +555,27 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
    Y = block_matrix([[-F23],[I3]])
    X = Y.with_swapped_rows(1,2)
 
-   cmpnt = '$ %s \\ \\left[\\begin{array}{r} %s \\\ %s \\\ %s \\\ %s \\\ %s \\end{array}\\right]$'
+   cmpnt = '$ %s \\ \\left[\\begin{array}{r}\
+            %s \\\ %s \\\ %s \\\ %s \\\ %s \\end{array}\\right]$'
 
-   html(cmpnt % (' ',  'x_1',  'x_2',  'x_3',  'x_4',  'x_5') + '  $=$  ' +\
-        cmpnt % ('s', X[0,0], X[1,0], X[2,0], X[3,0], X[4,0]) + '  $+$  ' +\
-        cmpnt % ('t', X[0,1], X[1,1], X[2,1], X[3,1], X[4,1]) + '  $+$  ' +\
-        cmpnt % ('u', X[0,2], X[1,2], X[2,2], X[3,2], X[4,2]) + '$\\,,$ ' +\
-        '$\\qquad s,t,u \\in Q.$')
+   pretty_print(html(
+       cmpnt % (' ',  'x_1',  'x_2',  'x_3',  'x_4',  'x_5') + '  $=$  ' +\
+       cmpnt % ('s', X[0,0], X[1,0], X[2,0], X[3,0], X[4,0]) + '  $+$  ' +\
+       cmpnt % ('t', X[0,1], X[1,1], X[2,1], X[3,1], X[4,1]) + '  $+$  ' +\
+       cmpnt % ('u', X[0,2], X[1,2], X[2,2], X[3,2], X[4,2]) + '$\\,,$ ' +\
+       '$\\qquad s,t,u \\in Q.$'))
 
-Trzeba jednak zaznaczyć, że przedstawiony w tej sekcji sposób rozwiązania układu :eq:`13`,
-chociaż pouczający, nie jest metodą uniwersalną: okazał się skuteczny tylko dzięki
-specyficznej budowie macierzy współczynników :math:`\,\boldsymbol{A},\,`
-prowadzącej do postaci blokowej :eq:`16`. Podstawowym postępowaniem jest opisana wcześniej
-metoda bezpośrednia bądź metoda eliminacji. 
+Trzeba jednak zaznaczyć, że przedstawiony w tej sekcji sposób rozwiązania układu 
+:eq:`13`, chociaż pouczający, nie jest metodą uniwersalną: okazał się skuteczny 
+tylko dzięki specyficznej budowie macierzy współczynników 
+:math:`\,\boldsymbol{A},\,` prowadzącej do postaci blokowej :eq:`16`. 
+Podstawowym postępowaniem jest opisana wcześniej metoda bezpośrednia 
+bądź metoda eliminacji. 
 
 | **Ćwiczenie.**
 | Sprawdź odręcznym rachunkiem, 
-  że macierz :math:`\,\boldsymbol{X}\,` dana wzorem :eq:`19` spełnia równanie :eq:`14`.
+  że macierz :math:`\,\boldsymbol{X}\,` dana wzorem :eq:`19` 
+  spełnia równanie :eq:`14`.
 
 
 

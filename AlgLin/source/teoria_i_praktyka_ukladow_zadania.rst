@@ -8,8 +8,8 @@ Układy równań w praktyce
 **Zadanie 1.**
 Używając tylko metod Sage'a dla operacji elementarnych na wierszach:
 ``swap_rows()``, ``rescale_row()``, ``add_multiple_of_row()``, :math:`\,`
-doprowadź macierz :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej. :math:`\,`
-Sprawdź następnie wynik stosując metodę ``rref()``.
+doprowadź macierz :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej. 
+:math:`\,` Sprawdź następnie wynik stosując metodę ``rref()``.
 
 .. Aby wygenerować macierz, naciśnij "Wykonaj";
    aby zmienić rozmiar macierzy, wpisz nową wartość n.
@@ -17,13 +17,17 @@ Sprawdź następnie wynik stosując metodę ``rref()``.
 .. sagecellserver::
 
    n = 4
-   A = random_matrix(QQ, n, algorithm='echelonizable', rank=n, upper_bound=6)
-   table([["A","=",A]])
+
+   A = random_matrix(QQ, n, algorithm='echelonizable',
+                     rank=n, upper_bound=6)
+
+   pretty_print(table([["A","=",A]]))
 
 :math:`\;`
 
 **Zadanie 2.** :math:`\,`
-Dana jest macierz rozszerzona :math:`\,\boldsymbol{B}\,` pewnego układu równań liniowych. :math:`\\`
+Dana jest macierz rozszerzona :math:`\,\boldsymbol{B}\,` 
+pewnego układu równań liniowych. :math:`\\`
 Opierając się na ogólnych twierdzeniach, :math:`\,` jeszcze przed rozwiązaniem:
      
 * | rozstrzygnij, czy układ jest oznaczony, nieoznaczony czy sprzeczny
@@ -43,8 +47,10 @@ Rozwiąż następnie ten układ dwoma sposobami:
 .. sagecellserver::
    
    m = 4; n = 5
+
    B = random_matrix(QQ, m,n+1, algorithm='echelonizable', 
                                 rank=3, upper_bound=6)
-   table([["B","=",B]])
+
+   pretty_print(table([["B","=",B]]))
 
 
