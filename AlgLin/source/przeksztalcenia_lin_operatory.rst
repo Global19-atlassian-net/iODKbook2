@@ -4,16 +4,19 @@ Operatory liniowe
 
 Operatorami liniowymi nazywamy endomorfizmy, 
 czyli przekształcenia liniowe przestrzeni wektorowej w siebie.
-Wszystkie twierdzenia, udowodnione dla homomorfizmów, obowiązują również w zbiorze endomorfizmów.
-Ponieważ jednak mamy do czynienia tylko z jedną przestrzenią i jedną wybraną w niej bazą,
-niektóre oznaczenia można uprościć.
+Wszystkie twierdzenia, udowodnione dla homomorfizmów, 
+obowiązują również w zbiorze endomorfizmów.
+Ponieważ jednak mamy do czynienia tylko z jedną przestrzenią 
+i jedną wybraną w niej bazą, niektóre oznaczenia można uprościć.
 
-Niech :math:`\,F\ ` będzie operatorem liniowym określonym na :math:`\,n`-wymiarowej przestrzeni :math:`\,V\ ` nad :math:`\,K.\ ` 
-Dla macierzy operatora :math:`\,F\ ` w bazie :math:`\ \mathcal{B}=(v_1,v_2,\dots,v_n)\ `
-przestrzeni :math:`\,V\ ` wprowadzamy oznaczenia: 
-:math:`\ M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,f_{ij}\,]_{n\times n}\in M_n(K).\ `
-Jej elementy są określone przez układ równości, które przedstawiają obrazy kolejnych wektorów
-bazy :math:`\ \mathcal{B}\ ` *w tej samej bazie*:
+Niech :math:`\,F\ ` będzie operatorem liniowym określonym na 
+:math:`\,n`-wymiarowej przestrzeni :math:`\,V\ ` nad :math:`\,K.\ ` 
+Dla macierzy operatora :math:`\,F\ ` w bazie 
+:math:`\ \mathcal{B}=(v_1,v_2,\dots,v_n)\ ` przestrzeni :math:`\,V\ ` 
+wprowadzamy oznaczenia: :math:`\ M_{\mathcal{B}}(F)=
+\boldsymbol{F}=[\,f_{ij}\,]_{n\times n}\in M_n(K).\ `
+Jej elementy są określone przez układ równości, które przedstawiają obrazy 
+kolejnych wektorów bazy :math:`\ \mathcal{B}\ ` *w tej samej bazie*:
 
 .. math::
    
@@ -24,8 +27,8 @@ bazy :math:`\ \mathcal{B}\ ` *w tej samej bazie*:
    Fv_n\ =\ f_{1n}\,v_1\,+\ f_{2n}\,v_2\,+\ \dots\ +\ f_{nn}\,v_n
    \end{array}
    
-czyli, w zapisie skróconym: 
-:math:`\displaystyle\quad Fv_j\;=\;\sum_{i\,=\,1}^n\ f_{ij}\:v_i\,,\quad j=1,2,\dots,n.`
+czyli, w zapisie skróconym: :math:`\displaystyle\quad Fv_j\;=
+\;\sum_{i\,=\,1}^n\ f_{ij}\:v_i\,,\quad j=1,2,\dots,n.`
 
 Stosując kolumnowy zapis macierzy, otrzymujemy:
 
@@ -47,23 +50,25 @@ Twierdzenie 10. można teraz zapisać następująco
    I_{\mathcal{B}}(v')\ =\ M_{\mathcal{B}}(F)\,\cdot\,I_{\mathcal{B}}(v)\,,
    \qquad v,v'\in V.
 
-W zbiorze :math:`\ \text{End}(V)\ ` operatorów liniowych na przestrzeni :math:`\,V\ `
-zdefiniowane są działania dodawania, mnożenia przez liczby z :math:`\,K\ ` i składania
-(przy tych działaniach :math:`\,\text{End}(V)\,` jest algebrą nad ciałem :math:`\,K`). :math:`\,`
+W zbiorze :math:`\ \text{End}(V)\ ` operatorów liniowych na przestrzeni 
+:math:`\,V\ ` zdefiniowane są działania dodawania, mnożenia przez liczby 
+z :math:`\,K\ ` i składania (przy tych działaniach :math:`\,\text{End}(V)\,` 
+jest algebrą nad ciałem :math:`\,K`). :math:`\,`
 Zajmiemy się macierzą złożenia dwóch operatorów liniowych.
 
 .. admonition:: Twierdzenie 12. :math:`\\`
    
-   Niech :math:`\,F,\,G\in\text{End}(V),\ ` gdzie :math:`\,V\,` jest skończenie wymiarową
-   przestrzenią wektorową z bazą :math:`\,\mathcal{B}.\ `
+   Niech :math:`\,F,\,G\in\text{End}(V),\ ` gdzie :math:`\,V\,` jest skończenie 
+   wymiarową przestrzenią wektorową z bazą :math:`\,\mathcal{B}.\ `
    Wtedy macierz :math:`\,` (w bazie :math:`\,\mathcal{B}`) :math:`\,`
-   złożenia operatorów :math:`\,F\ \,\text{i}\ \ G\ ` równa się iloczynowi ich macierzy
-   w tej bazie:
+   złożenia operatorów :math:`\,F\ \,\text{i}\ \ G\ ` równa się iloczynowi 
+   ich macierzy w tej bazie:
    
    .. math::
       :label: multi
       
-      M_{\mathcal{B}}(F\circ G)\ =\ M_{\mathcal{B}}(F)\,\cdot\,M_{\mathcal{B}}(G)\,.
+      M_{\mathcal{B}}(F\circ G)\ =
+      \ M_{\mathcal{B}}(F)\,\cdot\,M_{\mathcal{B}}(G)\,.
 
 **Dowód.** :math:`\,` 
 
@@ -81,10 +86,12 @@ Przyjmujemy oznaczenia:
    
    M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,f_{ij}\,]_{n\times n}\,,\quad
    M_{\mathcal{B}}(G)=\boldsymbol{G}=[\,g_{ij}\,]_{n\times n}\,,\quad   
-   M_{\mathcal{B}}(F\circ G)=\boldsymbol{H}=[\,h_{ij}\,]_{n\times n}\ \ \in\ M_n(K)\,.
+   M_{\mathcal{B}}(F\circ G)=\boldsymbol{H}=
+   [\,h_{ij}\,]_{n\times n}\ \ \in\ M_n(K)\,.
 
-Obraz :math:`\,j`-tego wektora bazy :math:`\,\mathcal{B}\ ` przy odwzorowaniu :math:`\,F\circ G\ `
-można na dwa sposoby przedstawić w postaci kombinacji liniowej wektorów bazy :math:`\,\mathcal{B}:`
+Obraz :math:`\,j`-tego wektora bazy :math:`\,\mathcal{B}\ ` przy odwzorowaniu 
+:math:`\,F\circ G\ ` można na dwa sposoby przedstawić w postaci kombinacji 
+liniowej wektorów bazy :math:`\,\mathcal{B}:`
 
 .. math::
    
@@ -95,9 +102,9 @@ można na dwa sposoby przedstawić w postaci kombinacji liniowej wektorów bazy 
    \ \,=\ \,F\,\left(\ \sum_{k\,=\,1}^n\ g_{kj}\:v_k\right)
    \ \ =\ \ \sum_{k\,=\,1}^n\ g_{kj}\:F(v_k)\ \ =
    
-   \ \ =\ \ \sum_{k\,=\,1}^n\ g_{kj} \left(\ \sum_{i\,=\,1}^n\ f_{ik}\:v_i\right)
-   \ \ =\ \ \sum_{i\,=\,1}^n\,\left(\ \sum_{k\,=\,1}^n\ f_{ik}\:g_{kj}\right)\,v_i\,,
-   \qquad j=1,2,\dots,n.
+   \ \ =\ \ \sum_{k\,=\,1}^n\ g_{kj} \left(\ \sum_{i\,=
+   \,1}^n\ f_{ik}\:v_i\right) \ \ =\ \ \sum_{i\,=\,1}^n\,\left(\ \sum_{k\,=
+   \,1}^n\ f_{ik}\:g_{kj}\right)\,v_i\,,\qquad j=1,2,\dots,n.
 
 Z jednoznaczności przedstawienia wektora w bazie wynika, że
 
@@ -106,11 +113,12 @@ Z jednoznaczności przedstawienia wektora w bazie wynika, że
    h_{ij}\ \,=\ \ \sum_{k\,=\,1}^n\ f_{ik}\:g_{kj}\,,\qquad i,j=1,2,\dots,n,
 
 co oznacza, że :math:`\quad\boldsymbol{H}=\boldsymbol{F}\boldsymbol{G},\quad`
-czyli :math:`\quad M_{\mathcal{B}}(F\circ G)\,=\,M_{\mathcal{B}}(F)\cdot M_{\mathcal{B}}(G)\,.`
+czyli :math:`\quad M_{\mathcal{B}}(F\circ G)\,=
+\,M_{\mathcal{B}}(F)\cdot M_{\mathcal{B}}(G)\,.`
 
 Przyporządkowanie (przy wybranej bazie przestrzeni) operatorom liniowym macierzy
-jest więc nie tylko addytywne i jednorodne (patrz dowód Twierdzenia 11.), ale również
-multiplikatywne w sensie :eq:`multi`. Pozwala to sformułować
+jest więc nie tylko addytywne i jednorodne (patrz dowód Twierdzenia 11.), 
+ale również multiplikatywne w sensie :eq:`multi`. Pozwala to sformułować
 
 .. admonition:: Wniosek. :math:`\\`
 
@@ -132,13 +140,14 @@ multiplikatywne w sensie :eq:`multi`. Pozwala to sformułować
 Obowiązująca definicja mnożenia macierzowego została przyjęta m.in. dlatego,
 że przy niej odwzorowanie :math:`\,M_{\mathcal{B}}\,` jest multiplikatywne:
 iloczynowi (tzn. złożeniu) operatorów odpowiada iloczyn ich macierzy.
-Innym uzasadnieniem takiej definicji jest to, że wyznacznik iloczynu 
-dwóch macierzy kwadratowych tego samego stopnia równa się iloczynowi ich wyznaczników.
+Innym uzasadnieniem takiej definicji jest to, że wyznacznik iloczynu dwóch 
+macierzy kwadratowych tego samego stopnia równa się iloczynowi ich wyznaczników.
 
 **Przykład.**
 
-Omówimy macierzową reprezentację operatora liniowego :math:`\,F\,` określonego w trójwymiarowej
-rzeczywistej przestrzeni :math:`\,V\,` wektorów geometrycznych wzorem
+Omówimy macierzową reprezentację operatora liniowego :math:`\,F\,` 
+określonego w trójwymiarowej rzeczywistej przestrzeni :math:`\,V\,` 
+wektorów geometrycznych wzorem
 
 .. math::
    
@@ -147,10 +156,12 @@ rzeczywistej przestrzeni :math:`\,V\,` wektorów geometrycznych wzorem
 gdzie :math:`\,\vec{a}\,` jest ustalonym wektorem. 
 Liniowość :math:`\,F\,` wynika z własności iloczynu wektorowego.
 
-Jako bazę przestrzeni :math:`\,V\,` wybieramy prawoskrętną trójkę wzajemnie prostopadłych wektorów jednostkowych :math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3).\ ` Niech 
-:math:`\ \,\vec{a}=a_1\,\vec{e}_1+a_2\,\vec{e}_2+a_3\,\vec{e}_3,\ \,
-\vec{r}=x_1\,\vec{e}_1+x_2\,\vec{e}_2+x_3\,\vec{e}_3.\ `
-Korzystając z przedstawienia iloczynu wektorowego w postaci wyznacznika, otrzymujemy
+Jako bazę przestrzeni :math:`\,V\,` wybieramy prawoskrętną trójkę wzajemnie 
+prostopadłych wektorów jednostkowych 
+:math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3).\ ` 
+Niech :math:`\ \,\vec{a}=a_1\,\vec{e}_1+a_2\,\vec{e}_2+a_3\,\vec{e}_3,\ \,
+\vec{r}=x_1\,\vec{e}_1+x_2\,\vec{e}_2+x_3\,\vec{e}_3.\ ` Korzystając z 
+przedstawienia iloczynu wektorowego w postaci wyznacznika, otrzymujemy
 
 .. math::
    :label: prod_det
@@ -196,11 +207,12 @@ Stąd szukana macierz:
 0 & -\ a_3 & a_2 \\ a_3 & 0 & -\ a_1 \\ -\ a_2 & a_1 & 0
 \end{array}\right]\,.`
 
-(Zauważmy na marginesie, że macierz :math:`\ M_{\mathcal{E}}(F)\equiv\boldsymbol{F}\,`
+(Zauważmy na marginesie, że macierz 
+:math:`\ M_{\mathcal{E}}(F)\equiv\boldsymbol{F}\,` 
 jest antysymetryczna: :math:`\ \boldsymbol{F}^{\,T}=-\,\boldsymbol{F}.`)
 
-Oznaczając 
-:math:`\ \,F(\vec{r})\,=\,\vec{r}\;'\,=\ x_1'\;\vec{e}_1+\,x_2'\;\vec{e}_2+\,x_3'\;\vec{e}_3\,,\ \,` 
+Oznaczając :math:`\ \,F(\vec{r})\,=\,\vec{r}\;'\,=
+\ x_1'\;\vec{e}_1+\,x_2'\;\vec{e}_2+\,x_3'\;\vec{e}_3\,,\ \,` 
 mamy z równania :eq:`prod_det` :
 
 .. math::
@@ -221,35 +233,7 @@ mamy z równania :eq:`prod_det` :
    \left[\begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right]\,.
 
 Ostatnia równość stwierdza, :math:`\,` zgodnie z :eq:`fund_end`, :math:`\,` że 
-:math:`\ \ I_{\mathcal{E}}(\vec{r}\;')\,=\,M_{\mathcal{E}}(F)\cdot I_{\mathcal{E}}(\vec{r})\,.`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+:math:`\ \ I_{\mathcal{E}}(\vec{r}\;')\,=
+\,M_{\mathcal{E}}(F)\cdot I_{\mathcal{E}}(\vec{r})\,.`
 
 

@@ -14,10 +14,12 @@ Rozważmy odwzorowanie :math:`\ F:\,R^3\rightarrow R^2\ ` zadane wzorem
    :label: ex_0
    
    F\left[\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right]\ :\,=\ 
-   \left[\begin{array}{c} 2\,a_1+\,a_2-\,a_3 \\ 4\,a_1-\,2\,a_2+\,4\,a_3 \end{array}\right]\,.
+   \left[\begin{array}{c} 
+    2\,a_1+\,a_2-\,a_3 \\ 4\,a_1-\,2\,a_2+\,4\,a_3 
+   \end{array}\right]\,.
 
-O tym, że :math:`\,F\,` jest przekształceniem liniowym, można się przekonać zapisując prawą stronę
-równania :eq:`ex_0` w postaci iloczynu macierzowego:
+O tym, że :math:`\,F\,` jest przekształceniem liniowym, można się przekonać 
+zapisując prawą stronę równania :eq:`ex_0` w postaci iloczynu macierzowego:
 
 .. math::
    
@@ -26,10 +28,11 @@ równania :eq:`ex_0` w postaci iloczynu macierzowego:
                             4 & -2 &  4 \end{array}\right]
    \left[\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right]\,.
 
-Teraz addytywność i jednorodność odwzorowania :math:`\,F\,` wynika z odpowiednich własności działań na macierzach.
+Teraz addytywność i jednorodność odwzorowania :math:`\,F\,` 
+wynika z odpowiednich własności działań na macierzach.
 
-Tak więc w naturalny sposób przypisaliśmy przekształceniu :math:`\,F\in\text{Hom}(R^3,R^2)\ `
-macierz
+Tak więc w naturalny sposób przypisaliśmy przekształceniu 
+:math:`\,F\in\text{Hom}(R^3,R^2)\ ` macierz
 
 .. math::
    
@@ -38,11 +41,14 @@ macierz
                             4 & -2 &  4 \end{array}\right]
    \in M_{2\times 3}(R)\,,
 
-przy pomocy której zadanie wyznaczenia obrazu wektora :math:`\,\boldsymbol{x}\in R^3\ ` przy przekształceniu :math:`\,F\,` sprowadza się do wykonania mnożenia macierzowego:
+przy pomocy której zadanie wyznaczenia obrazu wektora 
+:math:`\,\boldsymbol{x}\in R^3\ ` przy przekształceniu :math:`\,F\,` 
+sprowadza się do wykonania mnożenia macierzowego:
 
 .. math::
    
-   F(\boldsymbol{x})\ =\ M(F)\cdot \boldsymbol{x}\,,\qquad \boldsymbol{x}\in R^3\,.
+   F(\boldsymbol{x})\ =
+   \ M(F)\cdot \boldsymbol{x}\,,\qquad \boldsymbol{x}\in R^3\,.
 
 Niech :math:`\ \boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\boldsymbol{e}_3\ ` 
 będą wektorami bazy kanonicznej przestrzeni :math:`\,R^3.\ `
@@ -80,55 +86,60 @@ kolumny macierzy :math:`\ M(F)\ ` są obrazami odpowiednich wektorów
 bazy kanonicznej przestrzeni :math:`\ R^3:\ \ M(F)\ =\ 
 [\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,F\boldsymbol{e}_3\,]\,.`
 
-.. Uogólnienie tego przykładu opiera się na stwierdzeniu, że każde przekształcenie liniowe 
-   przestrzeni :math:`\,K^n\ ` w przestrzeń :math:`\,K^m\ ` ma postać :eq:`ex_0`,
-   to znaczy współrzędne obrazu są jednorodnymi liniowymi funkcjami współrzędnych argumentu.
+.. Uogólnienie tego przykładu opiera się na stwierdzeniu, że każde 
+   przekształcenie liniowe przestrzeni :math:`\,K^n\ ` w przestrzeń 
+   :math:`\,K^m\ ` ma postać :eq:`ex_0`, to znaczy współrzędne obrazu są 
+   jednorodnymi liniowymi funkcjami współrzędnych argumentu.
 
-Ogólnie, przekształceniu liniowemu :math:`\,F\in\text{Hom}(K^n,K^m)\ ` odpowiada macierz,
-której :math:`\,j`-ta kolumna jest obrazem :math:`\,j`-tego wektora bazy kanonicznej
-przestrzeni :math:`\ K^n\,,\ \ j=1,2,\dots,n.\ `
+Ogólnie, przekształceniu liniowemu :math:`\,F\in\text{Hom}(K^n,K^m)\ ` 
+odpowiada macierz, której :math:`\,j`-ta kolumna jest obrazem :math:`\,j`-tego 
+wektora bazy kanonicznej przestrzeni :math:`\ K^n\,,\ \ j=1,2,\dots,n.\ `
 
-Określone w ten sposób odwzorowanie :math:`\,M\,` przestrzeni :math:`\ \text{Hom}(K^n,K^m)\ `
-przekształceń liniowych w przestrzeń :math:`\ M_{m\times n}(K)\ ` macierzy prostokątnych 
-można zapisać następująco:
+Określone w ten sposób odwzorowanie :math:`\,M\,` przestrzeni 
+:math:`\ \text{Hom}(K^n,K^m)\ ` przekształceń liniowych w przestrzeń 
+:math:`\ M_{m\times n}(K)\ ` macierzy prostokątnych można zapisać następująco:
 
 .. math::
    :label: intro
    
-   M:\quad \text{Hom}(K^n,K^m)\,\ni\,F
-   \ \ \rightarrow\ \ 
-   M(F)\,:\,=\,[\,F\boldsymbol{e}_1\,|\,\dots\,|\,F\boldsymbol{e}_n\,]\,\in\,M_{m\times n}(K)\,,
+   M:\quad \text{Hom}(K^n,K^m)\,\ni\,F\ \ \rightarrow\ \ M(F)\,:\,=
+   \,[\,F\boldsymbol{e}_1\,|\,\dots\,|\,F\boldsymbol{e}_n\,]\,
+   \in\,M_{m\times n}(K)\,,
 
 gdzie :math:`\ \mathcal{E}=(\boldsymbol{e}_1,\,\dots,\,\boldsymbol{e}_n)\ \,` 
 jest bazą kanoniczną przestrzeni :math:`\,K^n.\ ` Wtedy obraz dowolnego wektora 
-:math:`\,\boldsymbol{x}\in K^n\ ` otrzymuje się mnożąc ten wektor (z lewej strony) przez macierz :math:`\,M(F):`
+:math:`\,\boldsymbol{x}\in K^n\ ` otrzymuje się mnożąc ten wektor 
+(z lewej strony) przez macierz :math:`\,M(F):`
 
 .. math::
    
    \boldsymbol{y}\,=\,F(\boldsymbol{x})\quad\Rightarrow\quad \boldsymbol{y}\ =\ 
-   M(F)\,\cdot\,\boldsymbol{x}\,,\qquad \boldsymbol{x}\in K^n\,,\ \ \boldsymbol{y}\in K^m\,.
+   M(F)\,\cdot\,\boldsymbol{x}\,,\qquad 
+   \boldsymbol{x}\in K^n\,,\ \ \boldsymbol{y}\in K^m\,.
 
-.. W następnym uogólnieniu pokażemy, :math:`\,` jak przekształceniu liniowemu *dowolnych* 
-   skończenie wymiarowych przestrzeni nad ciałem :math:`\,K,\ ` w których wybrano bazy, można
-   przyporządkować macierz o elementach z :math:`\,K.`
+.. W następnym uogólnieniu pokażemy, :math:`\,` jak przekształceniu liniowemu 
+   *dowolnych* skończenie wymiarowych przestrzeni nad ciałem :math:`\,K,\ ` 
+   w których wybrano bazy, można przyporządkować macierz 
+   o elementach z :math:`\,K.`
 
 W następnym uogólnieniu zdefiniujemy macierz przekształcenia liniowego
 :math:`\ F:V\rightarrow W,\ ` gdzie :math:`\ V\ ` i :math:`\ W\ ` 
-są :math:`\,` *dowolnymi* :math:`\,` skończenie wymiarowymi przestrzeniami wektorowymi 
-nad ciałem :math:`\ K\,,\ ` w każdej z których wybrano bazę.
+są :math:`\,` *dowolnymi* :math:`\,` skończenie wymiarowymi przestrzeniami 
+wektorowymi nad ciałem :math:`\ K\,,\ ` w każdej z których wybrano bazę.
 
 Definicja macierzy przekształcenia liniowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Niech będą dane dwie skończenie wymiarowe przestrzenie wektorowe nad ciałem :math:`\,K:\ \\`
-:math:`n`-wymiarowa przestrzeń :math:`\,V\,` 
+Niech będą dane dwie skończenie wymiarowe przestrzenie wektorowe nad ciałem 
+:math:`\,K:\ \\` :math:`n`-wymiarowa przestrzeń :math:`\,V\,` 
 z bazą :math:`\ \mathcal{B}=(v_1,\,v_2,\,\dots,\,v_n)\,,\ \\`
 :math:`m`-wymiarowa przestrzeń :math:`\,W\,` 
 z bazą :math:`\ \mathcal{C}=(w_1,\,w_2,\,\dots,\,w_m)\ \\`
 oraz przekształcenie liniowe :math:`\,F\in\text{Hom}(V,W)\,.`
 
-Obrazy wektorów bazy :math:`\ \mathcal{B}\ ` należą do przestrzeni :math:`\,W,\ `
-można je więc zapisać w postaci kombinacji liniowych wektorów bazy :math:`\ \mathcal{C}:`
+Obrazy wektorów bazy :math:`\ \mathcal{B}\ ` należą do przestrzeni 
+:math:`\,W,\ ` można je więc zapisać w postaci kombinacji liniowych 
+wektorów bazy :math:`\ \mathcal{C}:`
 
 .. .. math::
    :label: exps
@@ -151,9 +162,11 @@ można je więc zapisać w postaci kombinacji liniowych wektorów bazy :math:`\ 
    \end{array}
 
 
-Otrzymana w ten sposób macierz :math:`\ \boldsymbol{F}=[\,f_{ij}\,]_{m\times n}(K)\ `
-jest :math:`\,` *z definicji* :math:`\,` macierzą :math:`\,M_{\mathcal{B}\mathcal{C}}(F)\ `
-przekształcenia liniowego :math:`\ F\ ` w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \mathcal{C}:`
+Otrzymana w ten sposób macierz 
+:math:`\ \boldsymbol{F}=[\,f_{ij}\,]_{m\times n}(K)\ ` jest :math:`\,` 
+*z definicji* :math:`\,` macierzą :math:`\,M_{\mathcal{B}\mathcal{C}}(F)\ `
+przekształcenia liniowego :math:`\ F\ ` w bazach 
+:math:`\ \mathcal{B}\ \,\text{i}\ \ \mathcal{C}:`
 
 .. .. math::
    
@@ -179,7 +192,6 @@ przekształcenia liniowego :math:`\ F\ ` w bazach :math:`\ \mathcal{B}\ \,\text{
    \end{array}
    \right]\,.
 
-
 Zauważmy przy tym, że elementy :math:`\ f_{1j},\,f_{2j},\,\dots,\,f_{mj}\,,\ `
 tworzące :math:`\,j`-tą kolumnę macierzy, :math:`\\` są współrzędnymi wektora
 :math:`\ Fv_j\ ` w bazie :math:`\ \mathcal{C},\ \ j=1,2,\dots,n.\ `
@@ -188,19 +200,21 @@ tworzące :math:`\,j`-tą kolumnę macierzy, :math:`\\` są współrzędnymi wek
 
 .. admonition:: Definicja. :math:`\\`
    
-   Niech :math:`\ \,V\ \,\text{i}\ \ W\ \,` będą dwiema skończenie wymiarowymi przestrzeniami
-   wektorowymi nad ciałem :math:`\,K,\ ` przy czym układ 
-   :math:`\ \mathcal{B}=(v_1,\,v_2,\,\dots,\,v_n)\ ` jest bazą przestrzeni :math:`\ \,V,\ `
-   a układ :math:`\ \mathcal{C}=(w_1,\,w_2,\,\dots,\,w_m)\,` :math:`\,` - :math:`\,`
-   bazą przestrzeni :math:`\ W.\ \,` 
-   Wtedy :math:`\ j`-ta kolumna macierzy :math:`\ M_{\mathcal{B}\mathcal{C}}(F)\ ` 
-   przekształcenia :math:`\,F\in\text{Hom}(V,W)\ ` w bazach :math:`\ \mathcal{B}\ `
-   i :math:`\ \mathcal{C}\ ` jest kolumną współrzędnych :math:`\,` (w bazie :math:`\ \mathcal{C}`)
-   :math:`\,` obrazu :math:`\,` - :math:`\,` przy odwzorowaniu :math:`\,F\ ` :math:`\,` - :math:`\,`
+   Niech :math:`\ \,V\ \,\text{i}\ \ W\ \,` będą dwiema skończenie wymiarowymi 
+   przestrzeniami wektorowymi nad ciałem :math:`\,K,\ ` przy czym układ 
+   :math:`\ \mathcal{B}=(v_1,\,v_2,\,\dots,\,v_n)\ ` jest bazą przestrzeni 
+   :math:`\ \,V,\ ` a układ :math:`\ \mathcal{C}=(w_1,\,w_2,\,\dots,\,w_m)\,` 
+   :math:`\,` - :math:`\,` bazą przestrzeni :math:`\ W.\ \,` Wtedy 
+   :math:`\ j`-ta kolumna macierzy :math:`\ M_{\mathcal{B}\mathcal{C}}(F)\ ` 
+   przekształcenia :math:`\,F\in\text{Hom}(V,W)\ ` w bazach 
+   :math:`\ \mathcal{B}\ ` i :math:`\ \mathcal{C}\ ` jest kolumną współrzędnych 
+   :math:`\,` (w bazie :math:`\ \mathcal{C}`) :math:`\,` obrazu :math:`\,` - 
+   :math:`\,` przy odwzorowaniu :math:`\,F\ ` :math:`\,` - :math:`\,`
    :math:`\ j`-tego wektora bazy :math:`\ \mathcal{B}\quad (j=1,2,\dots,n).`
 
-   A zatem :math:`\ \,M_{\mathcal{B}\mathcal{C}}(F)\ =\ \,[\,f_{ij}\,]_{m\times n}\,,\ \,`
-   gdzie elementy :math:`\ f_{ij}\ ` określone są przez związki
+   A zatem :math:`\ \,M_{\mathcal{B}\mathcal{C}}(F)\ =
+   \ \,[\,f_{ij}\,]_{m\times n}\,,\ \,` gdzie elementy :math:`\ f_{ij}\ ` 
+   określone są przez związki
    
    .. math::
       
@@ -211,7 +225,8 @@ tworzące :math:`\,j`-tą kolumnę macierzy, :math:`\\` są współrzędnymi wek
 Omówimy operację różniczkowania określoną w zbiorze wielomianów rzeczywistych.
 
 :math:`\,V\ ` jest przestrzenią wektorową wielomianów zmiennej :math:`\,x\ `
-stopnia (nie większego od) :math:`\,n,\ \,` a :math:`\ \,W\ \ ` - :math:`\,` przestrzenią takich wielomianów stopnia (nie większego od) :math:`\ n-1:`
+stopnia (nie większego od) :math:`\,n,\ \,` a :math:`\ \,W\ \ ` - :math:`\,` 
+przestrzenią takich wielomianów stopnia (nie większego od) :math:`\ n-1:`
 
 .. math::
    
@@ -222,31 +237,32 @@ stopnia (nie większego od) :math:`\,n,\ \,` a :math:`\ \,W\ \ ` - :math:`\,` pr
    W\ =\ \{\,b_0\,+\,b_1\,x\,+\,b_2\,x^2\,+\,\ldots\,+\,b_{n-1}\,x^{n-1}:
    \quad b_i\in R\,,\quad i=0,1,\dots,n-1\,\}\,.
 
-:math:`\dim\,V=\,n+1\,,\ \ \mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots,\,x^n)\,;\quad 
-\dim\,W=\,n\,,\ \ \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.`
+:math:`\dim\,V=\,n+1\,,\ \ \mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots,\,x^n)\,;
+\quad\dim\,W=\,n\,,\ \ \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.`
 
 .. \begin{array}{lcl}
-   \dim\,V\,=\,n+1\,, & \qquad & \text{baza:}\quad 
-                                 \mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots,\,x^n)\,, \\
-   \dim\,w\,=\,n\,,   & \qquad & \text{baza:}\quad 
-                                 \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.
+    \dim\,V\,=\,n+1\,, & \qquad & \text{baza:}\quad 
+    \mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots,\,x^n)\,, \\
+    \dim\,w\,=\,n\,, & \qquad & \text{baza:}\quad 
+    \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.
    \end{array}
 
-Operacja różniczkowania :math:`\ D\equiv {d\over dx}\ ` przekształca liniowo przestrzeń :math:`\,V\ `
-w przestrzeń :math:`\,W.\ ` Aby wyznaczyć macierz tej operacji w bazach 
-:math:`\,\mathcal{B}\ \ \text{i}\ \ \mathcal{C},\ ` zapiszemy rozkłady :eq:`exps` obrazów 
-kolejnych wektorów bazy :math:`\,\mathcal{B}\ \ \text{w bazie}\ \ \mathcal{C}:`
+Operacja różniczkowania :math:`\ D\equiv {d\over dx}\ ` przekształca liniowo 
+przestrzeń :math:`\,V\ ` w przestrzeń :math:`\,W.\ ` Aby wyznaczyć macierz tej 
+operacji w bazach :math:`\,\mathcal{B}\ \ \text{i}\ \ \mathcal{C},\ ` zapiszemy 
+rozkłady :eq:`exps` obrazów kolejnych wektorów bazy 
+:math:`\,\mathcal{B}\ \ \text{w bazie}\ \ \mathcal{C}:`
 
 .. math::
    :nowrap:
    
    \begin{alignat*}{7}
-   D\,1\:\  & {\,} = {\,} & 0          & {\quad} = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\ 
-   D\,x\,\  & {\,} = {\,} & 1          & {\quad} = {\quad} & 1\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
-   D\,x^2 & {\,} = {\,} & 2\,x       & {\quad} = {\quad} & 0\cdot 1 & {\ } + {\ } & 2\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
-   D\,x^3 & {\,} = {\,} & 3\,x^2     & {\quad} = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 3\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
-   \dots  & {\,}   {\,} & \dots      & {\quad}   {\quad} & \dots    & {\ }   {\ } & \dots    & {\ }   {\ } & \dots      & {\ }   {\ } & \dots & {\ }   {\ } & \dots          \\   
-   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad} = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1} 
+   D\,1\:\  & {\,} = {\,} & 0        &   {\quad} = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\ 
+   D\,x\,\  & {\,} = {\,} & 1        &   {\quad} = {\quad} & 1\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
+   D\,x^2 & {\,} = {\,} & 2\,x       & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 2\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
+   D\,x^3 & {\,} = {\,} & 3\,x^2     & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 3\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
+   \dots  & {\,}   {\,} & \dots      & {\quad}   {\quad} & \dots      & {\ }   {\ } & \dots    & {\ }   {\ } & \dots      & {\ }   {\ } & \dots & {\ }   {\ } & \dots          \\   
+   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1} 
    \end{alignat*}
 
 .. math::
@@ -266,16 +282,17 @@ kolejnych wektorów bazy :math:`\,\mathcal{B}\ \ \text{w bazie}\ \ \mathcal{C}:`
 
    \;
 
-Wprowadzimy teraz dalsze oznaczenia, które pozwolą w czytelny sposób zapisać kolumnową postać 
-macierzy :math:`\,M_{\mathcal{B}\mathcal{C}}(F)\,.`
-Z wniosku do Twierdzenia 8. wynika, że :math:`\,n`-wymiarowa przestrzeń :math:`\,V\ `
-jest izomorficzna z przestrzenią :math:`\,K^n,\ \ \text{a}\ \ m`-wymiarowa 
-przestrzeń :math:`\,W\ ` jest izomorficzna z przestrzenią :math:`\ K^m:\quad
-V\,\simeq\,K^n\,,\qquad W\,\simeq\,K^m\,.`
+Wprowadzimy teraz dalsze oznaczenia, które pozwolą w czytelny sposób zapisać 
+kolumnową postać macierzy :math:`\,M_{\mathcal{B}\mathcal{C}}(F)\,.`
+Z wniosku do Twierdzenia 8. wynika, że :math:`\,n`-wymiarowa przestrzeń 
+:math:`\,V\ ` jest izomorficzna z przestrzenią 
+:math:`\,K^n,\ \ \text{a}\ \ m`-wymiarowa przestrzeń :math:`\,W\ ` jest 
+izomorficzna z przestrzenią 
+:math:`\ K^m:\quad V\,\simeq\,K^n\,,\qquad W\,\simeq\,K^m\,.`
 
 .. .. math::
 
-   V\,\simeq\,K^n\,,\qquad W\,\simeq\,K^m\,.
+      V\,\simeq\,K^n\,,\qquad W\,\simeq\,K^m\,.
 
 W przestrzeniach :math:`\,V\ \,\text{i}\ \ W\ ` przyjęliśmy bazy
 
@@ -309,34 +326,39 @@ bazy :math:`\,\mathcal{B}\ ` albo bazy :math:`\ \mathcal{C}):`
    \qquad
    I_{\mathcal{C}}(w_i)\ :\,=\ f_i\,,\quad i=1,2,\dots,m\,,
 
-są izomorfizmami: 
-:math:`\ I_{\mathcal{B}}\in\text{Izo}(V,K^n)\,,\ \,I_{\mathcal{C}}\in\text{Izo}(W,K^m)\,.`
+są izomorfizmami: :math:`\ I_{\mathcal{B}}\in\text{Izo}(V,K^n)\,,
+\ \,I_{\mathcal{C}}\in\text{Izo}(W,K^m)\,.`
 
 .. Odwzorowania :math:`\ I_{\mathcal{B}}\ \ \text{oraz}\ \ I_{\mathcal{C}}\ \,` 
    zostały określone poprzez zadanie obrazów wektorów bazy, odpowiednio 
    bazy :math:`\ \mathcal{B}\ \,` albo bazy :math:`\ \,\mathcal{C}.`
 
-Dla dowolnych wektorów :math:`\displaystyle\quad v\,=\,\sum_{j\,=\,1}^n\ a_j\,v_j\,\in V\,,\quad
+Dla dowolnych wektorów 
+:math:`\displaystyle\quad v\,=\,\sum_{j\,=\,1}^n\ a_j\,v_j\,\in V\,,\quad
 w\,=\,\sum_{i\,=\,1}^m\ b_i\,w_i\,\in W\,:`
 
 .. math::
    
-   I_{\mathcal{B}}(v)\ =\ I_{\mathcal{B}}\,\left(\,\sum_{j\,=\,1}^n\ a_j\,v_j\right)\ =\ 
-   \sum_{j\,=\,1}^n\ a_j\,I_{\mathcal{B}}(v_j)\ =\ 
-   \sum_{j\,=\,1}^n\ a_j\,e_j\ =\ 
-   \left[\begin{array}{c} a_1 \\ a_2 \\ \dots \\ a_n \end{array}\right]\,,
+   I_{\mathcal{B}}(v)\ =
+   \ I_{\mathcal{B}}\,\left(\,\sum_{j\,=\,1}^n\ a_j\,v_j\right)\ =
+   \ \sum_{j\,=\,1}^n\ a_j\,I_{\mathcal{B}}(v_j)\ =
+   \ \sum_{j\,=\,1}^n\ a_j\,e_j\ =
+   \ \left[\begin{array}{c} a_1 \\ a_2 \\ \dots \\ a_n \end{array}\right]\,,
 
-   I_{\mathcal{C}}(w)\ =\ I_{\mathcal{C}}\,\left(\,\sum_{i\,=\,1}^m\ b_i\,w_i\right)\ =\ 
-   \sum_{i\,=\,1}^m\ b_i\,I_{\mathcal{C}}(w_i)\ =\ 
-   \sum_{i\,=\,1}^m\ b_i\,f_i\ =\ 
-   \left[\begin{array}{c} b_1 \\ b_2 \\ \dots \\ b_m \end{array}\right]\,.
+   I_{\mathcal{C}}(w)\ =
+   \ I_{\mathcal{C}}\,\left(\,\sum_{i\,=\,1}^m\ b_i\,w_i\right)\ =
+   \ \sum_{i\,=\,1}^m\ b_i\,I_{\mathcal{C}}(w_i)\ =
+   \ \sum_{i\,=\,1}^m\ b_i\,f_i\ =
+   \ \left[\begin{array}{c} b_1 \\ b_2 \\ \dots \\ b_m \end{array}\right]\,.
 
-Tak więc izomorfizm :math:`\ I_{\mathcal{B}}\ `  przekształca wektor :math:`\,v\in V\ `
-w kolumnę współrzędnych tego wektora w bazie :math:`\ \mathcal{B},\ \,`
-a :math:`\,` izomorfizm :math:`\ \,I_{\mathcal{C}}\ ` przekształca wektor :math:`\,w\in W\ `
-w kolumnę współrzędnych tego wektora w bazie :math:`\ \mathcal{C}.\ `
-Macierz przekształcenia liniowego :math:`\ F\in\text{Hom}(V,W)\ `
-w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma teraz w zapisie kolumnowym postać
+Tak więc izomorfizm :math:`\ I_{\mathcal{B}}\ `  przekształca wektor 
+:math:`\,v\in V\ ` w kolumnę współrzędnych tego wektora w bazie 
+:math:`\ \mathcal{B},\ \,` a :math:`\,` izomorfizm :math:`\ \,I_{\mathcal{C}}\ ` 
+przekształca wektor :math:`\,w\in W\ ` w kolumnę współrzędnych tego wektora 
+w bazie :math:`\ \mathcal{C}.\ ` Macierz przekształcenia liniowego 
+:math:`\ F\in\text{Hom}(V,W)\ ` w bazach 
+:math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` ma teraz w zapisie 
+kolumnowym postać
 
 .. math::
    
@@ -352,28 +374,31 @@ Sens wprowadzenia macierzowej reprezentacji przekształceń liniowych wyjaśnia
 .. admonition:: Twierdzenie 10. :math:`\\`
 
    Niech :math:`\ F\in\text{Hom}(V,W),\ ` gdzie :math:`\,V\ \,\text{i}\ \ W\ `
-   są przestrzeniami wektorowymi nad ciałem :math:`\,K\ ` z bazami :math:`\ \mathcal{B}\ \,`
-   i :math:`\ \mathcal{C}.\ `
+   są przestrzeniami wektorowymi nad ciałem :math:`\,K\ ` z bazami 
+   :math:`\ \mathcal{B}\ \,` i :math:`\ \mathcal{C}.\ `
    Jeżeli wektor :math:`\,w\in W\ ` jest obrazem wektora :math:`\,v\in V\ `
-   przy przekształceniu :math:`\,F,\ \,` to kolumna współrzędnych (w bazie :math:`\,\mathcal{C}`)
-   wektora :math:`\ w\ ` równa się iloczynowi macierzy przekształcenia :math:`\,F\ `
-   w bazach :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` 
-   przez kolumnę współrzędnych (w bazie :math:`\,\mathcal{B}`) :math:`\,` wektora :math:`\,v:`
+   przy przekształceniu :math:`\,F,\ \,` to kolumna współrzędnych 
+   (w bazie :math:`\,\mathcal{C}`) wektora :math:`\ w\ ` równa się iloczynowi 
+   macierzy przekształcenia :math:`\,F\ ` w bazach 
+   :math:`\ \mathcal{B}\ \,\text{i}\ \ \,\mathcal{C}\ ` przez kolumnę 
+   współrzędnych (w bazie :math:`\,\mathcal{B}`) :math:`\,` wektora :math:`\,v:`
    
    .. math::
       :label: fund
       
-      w\,=\,F(v)\qquad\Rightarrow\qquad   
-      I_{\mathcal{C}}(w)\ =\ M_{\mathcal{B}\mathcal{C}}(F)\,\cdot\,I_{\mathcal{B}}(v)\,.
+      w\,=\,F(v)\qquad\Rightarrow\qquad I_{\mathcal{C}}(w)\ =
+      \ M_{\mathcal{B}\mathcal{C}}(F)\,\cdot\,I_{\mathcal{B}}(v)\,.
 
-W ten sposób abstrakcyjne zagadnienie wyznaczenia obrazu wektora :math:`\,v\ `
-przy przekształceniu :math:`\,F\ ` jest sprowadzone do konkretnego rachunku na macierzach.
+W ten sposób abstrakcyjne zagadnienie wyznaczenia obrazu wektora 
+:math:`\,v\ ` przy przekształceniu :math:`\,F\ ` jest sprowadzone 
+do konkretnego rachunku na macierzach.
 
 **Dowód.** :math:`\,` Przyjmujemy dotychczasowe oznaczenia:
 
 .. math::
    
-   \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\,,\qquad\mathcal{C}\,=\,(w_1,\,w_2,\,\dots,\,w_m)\,,
+   \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\,,\qquad
+   \mathcal{C}\,=\,(w_1,\,w_2,\,\dots,\,w_m)\,,
    
    v\,=\,\sum_{j\,=\,1}^n\ a_j\,v_j\,,\quad
    w\,=\,\sum_{i\,=\,1}^m\ b_i\,w_i\,,\quad
@@ -387,7 +412,8 @@ przy przekształceniu :math:`\,F\ ` jest sprowadzone do konkretnego rachunku na 
    \sum_{j\,=\,1}^n\ a_j\,\left(\,\sum_{i\,=\,1}^m\ f_{ij}\ w_i\right)\ \ =\ \ 
    \sum_{i\,=\,1}^m\,\left(\,\sum_{j\,=\,1}^n\ f_{ij}\ a_j\right)\ w_i\,.
 
-Z jednoznaczności przedstawienia wektora :math:`\,w\ ` w bazie :math:`\,\mathcal{C}\ ` otrzymujemy
+Z jednoznaczności przedstawienia wektora :math:`\,w\ ` 
+w bazie :math:`\,\mathcal{C}\ ` otrzymujemy
 
 .. math::
    :label: bfa
@@ -411,21 +437,25 @@ Związki :eq:`bfa` przedstawiają równość macierzową :math:`\\`
    \;
 
    \text{czyli}\qquad 
-   I_{\mathcal{C}}(w)\ =\ M_{\mathcal{B}\mathcal{C}}(F)\,\cdot\,I_{\mathcal{B}}(v)\,.
+   I_{\mathcal{C}}(w)\ =
+   \ M_{\mathcal{B}\mathcal{C}}(F)\,\cdot\,I_{\mathcal{B}}(v)\,.
 
 **Przykład.**
 
-Powróćmy do operacji różniczkowania :math:`\ D = {d\over dx}\ \,` jako przekształcenia liniowego 
-przestrzeni :math:`\,V\ ` wielomianów rzeczywistych stopnia :math:`\,n\ ` w przestrzeń :math:`\,W\ `
-wielomianów stopnia :math:`\,n-1.\ ` 
-Macierz tej operacji w naturalnych bazach przestrzeni
+Powróćmy do operacji różniczkowania :math:`\ D = {d\over dx}\ \,` jako 
+przekształcenia liniowego przestrzeni :math:`\,V\ ` wielomianów rzeczywistych 
+stopnia :math:`\,n\ ` w przestrzeń :math:`\,W\ ` wielomianów stopnia 
+:math:`\,n-1.\ ` Macierz tej operacji w naturalnych bazach przestrzeni
 :math:`\ V\ \,\text{i}\ \ W\ ` jest dana przez :eq:`MBC_D`.
 
-Jeżeli :math:`\ v\,=\,a_0\,+\,a_1\,x\,+\,a_2\,x^2\,+\,a_3\,x^3\,+\,\ldots\,+\,a_n\,x^n\,\in V,`
+Jeżeli :math:`\ v\,=
+\,a_0\,+\,a_1\,x\,+\,a_2\,x^2\,+\,a_3\,x^3\,+\,\ldots\,+\,a_n\,x^n\,\in V,`
 
-to :math:`\quad w\,\equiv D(v)\,=\,a_1\,+\,2\,a_2\,x\,+\,3\,a_3\,x^2\ +\ \ldots\ +n\,a_n\,x^{n-1}\,.`
+to :math:`\quad w\,\equiv D(v)\,=
+\,a_1\,+\,2\,a_2\,x\,+\,3\,a_3\,x^2\ +\ \ldots\ +n\,a_n\,x^{n-1}\,.`
 
-Zapisany macierzowo związek pomiędzy współrzędnymi wielomianów :math:`\,v\ \,\text{i}\ \ w:`
+Zapisany macierzowo związek pomiędzy współrzędnymi wielomianów 
+:math:`\,v\ \,\text{i}\ \ w:`
 
 .. math::
    
@@ -449,9 +479,9 @@ jest właśnie relacją :eq:`fund` z Twierdzenia 10.
 
 :math:`\;`
 
-Wyjaśnimy dokładnie charakter związku pomiędzy przekształceniami liniowymi i macierzami.
-W dotychczasowych rozważaniach wystąpiły następujące przestrzenie wektorowe 
-(wszystkie nad tym samym ciałem :math:`\,K`):
+Wyjaśnimy dokładnie charakter związku pomiędzy przekształceniami liniowymi 
+i macierzami. W dotychczasowych rozważaniach wystąpiły następujące przestrzenie 
+wektorowe (wszystkie nad tym samym ciałem :math:`\,K`):
 
 * | :math:`n`-wymiarowa przestrzeń :math:`\,V\,` 
     z bazą :math:`\ \mathcal{B}=(v_1,\,v_2,\,\dots,\,v_n)\,,\ `
@@ -485,8 +515,8 @@ W dotychczasowych rozważaniach wystąpiły następujące przestrzenie wektorowe
 
 :math:`\;`
 
-**Dowód** poprzedzimy przypomnieniem definicji działań na przekształceniach liniowych,
-przy których :math:`\,\text{Hom}(V,W)\,` jest przestrzenią wektorową. 
+**Dowód** poprzedzimy przypomnieniem definicji działań na przekształceniach 
+liniowych, przy których :math:`\,\text{Hom}(V,W)\,` jest przestrzenią wektorową. 
 Jeżeli :math:`\,F_1,F_2,F\in\text{Hom}(V,W),\ a\in K,\,` to 
 
 .. math::
@@ -501,17 +531,18 @@ Aby pokazać, że :math:`\,M_{\mathcal{B}\mathcal{C}}\ ` jest izomorfizmem,
 czyli wzajemnie jednoznacznym homomorfizmem, trzeba udowodnić jego 
 addytywność, jednorodność i bijektywność.
 
-a. Addytywność. :math:`\,`
+a. :math:`\,` Addytywność. :math:`\,`
    
-   Niech :math:`\,F_1,F_2\,\in\,\text{Hom}(V,W).\ ` Wtedy :math:`\,j`-ta kolumna macierzy
-   :math:`\,M_{\mathcal{B}\mathcal{C}}(F_1+F_2)`
+   Niech :math:`\,F_1,F_2\,\in\,\text{Hom}(V,W).\ ` Wtedy :math:`\,j`-ta kolumna 
+   macierzy :math:`\,M_{\mathcal{B}\mathcal{C}}(F_1+F_2)`
    
    .. math::
       
       I_{\mathcal{C}}\,[\,(F_1+F_2)(v_j)\,]\ =\ I_{\mathcal{C}}\,[\,F_1(v_j)+F_2(v_j)\,]\ =\ 
       I_{\mathcal{C}}\,[\,F_1(v_j)\,]+I_{\mathcal{C}}\,[\,F_2(v_j)\,]
 
-   jest sumą :math:`\,j`-tych kolumn macierzy :math:`\ M_{\mathcal{B}\mathcal{C}}(F_1)\ ` 
+   jest sumą :math:`\,j`-tych kolumn macierzy 
+   :math:`\ M_{\mathcal{B}\mathcal{C}}(F_1)\ ` 
    i :math:`\ \,M_{\mathcal{B}\mathcal{C}}(F_2)\,,\ \ j=1,2,\dots,n.\ \,` Stąd
    
    .. math::
@@ -519,14 +550,15 @@ a. Addytywność. :math:`\,`
       M_{\mathcal{B}\mathcal{C}}(F_1+F_2)\ =\ M_{\mathcal{B}\mathcal{C}}(F_1)
                                          \,+\,M_{\mathcal{B}\mathcal{C}}(F_2)\,.
 
-b. Jednorodność.
+b. :math:`\,` Jednorodność.
    
-   Niech :math:`\,F\in\text{Hom}(V,W),\ \ a\in K.\ \,` Wtedy :math:`\,j`-ta kolumna macierzy
-   :math:`\,M_{\mathcal{B}\mathcal{C}}(aF)`
+   Niech :math:`\,F\in\text{Hom}(V,W),\ \ a\in K.\ \,` Wtedy :math:`\,j`-ta 
+   kolumna macierzy :math:`\,M_{\mathcal{B}\mathcal{C}}(aF)`
    
    .. math::
 
-      I_{\mathcal{C}}\,[\,(aF)(v_j)\,]\ =\ I_{\mathcal{C}}\,[\,a\cdot F(v_j)\,]\ =\ 
+      I_{\mathcal{C}}\,[\,(aF)(v_j)\,]\ =
+      \ I_{\mathcal{C}}\,[\,a\cdot F(v_j)\,]\ =\ 
       a\cdot I_{\mathcal{C}}\,[\,F(v_j)\,]
       
    jest pomnożoną przez :math:`\,a\ \ j`-tą kolumną macierzy 
@@ -536,14 +568,16 @@ b. Jednorodność.
       
       M_{\mathcal{B}\mathcal{C}}(a\,F)\ =\ a\,M_{\mathcal{B}\mathcal{C}}(F)\,.
 
-c. Bijektywność.
+c. :math:`\,` Bijektywność.
    
-   Trzeba pokazać, że każda macierz :math:`\,\boldsymbol{F}\in M_{m\times n}(K)\ ` odpowiada 
-   dokładnie jednemu przekształceniu :math:`\,F\in\text{Hom}(V,W).\ \,`
-   Istotnie, kolumny macierzy :math:`\boldsymbol{F}\,` wyznaczają (poprzez współrzędne w bazie
-   :math:`\ \mathcal{C}`) :math:`\,` obrazy :math:`\ Fv_j\ ` wektorów :math:`\,v_j\ ` bazy 
-   :math:`\ \mathcal{B},\ ` przez co (patrz wniosek do Twierdzenia 5.) :math:`\,`
-   przekształcenie :math:`\ F\ ` jest jednoznacznie określone.
+   Trzeba pokazać, że każda macierz 
+   :math:`\,\boldsymbol{F}\in M_{m\times n}(K)\ ` odpowiada dokładnie jednemu 
+   przekształceniu :math:`\,F\in\text{Hom}(V,W).\ \,` Istotnie, kolumny macierzy 
+   :math:`\boldsymbol{F}\,` wyznaczają (poprzez współrzędne w bazie
+   :math:`\ \mathcal{C}`) :math:`\,` obrazy :math:`\ Fv_j\ ` wektorów 
+   :math:`\,v_j\ ` bazy :math:`\ \mathcal{B},\ ` przez co (patrz wniosek do 
+   Twierdzenia 5.) :math:`\,` przekształcenie :math:`\ F\ ` jest jednoznacznie 
+   określone.
 
 :math:`\;`
 
@@ -551,8 +585,8 @@ Na podstawie Twierdzenia 8. można teraz zapisać
 
 .. admonition:: Wniosek.
    
-   Jeżeli :math:`\,V\ \,\text{i}\ \ W\ ` są skończenie wymiarowymi przestrzeniami 
-   nad ciałem :math:`\,K,\ \,` to
+   Jeżeli :math:`\,V\ \,\text{i}\ \ W\ ` są skończenie wymiarowymi 
+   przestrzeniami nad ciałem :math:`\,K,\ \,` to
    
    .. math::
       
@@ -563,8 +597,8 @@ Na podstawie Twierdzenia 8. można teraz zapisać
 Zajmiemy się jeszcze przypadkiem, gdy :math:`\,V=K^n\ ` 
 z bazą kanoniczną :math:`\ \mathcal{E}=
 (\boldsymbol{e}_1,\boldsymbol{e}_2,\dots,\boldsymbol{e}_n)\,,\ `
-:math:`\,W=K^m\ ` z bazą kanoniczną 
-:math:`\ \mathcal{F}=(\boldsymbol{f}_1,\boldsymbol{f}_2,\dots,\boldsymbol{f}_m)\ `
+:math:`\,W=K^m\ ` z bazą kanoniczną :math:`\ \mathcal{F}=
+(\boldsymbol{f}_1,\boldsymbol{f}_2,\dots,\boldsymbol{f}_m)\ `
 oraz :math:`\,F\in\text{Hom}(K^n,K^m).`
 
 Macierz przekształcenia :math:`\,F\ ` w bazach kanonicznych 
@@ -572,19 +606,20 @@ Macierz przekształcenia :math:`\,F\ ` w bazach kanonicznych
 
 .. math::
    
-   M_{\mathcal{E}\mathcal{F}}(F)\ =\ 
-   [\,I_{\mathcal{F}}(F\boldsymbol{e}_1)\,|\,I_{\mathcal{F}}(F\boldsymbol{e}_2)\,|\,\dots\,
+   M_{\mathcal{E}\mathcal{F}}(F)\ =\ [\,I_{\mathcal{F}}(F
+   \boldsymbol{e}_1)\,|\,I_{\mathcal{F}}(F\boldsymbol{e}_2)\,|\,\dots\,
    |\,I_{\mathcal{F}}(F\boldsymbol{e}_n)\,]\,.
 
 Ale w przestrzeni :math:`\,K^m\ ` każdy wektor jest kolumną swoich współrzędnych
-w bazie kanonicznej: 
-:math:`\ \ I_{\mathcal{F}}(\boldsymbol{w})=\boldsymbol{w},\ \ \boldsymbol{w}\in K^m.\ `
+w bazie kanonicznej: :math:`\ \ I_{\mathcal{F}}(\boldsymbol{w})=
+\boldsymbol{w},\ \ \boldsymbol{w}\in K^m.\ `
 Oznaczając macierz przekształcenia :math:`\,F\ ` w bazach kanonicznych 
 po prostu przez :math:`\,M(F),\ ` otrzymujemy wzór uproszczony:
 
 .. math::
    
-   M(F)\ =\ [\,F\boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,\dots\,|\,F\boldsymbol{e}_n\,]\,,
+   M(F)\ = \ [\,F
+   \boldsymbol{e}_1\,|\,F\boldsymbol{e}_2\,|\,\dots\,|\,F\boldsymbol{e}_n\,]\,,
 
 wprowadzony wstępnie już wcześniej w równaniu :eq:`intro`. 
 Wzór :eq:`fund` w Twierdzeniu 10. przyjmuje teraz postać
@@ -592,46 +627,8 @@ Wzór :eq:`fund` w Twierdzeniu 10. przyjmuje teraz postać
 .. math::
    
    \boldsymbol{y}\,=\,F(\boldsymbol{x})\quad\Rightarrow\quad \boldsymbol{y}\ =\ 
-   M(F)\,\cdot\,\boldsymbol{x}\,,\qquad \boldsymbol{x}\in K^n\,,\ \ \boldsymbol{y}\in K^m\,.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   M(F)\,\cdot\,\boldsymbol{x}\,,\qquad 
+   \boldsymbol{x}\in K^n\,,\ \ \boldsymbol{y}\in K^m\,.
 
 
 

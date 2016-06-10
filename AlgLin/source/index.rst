@@ -102,7 +102,7 @@ Przekształcenia liniowe
 
 | *Własności i zastosowania przekształceń liniowych.*
 | *Izomorfizm przestrzeni wektorowych.*
-| *Reprezentacja macierzowa przekształceń liniowych.*
+| *Reprezentacja macierzowa przekształceń liniowych.* 
 
 .. toctree::
    

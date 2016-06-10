@@ -30,18 +30,20 @@ określamy odwzorowanie
 .. math::
    
    F(\vec{r})\,:\,=\,(\vec{b}\cdot\vec{r})\ \vec{a}\,,
-   \qquad\vec{a},\vec{b},\vec{r}\in V,\quad\vec{a},\vec{b}\ -\ \text{ustalone niezerowe wektory}.
+   \qquad\vec{a},\vec{b},\vec{r}\in V,\quad\vec{a},\vec{b}\ -\ 
+   \text{ustalone niezerowe wektory}.
 
-0. Uzasadnij, że :math:`\,F\ ` jest operatorem liniowym.
+0. :math:`\,` Uzasadnij, że :math:`\,F\ ` jest operatorem liniowym.
 
-1. Czym geometrycznie jest jądro i obraz operatora :math:`\,F\,?`
+1. :math:`\,` Czym geometrycznie jest jądro i obraz operatora :math:`\,F\,?`
 
-2. Określ defekt i rząd tego operatora oraz sprawdź warunek 
+2. :math:`\,` Określ defekt i rząd tego operatora oraz sprawdź warunek 
    :math:`\,\text{def}\,F + \text{rz}\,F = \dim V.`
 
-3. Zapisz macierz :math:`\,M(F)\ ` operatora :math:`\,F\,` w bazie :math:`\,\mathcal{E}.`
+3. :math:`\,` Zapisz macierz :math:`\,M(F)\ ` operatora 
+   :math:`\,F\,` w bazie :math:`\,\mathcal{E}.`
 
-4. Wyznacz rząd macierzy :math:`\,M(F)\ ` 
+4. :math:`\,` Wyznacz rząd macierzy :math:`\,M(F)\ ` 
    i :math:`\,` sprawdź, że :math:`\,\text{rz}\,F = \text{rz}\,M(F).`
 
 **Zadanie 3.**
@@ -67,20 +69,5 @@ wektorów :math:`\,v_1,\,v_2,\,\dots,\,v_r\in V\ `
 4. :math:`\quad Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.z.}
    \qquad\Rightarrow\qquad
    v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.z.}`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
