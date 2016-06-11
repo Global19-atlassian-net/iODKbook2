@@ -1,5 +1,5 @@
 
-Przykłady problemów własnych
+Przykłady problemów własnych 
 ----------------------------
 
 Operator w przestrzeni wektorów na płaszczyźnie
@@ -210,7 +210,8 @@ jest konsekwencją tej hermitowskości.
 
 Wzór :eq:`det_eqn` przedstawia równanie charakterystyczne macierzy 
 :math:`\,\boldsymbol{A}.\ ` 
-Stąd, a także ze wzorów :math:`\,` :eq:`eigen_vectors_1` :math:`\,` i :math:`\,` :eq:`eigen_vectors_2` :math:`\,` wynika, że obydwie wartości własne, 
+Stąd, a także ze wzorów :math:`\,` :eq:`eigen_vectors_1` :math:`\,` i :math:`\,` 
+:eq:`eigen_vectors_2` :math:`\,` wynika, że obydwie wartości własne, 
 :math:`\,` :math:`\ \lambda_1=1\ \ \text{i}\ \ \lambda_2=3\,,\ \ `
 są algebraicznie i geometrycznie 1-krotne. To, że krotność algebraiczna 
 każdej wartości własnej równa się jej krotności geometrycznej, 
@@ -348,10 +349,14 @@ gdzie
    
 .. math::
       
-   \boldsymbol{e}_1\ =\ \left[\begin{array}{cc} 1 & 0 \\ 0 & 0 \end{array}\right]\,,\quad
-   \boldsymbol{e}_2\ =\ \left[\begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array}\right]\,,\quad
-   \boldsymbol{e}_3\ =\ \left[\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right]\,,\quad
-   \boldsymbol{e}_4\ =\ \left[\begin{array}{cc} 0 & 0 \\ 0 & 1 \end{array}\right]\,.
+   \boldsymbol{e}_1\ =
+   \ \left[\begin{array}{cc} 1 & 0 \\ 0 & 0 \end{array}\right]\,,\quad
+   \boldsymbol{e}_2\ =
+   \ \left[\begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array}\right]\,,\quad
+   \boldsymbol{e}_3\ =
+   \ \left[\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right]\,,\quad
+   \boldsymbol{e}_4\ =
+   \ \left[\begin{array}{cc} 0 & 0 \\ 0 & 1 \end{array}\right]\,.
 
 Jeżeli obrazy kolejnych macierzy z bazy :math:`\ \mathcal{B}\ ` przedstawimy 
 w tej samej bazie :math:`\ \mathcal{B}:`
@@ -361,29 +366,33 @@ w tej samej bazie :math:`\ \mathcal{B}:`
    
    \begin{alignat*}{6}
    T\,\boldsymbol{e}_1 & {\ } = {\ \,} & 
-      \boldsymbol{e}_1 & {\ } = {\ \,} & 1\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_4\,, \\
+      \boldsymbol{e}_1 & {\ } = {\ \,} &
+         1\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_4\,, \\
    T\,\boldsymbol{e}_2 & {\ } = {\ \,} & 
-      \boldsymbol{e}_3 & {\ } = {\ \,} & 0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
-                                         1\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_4\,, \\
+      \boldsymbol{e}_3 & {\ } = {\ \,} & 
+         0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
+         1\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_4\,, \\
    T\,\boldsymbol{e}_3 & {\ } = {\ \,} & 
-      \boldsymbol{e}_2 & {\ } = {\ \,} & 0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
-                                         1\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_4\,, \\
+      \boldsymbol{e}_2 & {\ } = {\ \,} & 
+         0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
+         1\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_4\,, \\
    T\,\boldsymbol{e}_4 & {\ } = {\ \,} & 
-      \boldsymbol{e}_4 & {\ } = {\ \,} & 0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
-                                         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-                                         1\cdot\boldsymbol{e}_4\,,
+      \boldsymbol{e}_4 & {\ } = {\ \,} & 
+         0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
+         0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
+         1\cdot\boldsymbol{e}_4\,,
    \end{alignat*}
 
-to :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ `
-składa się ze współrzędnych macierzy :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2,3,4:`
+to :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ ` składa się 
+ze współrzędnych macierzy :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2,3,4:`
 
 .. math::
    :label: mat_AT
@@ -704,14 +713,14 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
   .. code-block:: python
      
      sage: A = matrix(QQ,[[1,0,0,0],
-     ...                  [0,0,1,0],
-     ...                  [0,1,0,0],
-     ...                  [0,0,0,1]])
+                          [0,0,1,0],
+                          [0,1,0,0],
+                          [0,0,0,1]])
 
      sage: S = matrix(QQ,[[1,0,0, 0],
-     ...                  [0,1,0, 1],
-     ...                  [0,1,0,-1],
-     ...                  [0,0,1, 0]])
+                          [0,1,0, 1],
+                          [0,1,0,-1],
+                          [0,0,1, 0]])
      sage: S.I*A*S                             
   
      [ 1  0  0  0]
