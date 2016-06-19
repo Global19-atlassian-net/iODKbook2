@@ -6,13 +6,14 @@ Komutatory i ich własności
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Niech :math:`\,A,\,B\ ` będą elementami nieprzemiennej algebry,
-np. zespolonymi bądź rzeczywistymi macierzami kwadratowymi stopnia :math:`\,n\ ` 
-albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklidesowej. 
+np. zespolonymi bądź rzeczywistymi macierzami kwadratowymi 
+stopnia :math:`\,n\ ` albo operatorami liniowymi określonymi na przestrzeni 
+unitarnej bądź euklidesowej. 
 
 .. admonition:: Definicja.
    
-   Wyrażenie :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` nazywa się :math:`\,` *komutatorem* :math:`\,`
-   elementów :math:`\,A\ \ \,\text{i}\ \ B\,.`
+   Wyrażenie :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` nazywa się :math:`\,`
+   *komutatorem* :math:`\,` elementów :math:`\,A\ \ \,\text{i}\ \ B\,.`
    
    Jeżeli :math:`\ [\,A,B\,]\,=\,0\,,\ \ \text{czyli}\ \ AB=BA\,,\ \ `
    to mówimy, że elementy :math:`\,A\ \ \,\text{i}\ \ B\ ` *komutują*.
@@ -26,15 +27,18 @@ albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklides
    \left[\,B,A\,\right]\ =\ -\ \left[\,A,B\,\right]\,, & \\ \\
    \left[\,A_1+A_2\,,\,B\,\right]\ =\ 
    \left[\,A_1\,,B\,\right]\ +\ \left[\,A_2\,,B\,\right]\,, & \\ \\
-   \left[\,A,\,B_1+B_2\,\right]\ =\ \left[\,A,B_1\,\right]\ +\ \left[\,A,B_2\,\right]\,, & \\ \\
-   \left[\,\lambda,A\,\right]\ =\ \left[\,A,\lambda\,\right]\ =\ 0\,, & 
-   \lambda\equiv\lambda\,I,\ \ I\ \ \text{-}\ \ \text{element jednostkowy,} \\ \\
+   \left[\,A,\,B_1+B_2\,\right]\ = \ 
+   \left[\,A,B_1\,\right]\ +\ \left[\,A,B_2\,\right]\,, & \\ \\
+   \left[\,\lambda,A\,\right]\ =\ \left[\,A,\lambda\,\right]\ =
+   \ 0\,, & \lambda\equiv\lambda\,I,\ \ I\ \ \text{-}\ \ 
+   \text{element jednostkowy,} \\ \\
    \left[\,\lambda\,A,\,B\,\right]\ =\ \left[\,A,\,\lambda\,B\,\right]\ =\ 
-   \lambda\ \left[\,A,B\,\right]\,, & \lambda\ \ \text{-}\ \ \text{czynnik liczbowy.}
+   \lambda\ \left[\,A,B\,\right]\,, & \lambda\ \ 
+   \text{-}\ \ \text{czynnik liczbowy.}
    \end{array}
 
-Komutator :math:`\ [\,A,B\,]\ ` jest więc wyrażeniem liniowym ze względu na obydwa elementy
-:math:`\,A\ \ \,\text{i}\ \ \,B\,.`
+Komutator :math:`\ [\,A,B\,]\ ` jest więc wyrażeniem liniowym 
+ze względu na obydwa elementy :math:`\,A\ \ \,\text{i}\ \ \,B\,.`
 
 Stosując zasadę indukcji matematycznej można pokazać, że:
 
@@ -74,9 +78,10 @@ kładąc :math:`\ B_1=\ldots=B_n=B\,,\ \ A_1=\ldots=A_n=A\ ` mamy:
    \left[\,A,B^n\right]\ =\ n\,\lambda\,B^{n-1},\qquad 
    \left[\,A^n,B\,\right]\ =\ n\,\lambda\,A^{n-1},\qquad n\in N.
 
-Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` można odnotować dalsze własności 
-:math:`\\`
-(ostatni związek dotyczy też operatorów liniowych w przestrzeni unitarnej bądź euklidesowej):
+Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` 
+można odnotować dalsze własności :math:`\\`
+(ostatni związek dotyczy też operatorów liniowych 
+w przestrzeni unitarnej bądź euklidesowej):
 
 .. math::
    
@@ -89,8 +94,8 @@ Macierze i operatory normalne
 
 .. admonition:: Definicja.
    
-   Niech :math:`\ \boldsymbol{A}\in M_n(C)\,,\ F\in\text{End}(V)\,,\ \,\text{gdzie}\ \ V\ `
-   - :math:`\,`  przestrzeń unitarna.
+   Niech :math:`\ \boldsymbol{A}\in M_n(C)\,,\ F\in\text{End}(V)\,,\ \,
+   \text{gdzie}\ \ V\ ` - :math:`\,`  przestrzeń unitarna.
 
    Macierz :math:`\ \boldsymbol{A}\ ` jest *normalna*, :math:`\,` 
    gdy komutuje ze swoim sprzężeniem hermitowskim:
@@ -115,9 +120,9 @@ Związek pomiędzy macierzami normalnymi i operatorami normalnymi przedstawia
 
 .. admonition:: Twierdzenie 11.
    
-   Operator liniowy :math:`\,F\,` określony na przestrzeni unitarnej :math:`\,V\,` 
-   jest normalny wtedy i tylko wtedy, 
-   gdy jego macierz w dowolnej ortonormalnej bazie :math:`\,\mathcal{B}\ ` jest normalna:
+   Operator liniowy :math:`\,F\,` określony na przestrzeni unitarnej 
+   :math:`\,V\,` jest normalny wtedy i tylko wtedy, gdy jego macierz 
+   w dowolnej ortonormalnej bazie :math:`\,\mathcal{B}\ ` jest normalna:
    
    .. math::
       
@@ -128,9 +133,10 @@ Związek pomiędzy macierzami normalnymi i operatorami normalnymi przedstawia
 
 **Dowód.**
 
-Podobnie jak przy dowodzie Twierdzenia 10., wykorzystamy bijektywność i multiplikatywność
-odwzorowania :math:`\ M_{\mathcal{B}}\ ` oraz to, że w przy bazie ortonormalnej 
-macierz sprzężenia hermitowskiego operatora równa się sprzężeniu hermitowskiemu jego macierzy.
+Podobnie jak przy dowodzie Twierdzenia 10., wykorzystamy bijektywność 
+i multiplikatywność odwzorowania :math:`\ M_{\mathcal{B}}\ ` oraz to, 
+że w bazie ortonormalnej macierz sprzężenia hermitowskiego operatora 
+równa się sprzężeniu hermitowskiemu jego macierzy.
 
 Następujące warunki są wzajemnie równoważne:
 
@@ -140,9 +146,10 @@ Następujące warunki są wzajemnie równoważne:
    \begin{eqnarray*}
    F\,F^+ & = & F^+F\,, \\
    M_{\mathcal{B}}(FF^+) & = & M_{\mathcal{B}}(F^+F)\,, \\
-   M_{\mathcal{B}}(F)\ M_{\mathcal{B}}(F^+) & = & M_{\mathcal{B}}(F^+)\ M_{\mathcal{B}}(F)\,, \\
-   M_{\mathcal{B}}(F)\ [\,M_{\mathcal{B}}(F)\,]^+ & = & 
-   [\,M_{\mathcal{B}}(F)\,]^+\ M_{\mathcal{B}}(F)\,, \\
+   M_{\mathcal{B}}(F)\ M_{\mathcal{B}}(F^+) & = 
+   & M_{\mathcal{B}}(F^+)\ M_{\mathcal{B}}(F)\,, \\
+   M_{\mathcal{B}}(F)\ [\,M_{\mathcal{B}}(F)\,]^+ & = 
+   & [\,M_{\mathcal{B}}(F)\,]^+\ M_{\mathcal{B}}(F)\,, \\
    \boldsymbol{A}\,\boldsymbol{A}^+ & = & \boldsymbol{A}^+\boldsymbol{A}\,.
    \end{eqnarray*}
 
@@ -163,12 +170,14 @@ ale jest cechą szerszej klasy operatorów normalnych. Mówi o tym
 .. math::
    :label: Lemma
    
-   Fx=\lambda\,x\quad\Leftrightarrow\quad F^+\,x=\lambda^*\,x\,,\qquad x\in V,\quad\lambda\in C.
+   Fx=\lambda\,x
+   \quad\Leftrightarrow\quad
+   F^+\,x=\lambda^*\,x\,,\qquad x\in V,\quad\lambda\in C.
 
 **Dowód lematu.** :math:`\,`
  
-Zauważmy najpierw, że jeżeli :math:`\,F\ ` jest operatorem normalnym, to
-dla dowolnego :math:`\,x\in V:`
+Zauważmy najpierw, że jeżeli :math:`\,F\ ` jest operatorem normalnym, 
+to dla dowolnego :math:`\,x\in V:`
 
 .. :math:`\ \|\,Fx\,\| = \|\,F^+x\,\|\,,\ x\in V.\ `
    Wynika to stąd, że
@@ -196,25 +205,26 @@ gdzie :math:`\ \,\lambda\in C,\ \ I\ ` - operator jednostkowy:
    \begin{array}{cl}   
    \quad\left[\,(F-\lambda\,I),\,(F-\lambda\,I)^+\,\right]\ = &
    \\ \\
-   =\ \left[\,F-\lambda\,I,\,F^+-\lambda^*\,I\,\right]\ = & 
-   \\ \\
+   =\ \left[\,F-\lambda\,I,\,F^+-\lambda^*\,I\,\right]\ = & \\ \\
    =\ \left[\,F,F^+\,\right]-\left[\,F,\,\lambda^*\,I\,\right]-
-   \left[\,\lambda\,I,F^+\,\right]+\left[\,\lambda\,I,\,\lambda^*\,I\,\right]\ = & 
-   \\ \\
+   \left[\,\lambda\,I,F^+\,\right]+
+   \left[\,\lambda\,I,\,\lambda^*\,I\,\right]\ = & \\ \\
    =\ \left[\,F,F^+\,\right]-\lambda^*\left[\,F,I\,\right]-
-   \lambda\,\left[\,I,F^+\,\right]+\lambda\,\lambda^*\,\left[\,I,I\,\right]\ = & 
+   \lambda\,\left[\,I,F^+\,\right]+
+   \lambda\,\lambda^*\,\left[\,I,I\,\right]\ = & 
    \left[\,F,F^+\,\right]\ =\ 0\,.
    \end{array}
 
-Podstawiając :math:`\ F\rightarrow F-\lambda\,I\ ` w równaniu :eq:`norm_eq`, otrzymujemy
+Podstawiając :math:`\ F\rightarrow F-\lambda\,I\ ` w równaniu :eq:`norm_eq`, 
+otrzymujemy
 
 .. math::
    
    \begin{array}{ccc}
-   & \|\,(F-\lambda\,I)\,x\,\|\ =\ \|\,(F-\lambda\,I)^+\,x\,\| &
-   \\ \\
+   & \|\,(F-\lambda\,I)\,x\,\|\ =\ \|\,(F-\lambda\,I)^+\,x\,\| & \\ \\
    \text{czyli} 
-   & \|\,F x-\lambda\,x\,\|\ =\ \|\,F^+x-\lambda^*\,x\,\|\,, & \lambda\in C\,,\ \ x\in V\,.
+   & \|\,F x-\lambda\,x\,\|\ =
+   \ \|\,F^+x-\lambda^*\,x\,\|\,, & \lambda\in C\,,\ \ x\in V\,.
    \end{array}
 
 Na tej podstawie można zapisać ciąg równoważności, który kończy dowód lematu:
@@ -224,15 +234,18 @@ Na tej podstawie można zapisać ciąg równoważności, który kończy dowód l
    \begin{array}{ccc}
    Fx\ =\ \lambda\,x & & \\ \\
    Fx-\lambda\,x\,=\,\theta & & \\ \\
-   \|\,Fx-\lambda\,x\,\|\,=\,0 & \quad\Leftrightarrow & \quad\|\,F^+x-\lambda^*\,x\,\|\,=\,0 \\ \\
+   \|\,Fx-\lambda\,x\,\|\,=
+   \,0 & \quad\Leftrightarrow & \quad\|\,F^+x-\lambda^*\,x\,\|\,=\,0 \\ \\
    & & \quad F^+x-\lambda^*\,x\,=\,\theta \\ \\
    & & \quad F^+x\ =\ \lambda^*\,x\,.
    \end{array}
 
-**Dowód twierdzenia 12.** :math:`\,` Zakładamy, że :math:`\,F\ ` jest operatorem normalnym.
+**Dowód twierdzenia 12.** :math:`\,` 
+Zakładamy, że :math:`\,F\ ` jest operatorem normalnym.
 
-Niech :math:`\quad Fx_1\,=\ \lambda_1\,x_1\,,\quad Fx_2\,=\ \lambda_2\,x_2\,,\quad
-x_1,\,x_2\,\in\,V\!\smallsetminus\!\{\theta\}\,,\ \ \lambda_1\neq\lambda_2\,.\ \,` Wtedy
+Niech :math:`\quad Fx_1\,=\ \lambda_1\,x_1\,,\quad Fx_2\,=
+\ \lambda_2\,x_2\,,\quad x_1,\,x_2\,\in\,V\!\smallsetminus\!\{\theta\}
+\,,\ \ \lambda_1\neq\lambda_2\,.\ \,` Wtedy
 
 .. math::
    
@@ -251,24 +264,6 @@ Odejmując stronami mamy
 :math:`\ \ (\lambda_2-\lambda_1)\,\langle\,
 x_1,x_2\rangle = 0\,,\ `
 skąd :math:`\ \langle\,x_1,x_2\rangle=0\,,\ ` co należało udowodnić.
-
-
-
-   
-   
-   
-    
-
-
-
-
-
-
-
-
-
-
-
 
 
 

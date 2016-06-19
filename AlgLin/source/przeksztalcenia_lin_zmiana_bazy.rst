@@ -725,7 +725,7 @@ w bazie :math:`\,\mathcal{B}'.`
    # Kolumna współrzędnych w bazie B:
    sage: I_B = vector(QQ,[2,-3,0,4]).column()
    
-   sage: pretty_print(html.table([[S_1,'*',I_B,'=',S_1*I_B]]))
+   sage: table([[S_1,'*',I_B,'=',S_1*I_B]])
 
 .. math::
    :label: calc_comp
@@ -753,7 +753,8 @@ Współrzędne wektora :math:`\,v\ ` w bazie :math:`\,\mathcal{B}'\ ` wynoszą:
 \frac{7}{3}\,,\ \ -\ \frac{2}{3}\,. \\`
 
 **Sposób 2.** :math:`\,` 
-Zamiast bezpośredniego wyliczania macierzy :math:`\,\boldsymbol{S}^{-1},\ ` odwrócimy relacje
+Zamiast bezpośredniego wyliczania macierzy :math:`\,\boldsymbol{S}^{-1},\ ` 
+odwrócimy relacje
 
 .. math::
    :nowrap:
@@ -771,10 +772,17 @@ Po prostych elementarnych rachunkach otrzymujemy wzory
    :nowrap:
 
    \begin{alignat*}{6}
-   v_1 & {\ } = {\ } & T^{-1}\,v_1' & {\ \,} = {\ \,} & -\ v_1'                        &             &      &             &                             &                                           \\
-   v_2 & {\ } = {\ } & T^{-1}\,v_2' & {\ \,} = {\ \,} & -\ \textstyle\frac{5}{3}\ v_1' & {\,} - {\;} & v_2' & {\,} + {\;} & \textstyle\frac{1}{3}\ v_3' & {\,} + {\;} & \textstyle\frac{2}{3}\ v_4' \\
-   v_3 & {\ } = {\ } & T^{-1}\,v_3' & {\ \,} = {\ \,} & -\ 2\ v_1'                     & {\,} - {\;} & v_2' &             &                             &                                           \\
-   v_4 & {\ } = {\ } & T^{-1}\,v_4' & {\ \,} = {\ \,} & -\ \textstyle\frac{1}{3}\ v_1' &             &      & {\,} - {\;} & \textstyle\frac{1}{3}\ v_3' & {\,} + {\;} & \textstyle\frac{1}{3}\ v_4'
+   v_1 & {\ } = {\ } &
+   T^{-1}\,v_1' &
+   {\ \,} = {\ \,} & -\ v_1' & & & & & \\
+   v_2 & {\ } = {\ } & T^{-1}\,v_2' & {\ \,} = {\ \,} & 
+   -\ \textstyle\frac{5}{3}\ v_1' & {\,} - {\;} & v_2' & {\,} + {\;} & 
+   \textstyle\frac{1}{3}\ v_3' & {\,} + {\;} & \textstyle\frac{2}{3}\ v_4' \\
+   v_3 & {\ } = {\ } & T^{-1}\,v_3' & {\ \,} = {\ \,} & -\ 2\ v_1' & 
+   {\,} - {\;} & v_2' & & & \\
+   v_4 & {\ } = {\ } & T^{-1}\,v_4' & {\ \,} = {\ \,} &
+   -\ \textstyle\frac{1}{3}\ v_1' & & & {\,} - {\;} & 
+   \textstyle\frac{1}{3}\ v_3' & {\,} + {\;} & \textstyle\frac{1}{3}\ v_4'
    \end{alignat*}
 
 na podstawie których można wypisać macierz automorfizmu :math:`\,T^{-1}\ `
@@ -791,24 +799,29 @@ w bazie :math:`\,\mathcal{B}':`
           0 &  \frac{2}{3} &  0 &  \frac{1}{3}
          \end{array}\right]\,.
 
-Nas interesuje raczej macierz :math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1}.\ \,`
+Nas interesuje raczej macierz 
+:math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1}.\ \,`
 Ale, zgodnie z Regułą 2.:
 
 .. math::
    
    M_{\mathcal{B}'}(T^{-1})\ \,=\ \,
    \boldsymbol{S}^{-1}\cdot M_{\mathcal{B}}(T^{-1})\cdot\boldsymbol{S}\ \,=\ \,
-   \boldsymbol{S}^{-1}\cdot [\,M_{\mathcal{B}}(T)\,]^{-1}\cdot\boldsymbol{S}\ \,=\ \,
-   \boldsymbol{S}^{-1}\cdot\boldsymbol{S}^{-1}\cdot\boldsymbol{S}\ \,=\ \,\boldsymbol{S}^{-1}\,.
+   \boldsymbol{S}^{-1}\cdot [\,M_{\mathcal{B}}(T)\,]^{-1}\cdot
+   \boldsymbol{S}\ \,=\ \,
+   \boldsymbol{S}^{-1}\cdot\boldsymbol{S}^{-1}\cdot\boldsymbol{S}\ \,=
+   \ \,\boldsymbol{S}^{-1}\,.
 
-Równanie :eq:`MB_prim_T_1` daje więc szukaną macierz :math:`\ \boldsymbol{S}^{-1},\ `
+Równanie :eq:`MB_prim_T_1` daje więc szukaną macierz 
+:math:`\ \boldsymbol{S}^{-1},\ `
 co prowadzi dalej do wyniku :eq:`calc_comp`.
 
 .. a rozwiązanie przykładu daje wzór :eq:`calc_comp`.
 
 **Wariant rozwiązania.** :math:`\,`
 
-Związek :eq:`trans_coord` pomiędzy współrzędnymi wektora w nowej i starej bazie, zapisany w postaci
+Związek :eq:`trans_coord` pomiędzy współrzędnymi wektora w nowej i starej bazie, 
+zapisany w postaci
 
 .. math::
    
@@ -972,7 +985,7 @@ Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`. :math:`\\`
 
    sage: F_1 = S*F*S
    
-   sage: pretty_print(html.table([[S, '*', F, '*', S, '=', F_1]]))
+   sage: table([[S, '*', F, '*', S, '=', F_1]])
 
 .. math::
    

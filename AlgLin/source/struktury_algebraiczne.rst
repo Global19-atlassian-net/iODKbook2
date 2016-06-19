@@ -22,21 +22,21 @@ przestrzeń wektorowa,  :math:`\ ` algebra.
 |
 | Działanie grupowe :math:`\ \bot\ ` spełnia następujące warunki:
 
-1. jest łączne:
+1. :math:`\,` jest łączne:
    
    .. math::
    
       (g_1\,\bot\;g_2)\ \bot\ g_3\ \ =\ \ g_1\ \bot\ (g_2\;\bot\;g_3)\qquad 
       \text{dla dowolnych}\quad g_1,g_2,g_3\in G\,;
 
-2. istnieje element neutralny :math:`\ e\in G\ \,` taki, że
+2. :math:`\,` istnieje element neutralny :math:`\ e\in G\ \,` taki, że
    
    .. math::
       
       e\;\bot\;g\ \,=\ \,g\;\bot\;e\ \,=\ \,g \qquad
       \text{dla każdego}\quad\ g\in G\,;
 
-3. każdy element :math:`\ g\in G\ ` ma swoją odwrotność 
+3. :math:`\,` każdy element :math:`\ g\in G\ ` ma swoją odwrotność 
    :math:`\ g^{-1}\in\,G\ ` taką, że
 
    .. math::
@@ -80,16 +80,16 @@ Przykłady grup nieprzemiennych:
 |
 | Działania w pierścieniu spełniają następujące warunki:
 
-1. struktura :math:`\ (P,\,+)\ \ ` jest grupą przemienną;
+1. :math:`\,` struktura :math:`\ (P,\,+)\ \ ` jest grupą przemienną;
 
-2. mnożenie jest działaniem łącznym:
+2. :math:`\,` mnożenie jest działaniem łącznym:
  
    .. math::
       
       (a_1\cdot a_2)\cdot a_3 \ =\ a_1\cdot (a_2\cdot a_3)\qquad 
       \text{dla dowolnych}\quad a_1,\,a_2,\,a_3\,\in\,P\,;
 
-3. mnożenie jest rozdzielne względem dodawania:
+3. :math:`\,` mnożenie jest rozdzielne względem dodawania:
  
    .. math::
       
@@ -153,13 +153,13 @@ i :math:`\ ` dwóch działań wewnętrznych:
 
 Działania w ciele spełniają następujące warunki:
 
-1. :math:`(K,\,+)\ \ ` jest grupą przemienną z elementem neutralnym 
+1. :math:`\,(K,\,+)\ \ ` jest grupą przemienną z elementem neutralnym 
    :math:`\,` 0 :math:`\,` (zero ciała);
 
-2. :math:`(K\smallsetminus\{0\},\ \cdot\;)\ \ ` jest grupą przemienną 
+2. :math:`\,(K\smallsetminus\{0\},\ \cdot\;)\ \ ` jest grupą przemienną 
    z elementem neutralnym :math:`\,` 1 :math:`\,` (jedność ciała);
 
-3. mnożenie jest rozdzielne względem dodawania:
+3. :math:`\,` mnożenie jest rozdzielne względem dodawania:
    
    .. math::
       
@@ -348,9 +348,10 @@ ciałem, :math:`\,P`-moduł staje się przestrzenią wektorową nad tym ciałem.
 
 Przykłady.
 
-0. Pierścień :math:`\,P\ ` jest (lewo- i prawostronnym) modułem nad sobą samym.
+0. :math:`\,` Pierścień :math:`\,P\ ` jest (lewo- i prawostronnym) 
+   modułem nad sobą samym.
 
-1. Rozważmy zbiór :math:`\,P^n\ \,n`-elementowych ciągów o wyrazach 
+1. :math:`\,` Rozważmy zbiór :math:`\,P^n\ \,n`-elementowych ciągów o wyrazach 
    z pierścienia :math:`\,P,\ ` zapisanych kolumnowo. 
    Przy naturalnie określonych działaniach dodawania i mnożenia 
    przez :math:`\\` skalary z :math:`\,P\ ` zbiór ten jest grupą przemienną
@@ -359,12 +360,12 @@ Przykłady.
    :math:`\,n`-elementowych kolumn o wyrazach całkowitych. Gdy :math:`\,P\ ` 
    jest ciałem: :math:`\,P=K,\ ` otrzymujemy przestrzeń :math:`\,K^n.`
 
-2. Na tej samej zasadzie zbiór :math:`\,M_{m\times n}(P)\ ` 
+2. :math:`\,` Na tej samej zasadzie zbiór :math:`\,M_{m\times n}(P)\ ` 
    macierzy prostokątnych o elementach z pierścienia :math:`\,P\ ` jest 
    (lewo- i prawostronnym) :math:`\,P`-modułem. W szczególności może to być 
    moduł :math:`\,M_{m\times n}(Z)\ ` macierzy o elementach całkowitych.
 
-3. Zbiór :math:`\,M_n(P)\ ` macierzy kwadratowych stopnia :math:`\,n\ ` 
+3. :math:`\,` Zbiór :math:`\,M_n(P)\ ` macierzy kwadratowych stopnia :math:`\,n\ ` 
    nad pierścieniem :math:`\,P\ ` jest pierścieniem z jednością ze względu 
    na dodawanie i mnożenie macierzowe. 
    Mnożenie z lewej strony kolumn ze zbioru :math:`\,P^n\ ` przez macierze 
@@ -372,7 +373,7 @@ Przykłady.
    spełniającym warunki 3.-5. definicji modułu. Wobec tego :math:`\,P^n\ ` 
    jest modułem (wyłącznie lewostronnym) nad pierścieniem :math:`\,M_n(P).`
 
-4. Każda grupa przemienna jest modułem 
+4. :math:`\,` Każda grupa przemienna jest modułem 
    nad pierścieniem liczb całkowitych :math:`\,Z.\ ` 
 
 | **Algebra nad ciałem** :math:`\,K\ ` jest strukturą 
@@ -498,7 +499,8 @@ oraz jednoelementowy podzbiór zawierający tylko wektor zerowy
 
 Przykłady podprzestrzeni:
 
-1. | Niech :math:`\,V\,` oznacza zbiór wektorów geometrycznych w przestrzeni,
+1. | :math:`\,` Niech :math:`\,V\,` oznacza zbiór wektorów geometrycznych 
+     w przestrzeni, 
    | :math:`\,V_x,\,V_y,\,V_z\ \,-\ \,` podzbiory wektorów leżących odpowiednio 
      na osiach :math:`\,Ox,\,Oy,\,Oz\,,` 
    | :math:`\,V_{xy},\,V_{yz},\,V_{xz}\ \,-\ \,` podzbiory wektorów leżących
@@ -508,7 +510,7 @@ Przykłady podprzestrzeni:
    | a ponadto zachodzą relacje: :math:`\quad V_x,\,V_y\,<\,V_{xy}\,,
      \quad V_y,\,V_z\,<\,V_{yz}\,,\quad V_x,\,V_z\,<\,V_{xz}\,.`
 
-2. Rozważmy przestrzeń :math:`\,K^n\ \,n`-wyrazowych
+2. :math:`\,` Rozważmy przestrzeń :math:`\,K^n\ \,n`-wyrazowych
    wektorów kolumnowych nad ciałem :math:`\,K\,:`
 
    .. math::
@@ -541,9 +543,10 @@ Przykłady podprzestrzeni:
    
       W_p\,<\,K^n\,. 
 
-3. Zbiór :math:`\,M_n(K)\,` macierzy kwadratowych stopnia :math:`\,n\,` nad 
-   ciałem :math:`\,K\,` jest przestrzenią wektorową nad :math:`\,K\,` ze 
-   względu na dodawanie macierzy i mnożenie ich przez skalary z :math:`\,K\,`:
+3. :math:`\,` Zbiór :math:`\,M_n(K)\,` macierzy kwadratowych stopnia 
+   :math:`\,n\,` nad ciałem :math:`\,K\,` jest przestrzenią wektorową nad 
+   :math:`\,K\,` ze względu na dodawanie macierzy i mnożenie ich przez skalary 
+   z :math:`\,K\,`:
 
    .. math::
 

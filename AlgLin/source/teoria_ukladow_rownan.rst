@@ -97,7 +97,7 @@ ma dwie jedynki wiodące:
 
 .. code-block:: python
 
-   sage: pretty_print(html.table([["A", "=", A, '$\\rightarrow$', A.rref()]]))
+   sage: table([["A", "=", A, '$\\rightarrow$', A.rref()]])
 
 .. math::
 

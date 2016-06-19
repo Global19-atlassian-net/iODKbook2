@@ -266,7 +266,7 @@ i podać ją jako argument:
    Eqns = [eq1,eq2,eq3]
    
    try: verse3colmn(Eqns)
-   except NameError: pretty_print(html("Wykonaj poprzedni kod!"))
+   except NameError: print "Wykonaj poprzedni kod!"
 
 .. figure:: figures/Rys_21.jpg
    :height: 10 cm

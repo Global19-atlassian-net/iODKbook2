@@ -107,7 +107,7 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
    sage: B1 = A.with_added_multiple_of_row(1,2,7/4)
    # Mnożenie macierzy A przez odpowiednią macierz elementarną:
    sage: B2 = elementary_matrix(QQ, 3, row1=1, row2=2, scale=7/4) * A
-   sage: pretty_print(html.table([[A, '$\\rightarrow$', B1, ',', B2]]))
+   sage: table([[A, '$\\rightarrow$', B1, ',', B2]])
 
 .. math::
    
@@ -115,15 +115,17 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
    0 &  1 & 2 &  3 \\
    5 & -2 & 3 &  6 \\
    4 & 12 & 0 & -8
-   \end{array}\right)\ \ \rightarrow\ \ \left(\begin{array}{rrrr}
-                                         0 &  1 & 2 &  3 \\
-                                        12 & 19 & 3 & -8 \\
-                                         4 & 12 & 0 & -8
-                                        \end{array}\right)\ \ ,\ \ \left(\begin{array}{rrrr}
-                                                                    0 &  1 & 2 &  3 \\
-                                                                   12 & 19 & 3 & -8 \\
-                                                                    4 & 12 & 0 & -8
-                                                                   \end{array}\right)
+   \end{array}\right)\ \ \rightarrow\ \ 
+   \left(\begin{array}{rrrr}
+    0 &  1 & 2 &  3 \\
+   12 & 19 & 3 & -8 \\
+    4 & 12 & 0 & -8
+   \end{array}\right)\ \ ,\ \ 
+   \left(\begin{array}{rrrr}
+    0 &  1 & 2 &  3 \\
+   12 & 19 & 3 & -8 \\
+    4 & 12 & 0 & -8
+   \end{array}\right)
 
 Przypuśćmy teraz, że przekształcenie macierzy 
 :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` do zredukowanej postaci 

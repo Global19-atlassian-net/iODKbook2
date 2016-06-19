@@ -77,8 +77,10 @@ Poniżej mamy przykład takiego postępowania:
    sage: A = matrix([[cos(phi),-sin(phi)],
                      [sin(phi), cos(phi)]])
 
-   sage: pretty_print(html.table([['A', '=', A]]))
    sage: print "Pierścień bazowy macierzy A:", A.base_ring()
+   sage: table([['A', '=', A]])
+
+``Pierścień bazowy macierzy A: Symbolic Ring``
 
 :math:`\begin{array}{ccc}
 A & = & 
@@ -88,14 +90,14 @@ A & = &
 \end{array}\right)
 \end{array}`
 
-``Pierścień bazowy macierzy A: Symbolic Ring``
-
 .. code-block:: python
 
    sage: B = A.subs(phi=pi/4)
 
-   sage: pretty_print(html.table([['B', '=', B]]))
    sage: print "Pierścień bazowy macierzy B:", B.base_ring()
+   sage: table([['B', '=', B]])
+
+``Pierścień bazowy macierzy B: Symbolic Ring``
 
 :math:`\begin{array}{ccc}
 B & = &
@@ -105,14 +107,14 @@ B & = &
 \end{array}\right) 
 \end{array}`
 
-``Pierścień bazowy macierzy B: Symbolic Ring``
-
 .. code-block:: python
 
    sage: C = B.change_ring(RDF)
 
-   sage: pretty_print(html.table([['C', '=', C]]))
    sage: print "Pierścień bazowy macierzy C:", C.base_ring()
+   sage: table([['C', '=', C]])
+
+``Pierścień bazowy macierzy C: Real Double Field``
 
 :math:`\begin{array}{ccc}
 C & = &
@@ -121,8 +123,6 @@ C & = &
 0.707106781187 & 0.707106781187
 \end{array}\right)
 \end{array}`
-
-``Pierścień bazowy macierzy C: Real Double Field``
 
 Sage preferuje podejście wierszowe do wektorów i macierzy. 
 Wektor wyświetlany jest w postaci "poziomej", 
@@ -654,8 +654,8 @@ Przykład kombinacji liniowej i iloczynu skalarnego wektorów:
    sage: w = 3*x-2*y
    # Iloczyn skalarny p wektorów x, y:
    sage: p = x*y
-   sage: pretty_print(html.table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]]))
-   sage: pretty_print(html.table([[x,'$\cdot$',y,'=',p]]))
+   sage: pretty_print(table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]]))
+   sage: pretty_print(table([[x,'$\cdot$',y,'=',p]]))
 
 :math:`\begin{array}{ccccccccc}
 3 & \cdot & \left(-1,\,2,\,5\right) & - & 2 & \cdot & \left(3,\,0,\,4\right) & =
@@ -674,7 +674,7 @@ mnożenia macierzowego jednowierszowej macierzy otrzymanej z wektora
    sage: x = matrix(1,3,[-1,2,5])
    sage: y = matrix(3,1,[3,0,4])
    sage: p = x*y
-   sage: pretty_print(html.table([[x,'$\cdot$',y,'=',p]]))
+   sage: table([[x,'$\cdot$',y,'=',p]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{ccc} -1 & 2 & 5 \end{array}\right) & \cdot &
@@ -721,8 +721,8 @@ Sprawdźmy to na przykładzie:
    sage: x = vector(range(3))
    sage: A = matrix(3,range(9))
    sage: v = x*A; w = A*x
-   sage: pretty_print(html.table([[x,'$\cdot$',A,'=',v]]))
-   sage: pretty_print(html.table([[A,'$\cdot$',x,'=',w]]))
+   sage: pretty_print(table([[x,'$\cdot$',A,'=',v]]))
+   sage: pretty_print(table([[A,'$\cdot$',x,'=',w]]))
 
 :math:`\begin{array}{ccccc}
 \left(0,\,1,\,2\right) & \cdot & 
@@ -778,8 +778,8 @@ oraz wyświetla poprzednie równania w wersji macierzowej:
    sage: xr = x.row()
    sage: xc = x.column()    
    sage: vr = xr*A; wc = A*xc
-   sage: pretty_print(html.table([[xr,'$\cdot$',A,'=',vr]]))
-   sage: pretty_print(html.table([[A,'$\cdot$',xc,'=',wc]]))
+   sage: pretty_print(table([[xr,'$\cdot$',A,'=',vr]]))
+   sage: pretty_print(table([[A,'$\cdot$',xc,'=',wc]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \end{array}\right) & \cdot & 
@@ -801,7 +801,7 @@ poprzez obustronną transpozycję:
    sage: xc = x.column()
    sage: At = A.transpose()
    sage: vc = At*xc
-   sage: pretty_print(html.table([[At,'$\cdot$',xc,'=',vc]]))
+   sage: table([[At,'$\cdot$',xc,'=',vc]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 3 & 6 \\ 1 & 4 & 7 \\ 2 & 5 & 8 \end{array}\right) 
@@ -821,7 +821,7 @@ drugiej):
    sage: A = matrix(2,3,range(6))
    sage: B = matrix(3,range(9))
    sage: C = A*B
-   sage: pretty_print(html.table([[A,'$\cdot$',B,'=',C]]))
+   sage: table([[A,'$\cdot$',B,'=',C]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \end{array}\right) & \cdot &
@@ -936,20 +936,4 @@ można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 

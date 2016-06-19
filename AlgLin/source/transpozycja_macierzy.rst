@@ -90,8 +90,8 @@ transpozycja jest operacją liniową)
 
 .. .. math::
    
-   (\boldsymbol{A}+\boldsymbol{B})^T = \boldsymbol{A}^T + \boldsymbol{B}^T,\quad
-   (c\boldsymbol{A})^T = c\boldsymbol{A}^T
+   (\boldsymbol{A}+\boldsymbol{B})^T = \boldsymbol{A}^T + \boldsymbol{B}^T,
+   \quad (c\boldsymbol{A})^T = c\boldsymbol{A}^T
 
    Oznacza to, że transpozycja jest operacją liniową.
 
@@ -202,7 +202,7 @@ w postaci sumy macierzy symetrycznej i macierzy antysymetrycznej.
    sage: As = (A + A.T)/2 
    sage: Aa = (A - A.T)/2
 
-   sage: pretty_print(html.table([[A, '=', As, '+', Aa]]))
+   sage: pretty_print(table([[A, '=', As, '+', Aa]]))
    sage: (As.is_symmetric(), Aa.is_skew_symmetric())
 
 .. math::

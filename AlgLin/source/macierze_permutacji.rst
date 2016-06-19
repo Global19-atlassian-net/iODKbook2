@@ -129,19 +129,20 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
 
 **Własności macierzy permutacji.**
 
-1. Każda macierz permutacji jest iloczynem macierzy elementarnych 
+1. :math:`\,` Każda macierz permutacji jest iloczynem macierzy elementarnych 
    pierwszego rodzaju (odpowiadających przestawieniom wierszy macierzy).
 
    Wynika to stąd, że każdą permutację :math:`\,\sigma\in S_m\,` 
    można zapisać jako złożenie pewnej liczby transpozycji, 
    którym odpowiadają operacje elementarne pierwszego rodzaju. 
 
-2. Macierze permutacji są :math:`\,` *ortogonalne*:
+2. :math:`\,` Macierze permutacji są :math:`\,` *ortogonalne*:
    :math:`\quad\boldsymbol{P}_\sigma\,\boldsymbol{P}_\sigma^{\,T}\, =\:
    \boldsymbol{P}_\sigma^{\,T}\,\boldsymbol{P}_\sigma\ = 
    \ \boldsymbol{I}_m\,,\quad\sigma\in S_m\,.`
 
-3. Iloczyn dwóch macierzy permutacji jest macierzą permutacji, przy czym
+3. :math:`\,` Iloczyn dwóch macierzy permutacji jest macierzą permutacji, 
+   przy czym
 
    .. math::
       
@@ -149,10 +150,10 @@ wykonanie operacji :math:`\,O_\sigma\,` na macierzy
       \ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
       \qquad\rho,\sigma\in S_m\,.
 
-4. Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` 
+4. :math:`\,` Permutacji identycznościowej :math:`\,\text{id}\in S_m\,` 
    odpowiada macierz jednostkowa :math:`\,\boldsymbol{I}_m.`
 
-5. Macierze permutacji są odwracalne, przy czym
+5. :math:`\,` Macierze permutacji są odwracalne, przy czym
    odwrotność macierzy permutacji jest macierzą permutacji odwrotnej:
    
    .. math::

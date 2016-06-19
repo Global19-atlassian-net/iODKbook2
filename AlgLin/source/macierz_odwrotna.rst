@@ -155,7 +155,7 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
 
    sage: A = matrix([[1,-1,-2],[0, 1, 2],[1,-1,-1]])
    sage: B = A.I
-   sage: pretty_print(html.table([[A, '*', B, '=', A*B]]))
+   sage: table([[A, '*', B, '=', A*B]])
 
 .. math::
    
@@ -163,15 +163,18 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
    1 & -1 & -2 \\
    0 &  1 &  2 \\
    1 & -1 & -1
-   \end{array}\right)\ \ *\ \ \left(\begin{array}{rrr}
-                               1 & 1 &  0 \\
-                               2 & 1 & -2 \\
-                              -1 & 0 &  1
-                              \end{array}\right)\quad =\quad\left(\begin{array}{rrr}
-                                                            1 & 0 & 0 \\
-                                                            0 & 1 & 0 \\
-                                                            0 & 0 & 1
-                                                            \end{array}\right)\,.
+   \end{array}\right)\ \ *\ \ 
+   \left(\begin{array}{rrr}
+    1 & 1 &  0 \\
+    2 & 1 & -2 \\
+   -1 & 0 &  1
+   \end{array}\right)
+   \quad =\quad
+   \left(\begin{array}{rrr}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+   \end{array}\right)\,.
 
 
 

@@ -48,7 +48,7 @@ Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
                         [0, 0, 1, 4,-3, 2],
                         [1, 3, 1, 6,-4, 4]])
    
-   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
    :label: 09
@@ -427,11 +427,18 @@ Ostatecznie, ogólne rozwiązanie jednorodnego układu :eq:`13` ma postać
 .. math::
    :label: 20
 
-   \left[\begin{array}{c} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{array}\right]\quad =\quad  
-   s\ \,\left[\begin{array}{r} -3  \\  1  \\  0  \\  0  \\  0 \end{array}\right]\ +\ 
-   t\ \,\left[\begin{array}{r} -2  \\  0  \\ -4  \\  1  \\  0 \end{array}\right]\ +\ 
-   u\ \,\left[\begin{array}{r}  1  \\  0  \\  3  \\  0  \\  1 \end{array}\right]\,,\qquad
-   s,t,u\,\in\,Q\,,
+   \left[\begin{array}{c} 
+   x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 
+   \end{array}\right]\quad =\quad s\ \,
+   \left[\begin{array}{r}
+   -3  \\  1  \\  0  \\  0  \\  0 
+   \end{array}\right]\ +\ t\ \,
+   \left[\begin{array}{r} 
+   -2  \\  0  \\ -4  \\  1  \\  0 
+   \end{array}\right]\ +\ u\ \,
+   \left[\begin{array}{r}  
+   1  \\  0  \\  3  \\  0  \\  1 
+   \end{array}\right]\,,\qquad s,t,u\,\in\,Q\,,
 
 zgodną z rozwiązaniem :eq:`11` układu niejednorodnego. :math:`\\`
 
@@ -440,8 +447,8 @@ zgodną z rozwiązaniem :eq:`11` układu niejednorodnego. :math:`\\`
 Użyjemy teraz narzędzi systemu Sage do przeprowadzenia 
 opisanych operacji macierzowych.
 
-1. Przekształcenie macierzy :math:`\,\boldsymbol{A}\,` do zredukowanej postaci 
-   schodkowej :math:`\,\boldsymbol{C}\,` (wzór :eq:`15`):
+1. :math:`\,` Przekształcenie macierzy :math:`\,\boldsymbol{A}\,` do 
+   zredukowanej postaci schodkowej :math:`\,\boldsymbol{C}\,` (wzór :eq:`15`):
 
    .. code-block:: python
 
@@ -455,10 +462,10 @@ opisanych operacji macierzowych.
       [ 0  0  1  4 -3]
       [ 0  0  0  0  0]
 
-2. | Utworzenie macierzy :math:`\,\boldsymbol{D}\,` poprzez przestawienie
-     drugiej i trzeciej kolumny macierzy :math:`\,\boldsymbol{C}\,`
-   | i zaznaczenie struktury blokowej macierzy :math:`\,\boldsymbol{D}\,` 
-     (wzór :eq:`16`):
+2. | :math:`\,` Utworzenie macierzy :math:`\,\boldsymbol{D}\,` poprzez 
+     przestawienie drugiej i trzeciej kolumny  
+   | macierzy :math:`\,\boldsymbol{C}\,` i zaznaczenie struktury blokowej
+     macierzy :math:`\,\boldsymbol{D}\,` (wzór :eq:`16`):
 
    .. code-block:: python
 
@@ -470,7 +477,7 @@ opisanych operacji macierzowych.
       [-----+--------]
       [ 0  0| 0  0  0]
 
-3. Wyodrębnienie bloku :math:`\,\boldsymbol{F_{23}}\,`
+3. :math:`\,` Wyodrębnienie bloku :math:`\,\boldsymbol{F_{23}}\,`
    i utworzenie macierzy :math:`\,\boldsymbol{Y}\ ` (wzór :eq:`17`):
 
    .. code-block:: python
@@ -486,7 +493,7 @@ opisanych operacji macierzowych.
       [ 0  1  0]
       [ 0  0  1]
 
-4. Sprawdzenie, że iloczyn macierzy 
+4. :math:`\,` Sprawdzenie, że iloczyn macierzy 
    :math:`\,\boldsymbol{D}\ \,\text{i}\ \,\boldsymbol{Y}\,`
    równa się macierzy zerowej 3. stopnia :math:`\\` (wzór :eq:`18`):
 
@@ -499,10 +506,10 @@ opisanych operacji macierzowych.
       [-----]
       [0 0 0]
 
-5. | Utworzenie macierzy :math:`\,\boldsymbol{X}\,` przez przestawienie
-     drugiego i trzeciego wiersza macierzy :math:`\,\boldsymbol{Y}\,`
-   | i usunięcie struktury blokowej macierzy :math:`\,\boldsymbol{X}\,` 
-     (wzór :eq:`19`):
+5. | :math:`\,` Utworzenie macierzy :math:`\,\boldsymbol{X}\,` przez 
+     przestawienie drugiego i trzeciego wiersza       
+   | macierzy :math:`\,\boldsymbol{Y}\,` i usunięcie struktury blokowej 
+     macierzy :math:`\,\boldsymbol{X}\,` (wzór :eq:`19`):
 
    .. code-block:: python
 
@@ -515,7 +522,7 @@ opisanych operacji macierzowych.
       [ 0  1  0]
       [ 0  0  1]
 
-6. Sprawdzenie, że otrzymana macierz :math:`\,\boldsymbol{X}\,` 
+6. :math:`\,` Sprawdzenie, że otrzymana macierz :math:`\,\boldsymbol{X}\,` 
    spełnia równanie :eq:`14`:
 
    .. code-block:: python

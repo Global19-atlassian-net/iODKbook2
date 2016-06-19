@@ -8,7 +8,8 @@ Grupa permutacji :math:`\,n\,` elementów
 *Permutacja* skończonego zbioru :math:`\,X=\{1,2,\dots,n\}\,` 
 jest (wzajemnie jednoznacznym) :math:`\\` odwzorowaniem tego zbioru na siebie.
 
-Zbiór wszystkich permutacji zbioru :math:`\,X=\{1,2,\dots,n\}\,` oznaczamy :math:`\,S_n.`
+Zbiór wszystkich permutacji zbioru :math:`\,X=\{1,2,\dots,n\}\,` 
+oznaczamy :math:`\,S_n.`
 
 Wygodnym sposobem przedstawienia permutacji :math:`\,\sigma\in S_n\,` jest zapis dwuwierszowy:
 
@@ -40,7 +41,8 @@ to złożenie :math:`\,\rho\circ\sigma\,` określone jest przez:
 
 .. math::
    
-   (\rho\circ\sigma)(k)\ =\ \rho\,[\,\sigma(k)\,]\,,\qquad k\in\{1,2,\dots,n\}\,.
+   (\rho\circ\sigma)(k)\ =
+   \ \rho\,[\,\sigma(k)\,]\,,\qquad k\in\{1,2,\dots,n\}\,.
 
 W zapisie dwuwierszowym:
 
@@ -63,10 +65,9 @@ W zapisie dwuwierszowym:
          \end{array}\right)\,.
 
 Należy zwrócić uwagę na kolejność wykonywania operacji: :math:`\\`
-dla każdej liczby :math:`\,k\in\{1,2,\dots,n\}\,` najpierw wyznaczamy obraz :math:`\,k\,`
-przy permutacji :math:`\,\sigma,\ ` :math:`\\` 
-a następnie :math:`\,` - :math:`\,` obraz otrzymanego wyniku przy permutacji :math:`\,\rho.\ ` 
-Przykład dla :math:`\,n=5:`
+dla każdej liczby :math:`\,k\in\{1,2,\dots,n\}\,` 
+najpierw wyznaczamy obraz :math:`\,k\,` przy permutacji :math:`\,\sigma,\ ` 
+:math:`\\` a następnie :math:`\,` - :math:`\,` obraz otrzymanego wyniku przy permutacji :math:`\,\rho.\ ` Przykład dla :math:`\,n=5:`
  
 .. math::
    
@@ -80,16 +81,19 @@ Przykład dla :math:`\,n=5:`
    \;
 
 **Twierdzenie.** :math:`\,` 
-Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą :math:`\ \ (n=1,2,\dots).`
+Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą 
+:math:`\ \ (n=1,2,\dots).`
 
 **Dowód.**
 
-0. Złożenie dwóch permutacji ze zbioru :math:`\,S_n\,` 
+0. :math:`\,` Złożenie dwóch permutacji ze zbioru :math:`\,S_n\,` 
    jest również permutacją należącą do tego zbioru.
-   Oznacza to, że składanie permutacji :math:`\,\circ\,` jest działaniem w zbiorze :math:`\,S_n.`
+   Oznacza to, że składanie permutacji :math:`\,\circ\,` jest działaniem 
+   w zbiorze :math:`\,S_n.`
 
-1. Składanie permutacji, jako składanie odwzorowań, jest łączne. :math:`\\`
-   Rzeczywiście, :math:`\,` jeżeli :math:`\,\rho,\sigma,\tau\in S_n,\ ` 
+1. :math:`\,` Składanie permutacji, jako składanie odwzorowań, 
+   jest łączne. :math:`\\` Rzeczywiście, :math:`\,` jeżeli 
+   :math:`\,\rho,\sigma,\tau\in S_n,\ ` 
    to dla każdego :math:`\,k\in\{1,2,\dots,n\}:`
 
    .. math::
@@ -110,7 +114,8 @@ Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą :math:`\ \ (n=1,2
    :math:`\qquad\quad\rho\circ(\sigma\circ\tau)\ =\ 
    (\rho\circ\sigma)\circ\tau\,,\qquad\rho,\sigma,\tau\in S_n\,.`
 
-2. Elementem neutralnym dla składania jest permutacja identycznościowa:
+2. :math:`\,` Elementem neutralnym dla składania 
+   jest permutacja identycznościowa:
 
    .. math::
       
@@ -119,24 +124,29 @@ Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą :math:`\ \ (n=1,2
                     1 & 2 & 3 & \dots & n \end{array}\right)\,.
 
    Faktycznie, łatwo sprawdzić, że 
-   :math:`\quad\sigma\circ\text{id}\ =\ \text{id}\circ\sigma\ =\ \sigma\,,\quad\sigma\in S_n.`
+   :math:`\quad\sigma\circ\text{id}\ =\ \text{id}\circ\sigma\ =
+   \ \sigma\,,\quad\sigma\in S_n.`
 
-3. Dla każdej permutacji :math:`\ \sigma\in S_n\ ` istnieje permutacja odwrotna
-   :math:`\ \sigma^{-1}\in S_n\ ` taka, :math:`\\` 
-   że :math:`\ \ \sigma\circ\sigma^{-1}\ =\ \,\sigma^{-1}\circ\,\sigma\ =\ \text{id}\,.\ `
-   Mianowicie,
+3. :math:`\,` Dla każdej permutacji :math:`\ \sigma\in S_n\ ` istnieje 
+   permutacja odwrotna :math:`\ \sigma^{-1}\in S_n\ ` taka, :math:`\\` że 
+   :math:`\ \ \sigma\circ\sigma^{-1}\ =\ \,\sigma^{-1}\circ\,\sigma\ =
+   \ \text{id}\,.\ ` Mianowicie,
 
    .. math::
       
       \text{jeżeli}\quad
-      \sigma\ =\ \left(\begin{array}{cccccc} 1  &  2  &  3  & \dots &  n \\
-                                            a_1 & a_2 & a_3 & \dots & a_n \end{array}\right)\,,
+      \sigma\ =\ \left(\begin{array}{cccccc} 
+      1  &  2  &  3  & \dots &  n \\
+      a_1 & a_2 & a_3 & \dots & a_n 
+      \end{array}\right)\,,
       \quad\text{to}\quad\ 
-      \sigma^{-1}\ =\ \left(\begin{array}{cccccc} a_1 & a_2 & a_3 & \dots & a_n \\
-                                                   1  &  2  &  3  & \dots &  n \end{array}\right)\,.
+      \sigma^{-1}\ =\ \left(\begin{array}{cccccc} 
+      a_1 & a_2 & a_3 & \dots & a_n \\
+      1  &  2  &  3  & \dots &  n 
+      \end{array}\right)\,.
 
-W dalszym ciągu będziemy opuszczać symbol :math:`\,\circ\ ` składania permutacji,
-a złożenie permutacji będziemy nazywać ich iloczynem:
+W dalszym ciągu będziemy opuszczać symbol :math:`\,\circ\ ` składania 
+permutacji, a złożenie permutacji będziemy nazywać ich iloczynem:
 
 .. math::
    
@@ -154,7 +164,8 @@ istnieje podzbiór :math:`\ Y=\{a_1,a_2,\dots,a_k\}\ ` taki, że
 
 .. math::
    
-   \sigma(a_1)=a_2,\quad\sigma(a_2)=a_3,\quad\dots,\quad\sigma(a_{k-1})=a_k,\quad\sigma(a_k)=a_1,
+   \sigma(a_1)=a_2,\quad\sigma(a_2)=a_3,\quad\dots,\quad\sigma(a_{k-1})=
+   a_k,\quad\sigma(a_k)=a_1,
 
    \text{oraz}\qquad\sigma(i)=i\qquad\text{dla}\qquad i\notin Y\,.
 
@@ -188,7 +199,8 @@ Natomiast permutacja
 3 & 2 & 1 & 5 & 4 \end{array}\right)\quad`
 nie jest cyklem.
 
-Przy jednowierszowym zapisie permutacji cyklicznej można przestawić pierwszy wyraz na ostatnie miejsce bądź ostatni na miejsce pierwsze, np.:
+Przy jednowierszowym zapisie permutacji cyklicznej można przestawić 
+pierwszy wyraz na ostatnie miejsce bądź ostatni na miejsce pierwsze, np.:
 
 .. math::
    
@@ -200,34 +212,41 @@ Cykl 1-wyrazowy jest permutacją identycznościową:
    
    S_n\,\ni\,\text{id}\ =\ (1)\ =\ (2)\ =\ \dots\ =\ (n)\,.
 
-Cykl 2-wyrazowy :math:`\ \tau_{ij}=(i,j)=(j,i)\ ` nazywamy *transpozycją*. Przykład:
+Cykl 2-wyrazowy :math:`\ \tau_{ij}=(i,j)=(j,i)\ ` nazywamy *transpozycją*. 
+Przykład:
 
 .. math::
    
    S_6\,\ni\,\tau_{25}\ =\ (2,5)\ =\ \left(\begin{array}{cccccc}
                                      1 & 2 & 3 & 4 & 5 & 6 \\
-                                     1 & 5 & 3 & 4 & 2 & 6 \end{array}\right)\,.
+                                     1 & 5 & 3 & 4 & 2 & 6 
+                                     \end{array}\right)\,.
 
-Cykl :math:`\,k`-wyrazowy można zapisać w postaci iloczynu :math:`\ k-1\ ` transpozycji
-:math:`\ (k\geq 2):`
+Cykl :math:`\,k`-wyrazowy można zapisać w postaci iloczynu :math:`\ k-1\ ` 
+transpozycji :math:`\ (k\geq 2):`
 
 .. math::
    
-   (a_1,a_2,a_3,\dots,a_{k-1},a_k)\ =\ (a_1,a_k)(a_1,a_{k-1},\ \dots,\ (a_1,a_3)(a_1,a_2)\,.
+   (a_1,a_2,a_3,\dots,a_{k-1},a_k)\ =
+   \ (a_1,a_k)(a_1,a_{k-1},\ \dots,\ (a_1,a_3)(a_1,a_2)\,.
 
 **Uwaga:** :math:`\,` kolejność czynników po prawej stronie jest istotna!
 
-Dwa cykle, :math:`\ \rho=(a_1,a_2,\dots,a_k),\ \sigma=(b_1,b_2,\dots,b_l)\in S_n\,,\ `
+Dwa cykle, 
+:math:`\ \rho=(a_1,a_2,\dots,a_k),\ \sigma=(b_1,b_2,\dots,b_l)\in S_n\,,\ `
 są *rozłączne*, gdy odpowiadające im podzbiory 
-:math:`\ Y_{\rho}=\{a_1,a_2,\dots,a_k\},` :math:`\ Y_{\sigma}=\{b_1,b_2,\dots,b_l\}\ `
+:math:`\ Y_{\rho}=\{a_1,a_2,\dots,a_k\},` 
+:math:`\ Y_{\sigma}=\{b_1,b_2,\dots,b_l\}\ `
 są rozłączne: :math:`\ Y_{\rho}\cap Y_{\sigma}=\emptyset\,.\ \,`
-Dla przykładu, w grupie :math:`\ S_7\ ` cykle :math:`\ (3,6,2)\ \ \text{i}\ \ (1,7,4,5)\ `
-są rozłączne, a cykle :math:`\ (4,2,5,1)\ \ \text{i}\ \ (3,1,6,2)\ ` nie są rozłączne.
-Zauważmy, że jeżeli cykle :math:`\ \rho\ \ \text{i}\ \ \sigma\ ` są rozłączne, 
-to w iloczynie są przemienne: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
+Dla przykładu, w grupie 
+:math:`\ S_7\ ` cykle :math:`\ (3,6,2)\ \ \text{i}\ \ (1,7,4,5)\ `
+są rozłączne, a cykle :math:`\ (4,2,5,1)\ \ \text{i}\ \ (3,1,6,2)\ ` 
+nie są rozłączne. Zauważmy, że jeżeli cykle 
+:math:`\ \rho\ \ \text{i}\ \ \sigma\ ` są rozłączne, to w iloczynie są przemienne: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
 
 **Twierdzenie.** :math:`\\`
-Każda permutacja jest cyklem albo może być przedstawiona w postaci iloczynu cykli rozłącznych.
+Każda permutacja jest cyklem albo może być przedstawiona 
+w postaci iloczynu cykli rozłącznych.
 Przedstawienie takie jest jednoznaczne z dokładnością do kolejności czynników.
 
 Przykład:
@@ -238,7 +257,8 @@ Przykład:
 
 **Wniosek.** :math:`\\`
 Każdą permutację :math:`\ \sigma\in S_n,\ ` gdzie :math:`\ n\geq 2,\ `
-można przedstawić w postaci iloczynu transpozycji (przedstawienie takie nie jest jednoznaczne).
+można przedstawić w postaci iloczynu transpozycji 
+(przedstawienie takie nie jest jednoznaczne).
 Przykład:
 
 .. math::
@@ -255,38 +275,44 @@ Jeżeli permutacja :math:`\ \sigma\in S_n\ ` ma dwa różne rozkłady na iloczyn
 
 .. math::
    
-   \sigma\ =\ \tau_1\,\tau_2\,\dots\,\tau_r\ =\ \tau'_1\,\tau'_2\,\dots\,\tau'_s\,,
+   \sigma\ =\ \tau_1\,\tau_2\,\dots\,\tau_r\ =
+   \ \tau'_1\,\tau'_2\,\dots\,\tau'_s\,,
 
 to :math:`\quad (-1)^r\,=\ (-1)^s\,.`
 
 **Wniosek.** :math:`\\`
-Jakkolwiek rozkład danej permutacji na iloczyn transpozycji nie jest jednoznaczny, 
-to jednak przy każdym takim rozkładzie parzystość liczby czynników jest taka sama.
-Pozwala to określić funkcję 
-:math:`\,` - :math:`\,` znak permutacji sgn (od łac. signum) :math:`\,` - :math:`\,` następująco:
+Jakkolwiek rozkład danej permutacji na iloczyn transpozycji nie jest 
+jednoznaczny, to jednak przy każdym takim rozkładzie parzystość 
+liczby czynników jest taka sama. Pozwala to określić funkcję 
+:math:`\,` - :math:`\,` znak permutacji sgn (od łac. signum) 
+:math:`\,` - :math:`\,` następująco:
 
 .. math::
    
    \text{sgn}:\qquad S_n\,\ni\,\sigma\quad\rightarrow
    \quad\text{sgn}\,\sigma\ :\,=\ (-1)^r\,\in\,\{-1,1\}\,,
 
-gdzie :math:`\,r\,` jest liczbą czynników w dowolnym rozkładzie permutacji :math:`\ \sigma\ `
-na iloczyn transpozycji.
-Dodatkowo umawiamy się, że jeśli :math:`\ \sigma\in S_1\ ` (wtedy :math:`\,\sigma=\text{id}`),
-:math:`\ ` to z definicji :math:`\,\text{sgn}\,\sigma = +1.`
+gdzie :math:`\,r\,` jest liczbą czynników w dowolnym rozkładzie permutacji 
+:math:`\ \sigma\ ` na iloczyn transpozycji.
+Dodatkowo umawiamy się, że jeśli :math:`\ \sigma\in S_1\ ` 
+(wtedy :math:`\,\sigma=\text{id}`), :math:`\ ` to z definicji 
+:math:`\,\text{sgn}\,\sigma = +1.`
 
-Permutacja :math:`\ \sigma\in S_n\ ` jest *parzysta*, gdy :math:`\,\text{sgn}\,\sigma = +1\,,\ `
+Permutacja :math:`\ \sigma\in S_n\ ` jest *parzysta*, 
+gdy :math:`\,\text{sgn}\,\sigma = +1\,,\ `
 oraz jest *nieparzysta*, gdy :math:`\,\text{sgn}\,\sigma = -1\,.`
 
 Na tej zasadzie permutacja w równaniu :eq:`ex` jest nieparzysta. 
 
 **Twierdzenie.** :math:`\\`
-W grupie :math:`\,S_n\ ` jest tyle samo permutacji parzystych, co nieparzystych :math:`\,(n>1).\\`
+W grupie :math:`\,S_n\ ` jest tyle samo permutacji parzystych, 
+co nieparzystych :math:`\,(n>1).\\`
 
 Rozkład permutacji na iloczyn transpozycji można posunąć dalej, wykorzystując
 
 **Twierdzenie.** :math:`\\`
-Każda transpozycja jest iloczynem nieparzystej ilości transpozycji liczb sąsiednich.
+Każda transpozycja jest iloczynem nieparzystej ilości 
+transpozycji liczb sąsiednich.
 
 **Dowód.** :math:`\,` Niech :math:`\,i<j.\ ` Teza wynika z równości
 
@@ -300,13 +326,17 @@ Każda transpozycja jest iloczynem nieparzystej ilości transpozycji liczb sąsi
 
 w której po prawej stronie występuje :math:`\,2(j-i-1)+1=2(j-i)-1\ ` czynników, będących transpozycjami liczb sąsiednich. 
 Równość tę można sprawdzić bezpośrednio, porównując obrazy wszystkich liczb 
-:math:`\,k\in\{1,2,\dots,n\}\ ` przy zastosowaniu permutacji po lewej i prawej stronie.
+:math:`\,k\in\{1,2,\dots,n\}\ ` przy zastosowaniu permutacji 
+po lewej i prawej stronie.
 
-**Przykład.**
+**Przykład.**:math:`\qquad (1,4)\ =\ (1,2)\,(2,3)\,(3,4)\,(3,2)\,(2,1)\ =
+\ (1,2)\,(2,3)\,(3,4)\,(2,3)\,(1,2)\,.`
 
-.. math::
-   
-   (1,4)\ =\ (1,2)\,(2,3)\,(3,4)\,(3,2)\,(2,1)\ =\ (1,2)\,(2,3)\,(3,4)\,(2,3)\,(1,2)\,.
+
+.. .. math::
+      
+      (1,4)\ =\ (1,2)\,(2,3)\,(3,4)\,(3,2)\,(2,1)\ =
+      \ (1,2)\,(2,3)\,(3,4)\,(2,3)\,(1,2)\,.
 
 **Wniosek.** :math:`\,` 
 Każdą permutację :math:`\,\sigma\in S_n\ ` 
@@ -314,35 +344,6 @@ można zapisać w postaci iloczynu transpozycji liczb sąsiednich :math:`\,(n>1)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                
 
 

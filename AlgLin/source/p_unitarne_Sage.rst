@@ -5,20 +5,18 @@ Zastosowanie pakietu Sage
 Iloczyn skalarny
 ~~~~~~~~~~~~~~~~
 
-Iloczyn skalarny wektorów :math:`\quad
-\boldsymbol{x}\,=\,
+Iloczyn skalarny wektorów :math:`\quad\boldsymbol{x}\,=\,
 \left[\begin{array}{c} x_1 \\ x_2 \\ \dots \\ x_n \end{array}\right]\,,
-\quad
-\boldsymbol{y}\,=\,
+\quad\boldsymbol{y}\,=\,
 \left[\begin{array}{c} y_1 \\ y_2 \\ \dots \\ y_n \end{array}\right]\quad
 \in K^n\,,` :math:`\\`
 
-gdzie :math:`\ K=R\ \,` lub :math:`\ K=C\,,\ ` można obliczyć stosując operację mnożenia 
-:math:`\,` * :math:`\,`  bądź metody Sage'a:  
+gdzie :math:`\ K=R\ \,` lub :math:`\ K=C\,,\ ` można obliczyć stosując operację mnożenia :math:`\,` * :math:`\,`  bądź metody Sage'a:  
 :math:`\,` ``dot_product()``, :math:`\,` ``hermitian_inner_product()``, 
 :math:`\,` ``inner_product()``.
 
-.. Metoda :math:`\,` ``dot_product()`` :math:`\,` oblicza iloczyn skalarny według wzoru
+.. Metoda :math:`\,` ``dot_product()`` :math:`\,` oblicza 
+   iloczyn skalarny według wzoru
 
 Pierwsze dwa sposoby obliczają iloczyn skalarny według wzoru
 
@@ -42,7 +40,8 @@ w postaci symbolicznej i sprawdza, czy obydwa sposoby są równoważne:
 
    x1*y1 + x2*y2 + x3*y3 + x4*y4 True
 
-Wektory mogą pochodzić z różnych pierścieni, jeśli operacje na ich elementach mają sens:
+Wektory mogą pochodzić z różnych pierścieni, 
+jeśli operacje na ich elementach mają sens:
 
 .. code-block:: python
    
@@ -53,7 +52,8 @@ Wektory mogą pochodzić z różnych pierścieni, jeśli operacje na ich element
    
    7.0 Complex Double Field
 
-Metoda :math:`\,` ``hermitian_inner_product()`` :math:`\,` wylicza iloczyn skalarny w postaci
+Metoda :math:`\,` ``hermitian_inner_product()`` :math:`\,` 
+wylicza iloczyn skalarny w postaci
 
 .. math::
    
@@ -76,7 +76,8 @@ odpowiedniej dla unitarnej przestrzeni :math:`\,C^n\ \,`
    Błędny wynik:      I - 4
    Poprawny wynik: -7*I + 6
 
-Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej ogólnie
+Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` 
+można też określić bardziej ogólnie
 
 .. math::
    :label: xTAy
@@ -85,7 +86,8 @@ Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej o
    \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{y}\ \ =\ \ 
    \sum_{i,\,j=1}^n\ a_{ij}\;x_i\,y_j\,,
       
-gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierzą symetryczną i dodatnio określoną:
+gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` 
+jest macierzą symetryczną i dodatnio określoną:
 
 .. math::
    :label: ATA
@@ -100,13 +102,15 @@ gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierz
    \boldsymbol{x}\in R^n\,.
 
 (warunek :eq:`ATA` będzie spełniony wtedy i tylko wtedy, gdy 
-:math:`\ \boldsymbol{A}=\boldsymbol{C}^T\boldsymbol{C}\,,\ \ \det\boldsymbol{C}\neq 0\,`).
+:math:`\ \boldsymbol{A}=
+\boldsymbol{C}^T\boldsymbol{C}\,,\ \ \det\boldsymbol{C}\neq 0\,`).
 
 Do wyliczenia iloczynu skalarnego w postaci :eq:`xTAy` służy metoda 
 :math:`\,` ``inner_product()``. 
 Macierz :math:`\,\boldsymbol{A}\ ` może być tam zadeklarowana
 w definicji pierścienia, do którego należy wektor :math:`\,\boldsymbol{x}.`
-Przy braku takiej deklaracji metoda działa tak, jak :math:`\,` ``dot_product()``:
+Przy braku takiej deklaracji 
+metoda działa tak, jak :math:`\,` ``dot_product()``:
 
 .. code-block:: python
 
@@ -129,9 +133,9 @@ Przestawienie czynników daje więc inny wynik
 .. code-block:: python
 
    sage: C= matrix(QQ,[[ 2,-1, 0, 3],
-   ...                 [ 4,-2, 1,-1],
-   ...                 [ 4, 1, 2,-5],
-   ...                 [-3, 0, 2, 0]])
+                       [ 4,-2, 1,-1],
+                       [ 4, 1, 2,-5],
+                       [-3, 0, 2, 0]])
    
    sage: A = C.T*C
    
@@ -148,10 +152,10 @@ Przestawienie czynników daje więc inny wynik
    sage: test_yx = yix==(y.row()*x.column())[0,0]    
    
    sage: print "Iloczyn skalarny z macierzą A: <x,y> =",\
-   ...   xiy, test_xy
+         xiy, test_xy
    
    sage: print "Zwykły iloczyn skalarny:       <y,x> = ",\
-   ...   yix, test_yx
+         yix, test_yx
 
    Iloczyn skalarny z macierzą A: <x,y> = -55 True
    Zwykły iloczyn skalarny:       <y,x> =  -7 True
@@ -187,7 +191,8 @@ Szczególne przypadki:
 
 Polecenie ``norm`` może wystąpić jako funkcja: ``norm(x)``, 
 bądź jako metoda: ``x.norm(p)``, :math:`\\`
-przy czym domyślną wartością parametru :math:`\,p\ ` jest 2, co odpowiada normie euklidesowej.
+przy czym domyślną wartością parametru :math:`\,p\ ` jest 2, 
+co odpowiada normie euklidesowej.
 
 .. admonition:: Poeksperymentuj z Sage:
    
@@ -213,14 +218,17 @@ Metoda ``norm()`` wylicza również normę macierzową
    
    \|\boldsymbol{A}\|_p\ \ :\,=\ \ \max_{\boldsymbol{x}\neq\boldsymbol{0}}\ 
    \frac{\|\boldsymbol{A}\boldsymbol{x}\|_p}{\|\boldsymbol{x}\|_p}\ ,\qquad
-   \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(K)\,,\quad 1 \leq p \leq \infty\,,
+   \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(K)\,,
+   \quad 1 \leq p \leq \infty\,,
 
-indukowaną w algebrze :math:`\,M_n(K)\ ` przez :math:`\,p`-normę w :math:`\,K^n\,,\ ` 
+indukowaną w algebrze 
+:math:`\,M_n(K)\ ` przez :math:`\,p`-normę w :math:`\,K^n\,,\ ` 
 a także macierzową normę Frobeniusa
 
 .. math::
    
-   \|\boldsymbol{A}\|_F\ \ :\,=\ \ \sqrt{\,\sum_{i,\,j=1}^n\ |a_{ij}|^2}\,,\qquad
+   \|\boldsymbol{A}\|_F\ \ :\,=\ \ \sqrt{\,\sum_{i,\,j=1}^n
+   \ |a_{ij}|^2}\,,\qquad
    \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(K)\,,
 
 która jest bezpośrednim uogólnieniem wektorowej normy euklidesowej. :math:`\\`
@@ -236,10 +244,10 @@ Szczególnymi przypadkami normy :eq:`m_norm` są:
 
 .. **Przykłady dla**
    :math:`\quad\boldsymbol{x}\ =\ 
-   \left[\begin{array}{c} 1-2\,i \\ 3\,i \\ -4 \\ -1+i \end{array}\right]\,,\quad
-   \boldsymbol{y}\ =\ 
-   \left[\begin{array}{c} -2 \\ 2-i \\ 1 \\ 3+2\,i \end{array}\right]\quad
-   \in\ C^4\,.`
+   \left[\begin{array}{c} 1-2\,i \\ 3\,i \\ -4 \\ -1+i \end{array}\right]\,,
+   \quad\boldsymbol{y}\ =\ 
+   \left[\begin{array}{c} -2 \\ 2-i \\ 1 \\ 3+2\,i \end{array}\right]
+   \quad\in\ C^4\,.`
 
 .. admonition:: Poeksperymentuj z Sage:
    
@@ -269,7 +277,7 @@ Iloczyny skalarne i normy wektorów zespolonych.
    sage: # Sprawdzenie nierówności Schwarza:
    sage: print abs(x.hermitian_inner_product(y)) <= norm(x)*norm(y)
    sage: print abs(x.hermitian_inner_product(y)), '<=', \
-   ...   norm(x), '*', norm(y), '=', norm(x)*norm(y), '\n' 
+         norm(x), '*', norm(y), '=', norm(x)*norm(y), '\n' 
 
    sage: # Sprawdzenie nierówności trójkąta:
    sage: print norm(x+y) <= norm(x)+norm(y)    
@@ -286,7 +294,7 @@ Różne normy macierzy kwadratowej i prostokątnej:
 .. sagecellserver::
 
    sage: A = matrix(RR, [[13,-4],
-   ...                   [-4, 7]])
+                         [-4, 7]])
    
    sage: A.norm(1), A.norm(2), A.norm('frob'), A.norm(Infinity)
 
@@ -295,7 +303,7 @@ Różne normy macierzy kwadratowej i prostokątnej:
 .. sagecellserver::
 
    sage: A = matrix(QQbar, [[ 1, 2, 4,  3],
-   ...                      [-1, 0, 3,-10]])
+                            [-1, 0, 3,-10]])
    
    sage: print (A.norm(1),A.norm(2),A.norm('frob'),A.norm(Infinity)),'\n'
    
@@ -309,7 +317,8 @@ Różne normy macierzy kwadratowej i prostokątnej:
 
 :math:`\;`
 
-Dla liczb zespolonych jako wektorów przestrzeni :math:`\,C^1,\ ` naturalną normą jest moduł:
+Dla liczb zespolonych jako wektorów przestrzeni :math:`\,C^1,\ ` 
+naturalną normą jest moduł:
 
 .. math::
    
@@ -328,8 +337,9 @@ zwraca nie moduł, ale kwadrat modułu:
    
    a^2 + b^2
 
-Tego rodzaju "norma" (niespełniająca warunków definicji normy) jest używana w teorii liczb.
-Aby otrzymać prawidłowy wynik, trzeba liczbę zespoloną przekształcić do jednoelementowego
+Tego rodzaju "norma" (niespełniająca warunków definicji normy) 
+jest używana w teorii liczb. Aby otrzymać prawidłowy wynik, 
+trzeba liczbę zespoloną przekształcić do jednoelementowego
 wektora albo jednoelementowej macierzy:
 
 .. code-block:: python 
@@ -344,16 +354,20 @@ wektora albo jednoelementowej macierzy:
 Działania na macierzach
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Operacje na macierzach rzeczywistych bądź zespolonych obsługiwane przez metody Sage'a:
+Operacje na macierzach rzeczywistych bądź zespolonych 
+obsługiwane przez metody Sage'a:
 
-* transpozycja: :math:`\,` ``transpose()``, :math:`\,` w skrócie :math:`\,` ``T`` ;
+* transpozycja: :math:`\,` ``transpose()``, 
+  :math:`\,` w skrócie :math:`\,` ``T`` ;
 
-* sprzężenie zespolone: :math:`\,` ``conjugate()``, :math:`\,` w skrócie :math:`\,` ``C`` ;
+* sprzężenie zespolone: :math:`\,` ``conjugate()``, 
+  :math:`\,` w skrócie :math:`\,` ``C`` ;
 
-* sprzężenie hermitowskie: :math:`\,` ``conjugate_transpose()``, :math:`\,` 
-  w skrócie :math:`\,` ``H`` ;
+* sprzężenie hermitowskie: :math:`\,` ``conjugate_transpose()``, 
+  :math:`\,` w skrócie :math:`\,` ``H`` ;
 
-* odwrotność: :math:`\,` ``inverse()``, :math:`\,` w skrócie :math:`\,` ``I`` .
+* odwrotność: :math:`\,` ``inverse()``, 
+  :math:`\,` w skrócie :math:`\,` ``I`` .
 
 Następujące metody testują określone własności macierzy, a mianowicie:
 
@@ -376,11 +390,11 @@ Następujące metody testują określone własności macierzy, a mianowicie:
 .. code-block:: python
    
    sage: A = matrix(3,[ 1+I, 2-3*I, -1+2*I,
-   ...                 -3+I,   4*I, -2-4*I,
-   ...                  4-I,    -I,  1+3*I])
+                       -3+I,   4*I, -2-4*I,
+                        4-I,    -I,  1+3*I])
    
-   sage: html.table([["Sprzężenie hermitowskie:"],
-   ...               [A, '$\\rightarrow$', A.H]])
+   sage: pretty_print(table([["Sprzężenie hermitowskie:"],
+                      [A, '$\\rightarrow$', A.H]]))
    
    sage: A.is_hermitian(), (A.H*A).is_hermitian()
 
@@ -395,41 +409,6 @@ i+1 & -\,3\,i+2 & 2\,i-1 \\ i-3 & 4\,i & -\,4\,i-2 \\ -\,i+4 & -\,i & 3\,i+1
 \end{array}\right)`
 
 (False, True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

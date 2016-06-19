@@ -27,8 +27,8 @@ dodawaniem elementu przeciwnego w odpowiedniej grupie addytywnej:
 Proste twierdzenia
 ~~~~~~~~~~~~~~~~~~
 
-1.) Iloczyn dowolnego wektora przez liczbę zero równa się wektorowi zerowemu; 
-:math:`\\`
+1.) :math:`\,` Iloczyn dowolnego wektora przez liczbę zero 
+równa się wektorowi zerowemu; :math:`\\`
 pomnożenie wektora zerowego przez dowolną liczbę daje w wyniku wektor zerowy:
 
 .. math::
@@ -87,8 +87,8 @@ Analogicznie dowodzi się drugą część twierdzenia:
 
    \alpha\cdot\theta\,=\,\theta\,.
 
-2.) Iloczyn wektora :math:`\,v\,` przez liczbę przeciwną do :math:`\,\alpha\,` 
-równa się iloczynowi wektora przeciwnego do :math:`\,v\,` 
+2.) :math:`\,` Iloczyn wektora :math:`\,v\,` przez liczbę przeciwną do 
+:math:`\,\alpha\,` równa się iloczynowi wektora przeciwnego do :math:`\,v\,` 
 przez :math:`\,\alpha\,` i równa się wektorowi przeciwnemu do iloczynu wektora 
 :math:`\,v\,` przez :math:`\,\alpha:`
 
@@ -121,7 +121,8 @@ Wniosek: :math:`\ ` kładąc :math:`\,\alpha = 1\,`
 otrzymujemy: :math:`\ \ (-1)\,v\,=\,-\,v\,.`
 
 
-3.) Mnożenie wektorów przez skalary jest rozdzielne względem odejmowania:
+3.) :math:`\,` Mnożenie wektorów przez skalary 
+jest rozdzielne względem odejmowania:
 
 .. math::
    
@@ -144,8 +145,8 @@ przez skalary względem dodawania oraz z udowodnionego już twierdzenia 2.):
    \alpha\cdot v\,+\,[-(\alpha\cdot w)\,]\ =\ 
    \alpha\cdot v\,-\,\alpha\cdot w\,.
 
-4.) Iloczyn skalara i wektora równa się wektorowi zerowemu wtedy i tylko wtedy, 
-gdy skalar jest zerem lub gdy wektor jest wektorem zerowym:
+4.) :math:`\,` Iloczyn skalara i wektora równa się wektorowi zerowemu wtedy 
+i tylko wtedy, gdy skalar jest zerem lub gdy wektor jest wektorem zerowym:
 
 .. math::
    :label: fourth
@@ -404,18 +405,19 @@ kombinacji liniowej wektorów pozostałych.
 Łatwo można uzasadnić następujące użyteczne stwierdzenia :math:`\\`
 (l.z. = liniowo zależny, :math:`\,` l.n. = liniowo niezależny):
 
-1. | Układ :math:`\,(x),\,` składający się z jednego wektora, jest l.z. wtedy
-     i tylko wtedy, gdy :math:`\,x = \theta\,.`
-2. | Jeżeli jakiś podukład danego układu jest l.z., to cały układ jest też l.z.
+1. | :math:`\,` Układ :math:`\,(x),\,` składający się z jednego wektora, 
+     jest l.z. wtedy i tylko wtedy, gdy :math:`\,x = \theta\,.`
+2. | :math:`\,` Jeżeli jakiś podukład danego układu jest l.z., 
+     to cały układ jest też l.z.
    | Wniosek 1.: Każdy układ zawierający wektor zerowy jest l.z.
    | Wniosek 2.: Jeżeli w układzie jakieś dwa wektory są sobie równe, 
      to układ jest l.z.
    | Wniosek 3.: Jeżeli dwa wektory są proporcjonalne:
      :math:`\ x_j = \lambda\,x_i\,,\ ` to układ jest l.z.
-3. | Każdy podukład układu liniowo niezależnego jest l.n.
+3. | :math:`\,` Każdy podukład układu liniowo niezależnego jest l.n.
    | Wniosek: :math:`\ ` Układ l.n. nie zawiera wektora zerowego 
      ani wektorów identycznych lub proporcjonalnych.
-4. | Kolejność wektorów nie ma wpływu 
+4. | :math:`\,` Kolejność wektorów nie ma wpływu 
      na ich liniową zależność albo niezależność.
 
 **Przykład 0.** :math:`\ `
@@ -702,10 +704,11 @@ W praktyce przydatne bywa
 a. :math:`\;` każdy układ liczący więcej niż :math:`\,n\,` wektorów
    jest liniowo zależny;
 b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest bazą.
+   :math:`\\` 
 
 **Przykłady.**
 
-0. W rzeczywistej przestrzeni :math:`\,R(R)\,,\ ` 
+0. :math:`\,` W rzeczywistej przestrzeni :math:`\,R(R)\,,\ ` 
    jak również w zespolonej przestrzeni :math:`\,C(C)\,,`
    bazą może być każdy 1-elementowy układ zawierający różną od zera liczbę 
    rzeczywistą (odpowiednio: zespoloną), :math:`\,` 
@@ -716,7 +719,7 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
    :math:`\ \mathcal{B} = (1,\,i)\,,\ ` z czego wynika, że 
    :math:`\ \text{dim}\,C(R) = 2\,.` 
 
-1. W przestrzeni :math:`\,V\,` wektorów geometrycznych zaczepionych
+1. :math:`\,` W przestrzeni :math:`\,V\,` wektorów geometrycznych zaczepionych
    w punkcie :math:`\,\boldsymbol{O}\,` bazą jest każdy układ 
    trzech wektorów niekomplanarnych. Najczęściej używana jest baza 
    ortonormalna w postaci trójki wzajemnie prostopadłych wektorów jednostkowych: 
@@ -724,7 +727,7 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
    A zatem również w algebraicznym sensie fizyczna przestrzeń 
    jest trójwymiarowa: :math:`\ \text{dim}\,V = 3\,.`
 
-2. W przestrzeni :math:`\,K^n\,` złożonej z :math:`\,n`-elementowych
+2. :math:`\,` W przestrzeni :math:`\,K^n\,` złożonej z :math:`\,n`-elementowych
    wektorów kolumnowych o wyrazach z ciała :math:`\,K\,`
    najwygodniejsza jest *baza kanoniczna*
    :math:`\ \mathcal{E}\,=\,(e_1,e_2,\ldots,e_n)\,,\ ` gdzie
@@ -744,7 +747,7 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
 
    Wynika stąd, że :math:`\ \text{dim}\,K^n = n\,,\ \ n=1,2,\ldots`
 
-3. W podprzestrzeni 
+3. :math:`\,` W podprzestrzeni 
    :math:`\ \ W_p\ =\ \left\{\ \,\left[\begin{array}{c}
    x_1 \\ \ldots \\ x_p \\ 0 \\ \ldots \\ 0
    \end{array}\right]\ :\quad x_i\in K\,,\ \ i =
@@ -753,5 +756,6 @@ b. :math:`\;` każdy liniowo niezależny układ :math:`\,n\,` wektorów jest baz
    gdzie :math:`\ 1 \leq p < n\,,\ `
    bazą będzie układ :math:`\ \mathcal{E}_p = (e_1,e_2,\ldots,e_p)\,,\ `
    skąd :math:`\ \text{dim}\,W_p = p.`
+
 
 

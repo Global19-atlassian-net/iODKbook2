@@ -36,11 +36,11 @@ macierzy przez odpowiednią macierz elementarną.
 Dokładnie, jeżeli :math:`\,\boldsymbol{A}\in M_{m\times n}(K),\ \ ` 
 to :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1:`
 
-#. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =
+#. :math:`\, O_1(i,j)\,\boldsymbol{A}\ =
    \ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
-#. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =
+#. :math:`\, O_2(i,a)\,\boldsymbol{A}\ =
    \ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,\qquad (a\ne 0)`
-#. :math:`\,O_3(i,j,a)\,\boldsymbol{A}\ =
+#. :math:`\, O_3(i,j,a)\,\boldsymbol{A}\ =
    \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,,`
 
 gdzie :math:`\ \boldsymbol{E}_1(i,j),\ \boldsymbol{E}_2(i,a),
@@ -56,12 +56,12 @@ Macierze permutacji
 **Zadanie 1.** :math:`\,`
 Pokaż, że:
 
-1. aby wykonać operację permutacji wierszy 
+1. :math:`\,` aby wykonać operację permutacji wierszy 
    :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
    :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
    należy zastosować ją tylko do pierwszego czynnika iloczynu;
 
-2. wykonanie operacji permutacji wierszy 
+2. :math:`\,` wykonanie operacji permutacji wierszy 
    :math:`\,O_{\sigma}\,` na prostokątnej macierzy 
    :math:`\,\boldsymbol{A}\ ` jest :math:`\\`
    równoważne pomnożeniu (z lewej strony) tej macierzy przez macierz permutacji 
@@ -137,12 +137,12 @@ na macierz jednostkową :math:`\ \boldsymbol{I}_n =
 **Zadanie 1.** :math:`\,`
 Pokaż, że:
 
-1. aby wykonać operację permutacji kolumn :math:`\,O_{\sigma}\,` 
+1. :math:`\,` aby wykonać operację permutacji kolumn :math:`\,O_{\sigma}\,` 
    na iloczynie dwóch macierzy 
    :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
    należy zastosować ją tylko do drugiego czynnika iloczynu;
 
-2. wykonanie operacji permutacji kolumn :math:`\,O_{\sigma}\,` 
+2. :math:`\,` wykonanie operacji permutacji kolumn :math:`\,O_{\sigma}\,` 
    na prostokątnej macierzy :math:`\,\boldsymbol{A}\ ` jest :math:`\\`
    równoważne pomnożeniu (z prawej strony) tej macierzy przez macierz permutacji 
    :math:`\ \boldsymbol{P}_{\sigma}.`

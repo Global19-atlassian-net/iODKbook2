@@ -18,7 +18,7 @@ składa się z następujących kolejnych operacji elementarnych:
 
 .. (pamiętajmy, że w Sage numeracja wierszy zaczyna się od zera):
 
-1. | Od drugiego wiersza macierzy :math:`\,\boldsymbol{A}\,` 
+1. | :math:`\,` Od drugiego wiersza macierzy :math:`\,\boldsymbol{A}\,` 
      odejmujemy podwojony wiersz pierwszy.
    | Operacji :math:`\,O_3(1,0,-2)\,` odpowiada macierz elementarna 
      :math:`\,\boldsymbol{E}^{(1)}=\boldsymbol{E}_3(1,0,-2).\,`
@@ -38,7 +38,7 @@ składa się z następujących kolejnych operacji elementarnych:
                                0 & -8 & -2 \\
                               -2 &  7 &  2\end{array}\right]\,.
 
-2. | Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_1\,` 
+2. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_1\,` 
      dodajemy wiersz pierwszy.
    | Operacji :math:`\,O_3(2,0,1)\,` odpowiada macierz elementarna 
      :math:`\,\boldsymbol{E}^{(2)}=\boldsymbol{E}_3(2,0,1).\,`
@@ -58,7 +58,7 @@ składa się z następujących kolejnych operacji elementarnych:
                                0 & -8 & -2 \\
                                0 &  8 &  3\end{array}\right]\,.
 
-3. | Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_2\,` 
+3. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_2\,` 
      dodajemy wiersz drugi.
    | Operacji :math:`\,O_3(2,1,1)\,` odpowiada macierz elementarna 
      :math:`\,\boldsymbol{E}^{(3)}=\boldsymbol{E}_3(2,1,1).\,`
@@ -208,7 +208,7 @@ Zastosujmy metodę ``LU()`` do macierzy :math:`\,\boldsymbol{A}\,` z przykładu:
    sage: A = matrix(QQ, [[2,1,1], [4,-6,0],[-2,7,2]])
    sage: (P,L,U) = A.LU()
    sage: print A==P*L*U
-   sage: pretty_print(html.table([[A, '=', P, '*', L, '*', U]]))
+   sage: table([[A, '=', P, '*', L, '*', U]])
    
    True
 

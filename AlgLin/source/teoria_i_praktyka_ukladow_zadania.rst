@@ -21,7 +21,7 @@ doprowadź macierz :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej
    A = random_matrix(QQ, n, algorithm='echelonizable',
                      rank=n, upper_bound=6)
 
-   pretty_print(table([["A","=",A]]))
+   table([["A","=",A]])
 
 :math:`\;`
 
@@ -51,6 +51,6 @@ Rozwiąż następnie ten układ dwoma sposobami:
    B = random_matrix(QQ, m,n+1, algorithm='echelonizable', 
                                 rank=3, upper_bound=6)
 
-   pretty_print(table([["B","=",B]]))
+   table([["B","=",B]])
 
 

@@ -114,7 +114,8 @@ Macierz ma :math:`\,` *wierszową postać schodkową*, :math:`\,` gdy:
    jest przesunięty w prawo względem elementu wiodącego wiersza górnego.
 
 .. (począwszy od wiersza drugiego, element wiodący każdego wiersza niezerowego
-   jest przesunięty w prawo względem elementu wiodącego wiersza leżącego bezpośrednio nad nim)
+   jest przesunięty w prawo względem elementu wiodącego wiersza leżącego 
+   bezpośrednio nad nim)
 
 Wynika stąd, że jeżeli w danej kolumnie występuje element wiodący pewnego 
 wiersza, to wszystkie elementy tej kolumny leżące pod tym elementem wiodącym są 
@@ -370,7 +371,8 @@ macierzy :math:`\,\boldsymbol{B}:`
          1 &  5 & -1 & 7 \\
          0 &  1 & -1 & 0
       \end{array}\right] & \rightarrow \\ \\ \\ \\
-      \small{r0=r0-2\,r1:} & & \small{r0,r1,r2=r1,r2,r0:} & & \small{r2=r2+11\,r1:} & \\ \\
+      \small{r0=r0-2\,r1:} & & \small{r0,r1,r2=r1,r2,r0:} & & 
+      \small{r2=r2+11\,r1:} & \\ \\
       \left[\begin{array}{rrrr}
          0 & -11 &  1 & -10 \\
          1 &   5 & -1 &   7 \\
@@ -532,7 +534,7 @@ Macierz rozszerzoną przekształcamy od razu do zredukowanej postaci schodkowej:
                         [2,-3,-1, 1,-1],
                         [1, 0, 7,-4, 4]])
 
-   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
 
@@ -647,11 +649,11 @@ do zredukowanej postaci schodkowej:
 
 .. .. code-block:: python
 
-   sage: B = matrix(QQ,[[1,-1, 2,-1, 1],
-                        [2,-3,-1, 1, 1],
-                        [1, 0, 7,-4, 4]])
-
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+      sage: B = matrix(QQ,[[1,-1, 2,-1, 1],
+                           [2,-3,-1, 1, 1],
+                           [1, 0, 7,-4, 4]])
+      
+      sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
 
@@ -702,7 +704,7 @@ Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
                         [2,-3,-1, 1, 0],
                         [1, 0, 7,-4, 0]])
 
-   sage: pretty_print(html.table([[B, '$\\rightarrow$', B.rref()]]))
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
 
@@ -779,31 +781,6 @@ Ostatecznie, rozwiązanie w postaci wektorowej dane jest przez :math:`\\`
 Porównanie rozwiązań :eq:`03` i :eq:`04` układów w przykładach 2. i 4. sugeruje 
 związek pomiędzy rozwiązaniami układu niejednorodnego i stowarzyszonego z nim 
 układu jednorodnego. Sprawa ta będzie omówiona ogólnie w dalszym rozdziale.
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  
-
-
-  
-
-
-
-
-
-
-
-
 
 
 

@@ -23,11 +23,12 @@ do macierzy :math:`\ \boldsymbol{A}\,` macierzy :math:`\,\boldsymbol{B}\,:`
 
    Zakładamy, jak wyżej, że :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_n(K)\,.` 
 
-   1. Niech :math:`\ O\ ` będzie operacją elementarną. :math:`\,` 
-      Wtedy :math:`\ \,O\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\ =\ 
+   1. :math:`\,` Niech :math:`\ O\ ` będzie operacją elementarną. :math:`\,` 
+      Wtedy 
+      :math:`\ \,O\,\left[\,\boldsymbol{A}\,|\,\boldsymbol{B}\,\right]\ =\ 
       \left[\,O\boldsymbol{A}\,|\,O\boldsymbol{B}\,\right]\,.`
    
-   2. Niech :math:`\ \boldsymbol{C}\in M_n(K)\,.\ \,` Wtedy 
+   2. :math:`\,` Niech :math:`\ \boldsymbol{C}\in M_n(K)\,.\ \,` Wtedy 
       :math:`\ \,\boldsymbol{C}\,\left[\,\boldsymbol{A}\,|\,
       \boldsymbol{B}\,\right]\,=\,\left[\;\boldsymbol{C}\boldsymbol{A}\,|\,
       \boldsymbol{C}\boldsymbol{B}\;\right]\,.`
@@ -168,7 +169,7 @@ Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
    sage: A_1 = IA_1[:,4:]
 
    # Pokazanie macierzy odwrotnej: 
-   sage: pretty_print(html.table([['$A^{-1}$', '=', A_1]]))
+   sage: table([['$A^{-1}$', '=', A_1]])
 
 .. math::
    
@@ -281,7 +282,7 @@ jest :math:`\ \boldsymbol{D}\ =\
    sage: D = AED.matrix_from_columns(range(5,8))
 
    # Iloczyn D*A jest zredukowaną postacią schodkową A:
-   sage: pretty_print(html.table([[D, '*', A, '=', D*A]]))
+   sage: table([[D, '*', A, '=', D*A]])
 
 .. math::
    
