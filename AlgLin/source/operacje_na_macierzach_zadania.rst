@@ -282,20 +282,3 @@ otrzymane metodą eliminacji oraz przez bezpośrednie użycie metody ``inverse()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

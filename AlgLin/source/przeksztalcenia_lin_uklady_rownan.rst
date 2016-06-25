@@ -10,10 +10,14 @@ określenia zbioru rozwiązań jednorodnego układu równań liniowych nad ciał
    :label: set_eqn_0
 
    \begin{array}{r}
-    a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\ + \ \;a_{1n}\,x_n \ \, = \ \ 0 \\
-    a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\ + \ \;a_{2n}\,x_n \ \, = \ \ 0 \\
-    \qquad\qquad\,\ldots\qquad\quad\ldots\qquad\quad\ldots\qquad\ldots\qquad\ \ \,\ldots \\
-    a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\ + \ \;a_{mn}\,x_n \ \, = \ \ 0
+   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\ + \ \;a_{1n}\,x_n \ \, =
+   \ \ 0 \\
+   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\ + \ \;a_{2n}\,x_n \ \, =
+   \ \ 0 \\
+   \qquad\qquad\,\ldots\qquad\quad\ldots\qquad\quad
+   \ldots\qquad\ldots\qquad\ \ \,\ldots \\
+   a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\ + \ \;a_{mn}\,x_n \ \, =
+   \ \ 0 \\
    \end{array}
 
 Układ ma postać macierzową  
@@ -29,8 +33,8 @@ Układ ma postać macierzową
                             \end{array}
                       \right]\,,\quad
    \boldsymbol{X}\ =\ 
-   \left[\begin{array}{c} x_1 \\ x_2 \\ \dots \\ x_n \end{array}\right]\,,\quad
-   \boldsymbol{0}\ =\ 
+   \left[\begin{array}{c} x_1 \\ x_2 \\ \dots \\ x_n \end{array}\right]\,,
+   \quad\boldsymbol{0}\ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ \dots \\ 0 \end{array}\right]\in K^m\,.
 
 Zbiór rozwiązań układu :eq:`set_eqn_0` definiujemy jako

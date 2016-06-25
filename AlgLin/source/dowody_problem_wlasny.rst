@@ -318,7 +318,7 @@ nieosobliwa, co wynika ze wzoru dla wyznacznika Vandermonde'a:
       \lambda_1       & \lambda_2       & \dots & \lambda_n       \\
       \lambda_1^2     & \lambda_2^2     & \dots & \lambda_n^2     \\
       \cdots          & \cdots          &\cdots & \cdots          \\ 
-      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1}
+      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1} \\
    \end{array}\right|
    \quad =\ \ 
    \prod_{1\,\leq\,l\,<\,k\,\leq\,n}^n\ 
@@ -337,7 +337,7 @@ Wykorzystując istnienie macierzy odwrotnej, otrzymujemy
       \lambda_1       & \lambda_2       & \dots & \lambda_n       \\
       \lambda_1^2     & \lambda_2^2     & \dots & \lambda_n^2     \\
       \cdots          & \cdots          &\cdots & \cdots          \\ 
-      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1}
+      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1} \\
    \end{array}\right]^{-1}\ 
    \left[\begin{array}{c} 
       \theta \\ \theta \\ \theta \\ \cdots \\ \theta

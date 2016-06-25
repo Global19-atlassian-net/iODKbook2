@@ -20,8 +20,11 @@ Niech :math:`\,\dim\,V=n.\ ` Dowód przebiega według następującego schematu:
 .. math::
    
    \begin{array}{cccccc}
-                & \mathcal{B}=(v_1,v_2,\dots,v_n) & \longrightarrow & \mathcal{P}=(y_1,y_2,\dots,y_n) & \longrightarrow & \mathcal{Q}=(u_1,u_2,\dots,u_n) \\
-   \text{Baza:} & \text{wyjściowa}                &                 & \text{ortogonalna}              &                 & \text{ortonormalna}
+   & \mathcal{B}=(v_1,v_2,\dots,v_n) & \longrightarrow 
+   & \mathcal{P}=(y_1,y_2,\dots,y_n) & \longrightarrow 
+   & \mathcal{Q}=(u_1,u_2,\dots,u_n) \\
+   \text{Baza:} & \text{wyjściowa} 
+   & & \text{ortogonalna} & & \text{ortonormalna} \\
    \end{array}
 
 Kolejne wektory baz :math:`\ \mathcal{P}\ \ \text{i}\ \ \,\mathcal{Q}\ \,`
@@ -454,9 +457,12 @@ można ten układ przekształcić następująco:
    :nowrap:
    
    \begin{eqnarray*}
-   \boldsymbol{A}\,\boldsymbol{x}                 & \!\! = \!\! & \boldsymbol{b}\,, \\
-   (\boldsymbol{Q}\boldsymbol{R})\,\boldsymbol{x} & \!\! = \!\! & \boldsymbol{b}\,, \\   
-   \boldsymbol{Q}(\boldsymbol{R}\boldsymbol{x})   & \!\! = \!\! & \boldsymbol{b}\,.
+   \boldsymbol{A}\,\boldsymbol{x}                 & 
+   \! = \! & \boldsymbol{b}\,, \\
+   (\boldsymbol{Q}\boldsymbol{R})\,\boldsymbol{x} & 
+   \! = \! & \boldsymbol{b}\,, \\   
+   \boldsymbol{Q}(\boldsymbol{R}\boldsymbol{x})   & 
+   \! = \! & \boldsymbol{b}\,. \\
    \end{eqnarray*}
 
 Ortogonalność macierzy :math:`\,\boldsymbol{Q}\,` pozwala zastąpić kosztowną 
@@ -520,9 +526,9 @@ Znając :math:`\,\boldsymbol{Q},\ ` macierz :math:`\,\boldsymbol{R}\ ` można
    -2 & 8 & 19 \\ -2 & 11 & -14 \\ 1 & -7 & -8 
    \end{array}\right) & = &
    \left(\begin{array}{rrr}
-   -\textstyle\frac{2}{3} & -\textstyle\frac{2}{3} & \textstyle\frac{1}{3} \\
-   -\textstyle\frac{2}{3} & \textstyle\frac{1}{3} & -\textstyle\frac{2}{3} \\
-    \textstyle\frac{1}{3} & -\textstyle\frac{2}{3} & -\textstyle\frac{2}{3} 
+   -\textstyle\frac{2}{3} & -\textstyle\frac{2}{3} & \textstyle\frac{1}{3}  \\
+   -\textstyle\frac{2}{3} & \textstyle\frac{1}{3} & -\textstyle\frac{2}{3}  \\
+    \textstyle\frac{1}{3} & -\textstyle\frac{2}{3} & -\textstyle\frac{2}{3} \\ 
    \end{array}\right) & * &
    \left(\begin{array}{rrr} 
    3 & -15 & -6 \\ 0 & 3 & -12 \\ 0 & 0 & 21 
@@ -548,12 +554,12 @@ wykonane w ciele ``RDF`` liczb podwójnej precyzji.
    \begin{array}{rrr}
    -0.67 & 0.67 & -0.33 \\
    -0.67 & -0.33 & 0.67 \\
-    0.33 & 0.67 & 0.67
+    0.33 & 0.67 & 0.67  \\
    \end{array}\right), 
    \left(\begin{array}{rrr}
     3.0 & -15.0 & -6.0 \\
-    0.0 & -3.0 & 12.0 \\
-   -0.0 & -0.0 & -21.0
+    0.0 & -3.0 & 12.0  \\
+   -0.0 & -0.0 & -21.0 \\
    \end{array}\right)\right)
 
 

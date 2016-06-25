@@ -203,7 +203,7 @@ wynikają związki
    a_1\ =\ s_{11}\,a_1'\,+\ s_{12}\,a_2'\,+\ \dots\ +\ s_{1n}\,a_n' \\
    a_2\ =\ s_{21}\,a_1'\,+\ s_{22}\,a_2'\,+\ \dots\ +\ s_{2n}\,a_n' \\
    \ \dots \\
-   a_n\ =\ s_{n1}\,a_1'\,+\ s_{n2}\,a_2'\,+\ \dots\ +\ s_{nn}\,a_n'
+   a_n\ =\ s_{n1}\,a_1'\,+\ s_{n2}\,a_2'\,+\ \dots\ +\ s_{nn}\,a_n' \\
    \end{array}
    \end{array}
 
@@ -369,8 +369,8 @@ Przykłady
 W przestrzeni :math:`\,R^4\,` należy znaleźć macierz przejścia:
 
 * | od bazy kanonicznej :math:`\ \mathcal{E}\,=\,
-    (\boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\boldsymbol{e}_3,\,\boldsymbol{e}_4)\ =\ 
-    \left(\ 
+    (\boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\boldsymbol{e}_3,\,\boldsymbol{e}_4)
+    \ =\ \left(\ 
     \left[\begin{array}{c} 1 \\ 0 \\ 0 \\ 0 \end{array}\right]\,,  
     \left[\begin{array}{c} 0 \\ 1 \\ 0 \\ 0 \end{array}\right]\,,
     \left[\begin{array}{c} 0 \\ 0 \\ 1 \\ 0 \end{array}\right]\,,
@@ -378,8 +378,8 @@ W przestrzeni :math:`\,R^4\,` należy znaleźć macierz przejścia:
     \ \right)`
   |
   | do bazy :math:`\ \mathcal{F}\,=\,
-    (\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\boldsymbol{f}_3,\,\boldsymbol{f}_4)\ =\ 
-    \left(\ 
+    (\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\boldsymbol{f}_3,\,\boldsymbol{f}_4)
+    \ =\ \left(\ 
     \left[\begin{array}{r}  1 \\  2 \\ -1 \\ 0 \end{array}\right]\,,  
     \left[\begin{array}{r}  1 \\ -1 \\  1 \\ 1 \end{array}\right]\,,
     \left[\begin{array}{r} -1 \\  2 \\  1 \\ 1 \end{array}\right]\,,
@@ -389,8 +389,8 @@ W przestrzeni :math:`\,R^4\,` należy znaleźć macierz przejścia:
 * | od bazy :math:`\,\mathcal{F}\,=\,
     (\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\boldsymbol{f}_3,\,\boldsymbol{f}_4)`
   | do bazy :math:`\,\mathcal{G}\,=\,
-    (\boldsymbol{g}_1,\,\boldsymbol{g}_2,\,\boldsymbol{g}_3,\,\boldsymbol{g}_4)\,=\,
-    \left(\ 
+    (\boldsymbol{g}_1,\,\boldsymbol{g}_2,\,\boldsymbol{g}_3,\,\boldsymbol{g}_4)
+    \,=\,\left(\ 
     \left[\begin{array}{r}  2 \\ 1 \\ 0 \\ 1 \end{array}\right],  
     \left[\begin{array}{r}  0 \\ 1 \\ 2 \\ 2 \end{array}\right],
     \left[\begin{array}{r} -2 \\ 1 \\ 1 \\ 2 \end{array}\right],
@@ -424,8 +424,8 @@ Kolumny macierzy przejścia od bazy :math:`\,\mathcal{E}\,` do bazy
       I_{\mathcal{E}}(\boldsymbol{f}_3)\,|\,
       I_{\mathcal{E}}(\boldsymbol{f}_4)\,]\,.
 
-Ale w przestrzeni :math:`\,R^4\ ` każdy wektor jest kolumną swoich współrzędnych 
-w bazie kanonicznej:
+Ale w przestrzeni :math:`\,R^4\ ` każdy wektor jest 
+kolumną swoich współrzędnych w bazie kanonicznej:
 
 .. math::
    
@@ -655,7 +655,7 @@ pomiędzy wektorami starej i nowej bazy:
    v_1' & {\ } = {\ } & -\ v_1 &             &     &             &     &                      \\
    v_2' & {\ } = {\ } & 2\,v_1 &             &     & {\,} - {\;} & v_3 &                      \\
    v_3' & {\ } = {\ } &    v_1 & {\,} + {\;} & v_2 & {\,} - {\;} & v_3 & {\,} - {\;} & 2\,v_4 \\
-   v_4' & {\ } = {\ } &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4
+   v_4' & {\ } = {\ } &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4 \\
    \end{alignat*}
 
 Mianowicie, na podstawie Wniosku 1. po definicji macierzy przejścia 
@@ -763,7 +763,7 @@ odwrócimy relacje
    v_1' & {\ } = {\ } & Tv_1 & {\ \,} = {\ \,} & -\ v_1 &             &     &             &     &                      \\
    v_2' & {\ } = {\ } & Tv_2 & {\ \,} = {\ \,} & 2\ v_1 &             &     & {\,} - {\;} & v_3 &                      \\
    v_3' & {\ } = {\ } & Tv_3 & {\ \,} = {\ \,} &    v_1 & {\,} + {\;} & v_2 & {\,} - {\;} & v_3 & {\,} - {\;} & 2\ v_4 \\
-   v_4' & {\ } = {\ } & Tv_4 & {\ \,} = {\ \,} &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4
+   v_4' & {\ } = {\ } & Tv_4 & {\ \,} = {\ \,} &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4 \\
    \end{alignat*}
 
 Po prostych elementarnych rachunkach otrzymujemy wzory 
@@ -796,7 +796,7 @@ w bazie :math:`\,\mathcal{B}':`
          -1 & -\frac{5}{3} & -2 & -\frac{1}{3} \\
           0 & -1           & -1 &   0          \\ 
           0 &  \frac{1}{3} &  0 & -\frac{1}{3} \\
-          0 &  \frac{2}{3} &  0 &  \frac{1}{3}
+          0 &  \frac{2}{3} &  0 &  \frac{1}{3} \\
          \end{array}\right]\,.
 
 Nas interesuje raczej macierz 
@@ -843,7 +843,7 @@ przedstawia kramerowski układ równań
    -\ a_1' & {\,} + {\,} & 2\,a_2' & {\,} + {\,} &    a_3' &             &      & {\;} = {} &  2 \\
            &             &         &             &    a_3' & {\,} + {\,} & a_4' & {\;} = {} & -3 \\
            & {\,} - {\,} &    a_2' & {\,} - {\,} &    a_3' & {\,} - {\,} & a_4' & {\;} = {} &  0 \\
-           &             &         & {\,} - {\,} & 2\,a_3' & {\,} + {\,} & a_4' & {\;} = {} &  4
+           &             &         & {\,} - {\,} & 2\,a_3' & {\,} + {\,} & a_4' & {\;} = {} &  4 \\
    \end{alignat*}
 
 który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu Sage:

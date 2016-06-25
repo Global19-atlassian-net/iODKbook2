@@ -70,11 +70,13 @@ Równanie własne można przekształcić następująco:
    \begin{eqnarray*}   
    Fv & = & \lambda\,v\,, \\
    I_{\mathcal{B}}\,(Fv) & = & I_{\mathcal{B}}\,(\lambda\,v)\,, \\
-   M_{\mathcal{B}}(F)\cdot I_{\mathcal{B}}(v) & = & \lambda\cdot I_{\mathcal{B}}(v)\,; \\ \\
+   M_{\mathcal{B}}(F)\cdot I_{\mathcal{B}}(v) & = & 
+   \lambda\cdot I_{\mathcal{B}}(v)\,; \\ \\
    \boldsymbol{A}\,\boldsymbol{x} & = & \lambda\:\boldsymbol{x}\,, \\
-   \boldsymbol{A}\,\boldsymbol{x} & = & \lambda\ \boldsymbol{I}_n\,\boldsymbol{x}\,, \\
-   (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x} & = & \boldsymbol{0}\,.
-   \qquad\qquad(\clubsuit)
+   \boldsymbol{A}\,\boldsymbol{x} & = & 
+   \lambda\ \boldsymbol{I}_n\,\boldsymbol{x}\,, \\
+   (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x} & = & 
+   \boldsymbol{0}\,.\qquad\qquad(\clubsuit) \\
    \end{eqnarray*}
 
 Ostatnie równanie, w którym :math:`\,\boldsymbol{I}_n\,` jest macierzą 
@@ -100,8 +102,9 @@ wtedy i tylko wtedy, gdy
 .. Wielomian :math:`\,n`-tego stopnia 
    :math:`\,w(\lambda)=\det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ `
    jest *wielomianem charakterystycznym* macierzy :math:`\,\boldsymbol{A}\,.\ `
-   Równanie :math:`\,w(\lambda)=\det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)
-   =0\ ` jest *równaniem charakterystycznym*, a jego rozwiązania nazywają się
+   Równanie 
+   :math:`\,w(\lambda)=\det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)=0\ ` 
+   jest *równaniem charakterystycznym*, a jego rozwiązania nazywają się
    *pierwiastkami charakterystycznymi* tej macierzy.
 
 .. admonition:: Definicja.
@@ -117,8 +120,8 @@ wtedy i tylko wtedy, gdy
 
 Stwierdziliśmy, że rozwiązania :math:`\,v\neq\theta\ ` problemu własnego 
 :eq:`eigen_eq` istnieją wtedy i tylko wtedy, gdy :math:`\,\lambda\ ` jest 
-pierwiastkiem charakterystycznym macierzy operatora :math:`\,F\ ` w pewnej bazie 
-:math:`\,\mathcal{B}\,.` 
+pierwiastkiem charakterystycznym macierzy operatora :math:`\,F\ ` 
+w pewnej bazie :math:`\,\mathcal{B}\,.` 
 
 W różnych bazach operator :math:`\,F\ ` jest jednak reprezentowany przez różne 
 macierze, nasuwa się więc pytanie, czy dopuszczalne wartości :math:`\,\lambda\ ` 
@@ -226,9 +229,10 @@ to dla :math:`\ \ \alpha_1,\alpha_2\in K:`
 .. math::
 
    \begin{array}{ccccc}
-   F\,(\alpha_1\,v_1+\alpha_2\,v_2) & = & \alpha_1\,Fv_1+\alpha_2\,Fv_2 & = & \\
+   F\,(\alpha_1\,v_1+\alpha_2\,v_2) & = & 
+   \alpha_1\,Fv_1+\alpha_2\,Fv_2 & = & \\
    & = & \alpha_1\,\lambda\,v_1+\alpha_2\,\lambda\,v_2 & = & 
-   \lambda\ (\alpha_1\,v_1+\alpha_2\,v_2)\,.
+   \lambda\ (\alpha_1\,v_1+\alpha_2\,v_2)\,. \\
    \end{array}
 
 Tak więc każda (różna od wektora zerowego) kombinacja liniowa wektorów własnych 

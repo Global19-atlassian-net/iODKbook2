@@ -533,12 +533,14 @@ addytywność, jednorodność i bijektywność.
 
 a. :math:`\,` Addytywność. :math:`\,`
    
-   Niech :math:`\,F_1,F_2\,\in\,\text{Hom}(V,W).\ ` Wtedy :math:`\,j`-ta kolumna 
+   Niech :math:`\,F_1,F_2\,\in\,\text{Hom}(V,W).\ ` 
+   Wtedy :math:`\,j`-ta kolumna 
    macierzy :math:`\,M_{\mathcal{B}\mathcal{C}}(F_1+F_2)`
    
    .. math::
       
-      I_{\mathcal{C}}\,[\,(F_1+F_2)(v_j)\,]\ =\ I_{\mathcal{C}}\,[\,F_1(v_j)+F_2(v_j)\,]\ =\ 
+      I_{\mathcal{C}}\,[\,(F_1+F_2)(v_j)\,]\ =\ 
+      I_{\mathcal{C}}\,[\,F_1(v_j)+F_2(v_j)\,]\ =\ 
       I_{\mathcal{C}}\,[\,F_1(v_j)\,]+I_{\mathcal{C}}\,[\,F_2(v_j)\,]
 
    jest sumą :math:`\,j`-tych kolumn macierzy 

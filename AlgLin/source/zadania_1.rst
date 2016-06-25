@@ -9,18 +9,20 @@ i znajdź (dowolnym sposobem) rozwiązania.
 #. | Andrzej jest dwa razy starszy od Piotra, a suma ich lat życia wynosi 33.
    | Podaj wiek Andrzeja i Piotra.
 
-#. | Punkty :math:`\ P_1=(2,5)\ ` i :math:`\ P_2=(3,7)\ ` leżą na prostej o równaniu
-     :math:`\ y=ax+b.\ ` 
+#. | Punkty :math:`\ P_1=(2,5)\ ` i :math:`\ P_2=(3,7)\ ` 
+     leżą na prostej o równaniu :math:`\ y=ax+b.\ ` 
    | Określ :math:`\ a\ ` i  :math:`\ b.`
 
-#. | Parabola przechodzi przez punkty :math:`\ P_1=(1,4),\ P_2=(2,8)\ ` i :math:`\ P_3=(3,14).\ `
-   | Wyznacz współczynniki :math:`\ a,\,b,\,c\ ` w jej równaniu :math:`\ y=ax^2+bx+c.` 
+#. | Parabola przechodzi przez punkty 
+     :math:`\ P_1=(1,4),\ P_2=(2,8)\ ` i :math:`\ P_3=(3,14).\ `
+   | Wyznacz współczynniki :math:`\ a,\,b,\,c\ ` 
+     w jej równaniu :math:`\ y=ax^2+bx+c.` 
 
 **Zadanie 1.** :math:`\\`
 Wykonując operacje elementarne na całych równaniach (patrz sekcja 2.3.2)
-albo na wierszach odpowiednich macierzy (sekcja 4.1.3), bez używania funkcji  ``solve()``, 
-:math:`\,`   ``X.solve_right()``, :math:`\,` ``X\y``, :math:`\,` ``X.rref()``, :math:`\,` 
-rozwiąż układy równań nad ciałem :math:`\ Q:`
+albo na wierszach odpowiednich macierzy (sekcja 4.1.3), bez używania funkcji  
+``solve()``, :math:`\,` ``X.solve_right()``, :math:`\,` ``X\y``, :math:`\,` 
+``X.rref()``, :math:`\,` rozwiąż układy równań nad ciałem :math:`\ Q:`
 
 #. .. math::
       :nowrap:
@@ -46,8 +48,10 @@ rozwiąż układy równań nad ciałem :math:`\ Q:`
       :nowrap:
       
       \begin{alignat*}{4}
-        16\,x_1 & \ +\ & 41\,x_2 & \ -\ & 101\,x_3 & \ =\ & -\,\textstyle\frac{1}{10} \\
-            x_1 & \ +\ &  3\,x_2 & \ -\ &   7\,x_3 & \ =\ &  \ \textstyle\frac{1}{2}  \\
+      16\,x_1 & \ +\ & 41\,x_2 & \ -\ & 101\,x_3 & \ =\ 
+      & -\,\textstyle\frac{1}{10} \\
+      x_1 & \ +\ &  3\,x_2 & \ -\ &   7\,x_3 & \ =\ 
+      &  \ \textstyle\frac{1}{2}  \\
       -\,5\,x_1 & \ -\ & 13\,x_2 & \ +\ &  32\,x_3 & \ =\ &  1
       \end{alignat*}
    
@@ -59,7 +63,7 @@ rozwiąż układy równań nad ciałem :math:`\ Q:`
       \begin{alignat*}{4}
          -\,x_1 & \ -\ & 3\,x_2 & \ +\ & 9\,x_3 & \ =\ &    1 \\
             x_1 & \  \ &        & \ +\ &    x_3 & \ =\ & -\,2 \\
-      -\,2\,x_1 & \ -\ & 2\,x_2 & \ +\ & 5\,x_3 & \ =\ &    2
+      -\,2\,x_1 & \ -\ & 2\,x_2 & \ +\ & 5\,x_3 & \ =\ &    2 \\
       \end{alignat*}
    
    .. (2, -13, -4), rank A: 3
@@ -68,9 +72,12 @@ rozwiąż układy równań nad ciałem :math:`\ Q:`
       :nowrap:
       
       \begin{alignat*}{4}
-      -\,11\,x_1 & \ +\ & 44\,x_2 & \ -\ & 135\,x_3 & \ =\ &    0                     \\
-          2\,x_1 & \ -\ &  7\,x_2 & \ +\ &  20\,x_3 & \ =\ &    \textstyle\frac{1}{3} \\
-          4\,x_1 & \ -\ & 16\,x_2 & \ +\ &  49\,x_3 & \ =\ & -\ \textstyle\frac{1}{7}
+      -\,11\,x_1 & \ +\ & 44\,x_2 & \ -\ & 135\,x_3 & \ =
+      \ &  0  \\
+      2\,x_1 & \ -\ &  7\,x_2 & \ +\ &  20\,x_3 & \ =
+      \ &  \textstyle\frac{1}{3}  \\
+      4\,x_1 & \ -\ & 16\,x_2 & \ +\ &  49\,x_3 & \ =
+      \ & -\ \textstyle\frac{1}{7}
       \end{alignat*}
    
    .. (223/21, 157/21, 11/7), rank A: 3
@@ -79,17 +86,22 @@ rozwiąż układy równań nad ciałem :math:`\ Q:`
       :nowrap:
       
       \begin{alignat*}{5}
-            x_1 &\ +\ &  3\,x_2 &\ -\ &    x_3 &\ +\ &  23 \,x_4 &\ =\ & -\,1 \\
-         4\,x_1 &\ +\ & 13\,x_2 &\ -\ & 3\,x_3 &\ +\ &  93 \,x_4 &\ =\ & -\,1 \\
-      -\,5\,x_1 &\ -\ & 17\,x_2 &\ +\ & 4\,x_3 &\ -\ & 121 \,x_4 &\ =\ & -\ \textstyle\frac{1}{2} \\
-                &\  \ &     x_2 &\ +\ & 3\,x_3 &\ -\ &   6 \,x_4 &\ =\ &  \textstyle\frac{1}{2}
+      x_1 &\ +\ &  3\,x_2 &\ -\ &    x_3 &\ +\ &  23 \,x_4 &\ =
+      \ & -\,1 \\
+      4\,x_1 &\ +\ & 13\,x_2 &\ -\ & 3\,x_3 &\ +\ &  93 \,x_4 &\ =
+      \ & -\,1 \\
+      -\,5\,x_1 &\ -\ & 17\,x_2 &\ +\ & 4\,x_3 &\ -\ & 121 \,x_4 &\ =
+      \ & -\ \textstyle\frac{1}{2} \\
+      &\  \ &     x_2 &\ +\ & 3\,x_3 &\ -\ &   6 \,x_4 &\ =
+      \ &  \textstyle\frac{1}{2}
       \end{alignat*}
    
    .. (6, 20, -27/2, -7/2), rank A: 4
 
 **Zadanie 2.** :math:`\,`
-Wykorzystując teraz wszystkie potrzebne funkcje Sage'a (patrz sekcja 6.2), :math:`\\`
-rozwiąż rzeczywiste problemy liniowe postaci :math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{b}\ \,` 
+Wykorzystując teraz wszystkie potrzebne funkcje Sage'a (patrz sekcja 6.2), 
+:math:`\\` rozwiąż rzeczywiste problemy liniowe postaci 
+:math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{b}\ \,` 
 dla następujących danych:
 
 #. .. math::
@@ -99,7 +111,7 @@ dla następujących danych:
        1 & -5 &   9 &  11 \\
        1 & -4 &   8 &   9 \\
       -3 & 15 & -26 & -33 \\
-      -2 &  7 & -10 & -16 
+      -2 &  7 & -10 & -16 \\
       \end{array}\right]\,,\qquad
       \boldsymbol{b}\ =\ 
       \left[\begin{array}{r}
@@ -113,7 +125,7 @@ dla następujących danych:
        1 &   4 &   5 & -1 \\
       -3 & -12 & -14 &  3 \\
        3 &  12 &  19 & -3 \\
-      -2 &  -8 & -12 &  2
+      -2 &  -8 & -12 &  2 \\
       \end{array}\right]\,,\qquad
       \boldsymbol{b}\ =\ 
       \left[\begin{array}{r}
@@ -127,7 +139,7 @@ dla następujących danych:
        1 &   4 &   5 & -1 \\
       -3 & -12 & -14 &  3 \\
        3 &  12 &  19 & -3 \\
-      -2 &  -8 & -12 &  2
+      -2 &  -8 & -12 &  2 \\
       \end{array}\right]\,,\qquad
       \boldsymbol{b}\ =\  
       \left[\begin{array}{r}
@@ -140,7 +152,7 @@ dla następujących danych:
       \left[\begin{array}{rrr}
       1 &  -5 & -11 \\
       2 &  -9 & -20 \\
-      4 & -16 & -36
+      4 & -16 & -36 \\
       \end{array}\right]\,,\qquad
       \boldsymbol{b}\ =\ 
       \left[\begin{array}{r}
@@ -152,8 +164,8 @@ Dowolną bazę przestrzeni rozwiązań jednorodnego problemu liniowego
 *fundamentalnym układem rozwiązań* :math:`\,` tego problemu.
 
 **Zadanie 3.** :math:`\,`
-Wyznacz fundamentalny układ rozwiązań jednorodnego problemu liniowego :math:`\\` 
-nad ciałem :math:`\ Q\ ` o macierzy współczynników
+Wyznacz fundamentalny układ rozwiązań jednorodnego problemu liniowego 
+:math:`\\` nad ciałem :math:`\ Q\ ` o macierzy współczynników
 
 .. math::
    
@@ -162,7 +174,7 @@ nad ciałem :math:`\ Q\ ` o macierzy współczynników
        1 &   4 &   5 & -1 \\
       -3 & -12 & -14 &  3 \\
        3 &  12 &  19 & -3 \\
-      -2 &  -8 & -12 &  2
+      -2 &  -8 & -12 &  2 \\
    \end{array}\right]\,.
 
 **Zadanie 4.** :math:`\,`
@@ -207,7 +219,8 @@ którego fundamentalnym układem rozwiązań jest układ wektorów
 .. (4.4.31)
 
 **Zadanie 6.** :math:`\\`
-Czy istnieje :math:`\ \lambda\in Q,\ ` dla którego układ równań nad ciałem liczb wymiernych
+Czy istnieje :math:`\ \lambda\in Q,\ ` 
+dla którego układ równań nad ciałem liczb wymiernych
 
 .. math::
    :nowrap:
@@ -215,7 +228,7 @@ Czy istnieje :math:`\ \lambda\in Q,\ ` dla którego układ równań nad ciałem 
    \begin{alignat*}{4}
         x_1 & \ +\ & 2\,x_2 & \ +\ & 3\,\lambda\,x_3 & \ =\ & -1 \\
         x_1 & \ +\ &    x_2 & \ -\ &             x_3 & \ =\ &  1 \\
-   \,2\,x_1 & \ +\ &    x_2 & \ +\ &          5\,x_3 & \ =\ &  3
+   \,2\,x_1 & \ +\ &    x_2 & \ +\ &          5\,x_3 & \ =\ &  3 \\
    \end{alignat*}
 
 ma nieskończenie wiele rozwiązań ?
@@ -231,15 +244,14 @@ ma rozwiązanie ? :math:`\,` Znajdź to rozwiązanie.
    :nowrap:
 
    \begin{alignat*}{5}
-   2\,x_1 &\ -\ &    x_2 &\ +\ &    x_3 &\ +\ &     x_4 &\ =\ & 1 \\
-      x_1 &\ +\ & 2\,x_2 &\ -\ &    x_3 &\ +\ &  4\,x_4 &\ =\ & 2 \\
-      x_1 &\ +\ & 7\,x_2 &\ -\ & 4\,x_3 &\ +\ & 11\,x_4 &\ =\ & \lambda 
+   2\,x_1 &\ -\ &    x_2 &\ +\ &    x_3 &\ +\ &     x_4 &\ =\ & 1    \\
+   x_1 &\ +\ & 2\,x_2 &\ -\ &    x_3 &\ +\ &  4\,x_4 &\ =\ & 2       \\
+   x_1 &\ +\ & 7\,x_2 &\ -\ & 4\,x_3 &\ +\ & 11\,x_4 &\ =\ & \lambda \\ 
    \end{alignat*}
 
    \;
    
    \;
-
 
 **Zadanie 8.** :math:`\,`
 Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
@@ -250,7 +262,7 @@ Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
       \begin{alignat*}{4}
       3\,x_1 & \ +\ & 2\,x_2 & \ +\ &    x_3 & \ =\ & -1      \\
       7\,x_1 & \ +\ & 6\,x_2 & \ +\ & 5\,x_3 & \ =\ & \lambda \\
-      5\,x_1 & \ +\ & 4\,x_2 & \ +\ & 3\,x_3 & \ =\ & 2
+      5\,x_1 & \ +\ & 4\,x_2 & \ +\ & 3\,x_3 & \ =\ & 2       \\
       \end{alignat*}
 
 #. .. math::
@@ -259,7 +271,7 @@ Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
       \begin{alignat*}{4}
       \lambda\,x_1 & \ +\ &    x_2 & \ +\ &    x_3 & \ =\ &  0 \\
             5\,x_1 & \ +\ &    x_2 & \ -\ & 2\,x_3 & \ =\ &  2 \\
-           -2\,x_1 & \ -\ & 2\,x_2 & \ +\ &    x_3 & \ =\ & -3
+           -2\,x_1 & \ -\ & 2\,x_2 & \ +\ &    x_3 & \ =\ & -3 \\
       \end{alignat*}
 
 #. .. math::
@@ -268,7 +280,7 @@ Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
       \begin{alignat*}{4}
                x_1 & \ +\ &          x_2 & \ +\ & \lambda\,x_3 & \ =\ & 1 \\
                x_1 & \ +\ & \lambda\,x_2 & \ +\ &          x_3 & \ =\ & 1 \\
-      \lambda\,x_1 & \ +\ &          x_2 & \ +\ &          x_3 & \ =\ & 1
+      \lambda\,x_1 & \ +\ &          x_2 & \ +\ &          x_3 & \ =\ & 1 \\
       \end{alignat*}
 
 **Zadanie 9.** :math:`\,`
@@ -280,25 +292,32 @@ przez wektory :math:`\ \boldsymbol{a}_1,\,\boldsymbol{a}_2,\,\boldsymbol{a}_3:`
    
    \begin{array}{lllll}
    1.) & \qquad
-   \boldsymbol{a}_1=\left[\begin{array}{r} 2 \\  3 \\ 5       \end{array}\right], &
-   \boldsymbol{a}_2=\left[\begin{array}{r} 3 \\  7 \\ 8       \end{array}\right], &
-   \boldsymbol{a}_3=\left[\begin{array}{r} 1 \\ -6 \\ 1       \end{array}\right], & \quad
-   \boldsymbol{b} = \left[\begin{array}{r} 7 \\ -2 \\ \lambda \end{array}\right]; \\ \\
+   \boldsymbol{a}_1=\left[\begin{array}{r} 2 \\  3 \\ 5 \end{array}\right], &
+   \boldsymbol{a}_2=\left[\begin{array}{r} 3 \\  7 \\ 8 \end{array}\right], &
+   \boldsymbol{a}_3=\left[\begin{array}{r} 1 \\ -6 \\ 1 \end{array}\right], & 
+   \quad
+   \boldsymbol{b}=\left[\begin{array}{r} 7 \\ -2 \\ \lambda \end{array}\right]; 
+   \\ \\
    2.) & \qquad
-   \boldsymbol{a}_1=\left[\begin{array}{r} 4 \\ 4 \\ 3       \end{array}\right], &
-   \boldsymbol{a}_2=\left[\begin{array}{r} 7 \\ 2 \\ 1       \end{array}\right], &
-   \boldsymbol{a}_3=\left[\begin{array}{r} 4 \\ 1 \\ 6       \end{array}\right], & \quad
-   \boldsymbol{b} = \left[\begin{array}{r} 5 \\ 9 \\ \lambda \end{array}\right]; \\ \\
+   \boldsymbol{a}_1=\left[\begin{array}{r} 4 \\ 4 \\ 3 \end{array}\right], &
+   \boldsymbol{a}_2=\left[\begin{array}{r} 7 \\ 2 \\ 1 \end{array}\right], &
+   \boldsymbol{a}_3=\left[\begin{array}{r} 4 \\ 1 \\ 6 \end{array}\right], & 
+   \quad
+   \boldsymbol{b}=\left[\begin{array}{r} 5 \\ 9 \\ \lambda \end{array}\right];
+   \\ \\
    3.) & \qquad
-   \boldsymbol{a}_1=\left[\begin{array}{r} 3       \\ 2 \\ 6 \end{array}\right], &
-   \boldsymbol{a}_2=\left[\begin{array}{r} 7       \\ 3 \\ 9 \end{array}\right], &
-   \boldsymbol{a}_3=\left[\begin{array}{r} 5       \\ 1 \\ 3 \end{array}\right], & \quad
-   \boldsymbol{b} = \left[\begin{array}{r} \lambda \\ 2 \\ 5 \end{array}\right]; \\ \\
+   \boldsymbol{a}_1=\left[\begin{array}{r} 3 \\ 2 \\ 6 \end{array}\right], &
+   \boldsymbol{a}_2=\left[\begin{array}{r} 7 \\ 3 \\ 9 \end{array}\right], &
+   \boldsymbol{a}_3=\left[\begin{array}{r} 5 \\ 1 \\ 3 \end{array}\right], & 
+   \quad
+   \boldsymbol{b}=\left[\begin{array}{r} \lambda \\ 2 \\ 5 \end{array}\right];
+   \\ \\
    4.) & \qquad
-   \boldsymbol{a}_1=\left[\begin{array}{r} 3 \\ 2 \\ 5       \end{array}\right], &
-   \boldsymbol{a}_2=\left[\begin{array}{r} 2 \\ 4 \\ 7       \end{array}\right], &
-   \boldsymbol{a}_3=\left[\begin{array}{r} 5 \\ 6 \\ \lambda \end{array}\right], & \quad
-   \boldsymbol{b} = \left[\begin{array}{r} 1 \\ 3 \\ 5       \end{array}\right].
+   \boldsymbol{a}_1=\left[\begin{array}{r} 3 \\ 2 \\ 5 \end{array}\right], &
+   \boldsymbol{a}_2=\left[\begin{array}{r} 2 \\ 4 \\ 7 \end{array}\right], &
+   \boldsymbol{a}_3=\left[\begin{array}{r} 5 \\ 6 \\ \lambda \end{array}\right], 
+   & \quad
+   \boldsymbol{b}=\left[\begin{array}{r} 1 \\ 3 \\ 5 \end{array}\right].
    \end{array}
 
 **Wskazówka.** :math:`\,`
@@ -306,7 +325,8 @@ Zbadaj istnienie rozwiązań problemu liniowego o postaci kolumnowej
 
 .. math::
    
-   x_1\,\boldsymbol{a}_1+x_2\,\boldsymbol{a}_2+x_3\,\boldsymbol{a}_3=\boldsymbol{b}.
+   x_1\,\boldsymbol{a}_1+x_2\,\boldsymbol{a}_2+x_3\,\boldsymbol{a}_3=
+   \boldsymbol{b}.
 
 **Zadanie 10.** :math:`\,`
 Rozważmy przestrzeń wektorową wielomianów rzeczywistych zmiennej :math:`\ x\ ` 
@@ -326,33 +346,6 @@ podaj przykładową bazę podprzestrzeni, utworzonej przez wielomiany spełniaj�
 warunki :math:`\ w(0)=w(1)=w(2)=w(3)=0.`
 
 .. (4.4.29)`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

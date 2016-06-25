@@ -263,12 +263,15 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
    .. math::
       
       \begin{array}{rclcl}
-      \boldsymbol{A}=\boldsymbol{A}^+ & \Rightarrow & \det\boldsymbol{A}\ =\ \det\boldsymbol{A}^+   &                 &                           \\
-                                      &             & \det\boldsymbol{A}\ =\ (\det\boldsymbol{A})^* & \Leftrightarrow & \det\boldsymbol{A}\in R\,. 
+      \boldsymbol{A}=\boldsymbol{A}^+  &  \Rightarrow  & 
+      \det\boldsymbol{A}\ =\ \det\boldsymbol{A}^+   &  &  \\
+      &  &  \det\boldsymbol{A}\ =\ (\det\boldsymbol{A})^*  
+      &  \Leftrightarrow  &  \det\boldsymbol{A}\in R\,. 
       \end{array}
 
-3. :math:`\,` Jeżeli :math:`\,\boldsymbol{A}\in M_n(C)\ ` jest macierzą hermitowską,
-   to dla każdego wektora :math:`\ \boldsymbol{x}\in C^n\ ` iloczyn skalarny
+3. :math:`\,` Jeżeli :math:`\,\boldsymbol{A}\in M_n(C)\ ` 
+   jest macierzą hermitowską, to dla każdego wektora 
+   :math:`\ \boldsymbol{x}\in C^n\ ` iloczyn skalarny
    :math:`\ \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle\ `
    jest liczbą rzeczywistą:
 

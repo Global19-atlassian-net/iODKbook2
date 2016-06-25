@@ -44,7 +44,8 @@ Układ równań ma :math:`\,` *postać schodkową*, :math:`\,`
 gdy w każdym równaniu (począwszy od drugiego) niewiadoma wiodąca 
 ma numer większy niż niewiadoma wiodąca w równaniu poprzednim.
 
-Oznacza to w szczególności, że w każdym :math:`\,k`-tym równaniu nie występują niewiadome :math:`\ x_1,\dots,x_{k-1}\ \,` :math:`(k=2,\dots,m)\,.` 
+Oznacza to w szczególności, że w każdym :math:`\,k`-tym równaniu nie występują 
+niewiadome :math:`\ x_1,\dots,x_{k-1}\ \,` :math:`(k=2,\dots,m)\,.` 
 
 ..  | Układ :math:`\,m\,` równań liniowych o :math:`\,n\,` 
       niewiadomych ma *postać schodkową*,
@@ -140,15 +141,18 @@ Eliminacja Gaussa
 
 .. .. code-block:: python
       
-      html.table( [eq1.subs(eq2.subs(eq3)-4).subs(eq3)-2,eq2.subs(eq3)-4,eq3] )
+      table( [eq1.subs(eq2.subs(eq3)-4).subs(eq3)-2,eq2.subs(eq3)-4,eq3] )
   
 .. math::
    :nowrap:
 
    \begin{alignat*}{5}
-      x_3 & {\;} = {\;} & 4 &             &        &             &        &             &   \\
-      x_2 & {\;} = {\;} & 1 & {\,} - {\,} &    x_3 & {\,} = {\,} & -3     &             &   \\
-      x_1 & {\,} = {\,} & 4 & {\,} - {\,} & 2\,x_2 & {\,} - {\,} & 2\,x_3 & {\,} = {\,} & 2 
+   x_3 & {\;} =
+   {\;} & 4 &             &        &             &        &             &   \\
+   x_2 & {\;} =
+   {\;} & 1 & {\,} - {\,} &    x_3 & {\,} = {\,} & -3     &             &   \\
+   x_1 & {\,} =
+   {\,} & 4 & {\,} - {\,} & 2\,x_2 & {\,} - {\,} & 2\,x_3 & {\,} = {\,} & 2 
    \end{alignat*}
 
 Metoda rozwiązywania układów równań liniowych, 

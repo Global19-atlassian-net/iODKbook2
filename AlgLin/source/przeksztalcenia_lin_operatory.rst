@@ -185,21 +185,24 @@ wyliczamy obrazy wektorów tej bazy:
      a_1     &   a_2     &   a_3     \\  
        1     &     0     &     0       
    \end{array}\right|\ \ \,=\ \ \,
-   0\,\cdot\,\vec{e}_1\ \,+\ \,a_3\,\cdot\;\vec{e}_2\ \,-\ \,a_2\,\cdot\;\vec{e}_3\,, \\   
+   0\,\cdot\,\vec{e}_1\ \,+\ \,a_3\,\cdot\;\vec{e}_2\ \,-
+   \ \,a_2\,\cdot\;\vec{e}_3\,, \\   
    F(\vec{e}_2)\ \,=\ \,\vec{a}\times\vec{e}_2\ \;=\ \ 
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
        0     &     1     &     0       
    \end{array}\right|\ \ \,=\ \ \,
-   -\ a_3\,\cdot\,\vec{e}_1\ \,+\ \,0\,\cdot\;\vec{e}_2\ \,+\ \,a_1\,\cdot\;\vec{e}_3\,, \\  
+   -\ a_3\,\cdot\,\vec{e}_1\ \,+\ \,0\,\cdot\;\vec{e}_2\ \,+
+   \ \,a_1\,\cdot\;\vec{e}_3\,, \\  
    F(\vec{e}_3)\ \,=\ \,\vec{a}\times\vec{e}_3\ \;=\ \ 
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
        0     &     0     &     1       
    \end{array}\right|\ \ \,=\ \ \,
-   a_2\,\cdot\,\vec{e}_1\ \,-\ \,a_1\,\cdot\;\vec{e}_2\ \,+\ \,0\,\cdot\;\vec{e}_3\,.
+   a_2\,\cdot\,\vec{e}_1\ \,-\ \,a_1\,\cdot\;\vec{e}_2\ \,+
+   \ \,0\,\cdot\;\vec{e}_3\,.
    \end{array}
 
 Stąd szukana macierz: 

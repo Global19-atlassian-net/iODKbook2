@@ -11,7 +11,8 @@ jest (wzajemnie jednoznacznym) :math:`\\` odwzorowaniem tego zbioru na siebie.
 Zbiór wszystkich permutacji zbioru :math:`\,X=\{1,2,\dots,n\}\,` 
 oznaczamy :math:`\,S_n.`
 
-Wygodnym sposobem przedstawienia permutacji :math:`\,\sigma\in S_n\,` jest zapis dwuwierszowy:
+Wygodnym sposobem przedstawienia permutacji :math:`\,\sigma\in S_n\,` 
+jest zapis dwuwierszowy:
 
 .. math::
    
@@ -24,7 +25,8 @@ gdzie w górnym wierszu wypisane są argumenty,
 a w dolnym :math:`\ ` - :math:`\ ` odpowiednie obrazy.
 
 Kolejność argumentów jest dowolna, 
-ważne jest tylko to, aby pod każdym z nich wystąpił właściwy obraz, na przykład:
+ważne jest tylko to, aby pod każdym z nich wystąpił właściwy obraz, 
+na przykład:
 
 .. math::
    
@@ -67,7 +69,8 @@ W zapisie dwuwierszowym:
 Należy zwrócić uwagę na kolejność wykonywania operacji: :math:`\\`
 dla każdej liczby :math:`\,k\in\{1,2,\dots,n\}\,` 
 najpierw wyznaczamy obraz :math:`\,k\,` przy permutacji :math:`\,\sigma,\ ` 
-:math:`\\` a następnie :math:`\,` - :math:`\,` obraz otrzymanego wyniku przy permutacji :math:`\,\rho.\ ` Przykład dla :math:`\,n=5:`
+:math:`\\` a następnie :math:`\,` - :math:`\,` obraz otrzymanego wyniku 
+przy permutacji :math:`\,\rho.\ ` Przykład dla :math:`\,n=5:`
  
 .. math::
    
@@ -242,7 +245,8 @@ Dla przykładu, w grupie
 :math:`\ S_7\ ` cykle :math:`\ (3,6,2)\ \ \text{i}\ \ (1,7,4,5)\ `
 są rozłączne, a cykle :math:`\ (4,2,5,1)\ \ \text{i}\ \ (3,1,6,2)\ ` 
 nie są rozłączne. Zauważmy, że jeżeli cykle 
-:math:`\ \rho\ \ \text{i}\ \ \sigma\ ` są rozłączne, to w iloczynie są przemienne: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
+:math:`\ \rho\ \ \text{i}\ \ \sigma\ ` są rozłączne, to w iloczynie 
+są przemienne: :math:`\ \rho\,\sigma=\sigma\,\rho\,.`
 
 **Twierdzenie.** :math:`\\`
 Każda permutacja jest cyklem albo może być przedstawiona 
@@ -271,7 +275,8 @@ Przykład:
    =\ (1,5)(1,2)(3,4)\ =\ (1,3)(3,4)(4,5)(2,4)(1,4)\,.
 
 **Twierdzenie.** :math:`\,`
-Jeżeli permutacja :math:`\ \sigma\in S_n\ ` ma dwa różne rozkłady na iloczyn transpozycji:
+Jeżeli permutacja :math:`\ \sigma\in S_n\ ` 
+ma dwa różne rozkłady na iloczyn transpozycji:
 
 .. math::
    
@@ -324,7 +329,8 @@ transpozycji liczb sąsiednich.
          &   & \circ\,(j-1,j-2)\,\dots\,\,(i+2,i+1)\,(i+1,i)\,,
    \end{array}
 
-w której po prawej stronie występuje :math:`\,2(j-i-1)+1=2(j-i)-1\ ` czynników, będących transpozycjami liczb sąsiednich. 
+w której po prawej stronie występuje :math:`\,2(j-i-1)+1=2(j-i)-1\ ` czynników, 
+będących transpozycjami liczb sąsiednich. 
 Równość tę można sprawdzić bezpośrednio, porównując obrazy wszystkich liczb 
 :math:`\,k\in\{1,2,\dots,n\}\ ` przy zastosowaniu permutacji 
 po lewej i prawej stronie.

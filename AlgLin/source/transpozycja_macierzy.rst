@@ -4,13 +4,15 @@ Transpozycja macierzy
 
 .. *Macierzą transponowaną* względem macierzy 
    :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K)`
-   jest macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
+   jest macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` 
+   gdzie
 
 Niech będzie dana macierz 
 :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times n}\in M_{m\times n}(K).` 
 :math:`\\`
 *Macierzą transponowaną* względem :math:`\,\boldsymbol{A}\,`
-nazywamy macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` gdzie
+nazywamy macierz :math:`\,\boldsymbol{A}^T=\,[a^T_{ij}]_{n\times m}\,,\ ` 
+gdzie
 
 .. math::
    
@@ -145,7 +147,8 @@ spełniony jest warunek :math:`\,\boldsymbol{A}^T=-\boldsymbol{A}\,,` :math:`\\`
 to nazywamy ją :math:`\,` *macierzą antysymetryczną*.
 
 Wtedy :math:`\ a_{ij} = - a_{ji}\,,\ \ i,j=1,2,\ldots,n,\ `
-z czego wynika, że :math:`\ a_{ii} = 0\ \ \text{dla}\ \ i=1,2,\ldots,n.` :math:`\\`
+z czego wynika, że :math:`\ a_{ii} = 0\ \ \text{dla}\ \ i=1,2,\ldots,n.` 
+:math:`\\`
 (w macierzy antysymetrycznej elementy głównej przekątnej są równe zeru). 
 
 W przypadku macierzy rzeczywistych 3. stopnia,

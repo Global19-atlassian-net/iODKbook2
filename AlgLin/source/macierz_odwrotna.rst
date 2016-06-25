@@ -179,24 +179,3 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -77,8 +77,8 @@ Rozważmy takie przedstawienie dla wektorów bazy kanonicznej
 .. math::
    :label: eqn_ej
    
-   \boldsymbol{e}_j\ \ =\ \ \sum_{s\,=\,1}^n\ b_{sj}\,\boldsymbol{A}_s\,,\qquad
-   \text{gdzie}\quad\boldsymbol{e}_j\ =\ 
+   \boldsymbol{e}_j\ \ =\ \ \sum_{s\,=\,1}^n\ b_{sj}\,\boldsymbol{A}_s\,,
+   \qquad\text{gdzie}\quad\boldsymbol{e}_j\ =\ 
    \left[\begin{array}{c} 0 \\ \dots \\ 1 \\ \dots \\ 0 \end{array}\right]
    \leftarrow j\,,\qquad j=1,2,\ldots,n.
 
@@ -107,7 +107,8 @@ Zostało w ten sposób udowodnione, że
 
 .. math::
    
-   \text{kolumny}\ \ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ \ 
+   \text{kolumny}\ \ 
+   \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ \ 
    \text{są liniowo niezależne}
    \quad\Rightarrow\quad
    \det\boldsymbol{A}\ne 0\,,
@@ -117,8 +118,8 @@ co przez kontrapozycję jest równoważne stwierdzeniu, :math:`\,` że
 .. math::
    
    \det\boldsymbol{A}\ =\ 0
-   \quad\Rightarrow\quad
-   \text{kolumny}\ \ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ \ 
+   \quad\Rightarrow\quad\text{kolumny}
+   \ \ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ \ 
    \text{są liniowo zależne}\,.
 
 **Dygresja.**
@@ -229,8 +230,8 @@ Przy użyciu skróconego zapisu sumy relacje przyjmują zwięzłą postać:
 
 **Interpretacja** (wersja wierszowa):
 
-* :math:`\ i=j:\ ` suma iloczynów kolejnych elementów wybranego wiersza macierzy 
-  przez dopełnienia algebraiczne *tych samych elementów* 
+* :math:`\ i=j:\ ` suma iloczynów kolejnych elementów wybranego 
+  wiersza macierzy przez dopełnienia algebraiczne *tych samych elementów* 
   równa się wyznacznikowi macierzy;
 
 * :math:`\ i\ne j:\ ` suma iloczynów kolejnych elementów wybranego wiersza 
@@ -440,8 +441,8 @@ składa się zatem z następujących etapów:
 1. :math:`\,` wyliczenie dopełnień algebraicznych 
    :math:`\ A_{ij}\,,\ \ i,j=1,2,\ldots,n;`
 
-2. :math:`\,` konstrukcja macierzy dołączonej :math:`\,\boldsymbol{A}^D:\quad
-   a_{ij}\rightarrow A_{ji},\quad i,j=1,2,\ldots,n`;
+2. :math:`\,` konstrukcja macierzy dołączonej :math:`\,\boldsymbol{A}^D:
+   \quad a_{ij}\rightarrow A_{ji},\quad i,j=1,2,\ldots,n`;
 
 3. :math:`\,` podzielenie macierzy :math:`\,\boldsymbol{A}^D\ ` 
    przez :math:`\ \det\boldsymbol{A}\,:\quad\boldsymbol{A}^{-1}\ =
@@ -462,30 +463,48 @@ składa się zatem z następujących etapów:
 4 & 3 \\ 1 & 1 
 \end{array}\right|\ =\ -1\,.`
 
-.. :math:`A_{11}=+\left|\begin{array}{rr} -1 &  0 \\  2 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
-   :math:`A_{12}=-\left|\begin{array}{rr}  1 &  0 \\ -1 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
-   :math:`A_{13}=+\left|\begin{array}{rr}  1 & -1 \\ -1 & 2 \end{array}\right|\ =\ +1\,;`
+.. :math:`A_{11}=+\left|\begin{array}{rr} 
+   -1 &  0 \\  2 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
+   :math:`A_{12}=-\left|\begin{array}{rr}  
+   1 &  0 \\ -1 & 1 \end{array}\right|\ =\ -1\,;\ \ \ `
+   :math:`A_{13}=+\left|\begin{array}{rr}  
+   1 & -1 \\ -1 & 2 \end{array}\right|\ =\ +1\,;`
    
-   :math:`A_{21}=-\left|\begin{array}{rr}  2 &  3 \\  2 & 1 \end{array}\right|\ =\ +4\,;\ \ \ `
-   :math:`A_{22}=+\left|\begin{array}{rr}  2 &  3 \\ -1 & 1 \end{array}\right|\ =\ +5\,;\ \ \ `
-   :math:`A_{23}=-\left|\begin{array}{rr}  2 &  2 \\ -1 & 2 \end{array}\right|\ =\ -6\,;`
+   :math:`A_{21}=-\left|\begin{array}{rr}  
+   2 &  3 \\  2 & 1 \end{array}\right|\ =\ +4\,;\ \ \ `
+   :math:`A_{22}=+\left|\begin{array}{rr}  
+   2 &  3 \\ -1 & 1 \end{array}\right|\ =\ +5\,;\ \ \ `
+   :math:`A_{23}=-\left|\begin{array}{rr}  
+   2 &  2 \\ -1 & 2 \end{array}\right|\ =\ -6\,;`
    
-   :math:`A_{31}=+\left|\begin{array}{rr}  2 &  3 \\ -1 &  0 \end{array}\right|\ =\ +3\,;\ \ \ `
-   :math:`A_{32}=-\left|\begin{array}{rr}  2 &  3 \\  1 &  0 \end{array}\right|\ =\ +3\,;\ \ \ `
-   :math:`A_{33}=+\left|\begin{array}{rr}  2 &  2 \\  1 & -1 \end{array}\right|\ =\ -4\,.`
+   :math:`A_{31}=+\left|\begin{array}{rr}  
+   2 &  3 \\ -1 &  0 \end{array}\right|\ =\ +3\,;\ \ \ `
+   :math:`A_{32}=-\left|\begin{array}{rr}  
+   2 &  3 \\  1 &  0 \end{array}\right|\ =\ +3\,;\ \ \ `
+   :math:`A_{33}=+\left|\begin{array}{rr}  
+   2 &  2 \\  1 & -1 \end{array}\right|\ =\ -4\,.`
 
 .. math::
    
    \begin{array}{lll}
-   A_{11}=+\left|\begin{array}{rr} -1 &  0 \\  2 &  1 \end{array}\right|\ =\ -1\,; &
-   A_{12}=-\left|\begin{array}{rr}  1 &  0 \\ -1 &  1 \end{array}\right|\ =\ -1\,; &
-   A_{13}=+\left|\begin{array}{rr}  1 & -1 \\ -1 &  2 \end{array}\right|\ =\ 1\,; \\ \\
-   A_{21}=-\left|\begin{array}{rr}  2 &  3 \\  2 &  1 \end{array}\right|\ =\ 4\,; &
-   A_{22}=+\left|\begin{array}{rr}  2 &  3 \\ -1 &  1 \end{array}\right|\ =\ 5\,; &
-   A_{23}=-\left|\begin{array}{rr}  2 &  2 \\ -1 &  2 \end{array}\right|\ =\ -6\,; \\ \\
-   A_{31}=+\left|\begin{array}{rr}  2 &  3 \\ -1 &  0 \end{array}\right|\ =\ 3\,; &
-   A_{32}=-\left|\begin{array}{rr}  2 &  3 \\  1 &  0 \end{array}\right|\ =\ 3\,; &
-   A_{33}=+\left|\begin{array}{rr}  2 &  2 \\  1 & -1 \end{array}\right|\ =\ -4\,.
+   A_{11}=+\left|\begin{array}{rr} -1 &  0 \\  2 &  1 \end{array}\right|\ =
+   \ -1\,; &
+   A_{12}=-\left|\begin{array}{rr}  1 &  0 \\ -1 &  1 \end{array}\right|\ =
+   \ -1\,; &
+   A_{13}=+\left|\begin{array}{rr}  1 & -1 \\ -1 &  2 \end{array}\right|\ =
+   \ 1\,; \\ \\
+   A_{21}=-\left|\begin{array}{rr}  2 &  3 \\  2 &  1 \end{array}\right|\ =
+   \ 4\,; &
+   A_{22}=+\left|\begin{array}{rr}  2 &  3 \\ -1 &  1 \end{array}\right|\ =
+   \ 5\,; &
+   A_{23}=-\left|\begin{array}{rr}  2 &  2 \\ -1 &  2 \end{array}\right|\ =
+   \ -6\,; \\ \\
+   A_{31}=+\left|\begin{array}{rr}  2 &  3 \\ -1 &  0 \end{array}\right|\ =
+   \ 3\,; &
+   A_{32}=-\left|\begin{array}{rr}  2 &  3 \\  1 &  0 \end{array}\right|\ =
+   \ 3\,; &
+   A_{33}=+\left|\begin{array}{rr}  2 &  2 \\  1 & -1 \end{array}\right|\ =
+   \ -4\,.
    \end{array}
 
 .. math::
@@ -559,14 +578,18 @@ Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem
    :label: cramer_0
 
    \begin{array}{c}
-      a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
-      a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
-      \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots  \\
-      a_{n1}\,x_1\; + \ \,a_{n2}\,x_2\; + \ \,\ldots\  + \ \;a_{nn}\,x_n \ \, = \ \ b_n
+   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, =
+   \ \ b_1 \\
+   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, =
+   \ \ b_2 \\
+   \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots
+   \qquad\ \ \ldots\qquad\ \ \,\ldots  \\
+   a_{n1}\,x_1\; + \ \,a_{n2}\,x_2\; + \ \,\ldots\  + \ \;a_{nn}\,x_n \ \, =
+   \ \ b_n
    \end{array}
 
-nazywamy :math:`\,` *układem kramerowskim* :math:`\,` (Gabriel Cramer, 1704-52), 
-:math:`\,` gdy jego macierz współczynników 
+nazywamy :math:`\,` *układem kramerowskim* :math:`\,` 
+(Gabriel Cramer, 1704-52), :math:`\,` gdy jego macierz współczynników 
 :math:`\ \boldsymbol{A}=[a_{ij}]_{n\times n}\ \,` jest nieosobliwa: 
 :math:`\ \,\det\boldsymbol{A}\ne 0.`
 
@@ -615,10 +638,9 @@ wykorzystamy wyrażenie :eq:`rec_mat` dla macierzy odwrotnej:
    \left[\begin{array}{c}
          A_{11}\,b_1\ +\ A_{21}\,b_2\ +\ \dots\ +\ A_{n1}\,b_n \\
          A_{12}\,b_1\ +\ A_{22}\,b_2\ +\ \dots\ +\ A_{n2}\,b_n \\
-         \dots\qquad\ \ \dots\qquad\ \dots\qquad\dots                \\
+         \dots\qquad\ \ \dots\qquad\ \dots\qquad\dots          \\
          A_{1n}\,b_1\ +\ A_{2n}\,b_2\ +\ \dots\ +\ A_{nn}\,b_n
-         \end{array}
-   \right]\,.
+   \end{array}\right]\,.
    \end{eqnarray*}
 
 Z przyrównania odpowiednich współrzędnych wektorów po obu stronach równości mamy
@@ -683,51 +705,84 @@ Tutaj
 .. math::
    
    D\ =\ 
-   \left|\begin{array}{rrr} 2 & -1 & -1 \\  3 & 4 & -2 \\  3 & -2 & 4 \end{array}\right|\ =\ 
-   \left|\begin{array}{rrr} 0 &  0 & -1 \\ -1 & 6 & -2 \\ 11 & -6 & 4 \end{array}\right|\ =\ 
-   -\ \left|\begin{array}{rr} -1 & 6 \\  11 & -6 \end{array}\right|\ =\ 
-   6\ \left|\begin{array}{rr}  1 & 1 \\ -11 & -1 \end{array}\right|\ =\ 60\,.
+   \left|\begin{array}{rrr} 
+   2 & -1 & -1 \\  3 & 4 & -2 \\  3 & -2 & 4 
+   \end{array}\right|\ =\ 
+   \left|\begin{array}{rrr} 
+   0 &  0 & -1 \\ -1 & 6 & -2 \\ 11 & -6 & 4 
+   \end{array}\right|\ =\ -\ 
+   \left|\begin{array}{rr} 
+   -1 & 6 \\  11 & -6 
+   \end{array}\right|\ =\ 6\ 
+   \left|\begin{array}{rr}  
+   1 & 1 \\ -11 & -1 
+   \end{array}\right|\ =\ 60\,.
 
-Skoro :math:`\,D\ne 0,\ ` wyliczamy wyznaczniki :math:`\,D_1,\,D_2\ \ \text{i}\ \ D_3\ `
+Skoro :math:`\,D\ne 0,\ ` wyliczamy wyznaczniki 
+:math:`\,D_1,\,D_2\ \ \text{i}\ \ D_3\ `
 ze wzorów Cramera:
 
 :math:`D_1\ =\ 
-\left|\begin{array}{rrr} 4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
-\left|\begin{array}{rrr} 0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
--\ \left|\begin{array}{rr} 3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
-18\ \left|\begin{array}{rr} 1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,`
+\left|\begin{array}{rrr} 
+4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
+\left|\begin{array}{rrr} 
+0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
+-\ \left|\begin{array}{rr} 
+3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
+18\ \left|\begin{array}{rr} 
+1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,`
 
 :math:`D_2\ =\ 
-\left|\begin{array}{rrr} 2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
-\left|\begin{array}{rrr} 0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
--\ \left|\begin{array}{rr} -1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
-3\ \left|\begin{array}{rr}  1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,`
+\left|\begin{array}{rrr} 
+2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
+\left|\begin{array}{rrr} 
+0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
+-\ \left|\begin{array}{rr} 
+-1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
+3\ \left|\begin{array}{rr}  
+1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,`
 
 :math:`D_3\ =\ 
-\left|\begin{array}{rrr} 2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
-\left|\begin{array}{rrr} 0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
-\left|\begin{array}{rr} 11 & 27 \\ -1 & 3 \end{array}\right|\ =\ 
-3\ \left|\begin{array}{rr} 11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.`
+\left|\begin{array}{rrr} 
+2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
+\left|\begin{array}{rrr} 
+0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
+\left|\begin{array}{rr} 
+11 & 27 \\ -1 & 3 \end{array}\right|\ =\ 
+3\ \left|\begin{array}{rr} 
+11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.`
 
 .. .. math::
    
       D_1\ =\ 
-      \left|\begin{array}{rrr} 4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
-      \left|\begin{array}{rrr} 0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
-      -\ \left|\begin{array}{rr} 3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
-      18\ \left|\begin{array}{rr} 1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,
+      \left|\begin{array}{rrr} 
+      4 & -1 & -1 \\ 11 & 4 & -2 \\ 11 & -2 & 4 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 
+      0 &  0 & -1 \\  3 & 6 & -2 \\ 27 & -6 & 4 \end{array}\right|\ =\ 
+      -\ \left|\begin{array}{rr} 
+      3 &  6 \\ 27 & -6 \end{array}\right|\ =\ 
+      18\ \left|\begin{array}{rr} 
+      1 & -1 \\  9 &  1 \end{array}\right|\ =\ 180\,,
 
       D_2\ =\ 
-      \left|\begin{array}{rrr} 2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
-      \left|\begin{array}{rrr} 0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
-      -\ \left|\begin{array}{rr} -1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
-      3\ \left|\begin{array}{rr}  1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,
+      \left|\begin{array}{rrr} 
+      2 & 4 & -1 \\  3 & 11 & -2 \\  3 & 11 & 4 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 
+      0 & 0 & -1 \\ -1 &  3 & -2 \\ 11 & 27 & 4 \end{array}\right|\ =\ 
+      -\ \left|\begin{array}{rr} 
+      -1 & 3 \\  11 & 27 \end{array}\right|\ =\ 
+      3\ \left|\begin{array}{rr}  
+      1 & 1 \\ -11 &  9 \end{array}\right|\ =\ 60\,,
 
       D_3\ =\ 
-      \left|\begin{array}{rrr} 2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
-      \left|\begin{array}{rrr} 0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
-      \left|\begin{array}{rr} 11 & 27 \\ -1 & 3 \end{array}\right|\ =\ 
-      3\ \left|\begin{array}{rr} 11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.
+      \left|\begin{array}{rrr} 
+      2 & -1 & 4 \\  3 & 4 & 11 \\  3 & -2 & 11 \end{array}\right|\ =\ 
+      \left|\begin{array}{rrr} 
+      0 & -1 & 0 \\ 11 & 4 & 27 \\ -1 & -2 &  3 \end{array}\right|\ =\ 
+      \left|\begin{array}{rr} 
+      11 & 27 \\ -1 & 3 \end{array}\right|\ =\ 
+      3\ \left|\begin{array}{rr} 
+      11 &  9 \\ -1 & 1 \end{array}\right|\ =\ 60\,.
 
 Ostatecznie, :math:`\,` jedynym rozwiązaniem układu równań jest
 
@@ -768,30 +823,6 @@ do zredukowanej postaci schodkowej.
 
    show(table([[B, '$\\rightarrow$', R]]))
    for i in range(n): show(R[i,n])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

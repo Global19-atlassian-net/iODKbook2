@@ -212,26 +212,3 @@ daje macierz tego elementu. Dla przykładu znajdziemy macierz transpozycji
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
