@@ -113,10 +113,10 @@ Wprowadzamy oznaczenie dla diagonalnej macierzy o elementach
    
    \text{diag}\,(\alpha_1,\alpha_2,\ldots,\alpha_n)\ :\,=\ 
    \left[\begin{array}{cccc}
-   \alpha_1  &     0     & \ldots &     0   \\
-       0     & \alpha_2  & \ldots &     0   \\
-    \ldots   &  \ldots   & \ldots &  \ldots \\
-       0     &     0     & \ldots & \alpha_n
+   \alpha_1  &     0     & \ldots &     0    \\
+       0     & \alpha_2  & \ldots &     0    \\
+    \ldots   &  \ldots   & \ldots &  \ldots  \\
+       0     &     0     & \ldots & \alpha_n \\
    \end{array}\right]\,.
 
 .. Jeżeli przez 

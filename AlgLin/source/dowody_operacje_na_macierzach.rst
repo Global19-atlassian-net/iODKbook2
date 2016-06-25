@@ -57,7 +57,7 @@ przebiega następująco:
          \boldsymbol{A}_i\,\boldsymbol{B} \\ 
          \dots                            \\ 
          \boldsymbol{A}_j\,\boldsymbol{B} \\
-         \dots
+         \dots                            \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
@@ -65,7 +65,7 @@ przebiega następująco:
          \boldsymbol{A}_j\,\boldsymbol{B} \\ 
          \dots                            \\ 
          \boldsymbol{A}_i\,\boldsymbol{B} \\
-         \dots
+         \dots                            \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
@@ -73,7 +73,7 @@ przebiega następująco:
          \boldsymbol{A}_j \\ 
          \dots            \\ 
          \boldsymbol{A}_i \\
-         \dots
+         \dots            \\   
          \end{array}
    \right]\,\boldsymbol{B}\ =\ 
    [\,O_1(i,j)\,\boldsymbol{A}\,]\,\boldsymbol{B}\ ;
@@ -115,7 +115,7 @@ przebiega następująco:
          \boldsymbol{A}_i\,\boldsymbol{B} \\ 
          \dots                            \\ 
          \boldsymbol{A}_j\,\boldsymbol{B} \\
-         \dots
+         \dots                            \\
          \end{array}
    \right]\ \ =\ \ 
    \left[\begin{array}{c}
@@ -124,7 +124,7 @@ przebiega następująco:
          \boldsymbol{A}_j\,\boldsymbol{B}           \\ 
          \dots                                      \\ 
          \boldsymbol{A}_j\,\boldsymbol{B}           \\
-         \dots
+         \dots                                      \\
          \end{array}
    \right]\ \ =
                
@@ -134,7 +134,7 @@ przebiega następująco:
          (\boldsymbol{A}_i\ + \, a\boldsymbol{A}_j)\,\boldsymbol{B} \\ 
          \dots                                                      \\ 
          \boldsymbol{A}_j\,\boldsymbol{B}                           \\
-         \dots
+         \dots                                                      \\
          \end{array}
    \right]\ \ \ =\ \ \ 
    \left[\begin{array}{c}
@@ -142,7 +142,7 @@ przebiega następująco:
          \boldsymbol{A}_i\ + a\boldsymbol{A}_j \\ 
          \dots                                 \\ 
          \boldsymbol{A}_j                      \\
-         \dots
+         \dots                                 \\    
          \end{array}
    \right]\,\boldsymbol{B}\ \ \ =\ \ \ 
    [\,O_3(i,j,a)\,\boldsymbol{A}\,]\ \boldsymbol{B}\,.
@@ -314,14 +314,14 @@ Dokładnie ujmuje to następujące
          \boldsymbol{A}_1 \\ 
          \boldsymbol{A}_2 \\
          \dots            \\
-         \boldsymbol{A}_m 
+         \boldsymbol{A}_m \\ 
          \end{array}
    \right]\boldsymbol{B}\ \ =\ \   
    \left[\begin{array}{c}
          \boldsymbol{A}_1\,\boldsymbol{B} \\ 
          \boldsymbol{A}_2\,\boldsymbol{B} \\
          \dots                            \\
-         \boldsymbol{A}_m\,\boldsymbol{B} 
+         \boldsymbol{A}_m\,\boldsymbol{B} \\ 
          \end{array}
    \right]\,.
 
@@ -335,21 +335,22 @@ Na tej podstawie otrzymujemy 1. część tezy:
          \boldsymbol{A}_1\,\boldsymbol{B} \\ 
          \boldsymbol{A}_2\,\boldsymbol{B} \\
          \dots                            \\
-         \boldsymbol{A}_m\,\boldsymbol{B} 
+         \boldsymbol{A}_m\,\boldsymbol{B} \\ 
          \end{array}
    \right]\ =
    \left[\begin{array}{c}
          \boldsymbol{A}_{\sigma(1)}\,\boldsymbol{B} \\ 
          \boldsymbol{A}_{\sigma(2)}\,\boldsymbol{B} \\
          \dots                                      \\
-         \boldsymbol{A}_{\sigma(m)}\,\boldsymbol{B} 
+         \boldsymbol{A}_{\sigma(m)}\,\boldsymbol{B} \\ 
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
          \boldsymbol{A}_{\sigma(1)} \\ 
          \boldsymbol{A}_{\sigma(2)} \\
          \dots                      \\
-         \boldsymbol{A}_{\sigma(m)} \end{array}
+         \boldsymbol{A}_{\sigma(m)} \\ 
+         \end{array}
    \right]\boldsymbol{B}\ =\ 
    (O_\sigma\boldsymbol{A})\,\boldsymbol{B}\,.
 
@@ -393,21 +394,21 @@ Zauważmy najpierw, że
          \boldsymbol{e}_1 \\
          \boldsymbol{e}_2 \\
          \dots            \\
-         \boldsymbol{e}_m
+         \boldsymbol{e}_m \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
          \boldsymbol{e}_{\sigma(1)} \\
          \boldsymbol{e}_{\sigma(2)} \\
          \dots                      \\
-         \boldsymbol{e}_{\sigma(m)}
+         \boldsymbol{e}_{\sigma(m)} \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
          \boldsymbol{e}'_1 \\
          \boldsymbol{e}'_2 \\
          \dots             \\
-         \boldsymbol{e}'_m
+         \boldsymbol{e}'_m \\
          \end{array}
    \right]\,,
    \quad\text{gdzie}\quad
@@ -425,14 +426,14 @@ A zatem iloczyn dwóch macierzy permutacji można zapisać w postaci
          \boldsymbol{e}'_1 \\
          \boldsymbol{e}'_2 \\
          \dots             \\
-         \boldsymbol{e}'_m
+         \boldsymbol{e}'_m \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
          \boldsymbol{e}'_{\rho(1)} \\
          \boldsymbol{e}'_{\rho(2)} \\
          \dots                     \\
-         \boldsymbol{e}'_{\rho(m)}
+         \boldsymbol{e}'_{\rho(m)} \\
          \end{array}
    \right]\,.
 
@@ -453,14 +454,14 @@ Wobec tego
          \boldsymbol{e}'_{\rho(1)} \\
          \boldsymbol{e}'_{\rho(2)} \\
          \dots                     \\
-         \boldsymbol{e}'_{\rho(m)}
+         \boldsymbol{e}'_{\rho(m)} \\
          \end{array}
    \right]\ =\ 
    \left[\begin{array}{c}
          \boldsymbol{e}_{(\sigma\,\circ\,\rho)(1)} \\
          \boldsymbol{e}_{(\sigma\,\circ\,\rho)(2)} \\
          \dots                                     \\
-         \boldsymbol{e}_{(\sigma\,\circ\,\rho)(m)}
+         \boldsymbol{e}_{(\sigma\,\circ\,\rho)(m)} \\
          \end{array}
    \right]\ =\ 
    \boldsymbol{P}_{\sigma\,\circ\,\rho}
@@ -468,7 +469,7 @@ Wobec tego
          \boldsymbol{e}_1 \\
          \boldsymbol{e}_2 \\
          \dots            \\
-         \boldsymbol{e}_m
+         \boldsymbol{e}_m \\
          \end{array}
    \right]\ =\ 
    \boldsymbol{P}_{\sigma\,\circ\,\rho}\ \boldsymbol{I}_m\ =\ 

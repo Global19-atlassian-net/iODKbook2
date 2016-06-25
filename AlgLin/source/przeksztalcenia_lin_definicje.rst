@@ -63,7 +63,8 @@ Odpowiednia definicja brzmi następująco:
       | (obraz sumy dwóch wektorów równa się sumie ich obrazów) :math:`\ ` 
         oraz
  
-   2. | :math:`\,` jednorodne: :math:`\quad F(a\,v)\,=\,a\,F(v)\,,\qquad a\in K,\ v\in V`
+   2. | :math:`\,` jednorodne: 
+        :math:`\quad F(a\,v)\,=\,a\,F(v)\,,\qquad a\in K,\ v\in V`
       | (pomnożenie argumentu przez liczbę :math:`\,a\ \,` 
         mnoży przez tę liczbę obraz).
 
@@ -109,8 +110,9 @@ Sprawdzając postulaty z definicji przestrzeni wektorowej można udowodnić
       :label: oper_hom
    
       \begin{array}{lcl}
-      (F_1+F_2)(v)\ :\,=\ F_1(v)\,+\,F_2(v) & \qquad & F_1,F_2,F\in \text{Map}(V,W)\,, \\
-      (a\,F)(v)\ :\,=\ a\,F(v)              & \qquad & \,a\in K,\ \ v\in V\,,
+      (F_1+F_2)(v)\ :\,=
+      \ F_1(v)\,+\,F_2(v) & \qquad & F_1,F_2,F\in \text{Map}(V,W)\,, \\
+      (a\,F)(v)\ :\,=\ a\,F(v) & \qquad & \,a\in K,\ \ v\in V\,,
       \end{array}
 
    jest przestrzenią wektorową nad ciałem :math:`\,K.`

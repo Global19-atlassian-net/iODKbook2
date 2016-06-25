@@ -11,7 +11,8 @@ Iloczyn skalarny wektorów :math:`\quad\boldsymbol{x}\,=\,
 \left[\begin{array}{c} y_1 \\ y_2 \\ \dots \\ y_n \end{array}\right]\quad
 \in K^n\,,` :math:`\\`
 
-gdzie :math:`\ K=R\ \,` lub :math:`\ K=C\,,\ ` można obliczyć stosując operację mnożenia :math:`\,` * :math:`\,`  bądź metody Sage'a:  
+gdzie :math:`\ K=R\ \,` lub :math:`\ K=C\,,\ ` można obliczyć stosując 
+operację mnożenia :math:`\,` * :math:`\,`  bądź metody Sage'a:  
 :math:`\,` ``dot_product()``, :math:`\,` ``hermitian_inner_product()``, 
 :math:`\,` ``inner_product()``.
 

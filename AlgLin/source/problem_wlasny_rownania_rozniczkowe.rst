@@ -8,25 +8,14 @@ Rozwiązania liniowych układów równań
 Zajmiemy się liniowym układem równań różniczkowych 1. rzędu 
 o stałych współczynnikach:
 
-.. .. math::
-      :label: set_diff
-   
-      \dot{x}_1\ =\ a_{11}\,x_1\,+\,a_{12}\,x_2\,+\,\ldots\,+\,a_{1n}\,x_n
-      
-      \dot{x}_2\ =\ a_{21}\,x_1\,+\,a_{22}\,x_2\,+\,\ldots\,+\,a_{2n}\,x_n
-      
-      \quad\ \ \ldots\qquad\ldots\qquad\ \ \ldots\qquad\ldots\qquad\ldots\qquad
-      
-      \dot{x}_n\ =\ a_{n1}\,x_1\,+\,a_{n2}\,x_2\,+\,\ldots\,+\,a_{nn}\,x_n
-
 .. math::
    :label: set_diff
    
    \begin{array}{l}
    \dot{x}_1\ =\ a_{11}\,x_1\,+\,a_{12}\,x_2\,+\,\ldots\,+\,a_{1n}\,x_n \\
    \dot{x}_2\ =\ a_{21}\,x_1\,+\,a_{22}\,x_2\,+\,\ldots\,+\,a_{2n}\,x_n \\
-   \ \ldots\qquad\ldots\qquad\ \ \ldots\qquad\ldots\qquad\ldots\qquad \\
-   \dot{x}_n\ =\ a_{n1}\,x_1\,+\,a_{n2}\,x_2\,+\,\ldots\,+\,a_{nn}\,x_n 
+   \ \ldots\qquad\ldots\qquad\ \ \ldots\qquad\ldots\qquad\ldots\qquad   \\
+   \dot{x}_n\ =\ a_{n1}\,x_1\,+\,a_{n2}\,x_2\,+\,\ldots\,+\,a_{nn}\,x_n \\ 
    \end{array}
 
 gdzie :math:`\ \ x_i=x_i(t)\,,\ \ \dot{x}_i\,=\,\frac{d}{dt}\ x_i(t)\,,\ \ 
@@ -39,8 +28,8 @@ Wprowadzając oznaczenia
    \left[\begin{array}{cccc} 
       a_{11} & a_{12} & \dots & a_{1n} \\
       a_{21} & a_{22} & \dots & a_{2n} \\
-      \dots & \dots & \dots & \dots \\
-      a_{n1} & a_{n2} & \dots & a_{nn}
+      \dots & \dots & \dots & \dots    \\
+      a_{n1} & a_{n2} & \dots & a_{nn} \\
    \end{array}\right]\,,\qquad
    \boldsymbol{x}\ =\ 
    \left[\begin{array}{c} 
@@ -120,8 +109,8 @@ Wartości własne :math:`\ \lambda\ ` wyliczamy z równania charakterystycznego
    \end{array}
    \right|\ \ =\ \ 0\,.
 
-a odpowiednie wektory własne :math:`\,` - :math:`\,` rozwiązując problem liniowy 
-:eq:`eigen_eqn` dla danej wartości :math:`\,\lambda:`
+a odpowiednie wektory własne :math:`\,` - :math:`\,` rozwiązując 
+problem liniowy :eq:`eigen_eqn` dla danej wartości :math:`\,\lambda:`
 
 .. .. math::
       :label: hom_set
@@ -152,8 +141,8 @@ a odpowiednie wektory własne :math:`\,` - :math:`\,` rozwiązując problem lini
 
 Ze względu na jednorodność układu :eq:`set_diff`, a także odpowiadającego mu 
 równania macierzowego :eq:`mat_eqn`, każda kombinacja liniowa rozwiązań jest 
-również jego rozwiązaniem. Omówimy teraz różne sytuacje, odpowiadające możliwym 
-rozwiązaniom równania charakterystycznego.
+również jego rozwiązaniem. Omówimy teraz różne sytuacje, odpowiadające 
+możliwym rozwiązaniom równania charakterystycznego.
 
 :math:`\;`
 
@@ -196,7 +185,7 @@ Ogólne rozwiązanie jest dowolną kombinacją liniową tych rozwiązań szczeg�
    
    \begin{alignat*}{3}
    \dot{x}_1 & {\ } = {\ } & 2\,x_1 & {\ } - {\ } &    x_2 \\
-   \dot{x}_2 & {\ } = {\ } & 4\,x_1 & {\ } - {\ } & 3\,x_2
+   \dot{x}_2 & {\ } = {\ } & 4\,x_1 & {\ } - {\ } & 3\,x_2 \\
    \end{alignat*}
 
 Równanie charakterystyczne :eq:`char_eqn` dla macierzy 
@@ -262,8 +251,8 @@ które składają się na rozwiązanie ogólne:
    \\ \\
    \qquad
    \begin{cases}\ \begin{array}{l}
-   x_1(t)\ =\ c_1\ e^{\;t}\,+\,c_2\ e^{\,-2\,t} \\
-   x_2(t)\ =\ c_1\ e^{\;t}\,+\,4\,c_2\ e^{\,-2\,t}
+   x_1(t)\ =\ c_1\ e^{\;t}\,+\,c_2\ e^{\,-2\,t}    \\
+   x_2(t)\ =\ c_1\ e^{\;t}\,+\,4\,c_2\ e^{\,-2\,t} \\
    \end{array}\end{cases}
    \qquad c_1,c_2\in R\,.
    \end{array}
@@ -395,7 +384,7 @@ W uzupełnieniu dyskusji Przypadków
    
    \begin{alignat*}{3}
    \dot{x}_1 & {\ } = {\ } & 3\,x_1 & {\ } - {\ } &    x_2 \\
-   \dot{x}_2 & {\ } = {\ } &    x_1 & {\ } + {\ } & 3\,x_2
+   \dot{x}_2 & {\ } = {\ } &    x_1 & {\ } + {\ } & 3\,x_2 \\
    \end{alignat*}
 
 Równanie charakterystyczne :eq:`char_eqn` dla macierzy 
@@ -510,9 +499,12 @@ Wyznaczymy rozwiązanie ogólne układu
    :nowrap:
    
    \begin{alignat*}{4}
-   \dot{x}_1 & {\ } = {\ } & -8\ x_1 & {\ } + {\ } &  18\ x_2 & {\ } + {\ } &  9\ x_3 \\
-   \dot{x}_1 & {\ } = {\ } & -9\ x_1 & {\ } + {\ } &  19\ x_2 & {\ } + {\ } &  9\ x_3 \\
-   \dot{x}_1 & {\ } = {\ } & 12\ x_1 & {\ } - {\ } &  24\ x_2 & {\ } - {\ } & 11\ x_3 
+   \dot{x}_1 & {\ } = 
+   {\ } & -8\ x_1 & {\ } + {\ } &  18\ x_2 & {\ } + {\ } &  9\ x_3 \\
+   \dot{x}_1 & {\ } = 
+   {\ } & -9\ x_1 & {\ } + {\ } &  19\ x_2 & {\ } + {\ } &  9\ x_3 \\
+   \dot{x}_1 & {\ } = 
+   {\ } & 12\ x_1 & {\ } - {\ } &  24\ x_2 & {\ } - {\ } & 11\ x_3 \\ 
    \end{alignat*}
 
 Równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}:`
@@ -624,9 +616,12 @@ Rozwiążemy liniowy układ równań różniczkowych
    :nowrap:
    
    \begin{alignat*}{4}
-   \dot{x}_1 & {\ } = {\ } & 4\ x_1 & {\ } + {\ } &    x_2 & {\ } + {\ } &    x_3 \\
-   \dot{x}_1 & {\ } = {\ } & 2\ x_1 & {\ } + {\ } & 4\ x_2 & {\ } + {\ } &    x_3 \\
-   \dot{x}_1 & {\ } = {\ } &        &             &    x_2 & {\ } + {\ } & 4\ x_3 
+   \dot{x}_1 & {\ } = 
+   {\ } & 4\ x_1 & {\ } + {\ } &    x_2 & {\ } + {\ } &    x_3 \\
+   \dot{x}_1 & {\ } = 
+   {\ } & 2\ x_1 & {\ } + {\ } & 4\ x_2 & {\ } + {\ } &    x_3 \\
+   \dot{x}_1 & {\ } = 
+   {\ } &        &             &    x_2 & {\ } + {\ } & 4\ x_3 \\ 
    \end{alignat*}
 
 Równanie charakterystyczne macierzy 

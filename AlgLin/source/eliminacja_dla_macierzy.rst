@@ -19,10 +19,14 @@ Dla układu :math:`\,m\,` równań o :math:`\,n\,` niewiadomych:
    :label: 01
 
    \begin{array}{c}
-   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
-   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
-   \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots  \\
-   a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ b_m
+   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, =
+   \ \ b_1 \\
+   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, =
+   \ \ b_2 \\
+   \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad
+   \ \ \,\ldots  \\
+   a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, =
+   \ \ b_m
    \end{array}
 
 gdzie współczynniki :math:`\,a_{ij}\,` 
@@ -720,7 +724,8 @@ Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
 
    \;
 
-otrzymujemy równoważny układ dwóch równań (trzecie jest spełnione tożsamościowo): :math:`\\`
+otrzymujemy równoważny układ dwóch równań 
+(trzecie jest spełnione tożsamościowo): :math:`\\`
 
 .. math::
    :nowrap:

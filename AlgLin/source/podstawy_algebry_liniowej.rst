@@ -308,8 +308,9 @@ jego wektorów, równą wektorowi zerowemu, jest kombinacja trywialna:
 .. math::
    :label: linindep
 
-   \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta\qquad
-   \Rightarrow\qquad\alpha_1=\alpha_2=\ldots=\alpha_r=0\,.
+   \alpha_1\,x_1\,+\,\alpha_2\,x_2\,+\,\ldots\,+\,\alpha_r\,x_r\ =\ \theta
+   \qquad\Rightarrow\qquad
+   \alpha_1=\alpha_2=\ldots=\alpha_r=0\,.
 
 Warto zauważyć, że warunek :eq:`linindep` 
 jest implikacją odwrotną do :eq:`triv`.

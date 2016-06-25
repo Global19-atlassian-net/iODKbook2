@@ -281,8 +281,8 @@ Przyjmujemy, że :math:`\ M_{\mathcal{B}}(\widetilde{F})\ =\
 \left[\,M_{\mathcal{B}}(F)\,\right]^+,\ \,`
 czyli że :math:`\ \widetilde{\boldsymbol{F}}=\boldsymbol{F}^+.`
 
-Trzeba pokazać, że operator :math:`\,\widetilde{F}\ ` spełnia warunek :eq:`x_Ft_y`, :math:`\,`
-co będzie oznaczać, że :math:`\ \widetilde{F}=F^+.`
+Trzeba pokazać, że operator :math:`\,\widetilde{F}\ ` spełnia warunek 
+:eq:`x_Ft_y`, :math:`\,` co będzie oznaczać, że :math:`\ \widetilde{F}=F^+.`
 
 Niech :math:`\ \ x\,=\,\displaystyle\sum_{i\,=\,1}^n\ \alpha_i\,u_i\,,\ \ 
 y=\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,.\ ` Wtedy
@@ -434,8 +434,8 @@ poprzedzającym tę sekcję. :math:`\\`
       \alpha,\beta\in C\,,\quad F,\,G\in\,\text{End}(V)\,.
 
 W świetle Twierdzenia 8. i wynikającego z niego wniosku analogia między 
-własnościami operacji sprzężenia hermitowskiego macierzy i operatorów liniowych 
-jest nieprzypadkowa. :math:`\\`
+własnościami operacji sprzężenia hermitowskiego macierzy i operatorów 
+liniowych jest nieprzypadkowa. :math:`\\`
 
 Operatory hermitowskie
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -473,7 +473,8 @@ Z wniosku do Twierdzenia 8. wynika bezpośrednio
       F=F^+\quad\Leftrightarrow\quad M_{\mathcal{B}}(F)\,=
       \,[\,M_{\mathcal{B}}(F)\,]^+\,,\qquad F\in\text{End}(V)\,.
 
-W dalszym ciągu będziemy się odwoływać do kryterium rzeczywistości liczby zespolonej :math:`\,z:`
+W dalszym ciągu będziemy się odwoływać do kryterium 
+rzeczywistości liczby zespolonej :math:`\,z:`
 
 .. math::
    
@@ -629,7 +630,8 @@ Stąd, a także z równania :eq:`M_B_F_plus` wynika ciąg równoważnych związk
 
 **Własności operatorów unitarnych.**
 
-Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przestrzeni :math:`\,V:`
+Niech :math:`\ U\ ` będzie operatorem unitarnym, 
+określonym na unitarnej przestrzeni :math:`\,V:`
 
 .. math::
    :label: U0

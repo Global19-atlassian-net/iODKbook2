@@ -538,56 +538,9 @@ Otrzymaliśmy dla niej dwa różne rozkłady
 :eq:`A_PLU_ex`. Łatwo sprawdzić, że wyznacznik tej macierzy wyliczony 
 jakąkolwiek metodą wynosi :math:`\,-16.`
 
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-   
-
- 
  
 
 
-
-
-
-  
-
-                                      
-
-
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -69,8 +69,10 @@ W tej sytuacji mają sens następujące definicje:
 .. math::
    
    \begin{array}{rclcl}
-   \text{def}\,F & :\,= & \dim\,\text{Ker}\,F & \qquad\quad & \text{defekt homomorfizmu}\ F \\
-   \text{rz}\,F  & :\,= & \dim\,\text{Im}\,F  & \qquad\quad & \text{rząd homomorfizmu}\ F
+   \text{def}\,F & :\,= & \dim\,\text{Ker}\,F & 
+   \qquad\quad & \text{defekt homomorfizmu}\ F \\
+   \text{rz}\,F  & :\,= & \dim\,\text{Im}\,F  & 
+   \qquad\quad & \text{rząd homomorfizmu}\ F
    \end{array}
 
 .. admonition:: Twierdzenie 7.
@@ -109,7 +111,8 @@ co doprowadzi do tezy :eq:`def_rz`.
 
 .. skąd wynika teza twierdzenia.
 
-1. :math:`\,` Chcemy stwierdzić, że układ :eq:`set_FY` jest liniowo niezależny. Załóżmy że
+1. :math:`\,` Chcemy stwierdzić, że układ :eq:`set_FY` jest liniowo niezależny. 
+   Załóżmy że
    
    .. math::
       
@@ -149,23 +152,27 @@ co doprowadzi do tezy :eq:`def_rz`.
    która stwierdza liniową niezależność układu 
    :math:`\ (Fy_1,\,Fy_2,\,\dots,\,Fy_r)`.
 
-2. :math:`\,` Aby wykazać, że układ :eq:`set_FY` generuje :math:`\,\text{Im}\,F,\ `
-   rozważmy dowolny wektor :math:`\,w\in \text{Im}\,F:`
+2. :math:`\,` Aby wykazać, że układ :eq:`set_FY` 
+   generuje :math:`\,\text{Im}\,F,\ ` rozważmy dowolny wektor 
+   :math:`\,w\in \text{Im}\,F:`
 
    .. math::
       
       w\ =\ F(v),\quad v=
       b_1\,u_1+\;\ldots\;+\;b_k\,u_k\;+\ c_1\,y_1+\;\ldots\;+\;c_r\,y_r\,.
 
-   Biorąc pod uwagę to, że :math:`\ \,Fu_i=\theta_W,\ \,i=1,2,\dots,k,\ \,` mamy
+   Biorąc pod uwagę to, że :math:`\ \,Fu_i=\theta_W,\ \,i=1,2,\dots,k,\ \,` 
+   mamy
 
    .. math::
       :nowrap:
       
       \begin{eqnarray*}
-      w & = & F\,(b_1\,u_1+\;\ldots\;+\;b_k\,u_k\;+\ c_1\,y_1+\;\ldots\;+\;c_r\,y_r) \\
-        & = & b_1\,Fu_1+\;\ldots\;+\;b_k\,Fu_k\;+\ c_1\,Fy_1+\;\ldots\;+\;c_r\,Fy_r  \\
-        & = & c_1\,Fy_1+\;\ldots\;+\;c_r\,Fy_r\,\in\,L(Fy_1,\dots,Fy_r)\,.
+      w & = & F\,(b_1\,u_1+\;\ldots\;+\;b_k\,u_k\;+
+      \ c_1\,y_1+\;\ldots\;+\;c_r\,y_r) \\
+      & = & b_1\,Fu_1+\;\ldots\;+\;b_k\,Fu_k\;+
+      \ c_1\,Fy_1+\;\ldots\;+\;c_r\,Fy_r  \\
+      & = & c_1\,Fy_1+\;\ldots\;+\;c_r\,Fy_r\,\in\,L(Fy_1,\dots,Fy_r)\,.
       \end{eqnarray*}
 
    A zatem :math:`\ \text{Im}\,F\subset L(Fy_1,\dots,Fy_r).\ `

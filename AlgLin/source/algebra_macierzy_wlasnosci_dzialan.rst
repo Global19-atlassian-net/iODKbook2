@@ -204,7 +204,8 @@ w sensie definicji iloczynu macierzowego w poprzedniej sekcji.
 Wierszowa reguła mnożenia macierzowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Niech będą dane dwie macierze nad ciałem :math:`\,K,\,` zapisane w postaci wierszowej:
+Niech będą dane dwie macierze nad ciałem :math:`\,K,\,` 
+zapisane w postaci wierszowej:
 
 .. math::
    
@@ -387,29 +388,6 @@ zauważmy, że :math:`\\`
 
    \; 
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

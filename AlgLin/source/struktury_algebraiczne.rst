@@ -68,7 +68,8 @@ Przykłady grup nieprzemiennych:
     stopnia :math:`\,n\,` 
   | (z mnożeniem macierzowym jako działaniem grupowym);  
 
-* | grupa przekształceń symetrii figury na płaszczyźnie albo bryły w przestrzeni
+* | grupa przekształceń symetrii figury na płaszczyźnie 
+    albo bryły w przestrzeni
   | (działaniem grupowym jest składanie przekształceń symetrii). 
 
 | **Pierścień** :math:`\ \,\mathbb{P}\ \,` (ang.: ring) :math:`\,`
@@ -119,7 +120,8 @@ to mówimy o pierścieniu z jednością.
 
 | Przykłady przemiennych pierścieni z jednością:
 
-* | pierścień liczb całkowitych: :math:`\ \ \mathbb{Z} \,=\, (Z,\ +\,,\ \cdot\,)`
+* | pierścień liczb całkowitych: 
+    :math:`\ \ \mathbb{Z} \,=\, (Z,\ +\,,\ \cdot\,)`
   | ze zwykłym dodawaniem i mnożeniem liczb;
 
 * | pierścień reszt modulo :math:`\,n:\ \ \mathbb{Z}_n = (Z_n,\ +_n
@@ -128,10 +130,12 @@ to mówimy o pierścieniu z jednością.
     są dodawaniem  i  mnożeniem modulo :math:`\,n,\ \ n=2,3,\ldots`
 
 * | struktura :math:`\,(X,\ \oplus,\ \odot\,)\,,\ `  
-    gdzie :math:`\,X\,=\,Z,\,Q\ \ \text{albo}\ \,R,\ ` a działania są określone
+    gdzie :math:`\,X\,=\,Z,\,Q\ \ \text{albo}\ \,R,\ ` 
+    a działania są określone
   | następująco: :math:`\quad a\oplus b\,:\,=\,a+b+1,\quad 
     a\odot b\,:\,=\,a+b+ab,\quad a,b\in X\,;`
-  | zerem tego pierścienia jest liczba -1, a jednością :math:`\ -\ ` liczba 0;
+  | zerem tego pierścienia jest liczba -1, 
+    a jednością :math:`\ -\ ` liczba 0;
 
 * | zbiór wszystkich funkcji odwzorowujących przedział 
     :math:`\ [\,0,\,1\,]\ \ \text{w}\ \ R`
@@ -141,7 +145,8 @@ to mówimy o pierścieniu z jednością.
 
 Nieprzemienny pierścień z jednością 
 tworzą macierze kwadratowe stopnia :math:`\,n\,`
-nad pierścieniem z jednością (na przykład macierze rzeczywiste albo zespolone)
+nad pierścieniem z jednością (na przykład macierze 
+rzeczywiste albo zespolone)
 ze względu na dodawanie i mnożenie macierzowe.
 
 

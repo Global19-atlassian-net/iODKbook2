@@ -68,11 +68,18 @@ do równania własnego otrzymujemy kolejno:
    
    \begin{eqnarray*}
    F\,\vec{r} & = & \lambda\;\vec{r}\,,\quad\vec{r}\neq\vec{0}\,, \\
-   F(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2) & = & \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
-   \alpha_1\,F\vec{e}_1+\alpha_2\,F\vec{e}_2 & = & \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
-   \alpha_1\,(2\,\vec{e}_1+\vec{e}_2)+\alpha_2\,(\vec{e}_1+2\,\vec{e}_2) & = & \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
-   2\,\alpha_1\,\vec{e}_1+\alpha_1\,\vec{e}_2+\alpha_2\,\vec{e}_1+2\,\alpha_2\,\vec{e}_2 & = & \lambda\,\alpha_1\,\vec{e}_1+\lambda\,\alpha_2\,\vec{e}_2\,, \\
-   \left[\,(2-\lambda)\,\alpha_1+\alpha_2\,\right]\,\vec{e}_1+\left[\,\alpha_1+(2-\lambda)\,\alpha_2\,\right]\,\vec{e}_2 & = & \vec{0}\,.
+   F(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2) & = & 
+   \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
+   \alpha_1\,F\vec{e}_1+\alpha_2\,F\vec{e}_2 & = & 
+   \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
+   \alpha_1\,(2\,\vec{e}_1+\vec{e}_2)+\alpha_2\,(\vec{e}_1+2\,\vec{e}_2) & = & 
+   \lambda\;(\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2)\,, \\
+   2\,\alpha_1\,\vec{e}_1+\alpha_1\,\vec{e}_2+
+   \alpha_2\,\vec{e}_1+2\,\alpha_2\,\vec{e}_2 & = & 
+   \lambda\,\alpha_1\,\vec{e}_1+\lambda\,\alpha_2\,\vec{e}_2\,, \\
+   \left[\,(2-\lambda)\,\alpha_1+\alpha_2\,\right]\,\vec{e}_1+
+   \left[\,\alpha_1+(2-\lambda)\,\alpha_2\,\right]\,\vec{e}_2 & = & 
+   \vec{0}\,. \\
    \end{eqnarray*}
 
 Kombinacja niezależnych liniowo wektorów :math:`\ \vec{e}_1,\,\vec{e}_2\ `
@@ -388,7 +395,7 @@ w tej samej bazie :math:`\ \mathcal{B}:`
          0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
          0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
          0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-         1\cdot\boldsymbol{e}_4\,,
+         1\cdot\boldsymbol{e}_4\,, \\
    \end{alignat*}
 
 to :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ ` składa się 

@@ -11,7 +11,7 @@ Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`
    \begin{alignat*}{6}
       x_1 & {\,} + {\,} & 3\,x_2 & {\,}   {\,} &        & {\,} + {\,} & 2\,x_4 & {\,} - {\,} &    x_5 & {\;} = {\;} & 2 \\
           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2 \\
-      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} &    x_3 & {\,} + {\,} & 6\,x_4 & {\,} - {\,} & 4\,x_5 & {\;} = {\;} & 4
+      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} &    x_3 & {\,} + {\,} & 6\,x_4 & {\,} - {\,} & 4\,x_5 & {\;} = {\;} & 4 \\
    \end{alignat*}
 
 Zaczynamy od zapisania macierzy współczynników :math:`\,\boldsymbol{A},\ `
@@ -93,7 +93,7 @@ Otrzymany powyżej układ dwóch równań przepisujemy jako
 
    \begin{alignat*}{5}
       x_1 & {\;} = {\;} & 2 & {\,} - {\,} & 3\,x_2 & {\,} - {\,} & 2\,x_4 & {\,} + {\,} & x_5 \\
-      x_3 & {\,} = {\,} & 2 & {\,} - {\,} & 4\,x_4 & {\,} + {\,} & 3\,x_5  
+      x_3 & {\,} = {\,} & 2 & {\,} - {\,} & 4\,x_4 & {\,} + {\,} & 3\,x_5                     \\ 
    \end{alignat*}
 
 Niewiadome :math:`\ x_2,\,x_4\ \,\text{i}\ \, x_5\ `

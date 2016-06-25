@@ -155,26 +155,3 @@ ale również :math:`\quad\|x\|\ =\ |\alpha_1|+|\alpha_2|+\ldots+|\alpha_n|\,.`
    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
