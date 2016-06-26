@@ -297,7 +297,7 @@ Otrzymany układ równości można zapisać w postaci równania macierzowego:
       \lambda_1       & \lambda_2       & \dots & \lambda_n       \\
       \lambda_1^2     & \lambda_2^2     & \dots & \lambda_n^2     \\
       \cdots          & \cdots          &\cdots & \cdots          \\ 
-      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1}
+      \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1} \\
    \end{array}\right]
    \left[\begin{array}{c} 
    \alpha_1\,v_1 \\ \alpha_2\,v_2 \\ \alpha_3\,v_3 \\ \cdots \\ \alpha_n\,v_n

@@ -504,85 +504,84 @@ oraz jednoelementowy podzbiór zawierający tylko wektor zerowy
 
 Przykłady podprzestrzeni:
 
-1. | :math:`\,` Niech :math:`\,V\,` oznacza zbiór wektorów geometrycznych 
-     w przestrzeni, 
-   | :math:`\,V_x,\,V_y,\,V_z\ \,-\ \,` podzbiory wektorów leżących odpowiednio 
-     na osiach :math:`\,Ox,\,Oy,\,Oz\,,` 
-   | :math:`\,V_{xy},\,V_{yz},\,V_{xz}\ \,-\ \,` podzbiory wektorów leżących
-     w płaszczyznach :math:`\,Oxy,\,Oyz,\,Oxz\,.`
-   | Podzbiory te są podprzestrzeniami przestrzeni :math:`\,V:\ \ `
-     :math:`\,V_x,\,V_y,\,V_z,\,V_{xy},\,V_{yz},\,V_{xz}\,< \,V,` 
-   | a ponadto zachodzą relacje: :math:`\quad V_x,\,V_y\,<\,V_{xy}\,,
-     \quad V_y,\,V_z\,<\,V_{yz}\,,\quad V_x,\,V_z\,<\,V_{xz}\,.`
+| 1.) :math:`\,` Niech :math:`\,V\,` oznacza zbiór wektorów geometrycznych
+  w przestrzeni 3-wymiarowej,
+| :math:`\,V_x,\,V_y,\,V_z\ \,-\ \,` podzbiory wektorów leżących odpowiednio 
+  na osiach :math:`\,Ox,\,Oy,\,Oz\,,`
+| :math:`\,V_{xy},\,V_{yz},\,V_{xz}\ \,-\ \,` podzbiory wektorów leżących
+  w płaszczyznach :math:`\,Oxy,\,Oyz,\,Oxz\,.`
+| Podzbiory te są podprzestrzeniami przestrzeni :math:`\,V:\ \ `
+  :math:`\,V_x,\,V_y,\,V_z,\,V_{xy},\,V_{yz},\,V_{xz}\,< \,V,`
+| a ponadto zachodzą relacje: :math:`\quad V_x,\,V_y\,<\,V_{xy}\,,
+  \quad V_y,\,V_z\,<\,V_{yz}\,,\quad V_x,\,V_z\,<\,V_{xz}\,.`
 
-2. :math:`\,` Rozważmy przestrzeń :math:`\,K^n\ \,n`-wyrazowych
-   wektorów kolumnowych nad ciałem :math:`\,K\,:`
+2.) :math:`\,` Rozważmy przestrzeń :math:`\,K^n\ \,n`-wyrazowych
+wektorów kolumnowych nad ciałem :math:`\,K\,:`
 
-   .. math::
-     
-      K^n\ \ =
-      \ \ \,\left\{\quad
-      \left[\begin{array}{c}
+.. math::
+  
+   K^n\ \ =
+   \ \ \,\left\{\quad
+   \left[\begin{array}{c}
       x_1 \\ \ldots \\ x_p \\ x_{p+1} \\ \ldots \\ x_n
-      \end{array}\right]
-      \ :\quad x_i\in K\,,\ \ i = 1,2,\ldots,n.\;\right\}\,,
+   \end{array}\right]
+   \ :\quad x_i\in K\,,\ \ i = 1,2,\ldots,n.\;\right\}\,,
                                                                                                     
-   oraz podzbiór 
-   :math:`\ W_p\ =
-   \ \{\ \boldsymbol{x}\in K^n\,:\ \ x_{p+1}=\ldots = x_n = 0\,\}\,,\ `
-   gdzie :math:`\ 1 \leq p < n\,:`
+oraz podzbiór 
+:math:`\ W_p\ =\ \{\ \boldsymbol{x}\in K^n\,:\ \ x_{p+1}=\ldots =
+x_n = 0\,\}\,,\ ` gdzie :math:`\ 1 \leq p < n\,:`
 
-   .. math::
-     
-      W_p\ \ \,=
-      \ \ \,\left\{\quad
-      \left[\begin{array}{c}
+.. math::
+  
+   W_p\ \ \,=\ \ \,\left\{\quad
+   \left[\begin{array}{c}
       x_1 \\ \ldots \\ x_p \\ 0 \\ \ldots \\ 0
-      \end{array}\right]
-      \ :\quad x_i\in K\,,\ \ i = 1,2,\ldots,p.\;\right\}\,.
+   \end{array}\right]
+   \ :\quad x_i\in K\,,\ \ i = 1,2,\ldots,p.\;\right\}\,.
 
-   Stosując warunki :eq:`01` albo :eq:`02` łatwo sprawdzić,
-   że :math:`\,W_p\,` jest podprzestrzenią: 
+Stosując warunki :eq:`01` albo :eq:`02` łatwo sprawdzić,
+że :math:`\,W_p\,` jest podprzestrzenią: 
 
-   .. math::
+.. math::
+
+   W_p\,<\,K^n\,. 
+
+3.) :math:`\,` Zbiór :math:`\,M_n(K)\,` macierzy kwadratowych stopnia 
+:math:`\,n\,` nad ciałem :math:`\,K\,` jest przestrzenią wektorową nad 
+:math:`\,K\,` ze względu na dodawanie macierzy i mnożenie ich przez skalary 
+z :math:`\,K\,`:
+
+.. math::
+
+   M_n(K)\ \ =\ \ \left\{\quad\left[\ \begin{array}{cccc}
+      a_{11} & a_{12} & \ldots & a_{1n} \\
+      a_{21} & a_{22} & \ldots & a_{2n} \\
+      \ldots & \ldots & \ldots & \ldots \\
+      a_{n1} & a_{n2} & \ldots & a_{nn} \\
+   \end{array}\ \right]
+   \ :\quad a_{ij}\in K,\ \ i,j\,=\,1,2,\ldots,n.\;\right\}\,.
+
+Podzbiór macierzy diagonalnych 
+(w których elementy niezerowe występują tylko na głównej przekątnej):
+
+.. math::
+
+   D_n(K)\ \ =\ \ 
+   \left\{\quad\left[\ \begin{array}{cccc}
+      a_{11} &   0    & \ldots &   0    \\
+      0    & a_{22} & \ldots &   0      \\
+      \ldots & \ldots & \ldots & \ldots \\
+      0    &   0    & \ldots & a_{nn}   \\
+   \end{array}\ \right]\ :\quad
+   a_{ii}\in K,\ \ i\,=\,1,2,\ldots,n.\;\right\}\,.
+
+jest podprzestrzenią: 
+
+.. math::
    
-      W_p\,<\,K^n\,. 
+   D_n(K)<M_n(K)
 
-3. :math:`\,` Zbiór :math:`\,M_n(K)\,` macierzy kwadratowych stopnia 
-   :math:`\,n\,` nad ciałem :math:`\,K\,` jest przestrzenią wektorową nad 
-   :math:`\,K\,` ze względu na dodawanie macierzy i mnożenie ich przez skalary 
-   z :math:`\,K\,`:
-
-   .. math::
-
-      M_n(K)\ \ =\ \ \left\{\quad\left[\ \begin{array}{cccc}
-                                        a_{11} & a_{12} & \ldots & a_{1n} \\
-                                        a_{21} & a_{22} & \ldots & a_{2n} \\
-                                        \ldots & \ldots & \ldots & \ldots \\
-                                        a_{n1} & a_{n2} & \ldots & a_{nn}
-                                        \end{array}\ \right]
-      \ :\quad a_{ij}\in K,\ \ i,j\,=\,1,2,\ldots,n.\;\right\}\,.
-
-   Podzbiór macierzy diagonalnych 
-   (w których elementy niezerowe występują tylko na głównej przekątnej):
-
-   .. math::
-
-      D_n(K)\ \ =\ \ \left\{\quad\left[\ \begin{array}{cccc}
-                                        a_{11} &   0    & \ldots &   0    \\
-                                          0    & a_{22} & \ldots &   0    \\
-                                        \ldots & \ldots & \ldots & \ldots \\
-                                          0    &   0    & \ldots & a_{nn}
-                                        \end{array}\ \right]\ :\quad
-                                a_{ii}\in K,\ \ i\,=\,1,2,\ldots,n.\;\right\}\,.
-
-   jest podprzestrzenią: 
-
-   .. math::
-   
-      D_n(K)<M_n(K)
-
-   co znowu wynika z kryterium :eq:`01` lub równoważnego mu :eq:`02`.
+co znowu wynika z kryterium :eq:`01` lub równoważnego mu :eq:`02`.
 
 Kryterium dla podalgebry jest rozszerzeniem warunku dla podprzestrzeni.
 
