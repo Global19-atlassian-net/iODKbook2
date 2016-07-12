@@ -335,7 +335,7 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       \boldsymbol{A}\,\boldsymbol{x} & \! = \! 
       & \lambda\,\boldsymbol{I}_n\,\boldsymbol{x}\,, \\
       \boldsymbol{A}\,\boldsymbol{x} & \! = \! & \lambda\,\boldsymbol{x}\,, 
-      \quad\text{gdzie}\quad\boldsymbol{x}\neq\boldsymbol{0}\,.
+      \quad\text{gdzie}\quad\boldsymbol{x}\neq\boldsymbol{0}\,. \\
       \end{eqnarray*}
 
    Wstawiając ostatnią równość do wzoru :eq:`xAx_Axx` otrzymujemy
@@ -350,9 +350,10 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       & \langle\,\lambda\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,, \\
       \lambda\ \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle & \! = \! 
       & \lambda^*\;\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,,
-      \quad\text{gdzie}\quad\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,;             \\
+      \quad\text{gdzie}\quad
+      \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,; \\
       \lambda & \! = \! & \lambda^* \quad\ \ \Leftrightarrow
-      \quad\ \ \,\lambda\in R\,.
+      \quad\ \ \,\lambda\in R\,. \\
       \end{eqnarray*}
 
 Rzeczywista macierz hermitowska jest macierzą symetryczną: :math:`\,`

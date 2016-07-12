@@ -8,26 +8,26 @@ macierzy jednostkowej :math:`\,\boldsymbol{I}_m\ (m=1,2,\ldots)\,.`
 Zdefiniowaliśmy trzy rodzaje operacji elementarnych 
 :math:`\ (i,j=0,1,\ldots,m-1;\ i \neq j):`
 
-#. :math:`\ O_1(i,j):\ ` przestawienie :math:`\,i`-tego 
+1. :math:`\ O_1(i,j):\ ` przestawienie :math:`\,i`-tego 
    oraz :math:`\,j`-tego wiersza,
-#. :math:`\ O_2(i,a):\ ` pomnożenie :math:`\,i`-tego wiersza 
+2. :math:`\ O_2(i,a):\ ` pomnożenie :math:`\,i`-tego wiersza 
    przez liczbę :math:`\,a \neq 0\,,`
-#. :math:`\ O_3(i,j,a):\ ` dodanie do :math:`\,i`-tego wiersza 
+3. :math:`\ O_3(i,j,a):\ ` dodanie do :math:`\,i`-tego wiersza 
    :math:`\,j`-tego wiersza pomnożonego przez liczbę :math:`\,a\,.`
 
 Odpowiednio istnieją trzy rodzaje macierzy elementarnych: 
 
-#. | :math:`\ \boldsymbol{E}_1(i,j)\,` powstaje przez zamianę miejscami
+1. | :math:`\ \boldsymbol{E}_1(i,j)\,` powstaje przez zamianę miejscami
      :math:`\,i`-tego oraz :math:`\,j`-tego wiersza 
      macierzy :math:`\,\boldsymbol{I}_m:`
    | :math:`\ \boldsymbol{E}_1(i,j)\,=\,O_1(i,j)\ \boldsymbol{I}_m\,,`
 
-#. | :math:`\ \boldsymbol{E}_2(i,a)\,` powstaje przez pomnożenie
+2. | :math:`\ \boldsymbol{E}_2(i,a)\,` powstaje przez pomnożenie
      :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{I}_m\,` 
      przez :math:`\,a \neq 0:` 
    | :math:`\ \boldsymbol{E}_2(i,a)\,=\,O_2(i,a)\ \boldsymbol{I}_m\,,`
 
-#. | :math:`\ \boldsymbol{E}_3(i,j,a)\,` powstaje przez dodanie 
+3. | :math:`\ \boldsymbol{E}_3(i,j,a)\,` powstaje przez dodanie 
      do :math:`\,i`-tego wiersza macierzy :math:`\,\boldsymbol{I}_m\,` 
      wiersza :math:`\,j`-tego pomnożonego przez :math:`\,a:\ `
    | :math:`\ \boldsymbol{E}_3(i,j,a)\,=\,O_3(i,j,a)\ \boldsymbol{I}_m\,.`
@@ -58,11 +58,11 @@ tej macierzy przez odpowiednią macierz elementarną. Można to zapisać jako
    Niech :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
    Wtedy :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1;\ i \neq j:`
 
-   #. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =
+   1. :math:`\ O_1(i,j)\,\boldsymbol{A}\ =
       \ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
-   #. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =
+   2. :math:`\ O_2(i,a)\,\boldsymbol{A}\ =
       \ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,\qquad (a\ne 0)`
-   #. :math:`\,O_3(i,j,a)\,\boldsymbol{A}\ = 
+   3. :math:`\ O_3(i,j,a)\,\boldsymbol{A}\ = 
       \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,,`
 
    gdzie :math:`\ \boldsymbol{E}_1(i,j),\ \boldsymbol{E}_2(i,a),
@@ -72,10 +72,10 @@ tej macierzy przez odpowiednią macierz elementarną. Można to zapisać jako
 przy czym odwrotność macierzy elementarnej jest macierzą elementarną. 
 Mianowicie :math:`\ (i,j=0,1,\ldots,m-1;\ i \neq j):`
 
-#. :math:`\,[\boldsymbol{E}_1(i,j)]^{-1}\,=\ \boldsymbol{E}_1(i,j),`
-#. :math:`\,[\boldsymbol{E}_2(i,a)]^{-1}\,=\ \boldsymbol{E}_2(i,a^{-1}),
+1. :math:`\ [\boldsymbol{E}_1(i,j)]^{-1}\,=\ \boldsymbol{E}_1(i,j),`
+2. :math:`\ [\boldsymbol{E}_2(i,a)]^{-1}\,=\ \boldsymbol{E}_2(i,a^{-1}),
    \qquad (a\ne 0)`
-#. :math:`\,[\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
+3. :math:`\ [\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
 
 W Sage macierze elementarne zwraca funkcja ``elementary_matrix()``. 
 Argumentami są: pierścień bazowy (domyślnie ZZ), stopień macierzy 
@@ -114,17 +114,17 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
    \left(\begin{array}{rrrr}
    0 &  1 & 2 &  3 \\
    5 & -2 & 3 &  6 \\
-   4 & 12 & 0 & -8
+   4 & 12 & 0 & -8 \\
    \end{array}\right)\ \ \rightarrow\ \ 
    \left(\begin{array}{rrrr}
     0 &  1 & 2 &  3 \\
    12 & 19 & 3 & -8 \\
-    4 & 12 & 0 & -8
+    4 & 12 & 0 & -8 \\
    \end{array}\right)\ \ ,\ \ 
    \left(\begin{array}{rrrr}
     0 &  1 & 2 &  3 \\
    12 & 19 & 3 & -8 \\
-    4 & 12 & 0 & -8
+    4 & 12 & 0 & -8 \\
    \end{array}\right)
 
 Przypuśćmy teraz, że przekształcenie macierzy 

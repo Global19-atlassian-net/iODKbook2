@@ -37,7 +37,7 @@ Rozważmy układ :math:`\,m\,` równań liniowych o :math:`\,n\,` niewiadomych:
    \quad\,\ldots\qquad\quad\ldots\qquad\,\ldots\qquad\ \ \ldots\qquad\ \ \,
    \ldots \\
    a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, =
-   \ \ b_m
+   \ \ b_m \\
    \end{array}
 
 Współczynniki :math:`\,a_{ij}\,` przy niewiadomych 
@@ -53,7 +53,7 @@ oznaczaną krótko :math:`\,[a_{ij}]_{m\times n}:`
               a_{11} & a_{12} & \ldots & a_{1n} \\
               a_{21} & a_{22} & \ldots & a_{2n} \\
               \ldots & \ldots & \ldots & \ldots \\
-              a_{m1} & a_{m2} & \ldots & a_{mn}
+              a_{m1} & a_{m2} & \ldots & a_{mn} \\
              \end{array}\right]\,.
 
 .. admonition:: Zapamiętaj: :math:`\,`
@@ -95,21 +95,21 @@ Macierze należące do zbioru :math:`\,M_{m\times n}(K)\,` można dodawać:
        a_{11} & \ldots & a_{1n} \\
        a_{21} & \ldots & a_{2n} \\
        \ldots & \ldots & \ldots \\
-       a_{m1} & \ldots & a_{mn}
+       a_{m1} & \ldots & a_{mn} \\
    \end{array}\right]
    \ \ + \ \ 
    \left[\begin{array}{ccc} 
        b_{11} & \ldots & b_{1n} \\
        b_{21} & \ldots & b_{2n} \\
        \ldots & \ldots & \ldots \\
-       b_{m1} & \ldots & b_{mn}
+       b_{m1} & \ldots & b_{mn} \\
    \end{array}\right]
    \ \ :\,= \ \ 
    \left[\begin{array}{ccc} 
        a_{11} + b_{11} & \ldots & a_{1n} + b_{1n} \\
        a_{21} + b_{21} & \ldots & a_{2n} + b_{2n} \\
            \ldots      & \ldots &     \ldots      \\
-       a_{m1} + b_{m1} & \ldots & a_{mn} + b_{mn}
+       a_{m1} + b_{m1} & \ldots & a_{mn} + b_{mn} \\
    \end{array}\right]
 
 i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
@@ -118,17 +118,17 @@ i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
 
    c \ \ 
    \left[\begin{array}{cccc} 
-       a_{11} & a_{12} & \ldots & a_{1n} \\
-       a_{21} & a_{22} & \ldots & a_{2n} \\
+       a_{11} & a_{12} & \ldots & a_{1n}  \\
+       a_{21} & a_{22} & \ldots & a_{2n}  \\
        \ldots  & \ldots & \ldots & \ldots \\
-       a_{m1} & a_{m2} & \ldots & a_{mn}
+       a_{m1} & a_{m2} & \ldots & a_{mn}  \\
    \end{array}\right]
    \ \ :\,= \ \ 
    \left[\begin{array}{cccc}
        c \; a_{11} & c \; a_{12} & \ldots & c \; a_{1n} \\
        c \; a_{21} & c \; a_{22} & \ldots & c \; a_{2n} \\
        \ldots      & \ldots      & \ldots & \ldots      \\
-       c \; a_{m1} & c \; a_{m2} & \ldots & c \; a_{mn}
+       c \; a_{m1} & c \; a_{m2} & \ldots & c \; a_{mn} \\
    \end{array}\right]\,.
 
 Jak widać,  dodawanie macierzy polega na dodawaniu ich odpowiednich elementów,  
@@ -192,7 +192,7 @@ definiujemy następująco:
       a_{11}\,x_1 +\,a_{12}\,x_2 + \,\ldots\, +\,a_{1n}\,x_n \\
       a_{21}\,x_1 +\,a_{22}\,x_2 + \,\ldots\, +\,a_{2n}\,x_n \\
       \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots         \\
-      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n
+      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n \\
    \end{array}\right]
    
 (działanie jest wykonalne wtedy i tylko wtedy, gdy liczba kolumn macierzy 
@@ -218,7 +218,7 @@ Prawą stronę równania :eq:`prod_col` można przepisać następująco:
       a_{11}\,x_1 +\,a_{12}\,x_2 + \,\ldots\, +\,a_{1n}\,x_n \\
       a_{21}\,x_1 +\,a_{22}\,x_2 + \,\ldots\, +\,a_{2n}\,x_n \\
       \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots         \\
-      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n
+      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n \\
    \end{array}\right]
    \ \,=\ \, 
    x_1\left[\begin{array}{c} 
@@ -271,7 +271,7 @@ zapiszmy go w postaci równości dwóch wektorów kolumnowych:
       a_{11}\,x_1 +\,a_{12}\,x_2 + \,\ldots\, +\,a_{1n}\,x_n \\
       a_{21}\,x_1 +\,a_{22}\,x_2 + \,\ldots\, +\,a_{2n}\,x_n \\
       \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots         \\
-      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n
+      a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n \\
    \end{array}\right]
    \ \ =\ \ 
    \left[\begin{array}{c} 
@@ -324,8 +324,8 @@ przedstawia się następująco:
    \left[\begin{array}{c}
       a_{11}\,b_{11} +\,a_{12}\,b_{21} + \,\ldots\, +\,a_{1p}\,b_{p1} \\
       a_{21}\,b_{11} +\,a_{22}\,b_{21} + \,\ldots\, +\,a_{2p}\,b_{p1} \\
-      \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                \\
-      a_{m1}\,b_{11} + a_{m2}\,b_{21} + \,\ldots\, +\,a_{mp}\,b_{p1}
+      \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                  \\
+      a_{m1}\,b_{11} + a_{m2}\,b_{21} + \,\ldots\, +\,a_{mp}\,b_{p1}  \\
    \end{array}\right]\,.
 
 Oznaczając :math:`\ \boldsymbol{A} \boldsymbol{B}\ =
@@ -342,7 +342,7 @@ Oznaczając :math:`\ \boldsymbol{A} \boldsymbol{B}\ =
       a_{11}\,b_{11} +\,a_{12}\,b_{21} + \,\ldots\, +\,a_{1p}\,b_{p1} \\
       a_{21}\,b_{11} +\,a_{22}\,b_{21} + \,\ldots\, +\,a_{2p}\,b_{p1} \\
       \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                  \\
-      a_{m1}\,b_{11} + a_{m2}\,b_{21} + \,\ldots\, +\,a_{mp}\,b_{p1}
+      a_{m1}\,b_{11} + a_{m2}\,b_{21} + \,\ldots\, +\,a_{mp}\,b_{p1}  \\
    \end{array}\right]\,,
 
 Jeżeli przez 
@@ -408,7 +408,7 @@ otrzymujemy, :math:`\,` w analogii do równań :eq:`eqn_C`:
          a_{11}\,b_{1j} +\,a_{12}\,b_{2j} + \,\ldots\, +\,a_{1p}\,b_{pj} \\
          a_{21}\,b_{1j} +\,a_{22}\,b_{2j} + \,\ldots\, +\,a_{2p}\,b_{pj} \\
          \ \ldots\qquad\ \ldots\qquad\ldots\qquad\ldots                  \\
-         a_{m1}\,b_{1j} +\,a_{m2}\,b_{2j} + \,\ldots\, +\,a_{mp}\,b_{pj}
+         a_{m1}\,b_{1j} +\,a_{m2}\,b_{2j} + \,\ldots\, +\,a_{mp}\,b_{pj} \\
         \end{array}
    \right]\,,
 
@@ -442,12 +442,13 @@ wypływa następująca
    to :math:`\ j`-ta kolumna iloczynu 
    :math:`\ \boldsymbol{A} \boldsymbol{B}:` :math:`\\`
  
-   1. jest iloczynem macierzy :math:`\ \boldsymbol{A}\ \,` przez 
+   1. :math:`\,` jest iloczynem macierzy :math:`\ \boldsymbol{A}\ \,` przez 
       :math:`\,j`-tą kolumnę macierzy :math:`\ \boldsymbol{B}\,;` :math:`\\`
 
-   2. jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A},\ `
-      której współczynnikami są kolejne elementy :math:`\,j`-tej kolumny 
-      macierzy :math:`\,\boldsymbol{B},\ \ j\,=\,1,2,\ldots,n.`
+   2. | :math:`\,` jest kombinacją liniową kolumn macierzy 
+        :math:`\,\boldsymbol{A},\ ` której współczynnikami 
+      | są kolejne elementy :math:`\,j`-tej kolumny macierzy 
+        :math:`\,\boldsymbol{B},\ \ j\,=\,1,2,\ldots,n.`
 
 Wzór :math:`\,` :eq:`rule_col_2` :math:`\,` wyraża elementy macierzy 
 :math:`\ \boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}\ ` poprzez elementy 

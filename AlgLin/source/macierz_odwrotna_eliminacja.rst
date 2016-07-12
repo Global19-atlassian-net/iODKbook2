@@ -6,8 +6,9 @@ Niech będą dane macierze
 :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\,,\,
 \boldsymbol{B}=[\,b_{ij}\,]_{n\times n}\in M_n(K)\,.`
 Będziemy nazywać *agregatem* macierz 
-:math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{B}\,]\ ` otrzymaną przez dołączenie 
-do macierzy :math:`\ \boldsymbol{A}\,` macierzy :math:`\,\boldsymbol{B}\,:`
+:math:`\ [\,\boldsymbol{A}\,|\,\boldsymbol{B}\,]\ ` 
+otrzymaną przez dołączenie do macierzy :math:`\ \boldsymbol{A}\,` 
+macierzy :math:`\,\boldsymbol{B}\,:`
 
 .. math:: 
    
@@ -16,7 +17,7 @@ do macierzy :math:`\ \boldsymbol{A}\,` macierzy :math:`\,\boldsymbol{B}\,:`
       a_{11} & \ldots & a_{1n} & b_{11} & \ldots & b_{1n} \\
       a_{21} & \ldots & a_{2n} & b_{21} & \ldots & b_{2n} \\
       \ldots & \ldots & \ldots & \ldots & \ldots & \ldots \\
-      a_{n1} & \ldots & a_{nn} & b_{n1} & \ldots & b_{nn}
+      a_{n1} & \ldots & a_{nn} & b_{n1} & \ldots & b_{nn} \\
    \end{array}\right]\,\in\,M_{n\times 2n}(K)\,.
 
 .. admonition:: Lemat. :math:`\,` 
@@ -144,11 +145,13 @@ Otrzymany wynik daje praktyczny sposób obliczania macierzy odwrotnej.
 
 .. .. math::
    
-   \boldsymbol{A}\ =\ \left[\begin{array}{rrrr}
+   \boldsymbol{A}\ =\ 
+   \left[\begin{array}{rrrr}
        2 &  0 & -1 & 1 \\
        1 &  1 & -1 & 0 \\
       -1 &  0 &  6 & 1 \\
-       1 &  0 &  1 & 1 \end{array}\right]\,.
+       1 &  0 &  1 & 1 \\
+   \end{array}\right]\,.
 
 Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
 
@@ -178,7 +181,7 @@ Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
        5 & 0 &  2 & -7 \\
       -3 & 1 & -1 &  4 \\
        2 & 0 &  1 & -3 \\
-      -7 & 0 & -3 & 11
+      -7 & 0 & -3 & 11 \\
    \end{array}\right)
 
 Sprawdzenie czy: :math:`\ \ ` 
@@ -289,12 +292,12 @@ jest :math:`\ \boldsymbol{D}\ =\
    \left(\begin{array}{rrr}
       0 & 0 &  \textstyle{1\over 2} \\
       0 & 1 &  \textstyle{1\over 2} \\
-      1 & 0 & -\textstyle{1\over 2}
+      1 & 0 & -\textstyle{1\over 2} \\
    \end{array}\right)\ \ *\ \ 
    \left(\begin{array}{rrrrr}
        1 & 0 &  2 & -1 &  2 \\
       -1 & 1 & -2 &  3 & -3 \\
-       2 & 0 &  4 & -2 &  4
+       2 & 0 &  4 & -2 &  4 \\
    \end{array}\right)\quad =\quad
    \left(\begin{array}{rrrrr}
    1 & 0 & 2 & -1 & 2 \\  0 & 1 &  0 & 2 & -1 \\ 0 & 0 & 0 & 0 & 0 

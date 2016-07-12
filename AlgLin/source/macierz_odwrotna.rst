@@ -12,7 +12,7 @@ stopnia :math:`\,n\,` nad ciałem :math:`\,K\,` jest macierz jednostkowa
       1      &    0   & \ldots &    0   \\
       0      &    1   & \ldots &    0   \\
       \ldots & \ldots & \ldots & \ldots \\
-      0      &    0   & \ldots &    1     
+      0      &    0   & \ldots &    1   \\    
    \end{array}\right]\,.
 
 Oznacza to, że :math:`\ \ \boldsymbol{A}\boldsymbol{I}_n\,=
@@ -162,18 +162,18 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
    \left(\begin{array}{rrr}
    1 & -1 & -2 \\
    0 &  1 &  2 \\
-   1 & -1 & -1
+   1 & -1 & -1 \\
    \end{array}\right)\ \ *\ \ 
    \left(\begin{array}{rrr}
     1 & 1 &  0 \\
     2 & 1 & -2 \\
-   -1 & 0 &  1
+   -1 & 0 &  1 \\
    \end{array}\right)
    \quad =\quad
    \left(\begin{array}{rrr}
     1 & 0 & 0 \\
     0 & 1 & 0 \\
-    0 & 0 & 1
+    0 & 0 & 1 \\
    \end{array}\right)\,.
 
 

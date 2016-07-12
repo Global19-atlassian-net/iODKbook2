@@ -112,7 +112,7 @@ Sprawdzając postulaty z definicji przestrzeni wektorowej można udowodnić
       \begin{array}{lcl}
       (F_1+F_2)(v)\ :\,=
       \ F_1(v)\,+\,F_2(v) & \qquad & F_1,F_2,F\in \text{Map}(V,W)\,, \\
-      (a\,F)(v)\ :\,=\ a\,F(v) & \qquad & \,a\in K,\ \ v\in V\,,
+      (a\,F)(v)\ :\,=\ a\,F(v) & \qquad & \,a\in K,\ \ v\in V\,,     \\
       \end{array}
 
    jest przestrzenią wektorową nad ciałem :math:`\,K.`
@@ -176,7 +176,7 @@ a strzałki w dół :math:`\,` - :math:`\,` podstawienie :math:`\ W=V:`
    \left.\begin{array}{ccc}
    \text{homo-} & \longrightarrow & \text{izo-}  \\ \\
    \downarrow   &                 & \downarrow   \\ \\
-   \text{endo-} & \longrightarrow & \text{auto-} 
+   \text{endo-} & \longrightarrow & \text{auto-} \\ \\ 
    \end{array}\quad\right\}
    \quad\text{-morfizm}
 

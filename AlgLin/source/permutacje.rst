@@ -139,13 +139,13 @@ Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą
       
       \text{jeżeli}\quad
       \sigma\ =\ \left(\begin{array}{cccccc} 
-      1  &  2  &  3  & \dots &  n \\
-      a_1 & a_2 & a_3 & \dots & a_n 
+      1  &  2  &  3  & \dots &  n   \\
+      a_1 & a_2 & a_3 & \dots & a_n \\
       \end{array}\right)\,,
       \quad\text{to}\quad\ 
       \sigma^{-1}\ =\ \left(\begin{array}{cccccc} 
       a_1 & a_2 & a_3 & \dots & a_n \\
-      1  &  2  &  3  & \dots &  n 
+      1  &  2  &  3  & \dots & n    \\
       \end{array}\right)\,.
 
 W dalszym ciągu będziemy opuszczać symbol :math:`\,\circ\ ` składania 
@@ -180,26 +180,30 @@ pomijając wyrazy, które przechodzą w siebie. A zatem, w pełnym zapisie
    S_n\,\ni\,(a_1,a_2,\dots,a_k)\ =\ 
    \left(\begin{array}{ccccccccc} 
    a_1 & a_2 & \dots & a_{k-1} & a_k & a_{k+1} & \dots & a_{n-1} & a_n \\
-   a_2 & a_3 & \dots &   a_k   & a_1 & a_{k+1} & \dots & a_{n-1} & a_n
+   a_2 & a_3 & \dots &   a_k   & a_1 & a_{k+1} & \dots & a_{n-1} & a_n \\
    \end{array}\right)\,.
 
 Przykład: 
 :math:`\quad
 \left(\begin{array}{cccccc}
 1 & 2 & 3 & 4 & 5 & 6 \\
-1 & 6 & 4 & 2 & 5 & 3 \end{array}\right)\ =\ 
+1 & 6 & 4 & 2 & 5 & 3 \\
+\end{array}\right)\ =\ 
 \left(\begin{array}{cccccc}
 2 & 6 & 3 & 4 & 1 & 5 \\
-6 & 3 & 4 & 2 & 1 & 5 \end{array}\right)\ =\ (2,6,3,4)\,.`
+6 & 3 & 4 & 2 & 1 & 5 \\
+\end{array}\right)\ =\ (2,6,3,4)\,.`
 
 Natomiast permutacja 
 :math:`\quad
 \left(\begin{array}{ccccc}
 1 & 2 & 3 & 4 & 5 \\
-3 & 1 & 2 & 5 & 4 \end{array}\right)\ =\ 
+3 & 1 & 2 & 5 & 4 \\
+\end{array}\right)\ =\ 
 \left(\begin{array}{ccccc}
 1 & 3 & 2 & 4 & 5 \\
-3 & 2 & 1 & 5 & 4 \end{array}\right)\quad`
+3 & 2 & 1 & 5 & 4 \\
+\end{array}\right)\quad`
 nie jest cyklem.
 
 Przy jednowierszowym zapisie permutacji cyklicznej można przestawić 
@@ -222,7 +226,7 @@ Przykład:
    
    S_6\,\ni\,\tau_{25}\ =\ (2,5)\ =\ \left(\begin{array}{cccccc}
                                      1 & 2 & 3 & 4 & 5 & 6 \\
-                                     1 & 5 & 3 & 4 & 2 & 6 
+                                     1 & 5 & 3 & 4 & 2 & 6 \\ 
                                      \end{array}\right)\,.
 
 Cykl :math:`\,k`-wyrazowy można zapisać w postaci iloczynu :math:`\ k-1\ ` 
@@ -256,7 +260,8 @@ Przedstawienie takie jest jednoznaczne z dokładnością do kolejności czynnik�
 Przykład:
 :math:`\quad\left(\begin{array}{cccccccccc}
 1 & 2 & 3 & 4 & 5 & 6 & 7 &  8 & 9 & 10 \\
-6 & 2 & 4 & 3 & 5 & 9 & 8 & 10 & 1 &  7 \end{array}\right)\ =\ 
+6 & 2 & 4 & 3 & 5 & 9 & 8 & 10 & 1 &  7 \\
+\end{array}\right)\ =\ 
 (1,6,9)(3,4)(7,8,10)\,.`
 
 **Wniosek.** :math:`\\`
@@ -270,7 +275,8 @@ Przykład:
    
    \left(\begin{array}{ccccc}
    1 & 2 & 3 & 4 & 5 \\
-   2 & 5 & 4 & 3 & 1 \end{array}\right)\ =\ (1,2,5)(3,4)\ =
+   2 & 5 & 4 & 3 & 1 \\
+   \end{array}\right)\ =\ (1,2,5)(3,4)\ =
 
    =\ (1,5)(1,2)(3,4)\ =\ (1,3)(3,4)(4,5)(2,4)(1,4)\,.
 
@@ -324,9 +330,9 @@ transpozycji liczb sąsiednich.
 .. math::
    
    \begin{array}{ccc}
-   (i,j) & = & (i,i+1)\,(i+1,i+2)\,\dots\,(j-2,j-1)\,\circ \\
-         &   & \circ\,(j-1,j)\,\circ                       \\
-         &   & \circ\,(j-1,j-2)\,\dots\,\,(i+2,i+1)\,(i+1,i)\,,
+   (i,j) & = & (i,i+1)\,(i+1,i+2)\,\dots\,(j-2,j-1)\,\circ       \\
+         &   & \circ\,(j-1,j)\,\circ                             \\
+         &   & \circ\,(j-1,j-2)\,\dots\,\,(i+2,i+1)\,(i+1,i) \,, \\
    \end{array}
 
 w której po prawej stronie występuje :math:`\,2(j-i-1)+1=2(j-i)-1\ ` czynników, 

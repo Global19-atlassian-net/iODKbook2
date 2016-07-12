@@ -25,7 +25,7 @@ Rozważmy układ dwóch równań liniowych:
    
    \begin{alignat*}{3}
    2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
-   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5     \\
    \end{alignat*}
    
 Rozwiązaniem są liczby :math:`\ x_1=2\ \; \text{i} \ \; x_2=3\,,\:` 
@@ -72,7 +72,7 @@ Rozważany układ równań
    
    \begin{alignat*}{3}
    2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
-   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5     \\
    \end{alignat*}
 
 można przepisać w postaci równości dwóch wektorów kolumnowych:
@@ -194,7 +194,7 @@ Rozważmy teraz układ trzech równań o trzech niewiadomych:
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
       x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
-      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 
+      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 \\ 
    \end{alignat*}
 
 Ma on rozwiązanie w punkcie 
@@ -295,7 +295,7 @@ ma dokładnie jedno rozwiązanie.
                  \ =\ \left[\begin{array}{rrr}
                             2 &  1 & 1 \\
                             1 & -1 & 0 \\
-                            1 &  1 & 2
+                            1 &  1 & 2 \\
                             \end{array}\right]\,,\qquad     
    \boldsymbol{w}\ =\ \left[\begin{array}{r} 1 \\ -1 \\ 2 \end{array}\right]\,.
 
@@ -313,7 +313,7 @@ Zajmiemy się z kolei rozwiązaniami układu równań liniowych
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
    4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 2 \\
-      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3 \\
    \end{alignat*}
 
 Stosując procedurę ``solve()`` otrzymujemy rozwiązanie 
@@ -388,21 +388,24 @@ z użytymi zaawansowanymi narzędziami systemu Sage.
 
    var('x1 x2')
    
+   # Nieoznaczony układ równań:
    Eqns = [  x1 +   x2 == 1,
            2*x1 + 2*x2 == 2]
    
    s = solve(Eqns,[x1,x2])
-   print s[0]
+   print s[0] # wydruk rozwiązania układu
    
+   # Wyłuskanie wszystkich parametrów od których zależy rozwiązanie:
    lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
    for x in [x1,x2]: lvar.remove(x)
    for rvar in lvar: var(rvar)
-   print lvar
+   print lvar # wydruk listy parametrów jako zmiennych
 
+   # Wykres zbioru rozwiązań dla parametru w zadanym przedziale:
    pts = [map(lambda w: w.rhs().subs(lvar[0]==p), s[0]) 
           for p in srange(-1,1,0.1)]
 
-   line(pts, axes_labels=['x1','x2'], color='green', figsize=5)
+   line(pts, axes_labels=['$x_1$','$x_2$'], color='green', figsize=5)
 
 Układ sprzeczny: brak rozwiązań
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -415,7 +418,7 @@ Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 0 \\
    4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 5 \\
-      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1 \\
    \end{alignat*}
 
 Układ ten nie ma rozwiązań:
@@ -476,7 +479,7 @@ typowy układ trzech równań z trzema niewiadomymi:
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
       x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
-      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 
+      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 \\ 
    \end{alignat*}
 
 w którym macierz współczynników i kolumna wolnych wyrazów dane są przez
@@ -487,7 +490,7 @@ w którym macierz współczynników i kolumna wolnych wyrazów dane są przez
                  \ =\ \left[\begin{array}{rrr}
                             2 &  1 & 1 \\
                             1 & -1 & 0 \\
-                            1 &  1 & 2
+                            1 &  1 & 2 \\
                             \end{array}\right]\,,\qquad     
    \boldsymbol{w}\ =\ \left[\begin{array}{r} 1 \\ -1 \\ 2 \end{array}\right]\,.
 
@@ -501,7 +504,7 @@ przez wektor kolumnowy niewiadomych :math:`\,\boldsymbol{x}:`
    \left[\begin{array}{rrr}
           2 &  1 & 1 \\
           1 & -1 & 0 \\
-          1 &  1 & 2
+          1 &  1 & 2 \\
          \end{array}\right]\ 
    \left[\begin{array}{r} x_1 \\ x_2 \\ x_3 \end{array}\right]\ \ :\,=\ \  
    x_1\ \left[\begin{array}{r} 2 \\  1 \\ 1 \end{array}\right]\ +\ \,

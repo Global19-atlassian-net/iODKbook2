@@ -152,14 +152,22 @@ wektora bazy :math:`\ \mathcal{E}\ ` w bazie
 .. math::
    
    \boldsymbol{f}_1\ =\ 
-   \left[\begin{array}{c} 1 \\ 0 \\ 0 \\ \dots \\ 0 \end{array}\right]\,,\quad
+   \left[\begin{array}{c} 
+   1 \\ 0 \\ 0 \\ \dots \\ 0 
+   \end{array}\right]\,,\quad
    \boldsymbol{f}_2\ =\ 
-   \left[\begin{array}{c} 1 \\ 1 \\ 0 \\ \dots \\ 0 \end{array}\right]\,,\quad
+   \left[\begin{array}{c} 
+   1 \\ 1 \\ 0 \\ \dots \\ 0 
+   \end{array}\right]\,,\quad
    \boldsymbol{f}_3\ =\ 
-   \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ \dots \\ 0 \end{array}\right]\,,\quad
+   \left[\begin{array}{c} 
+   1 \\ 1 \\ 1 \\ \dots \\ 0 
+   \end{array}\right]\,,\quad
    \dots,\quad
    \boldsymbol{f}_n\ =\ 
-   \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ \dots \\ 1 \end{array}\right]
+   \left[\begin{array}{c} 
+   1 \\ 1 \\ 1 \\ \dots \\ 1 
+   \end{array}\right]
 
 tworzą bazę w przestrzeni :math:`\ K^n.`
 
@@ -184,7 +192,7 @@ jest różny od zera. W tym wypadku jest to wyznacznik macierzy trójkątnej:
      0   &   1   &   1   & \dots &   1   \\
      0   &   0   &   1   & \dots &   1   \\
    \dots & \dots & \dots & \dots & \dots \\
-     0   &   0   &   0   & \dots &   1
+     0   &   0   &   0   & \dots &   1   \\
    \end{array}
    \right|
    \ \ =\ \ 1\ne 0\,.
@@ -261,7 +269,7 @@ która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem
          \dots            \\ 
          \boldsymbol{A}_j \\ 
          \dots            \\
-         \boldsymbol{A}_n
+         \boldsymbol{A}_n \\
          \end{array}
    \right]
          \begin{array}{c}
@@ -271,7 +279,7 @@ która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem
          \;           \\ 
          \leftarrow j \\ 
          \;           \\
-         \;
+         \;           \\
          \end{array}
    \qquad\qquad
    \boldsymbol{B}\ \ =\ \ 
@@ -282,7 +290,7 @@ która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem
          \dots            \\ 
          \boldsymbol{A}_i \\ 
          \dots            \\
-         \boldsymbol{A}_n
+         \boldsymbol{A}_n \\
          \end{array}
    \right]
          \begin{array}{c}
@@ -292,7 +300,7 @@ która różni się od :math:`\ \boldsymbol{A}\ ` tylko powtórzeniem
          \;           \\ 
          \leftarrow j \\ 
          \;           \\
-         \;
+         \;           \\
          \end{array}
 
 Dla elementów :math:`\,b_{jk}\,` i dopełnień algebraicznych :math:`\,B_{jk}\,`
@@ -361,7 +369,7 @@ jest nieosobliwa: :math:`\ \det\boldsymbol{A}\ne 0.\ ` Wtedy macierz
          A_{11} & A_{12} & \dots & A_{1n} \\
          A_{21} & A_{22} & \dots & A_{2n} \\
          \dots  & \dots  & \dots  & \dots \\
-         A_{n1} & A_{n2} & \dots & A_{nn}
+         A_{n1} & A_{n2} & \dots & A_{nn} \\
          \end{array}
    \right]^{\,T}=\ \ \,
    \frac{1}{\det\boldsymbol{A}}\ 
@@ -369,7 +377,7 @@ jest nieosobliwa: :math:`\ \det\boldsymbol{A}\ne 0.\ ` Wtedy macierz
          A_{11} & A_{21} & \dots & A_{n1} \\
          A_{12} & A_{22} & \dots & A_{n2} \\
          \dots  & \dots  & \dots  & \dots \\
-         A_{1n} & A_{2n} & \dots & A_{nn}
+         A_{1n} & A_{2n} & \dots & A_{nn} \\
          \end{array}
    \right],
 
@@ -426,7 +434,7 @@ jest macierzą jednostkową. :math:`\,` Tak więc
             A_{11} & A_{21} & \dots & A_{n1} \\
             A_{12} & A_{22} & \dots & A_{n2} \\
             \dots  & \dots  & \dots  & \dots \\
-            A_{1n} & A_{2n} & \dots & A_{nn}
+            A_{1n} & A_{2n} & \dots & A_{nn} \\
             \end{array}
       \right]\,.
  
@@ -514,13 +522,13 @@ składa się zatem z następujących etapów:
    \left[\begin{array}{rrr}
          -1 & -1 &  1 \\
           4 &  5 & -6 \\
-          3 &  3 & -4
+          3 &  3 & -4 \\
          \end{array}
    \right]^{\,T}=\ \ \,
    \left[\begin{array}{rrr}
           -1 &  4 &  3 \\
           -1 &  5 &  3 \\
-           1 & -6 & -4
+           1 & -6 & -4 \\
          \end{array}
    \right]\,; 
    \\ \\
@@ -530,13 +538,13 @@ składa się zatem z następujących etapów:
    \left[\begin{array}{rrr}
           -1 &  4 &  3 \\
           -1 &  5 &  3 \\
-           1 & -6 & -4
+           1 & -6 & -4 \\
          \end{array}
    \right]\ \ =\ \ 
    \left[\begin{array}{rrr}
            1 & -4 & -3 \\
            1 & -5 & -3 \\
-          -1 &  6 &  4
+          -1 &  6 &  4 \\
          \end{array}
    \right]\,.
    \end{array}
@@ -585,7 +593,7 @@ Układ :math:`\,n\,` równań liniowych o :math:`\,n\,` niewiadomych nad ciałem
    \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots
    \qquad\ \ \ldots\qquad\ \ \,\ldots  \\
    a_{n1}\,x_1\; + \ \,a_{n2}\,x_2\; + \ \,\ldots\  + \ \;a_{nn}\,x_n \ \, =
-   \ \ b_n
+   \ \ b_n \\
    \end{array}
 
 nazywamy :math:`\,` *układem kramerowskim* :math:`\,` 
@@ -629,7 +637,7 @@ wykorzystamy wyrażenie :eq:`rec_mat` dla macierzy odwrotnej:
          A_{11} & A_{21} & \dots & A_{n1} \\
          A_{12} & A_{22} & \dots & A_{n2} \\
          \dots  & \dots  & \dots  & \dots \\
-         A_{1n} & A_{2n} & \dots & A_{nn}
+         A_{1n} & A_{2n} & \dots & A_{nn} \\
          \end{array}
    \right]\ 
    \left[\begin{array}{c} b_1 \\ b_2 \\ \dots \\ b_n \end{array}\right] \\ \\ 
@@ -657,7 +665,7 @@ Z przyrównania odpowiednich współrzędnych wektorów po obu stronach równoś
          a_{11} & \dots & a_{1,j-1} &  b_1  & a_{1,j+1} & \dots & a_{1n} \\
          a_{21} & \dots & a_{2,j-1} &  b_2  & a_{2,j+1} & \dots & a_{2n} \\
          \dots  & \dots &  \dots    & \dots &  \dots    & \dots & \dots  \\ 
-         a_{n1} & \dots & a_{n,j-1} &  b_n  & a_{n,j+1} & \dots & a_{nn}
+         a_{n1} & \dots & a_{n,j-1} &  b_n  & a_{n,j+1} & \dots & a_{nn} \\
          \end{array}
    \right|\,,\qquad j=1,2,\ldots,n.
    \end{eqnarray*}
@@ -694,7 +702,7 @@ Rozwiążemy układ trzech równań o trzech niewiadomych nad ciałem :math:`\,Q
    \begin{alignat*}{4}
    2\,x_1 & {\,} - {\,} &    x_2 & {\,} - {\,} &    x_3 & {\;} = {} &  4 \\
    3\,x_1 & {\,} + {\,} & 4\,x_2 & {\,} - {\,} & 2\,x_3 & {\;} = {} & 11 \\
-   3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {} & 11 
+   3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {} & 11 \\
    \end{alignat*}
 
 Jeżeli w danym układzie liczba równań zgadza się z liczbą niewiadomych

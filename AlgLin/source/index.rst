@@ -61,6 +61,7 @@ Operacje na macierzach
 .. toctree::
 
    eliminacja_dla_macierzy
+   eliminacja_w_sage
    transpozycja_macierzy
    macierz_odwrotna
    macierze_elementarne
@@ -113,6 +114,7 @@ Przekształcenia liniowe
    przeksztalcenia_lin_macierze
    przeksztalcenia_lin_operatory
    przeksztalcenia_lin_zmiana_bazy
+   przeksztalcenia_lin_zmiana_przyklady
    przeksztalcenia_lin_zadania
 
 Wartości i wektory własne
@@ -126,6 +128,7 @@ Wartości i wektory własne
    problem_wlasny_definicja
    problem_wlasny_przyklady
    problem_wlasny_rownania_rozniczkowe
+   problem_wlasny_rownania_przyklady
 
 Przestrzenie unitarne
 =====================

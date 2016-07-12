@@ -22,14 +22,14 @@ W pełnym zapisie: :math:`\qquad\left[\begin{array}{cccc}
 a_{11} & a_{12} & \ldots & a_{1n} \\
 a_{21} & a_{22} & \ldots & a_{2n} \\
 \ldots & \ldots & \ldots & \ldots \\
-a_{m1} & a_{m2} & \ldots & a_{mn}
+a_{m1} & a_{m2} & \ldots & a_{mn} \\
 \end{array}\right]^T
 \ =\quad
 \left[\begin{array}{cccc}
 a_{11} & a_{21} & \ldots & a_{m1} \\
 a_{12} & a_{22} & \ldots & a_{m2} \\
 \ldots & \ldots & \ldots & \ldots \\
-a_{1n} & a_{2n} & \ldots & a_{mn}
+a_{1n} & a_{2n} & \ldots & a_{mn} \\
 \end{array}\right]\,.`
 
 .. .. math::
@@ -38,45 +38,45 @@ a_{1n} & a_{2n} & \ldots & a_{mn}
       a_{11} & a_{12} & \ldots & a_{1n} \\
       a_{21} & a_{22} & \ldots & a_{2n} \\
       \ldots & \ldots & \ldots & \ldots \\
-      a_{m1} & a_{m2} & \ldots & a_{mn}
+      a_{m1} & a_{m2} & \ldots & a_{mn} \\
    \end{array}\right]^{\ T}
    \ =\quad
    \left[\begin{array}{cccc}
       a_{11} & a_{21} & \ldots & a_{m1} \\
       a_{12} & a_{22} & \ldots & a_{m2} \\
       \ldots & \ldots & \ldots & \ldots \\
-      a_{1n} & a_{2n} & \ldots & a_{mn}
+      a_{1n} & a_{2n} & \ldots & a_{mn} \\
    \end{array}\right]\,.
 
 Tak więc :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}^T\,` 
-składa się z elementów :math:`\,i`-tej kolumny macierzy :math:`\,\boldsymbol{A},` 
-:math:`\\` a :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}^T\,` 
-składa się z elementów :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{A}.`
+składa się z elementów :math:`\,i`-tej kolumny macierzy 
+:math:`\,\boldsymbol{A},` :math:`\\` a :math:`\ j`-ta kolumna macierzy 
+:math:`\,\boldsymbol{A}^T\,` składa się z elementów :math:`\,j`-tego wiersza macierzy :math:`\,\boldsymbol{A}.`
 
 .. \ \ i=1,2,\ldots,n;\ j=1,2,\ldots,m.`
    
 **Przykłady.**
 
-1.) :math:`\ ` Jeżeli 
-:math:`\ \ \boldsymbol{A}\ =\ \left[\begin{array}{rr} 
-2 & - 1 \\ 3 & 0 \\ - 2 & 1 \end{array}\right]
-\in M_{3\times 2}(R),\ \ ` 
-to :math:`\ \ \boldsymbol{A}^T\ =\ \left[\begin{array}{rrr} 
-2 & 3 & -2 \\ -1 & 0 & 1 \end{array} \right]\in M_{2\times 3}(R).`
+* Jeżeli 
+  :math:`\ \ \boldsymbol{A}\ =\ \left[\begin{array}{rr} 
+  2 & - 1 \\ 3 & 0 \\ - 2 & 1 \end{array}\right]
+  \in M_{3\times 2}(R),\ \ ` 
+  to :math:`\ \ \boldsymbol{A}^T\ =\ \left[\begin{array}{rrr} 
+  2 & 3 & -2 \\ -1 & 0 & 1 \end{array} \right]\in M_{2\times 3}(R).`
 
-2.) :math:`\ ` Transpozycja macierzy kwadratowej:
-:math:`\ \ \left[\begin{array}{rrr} 
--2 & 1 & 0 \\ 5 & 2 & 3 \\ 7 & -3 & 8 
-\end{array}\right]^T =\ \;\left[\begin{array}{rrr} 
--2 & 5 & 7 \\ 1 & 2 & -3 \\ 0 & 3 & 8 
-\end{array}\right]\,.`
+* Transpozycja macierzy kwadratowej:
+  :math:`\ \ \left[\begin{array}{rrr} 
+  -2 & 1 & 0 \\ 5 & 2 & 3 \\ 7 & -3 & 8 
+  \end{array}\right]^T =\ \;\left[\begin{array}{rrr} 
+  -2 & 5 & 7 \\ 1 & 2 & -3 \\ 0 & 3 & 8 
+  \end{array}\right]\,.`
 
-3.) :math:`\ ` Transpozycja macierzy jednokolumnowej:  
-:math:`\ \ \left[\begin{array}{c} 
-a_1 \\ a_2 \\ a_3 \\ a_4
-\end{array}\right]^T =\ \;\left[\begin{array}{cccc} 
-a_1 & a_2 & a_3 & a_4
-\end{array}\right]\,.`
+* Transpozycja macierzy jednokolumnowej:  
+  :math:`\ \ \left[\begin{array}{c} 
+  a_1 \\ a_2 \\ a_3 \\ a_4
+  \end{array}\right]^T =\ \;\left[\begin{array}{cccc} 
+  a_1 & a_2 & a_3 & a_4
+  \end{array}\right]\,.`
 
 
 :math:`\\` **Własności operacji transponowania macierzy.** 
@@ -191,7 +191,7 @@ które sprawdzają, czy dana macierz jest symetryczna bądź antysymetryczna.
    \boldsymbol{A}\ =\ \left[\begin{array}{rrr}
                          4 &  3 & -1 \\ 
                          2 & -5 &  8 \\ 
-                         0 & -2 &  1
+                         0 & -2 &  1 \\
                       \end{array}\right]\,\in\,M_3(R)
 
 w postaci sumy macierzy symetrycznej i macierzy antysymetrycznej.
@@ -213,17 +213,17 @@ w postaci sumy macierzy symetrycznej i macierzy antysymetrycznej.
    \left(\begin{array}{rrr}
       4 &  3 & -1 \\
       2 & -5 &  8 \\
-      0 & -2 &  1
+      0 & -2 &  1 \\
    \end{array}\right)\ \ =\ \ 
    \left(\begin{array}{rrr}
       4 & \textstyle{5\over 2} & -\textstyle{1\over 2} \\
-      \textstyle{5\over 2} & -5 & 3 \\
-      -\textstyle{1\over 2} & 3 & 1 \\
+      \textstyle{5\over 2} & -5 & 3                    \\
+      -\textstyle{1\over 2} & 3 & 1                    \\
    \end{array}\right)\ \ +\ \ 
    \left(\begin{array}{rrr}
       0 & \textstyle{1\over 2} & -\textstyle{1\over 2} \\
-      -\textstyle{1\over 2} & 0 & 5 \\
-      \textstyle{1\over 2} & -5 & 0 \\
+      -\textstyle{1\over 2} & 0 & 5                    \\
+      \textstyle{1\over 2} & -5 & 0                    \\
    \end{array}\right)
 
 (True, True)

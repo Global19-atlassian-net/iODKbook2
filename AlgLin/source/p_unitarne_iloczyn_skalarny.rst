@@ -117,7 +117,7 @@ rzeczywisty symetryczny funkcjonał dwuliniowy).
    
 **Przykłady.**
 
-1.) Podstawową realizacją przestrzeni unitarnej 
+1.) :math:`\,` Podstawową realizacją przestrzeni unitarnej 
 jest przestrzeń wektorów kolumnowych
 
 .. math::
@@ -157,7 +157,7 @@ iloczyn skalarny wynosi
    \langle\boldsymbol{x},\boldsymbol{y}\rangle\ =\ 
    (1-i)\,(-i)\,+\,(-2)\,(-1+2\,i)\,+\,(-4\,i)\,0\ =\ -i-1+2-4\,i\ =\ 1-5\,i\,.
 
-2.) Przykładem przestrzeni euklidesowej jest zbiór 
+2.) :math:`\,` Przykładem przestrzeni euklidesowej jest zbiór 
 :math:`\,n`-elementowych wektorów kolumnowych
 
 .. math::
@@ -186,8 +186,8 @@ Dla wektorów :math:`\quad\boldsymbol{x}\,=\,
    \beta_1 \\ \beta_2 \\ \dots \\ \beta_n 
    \end{array}\right]\,.
 
-3.) W mechanice kwantowej ma zastosowanie unitarna przestrzeń :math:`\,L^2\ `
-złożona z funkcji zespolonych określonych na osi rzeczywistej, 
+3.) :math:`\,` W mechanice kwantowej ma zastosowanie unitarna przestrzeń 
+:math:`\,L^2\ ` złożona z funkcji zespolonych określonych na osi rzeczywistej, 
 całkowalnych w kwadracie modułu:
 
 .. math::
@@ -199,7 +199,8 @@ Dla :math:`\quad\varphi,\,\psi\in L^2\quad` iloczyn skalarny ma postać
 :math:`\quad \langle\varphi,\psi\rangle\ =\ 
 \displaystyle\int_{-\infty}^{+\infty}\ [\,\varphi(x)\,]^*\,\psi(x)\ dx\,.`
 
-4.) Przestrzenią euklidesową jest (dwu- albo trójwymiarowa) przestrzeń wektorów 
+4.) :math:`\,` Przestrzenią euklidesową jest 
+(dwu- albo trójwymiarowa) przestrzeń wektorów 
 geometrycznych z iloczynem skalarnym danym przez 
 :math:`\ \ \vec{a}\cdot\vec{b}\,=\,|\vec{a}|\,|\vec{b}|\,\cos\phi\,,
 \ \ \text{gdzie}\ \ \phi=\angle(\vec{a},\vec{b})\,.`
@@ -278,9 +279,9 @@ Dla przestrzeni euklidesowej nierówność przyjmuje postać:
 
 **Przykłady.**
 
-1.) Nierówność Schwarza zastosowana do przestrzeni unitarnej :math:`\,C^n\ ` 
-stwierdza, że dla :math:`\\` dowolnych dwóch ciągów liczb zespolonych 
-:math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,
+1.) :math:`\,` Nierówność Schwarza zastosowana do przestrzeni unitarnej 
+:math:`\,C^n\ ` stwierdza, że dla :math:`\\` dowolnych dwóch ciągów liczb 
+zespolonych :math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,
 \ \ (\beta_1,\,\beta_2,\,\dots,\,\beta_n) :`
 
 .. math::
@@ -290,9 +291,9 @@ stwierdza, że dla :math:`\\` dowolnych dwóch ciągów liczb zespolonych
    \left(\ \sum_{i\,=\,1}^n\ |\,\alpha_i|^2\,\right)\ 
    \left(\ \sum_{i\,=\,1}^n\ |\,\beta_i\,|^2\,\right)\,.
 
-2.) Odnosząc nierówność :eq:`Schwarz_real` do przestrzeni euklidesowej 
-:math:`\,R^n\ ` otrzymujemy dla dowolnych dwóch ciągów liczb rzeczywistych 
-:math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,
+2.) :math:`\,` Odnosząc nierówność :eq:`Schwarz_real` do przestrzeni 
+euklidesowej :math:`\,R^n\ ` otrzymujemy dla dowolnych dwóch ciągów liczb 
+rzeczywistych :math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,
 \ \ (\beta_1,\,\beta_2,\,\dots,\,\beta_n)\ ` warunek:
 
 .. math::
@@ -302,8 +303,9 @@ stwierdza, że dla :math:`\\` dowolnych dwóch ciągów liczb zespolonych
    \left(\ \sum_{i\,=\,1}^n\ \alpha_i^2\,\right)\ 
    \left(\ \sum_{i\,=\,1}^n\ \beta_i^2\,\right)\,,
 
-3.) W przestrzeni :math:`\,L^2\ ` funkcji całkowalnych w kwadracie modułu 
-dla dowolnych funkcji :math:`\,\varphi,\psi\ ` spełniona jest nierówność
+3.) :math:`\,` W przestrzeni :math:`\,L^2\ ` funkcji całkowalnych 
+w kwadracie modułu dla dowolnych funkcji :math:`\,\varphi,\psi\ ` 
+spełniona jest nierówność
 
 .. math::
    
@@ -313,7 +315,8 @@ dla dowolnych funkcji :math:`\,\varphi,\psi\ ` spełniona jest nierówność
    \int_{-\infty}^{+\infty}\ |\,\varphi(x)\,|^2\ dx\ \ \cdot\  
    \int_{-\infty}^{+\infty}\ |\,\psi(x)\,|^2\ dx\,.
 
-4.) W euklidesowej przestrzeni wektorów geometrycznych z iloczynem skalarnym
+4.) :math:`\,` W euklidesowej przestrzeni wektorów geometrycznych 
+z iloczynem skalarnym
 
 .. math::
    

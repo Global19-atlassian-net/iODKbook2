@@ -36,7 +36,7 @@ na wierszach (kolumnach) macierzy jest następujący:
 1 & 2 & 1 & 1 & 1 \\
 1 & 1 & 3 & 1 & 1 \\
 1 & 1 & 1 & 4 & 1 \\
-1 & 1 & 1 & 1 & 5
+1 & 1 & 1 & 1 & 5 \\
 \end{array}
 \right|\ \ = \ \ 
 \left|\begin{array}{ccccc}
@@ -44,7 +44,7 @@ na wierszach (kolumnach) macierzy jest następujący:
 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 2 & 0 & 0 \\
 0 & 0 & 0 & 3 & 0 \\
-0 & 0 & 0 & 0 & 4
+0 & 0 & 0 & 0 & 4 \\
 \end{array}
 \right|\ \ =\ \ 24\,.`
 
@@ -59,7 +59,7 @@ Operacje wykonane na wierszach :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,
          1 & 2 & 1 & 1 & 1 \\
          1 & 1 & 3 & 1 & 1 \\
          1 & 1 & 4 & 4 & 1 \\
-         1 & 1 & 1 & 1 & 5
+         1 & 1 & 1 & 1 & 5 \\
          \end{array}
    \right|\ \ = \ \ 
    \left|\begin{array}{ccccc}
@@ -67,7 +67,7 @@ Operacje wykonane na wierszach :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,
          0 & 1 & 0 & 0 & 0 \\
          0 & 0 & 2 & 0 & 0 \\
          0 & 0 & 0 & 3 & 0 \\
-         0 & 0 & 0 & 0 & 4
+         0 & 0 & 0 & 0 & 4 \\
          \end{array}
    \right|\ \ =\ \ 24\,.
 
@@ -79,28 +79,28 @@ Operacje wykonane na wierszach :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,
           1 &  2 & 1 &  1 \\
           2 &  3 & 2 &  3 \\
          -1 &  0 & 1 & -1 \\
-         -2 & -1 & 4 & 0
+         -2 & -1 & 4 &  0 \\
          \end{array}
    \right|\ =\ 
    \left|\begin{array}{rrrr}
           1 &  2 & 1 & 1 \\
           0 & -1 & 0 & 1 \\
           0 &  2 & 2 & 0 \\
-          0 &  3 & 6 & 2
+          0 &  3 & 6 & 2 \\
          \end{array}
    \right|\ =\ 
    \left|\begin{array}{rrrr}
           1 &  2 & 1 & 1 \\
           0 & -1 & 0 & 1 \\
           0 &  0 & 2 & 2 \\
-          0 &  0 & 6 & 5
+          0 &  0 & 6 & 5 \\
          \end{array}
    \right|\ =\ 
    \left|\begin{array}{rrrr}
           1 &  2 & 1 &  1 \\
           0 & -1 & 0 &  1 \\
           0 &  0 & 2 &  2 \\
-          0 &  0 & 0 & -1
+          0 &  0 & 0 & -1 \\
          \end{array}
    \right|\ =\ 2\,.
 
@@ -131,7 +131,7 @@ bez obliczania wartości wyznacznika uzasadnić, że
 1 & 7 & 9 & 8 \\
 2 & 1 & 3 & 9 \\
 3 & 2 & 5 & 5 \\
-4 & 8 & 6 & 7
+4 & 8 & 6 & 7 \\
 \end{array}
 \right|\quad` też dzieli się przez 31.
 
@@ -150,7 +150,7 @@ bez obliczania wartości wyznacznika uzasadnić, że
           1 & 7 & 9 & 8 \\
           2 & 1 & 3 & 9 \\
           3 & 2 & 5 & 5 \\
-          4 & 8 & 6 & 7
+          4 & 8 & 6 & 7 \\
          \end{array}
    \right|
 
@@ -168,29 +168,29 @@ na kolumnach :math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\boldsymbol{C}_3,\,
           1 & 7 & 9 & 8 \\
           2 & 1 & 3 & 9 \\
           3 & 2 & 5 & 5 \\
-          4 & 8 & 6 & 7
+          4 & 8 & 6 & 7 \\
          \end{array}
    \right|\ \ =\ \ 
    \left|\begin{array}{llll}
           1 & 7 & 9 & 1798 \\
           2 & 1 & 3 & 2139 \\
           3 & 2 & 5 & 3255 \\
-          4 & 8 & 6 & 4867
+          4 & 8 & 6 & 4867 \\
          \end{array}
    \right|\ \ =\ \ 
    \left|\begin{array}{llll}
-          1 & 7 & 9 & 31\,\cdot\,58 \\
-          2 & 1 & 3 & 31\,\cdot\,69 \\
+          1 & 7 & 9 & 31\,\cdot\,58  \\
+          2 & 1 & 3 & 31\,\cdot\,69  \\
           3 & 2 & 5 & 31\,\cdot\,105 \\
-          4 & 8 & 6 & 31\,\cdot\,157
+          4 & 8 & 6 & 31\,\cdot\,157 \\
          \end{array}
    \right|\ \ =\ \ 
    31\ \cdot\ 
    \left|\begin{array}{llll}
-          1 & 7 & 9 & 58 \\
-          2 & 1 & 3 & 69 \\
+          1 & 7 & 9 & 58  \\
+          2 & 1 & 3 & 69  \\
           3 & 2 & 5 & 105 \\
-          4 & 8 & 6 & 157
+          4 & 8 & 6 & 157 \\
          \end{array}
    \right|\,.
 
@@ -221,7 +221,7 @@ Rozwinięcie Laplace'a
 -2 & 0 & 3 & 4 & 1 \\
 4 & 7 & 6 & -2 & 0 \\ 
 3 & 3 & 5 & 1 & 1 \\ 
--1 & 2 & 3 & 0 & 4
+-1 & 2 & 3 & 0 & 4 \\
 \end{array}\right]\in M_{4\times 5}(Q)\,.`
 
 Minor stopnia trzeciego (jeden spośród 40) otrzymamy, skreślając 
@@ -232,21 +232,21 @@ np. trzeci wiersz oraz drugą i czwartą kolumnę:
    \left|\begin{array}{rrr}
          -2 & 3 & 1 \\ 
           4 & 6 & 0 \\
-         -1 & 3 & 4
+         -1 & 3 & 4 \\
          \end{array}
    \right|\ \ =\ \ 
    3\ \,
    \left|\begin{array}{rrr}
          -2 & 1 & 1 \\ 
           4 & 2 & 0 \\
-         -1 & 1 & 4
+         -1 & 1 & 4 \\
          \end{array}
    \right|\ \ =\ \ 
    6\ \,
    \left|\begin{array}{rrr}
          -2 & 1 & 1 \\ 
           2 & 1 & 0 \\
-         -1 & 1 & 4
+         -1 & 1 & 4 \\
          \end{array}
    \right|\ \ =\ \ 
    6\ \,(-13)\ \ =\ \ -78\,.
@@ -286,7 +286,7 @@ Wyliczymy np. dopełnienia algebraiczne elementów
    \left|\begin{array}{rrr}
          3 & 7 & 4 \\ 
          1 & 1 & 2 \\
-        -1 & 1 & 5
+        -1 & 1 & 5 \\
          \end{array}
    \right|\ \ =\ \ 32\,;
    \quad
@@ -294,7 +294,7 @@ Wyliczymy np. dopełnienia algebraiczne elementów
    \left|\begin{array}{rrr}
          2 &  1 & 6 \\ 
          3 & -1 & 4 \\
-        -1 & -2 & 5
+        -1 & -2 & 5 \\
          \end{array}
    \right|\ \ =\ \ - 55\,.
 
@@ -347,11 +347,11 @@ Można zawsze do tego doprowadzić wykonując przekształcenia elementarne.
 
 Praktyczne odręczne obliczanie wyznaczników przebiega w dwóch etapach:
 
-#. | :math:`\,` przekształcenie macierzy do postaci, 
+1. | :math:`\,` przekształcenie macierzy do postaci, 
      w której w jakimś wierszu (bądź kolumnie) 
    | tylko jeden element jest różny od zera;
 
-#. :math:`\,` zastosowanie rozwinięcia Laplace'a względem tego wiersza 
+2. :math:`\,` zastosowanie rozwinięcia Laplace'a względem tego wiersza 
    (bądź kolumny). :math:`\\`
 
 **Przykład.** :math:`\,` Pod obliczeniami znajduje się 
@@ -363,14 +363,14 @@ opis zastosowanych przekształceń. :math:`\\`
          2 & -5 &  1 & 2 \\
         -3 &  7 & -1 & 4 \\
          5 & -9 &  2 & 7 \\
-         4 & -6 &  1 & 2
+         4 & -6 &  1 & 2 \\
          \end{array}
    \right|\ \ =\ \ 
    \left|\begin{array}{rrrr}
          2 & -5 &  1 & 2 \\
         -1 &  2 &  0 & 6 \\
          1 &  1 &  0 & 3 \\
-         2 & -1 &  0 & 0
+         2 & -1 &  0 & 0 \\
          \end{array}
    \right|\ \ =\ \ 
    \left|\begin{array}{rrr}
@@ -458,17 +458,6 @@ twierdzenia o wyznaczniku macierzy transponowanej:
 
    det A = -9
    True 
-
-
-
-
-
-
-
-
-
-
-
 
 
 

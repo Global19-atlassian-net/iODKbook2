@@ -94,8 +94,8 @@ wtedy i tylko wtedy, gdy
    \begin{array}{cccc}
    \alpha_{11}-\lambda & \alpha_{12} & \dots & \alpha_{1n} \\
    \alpha_{21} & \alpha_{22}-\lambda & \dots & \alpha_{2n} \\
-   \dots & \dots & \dots & \dots \\
-   \alpha_{n1} & \alpha_{n2} & \dots & \alpha_{nn}-\lambda 
+   \dots & \dots & \dots & \dots                           \\
+   \alpha_{n1} & \alpha_{n2} & \dots & \alpha_{nn}-\lambda \\ 
    \end{array}
    \right|\ \ =\ \ 0\,.
 
@@ -230,7 +230,7 @@ to dla :math:`\ \ \alpha_1,\alpha_2\in K:`
 
    \begin{array}{ccccc}
    F\,(\alpha_1\,v_1+\alpha_2\,v_2) & = & 
-   \alpha_1\,Fv_1+\alpha_2\,Fv_2 & = & \\
+   \alpha_1\,Fv_1+\alpha_2\,Fv_2 & = &       \\
    & = & \alpha_1\,\lambda\,v_1+\alpha_2\,\lambda\,v_2 & = & 
    \lambda\ (\alpha_1\,v_1+\alpha_2\,v_2)\,. \\
    \end{array}

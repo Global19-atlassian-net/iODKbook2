@@ -91,39 +91,13 @@ otrzymujemy
    :nowrap:
    
    \begin{alignat*}{5}
-   \alpha_1\,\langle x_1,x_1\rangle 
-   & {\,} + {\ } 
-   & \alpha_2\,\langle x_1,x_2\rangle 
-   & {\,} + {\ } 
-   & \ldots 
-   & {\ \ } + {\ } 
-   & \alpha_r\,\langle x_1,x_r\rangle & {\ } = {\ \,} 
-   & 0 
-   \\ \alpha_1\,\langle x_2,x_1\rangle 
-   & {\,} + {\ } 
-   & \alpha_2\,\langle x_2,x_2\rangle 
-   & {\,} + {\ } 
-   & \ldots 
-   & {\ \ } + {\ } 
-   & \alpha_r\,\langle x_2,x_r\rangle 
-   & {\ } = {\ \,} 
-   & 0 
-   \\ \dots\quad\ \                    
-   & 
-   & \dots\quad\ \ 
-   &             
-   & \ \ldots 
-   & 
-   & \dots\quad\ \                    &               
-   & 
-   \\ \alpha_1\,\langle x_r,x_1\rangle 
-   & {\,} + {\ } 
-   & \alpha_2\,\langle x_r,x_2\rangle 
-   & {\,} + {\ } 
-   & \ldots   
-   & {\ \ } + {\ } 
-   & \alpha_r\,\langle x_r,x_r\rangle & {\ } = {\ \,} 
-   & 0 
+   \alpha_1\,\langle x_1,x_1\rangle & {\,} + {\ } & \alpha_2\,\langle x_1,x_2\rangle & {\,} + {\ } & \ldots & {\ \ } + {\ } & \alpha_r\,\langle x_1,x_r\rangle & {\ } = 
+   {\ \,} & 0 \\ 
+   \alpha_1\,\langle x_2,x_1\rangle & {\,} + {\ } & \alpha_2\,\langle x_2,x_2\rangle & {\,} + {\ } & \ldots & {\ \ } + {\ } & \alpha_r\,\langle x_2,x_r\rangle & {\ } = 
+   {\ \,} & 0 \\ 
+   \dots\quad\ \ & & \dots\quad\ \ & & \ \ldots & & \dots\quad\ \ & & \\ 
+   \alpha_1\,\langle x_r,x_1\rangle & {\,} + {\ } & \alpha_2\,\langle x_r,x_2\rangle & {\,} + {\ } & \ldots & {\ \ } + {\ } & \alpha_r\,\langle x_r,x_r\rangle & {\ } =
+   {\ \,} & 0 \\
    \end{alignat*}
 
 Z warunków :eq:`assumpt` wynika, że
@@ -143,9 +117,10 @@ która oznacza liniową niezależność wektorów :math:`\ x_1,\,x_2,\,\dots,\,x
    
    W :math:`\,n`-wymiarowej przestrzeni unitarnej bądź euklidesowej:
 
-   1. każdy ortogonalny układ :math:`\,n\ ` wektorów jest bazą ;
+   1. :math:`\,` każdy ortogonalny układ :math:`\,n\ ` wektorów jest bazą ;
 
-   2. układ ortogonalny nie może zawierać więcej niż :math:`\,n\ ` wektorów.
+   2. :math:`\,` układ ortogonalny nie może zawierać więcej 
+      niż :math:`\,n\ ` wektorów.
 
 .. Bazy ortonormalne
    ~~~~~~~~~~~~~~~~~

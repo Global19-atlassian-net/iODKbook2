@@ -53,7 +53,7 @@ Stosując zasadę indukcji matematycznej można pokazać, że:
    \left[\,A_1A_2\ldots A_{n-1}A_n\,,B\right]\ = \\
    \left[A_1\,,B\right]\,A_2\ldots A_{n-1}A_n\ +\ 
    A_1\left[A_2\,,B\right]\ldots A_{n-1}A_n\ +\ \ldots\ +\ 
-   A_1A_2\ldots A_{n-1}\left[A_n\,,B\right]\,.
+   A_1A_2\ldots A_{n-1}\left[A_n\,,B\right]\,. \\
    \end{array}
 
 W szczególności, dla :math:`\,n=2\ ` otrzymuje się często używane wzory:

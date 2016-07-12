@@ -46,7 +46,7 @@ i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
 
 | Własności tych działań są odbiciem własności działań w ciele :math:`\,K:`
 
-1. dodawanie wektorów w zbiorze :math:`\,K^n\,` jest łączne i przemienne:
+1. :math:`\,` dodawanie wektorów w zbiorze :math:`\,K^n\,` jest łączne i przemienne:
    
    .. math::
       
@@ -56,11 +56,11 @@ i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
       \boldsymbol{x}\,+\,\boldsymbol{y}\ =\ \boldsymbol{y}\,+\,\boldsymbol{x},
       \qquad\boldsymbol{x},\boldsymbol{y},\boldsymbol{z}\,\in\,K^n.
    
-2. elementem neutralnym dla dodawania jest wektor zerowy 
+2. :math:`\,` elementem neutralnym dla dodawania jest wektor zerowy 
    :math:`\ \,\boldsymbol{\theta}\ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ \ldots \\ 0 \end{array}\right]\,.`
 
-3. | wektorem odwrotnym (tutaj raczej: przeciwnym)
+3. | :math:`\,` wektorem odwrotnym (tutaj raczej: przeciwnym)
    | 
    | :math:`\ ` do danego wektora 
      :math:`\ \,\boldsymbol{x}\,=\,

@@ -9,11 +9,13 @@ o postaci wierszowej
 .. math::
    
    \boldsymbol{A}\ \ =\ \ 
-   \left[\begin{array}{c} \boldsymbol{A}_1 \\
-                          \boldsymbol{A}_2 \\
-                          \ldots           \\
-                          \boldsymbol{A}_m\end{array}\right],\qquad
-   \text{gdzie}\quad
+   \left[\begin{array}{c} 
+   \boldsymbol{A}_1 \\
+   \boldsymbol{A}_2 \\
+   \ldots           \\
+   \boldsymbol{A}_m \\
+   \end{array}\right],
+   \qquad\text{gdzie}\quad
    \boldsymbol{A}_i\ =\ [\,a_{i1}\ \,a_{i2}\ \,\dots\ \,a_{in}\,]\,,\quad 
    i=1,2,\dots,m\,,
 
@@ -41,8 +43,9 @@ zmieniającą kolejność wierszy macierzy :math:`\,\boldsymbol{A}\,:`
    O_\sigma\,\boldsymbol{A}\ :\,=\ 
    \left[\begin{array}{c} \boldsymbol{A}_{\,\sigma(1)} \\
                           \boldsymbol{A}_{\,\sigma(2)} \\
-                          \ldots           \\
-                          \boldsymbol{A}_{\,\sigma(m)}\end{array}\right]\,.
+                          \ldots                       \\
+                          \boldsymbol{A}_{\,\sigma(m)} \\
+   \end{array}\right]\,.
 
 :math:`\;`
 
@@ -53,8 +56,8 @@ Zastosowanie operacji :math:`\,O_\sigma\,` do macierzy jednostkowej
    \boldsymbol{I}_m\ \ =\ \ \left[\begin{array}{c}
                             \boldsymbol{e}_1 \\ 
                             \boldsymbol{e}_2 \\ 
-                            \ldots \\ 
-                            \boldsymbol{e}_m
+                            \ldots           \\ 
+                            \boldsymbol{e}_m \\
                             \end{array}\right]\,,
 
 (:math:`\,\boldsymbol{e}_i\,` jest wierszem zawierającym jedynkę 
@@ -68,15 +71,15 @@ na :math:`\,i`-tym miejscu, poza tym zera) daje macierz
                                     \left[\begin{array}{c}
                                     \boldsymbol{e}_{\,\sigma(1)} \\ 
                                     \boldsymbol{e}_{\,\sigma(2)} \\ 
-                                    \ldots \\ 
-                                    \boldsymbol{e}_{\,\sigma(m)}
+                                    \ldots                       \\ 
+                                    \boldsymbol{e}_{\,\sigma(m)} \\
                                     \end{array}\right]\,.
 
 
 **Przykład.** :math:`\,` Niech
 :math:`\quad\sigma\ =\ \left(\begin{array}{ccccc}
 1 & 2 & 3 & 4 & 5 \\
-4 & 3 & 5 & 1 & 2
+4 & 3 & 5 & 1 & 2 \\
 \end{array}\right)\,\in S_5\,.` 
 
 :math:`\;`
@@ -90,19 +93,19 @@ Macierz tej permutacji przedstawia się następująco:
                           \boldsymbol{e}_{\,\sigma(2)} \\
                           \boldsymbol{e}_{\,\sigma(3)} \\
                           \boldsymbol{e}_{\,\sigma(4)} \\
-                          \boldsymbol{e}_{\,\sigma(5)}
+                          \boldsymbol{e}_{\,\sigma(5)} \\
    \end{array}\right]\ =\ 
    \left[\begin{array}{c} \boldsymbol{e}_4 \\
                           \boldsymbol{e}_3 \\
                           \boldsymbol{e}_5 \\
                           \boldsymbol{e}_1 \\
-                          \boldsymbol{e}_2
+                          \boldsymbol{e}_2 \\
    \end{array}\right]\ =\ 
    \left[\begin{array}{ccccc} 0 & 0 & 0 & 1 & 0 \\
                               0 & 0 & 1 & 0 & 0 \\
                               0 & 0 & 0 & 0 & 1 \\
                               1 & 0 & 0 & 0 & 0 \\
-                              0 & 1 & 0 & 0 & 0
+                              0 & 1 & 0 & 0 & 0 \\
    \end{array}\right]\,.
 
 .. Wykorzystując wierszową regułę mnożenia macierzowego można stwierdzić, 
@@ -192,7 +195,7 @@ daje macierz tego elementu. Dla przykładu znajdziemy macierz transpozycji
    
    \tau\ =\ (2,4)\ =\ \left(\begin{array}{cccc}
                          1 & 2 & 3 & 4 \\
-                         1 & 4 & 3 & 2
+                         1 & 4 & 3 & 2 \\
                       \end{array}\right)\,.
 
 .. code-block:: python
@@ -206,7 +209,7 @@ daje macierz tego elementu. Dla przykładu znajdziemy macierz transpozycji
                       1 & 0 & 0 & 0 \\
                       0 & 0 & 0 & 1 \\
                       0 & 0 & 1 & 0 \\
-                      0 & 1 & 0 & 0
+                      0 & 1 & 0 & 0 \\
                    \end{array}\right)\ \right)   
  
 

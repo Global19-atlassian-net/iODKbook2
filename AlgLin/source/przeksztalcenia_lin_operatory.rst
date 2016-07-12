@@ -23,8 +23,8 @@ kolejnych wektorów bazy :math:`\ \mathcal{B}\ ` *w tej samej bazie*:
    \begin{array}{l}
    Fv_1\ =\ f_{11}\,v_1\,+\ f_{21}\,v_2\,+\ \dots\ +\ f_{n1}\,v_n \\
    Fv_2\ =\ f_{12}\,v_1\,+\ f_{22}\,v_2\,+\ \dots\ +\ f_{n2}\,v_n \\
-   \ \dots \\
-   Fv_n\ =\ f_{1n}\,v_1\,+\ f_{2n}\,v_2\,+\ \dots\ +\ f_{nn}\,v_n
+   \ \dots                                                        \\
+   Fv_n\ =\ f_{1n}\,v_1\,+\ f_{2n}\,v_2\,+\ \dots\ +\ f_{nn}\,v_n \\
    \end{array}
    
 czyli, w zapisie skróconym: :math:`\displaystyle\quad Fv_j\;=
@@ -170,7 +170,7 @@ przedstawienia iloczynu wektorowego w postaci wyznacznika, otrzymujemy
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
-     x_1     &   x_2     &   x_3       
+     x_1     &   x_2     &   x_3     \\       
    \end{array}\right|\,.
 
 Aby wyznaczyć macierz operatora :math:`\,F\,` w bazie :math:`\ \mathcal{E},\ `
@@ -183,7 +183,7 @@ wyliczamy obrazy wektorów tej bazy:
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
-       1     &     0     &     0       
+       1     &     0     &     0     \\      
    \end{array}\right|\ \ \,=\ \ \,
    0\,\cdot\,\vec{e}_1\ \,+\ \,a_3\,\cdot\;\vec{e}_2\ \,-
    \ \,a_2\,\cdot\;\vec{e}_3\,, \\   
@@ -191,7 +191,7 @@ wyliczamy obrazy wektorów tej bazy:
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
-       0     &     1     &     0       
+       0     &     1     &     0     \\       
    \end{array}\right|\ \ \,=\ \ \,
    -\ a_3\,\cdot\,\vec{e}_1\ \,+\ \,0\,\cdot\;\vec{e}_2\ \,+
    \ \,a_1\,\cdot\;\vec{e}_3\,, \\  
@@ -199,7 +199,7 @@ wyliczamy obrazy wektorów tej bazy:
    \left|\begin{array}{ccc}
    \vec{e}_1 & \vec{e}_2 & \vec{e}_3 \\
      a_1     &   a_2     &   a_3     \\  
-       0     &     0     &     1       
+       0     &     0     &     1     \\      
    \end{array}\right|\ \ \,=\ \ \,
    a_2\,\cdot\,\vec{e}_1\ \,-\ \,a_1\,\cdot\;\vec{e}_2\ \,+
    \ \,0\,\cdot\;\vec{e}_3\,.
@@ -223,7 +223,7 @@ mamy z równania :eq:`prod_det` :
    \begin{array}{l}
    x_1'\ =\ a_2\;x_3\ -\ a_3\;x_2 \\
    x_2'\ =\ a_3\;x_1\ -\ a_1\;x_3 \\
-   x_3'\ =\ a_1\;x_2\ -\ a_2\;x_1
+   x_3'\ =\ a_1\;x_2\ -\ a_2\;x_1 \\
    \end{array}
    \qquad\text{czyli}\qquad
    \left[\begin{array}{c} x_1' \\ x_2' \\ x_3' \end{array}\right]
@@ -231,12 +231,13 @@ mamy z równania :eq:`prod_det` :
    \left[\begin{array}{ccc}
              0  & -\ a_3 &    a_2 \\
             a_3 &     0  & -\ a_1 \\
-         -\ a_2 &    a_1 &     0
+         -\ a_2 &    a_1 &     0  \\
    \end{array}\right] 
    \left[\begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right]\,.
 
 Ostatnia równość stwierdza, :math:`\,` zgodnie z :eq:`fund_end`, :math:`\,` że 
 :math:`\ \ I_{\mathcal{E}}(\vec{r}\;')\,=
 \,M_{\mathcal{E}}(F)\cdot I_{\mathcal{E}}(\vec{r})\,.`
+
 
 

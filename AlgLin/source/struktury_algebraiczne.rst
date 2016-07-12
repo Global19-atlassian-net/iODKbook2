@@ -1,19 +1,14 @@
-.. -*- coding: utf-8 -*-
 
 Najważniejsze struktury algebraiczne
 ------------------------------------
-
-Definicje i przykłady
-~~~~~~~~~~~~~~~~~~~~~
 
 **Struktura algebraiczna** składa się z jednego albo kilku zbiorów 
 oraz działań określonych na tych zbiorach. 
 Definicja konkretnej struktury wymienia te zbiory 
 i podaje postulaty, które powinny spełniać działania.
 
-Najważniejsze struktury to: 
-:math:`\ ` grupa, :math:`\ ` pierścień, :math:`\ ` ciało, :math:`\ ` 
-przestrzeń wektorowa,  :math:`\ ` algebra.
+Grupa, pierścień, ciało
+~~~~~~~~~~~~~~~~~~~~~~~
 
 | **Grupa** :math:`\ \,\mathbb{G}\ \,` składa się z jednego zbioru 
   :math:`\ G\ ` i :math:`\ ` jednego działania wewnętrznego :math:`\ \bot:`
@@ -149,7 +144,6 @@ nad pierścieniem z jednością (na przykład macierze
 rzeczywiste albo zespolone)
 ze względu na dodawanie i mnożenie macierzowe.
 
-
 **Ciało** :math:`\ \,\mathbb{K}\ \,` (ang.: field) :math:`\,` 
 odobnie jak pierścień składa się z jednego zbioru :math:`\,K\ ` 
 i :math:`\ ` dwóch działań wewnętrznych:
@@ -158,10 +152,10 @@ i :math:`\ ` dwóch działań wewnętrznych:
 
 Działania w ciele spełniają następujące warunki:
 
-1. :math:`\,(K,\,+)\ \ ` jest grupą przemienną z elementem neutralnym 
+1. :math:`\ (K,\,+)\ \ ` jest grupą przemienną z elementem neutralnym 
    :math:`\,` 0 :math:`\,` (zero ciała);
 
-2. :math:`\,(K\smallsetminus\{0\},\ \cdot\;)\ \ ` jest grupą przemienną 
+2. :math:`\ (K\smallsetminus\{0\},\ \cdot\;)\ \ ` jest grupą przemienną 
    z elementem neutralnym :math:`\,` 1 :math:`\,` (jedność ciała);
 
 3. :math:`\,` mnożenie jest rozdzielne względem dodawania:
@@ -180,10 +174,10 @@ w którym dla każdego elementu niezerowego istnieje odwrotność. :math:`\\`
 
 Podstawowe stwierdzenia:
 
-a. :math:`\ \ 1\neq 0\,;`
-b. :math:`\ \ 0\,\cdot\,\alpha\ =\ 0\,,\quad\alpha\in K\,;`
-c. :math:`\ \ (-1)\,\cdot\,\alpha\ =\ -\ \alpha\,,\quad\alpha\in K\,;`
-d. :math:`\ \ \alpha\,\cdot\,\beta\ =\ 0 \quad\Leftrightarrow\quad 
+A. :math:`\ \ 1\neq 0\,;`
+B. :math:`\ \ 0\,\cdot\,\alpha\ =\ 0\,,\quad\alpha\in K\,;`
+C. :math:`\ \ (-1)\,\cdot\,\alpha\ =\ -\ \alpha\,,\quad\alpha\in K\,;`
+D. :math:`\ \ \alpha\,\cdot\,\beta\ =\ 0 \quad\Leftrightarrow\quad 
    (\alpha=0\ \ \lor\ \ \beta=0)\,,\qquad\alpha,\,\beta\in K\,.` :math:`\\`
 
 Przykłady ciał:
@@ -215,7 +209,8 @@ Przykłady ciał:
      :math:`\ G\ (P,\ K),\ ` 
    | o ile są w nim określone działania spełniające odpowiednie postulaty.
 
-:math:`\;`
+Przestrzeń wektorowa, moduł, algebra
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | **Przestrzeń wektorowa nad ciałem** :math:`\,K\ ` jest strukturą
   :math:`\ \ \mathbb{V}\,=
@@ -353,33 +348,33 @@ ciałem, :math:`\,P`-moduł staje się przestrzenią wektorową nad tym ciałem.
 
 Przykłady.
 
-0. :math:`\,` Pierścień :math:`\,P\ ` jest (lewo- i prawostronnym) 
-   modułem nad sobą samym.
+* Pierścień :math:`\,P\ ` jest (lewo- i prawostronnym) 
+  modułem nad sobą samym.
 
-1. :math:`\,` Rozważmy zbiór :math:`\,P^n\ \,n`-elementowych ciągów o wyrazach 
-   z pierścienia :math:`\,P,\ ` zapisanych kolumnowo. 
-   Przy naturalnie określonych działaniach dodawania i mnożenia 
-   przez :math:`\\` skalary z :math:`\,P\ ` zbiór ten jest grupą przemienną
-   i jednocześnie (lewo- i prawostronnym) :math:`\,P`-modułem.
-   Ważnym przykładem jest moduł :math:`\,Z^n\,,\ ` złożony z 
-   :math:`\,n`-elementowych kolumn o wyrazach całkowitych. Gdy :math:`\,P\ ` 
-   jest ciałem: :math:`\,P=K,\ ` otrzymujemy przestrzeń :math:`\,K^n.`
+* Rozważmy zbiór :math:`\,P^n\ \,n`-elementowych ciągów o wyrazach 
+  z pierścienia :math:`\,P,\ ` zapisanych kolumnowo. 
+  Przy naturalnie określonych działaniach dodawania i mnożenia 
+  przez :math:`\\` skalary z :math:`\,P\ ` zbiór ten jest grupą przemienną
+  i jednocześnie (lewo- i prawostronnym) :math:`\,P`-modułem.
+  Ważnym przykładem jest moduł :math:`\,Z^n\,,\ ` złożony z 
+  :math:`\,n`-elementowych kolumn o wyrazach całkowitych. Gdy :math:`\,P\ ` 
+  jest ciałem: :math:`\,P=K,\ ` otrzymujemy przestrzeń :math:`\,K^n.`
 
-2. :math:`\,` Na tej samej zasadzie zbiór :math:`\,M_{m\times n}(P)\ ` 
-   macierzy prostokątnych o elementach z pierścienia :math:`\,P\ ` jest 
-   (lewo- i prawostronnym) :math:`\,P`-modułem. W szczególności może to być 
-   moduł :math:`\,M_{m\times n}(Z)\ ` macierzy o elementach całkowitych.
+* Na tej samej zasadzie zbiór :math:`\,M_{m\times n}(P)\ ` 
+  macierzy prostokątnych o elementach z pierścienia :math:`\,P\ ` jest 
+  (lewo- i prawostronnym) :math:`\,P`-modułem. W szczególności może to być 
+  moduł :math:`\,M_{m\times n}(Z)\ ` macierzy o elementach całkowitych.
 
-3. :math:`\,` Zbiór :math:`\,M_n(P)\ ` macierzy kwadratowych stopnia :math:`\,n\ ` 
-   nad pierścieniem :math:`\,P\ ` jest pierścieniem z jednością ze względu 
-   na dodawanie i mnożenie macierzowe. 
-   Mnożenie z lewej strony kolumn ze zbioru :math:`\,P^n\ ` przez macierze 
-   z pierścienia :math:`\,M_n(P)\ ` jest działaniem w zbiorze :math:`\,P^n,\ `
-   spełniającym warunki 3.-5. definicji modułu. Wobec tego :math:`\,P^n\ ` 
-   jest modułem (wyłącznie lewostronnym) nad pierścieniem :math:`\,M_n(P).`
+* Zbiór :math:`\,M_n(P)\ ` macierzy kwadratowych stopnia :math:`\,n\ ` 
+  nad pierścieniem :math:`\,P\ ` jest pierścieniem z jednością ze względu 
+  na dodawanie i mnożenie macierzowe. 
+  Mnożenie z lewej strony kolumn ze zbioru :math:`\,P^n\ ` przez macierze 
+  z pierścienia :math:`\,M_n(P)\ ` jest działaniem w zbiorze :math:`\,P^n,\ `
+  spełniającym warunki 3.-5. definicji modułu. Wobec tego :math:`\,P^n\ ` 
+  jest modułem (wyłącznie lewostronnym) nad pierścieniem :math:`\,M_n(P).`
 
-4. :math:`\,` Każda grupa przemienna jest modułem 
-   nad pierścieniem liczb całkowitych :math:`\,Z.\ ` 
+* Każda grupa przemienna jest modułem 
+  nad pierścieniem liczb całkowitych :math:`\,Z.\ ` 
 
 | **Algebra nad ciałem** :math:`\,K\ ` jest strukturą 
   :math:`\ \ \mathbb{A}\,=\,(\,A,\,\oplus,\,\odot\,;\ \,K,\,+\ ,\,
@@ -502,8 +497,8 @@ Są to: :math:`\,` cała przestrzeń :math:`\,V\ `
 oraz jednoelementowy podzbiór zawierający tylko wektor zerowy 
 :math:`\,\theta:\ \{\theta\}\,.` Pozostałe podprzestrzenie są *właściwe*.
 
-Przykłady podprzestrzeni:
-
+| Przykłady podprzestrzeni:
+|
 | 1.) :math:`\,` Niech :math:`\,V\,` oznacza zbiór wektorów geometrycznych
   w przestrzeni 3-wymiarowej,
 | :math:`\,V_x,\,V_y,\,V_z\ \,-\ \,` podzbiory wektorów leżących odpowiednio 
@@ -604,5 +599,6 @@ i mnożenie elementów algebry oraz mnożenie tych elementów przez skalary z ci
 
 Na tej zasadzie podzbiór :math:`\ D_n(K)\ ` macierzy diagonalnych 
 jest podalgebrą algebry :math:`\,M_n(K).`
-                               
+
+
 

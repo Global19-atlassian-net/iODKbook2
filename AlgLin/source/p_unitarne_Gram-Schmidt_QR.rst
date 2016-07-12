@@ -425,23 +425,18 @@ jaką właśnie należało wyprowadzić.
       \langle\,\boldsymbol{u}_1,\boldsymbol{a}_2\rangle &
       \langle\,\boldsymbol{u}_1,\boldsymbol{a}_3\rangle &
       \dots &
-      \langle\,\boldsymbol{u}_1,\boldsymbol{a}_n\rangle 
-      \\   
-      0                                                &
+      \langle\,\boldsymbol{u}_1,\boldsymbol{a}_n\rangle \\   
+      0 &
       \langle\,\boldsymbol{u}_2,\boldsymbol{a}_2\rangle &
       \langle\,\boldsymbol{u}_2,\boldsymbol{a}_3\rangle &
       \dots &
-      \langle\,\boldsymbol{u}_2,\boldsymbol{a}_n\rangle 
-      \\   
-      0                                                &
-      0                                                &
+      \langle\,\boldsymbol{u}_2,\boldsymbol{a}_n\rangle \\   
+      0 & 0 & 
       \langle\,\boldsymbol{u}_3,\boldsymbol{a}_3\rangle &
       \dots &
-      \langle\,\boldsymbol{u}_3,\boldsymbol{a}_n\rangle 
-      \\
-      \dots & \dots & \dots & \dots & \dots
-      \\
-      0 & 0 & 0 & \dots & \langle\,\boldsymbol{u}_n,\boldsymbol{a}_n\rangle
+      \langle\,\boldsymbol{u}_3,\boldsymbol{a}_n\rangle \\
+      \dots & \dots & \dots & \dots & \dots \\
+      0 & 0 & 0 & \dots & \langle\,\boldsymbol{u}_n,\boldsymbol{a}_n\rangle \\
       \end{array}
       \right]\,.
 
@@ -484,7 +479,7 @@ Dla przykładu przeprowadzimy rozkład QR dla macierzy
    \left[\begin{array}{rrr}
    -2 &  8 &  19 \\
    -2 & 11 & -14 \\
-    1 & -7 &  -8
+    1 & -7 &  -8 \\
    \end{array}\right]\,.
 
 Ortogonalizacja Grama-Schmidta zastosowana do układu kolumn macierzy 

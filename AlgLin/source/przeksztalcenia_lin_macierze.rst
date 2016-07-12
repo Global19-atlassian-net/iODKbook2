@@ -24,8 +24,10 @@ zapisując prawą stronę równania :eq:`ex_0` w postaci iloczynu macierzowego:
 .. math::
    
    F\left[\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 & -1 \\ 
+   4 & -2 &  4 \\
+   \end{array}\right]
    \left[\begin{array}{c} a_1 \\ a_2 \\ a_3 \end{array}\right]\,.
 
 Teraz addytywność i jednorodność odwzorowania :math:`\,F\,` 
@@ -37,8 +39,10 @@ Tak więc w naturalny sposób przypisaliśmy przekształceniu
 .. math::
    
    M(F)\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 & -1 \\ 
+   4 & -2 &  4 \\
+   \end{array}\right]
    \in M_{2\times 3}(R)\,,
 
 przy pomocy której zadanie wyznaczenia obrazu wektora 
@@ -59,22 +63,28 @@ Zauważmy, że :math:`\\`
    \begin{array}{l}   
    F\boldsymbol{e}_1\ =\ F
    \left[\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 & -1 \\ 
+   4 & -2 &  4 \\
+   \end{array}\right]
    \left[\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right]\ =\ 
    \left[\begin{array}{c} 2 \\ 4 \end{array}\right]\,,
    \\ \\
    F\boldsymbol{e}_2\ =\ F
    \left[\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 & -1 \\ 
+   4 & -2 &  4 
+   \end{array}\right]
    \left[\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right]\ =\ 
    \left[\begin{array}{r} 1 \\ -2 \end{array}\right]\,,
    \\ \\
    F\boldsymbol{e}_3\ =\ F
    \left[\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right]\ =\ 
-   \left[\begin{array}{rrr} 2 &  1 & -1 \\ 
-                            4 & -2 &  4 \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 & -1 \\ 
+   4 & -2 &  4 \\
+   \end{array}\right]
    \left[\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right]\ =\ 
    \left[\begin{array}{r} -1 \\ 4 \end{array}\right]\,.
    \end{array}
@@ -142,14 +152,14 @@ Obrazy wektorów bazy :math:`\ \mathcal{B}\ ` należą do przestrzeni
 wektorów bazy :math:`\ \mathcal{C}:`
 
 .. .. math::
-   :label: exps
+      :label: exps
    
-   \begin{array}{l}
-   Fv_1\ =\ a_{11}\,w_1\,+\ a_{21}\,w_2\,+\ \dots\ +\ a_{m1}\,w_m \\
-   Fv_2\ =\ a_{12}\,w_1\,+\ a_{22}\,w_2\,+\ \dots\ +\ a_{m2}\,w_m \\
-   \dots \\
-   Fv_n\ =\ a_{1n}\,w_1\,+\ a_{2n}\,w_2\,+\ \dots\ +\ a_{mn}\,w_m
-   \end{array}
+      \begin{array}{l}
+      Fv_1\ =\ a_{11}\,w_1\,+\ a_{21}\,w_2\,+\ \dots\ +\ a_{m1}\,w_m \\
+      Fv_2\ =\ a_{12}\,w_1\,+\ a_{22}\,w_2\,+\ \dots\ +\ a_{m2}\,w_m \\
+      \dots                                                          \\
+      Fv_n\ =\ a_{1n}\,w_1\,+\ a_{2n}\,w_2\,+\ \dots\ +\ a_{mn}\,w_m \\
+      \end{array}
 
 .. math::
    :label: exps
@@ -157,8 +167,8 @@ wektorów bazy :math:`\ \mathcal{C}:`
    \begin{array}{l}
    Fv_1\ =\ f_{11}\,w_1\,+\ f_{21}\,w_2\,+\ \dots\ +\ f_{m1}\,w_m \\
    Fv_2\ =\ f_{12}\,w_1\,+\ f_{22}\,w_2\,+\ \dots\ +\ f_{m2}\,w_m \\
-   \dots \\
-   Fv_n\ =\ f_{1n}\,w_1\,+\ f_{2n}\,w_2\,+\ \dots\ +\ f_{mn}\,w_m
+   \dots                                                          \\
+   Fv_n\ =\ f_{1n}\,w_1\,+\ f_{2n}\,w_2\,+\ \dots\ +\ f_{mn}\,w_m \\
    \end{array}
 
 
@@ -170,27 +180,25 @@ przekształcenia liniowego :math:`\ F\ ` w bazach
 
 .. .. math::
    
-   M_{\mathcal{B}\mathcal{C}}(F)\ :\,=\ 
-   \left[
-   \begin{array}{cccc}
-   a_{11} & a_{12} & \dots & a_{1n} \\
-   a_{21} & a_{22} & \dots & a_{2n} \\
-   \dots  & \dots  & \dots & \dots  \\
-   a_{m1} & a_{m2} & \dots & a_{mn}
-   \end{array}
-   \right]\,.
+      M_{\mathcal{B}\mathcal{C}}(F)\ :\,=\ 
+      \left[
+      \begin{array}{cccc}
+      a_{11} & a_{12} & \dots & a_{1n} \\
+      a_{21} & a_{22} & \dots & a_{2n} \\
+      \dots  & \dots  & \dots & \dots  \\
+      a_{m1} & a_{m2} & \dots & a_{mn} \\
+      \end{array}
+      \right]\,.
 
 .. math::
    
    M_{\mathcal{B}\mathcal{C}}(F)\ :\,=\ 
-   \left[
-   \begin{array}{cccc}
+   \left[\begin{array}{cccc}
    f_{11} & f_{12} & \dots & f_{1n} \\
    f_{21} & f_{22} & \dots & f_{2n} \\
    \dots  & \dots  & \dots & \dots  \\
-   f_{m1} & f_{m2} & \dots & f_{mn}
-   \end{array}
-   \right]\,.
+   f_{m1} & f_{m2} & \dots & f_{mn} \\
+   \end{array}\right]\,.
 
 Zauważmy przy tym, że elementy :math:`\ f_{1j},\,f_{2j},\,\dots,\,f_{mj}\,,\ `
 tworzące :math:`\,j`-tą kolumnę macierzy, :math:`\\` są współrzędnymi wektora
@@ -232,7 +240,6 @@ przestrzenią takich wielomianów stopnia (nie większego od) :math:`\ n-1:`
    
    V\ =\ \{\,a_0\,+\,a_1\,x\,+\,a_2\,x^2\,+\,a_3\,x^3\,+\,\ldots\,+\,a_n\,x^n:
    \quad a_i\in R\,,\quad i=0,1,\dots,n\,\}\,,
-
    
    W\ =\ \{\,b_0\,+\,b_1\,x\,+\,b_2\,x^2\,+\,\ldots\,+\,b_{n-1}\,x^{n-1}:
    \quad b_i\in R\,,\quad i=0,1,\dots,n-1\,\}\,.
@@ -244,7 +251,7 @@ przestrzenią takich wielomianów stopnia (nie większego od) :math:`\ n-1:`
     \dim\,V\,=\,n+1\,, & \qquad & \text{baza:}\quad 
     \mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots,\,x^n)\,, \\
     \dim\,w\,=\,n\,, & \qquad & \text{baza:}\quad 
-    \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.
+    \mathcal{C}\,=\,(1,\,x,\,x^2,\,\dots,\,x^{n-1})\,.   \\
    \end{array}
 
 Operacja różniczkowania :math:`\ D\equiv {d\over dx}\ ` przekształca liniowo 
@@ -262,7 +269,7 @@ rozkłady :eq:`exps` obrazów kolejnych wektorów bazy
    D\,x^2 & {\,} = {\,} & 2\,x       & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 2\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
    D\,x^3 & {\,} = {\,} & 3\,x^2     & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 3\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
    \dots  & {\,}   {\,} & \dots      & {\quad}   {\quad} & \dots      & {\ }   {\ } & \dots    & {\ }   {\ } & \dots      & {\ }   {\ } & \dots & {\ }   {\ } & \dots          \\   
-   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1} 
+   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1} \\ 
    \end{alignat*}
 
 .. math::
@@ -275,7 +282,7 @@ rozkłady :eq:`exps` obrazów kolejnych wektorów bazy
      0   &   0   &   2   &   0   & \dots &   0   \\
      0   &   0   &   0   &   3   & \dots &   0   \\ 
    \dots & \dots & \dots & \dots & \dots & \dots \\
-     0   &   0   &   0   &   0   & \dots &   n
+     0   &   0   &   0   &   0   & \dots &   n   \\
    \end{array}
    \right]\ 
    \in\,M_{n\times (n+1)}(R)\,.
@@ -429,7 +436,7 @@ Związki :eq:`bfa` przedstawiają równość macierzową :math:`\\`
          f_{11} & f_{12} & \dots & f_{1n} \\
          f_{21} & f_{22} & \dots & f_{2n} \\
           \dots &  \dots & \dots &  \dots \\ 
-         f_{m1} & f_{m2} & \dots & f_{mn}
+         f_{m1} & f_{m2} & \dots & f_{mn} \\
          \end{array}
    \right]
    \left[\begin{array}{c} a_1 \\ a_2 \\ \dots \\ a_n \end{array}\right]\,,
@@ -462,15 +469,13 @@ Zapisany macierzowo związek pomiędzy współrzędnymi wielomianów
    \left[
    \begin{array}{c} a_1 \\ 2\,a_2 \\ 3\,a_3 \\ \dots \\ n\,a_n \end{array}
    \right]\ \ =\ \ 
-   \left[
-   \begin{array}{cccccc}
+   \left[\begin{array}{cccccc}
      0   &   1   &   0   &   0   & \dots &   0   \\
      0   &   0   &   2   &   0   & \dots &   0   \\
      0   &   0   &   0   &   3   & \dots &   0   \\ 
    \dots & \dots & \dots & \dots & \dots & \dots \\
-     0   &   0   &   0   &   0   & \dots &   n
-   \end{array}
-   \right]\ 
+     0   &   0   &   0   &   0   & \dots &   n   \\
+   \end{array}\right]\ 
    \left[
    \begin{array}{c} a_0 \\ a_1 \\ a_2 \\ a_3 \\ \dots \\ a_n \end{array}
    \right]

@@ -100,7 +100,7 @@ przedstawia się następująco:
       x_1\,-\,2\,x_2\,+\,x_3\,=\,-\,p \\
       x_2\,-\,2\,x_3\,+\,x_4\,=\,-\,p \\
       x_3\,-\,2\,x_4\,+\,x_5\,=\,-\,p \\
-      x_5\,=\,0
+      x_5\,=\,0                       \\
    \end{array}\end{cases}
 
 czyli w wersji macierzowej
@@ -113,7 +113,7 @@ czyli w wersji macierzowej
       0 &  1 & -2 &  1 &  0 & 0 \\
       0 &  0 &  1 & -2 &  1 & 0 \\
       0 &  0 &  0 &  1 & -2 & 1 \\
-      0 &  0 &  0 &  0 &  0 & 1
+      0 &  0 &  0 &  0 &  0 & 1 \\
    \end{array}\ \right]\ 
    \left[\begin{array}{c}
       x_0 \\ x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5

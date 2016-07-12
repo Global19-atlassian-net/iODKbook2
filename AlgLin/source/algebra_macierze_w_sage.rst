@@ -86,7 +86,7 @@ Poniżej mamy przykład takiego postępowania:
 A & = & 
 \left(\begin{array}{rr}
 \cos\left(\phi\right) & -\sin\left(\phi\right) \\
-\sin\left(\phi\right) & \cos\left(\phi\right)
+\sin\left(\phi\right) & \cos\left(\phi\right)  \\
 \end{array}\right)
 \end{array}`
 
@@ -103,7 +103,7 @@ A & = &
 B & = &
 \left(\begin{array}{rr}
 \frac{1}{2} \, \sqrt{2} & -\frac{1}{2} \, \sqrt{2} \\
-\frac{1}{2} \, \sqrt{2} & \frac{1}{2} \, \sqrt{2}
+\frac{1}{2} \, \sqrt{2} & \frac{1}{2} \, \sqrt{2}  \\
 \end{array}\right) 
 \end{array}`
 
@@ -120,7 +120,7 @@ B & = &
 C & = &
 \left(\begin{array}{rr}
 0.707106781187 & -0.707106781187 \\
-0.707106781187 & 0.707106781187
+0.707106781187 & 0.707106781187  \\
 \end{array}\right)
 \end{array}`
 
@@ -410,7 +410,7 @@ macierzy jest zero. Wobec tego wektor i macierz mają następującą strukturę:
        A[0,0]   & A[0,1]   & \ldots & A[0,n-1]   \\ 
        A[1,0]   & A[1,1]   & \ldots & A[1,n-1]   \\
        \ldots   & \ldots   & \ldots & \ldots     \\
-       A[m-1,0] & A[m-1,1] & \ldots & A[m-1,n-1]
+       A[m-1,0] & A[m-1,1] & \ldots & A[m-1,n-1] \\
    \end{array}\right)\,.
 
 | W tej sytuacji umawiamy się, że w symbolicznych wyrażeniach matematycznych 
@@ -693,7 +693,7 @@ a :math:`\ \,A\ ` - :math:`\ ` macierzą kwadratową stopnia :math:`\,n:`
        a_{11}    & a_{12}    & \ldots & a_{1n} \\
        a_{21}    & a_{22}    & \ldots & a_{2n} \\
        \ldots    & \ldots    & \ldots & \ldots \\ 
-       a_{n1} & a_{n2} & \ldots & a_{nn}
+       a_{n1} & a_{n2} & \ldots & a_{nn}       \\
    \end{array}\right]\,,
 
 to istnieją iloczyny :math:`\ \ v = x\cdot A\ \ ` 
@@ -863,18 +863,18 @@ zapisać w taki sam sposób, jak mnożenie macierzy elementarnych:
    \left[\begin{array}{c|c}
        \boldsymbol{A} & \boldsymbol{B} \\
        \hline
-       \boldsymbol{C} & \boldsymbol{D}
+       \boldsymbol{C} & \boldsymbol{D} \\
     \end{array}\right]
     \left[\begin{array}{c}
         \boldsymbol{X} \\
         \hline
-        \boldsymbol{Y}
+        \boldsymbol{Y} \\
    \end{array}\right]
    \ =\ 
    \left[\begin{array}{c}
        \boldsymbol{A} \boldsymbol{X} + \boldsymbol{B} \boldsymbol{Y} \\
        \hline
-       \boldsymbol{C} \boldsymbol{X} + \boldsymbol{D} \boldsymbol{Y}
+       \boldsymbol{C} \boldsymbol{X} + \boldsymbol{D} \boldsymbol{Y} \\
    \end{array}\right]\,.
 
 Bloki :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D},
@@ -892,18 +892,18 @@ Weźmy na przykład sytuację, gdy dwa bloki są zerowe
    \left[\begin{array}{c|c}
       \boldsymbol{A} & \boldsymbol{O} \\
       \hline
-      \boldsymbol{O} & \boldsymbol{D}
+      \boldsymbol{O} & \boldsymbol{D} \\
    \end{array}\right]
    \left[\begin{array}{c}
        \boldsymbol{X} \\
        \hline
-       \boldsymbol{Y}
+       \boldsymbol{Y} \\
    \end{array}\right]
    \ =\ 
    \left[\begin{array}{c}
        \boldsymbol{A} \boldsymbol{X} \\
        \hline
-       \boldsymbol{D} \boldsymbol{Y}
+       \boldsymbol{D} \boldsymbol{Y} \\
    \end{array}\right]
 
 .. | W systemie Sage istnieje możliwość wykonywania operacji 

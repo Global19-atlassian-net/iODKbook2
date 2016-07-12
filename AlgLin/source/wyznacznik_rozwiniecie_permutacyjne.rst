@@ -58,9 +58,8 @@ Wobec tego
    \det
    \left[\begin{array}{cc}
          a_{11} & a_{12} \\ 
-         a_{21} & a_{22}
-         \end{array}
-   \right]\ \ =\ \ 
+         a_{21} & a_{22} \\
+         \end{array}\right]\ \ =\ \ 
    \sum_{\sigma\,\in\,S_2}\ \text{sgn}\,
    \sigma\,\cdot\,a_{\sigma(1),1}\ a_{\sigma(2),2}\ \ =\ \ 
    a_{11}\,a_{22}\,-\ a_{21}\,a_{12}\,.
@@ -76,9 +75,8 @@ a transpozycje są permutacjami nieparzystymi. A zatem
    \left[\begin{array}{ccc}
          a_{11} & a_{12} & a_{13} \\ 
          a_{21} & a_{22} & a_{23} \\
-         a_{31} & a_{32} & a_{33}
-         \end{array}
-   \right]\ \ =\ \ 
+         a_{31} & a_{32} & a_{33} \\
+         \end{array}\right]\ \ =\ \ 
    \sum_{\sigma\,\in\,S_3}\ \text{sgn}\,\sigma\,\cdot\,
    a_{\sigma(1),1}\ a_{\sigma(2),2}\ a_{\sigma(3),3}\ \ =
 
@@ -102,11 +100,11 @@ przekątnych wyznaczonych przez dolne strzałki:
             &  a_{11}  &  a_{12}  & a_{13} & a_{11} & a_{12} \\ 
             &  a_{21}  &  a_{22}  & a_{23} & a_{21} & a_{22} \\
             &  a_{31}  & a_{32}   & a_{33} & a_{31} & a_{32} \\
-   \nearrow & \nearrow & \nearrow &        &        &
+   \nearrow & \nearrow & \nearrow &        &        &        \\
    \end{array}\quad :\quad 
    \begin{array}{r}
    +\ \ a_{11}\,a_{22}\,a_{33}\ +\ a_{12}\,a_{23}\,a_{31}\ +\ a_{13}\,a_{21}\,a_{32} \\
-   -\ \ a_{31}\,a_{22}\,a_{13}\ -\ a_{32}\,a_{23}\,a_{11}\ -\ a_{33}\,a_{21}\,a_{12}
+   -\ \ a_{31}\,a_{22}\,a_{13}\ -\ a_{32}\,a_{23}\,a_{11}\ -\ a_{33}\,a_{21}\,a_{12} \\
    \end{array}
 
 .. warning:: Metodę Sarrusa można stosować *tylko* do wyznaczników 3. stopnia!
@@ -134,7 +132,7 @@ Można jednak ją użyć do wyprowadzenia wzoru dla wyznacznika macierzy trójk�
            0    &   0    & a_{33} & \dots  & a_{3,n-1}   & a_{3n}    \\
          \dots  & \dots  & \dots  & \dots  & \dots       & \dots     \\
            0    &   0    &   0    & \dots  & a_{n-1,n-1} & a_{n-1,n} \\
-           0    &   0    &   0    & \dots  &    0        & a_{nn} 
+           0    &   0    &   0    & \dots  &    0        & a_{nn}    \\ 
          \end{array}
    \right]\,.
 
@@ -183,7 +181,7 @@ iloczynowi elementów na głównej przekątnej:
            0    &   0    & a_{33} & \dots  &   0         &   0    \\
          \dots  & \dots  & \dots  & \dots  & \dots       & \dots  \\
            0    &   0    &   0    & \dots  & a_{n-1,n-1} &   0    \\
-           0    &   0    &   0    & \dots  &    0        & a_{nn} 
+           0    &   0    &   0    & \dots  &    0        & a_{nn} \\ 
          \end{array}
    \right|\ \ =\ \ 
    a_{11}\ a_{22}\ a_{33}\ \dots\ a_{n-1,n-1}\ a_{nn}\,.
@@ -412,21 +410,21 @@ Wykorzystując równania
    \det\boldsymbol{A}^T\ & = 
    & \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
    a_{\,\sigma(1),\,1}^T\ \,a_{\,\sigma(2),\,2}^T\ \,\ldots
-   \ \,a_{\,\sigma(n),\,n}^T \ \ = \\
+   \ \,a_{\,\sigma(n),\,n}^T \ \ =                                    \\
    & = & \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
    a_{\,1,\,\sigma(1)}\ \,a_{\,2,\,\sigma(2)}\ \,\ldots
-   \ \,a_{\,n,\,\sigma(n)} \ \ = \\
+   \ \,a_{\,n,\,\sigma(n)} \ \ =                                      \\
    & = & \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
    a_{\,1,\,\sigma^{-1}(1)}\ \,a_{\,2,\,\sigma^{-1}(2)}\ \,\ldots
-   \ \,a_{\,n,\,\sigma^{-1}(n)}\ \ = \\
+   \ \,a_{\,n,\,\sigma^{-1}(n)}\ \ =                                  \\
    & = & \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma^{-1}\,\cdot\,
    a_{\,\sigma(1),\,\sigma^{-1}[\sigma(1)]}\ \,
    a_{\,\sigma(2),\,\sigma^{-1}[\sigma(2)]}\ \,\ldots
-   \ \,a_{\,\sigma(n),\,\sigma^{-1}[\sigma(n)]} \ \ = \\
+   \ \,a_{\,\sigma(n),\,\sigma^{-1}[\sigma(n)]} \ \ =                 \\
    & = & \ \sum_{\sigma\,\in\,S_n}\ \text{sgn}\,\sigma\,\cdot\,
    a_{\,\sigma(1),1}\ \,a_{\,\sigma(2),2}\ \,\ldots
-   \ \,a_{\,\sigma(n),n} \ \ = \\
-   & = & \ \det\boldsymbol{A}\;.
+   \ \,a_{\,\sigma(n),n} \ \ =                                        \\
+   & = & \ \det\boldsymbol{A}\;.                                      \\
    \end{eqnarray*}
 
 .. .. math::

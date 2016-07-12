@@ -51,14 +51,14 @@ Oznaczenia:
          a_{11} & a_{12} & \dots & a_{1n} \\
          a_{21} & a_{22} & \dots & a_{2n} \\
           \dots &  \dots & \dots &  \dots \\
-         a_{n1} & a_{n2} & \dots & a_{nn}
+         a_{n1} & a_{n2} & \dots & a_{nn} \\
          \end{array}
    \right]\ \ =\ \ 
    \left|\begin{array}{cccc}
          a_{11} & a_{12} & \dots & a_{1n} \\
          a_{21} & a_{22} & \dots & a_{2n} \\
           \dots &  \dots & \dots &  \dots \\
-         a_{n1} & a_{n2} & \dots & a_{nn}
+         a_{n1} & a_{n2} & \dots & a_{nn} \\
          \end{array}
    \right|\,.
 

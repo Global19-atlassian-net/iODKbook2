@@ -24,7 +24,7 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
    \left[\begin{array}{rrrrr}
       1 & 3 & 0 & 2 & -1 \\
       0 & 0 & 1 & 4 & -3 \\
-      1 & 3 & 1 & 6 & -4
+      1 & 3 & 1 & 6 & -4 \\
    \end{array}\right]\,,\quad
    \boldsymbol{b}\ =\ 
    \left[\begin{array}{r}
@@ -34,7 +34,7 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
    \left[\begin{array}{rrrrrr}
       1 & 3 & 0 & 2 & -1 & 2 \\
       0 & 0 & 1 & 4 & -3 & 2 \\
-      1 & 3 & 1 & 6 & -4 & 4
+      1 & 3 & 1 & 6 & -4 & 4 \\
    \end{array}\right]\,.
 
 Metoda eliminacji
@@ -56,11 +56,11 @@ Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
    \left(\begin{array}{rrrrrr}
       1 & 3 & 0 & 2 & -1 & 2 \\
       0 & 0 & 1 & 4 & -3 & 2 \\
-      1 & 3 & 1 & 6 & -4 & 4
+      1 & 3 & 1 & 6 & -4 & 4 \\
    \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrrr}
                                              1 & 3 & 0 & 2 & -1 & 2 \\
                                              0 & 0 & 1 & 4 & -3 & 2 \\
-                                             0 & 0 & 0 & 0 & 0 & 0
+                                             0 & 0 & 0 & 0 &  0 & 0 \\
                                           \end{array}\right)
 
 Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych dwóch 
@@ -109,10 +109,10 @@ wobec czego otrzymujemy rozwiązanie w postaci
 
    \begin{array}{l}
       x_1 \ =\ 2 \ - \ 3\,s \ - \ 2\,t \ + \ u \\
-      x_2 \ = \ s \\
-      x_3 \ = \ 2 \ - \ 4\,t \ + \ 3\,u \\
-      x_4 \ = \ t \\
-      x_5 \ = \ u
+      x_2 \ = \ s                              \\
+      x_3 \ = \ 2 \ - \ 4\,t \ + \ 3\,u        \\
+      x_4 \ = \ t                              \\
+      x_5 \ = \ u                              \\
    \end{array}\qquad\quad
    s,t,u\,\in\,Q\,.
 
@@ -160,7 +160,7 @@ oraz ogólnego rozwiązania stowarzyszonego z nim układu jednorodnego:
    \left(\ \begin{array}{rrrrr}
       2 & 0 & 0 & -3 & - 4 \\
       0 & 2 & 0 & -9 & -12 \\
-      0 & 0 & 2 &  1 &   2
+      0 & 0 & 2 &  1 &   2 \\
    \end{array}\ \right)\quad\right)
 
 Rozwiązaniem ogólnym jest więc zbiór wektorów postaci
@@ -307,7 +307,7 @@ Według wzoru :eq:`09`:
    \left[\begin{array}{rrrrr}
       1 & 3 & 0 & 2 & -1 \\
       0 & 0 & 1 & 4 & -3 \\
-      0 & 0 & 0 & 0 &  0
+      0 & 0 & 0 & 0 &  0 \\
    \end{array}\right]\,.
 
 Przestawienie drugiej i trzeciej kolumny w :math:`\,\boldsymbol{C}\,`
@@ -322,13 +322,13 @@ daje macierz :math:`\,\boldsymbol{D}\,` o przejrzystej strukturze blokowej
       1 & 0 & 3 & 2 & -1 \\
       0 & 1 & 0 & 4 & -3 \\
       \hline
-      0 & 0 & 0 & 0 &  0
+      0 & 0 & 0 & 0 &  0 \\
    \end{array}\right]
    \quad \equiv\quad
    \left[\begin{array}{c|c}
       \boldsymbol{I_2}      & \boldsymbol{F_{23}} \\
       \hline                
-      \boldsymbol{O_{12}}   & \boldsymbol{O_{13}}
+      \boldsymbol{O_{12}}   & \boldsymbol{O_{13}} \\
    \end{array}\right]\,.
 
 Zauważmy od razu, że :math:`\,\boldsymbol{D}\,` jest (zredukowaną schodkową) 
@@ -342,7 +342,7 @@ macierzą układu, otrzymanego z :eq:`13` przez zmianę numeracji niewiadomych:
    \left[\begin{array}{c}
       \boldsymbol{-F_{23}} \\
       \hline
-      \boldsymbol{I_3}
+      \boldsymbol{I_3}     \\
    \end{array}\right]
    \quad =\quad
    \left[\begin{array}{rrr}
@@ -351,7 +351,7 @@ macierzą układu, otrzymanego z :eq:`13` przez zmianę numeracji niewiadomych:
       \hline
        1 &  0 & 0 \\
        0 &  1 & 0 \\
-       0 &  0 & 1
+       0 &  0 & 1 \\
     \end{array}\right]\,.
 
 Z reguł mnożenia macierzy blokowych wynika, że
@@ -363,29 +363,29 @@ Z reguł mnożenia macierzy blokowych wynika, że
    \left[\begin{array}{c|c}
       \boldsymbol{I_2}    & \boldsymbol{F_{23}} \\
       \hline
-      \boldsymbol{O_{12}} & \boldsymbol{O_{13}}
+      \boldsymbol{O_{12}} & \boldsymbol{O_{13}} \\
    \end{array}\right]\ \cdot\ 
    \left[\begin{array}{c}
       \boldsymbol{-F_{23}} \\
       \hline
-      \boldsymbol{I_3}
+      \boldsymbol{I_3}     \\
    \end{array}\right]\ \,=\ \,
    \left[\begin{array}{c}
-      -\boldsymbol{I_2 F_{23}}+\boldsymbol{F_{23}I_3} \\
+      -\boldsymbol{I_2 F_{23}}+\boldsymbol{F_{23}I_3}   \\
       \hline
-      \boldsymbol{-O_{12}F_{23}}+\boldsymbol{O_{13}I_3}
+      \boldsymbol{-O_{12}F_{23}}+\boldsymbol{O_{13}I_3} \\
    \end{array}\right]\ \,=
 
    =\ \,
    \left[\begin{array}{c}
       \boldsymbol{-F_{23}}+\boldsymbol{F_{23}} \\
       \hline
-      \boldsymbol{-O_{13}}+\boldsymbol{O_{13}}
+      \boldsymbol{-O_{13}}+\boldsymbol{O_{13}} \\
    \end{array}\right]\ \,=\ \,
    \left[\begin{array}{c}
       \boldsymbol{O_{23}} \\
       \hline
-      \boldsymbol{O_{13}}
+      \boldsymbol{O_{13}} \\
    \end{array}\right]\ \,=\ \,\boldsymbol{O_3}.
 
 Kolumny macierzy :math:`\,\boldsymbol{Y}\,` są więc rozwiązaniami układu
@@ -405,7 +405,7 @@ się do kolejnych niewiadomych):
        1 &  0 & 0 \\
        0 & -4 & 3 \\
        0 &  1 & 0 \\
-       0 &  0 & 1
+       0 &  0 & 1 \\
     \end{array}\right]\,.
 
 Trzeba jeszcze sprawdzić, że kolumny macierzy :math:`\,\boldsymbol{X}\,`
@@ -419,7 +419,7 @@ wierszy macierzy:
    \left[\begin{array}{rrr}
    -3 & -2 & 1 \\
     1 &  0 & 0 \\
-    0 & -4 & 3
+    0 & -4 & 3 \\
    \end{array}\right]\ \,=\ \, 2.
 
 Ostatecznie, ogólne rozwiązanie jednorodnego układu :eq:`13` ma postać
@@ -583,10 +583,6 @@ bądź metoda eliminacji.
 | Sprawdź odręcznym rachunkiem, 
   że macierz :math:`\,\boldsymbol{X}\,` dana wzorem :eq:`19` 
   spełnia równanie :eq:`14`.
-
-
-
-
 
 
 

@@ -408,7 +408,8 @@ ze współrzędnych macierzy :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2,3,4:`
    \left[\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 
                              0 & 0 & 1 & 0 \\ 
                              0 & 1 & 0 & 0 \\ 
-                             0 & 0 & 0 & 1 \end{array}\right]\,.
+                             0 & 0 & 0 & 1 \\
+   \end{array}\right]\,.
 
 Teraz równanie własne dla operatora :math:`\,T:`
 
@@ -429,10 +430,10 @@ przyjmuje postać jednorodnego problemu liniowego:
    :label: hom_eqn
    
    \left[\begin{array}{cccc}
-   1-\lambda &      0      &      0     &     0 \\
-       0     & -\ \lambda  &      1     &     0 \\
-       0     &      1      & -\ \lambda &     0 \\
-       0     &      0      &      0     & 1-\lambda
+   1-\lambda &      0      &      0     &     0     \\
+       0     & -\ \lambda  &      1     &     0     \\
+       0     &      1      & -\ \lambda &     0     \\
+       0     &      0      &      0     & 1-\lambda \\
    \end{array}\right]\ 
    \left[\begin{array}{c}
    \alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4
@@ -447,10 +448,10 @@ przyjmuje postać jednorodnego problemu liniowego:
    
    w(\lambda)\ =\ 
    \left|\begin{array}{cccc}
-   1-\lambda &      0      &      0     &     0 \\
-       0     & -\ \lambda  &      1     &     0 \\
-       0     &      1      & -\ \lambda &     0 \\
-       0     &      0      &      0     & 1-\lambda
+   1-\lambda &      0      &      0     &     0     \\
+       0     & -\ \lambda  &      1     &     0     \\
+       0     &      1      & -\ \lambda &     0     \\
+       0     &      0      &      0     & 1-\lambda \\
    \end{array}\right|\ =\ 
    (1-\lambda)^2\,(\lambda^2-1)\ =\ (\lambda-1)^3\,(\lambda+1)\ =\ 0\,.
 
@@ -470,7 +471,7 @@ Wstawiając :math:`\,\lambda=\lambda_1=1\ ` do równania :eq:`hom_eqn` otrzymuje
    0 &  0 &  0 & 0 \\
    0 & -1 &  1 & 0 \\
    0 &  1 & -1 & 0 \\
-   0 &  0 &  0 & 0
+   0 &  0 &  0 & 0 \\
    \end{array}\right]\ 
    \left[\begin{array}{c}
    \alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4
@@ -507,7 +508,7 @@ Macierze własne operatora :math:`\,T\ ` dla wartości :math:`\,\lambda_1=1\,:`
    \end{array}\right]\,,\quad
    \begin{array}{l}
    \alpha,\,\beta,\,\gamma\in R\,, \\
-   \alpha^2+\beta^2+\gamma^2>0
+   \alpha^2+\beta^2+\gamma^2>0     \\
    \end{array}
 
 tworzą :math:`\,` (po dodaniu macierzy zerowej) :math:`\,` 
@@ -541,7 +542,7 @@ Podstawienie :math:`\ \lambda=\lambda_2=-1\ ` do równania :eq:`hom_eqn` daje
    2 & 0 & 0 & 0 \\
    0 & 1 & 1 & 0 \\
    0 & 1 & 1 & 0 \\
-   0 & 0 & 0 & 2
+   0 & 0 & 0 & 2 \\
    \end{array}\right]\ 
    \left[\begin{array}{c}
    \alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4
@@ -637,7 +638,7 @@ Związki między wektorami tych baz:
    \boldsymbol{t}_4 & {\ \,} = {\ \,} & 0\cdot\boldsymbol{e}_1 {\ } + {\ } 
                                         1\cdot\boldsymbol{e}_2 {\ } - {\ } 
                                         1\cdot\boldsymbol{e}_3 {\ } + {\ } 
-                                        0\cdot\boldsymbol{e}_4 \,,
+                                        0\cdot\boldsymbol{e}_4 \,, \\
    \end{alignat*}
 
 dają macierz przejścia :math:`\,\boldsymbol{S}\ ` 
@@ -650,7 +651,7 @@ od bazy :math:`\,\mathcal{B}\ ` do bazy :math:`\,\mathcal{T}:`
    1 & 0 & 0 &  0 \\
    0 & 1 & 0 &  1 \\
    0 & 1 & 0 & -1 \\
-   0 & 0 & 1 &  0 
+   0 & 0 & 1 &  0 \\ 
    \end{array}\right]\,.
 
 Wzór :math:`\,` :eq:`mat_AT` :math:`\,` przedstawia 
@@ -696,7 +697,7 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      -\ \boldsymbol{t}_4 & {\ \,} = {\ \,} & 0\cdot\boldsymbol{t}_1 {\ } + {\ } 
                                              0\cdot\boldsymbol{t}_2 {\ } + {\ } 
                                              0\cdot\boldsymbol{t}_3 {\ } - {\ } 
-                                             1\cdot\boldsymbol{t}_4 \,.
+                                             1\cdot\boldsymbol{t}_4 \,. \\
      \end{alignat*}
   
   Macierz :math:`\,\boldsymbol{T}\ ` jest więc diagonalna, 
@@ -709,7 +710,7 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      1 & 0 & 0 &  0 \\
      0 & 1 & 0 &  0 \\
      0 & 0 & 1 &  0 \\
-     0 & 0 & 0 & -1
+     0 & 0 & 0 & -1 \\
      \end{array}\right]\,.
 
 * | Wzory transformacyjne dla przejścia od bazy :math:`\ \mathcal{B}\ ` 

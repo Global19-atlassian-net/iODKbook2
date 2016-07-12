@@ -29,7 +29,7 @@ Układ ma postać macierzową
                             a_{11} & a_{12} & \ldots & a_{1n} \\
                             a_{21} & a_{22} & \ldots & a_{2n} \\
                             \ldots & \ldots & \ldots & \ldots \\
-                            a_{m1} & a_{m2} & \ldots & a_{mn}
+                            a_{m1} & a_{m2} & \ldots & a_{mn} \\
                             \end{array}
                       \right]\,,\quad
    \boldsymbol{X}\ =\ 
@@ -124,13 +124,13 @@ kramerowski układ równań o niewiadomych :math:`\ \,x_1,\,\dots,\,x_r:`
    
    \begin{array}{c}
     a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\ \, + \ \;a_{1r}\,x_r \ \, =
-    \ \ -\ a_{1,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{1n}\,s_n \\
+    \ \ -\ a_{1,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{1n}\,s_n               \\
     a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\ \, + \ \;a_{2r}\,x_r \ \, =
-    \ \ -\ a_{2,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{2n}\,s_n \\
+    \ \ -\ a_{2,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{2n}\,s_n               \\
     \ldots\qquad\quad\ldots\qquad\,\ldots\qquad\ \ \ldots\qquad\ \ \,
     \qquad\,\ldots\qquad\qquad\ldots\qquad\,\ldots           \\
     a_{r1}\,x_1\; + \ \,a_{r2}\,x_2\; + \ \,\ldots\ \, + \ \;a_{rr}\,x_r \ \, =
-    \ \ -\ a_{r,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{rn}\,s_n
+    \ \ -\ a_{r,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{rn}\,s_n               \\
    \end{array}
 
 .. math::
@@ -138,14 +138,14 @@ kramerowski układ równań o niewiadomych :math:`\ \,x_1,\,\dots,\,x_r:`
    
    \begin{array}{c}
       a_{11}\,x_1\; + \ \,\ldots\ \, + \ \;a_{1r}\,x_r \ \, = \ \ 
-      -\ a_{1,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{1n}\,s_n   \\
+      -\ a_{1,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{1n}\,s_n                 \\
       a_{21}\,x_1\; + \ \,\ldots\ \, + \ \;a_{2r}\,x_r \ \, = \ \ 
-      -\ a_{2,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{2n}\,s_n   \\
+      -\ a_{2,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{2n}\,s_n                 \\
       \qquad
       \ldots\qquad\quad\ldots\qquad\quad\ldots\qquad\quad
-      \ldots\qquad\quad\ldots\qquad\quad\ldots\qquad\quad           \\
+      \ldots\qquad\quad\ldots\qquad\quad\ldots\qquad\quad                     \\
       a_{r1}\,x_1\; + \ \,\ldots\ \, + \ \;a_{rr}\,x_r \ \, = \ \ 
-      -\ a_{r,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{rn}\,s_n
+      -\ a_{r,r+1}\,s_{r+1}\; - \ \,\ldots\ \, -\ a_{rn}\,s_n                 \\
    \end{array}
 
 

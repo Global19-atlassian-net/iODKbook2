@@ -7,10 +7,12 @@ Naszym celem będzie teraz przedstawienie odwracalnej macierzy kwadratowej
 trójkątnej: :math:`\ \boldsymbol{A}\ =\ \boldsymbol{L}\boldsymbol{U}\,.`
 
 Zaczniemy od konkretnego przykładu. :math:`\,` Niech
-:math:`\ \boldsymbol{A}\ =\ \left[\begin{array}{rrr}
-2 &  1 & 1 \\
-4 & -6 & 0 \\ 
--2 &  7 & 2\end{array}\right]\,.`
+:math:`\ \boldsymbol{A}\ =\ 
+\left[\begin{array}{rrr}
+2  &  1 & 1 \\
+4  & -6 & 0 \\ 
+-2 &  7 & 2 \\
+\end{array}\right]\,.`
 
 Eliminacja Gaussa, przekształcającą :math:`\,\boldsymbol{A}\,`
 do górnej macierzy trójkątnej :math:`\,\boldsymbol{U},\ `
@@ -28,15 +30,21 @@ składa się z następujących kolejnych operacji elementarnych:
    .. math::
 
       \boldsymbol{A}_1\ =\       
-      \left[\begin{array}{rrr} 1 & 0 & 0 \\
-                              -2 & 1 & 0 \\
-                               0 & 0 & 1\end{array}\right]\ 
-      \left[\begin{array}{rrr} 2 &  1 & 1 \\
-                               4 & -6 & 0 \\
-                              -2 &  7 & 2\end{array}\right]\ =\ 
-      \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                               0 & -8 & -2 \\
-                              -2 &  7 &  2\end{array}\right]\,.
+      \left[\begin{array}{rrr} 
+       1 & 0 & 0 \\
+      -2 & 1 & 0 \\
+       0 & 0 & 1 \\ 
+      \end{array}\right]\ 
+      \left[\begin{array}{rrr} 
+       2 &  1 & 1 \\
+       4 & -6 & 0 \\
+      -2 &  7 & 2 \\
+      \end{array}\right]\ =\ 
+      \left[\begin{array}{rrr} 
+       2 &  1 &  1 \\
+       0 & -8 & -2 \\
+      -2 &  7 &  2 \\
+      \end{array}\right]\,.
 
 2. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_1\,` 
      dodajemy wiersz pierwszy.
@@ -48,15 +56,21 @@ składa się z następujących kolejnych operacji elementarnych:
    .. math::
       
       \boldsymbol{A}_2\ =\       
-      \left[\begin{array}{rrr} 1 & 0 & 0 \\
-                               0 & 1 & 0 \\
-                               1 & 0 & 1\end{array}\right]\ 
-      \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                               0 & -8 & -2 \\
-                              -2 &  7 &  2\end{array}\right]\ =\ 
-      \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                               0 & -8 & -2 \\
-                               0 &  8 &  3\end{array}\right]\,.
+      \left[\begin{array}{rrr} 
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      1 & 0 & 1 \\
+      \end{array}\right]\ 
+      \left[\begin{array}{rrr} 
+       2 &  1 &  1 \\
+       0 & -8 & -2 \\
+      -2 &  7 &  2 \\
+      \end{array}\right]\ =\ 
+      \left[\begin{array}{rrr} 
+      2 &  1 &  1 \\
+      0 & -8 & -2 \\
+      0 &  8 &  3 \\
+      \end{array}\right]\,.
 
 3. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_2\,` 
      dodajemy wiersz drugi.
@@ -68,15 +82,21 @@ składa się z następujących kolejnych operacji elementarnych:
    .. math::
       
       \boldsymbol{U}\ =\       
-      \left[\begin{array}{rrr} 1 & 0 & 0 \\
-                               0 & 1 & 0 \\
-                               0 & 1 & 1\end{array}\right]\ 
-      \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                               0 & -8 & -2 \\
-                               0 &  8 &  3\end{array}\right]\ =\ 
-      \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                               0 & -8 & -2 \\
-                               0 &  0 &  1\end{array}\right]\,.
+      \left[\begin{array}{rrr} 
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 1 & 1 \\
+      \end{array}\right]\ 
+      \left[\begin{array}{rrr} 
+      2 &  1 &  1 \\
+      0 & -8 & -2 \\
+      0 &  8 &  3 \\
+      \end{array}\right]\ =\ 
+      \left[\begin{array}{rrr} 
+      2 &  1 &  1 \\
+      0 & -8 & -2 \\
+      0 &  0 &  1 \\
+      \end{array}\right]\,.
 
 Zbierając wyniki częściowe, można zapisać:
    
@@ -103,7 +123,6 @@ Wobec tego równanie :eq:`UEEEA` można przekształcić do postaci
    \left[\boldsymbol{E}^{(1)}\right]^{-1}
    \left[\boldsymbol{E}^{(2)}\right]^{-1}
    \left[\boldsymbol{E}^{(3)}\right]^{-1}
-
 
 jest dolną, :math:`\,` a :math:`\ \ \boldsymbol{U}`
 :math:`\,` - :math:`\,` górną macierzą trójkątną.
@@ -158,15 +177,21 @@ macierzy :math:`\,\boldsymbol{A}\ ` przedstawia się następująco:
 .. math::
    :label: A_LU_ex
    
-   \left[\begin{array}{rrr} 2 &  1 & 1 \\
-                            4 & -6 & 0 \\
-                           -2 &  7 & 2\end{array}\right]\ =\ 
-   \left[\begin{array}{rrr}  1 &  0 & 0 \\ 
-                             2 &  1 & 0 \\ 
-                            -1 & -1 & 1\end{array}\right]
-   \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                            0 & -8 & -2 \\
-                            0 &  0 &  1\end{array}\right]\,.
+   \left[\begin{array}{rrr} 
+    2 &  1 & 1 \\
+    4 & -6 & 0 \\
+   -2 &  7 & 2 \\
+   \end{array}\right]\ =\ 
+   \left[\begin{array}{rrr}  
+    1 &  0 & 0 \\ 
+    2 &  1 & 0 \\ 
+   -1 & -1 & 1 \\
+   \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 &  1 \\
+   0 & -8 & -2 \\
+   0 &  0 &  1 \\
+   \end{array}\right]\,.
 
 Opisana procedura nie byłaby wykonalna, gdyby element :math:`\,a_{11}\,`
 (tutaj równy 2) był równy zeru. Należałoby wtedy przestawić wiersze tak,
@@ -216,24 +241,24 @@ Zastosujmy metodę ``LU()`` do macierzy :math:`\,\boldsymbol{A}\,` z przykładu:
    :label: A_PLU_ex
    
    \left(\begin{array}{rrr}
-       2 &  1 & 1 \\
-       4 & -6 & 0 \\
-      -2 &  7 & 2
+    2 &  1 & 1 \\
+    4 & -6 & 0 \\
+   -2 &  7 & 2 \\
    \end{array}\right)\ \ =\ \ 
    \left(\begin{array}{rrr}
-       0 & 1 & 0 \\
-       1 & 0 & 0 \\
-       0 & 0 & 1
+   0 & 1 & 0 \\
+   1 & 0 & 0 \\
+   0 & 0 & 1 \\
    \end{array}\right)\ *\ 
    \left(\begin{array}{rrr}
-       1 & 0 & 0 \\
-       \textstyle{1\over 2} & 1 & 0 \\
-      -\textstyle{1\over 2} & 1 & 1
+    1 & 0 & 0                    \\
+    \textstyle{1\over 2} & 1 & 0 \\
+   -\textstyle{1\over 2} & 1 & 1 \\
    \end{array}\right)\ *\  
    \left(\begin{array}{rrr}
-      4 & -6 & 0 \\
-      0 &  4 & 1 \\
-      0 &  0 & 1
+   4 & -6 & 0 \\
+   0 &  4 & 1 \\
+   0 &  0 & 1 \\
    \end{array}\right)
 
 Otrzymany rozkład :eq:`A_PLU_ex` jest różny od :eq:`A_LU_ex`, chociaż obydwa są 
@@ -342,7 +367,7 @@ Rozwiążemy w ten sposób układ równań nad ciałem liczb wymiernych :math:`\
    \begin{alignat*}{4}
     2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  6 \\
     4\,x_1 & {\,} - {\,} & 6\,x_2 &             &        & {\;} = {} & 14 \\
-   -2\,x_1 & {\,} + {\,} & 7\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} & -5 
+   -2\,x_1 & {\,} + {\,} & 7\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} & -5 \\ 
    \end{alignat*}
 
 Rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` dla macierzy 
@@ -350,15 +375,21 @@ Rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` dla macierzy
 
 .. math::
    
-   \left[\begin{array}{rrr} 2 &  1 & 1 \\
-                            4 & -6 & 0 \\
-                           -2 &  7 & 2\end{array}\right]\ =\ 
-   \left[\begin{array}{rrr}  1 &  0 & 0 \\ 
-                             2 &  1 & 0 \\ 
-                            -1 & -1 & 1\end{array}\right]
-   \left[\begin{array}{rrr} 2 &  1 &  1 \\
-                            0 & -8 & -2 \\
-                            0 &  0 &  1\end{array}\right]\,.
+   \left[\begin{array}{rrr} 
+    2 &  1 & 1 \\
+    4 & -6 & 0 \\
+   -2 &  7 & 2 \\
+   \end{array}\right]\ =\ 
+   \left[\begin{array}{rrr} 
+    1 &  0 & 0 \\ 
+    2 &  1 & 0 \\ 
+   -1 & -1 & 1 \\
+   \end{array}\right]
+   \left[\begin{array}{rrr} 
+   2 &  1 &  1 \\
+   0 & -8 & -2 \\
+   0 &  0 &  1 \\
+   \end{array}\right]\,.
 
 Wzory :eq:`set_xy` dają dwa powiązane ze sobą układy równań 
 o trójkątnych macierzach współczynników:
@@ -369,7 +400,7 @@ o trójkątnych macierzach współczynników:
    \begin{alignat*}{4}
        y_1 & {\,}   {\,} &        & {\,}   {\,} &        & {\;} = {} &  6 \\
     2\,y_1 & {\,} + {\,} &    y_2 &             &        & {\;} = {} & 14 \\
-      -y_1 & {\,} - {\,} &    y_2 & {\,} + {\,} &    y_3 & {\;} = {} & -5 
+      -y_1 & {\,} - {\,} &    y_2 & {\,} + {\,} &    y_3 & {\;} = {} & -5 \\ 
    \end{alignat*}
 
 .. math::
@@ -378,7 +409,7 @@ o trójkątnych macierzach współczynników:
    \begin{alignat*}{4}
     2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\ } & y_1 \\
            & {\,} - {\,} & 8\,x_2 & {\,} - {\,} & 2\,x_3 & {\;} = {\ } & y_2 \\
-           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\;} = {\ } & y_3
+           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\;} = {\ } & y_3 \\
    \end{alignat*}
 
 Pierwszy układ rozwiązujemy podstawianiem "w przód", :math:`\ `
@@ -388,14 +419,15 @@ a drugi :math:`\ ` - :math:`\ ` podstawianiem "wstecz":
    
    \textstyle
    \begin{array}{l}
-   y_1\ =\ 6 \\ y_2\ =\ 14\ -\ 2\,y_1\ =\ 2 \\ y_3\ =
-   \ -5\ +\ y_1\ +\ y_2\ =\ 3\,,
+   y_1\ =\ 6                            \\ 
+   y_2\ =\ 14\ -\ 2\,y_1\ =\ 2          \\ 
+   y_3\ = \ -5\ +\ y_1\ +\ y_2\ =\ 3\,, \\
    \end{array}
    \qquad
    \begin{array}{l}
-   x_3\ =\ y_3\ =\ 3 \\ 
-   x_2\ =\ -{1\over 8}\ (y_2+2\,x_3)\ =\ -1 \\
-   x_1\ =\ {1\over 2}\ (y_1-x_2-x_3)\ =\ 2\,.
+   x_3\ =\ y_3\ =\ 3                          \\ 
+   x_2\ =\ -{1\over 8}\ (y_2+2\,x_3)\ =\ -1   \\
+   x_1\ =\ {1\over 2}\ (y_1-x_2-x_3)\ =\ 2\,. \\
    \end{array}
 
 Ostatecznie, :math:`\,` rozwiązaniem układu jest: 
@@ -528,19 +560,17 @@ macierzy :math:`\,\boldsymbol{A}:`
    \,l_{nn}\,\cdot\,u_{11}\,u_{22}\,\dots\,u_{nn}\,.
 
 Dla przykładu weźmy macierz
-:math:`\ \ \boldsymbol{A}\ =\ \left[\begin{array}{rrr}
-2 &  1 & 1 \\
-4 & -6 & 0 \\
--2 &  7 & 2\end{array}\right]\,.`
+:math:`\ \ \boldsymbol{A}\ =\ 
+\left[\begin{array}{rrr}
+2 &  1 & 1 \\ 4 & -6 & 0 \\ -2 &  7 & 2
+\end{array}\right]\,.`
 
 Otrzymaliśmy dla niej dwa różne rozkłady 
 :math:`\,\boldsymbol{L}\boldsymbol{U}:\ ` odręczny :eq:`A_LU_ex` i komputerowy 
 :eq:`A_PLU_ex`. Łatwo sprawdzić, że wyznacznik tej macierzy wyliczony 
 jakąkolwiek metodą wynosi :math:`\,-16.`
 
- 
 
 
    
-
 

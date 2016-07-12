@@ -105,11 +105,11 @@ ma dwie jedynki wiodące:
    \left(\begin{array}{rrrrr}
       2 & 3 &  5 & -3 & -2 \\
       3 & 4 &  3 & -1 & -3 \\
-      5 & 6 & -1 &  3 & -5
+      5 & 6 & -1 &  3 & -5 \\
    \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrr}
                                              1 & 0 & -11 &  9 & -1 \\
                                              0 & 1 &   9 & -7 &  0 \\
-                                             0 & 0 &   0 &  0 &  0
+                                             0 & 0 &   0 &  0 &  0 \\
                                           \end{array}\right)\,.
 
 Metoda ``minors(k)`` podaje listę wszystkich minorów stopnia :math:`\,k\ ` 
@@ -331,7 +331,7 @@ nad ciałem liczb wymiernych :math:`\,Q:`
    \begin{array}{l} 
       3\,x_1\ -\ 2\,x_2\ +\ 5\,x_3\ +\ 4\,x_4\ =\ 2 \\
       6\,x_1\ -\ 4\,x_2\ +\ 4\,x_3\ +\ 3\,x_4\ =\ 3 \\
-      9\,x_1\ -\ 6\,x_2\ +\ 3\,x_3\ +\ 2\,x_4\ =\ 4
+      9\,x_1\ -\ 6\,x_2\ +\ 3\,x_3\ +\ 2\,x_4\ =\ 4 \\
    \end{array}
 
 .. code-block:: python
@@ -356,7 +356,7 @@ nad ciałem liczb wymiernych :math:`\,Q:`
    \left(\quad\left(\ \frac{7}{18}\,,\ 0\,,\ \frac{1}{6}\,,\ 0\ \right),\quad
    \left(\ \begin{array}{rrrr}
       1 & 0 & -15 &  18 \\
-      0 & 1 &  10 & -12
+      0 & 1 &  10 & -12 \\
    \end{array}\ \right)\quad\right)
 
 .. code-block:: python

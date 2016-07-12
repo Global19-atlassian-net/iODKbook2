@@ -12,7 +12,7 @@ Własności mnożenia macierzowego
 Odwołując się do definicji iloczynu macierzowego można 
 udowodnić następujące własności:
 
-1. Mnożenie macierzy jest łączne:
+1. :math:`\,` Mnożenie macierzy jest łączne:
 
    :math:`\ (\boldsymbol{A} \boldsymbol{B})\,\boldsymbol{C} \ =\ 
    \boldsymbol{A}\,(\boldsymbol{B} \boldsymbol{C})\,,
@@ -21,7 +21,7 @@ udowodnić następujące własności:
    \boldsymbol{B}\in M_{p\times q}(K),\ \ 
    \boldsymbol{C}\in M_{q\times n}(K)\,.`
 
-2. Mnożenie macierzy jest rozdzielne względem dodawania:
+2. :math:`\,` Mnożenie macierzy jest rozdzielne względem dodawania:
 
    :math:`\ (\boldsymbol{A}+\boldsymbol{B})\,\boldsymbol{C} \ =\ 
    \boldsymbol{A} \boldsymbol{C}\,+\,\boldsymbol{B} \boldsymbol{C}\,,
@@ -35,7 +35,8 @@ udowodnić następujące własności:
    \boldsymbol{A}\in M_{m\times p}(K),\ \ \boldsymbol{B},
    \boldsymbol{C}\in M_{p\times n}(K)\,.`
 
-3. Mnożenie macierzy przez liczby wiąże się z mnożeniem macierzowym następująco:      
+3. :math:`\,` Mnożenie macierzy przez liczby 
+   wiąże się z mnożeniem macierzowym następująco:      
       
    :math:`\ c\ (\boldsymbol{A} \boldsymbol{B})\ =\ 
    (c \boldsymbol{A})\,\boldsymbol{B}\ =\ 
@@ -44,7 +45,7 @@ udowodnić następujące własności:
    c\in K,\ \ \boldsymbol{A}\in M_{m\times p}(K),
    \ \ \boldsymbol{B}\in M_{p\times n}(K)\,.`
 
-4. Elementem neutralnym dla mnożenia w zbiorze :math:`\ M_n(K)\ ` 
+4. :math:`\,` Elementem neutralnym dla mnożenia w zbiorze :math:`\ M_n(K)\ ` 
    jest macierz jednostkowa 
 
    :math:`\ \qquad\qquad\qquad\qquad\boldsymbol{I}_n \ :\,=\ 
@@ -52,7 +53,7 @@ udowodnić następujące własności:
    1      &    0   & \ldots &    0   \\
    0      &    1   & \ldots &    0   \\
    \ldots & \ldots & \ldots & \ldots \\
-   0      &    0   & \ldots &    1     
+   0      &    0   & \ldots &    1   \\    
    \end{array}\right]\,.`
 
    Oznacza to, że
@@ -60,7 +61,7 @@ udowodnić następujące własności:
    \boldsymbol{A}\,\boldsymbol{I}_n\ =\ \boldsymbol{A}\quad`
    dla każdej macierzy :math:`\ \boldsymbol{A}\in M_n(K).`
 
-5. | Mnożenie macierzowe jest nieprzemienne: :math:`\,` 
+5. | :math:`\,` Mnożenie macierzowe jest nieprzemienne: :math:`\,` 
      na ogół :math:`\ \boldsymbol{A} \boldsymbol{B} 
      \neq \boldsymbol{B} \boldsymbol{A}`
    | nawet dla macierzy kwadratowych tego samego stopnia, 
@@ -73,7 +74,7 @@ udowodnić następujące własności:
    c      &    0   & \ldots &    0   \\
    0      &    c   & \ldots &    0   \\
    \ldots & \ldots & \ldots & \ldots \\
-   0      &    0   & \ldots &    c     
+   0      &    0   & \ldots &    c   \\    
    \end{array}\right]\,,\qquad c\,\in\,K,`
    
    są przemienne ze wszystkimi macierzami ze zbioru :math:`\ M_n(K).`
@@ -100,7 +101,7 @@ b_1 \\ b_2 \\ b_3 \end{array}\right]\,:`
 \left[\,\begin{array}{ccc}
 b_1\,a_1 & b_1\,a_2 & b_1\,a_3 \\ 
 b_2\,a_1 & b_2\,a_2 & b_2\,a_3 \\
-b_3\,a_1 & b_3\,a_2 & b_3\,a_3
+b_3\,a_1 & b_3\,a_2 & b_3\,a_3 \\
 \end{array}\right]\,.`
 
 Z przedstawionych własności wynika, że zbiór :math:`\ M_n(K)\ ` 
@@ -213,14 +214,14 @@ zapisane w postaci wierszowej:
                             \boldsymbol{A}_1 \\ 
                             \boldsymbol{A}_2 \\
                             \dots            \\
-                            \boldsymbol{A}_m 
+                            \boldsymbol{A}_m \\ 
                       \end{array}\right]\ =\ [a_{ij}]_{m\times p}\,,
    \qquad
    \boldsymbol{B}\ =\ \left[\begin{array}{c}
                             \boldsymbol{B}_1 \\ 
                             \boldsymbol{B}_2 \\
                             \dots            \\
-                            \boldsymbol{B}_p 
+                            \boldsymbol{B}_p \\
                       \end{array}\right]\ =\ [b_{ij}]_{p\times n}\,.
 
 Tutaj
@@ -239,13 +240,15 @@ można teraz zapisać następująco: :math:`\\`
          \boldsymbol{A}_1 \\ 
          \boldsymbol{A}_2 \\
          \dots            \\
-         \boldsymbol{A}_m \end{array}\right]\boldsymbol{B}
+         \boldsymbol{A}_m \\
+   \end{array}\right]\boldsymbol{B}
    \ \ =\ \   
    \left[\begin{array}{c}
          \boldsymbol{A}_1\,\boldsymbol{B} \\ 
          \boldsymbol{A}_2\,\boldsymbol{B} \\
-         \dots            \\
-         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
+         \dots                            \\
+         \boldsymbol{A}_m\,\boldsymbol{B} \\
+   \end{array}\right],
 
 .. math::
    :label: rule_verse_2
@@ -270,14 +273,14 @@ jest wierszowym odpowiednikiem Reguły 1.:
    \,\in M_{p\times n}(K),\ ` to :math:`\ i`-ty wiersz iloczynu 
    :math:`\ \boldsymbol{A} \boldsymbol{B}\,:` :math:`\\`
 
-   1. jest iloczynem :math:`\ i`-tego wiersza macierzy 
+   1. :math:`\,` jest iloczynem :math:`\ i`-tego wiersza macierzy 
       :math:`\ \boldsymbol{A}\ ` przez macierz 
       :math:`\ \boldsymbol{B}\,;` :math:`\\`
 
-   2. jest kombinacją liniową wierszy macierzy :math:`\boldsymbol{B},\,`
-      której współczynnikami są kolejne elementy 
-      :math:`\,i`-tego wiersza macierzy 
-      :math:`\,\boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.`
+   2. | :math:`\,` jest kombinacją liniową wierszy macierzy 
+        :math:`\boldsymbol{B},\,` której współczynnikami 
+      | są kolejne elementy :math:`\,i`-tego wiersza macierzy 
+        :math:`\,\boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.`
 
 :math:`\,`
 
@@ -289,12 +292,14 @@ jest wierszowym odpowiednikiem Reguły 1.:
                             \boldsymbol{W}_1 \\ 
                             \boldsymbol{W}_2 \\
                             \dots            \\
-                            \boldsymbol{W}_m \end{array}\right]\ :\,=\ 
+                            \boldsymbol{W}_m \\
+                            \end{array}\right]\ :\,=\ 
    \left[\begin{array}{c}
          \boldsymbol{A}_1\,\boldsymbol{B} \\ 
          \boldsymbol{A}_2\,\boldsymbol{B} \\
-         \dots            \\
-         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
+         \dots                            \\
+         \boldsymbol{A}_m\,\boldsymbol{B} \\
+   \end{array}\right],
    \qquad
    \boldsymbol{W}\ =\ [w_{ij}]_{m\times n}\,,
 
@@ -356,7 +361,7 @@ zauważmy, że :math:`\\`
    
    \begin{eqnarray*}
    \boldsymbol{W}_i & \ =\  & \left[\ \ \ w_{i1}
-   \quad w_{i2}\quad \ldots\quad w_{in}\ \ \ \right] \\ \\
+   \quad w_{i2}\quad \ldots\quad w_{in}\ \ \ \right]                      \\ \\
    & \ =\ & \left[\quad\sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
                                   \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,
                                   \ldots\quad\,
@@ -364,26 +369,26 @@ zauważmy, że :math:`\\`
    & \ =\  & \ \sum_{k=1}^p\ \ \left[\ \, a_{ik}\,b_{k1}\quad
                                a_{ik}\,b_{k2}\quad 
                                \ldots\quad 
-                               a_{ik}\,b_{kn}\ \, \right] \\
+                               a_{ik}\,b_{kn}\ \, \right]                   \\
    & \ =\  & \ \sum_{k=1}^p\ \ a_{ik}\ 
-   \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right] \\
+   \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]                \\
    & \ =\  & \ \sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,
-   \qquad\quad i=1,2,\dots,m.
+   \qquad\quad i=1,2,\dots,m.                                               \\
    \end{eqnarray*}
 
 .. math::
    
    \begin{array}{ccl}
    \boldsymbol{W}_i & = & \left[\ \ w_{i1}\quad 
-   w_{i2}\quad \ldots\quad w_{in}\ \ \right]\ \ \ = \\ \\
-   & = & \left[\quad\displaystyle\sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
-                                 \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,
-                                 \ldots\quad\,
-                                 \sum_{k=1}^p\,a_{ik}\,b_{kn}\ \ \,\right]
-   \ \ \ = \\ \\ & = & \ \displaystyle\sum_{k=1}^p\ \ a_{ik}\ 
-         \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]\ \ \ = \\ \\
+   w_{i2}\quad \ldots\quad w_{in}\ \ \right]\ \ \ =                       \\ \\
+   & = & \left[\quad\displaystyle
+   \sum_{k=1}^p\,a_{ik}\,b_{k1}\quad\, 
+   \sum_{k=1}^p\,a_{ik}\,b_{k2}\quad\,\ldots\quad\,
+   \sum_{k=1}^p\,a_{ik}\,b_{kn}\ \ \,\right]\ \ \ =                       \\ \\ 
+   & = & \ \displaystyle\sum_{k=1}^p\ \ a_{ik}\ 
+   \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]\ \ \ =       \\ \\
    & = & \ \displaystyle\sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,
-   \qquad\quad i=1,2,\dots,m.
+   \qquad\quad i=1,2,\dots,m.                                             \\ \\
    \end{array}
 
    \; 
