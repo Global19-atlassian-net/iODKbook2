@@ -21,7 +21,7 @@ Rozważmy układ :math:`\,m\,` równań o :math:`\,n\,` niewiadomych
       \ldots\ \   & {\,} + {\,} & \ldots\ \   & {\,} + {\,} & \,\ldots
        \, & {\ } + {\,} & \ldots\ \   & {\ } = {\ }    \ldots \\
       a_{m1}\,x_1 & {\,} + {\,} & a_{m2}\,x_2 & {\,} + {\,} & \,\ldots
-       \, & {\ } + {\,} & a_{mn}\,x_n & {\ } = {\ \ }  b_m    \\
+       \, & {\ } + {\,} & a_{mn}\,x_n & {\ } = {\ \ }  b_m
    \end{alignat*}
 
 Przyjmujemy, że współczynniki :math:`\,a_{ij}\,` 
@@ -87,7 +87,7 @@ Eliminacja Gaussa
    \begin{alignat*}{4}
          x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
          x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} & 3\,x_3 & {\;} = {\;} & 5 \\
-      2\,x_1 & {\,} + {\,} & 6\,x_2 & {\,} + {\,} & 5\,x_3 & {\;} = {\;} & 6 \\
+      2\,x_1 & {\,} + {\,} & 6\,x_2 & {\,} + {\,} & 5\,x_3 & {\;} = {\;} & 6
    \end{alignat*}
 
 .. code-block:: python
@@ -103,7 +103,7 @@ Eliminacja Gaussa
    \begin{alignat*}{4}
       x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
           &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
-          &             & 2\,x_2 & {\,} + {\,} &    x_3 & {\;} = {} & -2 \\
+          &             & 2\,x_2 & {\,} + {\,} &    x_3 & {\;} = {} & -2
    \end{alignat*}
 
 .. code-block:: python
@@ -118,7 +118,7 @@ Eliminacja Gaussa
    \begin{alignat*}{4}
       x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  4 \\
           &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
-          &             &        & {\,} - {\,} &    x_3 & {\;} = {} & -4 \\
+          &             &        & {\,} - {\,} &    x_3 & {\;} = {} & -4
    \end{alignat*}
 
 .. code-block:: python
@@ -133,7 +133,7 @@ Eliminacja Gaussa
    \begin{alignat*}{4}
       x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
           &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
-          &             &        &             &    x_3 & {\;} = {\;} & 4 \\
+          &             &        &             &    x_3 & {\;} = {\;} & 4
    \end{alignat*}
 
 | Otrzymaliśmy układ równań w postaci schodkowej.
@@ -152,7 +152,7 @@ Eliminacja Gaussa
    x_2 & {\;} =
    {\;} & 1 & {\,} - {\,} &    x_3 & {\,} = {\,} & -3     &             &   \\
    x_1 & {\,} =
-   {\,} & 4 & {\,} - {\,} & 2\,x_2 & {\,} - {\,} & 2\,x_3 & {\,} = {\,} & 2 \\ 
+   {\,} & 4 & {\,} - {\,} & 2\,x_2 & {\,} - {\,} & 2\,x_3 & {\,} = {\,} & 2
    \end{alignat*}
 
 Metoda rozwiązywania układów równań liniowych, 
@@ -170,7 +170,7 @@ Można jednak nie poprzestać na postaci schodkowej:
    \begin{alignat*}{4}
       x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 4 \\
           &             &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
-          &             &        &             &    x_3 & {\;} = {\;} & 4 \\
+          &             &        &             &    x_3 & {\;} = {\;} & 4
    \end{alignat*}
 
 ale, wykonując w dalszym ciągu operacje elementarne na równaniach,
@@ -189,7 +189,7 @@ otrzymać jeszcze wygodniejszą postać układu równań:
    \begin{alignat*}{2}
       x_1 & {\,} = {} &  2 \\
       x_2 & {\,} = {} & -3 \\
-      x_3 & {\,} = {} &  4 \\
+      x_3 & {\,} = {} &  4
    \end{alignat*}
 
 Doprowadzenie układu równań do takiej trywialnej postaci,

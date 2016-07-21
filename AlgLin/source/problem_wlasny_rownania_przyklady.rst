@@ -50,7 +50,7 @@ Ogólne rozwiązanie jest dowolną kombinacją liniową tych rozwiązań szczeg�
    
    \begin{alignat*}{3}
    \dot{x}_1 & {\ } = {\ } & 2\,x_1 & {\ } - {\ } &    x_2 \\
-   \dot{x}_2 & {\ } = {\ } & 4\,x_1 & {\ } - {\ } & 3\,x_2 \\
+   \dot{x}_2 & {\ } = {\ } & 4\,x_1 & {\ } - {\ } & 3\,x_2
    \end{alignat*}
 
 Równanie charakterystyczne :eq:`char_eqn` dla macierzy 
@@ -117,7 +117,7 @@ które składają się na rozwiązanie ogólne:
    \qquad
    \begin{cases}\ \begin{array}{l}
    x_1(t)\ =\ c_1\ e^{\;t}\,+\,c_2\ e^{\,-2\,t}    \\
-   x_2(t)\ =\ c_1\ e^{\;t}\,+\,4\,c_2\ e^{\,-2\,t} \\
+   x_2(t)\ =\ c_1\ e^{\;t}\,+\,4\,c_2\ e^{\,-2\,t}
    \end{array}\end{cases}
    \qquad c_1,c_2\in R\,.
    \end{array}
@@ -192,7 +192,7 @@ odpowiadające pierwiastkowi :math:`\,\lambda^*\,,\ ` dane jest przez
 
 Sprawdzimy, że część rzeczywista :math:`\ \boldsymbol{x}_1(t)\ \,` 
 i :math:`\,` część urojona :math:`\ \boldsymbol{x}_2(t)\ \,` rozwiązania 
-:math:`\ \boldsymbol{x}(t)\ \,` są też rozwiązaniami równania :eq:`mat_eqn`. 
+:math:`\ \boldsymbol{x}(t)\ \,` są też rozwiązaniami. 
 :math:`\,` Istotnie, 
 
 .. math::
@@ -215,8 +215,8 @@ Zauważmy jeszcze, że liniowa niezależność rozwiązań
 :math:`\ \boldsymbol{x}(t)\,,\ \boldsymbol{x}^*(t)\ `
 jest równoważna liniowej niezależności rozwiązań
 :math:`\ \boldsymbol{x}_1(t)\,,\ \boldsymbol{x}_2(t)\,.\ `
-A zatem w wyrażeniu :eq:`gen_sol` dla ogólnego rozwiązania układu :eq:`set_diff`
-kombinację liniową zespolonych rozwiązań 
+A zatem w wyrażeniu :eq:`gen_sol` dla ogólnego rozwiązania układu 
+równań różniczkowych kombinację liniową zespolonych rozwiązań 
 :math:`\ \boldsymbol{x}(t)\,,\ \boldsymbol{x}^*(t)\ ` można zastąpić przez 
 kombinację rozwiązań rzeczywistych 
 :math:`\ \boldsymbol{x}_1(t)\,,\ \boldsymbol{x}_2(t)\,,\ `
@@ -250,7 +250,7 @@ W uzupełnieniu dyskusji Przypadków
    
    \begin{alignat*}{3}
    \dot{x}_1 & {\ } = {\ } & 3\,x_1 & {\ } - {\ } &    x_2 \\
-   \dot{x}_2 & {\ } = {\ } &    x_1 & {\ } + {\ } & 3\,x_2 \\
+   \dot{x}_2 & {\ } = {\ } &    x_1 & {\ } + {\ } & 3\,x_2
    \end{alignat*}
 
 Równanie charakterystyczne :eq:`char_eqn` dla macierzy 
@@ -270,7 +270,7 @@ ma dwa różne pierwiastki zespolone, wzajemnie sprzężone:
    \lambda_1\,=\,3+i\,,\qquad\lambda_2\,=\,3-i\,. 
 
 Wektory własne :math:`\ \boldsymbol{v}_1\ ` dla wartości :math:`\ \lambda_1\ ` 
-wyznaczamy z równania :eq:`hom_set`:
+wyznaczamy z równania
 
 .. math::
    
@@ -368,10 +368,10 @@ Wyznaczymy rozwiązanie ogólne układu
    \begin{alignat*}{4}
    \dot{x}_1 & {\ } = 
    {\ } & -8\ x_1 & {\ } + {\ } &  18\ x_2 & {\ } + {\ } &  9\ x_3 \\
-   \dot{x}_1 & {\ } = 
+   \dot{x}_2 & {\ } = 
    {\ } & -9\ x_1 & {\ } + {\ } &  19\ x_2 & {\ } + {\ } &  9\ x_3 \\
-   \dot{x}_1 & {\ } = 
-   {\ } & 12\ x_1 & {\ } - {\ } &  24\ x_2 & {\ } - {\ } & 11\ x_3 \\ 
+   \dot{x}_3 & {\ } = 
+   {\ } & 12\ x_1 & {\ } - {\ } &  24\ x_2 & {\ } - {\ } & 11\ x_3
    \end{alignat*}
 
 Równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}:`
@@ -473,9 +473,9 @@ krotność geometryczna jest różna (mniejsza) od krotności algebraicznej.
 Nie istnieje wtedy baza przestrzeni :math:`\,R^n\ ` 
 złożona wyłącznie z wektorów własnych macierzy :math:`\,\boldsymbol{A}.\ `
 Wykorzystując wektory *bazy Jordana* tej przestrzeni, można jednak utworzyć 
-zbiór :math:`\,n\ ` liniowo niezależnych rzeczywistych rozwiązań układu 
-:eq:`set_diff`. Bez rozwijania ogólnej teorii pokażemy na przykładzie, że taka 
-konstrukcja jest możliwa.
+zbiór :math:`\,n\ ` liniowo niezależnych rzeczywistych rozwiązań 
+rozważanego układu równań różniczkowych. Bez rozwijania ogólnej teorii 
+pokażemy na przykładzie, że taka konstrukcja jest możliwa.
 
 **Przykład 4.** :math:`\,` 
 Rozwiążemy liniowy układ równań różniczkowych
@@ -486,10 +486,10 @@ Rozwiążemy liniowy układ równań różniczkowych
    \begin{alignat*}{4}
    \dot{x}_1 & {\ } = 
    {\ } & 4\ x_1 & {\ } + {\ } &    x_2 & {\ } + {\ } &    x_3 \\
-   \dot{x}_1 & {\ } = 
+   \dot{x}_2 & {\ } = 
    {\ } & 2\ x_1 & {\ } + {\ } & 4\ x_2 & {\ } + {\ } &    x_3 \\
-   \dot{x}_1 & {\ } = 
-   {\ } &        &             &    x_2 & {\ } + {\ } & 4\ x_3 \\ 
+   \dot{x}_3 & {\ } = 
+   {\ } &        &             &    x_2 & {\ } + {\ } & 4\ x_3 
    \end{alignat*}
 
 Równanie charakterystyczne macierzy 
@@ -511,7 +511,7 @@ i pierwiastek pojedynczy :math:`\,\lambda_3=6\,.` :math:`\\`
 
 Współrzędne :math:`\ \beta_1,\beta_2,\beta_3\ ` 
 wektorów własnych dla wartości :math:`\,\lambda_{1,2}\ ` 
-wyznaczamy z równania :eq:`hom_set`:
+wyznaczamy z równania
 
 .. math::
    
@@ -686,9 +686,8 @@ W ten sposób mamy dwa liniowo niezależne rozwiązania,
 :math:`\ \boldsymbol{x}^1(t)\ ` oraz :math:`\ \boldsymbol{x}^2(t)\,,\ `
 odpowiadające wartości własnej :math:`\ \lambda_{1,2}=3\ ` 
 macierzy :math:`\,\boldsymbol{A}\,.`
-
 Pozostaje wyznaczyć rozwiązanie związane z (pojedynczą) wartością własną 
-:math:`\ \lambda_3=6.\ ` :math:`\\` Odpowiednie wektory własne 
+:math:`\ \lambda_3=6.\ ` Odpowiednie wektory własne 
 :math:`\,\boldsymbol{v}_3=[\,\beta_i\,]_3\ ` wyliczamy z równania
 
 .. math::
@@ -741,7 +740,7 @@ bazy Jordana w :math:`\,R^3\,,\ ` odpowiadającej macierzy
 
 
 Ogólne rozwiązanie układu równań różniczkowych jest 
-dowolną kombinacją liniową :math:`\\` rozwiązań szczególnych 
+dowolną kombinacją liniową rozwiązań szczególnych 
 :math:`\,` :eq:`x1`, :math:`\,` :eq:`x2` :math:`\,` i :math:`\,` :eq:`x3` :
 
 .. math::

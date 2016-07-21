@@ -457,7 +457,7 @@ można ten układ przekształcić następująco:
    (\boldsymbol{Q}\boldsymbol{R})\,\boldsymbol{x} & 
    \! = \! & \boldsymbol{b}\,, \\   
    \boldsymbol{Q}(\boldsymbol{R}\boldsymbol{x})   & 
-   \! = \! & \boldsymbol{b}\,. \\
+   \! = \! & \boldsymbol{b}\,.
    \end{eqnarray*}
 
 Ortogonalność macierzy :math:`\,\boldsymbol{Q}\,` pozwala zastąpić kosztowną 

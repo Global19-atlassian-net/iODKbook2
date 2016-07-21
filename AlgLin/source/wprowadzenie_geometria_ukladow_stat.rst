@@ -25,7 +25,7 @@ Rozważmy układ dwóch równań liniowych:
    
    \begin{alignat*}{3}
    2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
-   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5     \\
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
    \end{alignat*}
    
 Rozwiązaniem są liczby :math:`\ x_1=2\ \; \text{i} \ \; x_2=3\,,\:` 
@@ -72,7 +72,7 @@ Rozważany układ równań
    
    \begin{alignat*}{3}
    2\,x_1 & {\,} - {\,} & x_2 & {\;} = {\;} & 1 \\ 
-   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5     \\
+   x_1 & {\,} + {\,}& x_2 & {\;} = {\;} & 5
    \end{alignat*}
 
 można przepisać w postaci równości dwóch wektorów kolumnowych:
@@ -194,7 +194,7 @@ Rozważmy teraz układ trzech równań o trzech niewiadomych:
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} & x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  1 \\
       x_1 & {\,} - {\,} & x_2 &             &        & {\;} = {} & -1 \\
-      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2 \\ 
+      x_1 & {\,} + {\,} & x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} &  2
    \end{alignat*}
 
 Ma on rozwiązanie w punkcie 
@@ -313,7 +313,7 @@ Zajmiemy się z kolei rozwiązaniami układu równań liniowych
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 1 \\
    4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 2 \\
-      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3 \\
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 3
    \end{alignat*}
 
 Stosując procedurę ``solve()`` otrzymujemy rozwiązanie 
@@ -418,7 +418,7 @@ Rozważmy teraz podobny układ równań, lecz z inną prawą stroną:
    \begin{alignat*}{4}
    2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\;} & 0 \\
    4\,x_1 & {\,} + {\,} & 2\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 5 \\
-      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1 \\
+      x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {\;} & 1
    \end{alignat*}
 
 Układ ten nie ma rozwiązań:

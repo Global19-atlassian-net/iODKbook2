@@ -29,7 +29,7 @@ Wektory kolumnowe należące do zbioru :math:`\,K^n\,` można dodawać :math:`\\
     y_1 \\ y_2 \\ \ldots \\ y_n 
    \end{array}\right] \ :\,=\ \,
    \left[\begin{array}{c} 
-    x_1+y_1 \\ x_2+y_2 \\ \ldots \\ x_n+y_n 
+    x_1+y_1 \\ x_2+y_2 \\ \ldots \\ x_n+y_n \\ \\
    \end{array}\right]\,,
 
 i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
@@ -41,7 +41,7 @@ i :math:`\,` mnożyć przez liczby :math:`\, c \in K`:
     x_1 \\ x_2 \\ \ldots \\ x_n 
    \end{array}\right] \ :\,=\ \,
    \left[\begin{array}{c}
-    c\; x_1 \\ c\; x_2 \\ \ldots \\ c\; x_n 
+    c\; x_1 \\ c\; x_2 \\ \ldots \\ c\; x_n \\
    \end{array}\right]\,.
 
 | Własności tych działań są odbiciem własności działań w ciele :math:`\,K:`

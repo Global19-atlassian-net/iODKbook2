@@ -148,13 +148,17 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
 
 **Przykład.** :math:`\,` Znaleźć odwrotność macierzy
 :math:`\ \ \boldsymbol{A}\ =\ 
-\left[\begin{array}{rrr} 1 & -1 & -2 \\ 0 & 1 & 2 \\ 1 & -1 & -1
+\left[\begin{array}{rrr} 1 & -1 & -2 \\ 0 & 1 & 2 \\ 1 & -1 & -1 \\
 \end{array}\right]\,.`
 
 .. code-block:: python
 
-   sage: A = matrix([[1,-1,-2],[0, 1, 2],[1,-1,-1]])
+   sage: A = matrix([[1,-1,-2],
+                     [0, 1, 2],
+                     [1,-1,-1]])
+
    sage: B = A.I
+
    sage: table([[A, '*', B, '=', A*B]])
 
 .. math::
@@ -162,19 +166,21 @@ W systemie Sage macierz odwrotną wylicza się stosując metodę ``inverse()``
    \left(\begin{array}{rrr}
    1 & -1 & -2 \\
    0 &  1 &  2 \\
-   1 & -1 & -1 \\
+   1 & -1 & -1
    \end{array}\right)\ \ *\ \ 
    \left(\begin{array}{rrr}
     1 & 1 &  0 \\
     2 & 1 & -2 \\
-   -1 & 0 &  1 \\
+   -1 & 0 &  1
    \end{array}\right)
    \quad =\quad
    \left(\begin{array}{rrr}
     1 & 0 & 0 \\
     0 & 1 & 0 \\
-    0 & 0 & 1 \\
+    0 & 0 & 1
    \end{array}\right)\,.
+
+:math:`\;`
 
 
 

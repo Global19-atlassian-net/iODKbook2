@@ -80,7 +80,7 @@ Dla układu :eq:`01` definiujemy również :math:`\,`
                                 a_{11} & a_{12} & \ldots & a_{1n} & b_1    \\
                                 a_{21} & a_{22} & \ldots & a_{2n} & b_2    \\
                                 \ldots & \ldots & \ldots & \ldots & \ldots \\
-                                a_{m1} & a_{m2} & \ldots & a_{mn} & b_m    \\
+                                a_{m1} & a_{m2} & \ldots & a_{mn} & b_m
                           \end{array}\right]\,.
 
 Podanie macierzy :math:`\ \boldsymbol{B}\,`
@@ -137,7 +137,7 @@ Przykład macierzy w wierszowej postaci schodkowej (zaznaczone elementy wiodące
    \boxed{2} &       -1  & 0 &        5  &        4  \\
           0  & \boxed{5} & 3 &        1  &       -1  \\
           0  &        0  & 0 & \boxed{1} &        8  \\
-          0  &        0  & 0 &        0  & \boxed{7} \\
+          0  &        0  & 0 &        0  & \boxed{7}
    \end{array}\right]\,.
 
    \;
@@ -159,7 +159,7 @@ Przykład zredukowanej wierszowej postaci schodkowej
    \boxed{1} &        0  & 6 &        0  &  2 \\
           0  & \boxed{1} & 3 &        0  & -1 \\
           0  &        0  & 0 & \boxed{1} &  4 \\
-          0  &        0  & 0 &        0  &  0 \\
+          0  &        0  & 0 &        0  &  0
    \end{array}\right]\,.
    
    \;

@@ -176,7 +176,7 @@ a strzałki w dół :math:`\,` - :math:`\,` podstawienie :math:`\ W=V:`
    \left.\begin{array}{ccc}
    \text{homo-} & \longrightarrow & \text{izo-}  \\ \\
    \downarrow   &                 & \downarrow   \\ \\
-   \text{endo-} & \longrightarrow & \text{auto-} \\ \\ 
+   \text{endo-} & \longrightarrow & \text{auto-} \\ 
    \end{array}\quad\right\}
    \quad\text{-morfizm}
 

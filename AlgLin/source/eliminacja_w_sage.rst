@@ -20,11 +20,38 @@ rozszerzonej z macierzy współczynników i kolumny wolnych wyrazów.
 
 Metoda ``echelon_form()`` zwraca macierz (zadaną nad dowolnym pierścieniem 
 z jednością) przekształconą do postaci schodkowej, natomiast ``rref()`` 
-(ang.: reduced row echelon form) daje w wyniku zredukowaną postać schodkową. 
-Jeżeli pierścieniem bazowym macierzy nie jest ciało, to operacja ``rref()`` 
-jest wykonywana na równoważnej macierzy nad ciałem liczb wymiernych.
+(ang.: reduced row echelon form) - macierz przekształconą do zredukowanej 
+postaci schodkowej. Jeżeli pierścieniem bazowym macierzy nie jest ciało, 
+to operacja ``rref()`` jest wykonywana na równoważnej macierzy nad ciałem liczb wymiernych.
 
-Wykorzystamy opisane operacje do sprawdzenia wyniku z końca poprzedniej sekcji:
+Obie metody dają w wyniku przekształconą macierz, pozostawiając niezmieniony 
+oryginał. Odmianą metody ``echelon_form()`` jest ``echelonize()``,
+która wykonuje operację bezpośrednio na macierzy oryginalnej. 
+
+Operacje ``echelon_form()`` oraz ``echelonize()`` mają opcjonalny argument logiczny
+'transformation', którego wartość ``True`` daje dodatkowo macierz 
+:math:`\ \boldsymbol{T}\,` transformującą wyjściową macierz 
+:math:`\ \boldsymbol{A}\,` do postaci schodkowej
+:math:`\ \boldsymbol{E}\,:\ \boldsymbol{E} = \boldsymbol{T} * \boldsymbol{A}`.
+
+.. :math:`\;`
+
+Dla ilustracji zastosujemy opisane metody 
+do macierzy :math:`\ \boldsymbol{A}\ ` z poprzedniej sekcji:
+ 
+.. math::
+
+   \boldsymbol{A}\ =\   
+   \left[\begin{array}{rrrr}
+      2 & 5 &  3 &  0 \\
+      2 & 0 & -2 & -1 \\
+      0 & 0 &  4 &  5 \\
+   \end{array}\right]\,.
+
+Przekształcenie do postaci schodkowej oraz zredukowanej schodkowej 
+przebiega teraz następująco:
+
+.. :math:`\;`
    
 .. sagecellserver::
    
@@ -32,7 +59,16 @@ Wykorzystamy opisane operacje do sprawdzenia wyniku z końca poprzedniej sekcji:
                [2, 0,-2,-1],
                [0, 0, 4, 5]])
    
-   show((A, A.echelon_form(), A.rref()))
+   pretty_print(table([[A, '$\\rightarrow$', 
+                        A.echelon_form(), '$\\rightarrow$',
+                        A.rref()]]))
+
+   (E,T) = A.echelon_form(transformation=True)
+
+   show((E,T))
+
+   T*A == E
+   
 
 :math:`\;`
 
@@ -47,12 +83,13 @@ do układu równań nad ciałem :math:`\,Q:`
    \begin{alignat*}{4}
       2\,x_1 & {\,} - {\,} &    x_2 & {\,} - {\,} &    x_3 & {\;} = {\;} &  4 \\
       3\,x_1 & {\,} + {\,} & 4\,x_2 & {\,} - {\,} & 2\,x_3 & {\;} = {\;} & 11 \\
-      3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {\;} & 11 \\
+      3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {\;} & 11
    \end{alignat*}
 
 Macierz współczynników :math:`\,\boldsymbol{A},\,`
 kolumna wolnych wyrazów :math:`\,\boldsymbol{b}\,`
-oraz macierz rozszerzona :math:`\,\boldsymbol{B}:`
+oraz macierz rozszerzona :math:`\,\boldsymbol{B}\ `
+dane są przez
 
 .. math::
 
@@ -100,7 +137,7 @@ macierzy :math:`\,\boldsymbol{B}:`
          2 & -1 & -1 & 4 \\
          1 &  5 & -1 & 7 \\
          0 &  1 & -1 & 0 \\
-      \end{array}\right] & \rightarrow \\ \\ \\ \\
+      \end{array}\right] & \rightarrow \\ \\
       \small{r0=r0-2\,r1:} & & \small{r0,r1,r2=r1,r2,r0:} & & 
       \small{r2=r2+11\,r1:} & \\ \\
       \left[\begin{array}{rrrr}
@@ -204,9 +241,8 @@ odpowiada trywialna postać układu równań:
    \begin{alignat*}{4}
       1\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 0\,x_3 & {\;} = {\;} & 3 \\
       0\,x_1 & {\,} + {\,} & 1\,x_2 & {\,} + {\,} & 0\,x_3 & {\;} = {\;} & 1 \\
-      0\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 1\,x_3 & {\;} = {\;} & 1 \\
+      0\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 1\,x_3 & {\;} = {\;} & 1 
    \end{alignat*}
-
 
 z której odczytujemy od razu rozwiązanie: 
 :math:`\ \ x_1 = 3,\ x_2=x_3 = 1.` :math:`\\`
@@ -214,8 +250,7 @@ z której odczytujemy od razu rozwiązanie:
 **Ćwiczenie.** :math:`\,`
 W komórce z kodem programu zadana jest macierz współczynników 
 :math:`\boldsymbol{A}\,` i wektor wolnych wyrazów :math:`\,\boldsymbol{b}\,` 
-pewnego układu czterech równań o czterech niewiadomych 
-nad ciałem liczb wymiernych.
+pewnego układu 4 równań o 4 niewiadomych nad ciałem Q.
 
 1. :math:`\,` Utwórz macierz rozszerzoną :math:`\,\boldsymbol{B}\,`
    i sprowadź ją do zredukowanej postaci schodkowej.
@@ -233,10 +268,10 @@ jednokolumnową służy metoda ``column()``. :math:`\\`
 
 .. sagecellserver::
 
-   sage: A = matrix(QQ,[[1, 2, 3,-2],
-                        [2,-1,-2,-3],
-                        [3, 2,-1, 2],
-                        [2,-3, 2, 1]])
+   A = matrix(QQ,[[1, 2, 3,-2],
+                  [2,-1,-2,-3],
+                  [3, 2,-1, 2],
+                  [2,-3, 2, 1]])
                
    sage: b = vector([6,8,4,-8])
 
@@ -244,7 +279,7 @@ jednokolumnową służy metoda ``column()``. :math:`\\`
 
 **Przykład 2.** :math:`\,` **Układ nieoznaczony.**
 
-Zajmiemy się teraz układem trzech równań o czterech niewiadomych
+Dany układ trzech równań o czterech niewiadomych
 nad ciałem liczb wymiernych :math:`\,Q:`
 
 .. math::
@@ -273,11 +308,11 @@ Macierz rozszerzoną przekształcamy od razu do zredukowanej postaci schodkowej:
    \left(\begin{array}{rrrrr}
          1 & -1 &  2 & -1 &  1 \\
          2 & -3 & -1 &  1 & -1 \\
-         1 &  0 &  7 & -4 &  4 \\
+         1 &  0 &  7 & -4 &  4
          \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrr}
                                                       1 & 0 & 7 & -4 & 4 \\
                                                       0 & 1 & 5 & -3 & 3 \\
-                                                      0 & 0 & 0 &  0 & 0 \\
+                                                      0 & 0 & 0 &  0 & 0
                                                       \end{array}\right)\,,
 
    \;
@@ -371,7 +406,7 @@ Zbadamy układ równań, różniący się od poprzedniego tylko jednym wolnym wy
    \begin{alignat*}{5}
       x_1 & {\,} - {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\,} - {\,} &    x_4 & {\;} = {\;} & 1 \\
    2\,x_1 & {\,} - {\,} & 3\,x_2 & {\,} - {\,} &    x_3 & {\,} + {\,} &    x_4 & {\;} = {\;} & 1 \\
-      x_1 & {\,}   {\,} &        & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} & 4 \\
+      x_1 & {\,}   {\,} &        & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} & 4
    \end{alignat*}
 
 Ta drobna zmiana powoduje, że układ staje się sprzeczny.
@@ -407,7 +442,7 @@ odpowiada teraz (równoważny wyjściowemu) układ równań
    \begin{alignat*}{5}
    1\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} &  0 \\
    0\,x_1 & {\,} + {\,} & 1\,x_2 & {\,} + {\,} & 5\,x_3 & {\,} - {\,} & 3\,x_4 & {\;} = {\;} &  0 \\
-   0\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 0\,x_3 & {\,} + {\,} & 0\,x_4 & {\;} = {\;} &  1 \\
+   0\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 0\,x_3 & {\,} + {\,} & 0\,x_4 & {\;} = {\;} &  1
    \end{alignat*}
 
 który ewidentnie nie ma żadnych rozwiązań, 
@@ -425,7 +460,7 @@ stowarzyszony z układem w przykładzie 2.:
    \begin{alignat*}{5}
       x_1 & {\,} - {\,} &    x_2 & {\,} + {\,} & 2\,x_3 & {\,} - {\,} &    x_4 & {\;} = {\;} & 0 \\
    2\,x_1 & {\,} - {\,} & 3\,x_2 & {\,} - {\,} &    x_3 & {\,} + {\,} &    x_4 & {\;} = {\;} & 0 \\
-      x_1 & {\,}   {\,} &        & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} & 0 \\
+      x_1 & {\,}   {\,} &        & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} & 0
    \end{alignat*}
 
 Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
@@ -443,14 +478,12 @@ Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
    \left(\begin{array}{rrrrr}
          1 & -1 &  2 & -1 &  0 \\
          2 & -3 & -1 &  1 &  0 \\
-         1 &  0 &  7 & -4 &  0 \\
+         1 &  0 &  7 & -4 &  0
          \end{array}\right)\quad\rightarrow\quad\left(\begin{array}{rrrrr}
                                                       1 & 0 & 7 & -4 & 0 \\
                                                       0 & 1 & 5 & -3 & 0 \\
-                                                      0 & 0 & 0 &  0 & 0 \\
+                                                      0 & 0 & 0 &  0 & 0
                                                       \end{array}\right)
-
-   \;
 
 otrzymujemy równoważny układ dwóch równań 
 (trzecie jest spełnione tożsamościowo): :math:`\\`
@@ -460,7 +493,7 @@ otrzymujemy równoważny układ dwóch równań
 
    \begin{alignat*}{5}
    1\,x_1 & {\,} + {\,} & 0\,x_2 & {\,} + {\,} & 7\,x_3 & {\,} - {\,} & 4\,x_4 & {\;} = {\;} &  0 \\
-   0\,x_1 & {\,} + {\,} & 1\,x_2 & {\,} + {\,} & 5\,x_3 & {\,} - {\,} & 3\,x_4 & {\;} = {\;} &  0 \\
+   0\,x_1 & {\,} + {\,} & 1\,x_2 & {\,} + {\,} & 5\,x_3 & {\,} - {\,} & 3\,x_4 & {\;} = {\;} &  0
    \end{alignat*}
 
 Przepisujemy go jako
@@ -475,7 +508,7 @@ Przepisujemy go jako
 
    \begin{alignat*}{3}
       x_1 & {\;} = {\,} - {\,} & 7\,x_3 & {\,} + {\,} & 4\,x_4 \\
-      x_2 & {\;} = {\,} - {\,} & 5\,x_3 & {\,} + {\,} & 3\,x_4 \\
+      x_2 & {\;} = {\,} - {\,} & 5\,x_3 & {\,} + {\,} & 3\,x_4
    \end{alignat*}
 
 i :math:`\,` tak jak w przykładzie 2., :math:`\,` przyjmujemy 

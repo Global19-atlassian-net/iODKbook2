@@ -22,9 +22,16 @@ gdy różnym argumentom odpowiadają różne obrazy:
 .. math::
    
    v_1\neq v_2\qquad\Rightarrow\qquad F(v_1)\neq F(v_2)\,,
+   \qquad v_1,v_2\in V\,,
+
+czyli, gdy jednakowe obrazy odpowiadają tylko identycznym argumentom:
+
+.. math::
+   
+   F(v_1) = F(v_2)\qquad\Rightarrow\qquad v_1 = v_2\,,
    \qquad v_1,v_2\in V\,.
 
-.. Można je zobrazować następującym schematem: |Rys_7|
+Sytuację tę można zobrazować następującym schematem:
 
 .. .. |Rys_7| image:: /figures/Rys_7.png
    :align: middle

@@ -121,8 +121,7 @@ przydatna będzie, oprócz macierzy :math:`\,\boldsymbol{F},\ ` również macier
           1 & 2 &  2 & 2 \\
    \end{array}\right]\,.
 
-Z definicji (patrz wzór :eq:`base_0`), :math:`\,j`-ta kolumna macierzy 
-:math:`\,\boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\equiv\boldsymbol{S}=
+Z definicji :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\equiv\boldsymbol{S}=
 [\,s_{ij}\,]_{4\times 4}(R)\ `
 przejścia od bazy :math:`\ \mathcal{F}\ ` do bazy :math:`\ \mathcal{G}\ ` jest 
 kolumną współrzędnych (w bazie :math:`\ \mathcal{F}`) :math:`\,j`-tego wektora
@@ -301,8 +300,7 @@ pomiędzy wektorami starej i nowej bazy:
    v_4' & {\ } = {\ } &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4 \\
    \end{alignat*}
 
-Mianowicie, na podstawie Wniosku 1. po definicji macierzy przejścia 
-(równanie :eq:`S_col`) : 
+Mianowicie, na podstawie Wniosku 1. po definicji macierzy przejścia : 
 
 .. math::
  
@@ -408,7 +406,7 @@ odwrócimy relacje
    v_1' & {\ } = {\ } & Tv_1 & {\ \,} = {\ \,} & -\ v_1 &             &     &             &     &                      \\
    v_2' & {\ } = {\ } & Tv_2 & {\ \,} = {\ \,} & 2\ v_1 &             &     & {\,} - {\;} & v_3 &                      \\
    v_3' & {\ } = {\ } & Tv_3 & {\ \,} = {\ \,} &    v_1 & {\,} + {\;} & v_2 & {\,} - {\;} & v_3 & {\,} - {\;} & 2\ v_4 \\
-   v_4' & {\ } = {\ } & Tv_4 & {\ \,} = {\ \,} &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4 \\
+   v_4' & {\ } = {\ } & Tv_4 & {\ \,} = {\ \,} &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4
    \end{alignat*}
 
 Po prostych elementarnych rachunkach otrzymujemy wzory 
@@ -445,8 +443,7 @@ w bazie :math:`\,\mathcal{B}':`
          \end{array}\right]\,.
 
 Nas interesuje raczej macierz 
-:math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1}.\ \,`
-Ale, zgodnie z Regułą 2.:
+:math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1}.\ \,` Ale,
 
 .. math::
    
@@ -465,7 +462,7 @@ co prowadzi dalej do wyniku :eq:`calc_comp`.
 
 **Wariant rozwiązania.** :math:`\,`
 
-Związek :eq:`trans_coord` pomiędzy współrzędnymi wektora w nowej i starej bazie, 
+Związek pomiędzy współrzędnymi wektora w nowej i starej bazie, 
 zapisany w postaci
 
 .. math::
@@ -476,7 +473,7 @@ zapisany w postaci
    -1 &  2 &  1 &  0 \\
     0 &  0 &  1 &  1 \\
     0 & -1 & -1 & -1 \\
-    0 &  0 & -2 &  1 \\
+    0 &  0 & -2 &  1
    \end{array}\right]
    \left[\begin{array}{r} a_1' \\ a_2' \\ a_3' \\ a_4' \end{array}\right]\ =\ 
    \left[\begin{array}{r} 2 \\ -3 \\ 0 \\ 4 \end{array}\right]
@@ -490,7 +487,7 @@ przedstawia kramerowski układ równań
    -\ a_1' & {\,} + {\,} & 2\,a_2' & {\,} + {\,} &    a_3' &             &      & {\;} = {} &  2 \\
            &             &         &             &    a_3' & {\,} + {\,} & a_4' & {\;} = {} & -3 \\
            & {\,} - {\,} &    a_2' & {\,} - {\,} &    a_3' & {\,} - {\,} & a_4' & {\;} = {} &  0 \\
-           &             &         & {\,} - {\,} & 2\,a_3' & {\,} + {\,} & a_4' & {\;} = {} &  4 \\
+           &             &         & {\,} - {\,} & 2\,a_3' & {\,} + {\,} & a_4' & {\;} = {} &  4
    \end{alignat*}
 
 który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu Sage:
@@ -569,8 +566,7 @@ Z drugiego układu równości odczytujemy:
 
 **Sposób 2.** (standardowy)
 
-Stosujemy Regułę 2. transformacji macierzy operatora liniowego 
-(wzór :eq:`F_prim`):
+Stosujemy Regułę 2. transformacji macierzy operatora liniowego :
 
 .. math::
    :label: F_prim_bis

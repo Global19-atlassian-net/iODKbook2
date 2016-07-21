@@ -81,8 +81,6 @@ przy permutacji :math:`\,\rho.\ ` Przykład dla :math:`\,n=5:`
    \left(\begin{array}{ccccc} 1 & 2 & 3 & 4 & 5 \\
                               1 & 2 & 4 & 3 & 5 \end{array}\right)\,.
 
-   \;
-
 **Twierdzenie.** :math:`\,` 
 Struktura :math:`\ \left(\,S_n,\,\circ\,\right)\ ` jest grupą 
 :math:`\ \ (n=1,2,\dots).`

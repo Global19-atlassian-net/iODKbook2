@@ -44,7 +44,7 @@ zmieniającą kolejność wierszy macierzy :math:`\,\boldsymbol{A}\,:`
    \left[\begin{array}{c} \boldsymbol{A}_{\,\sigma(1)} \\
                           \boldsymbol{A}_{\,\sigma(2)} \\
                           \ldots                       \\
-                          \boldsymbol{A}_{\,\sigma(m)} \\
+                          \boldsymbol{A}_{\,\sigma(m)}
    \end{array}\right]\,.
 
 :math:`\;`
@@ -79,7 +79,7 @@ na :math:`\,i`-tym miejscu, poza tym zera) daje macierz
 **Przykład.** :math:`\,` Niech
 :math:`\quad\sigma\ =\ \left(\begin{array}{ccccc}
 1 & 2 & 3 & 4 & 5 \\
-4 & 3 & 5 & 1 & 2 \\
+4 & 3 & 5 & 1 & 2
 \end{array}\right)\,\in S_5\,.` 
 
 :math:`\;`

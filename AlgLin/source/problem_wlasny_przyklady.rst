@@ -79,7 +79,7 @@ do równania własnego otrzymujemy kolejno:
    \lambda\,\alpha_1\,\vec{e}_1+\lambda\,\alpha_2\,\vec{e}_2\,, \\
    \left[\,(2-\lambda)\,\alpha_1+\alpha_2\,\right]\,\vec{e}_1+
    \left[\,\alpha_1+(2-\lambda)\,\alpha_2\,\right]\,\vec{e}_2 & = & 
-   \vec{0}\,. \\
+   \vec{0}\,.
    \end{eqnarray*}
 
 Kombinacja niezależnych liniowo wektorów :math:`\ \vec{e}_1,\,\vec{e}_2\ `
@@ -395,7 +395,7 @@ w tej samej bazie :math:`\ \mathcal{B}:`
          0\cdot\boldsymbol{e}_1 & {\ } + {\ \,} & 
          0\cdot\boldsymbol{e}_2 & {\ } + {\ \,} & 
          0\cdot\boldsymbol{e}_3 & {\ } + {\ \,} & 
-         1\cdot\boldsymbol{e}_4\,, \\
+         1\cdot\boldsymbol{e}_4\,,
    \end{alignat*}
 
 to :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ ` składa się 
@@ -638,7 +638,7 @@ Związki między wektorami tych baz:
    \boldsymbol{t}_4 & {\ \,} = {\ \,} & 0\cdot\boldsymbol{e}_1 {\ } + {\ } 
                                         1\cdot\boldsymbol{e}_2 {\ } - {\ } 
                                         1\cdot\boldsymbol{e}_3 {\ } + {\ } 
-                                        0\cdot\boldsymbol{e}_4 \,, \\
+                                        0\cdot\boldsymbol{e}_4 \,,
    \end{alignat*}
 
 dają macierz przejścia :math:`\,\boldsymbol{S}\ ` 
@@ -697,7 +697,7 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      -\ \boldsymbol{t}_4 & {\ \,} = {\ \,} & 0\cdot\boldsymbol{t}_1 {\ } + {\ } 
                                              0\cdot\boldsymbol{t}_2 {\ } + {\ } 
                                              0\cdot\boldsymbol{t}_3 {\ } - {\ } 
-                                             1\cdot\boldsymbol{t}_4 \,. \\
+                                             1\cdot\boldsymbol{t}_4 \,.
      \end{alignat*}
   
   Macierz :math:`\,\boldsymbol{T}\ ` jest więc diagonalna, 

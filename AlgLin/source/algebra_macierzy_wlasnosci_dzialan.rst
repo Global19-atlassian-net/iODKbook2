@@ -388,7 +388,7 @@ zauważmy, że :math:`\\`
    & = & \ \displaystyle\sum_{k=1}^p\ \ a_{ik}\ 
    \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]\ \ \ =       \\ \\
    & = & \ \displaystyle\sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,
-   \qquad\quad i=1,2,\dots,m.                                             \\ \\
+   \qquad\quad i=1,2,\dots,m.
    \end{array}
 
    \; 

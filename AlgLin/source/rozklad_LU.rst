@@ -33,17 +33,17 @@ składa się z następujących kolejnych operacji elementarnych:
       \left[\begin{array}{rrr} 
        1 & 0 & 0 \\
       -2 & 1 & 0 \\
-       0 & 0 & 1 \\ 
+       0 & 0 & 1
       \end{array}\right]\ 
       \left[\begin{array}{rrr} 
        2 &  1 & 1 \\
        4 & -6 & 0 \\
-      -2 &  7 & 2 \\
+      -2 &  7 & 2
       \end{array}\right]\ =\ 
       \left[\begin{array}{rrr} 
        2 &  1 &  1 \\
        0 & -8 & -2 \\
-      -2 &  7 &  2 \\
+      -2 &  7 &  2
       \end{array}\right]\,.
 
 2. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_1\,` 
@@ -59,17 +59,17 @@ składa się z następujących kolejnych operacji elementarnych:
       \left[\begin{array}{rrr} 
       1 & 0 & 0 \\
       0 & 1 & 0 \\
-      1 & 0 & 1 \\
+      1 & 0 & 1
       \end{array}\right]\ 
       \left[\begin{array}{rrr} 
        2 &  1 &  1 \\
        0 & -8 & -2 \\
-      -2 &  7 &  2 \\
+      -2 &  7 &  2
       \end{array}\right]\ =\ 
       \left[\begin{array}{rrr} 
       2 &  1 &  1 \\
       0 & -8 & -2 \\
-      0 &  8 &  3 \\
+      0 &  8 &  3
       \end{array}\right]\,.
 
 3. | :math:`\,` Do trzeciego wiersza macierzy :math:`\,\boldsymbol{A}_2\,` 
@@ -85,17 +85,17 @@ składa się z następujących kolejnych operacji elementarnych:
       \left[\begin{array}{rrr} 
       1 & 0 & 0 \\
       0 & 1 & 0 \\
-      0 & 1 & 1 \\
+      0 & 1 & 1
       \end{array}\right]\ 
       \left[\begin{array}{rrr} 
       2 &  1 &  1 \\
       0 & -8 & -2 \\
-      0 &  8 &  3 \\
+      0 &  8 &  3
       \end{array}\right]\ =\ 
       \left[\begin{array}{rrr} 
       2 &  1 &  1 \\
       0 & -8 & -2 \\
-      0 &  0 &  1 \\
+      0 &  0 &  1
       \end{array}\right]\,.
 
 Zbierając wyniki częściowe, można zapisać:
@@ -367,7 +367,7 @@ Rozwiążemy w ten sposób układ równań nad ciałem liczb wymiernych :math:`\
    \begin{alignat*}{4}
     2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {} &  6 \\
     4\,x_1 & {\,} - {\,} & 6\,x_2 &             &        & {\;} = {} & 14 \\
-   -2\,x_1 & {\,} + {\,} & 7\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} & -5 \\ 
+   -2\,x_1 & {\,} + {\,} & 7\,x_2 & {\,} + {\,} & 2\,x_3 & {\;} = {} & -5
    \end{alignat*}
 
 Rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` dla macierzy 
@@ -400,7 +400,7 @@ o trójkątnych macierzach współczynników:
    \begin{alignat*}{4}
        y_1 & {\,}   {\,} &        & {\,}   {\,} &        & {\;} = {} &  6 \\
     2\,y_1 & {\,} + {\,} &    y_2 &             &        & {\;} = {} & 14 \\
-      -y_1 & {\,} - {\,} &    y_2 & {\,} + {\,} &    y_3 & {\;} = {} & -5 \\ 
+      -y_1 & {\,} - {\,} &    y_2 & {\,} + {\,} &    y_3 & {\;} = {} & -5
    \end{alignat*}
 
 .. math::
@@ -409,7 +409,7 @@ o trójkątnych macierzach współczynników:
    \begin{alignat*}{4}
     2\,x_1 & {\,} + {\,} &    x_2 & {\,} + {\,} &    x_3 & {\;} = {\ } & y_1 \\
            & {\,} - {\,} & 8\,x_2 & {\,} - {\,} & 2\,x_3 & {\;} = {\ } & y_2 \\
-           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\;} = {\ } & y_3 \\
+           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\;} = {\ } & y_3
    \end{alignat*}
 
 Pierwszy układ rozwiązujemy podstawianiem "w przód", :math:`\ `

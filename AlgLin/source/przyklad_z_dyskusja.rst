@@ -11,7 +11,7 @@ Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`
    \begin{alignat*}{6}
       x_1 & {\,} + {\,} & 3\,x_2 & {\,}   {\,} &        & {\,} + {\,} & 2\,x_4 & {\,} - {\,} &    x_5 & {\;} = {\;} & 2 \\
           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2 \\
-      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} &    x_3 & {\,} + {\,} & 6\,x_4 & {\,} - {\,} & 4\,x_5 & {\;} = {\;} & 4 \\
+      x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} &    x_3 & {\,} + {\,} & 6\,x_4 & {\,} - {\,} & 4\,x_5 & {\;} = {\;} & 4
    \end{alignat*}
 
 Zaczynamy od zapisania macierzy współczynników :math:`\,\boldsymbol{A},\ `
@@ -24,7 +24,7 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
    \left[\begin{array}{rrrrr}
       1 & 3 & 0 & 2 & -1 \\
       0 & 0 & 1 & 4 & -3 \\
-      1 & 3 & 1 & 6 & -4 \\
+      1 & 3 & 1 & 6 & -4
    \end{array}\right]\,,\quad
    \boldsymbol{b}\ =\ 
    \left[\begin{array}{r}
@@ -34,7 +34,7 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
    \left[\begin{array}{rrrrrr}
       1 & 3 & 0 & 2 & -1 & 2 \\
       0 & 0 & 1 & 4 & -3 & 2 \\
-      1 & 3 & 1 & 6 & -4 & 4 \\
+      1 & 3 & 1 & 6 & -4 & 4
    \end{array}\right]\,.
 
 Metoda eliminacji
@@ -72,7 +72,7 @@ tych dwóch):
 
    \begin{alignat*}{6}
       x_1 & {\,} + {\,} & 3\,x_2 & {\,}   {\,} &        & {\,} + {\,} & 2\,x_4 & {\,} - {\,} &    x_5 & {\;} = {\;} & 2 \\
-          & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2 \\
+          & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2
    \end{alignat*}
 
 Warto zauważyć, że ze zredukowanej postaci schodkowej macierzy rozszerzonej 

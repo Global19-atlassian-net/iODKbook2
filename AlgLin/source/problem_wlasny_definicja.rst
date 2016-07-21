@@ -76,7 +76,7 @@ Równanie własne można przekształcić następująco:
    \boldsymbol{A}\,\boldsymbol{x} & = & 
    \lambda\ \boldsymbol{I}_n\,\boldsymbol{x}\,, \\
    (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x} & = & 
-   \boldsymbol{0}\,.\qquad\qquad(\clubsuit) \\
+   \boldsymbol{0}\,.\qquad\qquad(\clubsuit)
    \end{eqnarray*}
 
 Ostatnie równanie, w którym :math:`\,\boldsymbol{I}_n\,` jest macierzą 

@@ -97,7 +97,7 @@ otrzymujemy
    {\ \,} & 0 \\ 
    \dots\quad\ \ & & \dots\quad\ \ & & \ \ldots & & \dots\quad\ \ & & \\ 
    \alpha_1\,\langle x_r,x_1\rangle & {\,} + {\ } & \alpha_2\,\langle x_r,x_2\rangle & {\,} + {\ } & \ldots & {\ \ } + {\ } & \alpha_r\,\langle x_r,x_r\rangle & {\ } =
-   {\ \,} & 0 \\
+   {\ \,} & 0
    \end{alignat*}
 
 Z warunków :eq:`assumpt` wynika, że

@@ -24,8 +24,10 @@ Wprowadzenie do układów równań liniowych
 | *Przestrzeń wektorów kolumnowych nad ciałem* :math:`\,K.`
 | *Geometryczna interpretacja oznaczonych, nieoznaczonych 
   i sprzecznych układów równań.*
+| *Wierszowy i kolumnowy obraz układu równań liniowych.*
 | *Doprowadzenie układu równań do postaci schodkowej 
   poprzez operacje elementarne.*
+| *Eliminacja Gaussa i eliminacja Gaussa-Jordana.*
 
 .. toctree::
 

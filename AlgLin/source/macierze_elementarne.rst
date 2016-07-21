@@ -78,10 +78,9 @@ Mianowicie :math:`\ (i,j=0,1,\ldots,m-1;\ i \neq j):`
 3. :math:`\ [\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
 
 W Sage macierze elementarne zwraca funkcja ``elementary_matrix()``. 
-Argumentami są: pierścień bazowy (domyślnie ZZ), stopień macierzy 
+Argumentem opcjonalnym jest pierścień bazowy (domyślnie ZZ albo 
+pierścień zawierający czynnik skali). Pozostałe argumenty to stopień macierzy 
 oraz numery wierszy i czynnik skali. 
-
-.. zależnie od rodzaju macierzy elementarnej.
 
 Następujący kod podaje macierze elementarne z ostatniego przykładu:
 
@@ -126,6 +125,15 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
    12 & 19 & 3 & -8 \\
     4 & 12 & 0 & -8 \\
    \end{array}\right)
+
+Zostały tu omówione macierze elementarne w wersji wierszowej. 
+Macierz elementarną w wersji kolumnowej otrzymuje się używając 
+argumentów 'col1', 'col2' w miejsce 'row1', 'row2' przy wywołaniu funkcji
+``elementary_matrix()``. Jeżeli stopień tak otrzymanej macierzy elementarnej
+:math:`\boldsymbol{E}` zgadza się z liczbą kolumn danej macierzy
+:math:`\boldsymbol{A}`, to to :math:`\boldsymbol{A} * \boldsymbol{E}`
+jest wynikiem zastosowania odpowiedniej operacji elementarnej na kolumnach 
+macierzy :math:`\boldsymbol{A}`.
 
 Przypuśćmy teraz, że przekształcenie macierzy 
 :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,` do zredukowanej postaci 

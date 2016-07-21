@@ -171,7 +171,6 @@ wektorów bazy :math:`\ \mathcal{C}:`
    Fv_n\ =\ f_{1n}\,w_1\,+\ f_{2n}\,w_2\,+\ \dots\ +\ f_{mn}\,w_m \\
    \end{array}
 
-
 Otrzymana w ten sposób macierz 
 :math:`\ \boldsymbol{F}=[\,f_{ij}\,]_{m\times n}(K)\ ` jest :math:`\,` 
 *z definicji* :math:`\,` macierzą :math:`\,M_{\mathcal{B}\mathcal{C}}(F)\ `
@@ -269,7 +268,7 @@ rozkłady :eq:`exps` obrazów kolejnych wektorów bazy
    D\,x^2 & {\,} = {\,} & 2\,x       & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 2\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
    D\,x^3 & {\,} = {\,} & 3\,x^2     & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 3\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & 0\cdot x^{n-1} \\
    \dots  & {\,}   {\,} & \dots      & {\quad}   {\quad} & \dots      & {\ }   {\ } & \dots    & {\ }   {\ } & \dots      & {\ }   {\ } & \dots & {\ }   {\ } & \dots          \\   
-   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1} \\ 
+   D\,x^n & {\,} = {\,} & n\,x^{n-1} & {\quad}   = {\quad} & 0\cdot 1 & {\ } + {\ } & 0\cdot x & {\ } + {\ } & 0\cdot x^2 & {\ } + {\ } & \dots & {\ } + {\ } & n\cdot x^{n-1}
    \end{alignat*}
 
 .. math::
@@ -282,7 +281,7 @@ rozkłady :eq:`exps` obrazów kolejnych wektorów bazy
      0   &   0   &   2   &   0   & \dots &   0   \\
      0   &   0   &   0   &   3   & \dots &   0   \\ 
    \dots & \dots & \dots & \dots & \dots & \dots \\
-     0   &   0   &   0   &   0   & \dots &   n   \\
+     0   &   0   &   0   &   0   & \dots &   n   
    \end{array}
    \right]\ 
    \in\,M_{n\times (n+1)}(R)\,.

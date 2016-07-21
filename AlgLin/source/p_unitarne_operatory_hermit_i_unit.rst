@@ -109,7 +109,6 @@ Rzeczywiście, warunek
    \,0\,,\quad x,y\in V\qquad\Leftrightarrow\qquad F-G=0
    \qquad\Leftrightarrow\qquad F=G\,.`
 
-
 Sprzężenie hermitowskie operatora liniowego
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

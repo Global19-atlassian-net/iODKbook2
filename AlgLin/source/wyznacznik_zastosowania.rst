@@ -702,7 +702,7 @@ Rozwiążemy układ trzech równań o trzech niewiadomych nad ciałem :math:`\,Q
    \begin{alignat*}{4}
    2\,x_1 & {\,} - {\,} &    x_2 & {\,} - {\,} &    x_3 & {\;} = {} &  4 \\
    3\,x_1 & {\,} + {\,} & 4\,x_2 & {\,} - {\,} & 2\,x_3 & {\;} = {} & 11 \\
-   3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {} & 11 \\
+   3\,x_1 & {\,} - {\,} & 2\,x_2 & {\,} + {\,} & 4\,x_3 & {\;} = {} & 11
    \end{alignat*}
 
 Jeżeli w danym układzie liczba równań zgadza się z liczbą niewiadomych

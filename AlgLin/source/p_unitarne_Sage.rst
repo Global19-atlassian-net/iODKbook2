@@ -210,7 +210,7 @@ co odpowiada normie euklidesowej.
    sage: show(norm(x))
    sage: show(x.norm(p))
 
-:math:`\;`
+.. :math:`\;`
 
 Metoda ``norm()`` wylicza również normę macierzową
 
@@ -294,19 +294,19 @@ Różne normy macierzy kwadratowej i prostokątnej:
 
 .. sagecellserver::
 
-   sage: A = matrix(RR, [[13,-4],
-                         [-4, 7]])
+   A = matrix(RR, [[13,-4],
+                   [-4, 7]])
    
-   sage: A.norm(1), A.norm(2), A.norm('frob'), A.norm(Infinity)
+   A.norm(1), A.norm(2), A.norm('frob'), A.norm(Infinity)
 
 .. (17.0, 15.0, 15.8113883008, 17.0)
 
 .. sagecellserver::
 
-   sage: A = matrix(QQbar, [[ 1, 2, 4,  3],
-                            [-1, 0, 3,-10]])
+   A = matrix(QQbar, [[ 1, 2, 4,  3],
+                      [-1, 0, 3,-10]])
    
-   sage: print (A.norm(1),A.norm(2),A.norm('frob'),A.norm(Infinity)),'\n'
+   print (A.norm(1),A.norm(2),A.norm('frob'),A.norm(Infinity)),'\n'
    
    # Sprawdzenie normy euklidesowej (p=2):
    sage: ATA = A.T*A
