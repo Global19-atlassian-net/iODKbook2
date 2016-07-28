@@ -570,14 +570,14 @@ Komputerowe obliczenia przedstawiają się następująco:
 .. code-block:: python
 
    sage: F = matrix(QQ,[[ 1, 1,-1,-1],
-   ...                  [ 2,-1, 2,-1],
-   ...                  [-1, 1, 1, 0],
-   ...                  [ 0, 1, 1, 1]])
+                        [ 2,-1, 2,-1],
+                        [-1, 1, 1, 0],
+                        [ 0, 1, 1, 1]])
    
    sage: G = matrix(QQ,[[ 2, 0,-2, 1],
-   ...                  [ 1, 1, 1, 3],
-   ...                  [ 0, 2, 1, 1],
-   ...                  [ 1, 2, 2, 2]])
+                        [ 1, 1, 1, 3],
+                        [ 0, 2, 1, 1],
+                        [ 1, 2, 2, 2]])
    
    sage: F.I*G
    
@@ -669,17 +669,17 @@ co daje wynik w postaci kolumny współrzędnych wektora :math:`\,v\,` w bazie :
 .. code-block:: python
    
    sage: S = matrix(QQ,[[-1, 2, 1, 0],
-   ...                  [ 0, 0, 1, 1],
-   ...                  [ 0,-1,-1,-1],
-   ...                  [ 0, 0,-2, 1]])
+                        [ 0, 0, 1, 1],
+                        [ 0,-1,-1,-1],
+                        [ 0, 0,-2, 1]])
    
-   # Macierz odwrotna do S:
+   # Inverse of the matrix S:
    sage: S_1 = S.I
    
-   # Kolumna współrzędnych w bazie B:
+   # Column of coordinates of the vector v in base B:
    sage: I_B = vector(QQ,[2,-3,0,4]).column()
    
-   sage: html.table([[S_1,'*',I_B,'=',S_1*I_B]])
+   sage: table([[S_1,'*',I_B,'=',S_1*I_B]])
 
 .. math::
    :label: calc_comp
@@ -788,11 +788,11 @@ który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu
 .. code-block:: python
    
    sage: S = matrix(QQ,[[-1, 2, 1, 0],
-   ...                  [ 0, 0, 1, 1],
-   ...                  [ 0,-1,-1,-1],
-   ...                  [ 0, 0,-2, 1]])
+                        [ 0, 0, 1, 1],
+                        [ 0,-1,-1,-1],
+                        [ 0, 0,-2, 1]])
 
-   sage: I_B = vector(QQ,[2,-3,0,4]) # wektor wolnych wyrazów
+   sage: I_B = vector(QQ,[2,-3,0,4]) # vector of constants
    
    sage: S \ I_B
 
@@ -907,16 +907,16 @@ Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`. :math:`\\`
 .. code-block:: python
 
    sage: F = matrix(QQ,[[3, -2, -1],
-   ...                  [2,  1, -3],
-   ...                  [1,  3,  2]])
+                        [2,  1, -3],
+                        [1,  3,  2]])
 
    sage: S = matrix(QQ,[[0,  0,  1],
-   ...                  [0,  1,  0],
-   ...                  [1,  0,  0]])
+                        [0,  1,  0],
+                        [1,  0,  0]])
 
    sage: F_1 = S*F*S
    
-   sage: html.table([[S, '*', F, '*', S, '=', F_1]])
+   sage: table([[S, '*', F, '*', S, '=', F_1]])
 
 .. math::
    

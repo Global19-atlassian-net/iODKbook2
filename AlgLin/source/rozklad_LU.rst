@@ -197,7 +197,7 @@ Zastosujmy metodę ``LU()`` do macierzy :math:`\,\boldsymbol{A}\,` z przykładu:
    sage: A = matrix(QQ, [[2,1,1], [4,-6,0],[-2,7,2]])
    sage: (P,L,U) = A.LU()
    sage: print A==P*L*U
-   sage: html.table([[A, '=', P, '*', L, '*', U]])
+   sage: table([[A, '=', P, '*', L, '*', U]])
    
    True
 
@@ -246,7 +246,7 @@ Jak widać, rozkład :math:`\,\boldsymbol{L}\boldsymbol{U}\,` w ogólności nie 
    A = random_matrix(QQ, 3, 4, rank=3, upper_bound=10,
                      algorithm='echelonizable')
    (P,L,U) = A.LU()
-   html.table([[A, '=', P, L, U]])
+   table([[A, '=', P, '*', L, '*', U]])
 
 :math:`\;`
 

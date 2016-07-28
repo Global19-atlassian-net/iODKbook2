@@ -144,11 +144,11 @@ równa się wektorowi
          x2=('$$x_2:$$', slider(0,3,1/2, default=2))):
 
        plt = arrow((0,0),v1, color='green',
-              legend_label=' $v_1$', legend_color='black', zorder=5) +\
+              legend_label=' $\\vec{v}_1$', legend_color='black', zorder=5) +\
              arrow((0,0),v2, color='red',
-              legend_label=' $v_2$', legend_color='black', zorder=5) +\
+              legend_label=' $\\vec{v}_2$', legend_color='black', zorder=5) +\
              arrow((0,0),w, color='black',
-              legend_label=' $w$', legend_color='black', zorder=5) +\
+              legend_label=' $\\vec{w}$', legend_color='black', zorder=5) +\
              arrow((0,0),x1*v1, color='gray', width=1, arrowsize=3) +\
              arrow((0,0),x2*v2, color='gray', width=1, arrowsize=3) +\
              arrow((0,0),x1*v1+x2*v2, color='gray', 
@@ -265,7 +265,7 @@ i podać ją jako argument:
    Eqns = [eq1,eq2,eq3]
    
    try: verse3colmn(Eqns)
-   except NameError: pretty_print(html("Execute the previous cell!"))
+   except NameError: pretty_print(html("Execute code in the previous cell!"))
 
 .. figure:: figures/Rys_21.jpg
    :height: 10 cm
@@ -379,24 +379,24 @@ Zachęcamy do analizy kodu i zapoznania się z użytymi zaawansowanymi narzędzi
 
    var('x1 x2')
    
-   # Nieoznaczony układ równań:
+   # Inconsistent system of equations:
    Eqns = [  x1 +   x2 == 1,
            2*x1 + 2*x2 == 2]
    
    s = solve(Eqns,[x1,x2])
-   print s[0] # rozwiązanie układu
+   print s[0] # solution of the system
    
-   # Wyłuskanie wszystkich parametrów od których zależy rozwiązanie:
+   # Extraction of all parameters from the solution:
    lvar = uniq(flatten(map(lambda w: w.variables(), s[0])))
    for x in [x1,x2]: lvar.remove(x)
    for rvar in lvar: var(rvar)
-   print lvar # lista parametrów jako zmiennych
+   print lvar # list of the parameters as variables
 
-   # Wykres zbioru rozwiązań dla parametru w zadanym przedziale:
+   # Plot of the set of solutions for the parameter in the given range:
    pts = [map(lambda w: w.rhs().subs(lvar[0]==p), s[0]) 
           for p in srange(-1,1,0.1)]
 
-   line(pts, axes_labels=['x1','x2'], color='green', figsize=5)
+   line(pts, axes_labels=['$x_1$','$x_2$'], color='green', figsize=5)
 
 Inconsistent System: no solution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

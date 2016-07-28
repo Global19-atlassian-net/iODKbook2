@@ -90,11 +90,14 @@ Sprawdzimy na przykładzie Twierdzenie 3., punkt 3.:
 .. code-block:: python
 
    sage: A = matrix(QQ,3,4,[0,1,2,3,5,-2,3,6,4,-4,0,8])
-   # Bezpośrednie wykonanie operacji elementarnej:
+
+   # Direct execution of the elementary operation:
    sage: B1 = A.with_added_multiple_of_row(1,2,7/4)
-   # Mnożenie macierzy A przez odpowiednią macierz elementarną:
+
+   # Multiplication of the matrix A by the appropriate elementary matrix:
    sage: B2 = elementary_matrix(QQ, 3, row1=1, row2=2, scale=7/4) * A
-   sage: html.table([[A, '$\\rightarrow$', B1, ',', B2]])
+
+   sage: table([[A, '$\\rightarrow$', B1, ',', B2]])
 
 .. math::
    

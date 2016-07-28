@@ -670,14 +670,14 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
   .. code-block:: python
      
      sage: A = matrix(QQ,[[1,0,0,0],
-     ...                  [0,0,1,0],
-     ...                  [0,1,0,0],
-     ...                  [0,0,0,1]])
+                          [0,0,1,0],
+                          [0,1,0,0],
+                          [0,0,0,1]])
 
      sage: S = matrix(QQ,[[1,0,0, 0],
-     ...                  [0,1,0, 1],
-     ...                  [0,1,0,-1],
-     ...                  [0,0,1, 0]])
+                          [0,1,0, 1],
+                          [0,1,0,-1],
+                          [0,0,1, 0]])
      sage: S.I*A*S                             
   
      [ 1  0  0  0]
@@ -694,48 +694,6 @@ oraz podprzestrzeni :math:`\,V_{-1}=L(\boldsymbol{t}_4)\ ` macierzy antysymetryc
 .. math::
    
    M_2(R)\ =\ V_1\,\oplus\,V_{-1}\,.
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -148,21 +148,22 @@ Program wykonujący algorytm odwracania macierzy przedstawia się następująco:
 .. code-block:: python
 
    sage: A = matrix(QQ,[[ 2, 0,-1, 1],
-   ...                  [ 1, 1,-1, 0],
-   ...                  [-1, 0, 6, 1],
-   ...                  [ 1, 0, 1, 1]])
+                        [ 1, 1,-1, 0],
+                        [-1, 0, 6, 1],
+                        [ 1, 0, 1, 1]])
 
-   # Utworzenie agregatu [A|I]:
+   # Create the 2-block [A|I]:
    sage: AI = A.augment(identity_matrix(QQ,4))
 
-   # Przekształcenie [A|I] do [I|A^(-1)]:
+   # Transform [A|I] into [I|A^(-1)]:
    sage: IA_1 = AI.rref()
 
-   # Wyodrębnienie drugiej części agregatu (kolumny od 4. do końcowej):
+   # Isolate the second part of the 2-block
+   # (columns starting from 4. to the last):
    sage: A_1 = IA_1[:,4:]
 
-   # Pokazanie macierzy odwrotnej: 
-   sage: html.table([['$A^{-1}$', '=', A_1]])
+   # Display the inverse matrix: 
+   sage: table([['$A^{-1}$', '=', A_1]])
 
 .. math::
    
@@ -249,21 +250,21 @@ Macierzą, która mnożąc :math:`\boldsymbol{A}` daje zredukowaną postać scho
 .. code-block:: python
 
    sage: A = matrix(QQ,[[ 1, 0, 2,-1, 2],
-   ...                  [-1, 1,-2, 3,-3],
-   ...                  [ 2, 0, 4,-2, 4]])
+                        [-1, 1,-2, 3,-3],
+                        [ 2, 0, 4,-2, 4]])
 
-   # Agregat AED złożony z macierzy AE i D
-   # (AE := A w zredukowanej postaci schodkowej)
+   # Create the 2-block AED composed of matrices AE and D
+   # (here AE := A in the reduced row echelon form)
    sage: AED = A.extended_echelon_form()
 
-   # Wyodrębnienie macierzy AE (kolumny 0.- 4.):
+   # Isolate the matrix AE (columns 0.- 4.):
    sage: AE = AED.matrix_from_columns(range(5))
 
-   # Wyodrębnienie macierzy D (kolumny 5.- 7.):
+   # Isolate the matrix D (columns 5.- 7.):
    sage: D = AED.matrix_from_columns(range(5,8))
 
-   # Iloczyn D*A jest zredukowaną postacią schodkową A:
-   sage: html.table([[D, '*', A, '=', D*A]])
+   # Display D*A and check the result vs the previous one:
+   sage: table([[D, '*', A, '=', D*A]])
 
 .. math::
    

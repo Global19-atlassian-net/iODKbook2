@@ -221,31 +221,29 @@ Porównaj swój wynik z wynikiem komputerowym.
 
 .. sagecellserver::
 
-   n=4
+   n = 4
    A = random_matrix(QQ,n,algorithm='echelonizable',rank=n,upper_bound=10)
-   pretty_print(html.table([["Znajdź macierz odwrotną do macierzy", 'A', '=', A]]))
-   
-   print "Rozwiązanie:"
-   
-   B = block_matrix([[A,identity_matrix(n)]])  # rozszerzenie macierzy A
-   R = B.rref()                # zredukowana postać schodkowa macierzy B
-   A_1 = R.subdivision(0,1)    # macierz A^(-1) wyodrębniona z R
+   show(table([["Calculate the inverse of the matrix", 'A', '=', A]]))
+  
+   B = block_matrix([[A,identity_matrix(n)]])  # augment the matrix A
+   R = B.rref()                # reduced row echelon form of B
+   A_1 = R.subdivision(0,1)    # matrix A^(-1) isolated from R
    
    @interact
    
-   def _(h=('Krok:',["2-blok (A,I)","2-blok (I,A^(-1))","Sprawdzenie"])):
+   def _(h=('Step:',["2-block (A,I)","2-block (I,A^(-1))","Verify"])):
     
-       if h=="2-blok (A,I)": 
-           pretty_print(html.table([["", "", "$\qquad\ $ B = (A,I)$\:$ jest rozszerzeniem A:"],
-                       ["B", '=', B]]))
+       if h=="2-block (A,I)": show(table([
+           ["", "", "$\qquad\ $ B = (A,I)$\:$ is extension of A:"],
+           ["B", '=', B]]))
                     
-       elif h=="2-blok (I,A^(-1))": 
-           pretty_print(html.table([["", "", "$\quad\ \ \ $ Zredukowana postać schodkowa B:"],
-                       ["B.rref()", '=', R]]))
+       elif h=="2-block (I,A^(-1))": show(table([
+           ["", "", "$\quad\ \ \ $ Reduced row echelon form of B:"],
+           ["B.rref()", '=', R]]))
                     
-       elif h=="Sprawdzenie":
-           pretty_print(html.table([["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
-                       [A, '*', A_1, '=', A*A_1]]))
+       elif h=="Verify": show(table([
+           ["$A\ :$", "", "$A^{-1}\ :$", "", "$A\ *\ A^{-1}\ :$"],
+           [A, '*', A_1, '=', A*A_1]]))
 
 Dla większych wartości :math:`\,n\,` warto porównać wyniki komputerowe
 otrzymane metodą eliminacji oraz przez bezpośrednie użycie metody ``inverse()``

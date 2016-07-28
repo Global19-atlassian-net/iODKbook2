@@ -72,54 +72,63 @@ Poniżej mamy przykład takiego postępowania:
 
    sage: var('phi')
    sage: A = matrix([[cos(phi),-sin(phi)],
-   ...               [sin(phi), cos(phi)]])
+                     [sin(phi), cos(phi)]])
 
-   sage: html.table([['A', '=', A]])
-   sage: print "Pierścień bazowy macierzy A:", A.base_ring()
+   sage: print A, "\n"
+   sage: print "Base ring of the matrix A:", A.base_ring()
 
-:math:`\begin{array}{ccc}
-A & = & 
-\left(\begin{array}{rr}
-\cos\left(\phi\right) & -\sin\left(\phi\right) \\
-\sin\left(\phi\right) & \cos\left(\phi\right)
-\end{array}\right)
-\end{array}`
+   [ cos(phi) -sin(phi)]
+   [ sin(phi)  cos(phi)] 
 
-``Pierścień bazowy macierzy A: Symbolic Ring``
+   Base ring of the matrix A: Symbolic Ring
+
+.. :math:`\begin{array}{ccc}
+   A & = & 
+   \left(\begin{array}{rr}
+   \cos\left(\phi\right) & -\sin\left(\phi\right) \\
+   \sin\left(\phi\right) & \cos\left(\phi\right)
+   \end{array}\right)
+   \end{array}`
 
 .. code-block:: python
 
    sage: B = A.subs(phi=pi/4)
 
-   sage: html.table([['B', '=', B]])
-   sage: print "Pierścień bazowy macierzy B:", B.base_ring()
+   sage: print B, "\n"
+   sage: print "Base ring of the matrix B:", B.base_ring()
 
-:math:`\begin{array}{ccc}
-B & = &
-\left(\begin{array}{rr}
-\frac{1}{2} \, \sqrt{2} & -\frac{1}{2} \, \sqrt{2} \\
-\frac{1}{2} \, \sqrt{2} & \frac{1}{2} \, \sqrt{2}
-\end{array}\right) 
-\end{array}`
+   [ 1/2*sqrt(2) -1/2*sqrt(2)]
+   [ 1/2*sqrt(2)  1/2*sqrt(2)] 
 
-``Pierścień bazowy macierzy B: Symbolic Ring``
+   Base ring of the matrix B: Symbolic Ring
+
+.. :math:`\begin{array}{ccc}
+   B & = &
+   \left(\begin{array}{rr}
+   \frac{1}{2} \, \sqrt{2} & -\frac{1}{2} \, \sqrt{2} \\
+   \frac{1}{2} \, \sqrt{2} & \frac{1}{2} \, \sqrt{2}
+   \end{array}\right) 
+   \end{array}`
 
 .. code-block:: python
 
    sage: C = B.change_ring(RDF)
+  
+   sage: print C, "\n"
+   sage: print "Base ring of the matrix C:", C.base_ring()
 
-   sage: html.table([['C', '=', C]])
-   sage: print "Pierścień bazowy macierzy C:", C.base_ring()
+   [ 0.7071067811865476 -0.7071067811865476]
+   [ 0.7071067811865476  0.7071067811865476] 
+   
+   Base ring of the matrix C: Real Double Field
 
-:math:`\begin{array}{ccc}
-C & = &
-\left(\begin{array}{rr}
-0.707106781187 & -0.707106781187 \\
-0.707106781187 & 0.707106781187
-\end{array}\right)
-\end{array}`
-
-``Pierścień bazowy macierzy C: Real Double Field``
+.. :math:`\begin{array}{ccc}
+   C & = &
+   \left(\begin{array}{rr}
+   0.707106781187 & -0.707106781187 \\
+   0.707106781187 & 0.707106781187
+   \end{array}\right)
+   \end{array}`
 
 Sage preferuje podejście wierszowe do wektorów i macierzy. 
 Wektor wyświetlany jest w postaci "poziomej", a macierz jest układem (listą) wierszy. 
@@ -161,9 +170,9 @@ do której należy badany obiekt. :math:`\\`
 
 .. code-block:: python
 
-   sage: # Typowe użycie konstruktora:
+   sage: # A generic use of the constructor:
    sage: v = vector(QQ, [1.2, 3.6, -0.48])
-   sage: v; v.base_ring(); v.parent()
+   sage: print v; print v.base_ring(); v.parent()
 
    (6/5, 18/5, -12/25)
    Rational Field
@@ -171,18 +180,18 @@ do której należy badany obiekt. :math:`\\`
 
 .. code-block:: python
 
-   sage: # Wywołanie bez deklaracji pierścienia:
+   sage: # Specification of the base ring is optional:
    sage: v = vector([3, 5, -11])
-   sage: v; v.base_ring()
+   sage: print v; v.base_ring()
 
    (3, 5, -11)
    Integer Ring
 
 .. code-block:: python
 
-   sage: # Zadana tylko liczba elementów, bez ich wartości:
+   sage: # Given only the base ring and number of elements:
    sage: v = vector(RDF,5)
-   sage: v; v.parent()
+   sage: print v; v.parent()
 
    (0.0, 0.0, 0.0, 0.0, 0.0)
    Vector space of dimension 5 over Real Double Field
@@ -195,7 +204,7 @@ Dysponując taką przestrzenią, można tworzyć wektory jako jej instancje:
 
    sage: VS = VectorSpace(QQ,3)
    sage: v = VS([-1, 4, 3.5])
-   sage: VS; v
+   sage: print VS; v
    
    Vector space of dimension 3 over Rational Field
    (-1, 4, 7/2)
@@ -212,9 +221,9 @@ albo listy wektorów (jako wierszy).
 
 .. code-block:: python
 
-   sage: # Konstruktor domyślny tworzy pustą macierz:
+   sage: # A default constructor creates an empty matrix:
    sage: M = matrix()   
-   sage: M; M.base_ring(); M.parent()
+   sage: print M; print M.base_ring(); M.parent()
 
    []
    Integer Ring
@@ -222,21 +231,22 @@ albo listy wektorów (jako wierszy).
 
 .. code-block:: python
 
-   sage: # Typowe użycie konstruktora macierzy:
+   sage: # A generic use of the matrix constructor:
    sage: M1 = matrix(RDF, 2,3, [1,2,3,4,5,6]) 
    sage: M2 = matrix(RDF, [[1,2,3],[4,5,6]])   
-   sage: M1,M2; M1.parent()
+   sage: print M1, "\n"; print M2, "\n"; M1.parent()
 
-   (
-   [1.0 2.0 3.0]  [1.0 2.0 3.0]
-   [4.0 5.0 6.0], [4.0 5.0 6.0]
-   )
+   [1.0 2.0 3.0]
+   [4.0 5.0 6.0] 
+
+   [1.0 2.0 3.0]
+   [4.0 5.0 6.0] 
+   
    Full MatrixSpace of 2 by 3 dense matrices over Real Double Field
 
 .. code-block:: python
    
-   sage: # Konstrukcja macierzy kwadratowej
-   ...   # o elementach całkowitych:
+   sage: # Construction of a square matrix:
    sage: M = matrix(3,range(9)); M
 
    [0 1 2]
@@ -245,8 +255,7 @@ albo listy wektorów (jako wierszy).
 
 .. code-block:: python
 
-   sage: # Elementy macierzy zadane
-   ...   # w postaci listy wektorów:
+   sage: # Matrix given as a list of vectors:
    sage: v1 = vector([1,2,3,-1])
    sage: v2 = vector([4,5,6,-2])
    sage: v3 = vector([7,8,9,-3])
@@ -264,7 +273,7 @@ Odpowiednie metody dają dostęp do danych przestrzeni takich jak wymiar, rozmia
 .. code-block:: python
 
    sage: MS32 = MatrixSpace(ZZ,3,2); 
-   sage: MS32; MS32.dimension(); MS32.dims(); MS32.basis()
+   sage: print MS32; print MS32.dimension(); print MS32.dims(); MS32.basis()
 
    Full MatrixSpace of 3 by 2 dense matrices over Integer Ring
    6
@@ -277,9 +286,9 @@ Odpowiednie metody dają dostęp do danych przestrzeni takich jak wymiar, rozmia
 
 .. code-block:: python
 
-   sage: # Mat() jest aliasem dla MatrixSpace():
+   sage: # Mat() is an alias for MatrixSpace():
    sage: MS = Mat(RealField(12),2) 
-   sage: MS; MS.basis()
+   sage: print MS; MS.basis()
 
    Full MatrixSpace of 2 by 2 dense matrices over Real Field with 12 bits
    of precision
@@ -296,7 +305,7 @@ Mając do dyspozycji taką przestrzeń, można tworzyć macierze jako jej instan
    sage: MS23 = Mat(QQ,2,3)
    sage: A = MS22([1,2,3,4])
    sage: B = MS23([1,2,3,4,5,6])
-   sage: A, B, A*B # macierze A i B oraz iloczyn AB
+   sage: A, B, A*B # matrices A, B and the product AB
 
    (
    [1 2]  [1 2 3]  [ 9 12 15]
@@ -312,7 +321,7 @@ jako metody przynależnej klasie macierzy:
    sage: MS34 = Mat(QQ,3,4)
    sage: A = MS33.matrix(range(9))
    sage: B = MS34.matrix(range(12))
-   sage: A, B, A*B # macierze A i B oraz iloczyn AB
+   sage: A, B, A*B # matrices A, B and the product AB
 
    (
    [0 1 2]  [ 0  1  2  3]  [ 20  23  26  29]
@@ -433,10 +442,10 @@ Na tej zasadzie można wydobyć jakiś element wektora albo wiersz, kolumnę bą
 .. code-block:: python
 
    sage: v = vector([-1, 5, 3, -4, 8])
-   sage: print 'Wektor v i jego wybrane elementy:', '\n'
+   sage: print 'Vector v and its selected elements:', '\n'
    sage: print 'v =', v, '\n\nv[0] =', v[0], '  v[4] =', v[4]
 
-   Wektor v i jego wybrane elementy:
+   Vector v and its selected elements:
 
    v = (-1, 5, 3, -4, 8) 
 
@@ -445,15 +454,15 @@ Na tej zasadzie można wydobyć jakiś element wektora albo wiersz, kolumnę bą
 .. code-block:: python
 
    sage: A = matrix([[0,2,4,6],[1,3,5,7],[2,4,6,8]])
-   sage: print 'Wybrany wiersz, kolumna i elementy:'
-   sage: print '\n1. wiersz  =', A.row(1),\
-   ...         '\n0. kolumna =', A.column(0)
+   sage: print 'Selected row, column and elements:'
+   sage: print '\n1. row  =', A.row(1),\
+               '\n0. column =', A.column(0)
    sage: print '\nA[0,0] =', A[0,0], '  A[1,3] =', A[1,3], '  A[2,2] =', A[2,2]
 
-   Wybrany wiersz, kolumna i elementy:
+   Selected row, column and elements:
 
-   1. wiersz  = (1, 3, 5, 7) 
-   0. kolumna = (0, 1, 2)
+   1. row  = (1, 3, 5, 7) 
+   0. column = (0, 1, 2)
 
    A[0,0] = 0   A[1,3] = 7   A[2,2] = 6
 
@@ -499,11 +508,11 @@ to wycinanie daje następujące wyniki:
 
    sage: M = matrix(4,5,range(20))
 
-   # Wycinanie daje macierz złożoną z:
-   sage: A = M[1:3]     # wierszy 1., 2.
-   sage: B = M[:,2:5]   # kolumn 2., 3., 4.
-   sage: C = M[1:3,2:5] # elementów wierszy 1., 2. i kolumn 2., 3., 4.
-   sage: D = M[1:,::2]  # elementów wierszy 1., 2., 3. i kolumn 0., 2., 4.
+   # Slicing yields a matrix composed of:
+   sage: A = M[1:3]     # rows 1., 2.
+   sage: B = M[:,2:5]   # columns 2., 3., 4.
+   sage: C = M[1:3,2:5] # elements of rows 1., 2. and columns 2., 3., 4.
+   sage: D = M[1:,::2]  # elements of rows 1., 2., 3. and columns 0., 2., 4.
 
    sage: print M
    sage: A, B, C, D
@@ -534,7 +543,9 @@ to wycinanie daje następujące wyniki:
 .. code-block:: python
 
    sage: A = random_matrix(ZZ,3,4); print A, '\n'
-   sage: A[0]; type(A[0]); A.row(0); type(A.row(0)); A[0,:]; type(A[0,:])
+   sage: print A[0]; print type(A[0])
+   sage: print A.row(0); print type(A.row(0))
+   sage: print A[0,:]; print type(A[0,:])
 
    [ -3   0   1  -3]
    [  1   1   1 -36]
@@ -576,7 +587,7 @@ to wycinanie daje następujące wyniki:
 Operations on Vectors and Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Kombinacja liniowa wektorów.**
+**Linear Combination of vectors.**
 
 Dodawanie :math:`\,n`-elementowych wektorów nad pierścieniem :math:`\,P\ \,`
 i :math:`\,` mnożenie ich przez liczby należące do :math:`\,P\,`
@@ -600,7 +611,7 @@ to jego elementy dane są przez
 tworzą przestrzeń wektorową nad tym ciałem ze względu na dodawanie 
 i mnożenie przez liczby z :math:`\,K.` :math:`\\`
 
-**Iloczyn skalarny wektorów.**
+**Dot Product of vectors.**
 
 Iloczyn skalarny dwóch wektorów o tej samej długości równa się z definicji
 sumie iloczynów odpowiednich elementów, :math:`\,` jest więc liczbą 
@@ -617,12 +628,12 @@ Przykład kombinacji liniowej i iloczynu skalarnego wektorów:
 
    sage: x = vector([-1,2,5])
    sage: y = vector([3,0,4])
-   # Kombinacja liniowa w wektorów x, y o współczynnikach 3, -2:
+   # Linear combination w of vectors x, y with coefficients 3, -2:
    sage: w = 3*x-2*y  
-   # Iloczyn skalarny p wektorów x, y:  
+   # Dot product p of vectors x, y:  
    sage: p = x*y
-   sage: html.table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]])
-   sage: html.table([[x,'$\cdot$',y,'=',p]])
+   sage: show(table([[3,'$\cdot$',x,'-',2,'$\cdot$',y,'=',w]]))
+   sage: show(table([[x,'$\cdot$',y,'=',p]]))
 
 :math:`\begin{array}{ccccccccc}
 3 & \cdot & \left(-1,\,2,\,5\right) & - & 2 & \cdot & \left(3,\,0,\,4\right) & = & 
@@ -641,14 +652,14 @@ przez jednokolumnową macierz otrzymaną z wektora :math:`\,y:`
    sage: x = matrix(1,3,[-1,2,5])
    sage: y = matrix(3,1,[3,0,4])
    sage: p = x*y
-   sage: html.table([[x,'$\cdot$',y,'=',p]])
+   sage: table([[x,'$\cdot$',y,'=',p]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{ccc} -1 & 2 & 5 \end{array}\right) & \cdot &
 \left(\begin{array}{c} 3 \\ 0 \\ 4 \end{array}\right) & = & (17)
 \end{array}`
 
-**Iloczyny wektora i macierzy.**
+**Products of a matrix and a vector.**
 
 Jeżeli :math:`\ x\ ` jest wektorem :math:`\,n`-elementowym, :math:`\ `
 a :math:`\ \,A\ ` - :math:`\ ` macierzą kwadratową stopnia :math:`\,n:`
@@ -686,8 +697,8 @@ Sprawdźmy to na przykładzie:
    sage: x = vector(range(3))
    sage: A = matrix(3,range(9))
    sage: v = x*A; w = A*x
-   sage: html.table([[x,'$\cdot$',A,'=',v]])
-   sage: html.table([[A,'$\cdot$',x,'=',w]])
+   sage: show(table([[x,'$\cdot$',A,'=',v]]))
+   sage: show(table([[A,'$\cdot$',x,'=',w]]))
 
 :math:`\begin{array}{ccccc}
 \left(0,\,1,\,2\right) & \cdot & 
@@ -719,9 +730,9 @@ Należy zwrócić uwagę na różnicę w zapisie wektora i macierzy 1-wierszowej
 
 .. code-block:: python
 
-   sage: x = vector([0,1,2]) # wyjściowy wektor
-   sage: xr = x.row()        # macierzowa postać wierszowa
-   sage: xc = x.column()     # macierzowa postać kolumnowa
+   sage: x = vector([0,1,2]) # the original vector
+   sage: xr = x.row()        # the matrix row form
+   sage: xc = x.column()     # the matrix column form
    sage: show((x,xr,xc))
 
 :math:`\left(\quad\left(0,\,1,\,2\right)\,,\quad
@@ -745,8 +756,8 @@ oraz wyświetla poprzednie równania w wersji macierzowej:
    sage: xr = x.row()
    sage: xc = x.column()    
    sage: vr = xr*A; wc = A*xc
-   sage: html.table([[xr,'$\cdot$',A,'=',vr]])
-   sage: html.table([[A,'$\cdot$',xc,'=',wc]])
+   sage: show(table([[xr,'$\cdot$',A,'=',vr]]))
+   sage: show(table([[A,'$\cdot$',xc,'=',wc]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \end{array}\right) & \cdot & 
@@ -769,7 +780,7 @@ Pierwsze równanie można przepisać w postaci kolumnowej poprzez obustronną tr
    sage: xc = x.column()
    sage: At = A.transpose()
    sage: vc = At*xc
-   sage: html.table([[At,'$\cdot$',xc,'=',vc]])
+   sage: table([[At,'$\cdot$',xc,'=',vc]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 3 & 6 \\ 1 & 4 & 7 \\ 2 & 5 & 8 \end{array}\right) &
@@ -779,7 +790,7 @@ Pierwsze równanie można przepisać w postaci kolumnowej poprzez obustronną tr
 
 :math:`\;`
 
-**Iloczyn macierzy.**
+**Product of matrices.**
 
 Sage oczywiście obsługuje mnożenie dowolnych dwóch macierzy o odpowiednio dobranych rozmiarach
 (ilość kolumn pierwszej musi równać się ilości wierszy drugiej):
@@ -789,7 +800,7 @@ Sage oczywiście obsługuje mnożenie dowolnych dwóch macierzy o odpowiednio do
    sage: A = matrix(2,3,range(6))
    sage: B = matrix(3,range(9))
    sage: C = A*B
-   sage: html.table([[A,'$\cdot$',B,'=',C]])
+   sage: table([[A,'$\cdot$',B,'=',C]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 0 & 1 & 2 \\ 3 & 4 & 5 \end{array}\right) & \cdot &
@@ -892,8 +903,8 @@ można poskładać macierz z bloków za pomocą funkcji ``block_matrix()``.
    B1 = block_matrix([[identity_matrix(2),A],[zero_matrix(1,2),zero_matrix(1,2)]])
    B2 = block_matrix([[A],[identity_matrix(2)]])
    
-   html.table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",
-                "$\\quad B1\ \\ast\ B2$"], [B1,"*",B2,"=",B1*B2]])
+   table([["$\\qquad\\quad\ \ B1$","","$\\qquad\ \ B2$","",
+           "$\\quad B1\ \\ast\ B2$"], [B1,"*",B2,"=",B1*B2]])
 
 
 

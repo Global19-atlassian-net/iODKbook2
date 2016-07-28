@@ -40,15 +40,15 @@ oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
 Elimination Method
 ~~~~~~~~~~~~~~~~~~
 
-Sprowadzenie macierzy rozszerzonej do zredukowanej postaci schodkowej:
+Transformation of the augmented matrix to the reduced row echelon form:
 
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1, 3, 0, 2,-1, 2],
-   ...                  [0, 0, 1, 4,-3, 2],
-   ...                  [1, 3, 1, 6,-4, 4]])
+                        [0, 0, 1, 4,-3, 2],
+                        [1, 3, 1, 6,-4, 4]])
    
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
    :label: 09
@@ -141,15 +141,18 @@ stowarzyszonego z nim układu jednorodnego:
 
 .. code-block:: python
 
-   sage: A = matrix(QQ,[[1, 3, 0, 2,-1],[0, 0, 1, 4,-3],[1, 3, 1, 6,-4]])
+   sage: A = matrix(QQ,[[1, 3, 0, 2,-1],
+                        [0, 0, 1, 4,-3],
+                        [1, 3, 1, 6,-4]])
               
    sage: b = vector(QQ,[2,2,4])
    
-   sage: X = A\b   # rozwiązanie szczególne
+   sage: X = A\b   # a particular solution of the original system
 
-   # Wiersze macierzy B0 tworzą bazę przestrzeni rozwiązań układu jednorodnego:
+   # Rows of matrix B0 form a basis of the space of solutions
+   # of the homogeneous system associated with the original one
    sage: B0 = A.right_kernel_matrix()
-   sage: B0 = 2*B0 # aby pozbyć się ułamków
+   sage: B0 = 2*B0 # to get rid of fractions
 
    sage: show((X, B0))
 
@@ -440,8 +443,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
    .. code-block:: python
 
       sage: A = matrix(QQ,[[1, 3, 0, 2,-1],
-      ...                  [0, 0, 1, 4,-3],
-      ...                  [1, 3, 1, 6,-4]])
+                           [0, 0, 1, 4,-3],
+                           [1, 3, 1, 6,-4]])
 
       sage: C = A.rref(); C
 

@@ -441,8 +441,8 @@ można łatwo wyliczyć jako :math:`\ \boldsymbol{R}=\boldsymbol{Q}^T\boldsymbol
 .. code-block:: python
 
    sage: A = matrix(QQ,[[-2,  8,  19],
-   ...                  [-2, 11, -14],
-   ...                  [ 1, -7,  -8]])
+                        [-2, 11, -14],
+                        [ 1, -7,  -8]])
    
    sage: P,Q = copy(A),copy(A)
    
@@ -453,13 +453,13 @@ można łatwo wyliczyć jako :math:`\ \boldsymbol{R}=\boldsymbol{Q}^T\boldsymbol
    sage: Q[:,1] = P[:,1]/P[:,1].norm()
    
    sage: P[:,2] = A[:,2] - Q.column(0)*A.column(2)*Q[:,0]\
-   ...                   - Q.column(1)*A.column(2)*Q[:,1]
+                         - Q.column(1)*A.column(2)*Q[:,1]
    
    sage: Q[:,2] = P[:,2]/P[:,2].norm()
    
    sage: R = Q.T*A
    
-   sage: html.table([['$A$','','$Q$','','$R$'],[A,'=',Q,'*',R]])
+   sage: table([['$A$','','$Q$','','$R$'],[A,'=',Q,'*',R]])
 
 .. math::
    

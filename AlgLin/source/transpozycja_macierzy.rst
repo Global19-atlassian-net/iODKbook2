@@ -196,7 +196,7 @@ w postaci sumy macierzy symetrycznej i macierzy antysymetrycznej.
    sage: As = (A + A.T)/2 
    sage: Aa = (A - A.T)/2
 
-   sage: html.table([[A, '=', As, '+', Aa]])
+   sage: show(table([[A, '=', As, '+', Aa]]))
    sage: (As.is_symmetric(), Aa.is_skew_symmetric())
 
 .. math::

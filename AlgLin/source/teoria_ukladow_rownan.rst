@@ -66,13 +66,13 @@ Rząd macierzy określa bezpośrednio funkcja ``rank()``:
 .. code-block:: python
 
    sage: A = matrix(QQ,[[2, 3, 5,-3,-2],
-   ...                  [3, 4, 3,-1,-3],
-   ...                  [5, 6,-1, 3,-5]])
+                        [3, 4, 3,-1,-3],
+                        [5, 6,-1, 3,-5]])
 
    sage: rz_A = A.rank()
-   sage: print "Rząd macierzy A wynosi", rz_A
+   sage: print "Rank of the matrix A is", rz_A
    
-   Rząd macierzy A wynosi 2
+   Rank of the matrix A is 2
 
 Metody ``row_space()`` i ``column_space()`` tworzą przestrzeń rozpiętą na wierszach :math:`\\`
 i na kolumnach macierzy, :math:`\,` podczas gdy ``dimension()`` daje wymiar przestrzeni:
@@ -81,17 +81,17 @@ i na kolumnach macierzy, :math:`\,` podczas gdy ``dimension()`` daje wymiar prze
 
    sage: Vrow = A.row_space()
    sage: Vcol = A.column_space()
-   sage: print "Wymiar przestrzeni wierszowej macierzy A:", Vrow.dimension()
-   sage: print "Wymiar przestrzeni kolumnowej macierzy A:", Vcol.dimension()
+   sage: print "Dimension of the row space of matrix A:", Vrow.dimension()
+   sage: print "Dimension of the column space of matrix A:", Vcol.dimension()
 
-   Wymiar przestrzeni wierszowej macierzy A: 2
-   Wymiar przestrzeni kolumnowej macierzy A: 2
+   Dimension of the row space of matrix A: 2
+   Dimension of the column space of matrix A: 2
 
 W zredukowanej postaci schodkowej macierz :math:`\,\boldsymbol{A}\,` ma dwie jedynki wiodące:
 
 .. code-block:: python
 
-   sage: html.table([["A", "=", A, '$\\rightarrow$', A.rref()]])
+   sage: table([["A", "=", A, '$\\rightarrow$', A.rref()]])
 
 .. math::
 
@@ -290,26 +290,34 @@ oraz rozwiązać ogólnie stowarzyszony z nim układ jednorodny.
 Systems of Linear Equations in Sage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Zgodnie z Twierdzeniem 3., :math:`\,` rozwiązanie układu równań liniowych o postaci macierzowej
+According to Theorem 3., :math:`\,` the solution of a system of linear equations
 
 .. math::
    
    \boldsymbol{A}\,\boldsymbol{x}\,=\,\boldsymbol{b}
 
-gdzie :math:`\,\boldsymbol{A}\,\in M_{m\times n}(K)\,`
-oraz :math:`\,\boldsymbol{b}\in K^m,\ `
-może przebiegać w dwóch etapach:
+where :math:`\,\boldsymbol{A}\,\in M_{m\times n}(K)\,`
+and :math:`\,\boldsymbol{b}\in K^m,\ `
+may be obtained in two stages:
 
-* wyznaczenie jakiegoś szczególnego rozwiązania układu;
-* ogólne rozwiązanie układu jednorodnego z nim stowarzyszonego.
+1. :math:`\,` finding a particular solution of the system;
+2. :math:`\,` calculation of the general solution of the homogeneous system 
+   associated with the original one.
 
-Można w tym celu wykorzystać metody przynależne klasie macierzy w systemie Sage:
+.. Można w tym celu wykorzystać metody przynależne 
+   klasie macierzy w systemie Sage:
 
-* ``A.solve_right(b)`` albo w skrócie ``A\b`` daje szczególne rozwiązanie układu;
-* ``A.right_kernel_matrix()`` zwraca macierz, której wiersze tworzą
+To this end the two methods in Sage may be used:
+
+* ``A.solve_right(b)`` or in short ``A\b`` 
+  yields a particular solution of the system;
+* ``A.right_kernel_matrix()`` returns a matrix, whose rows form basis of the 
+  space :math:`\,S_0\,` of solutions of the associated homogeneous system.
+
+.. zwraca macierz, której wiersze tworzą
   bazę przestrzeni :math:`\,S_0\,` rozwiązań stowarzyszonego układu jednorodnego. :math:`\\`
 
-**Przykład.** :math:`\,` Rozważmy układ równań nad ciałem liczb wymiernych :math:`\,Q:`
+**Example.** :math:`\,` Consider the system over rational field :math:`\,Q:`
 
 .. math::
    
@@ -322,16 +330,16 @@ Można w tym celu wykorzystać metody przynależne klasie macierzy w systemie Sa
 .. code-block:: python
    
    sage: A = matrix(QQ,[[3,-2, 5, 4],
-   ...                  [6,-4, 4, 3],
-   ...                  [9,-6, 3, 2]]
+                        [6,-4, 4, 3],
+                        [9,-6, 3, 2]])
                
    sage: b = vector(QQ,[2,3,4])
 
-   # Rozwiązanie szczególne:
+   # A particular solution:
    sage: X = A.solve_right(b)
 
-   # Wiersze macierzy B0 tworzą bazę
-   # przestrzeni rozwiązań układu jednorodnego:
+   # Rows of the matrix B0 form basis of the space 
+   # of solutions of the homogeneous system:
    sage: B0 = A.right_kernel_matrix()    
                                
    sage: show((X, B0))
@@ -346,7 +354,7 @@ Można w tym celu wykorzystać metody przynależne klasie macierzy w systemie Sa
 
 .. code-block:: python
    
-   sage: # Sprawdzenie wyników:
+   sage: # Verification of the results:
    sage: A*X==b, A*B0.transpose()==zero_matrix(QQ,3,2)
 
    (True, True)

@@ -10,24 +10,31 @@ Ten sam efekt można osiągnąć, zastępując operacje elementarne na równania
 Augmented Matrix of a System of Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dla układu :math:`\,m\,` równań o :math:`\,n\,` niewiadomych:
+For a system of :math:`\,m\,` linear equations with :math:`\,n\,` unknowns:
 
 .. math::
    :label: 01
 
    \begin{array}{c}
-      a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
-      a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
-      \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots    \\
-      a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ b_m
+   a_{11}\,x_1\; + \ \,a_{12}\,x_2\; + \ \,\ldots\  + \ \;a_{1n}\,x_n \ \, = \ \ b_1 \\
+   a_{21}\,x_1\; + \ \,a_{22}\,x_2\; + \ \,\ldots\  + \ \;a_{2n}\,x_n \ \, = \ \ b_2 \\
+   \quad\,\ldots\qquad\quad\ldots\qquad\ \,\ldots\qquad\ \ \ldots\qquad\ \ \,\ldots  \\
+   a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ b_m
    \end{array}
 
-gdzie współczynniki :math:`\,a_{ij}\,` 
-oraz wolne wyrazy :math:`\,b_i\ \ (i=1,2,\ldots,m;\ j=1,2,\ldots,n)\,`
-należą do pewnego ciała :math:`\,K,\,`
-definiujemy :math:`\,` *macierz współczynników* :math:`\,\boldsymbol{A},\ \ `
-*kolumnę wolnych wyrazów* :math:`\,\boldsymbol{b}\ \,` i :math:`\ `
-*kolumnę niewiadomych* :math:`\,\boldsymbol{x}:`
+.. gdzie współczynniki :math:`\,a_{ij}\,` 
+   oraz wolne wyrazy :math:`\,b_i\ \ (i=1,2,\ldots,m;\ j=1,2,\ldots,n)\,`
+   należą do pewnego ciała :math:`\,K,\,`
+   definiujemy :math:`\,` *macierz współczynników* :math:`\,\boldsymbol{A},\ \ `
+   *kolumnę wolnych wyrazów* :math:`\,\boldsymbol{b}\ \,` i :math:`\ `
+   *kolumnę niewiadomych* :math:`\,\boldsymbol{x}:`
+
+where coefficients :math:`\,a_{ij}\,` and constants
+:math:`\,b_i\ \ (i=1,2,\ldots,m;\ j=1,2,\ldots,n)\,` 
+belong to a field :math:`\,K,\,` we define
+:math:`\,` *coefficient matrix* :math:`\,\boldsymbol{A},\ \ `
+*column vector of constants* :math:`\,\boldsymbol{b}\ \,` and :math:`\ `
+*column vector of unknowns* :math:`\,\boldsymbol{x}:` 
 
 .. math::
 
@@ -37,28 +44,48 @@ definiujemy :math:`\,` *macierz współczynników* :math:`\,\boldsymbol{A},\ \ `
                            \ldots & \ldots & \ldots & \ldots \\
                            a_{m1} & a_{m2} & \ldots & a_{mn}
                         \end{array}\right]\,,\qquad
-   \boldsymbol{b}\,=\,\left[\begin{array}{c} b_{1} \\ b_{2} \\ \ldots \\ b_{m} \end{array}\right]\,,\qquad
-   \boldsymbol{x}\,=\,\left[\begin{array}{c} x_{1} \\ x_{2} \\ \ldots \\ x_{n} \end{array}\right]\,.
+   \boldsymbol{b}\,=\,\left[\begin{array}{c} 
+                         b_{1} \\ b_{2} \\ \ldots \\ b_{m} 
+                      \end{array}\right]\,,\qquad
+   \boldsymbol{x}\,=\,\left[\begin{array}{c} 
+                         x_{1} \\ x_{2} \\ \ldots \\ x_{n} 
+                      \end{array}\right]\,.
 
-Układ :eq:`01` można wtedy zapisać zwięźle jako
+.. Układ :eq:`01` można wtedy zapisać zwięźle jako
+
+Then system :eq:`01` may be rewritten succinctly as
 
 .. math::
    :label: 02
 
    \boldsymbol{A}\,\boldsymbol{x}\,=\,\boldsymbol{b}.
 
-Gdy wszystkie wolne wyrazy znikają: :math:`\ \boldsymbol{b} = \boldsymbol{0},\ ` 
-układ równań jest *jednorodny*. Jednorodny układ równań
+.. Gdy wszystkie wolne wyrazy znikają: 
+   :math:`\ \boldsymbol{b} = \boldsymbol{0},\ ` 
+   układ równań jest *jednorodny*. Jednorodny układ równań
+
+When all constants vanish: :math:`\ \boldsymbol{b} = \boldsymbol{0},\ `
+the system of equations is *homogeneous*. The homogeneous system
 
 .. math::
 
    \boldsymbol{A}\,\boldsymbol{x}\ =\ \boldsymbol{0}
 
-jest :math:`\,` *stowarzyszony* :math:`\,` z niejednorodnym układem :eq:`02`.
+.. jest :math:`\,` *stowarzyszony* :math:`\,` z niejednorodnym układem :eq:`02`.
 
-Dwa układy równań są :math:`\,` *równoważne*, :math:`\,` gdy mają ten sam zbiór rozwiązań. :math:`\\`
+is *associated* with the unhomogeneous system :eq:`02`.
 
-Dla układu :eq:`01` definiujemy również :math:`\,` *macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
+.. Dwa układy równań są :math:`\,` *równoważne*, :math:`\,` 
+   gdy mają ten sam zbiór rozwiązań. :math:`\\`
+
+Two systems of equations are *equivalent*, :math:`\,` 
+when they possess the same set of solutions.
+
+.. Dla układu :eq:`01` definiujemy również :math:`\,` 
+   *macierz rozszerzoną* :math:`\ \boldsymbol{B}\,:`
+
+We define also the *augmented matrix* :math:`\ \boldsymbol{B}\,`
+of the system :eq:`01`:
 
 .. math::
 
@@ -70,15 +97,24 @@ Dla układu :eq:`01` definiujemy również :math:`\,` *macierz rozszerzoną* :ma
                                 a_{m1} & a_{m2} & \ldots & a_{mn} & b_m
                           \end{array}\right]\,.
 
-Podanie macierzy :math:`\ \boldsymbol{B}\,`
-określa całkowicie układ równań :eq:`01`,
-a operacjom elementarnym na równaniach odpowiadają 
-analogiczne operacje na wierszach tej macierzy:
+.. Podanie macierzy :math:`\ \boldsymbol{B}\,`
+   określa całkowicie układ równań :eq:`01`,
+   a operacjom elementarnym na równaniach odpowiadają 
+   analogiczne operacje na wierszach tej macierzy:
 
-#. przestawienie dwóch wierszy,
-#. pomnożenie dowolnego wiersza przez liczbę różną od zera,
-#. | dodanie do jednego z wierszy dowolnej wielokrotności innego wiersza
-   | (w szczególności: :math:`\,` dodanie bądź odjęcie dwóch wierszy).
+The augmented matrix :math:`\ \boldsymbol{B}\,` determines completely 
+system of equations :eq:`01` and the elementary operations on equations
+correspond to the row operations:
+
+1. :math:`\,` swap the positions of two rows
+2. :math:`\,` multiplication of a row by a nonzero scalar
+3. :math:`\,` addition to one row a scalar multiple of another
+   (in particular addition or subtraction of two different rows).
+
+.. #. przestawienie dwóch wierszy,
+   #. pomnożenie dowolnego wiersza przez liczbę różną od zera,
+   #. | dodanie do jednego z wierszy dowolnej wielokrotności innego wiersza
+      | (w szczególności: :math:`\,` dodanie bądź odjęcie dwóch wierszy).
 
 Przekształcenia te dają układ równoważny wyjściowemu.
 Operacje elementarne na kolumnach macierzy :math:`\,\boldsymbol{B}\,`
@@ -384,50 +420,50 @@ Program, wykonujący krok po kroku te operacje, przedstawia się następująco:
 
 .. code-block:: python
 
-   sage: A = matrix(QQ,[[2,-1,-1],      # macierz współczynników
-   ...                  [3, 4,-2],
-   ...                  [3,-2, 4]])
+   sage: A = matrix(QQ,[[2,-1,-1],      # the coefficient matrix
+                        [3, 4,-2],
+                        [3,-2, 4]])
 
-   sage: b = vector([4,11,11])          # wektor wolnych wyrazów
+   sage: b = vector([4,11,11])          # the vector of constants
 
-   sage: B = A.augment(b)               # macierz rozszerzona
+   sage: B = A.augment(b)               # compose the augmented matrix
                                         
-   sage: B.add_multiple_of_row(2,1,-1)  # od trzeciego wiersza odejmij drugi
+   sage: B.add_multiple_of_row(2,1,-1)  # from the third row subtract the second
                                         
-   sage: B.add_multiple_of_row(1,0,-1)  # od drugiego wiersza odejmij pierwszy
-   sage: B.rescale_row(2,-1/6)          # trzeci wiersz podziel przez -6
+   sage: B.add_multiple_of_row(1,0,-1)  # from the second row subtract the first
+   sage: B.rescale_row(2,-1/6)          # third row divide by -6
                                         
-   sage: B.add_multiple_of_row(0,1,-2)  # od pierwszego wiersza odejmij podwojony drugi
+   sage: B.add_multiple_of_row(0,1,-2)  # from first row subtract doubled second 
                                         
-   sage: B.swap_rows(0,1)               # przestaw wiersz pierwszy z drugim
-   sage: B.swap_rows(1,2)               # przestaw wiersz drugi z trzecim 
+   sage: B.swap_rows(0,1)               # swap first and second rows
+   sage: B.swap_rows(1,2)               # swap second and third rows 
                                         
-   sage: B.add_multiple_of_row(2,1,11)  # do trzeciego wiersza dodaj drugi 
-                                        # pomnożony przez 11
+   sage: B.add_multiple_of_row(2,1,11)  # to third row add the second 
+                                        # multiplied by 11
                                         
-   sage: B.rescale_row(2,-1/10)         # trzeci wiersz podziel przez -10
+   sage: B.rescale_row(2,-1/10)         # third row divide by -10
                                         
-   sage: B.add_multiple_of_row(0,2,1)   # do pierwszego wiersza dodaj trzeci
-   sage: B.add_multiple_of_row(1,2,1)   # do drugiego wiersza dodaj trzeci
+   sage: B.add_multiple_of_row(0,2,1)   # to  the first row add the third
+   sage: B.add_multiple_of_row(1,2,1)   # to the second row add the third
                                         
-   sage: B.add_multiple_of_row(0,1,-5)  # od pierwszego wiersza odejmij drugi 
-                                        # pomnożony przez 5
+   sage: B.add_multiple_of_row(0,1,-5)  # from the first row subtract the second 
+                                        # multiplied by 5
 
-   sage: B                              # pokaż przekształconą macierz B
+   sage: B                              # display the transformed matrix B
 
 Funkcja ``rref()`` daje wynik bezpośrednio:
 
 .. code-block:: python
 
-   sage: A = matrix(QQ,[[2,-1,-1],      # macierz współczynników
-   ...                  [3, 4,-2],
-   ...                  [3,-2, 4]])
+   sage: A = matrix(QQ,[[2,-1,-1],  # the coefficient matrix
+                        [3, 4,-2],
+                        [3,-2, 4]])
 
-   sage: b = vector([4,11,11])          # wektor wolnych wyrazów
+   sage: b = vector([4,11,11])      # the vector of constants
 
-   sage: B = A.augment(b)               # macierz rozszerzona   
+   sage: B = A.augment(b)           # compose the augmented matrix
 
-   sage: B.rref()                       # pokaż zredukowaną schodkową postać macierzy B
+   sage: B.rref()                   # display the transformed matrix B
 
    [1 0 0 3]
    [0 1 0 1]
@@ -498,10 +534,10 @@ Macierz rozszerzoną przekształcamy od razu do zredukowanej postaci schodkowej:
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1,-1, 2,-1, 1],
-   ...                  [2,-3,-1, 1,-1],
-   ...                  [1, 0, 7,-4, 4]])
+                        [2,-3,-1, 1,-1],
+                        [1, 0, 7,-4, 4]])
 
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
 
@@ -664,10 +700,10 @@ Po przekształceniu macierzy rozszerzonej do zredukowanej postaci schodkowej:
 .. code-block:: python
 
    sage: B = matrix(QQ,[[1,-1, 2,-1, 0],
-   ...                  [2,-3,-1, 1, 0],
-   ...                  [1, 0, 7,-4, 0]])
+                        [2,-3,-1, 1, 0],
+                        [1, 0, 7,-4, 0]])
 
-   sage: html.table([[B, '$\\rightarrow$', B.rref()]])
+   sage: table([[B, '$\\rightarrow$', B.rref()]])
 
 .. math::
 

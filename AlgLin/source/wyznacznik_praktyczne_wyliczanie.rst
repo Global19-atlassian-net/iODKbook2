@@ -417,12 +417,14 @@ W systemie Sage wyznacznik zadanej macierzy kwadratowej można wyliczyć stosuj�
 .. code-block:: python
    
    sage: A = matrix(QQ,[[ 2,-5, 1, 2],
-   ...                  [-3, 7,-1, 4],
-   ...                  [ 5,-9, 2, 7],
-   ...                  [ 4,-6, 1, 2]])
+                        [-3, 7,-1, 4],
+                        [ 5,-9, 2, 7],
+                        [ 4,-6, 1, 2]])
 
    sage: det_A  = A.determinant()
-   sage: det_At = A.T.det()     # skrócone oznaczenia transpozycji i wyznacznika
+
+   # Shorthand notation for transposition and determinant:
+   sage: det_At = A.T.det()
 
    sage: print "det A =", det_A; det_A==det_At
 

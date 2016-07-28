@@ -70,11 +70,11 @@ odpowiedniej dla unitarnej przestrzeni :math:`\,C^n\ \,`
    sage: y = vector([1+I,2,-3*I])
    sage: xdy  = x.dot_product(y)
    sage: xhy = x.hermitian_inner_product(y)
-   sage: print "Błędny wynik:     ", xdy
-   sage: print "Poprawny wynik:", xhy
+   sage: print "Erroneous result: ", xdy
+   sage: print "Correct result:", xhy
 
-   Błędny wynik:      I - 4
-   Poprawny wynik: -7*I + 6
+   Erroneous result:  I - 4
+   Correct result: -7*I + 6
 
 Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej ogólnie
 
@@ -129,9 +129,9 @@ Przestawienie czynników daje więc inny wynik
 .. code-block:: python
 
    sage: C= matrix(QQ,[[ 2,-1, 0, 3],
-   ...                 [ 4,-2, 1,-1],
-   ...                 [ 4, 1, 2,-5],
-   ...                 [-3, 0, 2, 0]])
+                       [ 4,-2, 1,-1],
+                       [ 4, 1, 2,-5],
+                       [-3, 0, 2, 0]])
    
    sage: A = C.T*C
    
@@ -147,14 +147,14 @@ Przestawienie czynników daje więc inny wynik
    sage: test_xy = xiy==(x.row()*A*y.column())[0,0]
    sage: test_yx = yix==(y.row()*x.column())[0,0]    
    
-   sage: print "Iloczyn skalarny z macierzą A: <x,y> =",\
-   ...   xiy, test_xy
+   sage: print "Scalar product with the matrix A: <x,y> =",\
+         xiy, test_xy
    
-   sage: print "Zwykły iloczyn skalarny:       <y,x> = ",\
-   ...   yix, test_yx
+   sage: print "The generic scalar product:       <y,x> = ",\
+         yix, test_yx
 
-   Iloczyn skalarny z macierzą A: <x,y> = -55 True
-   Zwykły iloczyn skalarny:       <y,x> =  -7 True
+   Scalar product with the matrix A: <x,y> = -55 True
+   The generic scalar product:       <y,x> =  -7 True
 
 Norm
 ~~~~
@@ -198,11 +198,11 @@ przy czym domyślną wartością parametru :math:`\,p\ ` jest 2, co odpowiada no
 
 .. sagecellserver::
   
-   sage: n = 3
-   sage: p = 4
-   sage: x = vector([var('x%d' % k) for k in range(1,n+1)])
-   sage: show(norm(x))
-   sage: show(x.norm(p))
+   n = 3
+   p = 4
+   x = vector([var('x%d' % k) for k in range(1,n+1)])
+   show(norm(x))
+   show(x.norm(p))
 
 :math:`\;`
 
@@ -249,13 +249,13 @@ Iloczyny skalarne i normy wektorów zespolonych.
 
 .. sagecellserver::
    
-   sage: x = vector(CDF,[1-2*I,3*I,-4,-1+I])
+   x = vector(CDF,[1-2*I,3*I,-4,-1+I])
 
-   # Trzy równoważne polecenia dla normy euklidesowej:
-   sage: print (norm(x), x.norm(), x.norm(2)), '\n'
+   # Three equivalent statements for the Euclidean norm:
+   print (norm(x), x.norm(), x.norm(2)), '\n'
 
-   # Przykłady norm egzotycznych:
-   sage: print (x.norm(1), x.norm(5), x.norm(pi/2), x.norm(Infinity))
+   # A few exemplary exotic norms:
+   print (x.norm(1), x.norm(5), x.norm(pi/2), x.norm(Infinity))
 
 .. (5.65685424949, 5.65685424949, 5.65685424949) 
 
@@ -263,17 +263,17 @@ Iloczyny skalarne i normy wektorów zespolonych.
 
 .. sagecellserver::
 
-   sage: x = vector(CDF,[1-2*I,3*I,-4,-1+I])
-   sage: y = vector(CDF,[-2,2-I,1,3+2*I])
+   x = vector(CDF,[1-2*I,3*I,-4,-1+I])
+   y = vector(CDF,[-2,2-I,1,3+2*I])
 
-   sage: # Sprawdzenie nierówności Schwarza:
-   sage: print abs(x.hermitian_inner_product(y)) <= norm(x)*norm(y)
-   sage: print abs(x.hermitian_inner_product(y)), '<=', \
-   ...   norm(x), '*', norm(y), '=', norm(x)*norm(y), '\n' 
+   # Verification of the Schwarz inequality:
+   print abs(x.hermitian_inner_product(y)) <= norm(x)*norm(y)
+   print abs(x.hermitian_inner_product(y)), '<=', \
+         norm(x), '*', norm(y), '=', norm(x)*norm(y), '\n' 
 
-   sage: # Sprawdzenie nierówności trójkąta:
-   sage: print norm(x+y) <= norm(x)+norm(y)    
-   sage: print norm(x+y), '<=', norm(x), '+', norm(y), '=', norm(x)+norm(y)
+   # Verification of the triangle inequality:
+   print norm(x+y) <= norm(x)+norm(y)    
+   print norm(x+y), '<=', norm(x), '+', norm(y), '=', norm(x)+norm(y)
    
 .. True
    18.0277563773 <= 5.65685424949 * 4.79583152331 = 27.1293199325 
@@ -285,29 +285,27 @@ Różne normy macierzy kwadratowej i prostokątnej:
 
 .. sagecellserver::
 
-   sage: A = matrix(RR, [[13,-4],
-   ...                   [-4, 7]])
+   A = matrix(RR, [[13,-4],
+                   [-4, 7]])
    
-   sage: A.norm(1), A.norm(2), A.norm('frob'), A.norm(Infinity)
+   A.norm(1), A.norm(2), A.norm('frob'), A.norm(Infinity)
 
 .. (17.0, 15.0, 15.8113883008, 17.0)
 
 .. sagecellserver::
 
-   sage: A = matrix(QQbar, [[ 1, 2, 4,  3],
-   ...                      [-1, 0, 3,-10]])
+   A = matrix(QQbar, [[ 1, 2, 4,  3],
+                      [-1, 0, 3,-10]])
    
-   sage: print (A.norm(1),A.norm(2),A.norm('frob'),A.norm(Infinity)),'\n'
+   print (A.norm(1),A.norm(2),A.norm('frob'),A.norm(Infinity)),'\n'
    
-   # Sprawdzenie normy euklidesowej (p=2):
-   sage: ATA = A.T*A
-   sage: max([sqrt(lambda2) for lambda2 in ATA.eigenvalues()])
+   # Verification of the Euclidean norm (p=2):
+   ATA = A.T*A
+   max([sqrt(lambda2) for lambda2 in ATA.eigenvalues()])
 
 .. (13.0, 10.6903311292, 11.8321595662, 14.0) 
 
    10.690331129154468?
-
-:math:`\;`
 
 Dla liczb zespolonych jako wektorów przestrzeni :math:`\,C^1,\ ` naturalną normą jest moduł:
 
@@ -376,15 +374,15 @@ Następujące metody testują określone własności macierzy, a mianowicie:
 .. code-block:: python
    
    sage: A = matrix(3,[ 1+I, 2-3*I, -1+2*I,
-   ...                 -3+I,   4*I, -2-4*I,
-   ...                  4-I,    -I,  1+3*I])
+                       -3+I,   4*I, -2-4*I,
+                        4-I,    -I,  1+3*I])
    
-   sage: html.table([["Sprzężenie hermitowskie:"],
-   ...               [A, '$\\rightarrow$', A.H]])
+   sage: show(table([["Hermitian conjugation:"],
+                     [A, '$\\rightarrow$', A.H]]))
    
    sage: A.is_hermitian(), (A.H*A).is_hermitian()
 
-:math:`\qquad` Sprzężenie hermitowskie:
+:math:`\qquad` Hermitian conjugation:
 
 :math:`\\ \left(\begin{array}{rrr} 
 i+1 & -\,3\,i+2 & 2\,i-1 \\ i-3 & 4\,i & -\,4\,i-2 \\ -\,i+4 & -\,i & 3\,i+1
@@ -395,39 +393,6 @@ i+1 & -\,3\,i+2 & 2\,i-1 \\ i-3 & 4\,i & -\,4\,i-2 \\ -\,i+4 & -\,i & 3\,i+1
 \end{array}\right)`
 
 (False, True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
