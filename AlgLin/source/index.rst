@@ -155,6 +155,17 @@ Przestrzenie unitarne
    p_unitarne_operatory_normalne
    p_unitarne_zadania
 
+Diagonalizacja macierzy
+=======================
+
+.. toctree::
+   
+   diagonalizacja_macierz_operator
+   diagonalizacja_podobienstwo
+   diagonalizacja_macierzy
+   diagonalizacja_przyklady
+   diagonalizacja_zadania
+
 Dowody wybranych twierdzeń
 ==========================
 
