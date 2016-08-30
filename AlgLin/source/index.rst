@@ -176,6 +176,17 @@ Unitary Spaces
    p_unitarne_operatory_normalne
    p_unitarne_zadania
 
+Diagonalization of Matrices
+===========================
+
+.. toctree::
+   
+   diagonalizacja_macierz_operator
+   diagonalizacja_podobienstwo
+   diagonalizacja_macierzy
+   diagonalizacja_przyklady
+   diagonalizacja_zadania
+
 Proofs of Selected Theorems
 ===========================
 
