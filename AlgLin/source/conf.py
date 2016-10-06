@@ -227,7 +227,7 @@ u'Lectures on Linear Algebra', u'J.A. \& M.K.', 'manual')]
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [('index', 'AlgLin', u'Lectures on Linear Algebra',
-     [u'M.K. \& J.A.'], 1)]
+     [u'J,A. \& M.K.'], 1)]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
@@ -239,7 +239,7 @@ man_pages = [('index', 'AlgLin', u'Lectures on Linear Algebra',
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'AlgLin', u'Lectures on Linear Algebra',
-   u'M.K. \& J.A.', 'AlgLin', 'One line description of project.',
+   u'J.A. \& M.K.', 'AlgLin', 'One line description of project.',
    'Miscellaneous')]
 
 # Documents to append as an appendix to all manuals.

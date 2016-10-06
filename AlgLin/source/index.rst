@@ -40,7 +40,7 @@ Algebra of Matrices
 ===================
 
 | *Matrix as a rectangular layout of elements from a field.*
-| *Matrix addition and matrix multiplication by a scalar.*
+| *Matrix addition and scalar multiplication.*
 | *The* :math:`\,m\times n\,` *matrices over a field* :math:`K` 
   *form the vector space over* :math:`K`.
 | *Row and column rules defining product of two matrices.*
@@ -49,10 +49,10 @@ Algebra of Matrices
 .. toctree::
    :maxdepth: 2
 
-   algebra_macierzy_dzialania
-   algebra_macierzy_wlasnosci_dzialan
-   algebra_macierze_w_sage
-   algebra_macierzy_zadania
+   algebra_of_matrices_operations
+   algebra_of_matrices_properties
+   algebra_of_matrices_Sage
+   algebra_of_matrices_problems
 
 Operations upon Matrices
 ========================
