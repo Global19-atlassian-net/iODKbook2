@@ -87,6 +87,14 @@ Wyznaczniki
    wyznacznik_praktyczne_wyliczanie
    wyznacznik_zastosowania
 
+Iloczyn tensorowy macierzy
+==========================
+
+.. toctree::
+   
+   iloczyn_tensorowy_wlasnosci
+   iloczyn_tensorowy_zadania
+
 Teoria i praktyka układów równań liniowych
 ==========================================
 

@@ -1,19 +1,16 @@
 .. -*- coding: utf-8 -*-
-
 Zadania
 -------
 
 Przykłady mnożenia macierzy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Zadanie.**
+**Ćwiczenie.**
 Sprawdź odręcznym rachunkiem wynik :math:`\boldsymbol{A}\boldsymbol{B}` 
 mnożenia komputerowego.
 Dopisz wiersz kodu przedstawiający polecenie wyświetlenia tabelki dla iloczynu
 :math:`\boldsymbol{B}\boldsymbol{A}\,` i przekonaj się na przykładach, 
 że mnożenie macierzy jest nieprzemienne.
-
-.. Przećwicz odręczne mnożenie macierzy drugiego i trzeciego stopnia.
 
 Aby wygenerować macierze i wynik ich mnożenia, naciśnij "Wykonaj"; :math:`\,`
 aby zmienić stopień macierzy, wpisz nową wartość n.
