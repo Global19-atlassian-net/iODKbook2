@@ -643,17 +643,20 @@ w bazach kanonicznych
 :math:`\ \mathcal{E}_{n\times q}\ ` i :math:`\ \ \mathcal{E}_{m\times p}\ `
 przestrzeni :math:`\ M_{n\times q}(K)\ ` i :math:`\ M_{m\times p}(K).\ `
 
-Wówczas
-
 .. math::
    :label: main-1
-   
+
+   \begin{array}{c}   
+   \boldsymbol{A}\otimes\boldsymbol{B}\ =\ 
+   M_{\mathcal{E}_{n\times q},\ \mathcal{E}_{m\times p}}(F_{AB})\,,
+   \\[7pt]
    (\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
    \ \,=\ \,
    \boldsymbol{\Lambda}^{mp}
    (\boldsymbol{A}\boldsymbol{G}\boldsymbol{B}^T)\,,
    \qquad\boldsymbol{G}\in M_{n\times q}(K)\,,
+   \end{array}
 
 gdzie :math:`\ \boldsymbol{\Lambda}^{rs}(\boldsymbol{X})\ `
 jest kolumną współrzędnych macierzy 
@@ -670,7 +673,8 @@ otrzymamy
 .. math::
    
    \begin{array}{ll}
-   \left[\,\boldsymbol{A}\otimes\,(\boldsymbol{B}_1 + \boldsymbol{B}_2)\,\right]
+   \left[\,\boldsymbol{A}\otimes\,
+   (\boldsymbol{B}_1 + \boldsymbol{B}_2)\,\right]
    \,\cdot\,\boldsymbol{\Lambda}^{nq}(\boldsymbol{G}) & 
    =\ \ \boldsymbol{\Lambda}^{mp}
    \left[\,\boldsymbol{A}\ \boldsymbol{G}\ 
@@ -709,6 +713,7 @@ Wynika stąd równość macierzowa
    (\boldsymbol{A}\otimes\boldsymbol{B}_2)\,,
 
 którą należało udowodnić.
+
 Podstawiając w :eq:`main-1` 
 :math:`\ \boldsymbol{A}\to\gamma\,\boldsymbol{A}\,,\ ` 
 gdzie :math:`\ \gamma\in K,\ ` otrzymamy
@@ -723,7 +728,9 @@ gdzie :math:`\ \gamma\in K,\ ` otrzymamy
    \boldsymbol{G}\,\boldsymbol{B}^T\,\right]\ =
    \\[6pt] &
    =\ \ \boldsymbol{\Lambda}^{mp}
-   \left[\,\gamma\ (\boldsymbol{A}\,\boldsymbol{G}\,\boldsymbol{B}^T)\right]\ =
+   \left[\,
+   \gamma\ (\boldsymbol{A}\,\boldsymbol{G}\,\boldsymbol{B}^T)
+   \right]\ =
    \\[6pt] &
    =\ \ \gamma\,\cdot\,\boldsymbol{\Lambda}^{mp}
    \left(\,\boldsymbol{A}\,\boldsymbol{G}\,\boldsymbol{B}^T\,\right)\ =
@@ -732,7 +739,9 @@ gdzie :math:`\ \gamma\in K,\ ` otrzymamy
    \left[\,(\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})\,\right]\ =
    \\[6pt] &
-   =\ \ \left[\,\gamma\,\cdot\,(\boldsymbol{A}\otimes\boldsymbol{B})\,\right]\,\cdot\,
+   =\ \ \left[\,
+   \gamma\,\cdot\,(\boldsymbol{A}\otimes\boldsymbol{B})\,
+   \right]\,\cdot\,
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
    \end{array}
 
@@ -744,9 +753,49 @@ Oznacza to równość macierzy
    (\gamma\,\boldsymbol{A})\otimes\boldsymbol{B}\ \,=\ \,
    \gamma\ \,(\boldsymbol{A}\otimes\boldsymbol{B}),\quad\gamma\in K.
 
-Analogicznie dowodzi się, że :math:`\ \,\boldsymbol{A}\otimes
-(\gamma\,\boldsymbol{B})\ =\ \gamma\ (\boldsymbol{A}\otimes\boldsymbol{B}),
-\quad\gamma\in K.`
+Z kolei podstawiając w :eq:`main-1` 
+:math:`\ \boldsymbol{B}\to\gamma\,\boldsymbol{B}\,,\ ` 
+gdzie :math:`\ \gamma\in K,\ ` dochodzimy do równosci
+
+.. math::
+   
+   \begin{array}{ll}
+   \left[\,\boldsymbol{A}\otimes(\gamma\,\boldsymbol{B})\,\right]
+   \,\cdot\,\boldsymbol{\Lambda}^{nq}(\boldsymbol{G}) & 
+   =\ \ \boldsymbol{\Lambda}^{mp}
+   \left[\,\boldsymbol{A}\ 
+   \boldsymbol{G}\ (\gamma\,\boldsymbol{B})^T\,\right]\ =
+   \\[6pt] &
+   =\ \ \boldsymbol{\Lambda}^{mp}
+   \left[\,\boldsymbol{A}\ 
+   \boldsymbol{G}\ (\gamma\,\boldsymbol{B}^T)\,\right]\ =
+   \\[6pt] &
+   =\ \ \boldsymbol{\Lambda}^{mp}
+   \left[\,
+   \gamma\ (\boldsymbol{A}\,\boldsymbol{G}\,\boldsymbol{B}^T)\,
+   \right]\ =
+   \\[6pt] &
+   =\ \ \gamma\,\cdot\,\boldsymbol{\Lambda}^{mp}
+   \left(\,\boldsymbol{A}\,\boldsymbol{G}\,\boldsymbol{B}^T\,\right)\ =
+   \\[6pt] &
+   =\ \ \gamma\,\cdot\,
+   \left[\,(\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
+   \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})\,\right]\ =
+   \\[6pt] &
+   =\ \ \left[\,
+   \gamma\,\cdot\,(\boldsymbol{A}\otimes\boldsymbol{B})\,
+   \right]\,\cdot\,
+   \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
+   \end{array}
+
+dla dowolnej macierzy :math:`\ \boldsymbol{G}\in M_{n\times q}(K),\ `
+wobec czego
+
+.. math::
+   
+   \boldsymbol{A}\otimes(\gamma\,\boldsymbol{B})\ =\ 
+   \gamma\ (\boldsymbol{A}\otimes\boldsymbol{B}),
+   \quad\gamma\in K.
 
 
 

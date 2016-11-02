@@ -1,14 +1,14 @@
-Iloczyn prosty (tensorowy) macierzy
------------------------------------
+Definicja i własności iloczynu tensorowego
+------------------------------------------
 
 Definicja i przykłady
 ~~~~~~~~~~~~~~~~~~~~~
 
-Dane macierze: 
+Niech będą dane macierze 
 :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times n}\,,\ `
-:math:`\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M(K).`
-
-Iloczyn tensorowy tych macierzy ma w zapisie blokowym postać
+:math:`\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M(K).\ `
+Iloczyn tensorowy (iloczyn prosty, iloczyn Kroneckera) 
+tych macierzy ma w zapisie blokowym postać
 
 .. math::
    
