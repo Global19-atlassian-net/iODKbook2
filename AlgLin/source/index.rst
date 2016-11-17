@@ -96,6 +96,18 @@ Determinants
    wyznacznik_rozwiniecie_permutacyjne
    wyznacznik_praktyczne_wyliczanie
    wyznacznik_zastosowania
+   wyznacznik_zadania
+
+Tensor (Kronecker) Product of Matrices
+======================================
+
+.. toctree::
+   :maxdepth: 2
+
+   iloczyn_tensorowy_wlasnosci
+   iloczyn_tensorowy_macierz_homomorfizmu
+   iloczyn_tensorowy_zadania
+
 
 Systems of Linear Equations: Theory and Practice
 ================================================
