@@ -86,6 +86,7 @@ Wyznaczniki
    wyznacznik_rozwiniecie_permutacyjne
    wyznacznik_praktyczne_wyliczanie
    wyznacznik_zastosowania
+   wyznacznik_zadania
 
 Iloczyn tensorowy macierzy
 ==========================
