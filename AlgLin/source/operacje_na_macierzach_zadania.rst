@@ -187,7 +187,7 @@ W sekcji 4.5 wynik zestawienia dwóch macierzy kwadratowych stopnia :math:`\,n\,
 (nazywany tam agregatem) jest jednorodną macierzą prostokątną 
 o :math:`\,n\,` wierszach i :math:`\,2n\,` kolumnach. Do utworzenia takiego 
 agregatu używa się metody ``augment()``, a szukaną macierz odwrotną wyodrębnia 
-się stosując operację wycinania albo metodę matrix_from_columns()``.
+się stosując operację wycinania albo metodę ``matrix_from_columns()``.
 
 Tutaj zapiszemy równoważną implementację procedury wyznaczania macierzy 
 odwrotnej metodą przekształceń elementarnych.
