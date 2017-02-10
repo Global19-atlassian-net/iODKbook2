@@ -1,3 +1,4 @@
+
 .. Algebra Liniowa documentation master file, created by
    sphinx-quickstart on Mon May  6 21:02:54 2013.
 
@@ -7,7 +8,6 @@ Lectures on Linear Algebra
 
 Introduction
 ============
-
 
 .. toctree::
    :maxdepth: 2
@@ -66,21 +66,30 @@ Operations upon Matrices
   Permutation matrices.*
 | *A practical algorithm for the matrix inversion 
   by Gauss-Jordan elimination.*
-| *LU decomposition of a matrix 
-  into the product of lower- and upper-triangular factors.*
 
 .. toctree::
    :maxdepth: 3
 
-   eliminacja_dla_macierzy
-   transpozycja_macierzy
-   macierz_odwrotna
-   macierze_elementarne
-   macierz_odwrotna_eliminacja
-   macierze_permutacji
+   operations_on_matrices_elimination
+   operations_on_matrices_transpose
+   operations_on_matrices_inverse
+   operations_on_matrices_elementary
+   operations_on_matrices_inverse_elimination
+   operations_on_matrices_permutations
+   operations_on_matrices_appendices
+   operations_on_matrices_problems
+
+Matrix Decompositions
+=====================
+
+| *LU decomposition of a matrix 
+  into the product of lower- and upper-triangular factors.*
+
+.. toctree::
+   :maxdepth: 2
+
    macierze_trojkatne
    rozklad_LU
-   operacje_na_macierzach_zadania
 
 Determinants
 ============
@@ -107,7 +116,6 @@ Tensor (Kronecker) Product of Matrices
    iloczyn_tensorowy_wlasnosci
    iloczyn_tensorowy_macierz_homomorfizmu
    iloczyn_tensorowy_zadania
-
 
 Systems of Linear Equations: Theory and Practice
 ================================================
