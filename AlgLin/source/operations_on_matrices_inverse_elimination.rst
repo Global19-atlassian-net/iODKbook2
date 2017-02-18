@@ -1,6 +1,6 @@
 
-Matrix Inversion by the Elimination Method
-------------------------------------------
+Matrix Inverse by the Elimination Method
+----------------------------------------
 
 Given two square matrices of the same size, 
 :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\ \,\text{and}\ \,
@@ -131,8 +131,8 @@ Using the Lemma, Theorem 2. as well as Eqs :eq:`id` and :eq:`rec`, we get
    \boldsymbol{A}^{-1}\boldsymbol{I}_n\ \right]\ =\ 
    \left[\,\boldsymbol{I}_n\;|\;\boldsymbol{A}^{-1}\,\right]\,.
 
-That way we have come up with a practical procedure 
-to determine the inverse of a matrix.
+That way we have come up with a practical recipe
+to obtain the inverse of a matrix.
 
 .. admonition:: Proposition 3. :math:`\,` 
    Matrix Inversion Algorithm  :math:`\,`

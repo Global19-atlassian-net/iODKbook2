@@ -9,7 +9,7 @@ respectively.
 Actually, the operations on matrices are possible, and properties 
 of these operations are preserved, even though elements belong 
 to a simpler structure - a ring with identity.
-In Sage an algebra of polynomials or matrices is built just over a ring
+In Sage the algebra of polynomials or matrices is built just over a ring
 rather than over a field.
 
 Below we list the most important rings applied in Sage:
@@ -59,17 +59,17 @@ There are two strategies of calculations on vectors and matrices:
   the obtained results are rounded and errors from successive roundings 
   may accumulate.
 
-.. important::
+.. note::
 
-   :math:`\,` The base ring of a matrix, whose elements depend on any variables,
-   is the symbolic ring SR. If we assign numerical values to these variables,
+   The base ring of a matrix, whose elements depend on any variables,
+   is the symbolic ring SR. If numerical values are assigned to these variables,
    the base ring of the matrix will be still SR, though the matrix will be
-   composed of numbers only. To make numerical methods applicable to the 
-   matrix, the function ``change_ring()`` is to be used. 
+   composed of numbers only. To make numerical methods applicable, 
+   the function ``change_ring()`` is to be explicitly used.
 
 **Example.** :math:`\\`
-The matrix :math:`\,\boldsymbol{A}\,` depends on the variable ``phi``.
-The base ring is Symbolic Ring:
+The matrix :math:`\,\boldsymbol{A}\,` depends on the variable 
+:math:`\,` ``phi`` :math:`\,` and its base ring is Symbolic Ring:
 
 .. code-block:: python
 
@@ -85,14 +85,14 @@ The base ring is Symbolic Ring:
 
    Base ring of the matrix A: Symbolic Ring
 
-After substitution ``phi`` = 0.25
+After substitution :math:`\,` ``phi`` = 0.25 :math:`\,` 
 the base ring is still Symbolic Ring:
 
 .. code-block:: python
 
    sage: B = A.subs(phi=0.25)
 
-   sage: print B.N(digits=4), "\n"
+   sage: print B.n(digits=4), "\n"
    sage: print "Base ring of the matrix B:", B.base_ring()
 
    [ 0.9689 -0.2474]
@@ -109,7 +109,7 @@ Only the explicit change of ring returns the purely numerical matrix:
 
    sage: C = B.change_ring(RDF)
   
-   sage: print C.N(digits=4), "\n"
+   sage: print C.n(digits=4), "\n"
    sage: print "Base ring of the matrix C:", C.base_ring()
 
    [ 0.9689 -0.2474]
@@ -120,11 +120,11 @@ Only the explicit change of ring returns the purely numerical matrix:
 Sage supports the 'row' (as opposed to 'column') approach 
 to vectors and matrices. Vectors are displayed 'horizontally', 
 and matrix is a sequence (list) of rows.
-It is to be pointed out, that in Sage a vector is an object 
-different from a one-row as well as from a one-column matrix 
-(thus is different from a column vector): it is just a finite sequence
-of elements of a ring. It can be transformed into such a matrix only 
-by application of an appropriate function.
+It is to be pointed out that in Sage a vector is an object 
+different from a one-row as well as from a one-column matrix: 
+it is just a finite sequence of elements of a ring. 
+It can be transformed into an above-mentioned matrix 
+only by application of the appropriate function.
 
 Creation of Vectors and Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -531,10 +531,11 @@ then for :math:`\ p = 0, 1, ..., n-1;` :math:`\ q = 1, 2, ..., n;`
    [10 11 12 13 14], [17 18 19], [12 13 14], [15 17 19]
    )
 
-.. note:: :math:`\,`    
+.. note:: :math:`\,`
+    
    Let :math:`\,A\,` be an :math:`\ m \times n\ ` 
-   matrix over a ring :math:`\,P; \\`
-   :math:`\ i=0,1,\ldots,m-1;\ j=0,1,\ldots,n-1. \\`
+   matrix over a ring :math:`\,P,\ 
+   i=0,1,\ldots,m-1;\ j=0,1,\ldots,n-1. \\`
    
    Then its ``[i]``-th row may be obtained in three ways:
    
@@ -555,7 +556,7 @@ then for :math:`\ p = 0, 1, ..., n-1;` :math:`\ q = 1, 2, ..., n;`
 
 The above rules are illustrated by the following example:
 
-.. code-block:: python
+.. code-block: python
 
    sage: A = random_matrix(ZZ,3,4); print A, '\n'
 
@@ -586,22 +587,69 @@ The above rules are illustrated by the following example:
    [-1]
    <type 'sage.matrix.matrix_integer_dense.Matrix_integer_dense'>
 
+.. code-block:: python
+
+   sage: A = matrix(3,4,[-1,0,2,1,-1,7,-1,1,1,-1,3,2])
+   sage: print A, '\n'
+
+   sage: print A[2]; print type(A[2]), '\n'
+   sage: print A.row(2); print type(A.row(2)), '\n'
+   sage: print A[2,:]; print type(A[2,:]), '\n'  
+   sage: print A.column(1); print type(A.column(1)), '\n'
+   sage: print A[:,1]; print type(A[:,1])
+
+   [-1  0  2  1]
+   [-1  7 -1  1]
+   [ 1 -1  3  2] 
+
+   (1, -1, 3, 2)
+   <type 'sage.modules.vector_integer_dense.Vector_integer_dense'> 
+   
+   (1, -1, 3, 2)
+   <type 'sage.modules.vector_integer_dense.Vector_integer_dense'> 
+   
+   [ 1 -1  3  2]
+   <type 'sage.matrix.matrix_integer_dense.Matrix_integer_dense'> 
+
+   (0, 7, -1)
+   <type 'sage.modules.vector_integer_dense.Vector_integer_dense'> 
+   
+   [ 0]
+   [ 7]
+   [-1]
+   <type 'sage.matrix.matrix_integer_dense.Matrix_integer_dense'>
+
+.. Uncomment a selected hashed command to verify the corresponding rule:
+
+.. sagecellserver:
+   
+   A = random_matrix(ZZ,3,4); print A, '\n'
+
+   # print A[2]; print type(A[2]), '\n'
+   # print A.row(2); print type(A.row(2)), '\n'
+   # print A[2,:]; print type(A[2,:]), '\n'  
+   # print A.column(1); print type(A.column(1)), '\n'
+   # print A[:,1]; print type(A[:,1])     
+
 Operations on Vectors and Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Linear Combination of Vectors.**
 
 The addition and scalar multiplication of :math:`\,n`-size vectors
-over a ring :math:`\,P\ ` are analogous to the operations on column vectors.  
+over a ring :math:`\,P\,` are analogous to the operations on column vectors
+over a field :math:`\,K.\ `  
 If a vector :math:`\ \boldsymbol{w} = (w_1,w_2,\ldots,w_n)\ ` 
 is the linear combination of vectors 
 :math:`\,\boldsymbol{x} = (x_1,x_2,\ldots,x_n)\ ` and 
-:math:`\ \,\boldsymbol{y} = (y_1,y_2,\ldots,y_n),\ `
-the coefficients being :math:`\,a\ ` and :math:`\ \,b`:
+:math:`\ \,\boldsymbol{y} = (y_1,y_2,\ldots,y_n):\ `
+
+.. the coefficients being :math:`\,a\ ` and :math:`\ \,b`:
 
 .. math::
 
    \boldsymbol{w}\ =\ a\,\boldsymbol{x}\, +\, b\,\boldsymbol{y}\,,
+   \qquad a,b\in P,
 
 then its elements are given by
 
@@ -609,14 +657,23 @@ then its elements are given by
 
    w_i\ =\ a\,x_i\, +\, b\,y_i\,,\qquad i\,=\,1,2,\ldots,n.
 
-By analogy with the column vectors, the :math:`\,n`-element vectors 
-over a field :math:`\,K\,` form, with respect to vector addition 
-and scalar multiplication, the :math:`\,n`-dimensional vector space
-over that field.
+.. By analogy with the column vectors, the :math:`\,n`-element vectors 
+   over a field :math:`\,K\,` form, with respect to vector addition 
+   and scalar multiplication, the :math:`\,n`-dimensional vector space
+   over that field.
+   
+The :math:`\,n`-element vectors over a ring :math:`\,P\,` form a free module
+with respect to vector addition and scalar multiplication
+(for :math:`\,n`-size vectors over a field the module is a vector space).
+ 
+.. (vectors over a field form a vector space over that field).
+
+.. (when the ring is a field: :math:`\ P=K,\ ` this is an 
+   :math:`\,n`-dimensional vector space over that field).
 
 **Dot Product of vectors.**
 
-Dot product (scalar product) of two vectors of the same size is defined by
+Dot product (scalar product) of two vectors of the same size is defined as
 the sum of products of corresponding elements:
 
 .. math::
@@ -625,7 +682,7 @@ the sum of products of corresponding elements:
    \sum_{i=1}^n\,x_i\,y_i\ \,=\ \,
    x_1\,y_1\,+\,x_2\,y_2\,+\,\ldots\,+\,x_n\,y_n\,.
 
-An example of a linear combination and the dot product of vectors:
+This is an example of a linear combination and the dot product of vectors:
 
 .. code-block:: python
 
@@ -651,7 +708,7 @@ An example of a linear combination and the dot product of vectors:
 \end{array}`
 
 The dot product of two vectors :math:`\,\boldsymbol{x},\,\boldsymbol{y}\ `
-can be connected with the matrix product of the one-row matrix obtained 
+is connected with the matrix product of the one-row matrix obtained 
 from :math:`\,\boldsymbol{x}\,` by the one-column matrix obtained from 
 :math:`\,\boldsymbol{y}`.
 
@@ -667,10 +724,10 @@ by means of the methods ``row()`` or ``column()``, respectively.
    sage: y_col = y.column()
    
    sage: p = x_row * y_col
-   sage: table([[x_row,'$\cdot$',y_col,'=',p]])
+   sage: table([[x_row,'*',y_col,'=',p]])
 
 :math:`\begin{array}{ccccc}
-\left(\begin{array}{ccc} -1 & 2 & 5 \end{array}\right) & \cdot &
+\left(\begin{array}{ccc} -1 & 2 & 5 \end{array}\right) & \ast &
 \left(\begin{array}{c} 3 \\ 0 \\ 4 \end{array}\right) & = & (17)
 \end{array}`
 
@@ -719,11 +776,11 @@ This is illustrated by the example:
 
    sage: v = x*A; w = A*x
 
-   sage: show(table([[x,'$\cdot$',A,'=',v]]))
-   sage: show(table([[A,'$\cdot$',x,'=',w]]))
+   sage: show(table([[x,'*',A,'=',v]]))
+   sage: show(table([[A,'*',x,'=',w]]))
 
 :math:`\begin{array}{ccccc}
-\left(0,\,1,\,2\right) & \cdot & 
+\left(0,\,1,\,2\right) & \ast & 
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 
 \end{array}\right) & = & 
@@ -734,12 +791,12 @@ This is illustrated by the example:
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 
 \end{array}\right) &
-\cdot & \left(0,\,1,\,2\right) &
+\ast & \left(0,\,1,\,2\right) &
 = & \left(5,\,14,\,23\right)
 \end{array}`
 
-It is worthwhile to note that if we replace vectors by one-row matrices,
-then the first equation will remain true, while the second will become 
+Note that if we replace vectors by one-row matrices,
+the first equation will remain true, while the second will become 
 senseless (the product of a square matrix by a one-row matrix is not defined):
 
 .. code-block:: python
@@ -750,13 +807,13 @@ senseless (the product of a square matrix by a one-row matrix is not defined):
    sage: x_row = x.row()
 
    sage: v_row = x_row * A
-   sage: show(table([[x_row,'$\cdot$',A,'=',v_row]]))
+   sage: show(table([[x_row,'*',A,'=',v_row]]))
 
    sage: w_row = A * x_row
-   sage: show(table([[A,'$\cdot$',x_row,'=',w_row]]))    
+   sage: show(table([[A,'*',x_row,'=',w_row]]))    
 
 :math:`\begin{array}{ccccc}
-\left(\begin{array}{rrr} 0 & 1 & 2 \end{array}\right) & \cdot & 
+\left(\begin{array}{rrr} 0 & 1 & 2 \end{array}\right) & \ast & 
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 
 \end{array}\right) & = & 
@@ -780,20 +837,20 @@ vectors are to be replaced by one-column matrices:
    sage: x_col = x.column()
    sage: w_col = A * x_col
 
-   sage: show(table([[A,'$\cdot$',x_col,'=',w_col]]))
+   sage: show(table([[A,'*',x_col,'=',w_col]]))
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 
-\end{array}\right) & \cdot & 
+\end{array}\right) & \ast & 
 \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) & = & 
 \left(\begin{array}{r} 5 \\ 14 \\ 23 \end{array}\right)
 \end{array}`
 
 In passing we note that the first equation may be rewritten 
-in the column version by transposition of both sides
-(transposition of a product of matrices 
-yields the product of transposed factors in the reversed order): 
+in the column version by transpose of both sides
+(transpose of a product of matrices 
+yields the product of transposed factors in reverse order): 
 
 .. code-block:: python
 
@@ -805,17 +862,19 @@ yields the product of transposed factors in the reversed order):
 
    sage: v_col = A_t * x_col
 
-   sage: table([[A_t,'$\cdot$',x_col,'=',v_col]])
+   sage: table([[A_t,'*',x_col,'=',v_col]])
+
+.. :math:`\,`
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 
 0 & 3 & 6 \\ 1 & 4 & 7 \\ 2 & 5 & 8 
-\end{array}\right) & \cdot & 
+\end{array}\right) & \ast & 
 \left(\begin{array}{r} 0 \\ 1 \\ 2 \end{array}\right) & = & 
 \left(\begin{array}{r} 15 \\ 18 \\ 21 \end{array}\right)
 \end{array}`
 
-.. :math:`\;`
+:math:`\;`
 
 **Product of matrices.**
 
@@ -831,12 +890,12 @@ have been already given in this section. Here is another example:
    sage: A = matrix(2,3,range(6))
    sage: B = matrix(3,range(9))
    sage: C = A*B
-   sage: table([[A,'$\cdot$',B,'=',C]])
+   sage: table([[A,'*',B,'=',C]])
 
 :math:`\begin{array}{ccccc}
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 
-\end{array}\right) & \cdot &
+\end{array}\right) & \ast &
 \left(\begin{array}{rrr} 
 0 & 1 & 2 \\ 3 & 4 & 5 \\ 6 & 7 & 8 
 \end{array}\right) & = &
@@ -861,14 +920,13 @@ results in an error:
 'Full MatrixSpace of 3 by 3 dense matrices over Integer Ring' and 
 'Full MatrixSpace of 2 by 3 dense matrices over Integer Ring'``
   
-From all the above examples we infer that the code symbols of addition, 
+The above examples show that the symbols of addition, 
 subtraction and multiplication have context-sensitive meaning.
 
 Specifically, the symbols :math:`\,` "``+``/``-``" :math:`\,`
-denote addition/subtraction of numbers (scalars), vectors or matrices;
-the symbol :math:`\,` "``*``" :math:`\,` denotes multiplication of numbers,
-multiplication of a vector by a number,
-dot product of two vectors,
+denote addition/subtraction of numbers (scalars), vectors or matrices; 
+:math:`\ ` the symbol :math:`\,` "``*``" :math:`\,` denotes multiplication 
+of numbers, multiplication of a vector by a number, dot product of two vectors,
 multiplication of a vector by a matrix and vice versa, 
 or product of two matrices.
 
@@ -1034,8 +1092,8 @@ The following examples should make their functioning clear:
    The program given below uses the function ``block_matrix()``
    to compose a matrix of the given submatrices.
  
-   We encourage the reader to test equation :eq:`blok1` for various
-   components of the block matrices.
+   The reader is encouraged to test equation :eq:`blok1` 
+   for various components of the block matrices.
 
 .. sagecellserver::
 
@@ -1046,9 +1104,9 @@ The following examples should make their functioning clear:
    
    B2 = block_matrix([[A],[identity_matrix(2)]])
    
-   table([['$\qquad\quad\ \ B1$','','$\qquad\ \ B2$','',
-           '$\quad B1\ \cdot\ B2$'], 
-          [B1,'$\cdot$',B2,'=',B1*B2]])
+   table([['$\\qquad\\quad\ \ B1$','','$\\qquad\ \ B2$','',
+           '$\\quad B1\ \\ast \ B2$'], 
+          [B1,'*',B2,'=',B1*B2]])
 
 
 

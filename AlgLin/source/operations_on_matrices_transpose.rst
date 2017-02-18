@@ -42,13 +42,6 @@ a_{1n} & a_{2n} & \ldots & a_{mn}
       a_{1n} & a_{2n} & \ldots & a_{mn}
    \end{array}\right]\,.
 
-.. Tak więc :math:`\,i`-ty wiersz macierzy :math:`\,\boldsymbol{A}^T\,`
-   składa się z elementów :math:`\,i`-tej kolumny macierzy 
-   :math:`\,\boldsymbol{A},` :math:`\\`
-   a :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}^T\,`
-   składa się z elementów :math:`\,j`-tego wiersza macierzy 
-   :math:`\,\boldsymbol{A}.`
-
 .. \ \ i=1,2,\ldots,n;\ j=1,2,\ldots,m.`
 
 Thus each :math:`\,i`-th row of matrix  :math:`\,\boldsymbol{A}^T\,`
@@ -141,7 +134,7 @@ of their transposes in reverse order).
   | :math:`\boldsymbol{B}^T\boldsymbol{A}^T|_{ij}\ =\ 
     \sum\limits_{s=1}^p \,b_{is}^T\,a_{sj}^T\ =\ 
     \sum\limits_{s=1}^p \,a_{js}\,b_{si}\,,\quad 
-    i=1,2,\ldots,n;\ \ j=1,2,\ldots,m.`
+    i=1,2,\ldots,n;\ \ j=1,2,\ldots,m.\quad\bullet`
 
 Symmetric and Skew-Symmetric Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,7 +153,7 @@ Then  :math:`\ a_{ij} = - \  a_{ji}\,,\ \ i,j=1,2,\ldots,n,\ `
 wherefrom :math:`\ a_{ii} = 0\ \ \text{for}\ \ i=1,2,\ldots,n. \\`
 (in a skew-symmetric matrix all diagonal entries vanish).
 
-Symmetric and skew-symmetric real matrices of order 3 
+Symmetric and skew-symmetric real matrices of size three 
 have the following general form:
 
 .. math::

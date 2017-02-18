@@ -3,11 +3,11 @@ Matrix Formulation of the Elimination Method
 --------------------------------------------
 
 The elimination method (discussed in Chapter 2) transforms a system 
-of linear equations into the echelon form by applying the elementary operations
-upon the equations themselves.
+of linear equations into the echelon form by applying elementary operations
+to the equations themselves.
 
 An analogous result may be obtained by performing the corresponding operations
-upon rows of the augmented matrix representing a given set of equations.
+on rows of the augmented matrix representing a given set of equations.
 
 Augmented Matrix of a System of Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,7 +26,7 @@ For a system of :math:`\,m\,` linear equations with :math:`\,n\,` unknowns:
 
 where coefficients :math:`\,a_{ij}\,` and constants
 :math:`\,b_i\ \ (i=1,2,\ldots,m;\ j=1,2,\ldots,n)\,` 
-belong to a field :math:`\,K,\,` we define
+belong to a field :math:`\,K,\,` we have defined
 the *coefficient matrix* :math:`\boldsymbol{A},\ `
 the *column vector of constants* :math:`\boldsymbol{b},\,` and
 the *column vector of unknowns* :math:`\boldsymbol{x}:` 
@@ -90,14 +90,14 @@ correspond to the row operations on the augmented matrix:
 1. :math:`\,` swap around the positions of two rows
 2. :math:`\,` multiply a row by a *nonzero* scalar
 3. | :math:`\,` add to a row a scalar multiple of another row
-   | :math:`\,` (in particular: add or subtract any two different rows).
+   | :math:`\,` (in particular: add or subtract two different rows).
 
 The augmented matrix :math:`\,\boldsymbol{B}\,` transformed by the above 
 row operations refers to a system of equations equivalent to the original one. 
 On the other hand, elementary operations applied to columns of matrix 
 :math:`\,\boldsymbol{B}\,` usually do change the set of solutions 
 and hence are not applicable in the process of solving a system. 
-Nevertheless, a transposition of columns of matrix :math:`\,\boldsymbol{A}\,` 
+Nevertheless, a permutation of columns of matrix :math:`\,\boldsymbol{A}\,` 
 (which only reorders variables) may sometimes facilitate the solution.
 
 Echelon Form of a Matrix
@@ -325,7 +325,7 @@ We shall use these methods to check the results from the last section:
                      [2, 0,-2,-1],
                      [0, 0, 4, 5]])
 
-   sage: A, A.echelon_form(), A.rref()   
+   sage: (A, A.echelon_form(), A.rref())
 
    (
    [ 2  5  3  0]  [ 2  0  2  4]  [     1      0      0    3/4]

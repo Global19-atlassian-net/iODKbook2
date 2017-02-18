@@ -1,7 +1,7 @@
-Matrix Inversion
-----------------
+Matrix Inverse
+--------------
 
-In the noncommutative ring :math:`\,M_n(K)\,` of square matrices of order
+In the noncommutative ring :math:`\,M_n(K)\,` of square matrices of size
 :math:`\,n\,` over a field :math:`\,K, \\` the identity matrix
 
 .. math::
@@ -123,8 +123,7 @@ are invertible, then by induction
 
 .. :math:`\ `
 
-In Sage the matrix inverse is performed by the method ``inverse()``
-(in short ``I``).
+In Sage the matrix inverse is performed by the method ``inverse()``.
 
 **Example.** :math:`\,` The inverse of the matrix
 :math:`\ \ \boldsymbol{A}\ =\ 
@@ -139,7 +138,8 @@ is calculated and verified by the following Sage code:
    sage: A = matrix([[1,-1,-2],
                      [0, 1, 2],
                      [1,-1,-1]])
-   sage: B = A.I
+                     
+   sage: B = A.inverse()
    sage: table([[A, '*', B, '=', A*B]])
 
 In the output

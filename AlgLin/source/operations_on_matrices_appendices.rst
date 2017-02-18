@@ -1,7 +1,7 @@
 Appendices
 ----------
 
-A1. :math:`\,` Elementary operations and elementary matrices
+A1. :math:`\,` Elementary Operations and Elementary Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We shall prove here some assertions formulated in previous sections 

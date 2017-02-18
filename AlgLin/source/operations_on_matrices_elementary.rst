@@ -64,7 +64,7 @@ This may be stated as
    where :math:`\ \boldsymbol{E}_1(i,j),\ \boldsymbol{E}_2(i,a),\ 
    \boldsymbol{E}_3(i,j,a)\in M_m(K).`
 
-(see the proof in Appendix)
+(proof in Appendix A1)
 
 Elementary matrices are invertible, 
 and their inverses are also elementary matrices. :math:`\\` 
@@ -79,7 +79,7 @@ This is explained in detail by the following
 
    3. :math:`\ [\boldsymbol{E}_3(i,j,a)]^{-1}\,=\ \boldsymbol{E}_3(i,j,-a).`
   
-(see the proof in Appendix)
+(proof in Appendix A1)
 
 In Sage elementary matrices are created by the function 
 :math:`\,` ``elementary_matrix()``. :math:`\\`

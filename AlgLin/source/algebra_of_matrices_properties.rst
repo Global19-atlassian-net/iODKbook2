@@ -111,7 +111,7 @@ on vectors.
 Properties of Matrix Multiplication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following properties may be proven by referencing 
+The following properties may be easily proved by reference
 to the definition of the matrix product.
 
 1. Matrix multiplication is associative:
@@ -235,6 +235,7 @@ and scalar matrix multiplication, is a noncommutative algebra with identity.
 The Row Rule of Matrix Multiplication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+**Theorem.** :math:`\,`
 Consider the two matrices over a field :math:`\,K,\ ` 
 given in the row notation:
 
@@ -258,9 +259,9 @@ given in the row notation:
 
 Here :math:`\quad\boldsymbol{A}_i\ =\ 
 [\;a_{i1}\ a_{i2}\ \dots a_{ip}\;]\ \ (i=1,2,\dots,m),\quad
-\boldsymbol{B}_i\ =\ [\;b_{i1}\ b_{i2}\ \dots b_{in}\;]\ \ (i=1,2,\dots,p). \\`
+\boldsymbol{B}_i\ =\ [\;b_{i1}\ b_{i2}\ \dots b_{in}\;]\ \ (i=1,2,\dots,p).`
 
-We shall demonstrate that their product 
+The row notation being still in use, their product 
 may be written as follows: :math:`\\`
 
 .. math::
@@ -271,13 +272,15 @@ may be written as follows: :math:`\\`
          \boldsymbol{A}_1 \\ 
          \boldsymbol{A}_2 \\
          \dots            \\
-         \boldsymbol{A}_m \end{array}\right]\boldsymbol{B}
+         \boldsymbol{A}_m 
+   \end{array}\right]\boldsymbol{B}
    \ \ =\ \   
    \left[\begin{array}{c}
          \boldsymbol{A}_1\,\boldsymbol{B} \\ 
          \boldsymbol{A}_2\,\boldsymbol{B} \\
          \dots            \\
-         \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right],
+         \boldsymbol{A}_m\,\boldsymbol{B} 
+   \end{array}\right],
 
 .. math::
    :label: rule_verse_2
@@ -318,8 +321,6 @@ and write down the matrix :math:`\ \boldsymbol{B}\ ` in the column notation:
                         \end{array}\right]\,,
    \quad j=1,2,\dots,n.
 
-.. Wykorzystując kolumnową regułę mnożenia macierzowego otrzymujemy
-
 Using the Column Rule of Matrix Multiplication, we get
 
 .. math::
@@ -336,8 +337,6 @@ Using the Column Rule of Matrix Multiplication, we get
            \boldsymbol{A}_i\,\boldsymbol{C}_2\;|\; 
            \dots\;|\;
            \boldsymbol{A}_i\,\boldsymbol{C}_n\,\right],
-
-.. math::
 
    w_{ij}\ =\ \boldsymbol{A}_i\,\boldsymbol{C}_j\ \,=\ \,
    [\,a_{i1}\ a_{i2}\ \dots a_{ip}\,]\ 
@@ -403,14 +402,14 @@ To demonstrate the equation :eq:`rule_verse_2` we note that
    & = & \ \displaystyle\sum_{k=1}^p\ \ a_{ik}\ 
          \left[\ \,b_{k1}\ \ b_{k2}\ \ \ldots\ \ b_{kn}\ \,\right]\ \ \ = \\ \\
    & = & \ \displaystyle\sum_{k=1}^p\ a_{ik}\ \boldsymbol{B}_k \,,
-   \qquad\quad i=1,2,\dots,m.
+   \qquad\quad i=1,2,\dots,m.\quad\bullet
    \end{array}
 
-The above theorem may be called the row rule of matrix multiplication.
-We shall write it down here together with the previously derived column rule, 
-since both will be often referenced.
+The above theorem may be named the Row Rule of Matrix Multiplication.
+We write it down here together with the previously derived Column Rule, 
+since both will be often referenced. :math:`\\`
 
-.. .. admonition Rule 3. :math:`\,` 
+.. admonition: Rule 3. :math:`\,` 
    Row Rule of Matrix Multiplication. :math:`\\`
    
    Let :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ 
@@ -430,31 +429,64 @@ since both will be often referenced.
 .. admonition:: Row and Column Rules of Matrix Multiplication. :math:`\\`
 
    Let :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ 
-   \boldsymbol{B}\,\in M_{p\times n}(K).\ `
+   \boldsymbol{B}\,\in M_{p\times n}(K).\ ` :math:`\\`
 
    Then the :math:`\ i`-th row of the product 
    :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is: :math:`\\`
    
-   a. :math:`\,` the product of the :math:`\ i`-th row 
+   1. :math:`\,` the product of the :math:`\ i`-th row 
       of the matrix :math:`\ \boldsymbol{A}\ ` 
       by the matrix :math:`\ \boldsymbol{B};` :math:`\\`
    
-   b. :math:`\,` the linear combination of rows of matrix 
-      :math:`\ \boldsymbol{B},\ ` the coefficients being :math:`\\`
-      the consecutive elements of the :math:`\ i`-th row of matrix 
-      :math:`\ \boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.` :math:`\\`
+   2. | :math:`\,` the linear combination of rows of matrix 
+        :math:`\ \boldsymbol{B},\ ` the coefficients being
+      | :math:`\,` the consecutive elements of the :math:`\ i`-th row of matrix 
+        :math:`\ \boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.` 
+      | :math:`\ `
 
    On the other hand, the :math:`\ j`-th column of the product 
    :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is: :math:`\\`
 
-   c. :math:`\,` the product of the matrix :math:`\ \boldsymbol{A}\,`
+   1. :math:`\,` the product of the matrix :math:`\ \boldsymbol{A}\,`
       by the :math:`\ j`-th column of matrix :math:`\boldsymbol{B};` 
       :math:`\\`
 
-   d. :math:`\,` the linear combination of columns of matrix 
-      :math:`\ \boldsymbol{A},\,` the coefficients being :math:`\\`
-      the consecutive elements of the :math:`\ j`-th column 
-      of matrix :math:`\boldsymbol{B},\ \ j=1,2,\ldots,n.`
+   2. | :math:`\,` the linear combination of columns of matrix 
+        :math:`\ \boldsymbol{A},\,` the coefficients being 
+      | :math:`\,` the consecutive elements of the :math:`\ j`-th column 
+        :math:`\,` of matrix :math:`\boldsymbol{B},\ \ j=1,2,\ldots,n.`
+
+.. admonition: Row and Column Rules of Matrix Multiplication. :math:`\\`
+
+   Let :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ 
+   \boldsymbol{B}\,\in M_{p\times n}(K).\ ` Then :math:`\\`
+
+   :math:`\bullet\ \ ` the :math:`\ i`-th row of the product 
+   :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is: :math:`\\`
+   
+   1. :math:`\,` the product of the :math:`\ i`-th row 
+      of the matrix :math:`\ \boldsymbol{A}\ ` 
+      by the matrix :math:`\ \boldsymbol{B};` :math:`\\`
+   
+   2. | :math:`\,` the linear combination of rows of matrix 
+        :math:`\ \boldsymbol{B},\ ` the coefficients being
+      | :math:`\,` the consecutive elements of the :math:`\ i`-th row of matrix 
+        :math:`\ \boldsymbol{A},\ \ i\,=\,1,2,\ldots,m.`
+      | :math:`\ `
+
+   :math:`\bullet\ \ ` the :math:`\ j`-th column of the product 
+   :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is: :math:`\\`
+
+   1. :math:`\,` the product of the matrix :math:`\ \boldsymbol{A}\,`
+      by the :math:`\ j`-th column of matrix :math:`\boldsymbol{B};` 
+      :math:`\\`
+
+   2. | :math:`\,` the linear combination of columns of matrix 
+        :math:`\ \boldsymbol{A},\,` the coefficients being 
+      | :math:`\,` the consecutive elements of the :math:`\ j`-th column 
+        of matrix :math:`\boldsymbol{B},\ \ j=1,2,\ldots,n.`
+      
+:math:`\ `      
  
 
 

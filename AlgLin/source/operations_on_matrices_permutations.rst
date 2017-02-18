@@ -213,7 +213,7 @@ the multiplication rule being given by
    :math:`\quad\boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =
    \ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,\quad\rho,\sigma\in S_m\ \ `
    :math:`\\`
-   (note the reversed order of permutations on the right-hand side).
+   (note the reverse order of permutations on the right-hand side).
 
 **Proof.**
 
@@ -308,7 +308,7 @@ Since every permutation can be expressed as a product  of transpositions,
 every permutation matrix is a product of elementary matrices
 of the first type (corresponding to transpositions of matrix rows).
 
-Another property of permutation matrices is asserted by the following
+Another property of permutation matrices is stated by the following
 
 .. admonition:: Proposition 5. :math:`\,`
    
@@ -320,14 +320,14 @@ Another property of permutation matrices is asserted by the following
 
 **Proof.** 
 
-In the framework of unitary spaces, it is enough to observe that 
+In the framework of unitary spaces, it is enough to notice that 
 rows of a permutation matrix form an orthonormal set of vectors in 
 the space :math:`\,K^m,\ ` where :math:`\,K=Q,\,R\ ` or :math:`\,C.\ ` 
 This is just a necessary and sufficient condition for a matrix to be orthogonal.
 
 A direct proof is simple, too.
 Each row of :math:`\boldsymbol{P}_\sigma\ ` consists of one unity and zeroes 
-otherwise, :math:`\\` the unities in different rows being in different 
+elsewhere, :math:`\\` the unities in different rows being in different 
 positions. Thus for :math:`\ \boldsymbol{P}_\sigma = [p_{ij}]_{m \times m}\ `
 we get 
 
@@ -387,7 +387,7 @@ These remarks lead to the
    consttutes a group :math:`\\` with respect to matrix multiplication.
    For :math:`\ m>2\ ` the group is non-commutative.
 
-In Sage the command ``SymmetricGroup(n)`` constructs the permutation group
+In Sage the command ``SymmetricGroup(n)`` constructs the group
 :math:`\ S_n\ ` of all permutations of :math:`\,n\,` elements. [3]_ :math:`\,`
 The members of :math:`\ S_n\ ` are displayed in the disjoint-cyclic form:
 

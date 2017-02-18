@@ -1,6 +1,6 @@
 
-Operations on Matrices 
-----------------------
+Basic Operations on Matrices 
+----------------------------
 
 In this section we shall define addition of matrices of the same size,
 multiplication of a matrix by a number, and the matrix multiplication,
@@ -50,7 +50,7 @@ denoted shortly by :math:`\,[a_{ij}]_{m\times n}:`
    designate respectively the row and the column, in which the entry is located.
 
 The set of all rectangular matrices with :math:`\ m\ ` rows and :math:`\ n\ `
-columns, whose elements belong to the field :math:`\,K,\,` is denoted by
+columns, whose elements belong to a field :math:`\,K,\,` is denoted by
 :math:`\,M_{m\times n}(K)\ ` (:math:`\,K\,` is usually the field 
 :math:`\,R\,` of real numbers or the field :math:`\,C\ ` of complex numbers).
 
@@ -128,42 +128,42 @@ and multiplied by numbers (called henceforth *scalars*) :math:`\, c \in K`:
 In the above definitions the addition and scalar multiplication of matrices
 are expressed by the respective operations on their elements, which are numbers.
 Properties of the operations on numbers transfer in a natural way 
-to the matrix domain. 
+to the matrix domain. On that basis we claim that:
 
-Thus we infer that the matrix addition is associative and commutative:
+* matrix addition is associative and commutative:
 
-:math:`\quad (\boldsymbol{A} + \boldsymbol{B}) \, + \, \boldsymbol{C}
-\ \; = \ \;
-\boldsymbol{A} \, + \, (\boldsymbol{B} + \boldsymbol{C})\,,`
+  :math:`\quad (\boldsymbol{A} + \boldsymbol{B}) \, + \, \boldsymbol{C}
+  \ \; = \ \;
+  \boldsymbol{A} \, + \, (\boldsymbol{B} + \boldsymbol{C})\,,`
   
-:math:`\quad\ \boldsymbol{A}\, + \,\boldsymbol{B}\ \,=\ \,
-\boldsymbol{B}\, + \,\boldsymbol{A},\qquad
-\boldsymbol{A}, \, \boldsymbol{B}, \, \boldsymbol{C}\,\in \, M_{m\times n}(K),`
+  :math:`\quad\ \boldsymbol{A}\, + \,\boldsymbol{B}\ \,=\ \,
+  \boldsymbol{B}\, + \,\boldsymbol{A},\qquad
+  \boldsymbol{A}, \, \boldsymbol{B}, \, \boldsymbol{C}\,
+  \in \, M_{m\times n}(K).`
    
-the scalar multiplication is distributive across scalar as well as matrix 
-addition, and associative:
+* scalar multiplication is distributive over scalar and matrix 
+  addition, and is associative:
+  
+  :math:`\quad (a + b)\,\boldsymbol{A}\ =\ 
+  a\,\boldsymbol{A}\, +\, b\,\boldsymbol{A}\,,`
+  :math:`\quad a\,(\boldsymbol{A} + \boldsymbol{B})\ =\ 
+  a\,\boldsymbol{A}\, +\, a\,\boldsymbol{B}\,,`
+  
+  :math:`\quad a\,(b\boldsymbol{A})\ =\ 
+  (ab)\,\boldsymbol{A},\qquad 
+  a,\,b\,\in K,\quad\boldsymbol{A},\,\boldsymbol{B}\,\in\, M_{m\times n}(K)\,,`
 
-:math:`\quad (a + b)\,\boldsymbol{A}\ =\ 
-a\,\boldsymbol{A}\, +\, b\,\boldsymbol{A}\,,`
-:math:`\quad a\,(\boldsymbol{A} + \boldsymbol{B})\ =\ 
-a\,\boldsymbol{A}\, +\, a\,\boldsymbol{B}\,,`
+* scalar multiplication satisfies the trivial condition:
 
-:math:`\quad a\,(b\boldsymbol{A})\ =\ 
-(ab)\,\boldsymbol{A},\qquad 
-a,\,b\,\in K,\quad\boldsymbol{A},\,\boldsymbol{B}\,\in\, M_{m\times n}(K)\,,`
-
-and the scalar multiplication satisfies the seemingly trivial, 
-but essential condition:
-
-:math:`\quad 1\,\boldsymbol{A}\ =\ 
-\boldsymbol{A},\qquad
-1\in K,\quad\boldsymbol{A}\,\in\, M_{m\times n}(K)\,.`
+  :math:`\quad 1\,\boldsymbol{A}\ =\ 
+  \boldsymbol{A},\qquad
+  1\in K,\quad\boldsymbol{A}\,\in\, M_{m\times n}(K)\,.`
 
 All these properties imply that the set :math:`\,M_{m\times n}(K)\,` of
 matrices with :math:`\,m\,` rows and :math:`\,n\,` columns 
-over the field :math:`\,K\,` is the vector space over that field.
+over a field :math:`\,K\,` is the vector space over that field.
 The zero vector of this space is the zero matrix 
-:math:`\ \boldsymbol{O}\,=\,[0]_{m\times n},\ ` and the opposite
+:math:`\ \boldsymbol{O}\,=\,[\,0\,]_{m\times n},\ ` and the opposite
 (additive inverse) of the matrix 
 :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times n}\ ` is the matrix
 :math:`\ \boldsymbol{-A}\,:\,=\,[-a_{ij}]_{m\times n}.`
@@ -171,8 +171,8 @@ The zero vector of this space is the zero matrix
 Multiplication of a Matrix by a Column Vector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-The product of the matrix :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,`
-with :math:`\,m\,` rows and :math:`\,n\,` columns by the column vector
+The product of a matrix :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,`
+with :math:`\,m\,` rows and :math:`\,n\,` columns by a column vector
 :math:`\,\boldsymbol{x}\in K^n\,` of size :math:`\,n\ ` is defined as follows: 
 
 .. math::
@@ -194,7 +194,7 @@ with :math:`\,m\,` rows and :math:`\,n\,` columns by the column vector
       a_{m1}\,x_1 +\,a_{m2}\,x_2 + \,\ldots\, +\,a_{mn}\,x_n
    \end{array}\right]
    
-(the operation is feasible iff the number of matrix' columns equals
+(the operation is possible iff the number of matrix' columns equals
 the size of the vector).
 
 According to equation :eq:`prod_col`, the multiplication 
@@ -244,11 +244,6 @@ The right-hand side of equation :eq:`prod_col` may be rewritten as
    a_{1n} \\ a_{2n} \\ \ldots \\ a_{mn} 
    \end{array}\right]\,.
   
-.. Przy oznaczeniach 
-   :math:`\ \,\boldsymbol{A}_1,\ \boldsymbol{A}_2,\ 
-   \ldots,\,\boldsymbol{A}_n\ \,` 
-   dla kolumn macierzy :math:`\,\boldsymbol{A}\,:`
-
 Denoting by 
 :math:`\ \,\boldsymbol{A}_1,\ \boldsymbol{A}_2,\ \ldots,\,\boldsymbol{A}_n\ \,`
 the columns of the matrix :math:`\,\boldsymbol{A}\,:`
@@ -269,7 +264,7 @@ we may rewrite equation :eq:`prod_col` in the form
    x_1\,\boldsymbol{A}_1 \ +\ x_2\,\boldsymbol{A}_2 \ +\ 
    \ldots \ + \ x_n\,\boldsymbol{A}_n\,.
 
-.. admonition:: Rule for the Product of a Matrix by a Vector.
+.. admonition:: Rule 0. :math:`\ ` Product of a Matrix and a Vector.
 
    Suppose :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,,\ 
    \boldsymbol{x}\in K^n\,.\ `
@@ -278,15 +273,6 @@ we may rewrite equation :eq:`prod_col` in the form
    the coefficients being consecutive elements of the vector
    :math:`\,\boldsymbol{x}.` 
    
-.. .. admonition:: Reguła 0. :math:`\,`
-
-   Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times n}(K)\,,\ 
-   \boldsymbol{x}\in K^n\,,\ ` 
-   to iloczyn :math:`\,\boldsymbol{A}\,\boldsymbol{x}\ ` 
-   jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{A}.\ ` 
-   Współczynnikami tej kombinacji są kolejne elementy 
-   wektora :math:`\,\boldsymbol{x}\,.`  
-
 Going back to the generic system of linear equations :eq:`set_eqn`,
 we shall rewrite it in the form of equality of two column vectors:
 
@@ -406,7 +392,7 @@ be composed of :math:`\,n\,` columns of size :math:`\,p`:
    \end{array}\right]\,.
 
 The product :math:`\ \boldsymbol{A}\boldsymbol{B}\ \,` is then *defined* as
-the matrix obtained by multiplication (from the left side) of each column of
+the matrix obtained by multiplication (from the left) of each column of
 :math:`\ \boldsymbol{B}\ \,` by the matrix :math:`\ \boldsymbol{A}:`
 
 .. math::
@@ -460,21 +446,22 @@ The definition :math:`\,` :eq:`rule_col_1` :math:`\,`
 and formula :math:`\,` :eq:`eqn_C3` :math:`\,` which arises therefrom 
 may be restated as
 
-.. admonition:: Column Rule of Matrix Multiplication. :math:`\\`
+.. admonition:: Rule 1. :math:`\ ` 
+   Column Rule of Matrix Multiplication. :math:`\\`
 
    Let :math:`\ \boldsymbol{A}\,\in M_{m\times p}(K),\ 
    \boldsymbol{B}\,\in M_{p\times n}(K).\ `
    Then the :math:`\ j`-th column of the product 
    :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is: :math:`\\`
 
-   a. :math:`\,` the product of the matrix :math:`\ \boldsymbol{A}\,`
+   1. :math:`\,` the product of the matrix :math:`\ \boldsymbol{A}\,`
       by the :math:`\ j`-th column of matrix :math:`\boldsymbol{B};` 
       :math:`\\`
 
-   b. :math:`\,` the linear combination of columns of matrix 
-      :math:`\ \boldsymbol{A},\,` the coefficients being :math:`\\`
-      the consecutive elements of the :math:`\ j`-th column 
-      of matrix :math:`\boldsymbol{B},\ \ j=1,2,\ldots,n.`
+   2. | :math:`\,` the linear combination of columns of matrix 
+        :math:`\ \boldsymbol{A},\,` the coefficients being
+      | :math:`\,` the consecutive elements of the :math:`\ j`-th column 
+        of matrix :math:`\boldsymbol{B},\ \ j=1,2,\ldots,n.`
 
 .. According to formula :eq:`eqn_C3`, 
 
@@ -484,11 +471,10 @@ over the field :math:`\,K\,` being identified with the field
 the element :math:`\ c_{ij}\,` of the matrix 
 :math:`\,\boldsymbol{C}=\boldsymbol{A}\boldsymbol{B}\,`
 is the product (in the sense of equation :eq:`prod_col_1` 
-and Rule for the Matrix-Vector Product) 
-of the :math:`\,i`-th row of matrix :math:`\,\boldsymbol{A}\,` 
+and Rule 0.) of the :math:`\,i`-th row of matrix :math:`\,\boldsymbol{A}\,` 
 by the :math:`\,j`-th column of matrix :math:`\,\boldsymbol{B}:`
 
-.. .. math::
+.. math:
    
    c_{ij}\ =\ 
    a_{i1}\,b_{1j} + a_{i2}\,b_{2j} + \,\ldots \;+\; a_{ip}\,b_{pj}\ \,=\ \;
@@ -511,7 +497,8 @@ by the :math:`\,j`-th column of matrix :math:`\,\boldsymbol{B}:`
 We get therefrom the practical recipe for calculating elements of the 
 matrix product:
 
-.. admonition:: Practical Calculation of Matrix Product. :math:`\\`
+.. admonition:: Rule 2. :math:`\ `
+   Practical Calculation of Matrix Product. :math:`\,`
    
    If :math:`\,\boldsymbol{A}\,\in M_{m\times p}(K),\ 
    \boldsymbol{B}\,\in M_{p\times n}(K)\,,\ ` then the element 
@@ -524,7 +511,7 @@ matrix product:
 
 The above formulae pertaining the matrix product may be gathered as follows:
 
-.. admonition:: General Formulae of Matrix Multiplication. :math:`\\`
+.. admonition:: General Formulae for Matrix Multiplication. :math:`\\`
    
    Let :math:`\,\boldsymbol{A},\boldsymbol{B}\in M(K).\ `
    The product :math:`\,\boldsymbol{A}\boldsymbol{B}\,` exists if and only if
