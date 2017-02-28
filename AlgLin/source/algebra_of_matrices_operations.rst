@@ -43,7 +43,7 @@ denoted shortly by :math:`\,[a_{ij}]_{m\times n}:`
    a_{m1} & a_{m2} & \ldots & a_{mn}
    \end{array}\right]\,.
 
-.. admonition:: Remember: :math:`\,`
+.. note::
 
    When the notation :math:`\,a_{ij}\,` of a matrix entry is applied,
    the first index (here :math:`i`) and the second index (here :math:`j`)
@@ -142,7 +142,7 @@ to the matrix domain. On that basis we claim that:
   \in \, M_{m\times n}(K).`
    
 * scalar multiplication is distributive over scalar and matrix 
-  addition, and is associative:
+  addition, :math:`\\` and is compatible with field multiplication:
   
   :math:`\quad (a + b)\,\boldsymbol{A}\ =\ 
   a\,\boldsymbol{A}\, +\, b\,\boldsymbol{A}\,,`

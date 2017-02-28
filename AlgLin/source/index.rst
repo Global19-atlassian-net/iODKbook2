@@ -13,8 +13,8 @@ Introduction
    :maxdepth: 2
 
    uwagi_techniczne
-   podstawowe_pojecia
-   struktury_algebraiczne
+   introductio_preliminaries_notation
+   introduction_algebraic_structures
    podstawy_algebry_liniowej
    permutacje
    literatura

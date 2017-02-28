@@ -137,7 +137,7 @@ to the definition of the matrix product.
    \boldsymbol{A}\in M_{m\times p}(K),\ \ 
    \boldsymbol{B},\boldsymbol{C}\in M_{p\times n}(K)\,.`
 
-3. Matrix product is associative with respect to scalar multiplication:
+3. Matrix product is compatible with scalar multiplication:
       
    :math:`\ c\ (\boldsymbol{A}\boldsymbol{B})\ =\ 
    (c \boldsymbol{A})\,\boldsymbol{B}\ =\ 

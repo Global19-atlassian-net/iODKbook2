@@ -157,10 +157,28 @@ What is the actual value of q ?
 
 .. :math:`\ `
 
-The following problems are designed to be solved with the aid of a computer,
-using a Sage notebook.
-   
-.. :math:`\ `   
+**Exercise 5.**
+
+Despite the Sage's "row bias" with respect to vectors and matrices, 
+it is possible to create a matrix with given columns 
+(they are to be input as vectors). Run the following code: 
+
+.. sagecellserver::
+
+   v1 = random_vector(ZZ,5)
+   v2 = random_vector(ZZ,5)
+   v3 = random_vector(ZZ,5)
+
+   A = column_matrix([v1,v2,v3])
+
+   (v1,v2,v3,A)
+
+.. :math:`\ `
+
+.. The following problems are designed to be solved 
+   with the aid of a computer, using a Sage notebook.   
+
+.. :math:`\ `
    
 **Problem 0.** :math:`\,`
 
@@ -196,7 +214,7 @@ Take, for example, the matrices
    \end{array}\right]\quad
    \in\ M_2(Q)
 
-to ascertain that the identity
+to show that the identity
 
 .. math::
    :label: sum_square
