@@ -57,7 +57,10 @@ If additionally the operation :math:`\ \,\bot\,\ ` is commutative:
    
    g_1\,\bot\;g_2 \ \,=\ \,g_2\;\bot\;g_1\qquad\forall\ \ g_1,\,g_2\,\in\,G\,, 
 
-the group is called :math:`\,` *abelian*.
+the group is called :math:`\,` *abelian*. In an abelian group
+the operation is often symbolized by '+' :math:`\\`
+and the term 'inverse' is replaced by 'opposite': 
+:math:`\ \ g^{-1}\rightarrow (-g).`
 
 .. :math:`\ `
 
@@ -101,7 +104,8 @@ the group is called :math:`\,` *abelian*.
 | Ring operations satisfy the following conditions:
 
 1. | :math:`\ ` the structure :math:`\ (P,\,+)\ \ ` is an abelian group
-   | :math:`\ ` (its neutral element is the *zero* of the ring);
+   | :math:`\ ` (the *additive group* of the ring; 
+     its neutral element is the *zero* of the ring);
    | :math:`\ `
 
 2. :math:`\ ` multiplication is associative:
@@ -170,9 +174,9 @@ then we are dealing with a *ring with identity*.
 
 An example of noncommutative ring is given by the set of square matrices
 of size :math:`\,n\,` over a ring with identity, considered together 
-with the operations of matrix addition and multiplication.
+with the operations of matrix addition and multiplication. :math:`\\`
 
-:math:`\ `
+.. :math:`\ `
 
 A :math:`\ ` **Field** :math:`\ \mathbb{K},\ ` just as a ring, 
 is composed of one set :math:`\,K\ ` 
@@ -197,7 +201,9 @@ By definition, the field operations are subject to the following conditions:
       (\alpha\cdot \beta_1)\ +\ (\alpha\cdot \beta_2)\qquad
       \forall\ \ \alpha,\,\beta_1,\,\beta_2\,\in\, K\,.
 
-We easily note that every field is a ring (though the reverse is not true).
+:math:`(K,\,+)\ ` and :math:`\ K\!\smallsetminus\!\{0\},\ \cdot\;)\ ` are the 
+*additive group* and *multiplicative group* of the field, resp. :math:`\\`
+It's easy to note that every field is a ring (though the reverse is not true).
 More precisely: :math:`\\` 
 a field is a commutative ring with identity, in which
 each nonzero element has an inverse.
@@ -229,7 +235,10 @@ each nonzero element has an inverse.
 * | The ring :math:`\ \mathbb{Z}_n\ ` of integers modulo 
     :math:`\,n\ ` is :math:`\,` a (finite) field :math:`\,` 
     if and only if :math:`\,n\,` is a prime.
-  | :math:`\,`
+
+.. | :math:`\,`
+
+Basic properties of fields are discussed in Appendix A1.
 
 .. admonition:: Note. :math:`\;`
 
@@ -250,8 +259,9 @@ each nonzero element has an inverse.
   \quad\boxdot\,:\ K\times V\rightarrow V\,.`
 | By definition, the operations satisfy the following requirements:
 
-1. :math:`\ (V,\,\oplus\,)\ \ ` is an abelian group
-   (named the *additive group* of the vector space);
+1. | :math:`\ (V,\,\oplus\,)\ \ ` is an abelian group
+   | :math:`\ ` (the *additive group* of the vector space;
+     its neutral element is the *zero vector* :math:`\,\theta`);
 
 2. :math:`\ (K,\,+\,,\,\cdot\,)\ \ ` is a field;
 
@@ -276,9 +286,10 @@ of the set :math:`\,V.`
    :math:`\,` or :math:`\,` *vectors*, :math:`\,` respectively.
 
 Elements of the set :math:`\,K\ ` are called *scalars*, :math:`\,` 
-while those from the set :math:`\,V` are *vectors*. :math:`\\` 
-The neutral element of the additive group is called  
-the *zero vector*  and is denoted by :math:`\,\theta`.
+while those from the set :math:`\,V` are *vectors*.
+
+.. The neutral element of the additive group is called  
+   the *zero vector*  and is denoted by :math:`\,\theta`.
 
 As mentioned in the Note above, in a practical mathematical language
 the term "vector space" would refer to the set :math:`\,V\,`
@@ -334,8 +345,9 @@ the simplified notation:
    \alpha\cdot v\,+\,\beta\cdot w\quad\rightarrow\quad
    \alpha\,v\,+\,\beta\,w\,.
 
+Basic properties of vector spaces are described in Appendix A2. :math:`\\`
 A vector space over the field :math:`\,R\ ` or :math:`\,C\ ` 
-is one of the fundamental objects of the standard linear algebra. 
+is a fundamental objects of linear algebra. 
 However, the computer algebraic system Sage is based on 
 a more general concept of a module over a ring.
 
@@ -507,18 +519,18 @@ Analogously are defined :math:`\,` *subrings*, :math:`\,` *subfields*,
 A subset of the structure's underlying set can form a substructure only if 
 the operations of the structure do not move elements out from this subset, 
 that is when the subset is closed under these operations.
-Moreover, all axioms concerning the operations 
+Also, all axioms concerning the operations 
 should be satisfied in the subset.
 
 Fortunately, there are practical compact criteria allowing to omit 
 a detailed verification whether each axiom is fulfilled in a given subset.
-For example, for groups one may easily prove
+For example, for groups one may easily prove (see Appendix A3) the following
 
 .. admonition:: Criterion for a subgroup. :math:`\\` 
    
    Let :math:`\ \,\mathbb{G}\;=\;(G,\;\bot\,)\ \,` be a group,
    :math:`\ \,\emptyset\neq H\,\subset G\,.\ `    
-   Then :math:`\ H<G\ ` if and only if 
+   Then :math:`\ H<G\ ` if, and only if, 
    
    .. math::
       
@@ -530,8 +542,8 @@ For example, for groups one may easily prove
    a subgroup iff it is closed under products and inverses).      
 
 By referencing to the definition and basic properties of vector space, 
-one may prove (see the Appendix) the necessary and sufficient condition 
-for a subset to be a subspace of a vector space.
+one may prove (see Appendix A3) the necessary and sufficient condition 
+for a subset to be a subspace of a space.
 
 .. admonition:: Criterion for a vector subspace. :math:`\\` 
    
@@ -546,7 +558,7 @@ for a subset to be a subspace of a vector space.
       w_1,w_2\,\in\,W \quad\Rightarrow\quad
       \left(\ w_1+w_2\,\in\,W\ \ \land\ \ \alpha\,w_1\,\in\,W \ \right)\,,      
    
-   that is, :math:`\,` equivalently, :math:`\,` if and only if
+   that is, :math:`\,` equivalently, :math:`\,` if and only if,
    :math:`\,` for all :math:`\ \alpha_1,\alpha_2 \in K\,,\ w_1,w_2 \in V` :
    
    .. math::
@@ -558,7 +570,7 @@ for a subset to be a subspace of a vector space.
    (a subset :math:`\,W\,` of a vector space :math:`\,V(K)\,` is a subspace
    iff :math:`\,W\,` is closed under vector addition and scalar multiplication, 
    :math:`\,` that is :math:`\,` iff for any two vectors from :math:`\,W,\ ` 
-   every linear combination thereof also belongs to :math:`\,W`).  
+   every linear combination of them also belongs to :math:`\,W`).  
 
 Every vector space :math:`\,V\,` has two *improper* subspaces,
 the whole space :math:`\,V\,` and the one-element set :math:`\,\{\theta\}\,,\ `
@@ -648,9 +660,10 @@ The condition for a subalgebra is an extension of that for subspace.
 .. admonition:: Criterion for a subalgebra. :math:`\\` 
    
    A subset :math:`\ B\ ` of the algebra :math:`\ A\ ` 
-   over a field :math:`\ K\ ` is a subalgebra if and only if
+   over a field :math:`\ K\ ` is a subalgebra if and only if :math:`\,` 
    it is closed under vector addition and vector multiplication 
-   as well as under scalar multiplication, that is iff for arbitrary 
+   as well as under scalar multiplication, that is :math:`\,` 
+   iff for arbitrary 
    :math:`\ x_1,x_2\in A\ ` and :math:`\ \lambda\in K:` 
 
    .. math::

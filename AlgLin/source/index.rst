@@ -15,8 +15,9 @@ Introduction
    uwagi_techniczne
    introductio_preliminaries_notation
    introduction_algebraic_structures
-   podstawy_algebry_liniowej
+   introduction_fundamental_concepts
    permutacje
+   introduction_appendices
    literatura
 
 Introduction to Systems of Linear Equations
