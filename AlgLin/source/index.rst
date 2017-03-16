@@ -12,11 +12,10 @@ Introduction
 .. toctree::
    :maxdepth: 2
 
-   uwagi_techniczne
-   introductio_preliminaries_notation
+   introduction_preliminaries_notation
    introduction_algebraic_structures
    introduction_fundamental_concepts
-   permutacje
+   introduction_permutations
    introduction_appendices
    literatura
 

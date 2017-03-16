@@ -648,6 +648,251 @@ is a maximal linearly independent set. Furthermore,
 every maximal linearly independent set of vectors is a basis.
 :math:`\quad\bullet`
 
+A5. Parity of a Permutation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Given a symmetric group :math:`\,S_n\,,\ n\geq 2,\ ` 
+we define the auxiliary :math:`\\` 
+function :math:`\,P\ ` that ascribes integer numbers to permutations:
+
+.. math::
+   
+   P:\quad S_n\ni\,\sigma =\ 
+   \left(\begin{array}{cccccc} 
+                1 &   2 &   3 & \dots &   n \\
+              s_1 & s_2 & s_3 & \dots & s_n 
+                 \end{array}\right)
+   \ \ \rightarrow\ \ 
+   P(\sigma)\ :\,= \!\!\!\prod_{1\,\leq\,i\,<\,j\,\leq\,n} \!\!\!
+   \left(s_j-\,s_i\right)\ \ \in\ \ Z\,.
+
+For example, :math:`\,` if :math:`\,n=3,\ \ ` then
+:math:`\ \ \{\,(i,j):\ \ 1 \leq i<j \leq 3\,\}\ =\ 
+\{\,(1,2),\,(1,3),\,(2,3)\,\}\,,\ \ ` and 
+
+.. math::
+   
+   P\left(\begin{array}{ccc} 
+   1 & 2 & 3 \\ s_1 & s_2 & s_3 
+   \end{array}\right)\ \ =\ \ 
+   (s_2-\,s_1)(s_3-\,s_1)(s_3-\,s_2)\,.
+
+In particular,
+:math:`\quad P\left(\begin{array}{ccc} 
+1 & 2 & 3 \\ 2 & 1 & 3 \end{array}\right)
+\ =\ (1-2)(3-2)(3-1)\ =\ (-1)(+1)(+2)\ =\ -2\,.`
+
+:math:`\ `
+
+We notice at once two simple properties of the function :math:`\,P(\sigma).`
+
+1. Permutations are bijections, whereby
+   
+   .. math::
+      
+      i<j\quad\Rightarrow\quad 
+      s_i \neq s_j\,,\qquad\forall\ \ i,j\in\{\,1,\,2,\,\ldots,\,n\}.
+   
+   A product of non-zero factors being also non-zero, we infer that
+   the function :math:`\,P(\sigma)\,` assumes only non-zero integer values:
+   
+   .. math::
+      :label: neq_0
+      
+      \blacktriangleright\quad 
+      P(\sigma) \neq 0\,,\qquad\forall\ \sigma\in S_n\,.
+
+2. If :math:`\ \,\sigma\ =\ \text{id}\ =\ 
+   \left(\begin{array}{cccc}
+   1 & 2 & \ldots & n \\ 
+   1 & 2 & \ldots & n 
+   \end{array}\right),\ \ `
+   then :math:`\ \,\sigma(i)\equiv s_i = i,\ \ i=1,2,\ldots,n.\ \,`
+   Therefore
+   
+   .. math::
+      :label: gt_0
+   
+      \blacktriangleright\quad 
+      P(\text{id})\ \ =\ 
+      \!\!\!\prod_{1\,\leq\,i\,<\,j\,\leq\,n} \!\!\! (j-i)
+      \ \ >\ \ 0\,,
+   
+   since a product of positive integers is a positive integer, too.
+
+The next property is more elaborate and we shall formulate it as 
+
+.. admonition:: Lemma. :math:`\,`
+
+   Let :math:`\ \sigma\in S_n\,,\ n\geq 2;\ \ ` 
+   :math:`\ k,l\in\{1,2,\ldots,n\},\ \ k<l\,.\ `
+   
+   Then for any transposition :math:`\,\tau_{kl}\equiv (k,l)\,:\quad`
+   :math:`\,P(\sigma\ \tau_{kl})\ =\ -\,P(\sigma)\,.`
+
+**Proof.** :math:`\,`
+
+.. Let 
+   :math:`\ \sigma\ =\ \left(\begin{array}{cccc}
+   1 & 2 & \ldots & n \\ s_1 & s_2 & \ldots & s_n 
+   \end{array}\right).\ \ ` 
+
+.. math:
+   
+   \sigma\,\tau_{kl}\ =\ 
+   \left(\begin{array}{ccccccc}
+     1 & \ldots &   k & \ldots &   l & \ldots &   n \\
+   s_1 & \ldots & s_k & \ldots & s_l & \ldots & s_n
+   \end{array}\right)
+   \left(\begin{array}{ccccccc}
+   1 & \ldots & k & \ldots & l & \ldots & n \\
+   1 & \ldots & l & \ldots & k & \ldots & n
+   \end{array}\right)\ =
+   
+   =\ \left(\begin{array}{ccccccc}
+     1 & \ldots &   k & \ldots &   l & \ldots &   n \\
+   s_1 & \ldots & s_l & \ldots & s_k & \ldots & s_n
+   \end{array}\right)\,.
+
+.. math:
+   
+   \begin{array}{rcl}
+   \sigma\,\tau_{kl} & = & 
+   \left(\begin{array}{ccccccc}
+     1 & \ldots &   k & \ldots &   l & \ldots &   n \\
+   s_1 & \ldots & s_k & \ldots & s_l & \ldots & s_n
+   \end{array}\right)
+   \left(\begin{array}{ccccccc}
+   1 & \ldots & k & \ldots & l & \ldots & n \\
+   1 & \ldots & l & \ldots & k & \ldots & n
+   \end{array}\right)\ =
+   \\[12pt]  
+   & = & \left(\begin{array}{ccccccc}
+     1 & \ldots &   k & \ldots &   l & \ldots &   n \\
+   s_1 & \ldots & s_l & \ldots & s_k & \ldots & s_n
+   \end{array}\right)\,.
+   \end{array}
+
+Let
+:math:`\ \ \sigma\ =\ 
+\left(\begin{array}{ccccccccc}
+1 & 2 & \ldots & k & \ldots & l & \ldots & n-1 & n \\
+s_1 & s_2 & \ldots & s_k & \ldots & s_l & \ldots & s_{n-1} & s_n
+\end{array}\right)\,.`
+
+Then
+:math:`\ \ \sigma\ \tau_{kl}\ =\ 
+\left(\begin{array}{ccccccccc}
+1 & 2 & \ldots &   k & \ldots &   l & \ldots & n-1 &  n \\
+s_1 & s_2 & \ldots & s_l & \ldots & s_k & \ldots & s_{n-1} & s_n
+\end{array}\right)\,.`
+
+First, let's assume that :math:`\ l=k+1.\ ` Thus
+
+:math:`\sigma\ =\ 
+\left(\begin{array}{cccccccc}
+1 & 2 & \ldots & k & k+1 & \ldots & n-1 & n \\
+s_1 & s_2 & \ldots & s_k & s_{k+1} & \ldots & s_{n-1} & s_n
+\end{array}\right)\,,\ `
+
+:math:`\ \sigma\ \tau_{\,k,\,k+1}\ =\ 
+\left(\begin{array}{cccccccc}
+1 & 2 & \ldots & k & k+1 & \ldots & n-1 & n \\
+s_1 & s_2 & \ldots & s_{k+1} & s_k & \ldots & s_{n-1} & s_n
+\end{array}\right)\,;\ `
+
+:math:`\ P(\sigma)\ =\ 
+(s_2-\,s_1)\,\ldots\,(s_{k+1}-\,s_k)\,\ldots\,(s_n-\,s_{n-1})\,,\ `
+
+:math:`\ P(\sigma\ \tau_{\,k,\,k+1})\ =\ 
+(s_2-\,s_1)\,\ldots\,(s_k-\,s_{k+1})\,\ldots\,(s_n-\,s_{n-1})\,.\ `
+
+The two products, 
+:math:`\,P(\sigma)\,` and :math:`\,P(\sigma\ \tau_{\,k,\,k+1})\,,\ `
+differ only in one factor: :math:`\ (s_{k+1}-\,s_k)\ ` has been replaced
+by :math:`\ (s_k-\,s_{k+1})\ \,=\ \,-\ (s_{k+1}-\,s_k)\,.\ `
+This substitution results in change of sign of the whole expression.
+
+That way we have proved the Lemma for an adjacent transposition
+:math:`\,\tau_{\,k,\,k+1}\,.\ ` Since every transposition :math:`\,\tau_{kl}\,`
+can be represented as a product of an odd number of adjacent ones, 
+the Lemma holds true in general. :math:`\quad\bullet`
+
+.. Lemma is proved in general.
+   the proof has been done in general.
+
+Now we are in position to write down and prove 
+the main statement of this section.
+
+.. admonition:: Theorem. :math:`\,`
+
+   Suppose a permutation :math:`\ \sigma\in S_n\,,\ n\geq 2,\ \ ` 
+   can be decomposed into a product of transpositions in two 
+   different ways:
+   :math:`\ \ \sigma\ =\ \tau_1\,\tau_2\,\dots\,\tau_r\ =\ 
+   \tau'_1\ \tau'_2\ \dots\ \tau'_s\,.\ `
+
+
+   .. math:
+   
+      \sigma\ =\ \tau_1\,\tau_2\,\dots\,\tau_r\ =\ 
+      \tau'_1\,\tau'_2\,\dots\,\tau'_s\,.
+
+   Then the numbers, :math:`\,r,s,\ ` of factors in the decompositions
+   are either both odd, or both even (that is, they have the same parity):
+   :math:`\ \,(-1)^r\ =\ \,(-1)^s\,.`
+
+.. Then the parity of the number of factors is the same in both decompositions:
+   :math:`\ \,(-1)^r\ =\ \,(-1)^s\,.`
+
+**Proof.** :math:`\,`
+Using the Lemma and Eq. :eq:`neq_0`, :math:`\,` we obtain
+
+.. math::
+   
+   P(\sigma)\ =\ P(\text{id}\circ\tau_1\,\tau_2\,\dots\,\tau_r)\ =\ 
+   (-1)^r\ P(\text{id})\,,
+
+   P(\sigma)\ =\ P(\text{id}\circ\tau'_1\ \tau'_2\ \dots\ \tau'_s)\ =\ 
+   (-1)^s\ P(\text{id})\,;
+
+   (-1)^r\ P(\text{id})\ =\ (-1)^s\ P(\text{id})\,,\quad P(\text{id})\neq 0;
+
+   (-1)^r\ =\ \,(-1)^s\,.\quad\bullet
+
+The Theorem allows to define a sign of a permutation 
+:math:`\,\sigma\,` as :math:`\ \text{sgn}\,\sigma = (-1)^r\,,\ ` where 
+:math:`\,r\,` is the number of factors in any decomposition of 
+:math:`\,\sigma\,`  into a product of transpositions.
+Let's note that
+
+.. Another remark stems from Eq. :eq:`gt_0`. :math:`\,` Since
+
+.. math::
+   
+   P(\sigma)\ \,=\ \,(-1)^r\,P(\text{id})\ \,=\ \,
+   \text{sgn}\,\sigma\,\cdot\,P(\text{id}),
+
+where, according to Eq. :eq:`gt_0`, :math:`\ P(\text{id})>0.\ `
+
+Thus the sign of a permutation :math:`\,\sigma\,` is the sign of 
+the integer number :math:`\,P(\sigma):`
+
+.. math::
+   
+   \text{sgn}\,\sigma = +1\qquad\Leftrightarrow\qquad P(\sigma) > 0\,,
+
+   \text{sgn}\,\sigma = -1\qquad\Leftrightarrow\qquad P(\sigma) < 0\,.
+
+.. :math:`\ \text{sgn}\,\sigma\ ` 
+
+
+
+
+
+
+
+
 
 
 
