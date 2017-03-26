@@ -12,15 +12,15 @@ Introduction
 .. toctree::
    :maxdepth: 2
 
-   introduction_preliminaries_notation
-   introduction_algebraic_structures
-   introduction_fundamental_concepts
+   introduction_preliminaries
+   introduction_algebraic-structures
+   introduction_fundamental-concepts
    introduction_permutations
    introduction_appendices
-   literatura
+   introduction_references
 
-Introduction to Systems of Linear Equations
-===========================================
+A Primer on Linear Systems
+==========================
 
 | *Space of the column vectors over a field.*
 | *Geometric interpretation of consistent 
@@ -31,10 +31,10 @@ Introduction to Systems of Linear Equations
 .. toctree::
    :maxdepth: 2
 
-   wprowadzenie_wektory_kolumnowe
-   wprowadzenie_geometria_ukladow_stat
-   wprowadzenie_eliminacja_dla_rownan
-   wprowadzenie_zadania
+   primer_column-vectors
+   primer_geometry-of-eqns-stat
+   primer_elimination-for-eqns 
+   primer_problems
 
 Algebra of Matrices
 ===================
@@ -74,7 +74,7 @@ Operations upon Matrices
    operations_on_matrices_transpose
    operations_on_matrices_inverse
    operations_on_matrices_elementary
-   operations_on_matrices_inverse_elimination
+   operations_on_matrices_inverse-elimination
    operations_on_matrices_permutations
    operations_on_matrices_appendices
    operations_on_matrices_problems
