@@ -387,92 +387,260 @@ These remarks lead to the
    consttutes a group :math:`\\` with respect to matrix multiplication.
    For :math:`\ m>2\ ` the group is non-commutative.
 
-In Sage the command ``SymmetricGroup(n)`` constructs the group
-:math:`\ S_n\ ` of all permutations of :math:`\,n\,` elements. [3]_ :math:`\,`
-The members of :math:`\ S_n\ ` are displayed in the disjoint-cyclic form:
+In Sage, :math:`\,` the command :math:`\,` ``SymmetricGroup(n)`` :math:`\,` 
+returns the group :math:`\ S_n\ ` of all permutations of :math:`\,n\,` 
+elements. [3]_ :math:`\,` The members of :math:`\ S_n\ ` are displayed 
+in the disjoint-cyclic form:
 
 .. code-block:: python
    
    sage: G = SymmetricGroup(4)
    sage: L = G.list()
-   sage: print L
+   sage: print G; L
 
-   [(), (1,2), (1,2,3,4), (1,3)(2,4), (1,3,4), (2,3,4), (1,4,3,2), (1,3,4,2), 
-   (1,3,2,4), (1,4,2,3), (1,2,4,3), (2,4,3), (1,4,3), (1,4)(2,3), (1,4,2), 
-   (1,3,2), (1,3), (3,4), (2,4), (1,4), (2,3), (1,2)(3,4), (1,2,3), (1,2,4)] 
+   Symmetric group of order 4! as a permutation group
+   [(), (3,4), (2,3), (2,3,4), (2,4,3), (2,4), (1,2), (1,2)(3,4), (1,2,3),
+   (1,2,3,4), (1,2,4,3), (1,2,4), (1,3,2), (1,3,4,2), (1,3), (1,3,4),
+   (1,3)(2,4), (1,3,2,4), (1,4,3,2), (1,4,2), (1,4,3), (1,4), (1,4,2,3),
+   (1,4)(2,3)]
 
-A specific permutation can be selected in three ways:
+A specific permutation can be selected by indexing the list of permutations 
+in :math:`\ S_n` :math:`\\` 
+(remembering that counting of elements starts at zero). 
 
-* | by indexing the list of all permutations in :math:`\ S_n\ ` 
-  | (remembering that counting the elements of a list starts at zero)
-* as a text string (including quotes)
-* as a list of Python tuples.
+A permutation given in the disjoint-cycle form can be written 
+
+.. in one of the two ways:
+
+* as a text string (including quotes);
+* as a list of tuples representing cycles.
+
+Using this notation, a permutation may be put as an argument in a function call,
+in particular when extracting an element from the permutation group. 
+Examples are shown below:
 
 .. The following code extracts some three permutations from the group 
    :math:`\,S_4\,` using the above-mentioned ways, and multiplies them 
    in two different orders of factors.
 
-The following code uses the above-mentioned ways, 
-and multiplies the extracted permutations.
+.. The following code uses the above-mentioned ways, 
+   and multiplies the obtained permutations.
 
 .. code-block:: python
    
    sage: G = SymmetricGroup(4)
    sage: L = G.list()
    
-   sage: rho = L[4]
-   sage: sigma = G("(1,2)(3,4)")
-   sage: tau = G([(1,4),(2,3)])
+   sage: g0 = L[4]
+   sage: g1 = G('(1,2)(3,4)')
+   sage: g2 = G([(1,3),(2,4)])
+   sage: g3 = G(((1,4),(2,3)))
+
+   sage: print g0, g1, g2, g3
+
+   (2,4,3) (1,2)(3,4) (1,3)(2,4) (1,4)(2,3)
        
-   sage: table([["$\\rho\\cdot\\sigma\\cdot\\tau\\quad = $", 
-                 rho, "$\\cdot$", sigma, "$\\cdot$", tau, "=", 
+.. sage: table([["$\\rho\\ast\\sigma\\ast\\tau\\quad = $", 
+                 rho, "$\\ast$", sigma, "$\\ast$", tau, "=", 
                  rho*sigma*tau],
-                ["$\\tau\\cdot\\sigma\\cdot\\rho\\quad = $", 
-                 tau, "$\\cdot$", sigma, "$\\cdot$", rho, "=", 
+                ["$\\tau\\ast\\sigma\\ast\\rho\\quad = $", 
+                 tau, "$\\ast$", sigma, "$\\ast$", rho, "=", 
                  tau*sigma*rho]])
 
-As was to be expected, the displayed result depends on the order of factors:
-
-.. math::
-   
-   \begin{array}{ccccccccc}
-   \rho\cdot\sigma\cdot\tau & = & (1,3,4) & \cdot & (1,2)(3,4) & \cdot & (1,4)(2,3) & = & (2,4,3) \\
-   \tau\cdot\sigma\cdot\rho & = & (1,4)(2,3) & \cdot & (1,2)(3,4) & \cdot & (1,3,4) & = & (1,4,2)
-   \end{array}
-
-(unfortunately, Sage assumes the left-to-right convention of composing 
-permutations, which is not what one might naturally expect and is the reverse 
-of the rule used in most textbooks).
-
-The method ``matrix()`` applied to a member of a permutation group returns 
-the matrix of that permutation. Below we give an example: 
+.. As was to be expected, the displayed result depends on the order of factors:
 
 .. math:
    
-   \tau\ =\ (2,4)\ =\ \left(\begin{array}{cccc}
-                         1 & 2 & 3 & 4 \\
-                         1 & 4 & 3 & 2
-                      \end{array}\right)\,.
+   \begin{array}{ccccccccc}
+   \rho\ast\sigma\ast\tau & = & (1,3,4) & \ast & (1,2)(3,4) & \ast & (1,4)(2,3) & = & (2,4,3) \\
+   \tau\ast\sigma\ast\rho & = & (1,4)(2,3) & \ast & (1,2)(3,4) & \ast & (1,3,4) & = & (1,4,2)
+   \end{array}
+
+.. (unfortunately, Sage assumes the left-to-right convention of composing 
+   permutations, which is not what one might naturally expect and is 
+   the reverse of the rule used in most textbooks).
+
+.. (we recall that composing permutations using the binary operator 
+   :math:`\,"\ast"\,` is performed in the left-to-right manner, 
+   which is the reverse of the rule assumed in this textbook).
+
+On the other hand, a particular permutation in a symmetric group 
+can be created individually using the function ``PermutationGroupElement()``:
+
+
+.. code-block:: python
+
+   sage: p1 = PermutationGroupElement('(1,2)(3,4)')
+   sage: p2 = PermutationGroupElement([(1,3),(2,4)])
+   sage: p3 = PermutationGroupElement(((1,4),(2,3)))
+
+   sage: print p1.parent(); print p1, p2, p3
+
+   Symmetric group of order 4! as a permutation group
+   (1,2)(3,4) (1,3)(2,4) (1,4)(2,3)
+
+.. Several operations upon permutations are now available, 
+   e.g. the (left-to-right) multiplication:
+
+Multiplication of permutations is performed 
+in accordance with the left-to-right convention:
 
 .. code-block:: python
    
+   sage: p1 = PermutationGroupElement('(1,2)(3,4)') 
+   sage: p2 = PermutationGroupElement('(2,1,3)')
+   sage: print p1*p2, p2*p1
+
+   (2,3,4) (1,4,3) 
+
+Now we shall apply the Sage tools to derive the matrix of the permutation
+
+.. math::
+   
+   \sigma\ =\ (1,2,3)\ =\ \left(\begin{array}{cccc}
+                             1 & 2 & 3 & 4 \\
+                             2 & 3 & 1 & 4
+                          \end{array}\right)\ \in S_4\,.    
+
+.. The method :math:`\,` ``matrix()`` :math:`\,` applied to a member of 
+   a permutation group returns the matrix of that permutation: 
+
+To that end we apply the method :math:`\,` ``matrix()`` :math:`\,` 
+to a member of the permutation group:
+
+.. code-block: python
+   
    sage: G = SymmetricGroup(4)
-   sage: g = G("(1,2,3)")
+   sage: g = G('(1,2,3)')
    sage: g.matrix()
 
-   [0 1 0 0]
+.. [0 1 0 0]
    [0 0 1 0]
    [1 0 0 0]
    [0 0 0 1]
 
-.. math:
+.. sagecellserver:: 
+
+   G = SymmetricGroup(4)
+   sigma = G('(1,2,3)')
+   P = sigma.matrix(); P
+
+The result reads
+
+.. math::
+   :label: row
    
-   \left(\ (2,4),\ \left(\begin{array}{rrrr}
-                      1 & 0 & 0 & 0 \\
-                      0 & 0 & 0 & 1 \\
-                      0 & 0 & 1 & 0 \\
-                      0 & 1 & 0 & 0
-                   \end{array}\right)\ \right)   
+   P_{\sigma}\ \, = \ \ 
+   \left[\begin{array}{rrrr}
+   0 & 1 & 0 & 0 \\
+   0 & 0 & 1 & 0 \\
+   1 & 0 & 0 & 0 \\
+   0 & 0 & 0 & 1
+   \end{array}\right]
+   \ \ = \ \ 
+   \left[\begin{array}{c}
+   \boldsymbol{e}_2 \\ \boldsymbol{e}_3 \\ 
+   \boldsymbol{e}_1 \\ \boldsymbol{e}_4
+   \end{array}\right]
+   \ \ = \ \ 
+   \left[\begin{array}{c}
+   \boldsymbol{e}_{\sigma (1)} \\ \boldsymbol{e}_{\sigma (2)} \\ 
+   \boldsymbol{e}_{\sigma (3)} \\ \boldsymbol{e}_{\sigma (4)} \\
+   \end{array}\right]\,,
+
+where :math:`\,\boldsymbol{e}_i\ ` is the :math:`\ i`-th :math:`\,` *row*
+:math:`\,` of the identity matrix :math:`\,\boldsymbol{I}_4\,,`
+:math:`\,i=1,2,3,4.`
+
+.. :math:`\ `
+
+In Chapter 1. we have described another approach to permutations in Sage, 
+based on the class of permutations, created by the command ``Permutations()``. 
+Specifically, ``Permutations(n)`` returns the class of permutations of 
+:math:`\,n\,` initial natural numbers, given in a one-line notation. 
+A particular permutation may be constructed by the function ``Permutation()``.
+
+Following that approach, we shall derive the matrix of the permutation
+:math:`\,p\,=\,[\,2,3,1,4\,]\sim\sigma\,,\ ` using the method 
+:math:`\,` ``to_matrix()`` :math:`\,` from 
+:math:`\,` ``Permutation_class``:
+
+.. code-block: python
+   
+   sage: p = Permutation('(1,2,3)(4)')
+   sage: p.to_matrix()
+
+.. [0 0 1 0]
+   [1 0 0 0]
+   [0 1 0 0]
+   [0 0 0 1]
+
+.. sagecellserver:: 
+
+   p = Permutation('(1,2,3)(4)')
+   Q = p.to_matrix(); Q
+
+Now the output is
+   
+.. math::
+   :label: col
+
+   Q_{\sigma}\ \, = \ \ 
+   \left[\begin{array}{cccc}
+   0 & 0 & 1 & 0 \\
+   1 & 0 & 0 & 0 \\
+   0 & 1 & 0 & 0 \\
+   0 & 0 & 0 & 1
+   \end{array}\right]
+   \ \ = \ \ 
+   \left[\ \boldsymbol{e}_2\,|\,\boldsymbol{e}_3\,|\,
+   \boldsymbol{e}_1\,|\,\boldsymbol{e}_4\ \right]
+   \ \ = \ \ 
+   \left[\ 
+   \boldsymbol{e}_{\sigma (1)}\,|\ \boldsymbol{e}_{\sigma (2)}\,|\ 
+   \boldsymbol{e}_{\sigma (3)}\,|\ \boldsymbol{e}_{\sigma (4)}\ 
+   \right]\,,
+
+where :math:`\,\boldsymbol{e}_j\ ` is the :math:`\ j`-th :math:`\,` *column* 
+:math:`\,` of the identity matrix :math:`\,\boldsymbol{I}_4\,,`
+:math:`\,j=1,2,3,4.`
+
+The matrix :math:`\,P_{\sigma}\ ` in :eq:`row` is obtained from the identity 
+matrix by the permutation :math:`\,\sigma\ ` of rows, 
+whereas :math:`\,Q_{\sigma}\ ` in :eq:`col` is obtained by the same 
+permutation of columns. The two matrices are interrelated by transpose:
+each one is the transpose of another. The Sage code below checks 
+the equivalence of permutations used to construct :math:`\,P_{\sigma}\ ` 
+and :math:`\,Q_{\sigma}\ ` as well as the relation 
+:math:`\,Q_{\sigma}=P_{\sigma}^{\,T}:`
+
+.. sagecellserver::
+
+   try: print p == Permutation(sigma), Q == P.T
+   except NameError: pretty_print(html(
+   "Execute code in the two previous cells!"))
+
+.. admonition:: Conclusion. :math:`\,`
+
+   The method :math:`\,` ``matrix()``, :math:`\,` applicable to permutations 
+   of a Symmetric group, refers to the matrix representation of permutations
+   in the *row version*, :math:`\,` whereas the method 
+   :math:`\,` ``to_matrix()`` :math:`\,` from the 
+   :math:`\,` ``Permutation_class`` :math:`\,` pertains to :math:`\,` 
+   the :math:`\,` *column version* :math:`\,` thereof.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .. [3] http://doc.sagemath.org/html/en/thematic_tutorials/group_theory.html#permutation-groups 
 

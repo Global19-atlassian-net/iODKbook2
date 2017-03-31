@@ -43,6 +43,7 @@ the composition :math:`\,\rho\circ\sigma\,`
 is determined by
 
 .. math::
+   :label: compose
    
    (\rho\circ\sigma)(k)\ =\ \rho\,[\,\sigma(k)\,]\,,
    \qquad k\in\{1,2,\dots,n\}\,.
@@ -323,7 +324,7 @@ under permutations in left- and right-hand side of the equation.
 
 As we have pointed out, a decomposition of a given permutation into a product
 of transpositions is not unique. Nevertheless, the number of factors
-in every such expression is either always even or always odd. 
+in every such decomposition is either always even or always odd. 
 In Appendix A5. we prove the following
 
 .. is not unique, the parity of the number of factors is always the same.
@@ -364,8 +365,167 @@ when :math:`\,\text{sgn}\,\sigma = -1\,.`
 
 .. So, for instance, the permutation in Eq. :eq:`ex` is odd. 
 
+Permutations in Sage
+~~~~~~~~~~~~~~~~~~~~
+
+The Sage command ``Permutations(n)`` returns the class of permutations 
+of :math:`\,n\,` numbers, written in a one-line notation: :math:`\\`
+
+.. math::
+   
+   \left(\begin{array}{cccccc} 
+     1 &   2 &   3 & \dots &   n  \\
+   s_1 & s_2 & s_3 & \dots & s_n 
+   \end{array}\right)\quad\sim\quad
+   [\,s_1,\ s_2,\ s_3,\ \ldots,\ s_n\,].
+
+.. code-block:: python
+   
+   sage: P3 = Permutations(3)
+   sage: print P3; P3.list()
+
+   Standard permutations of 3
+   [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
+In general, the command :math:`\,` ``Permutations()``
+yields the class of permutations of any set:
+
+.. code-block:: python
+   
+   sage: P = Permutations(['a', 'b', 'c'])
+   sage: print P; P.list()
+
+   Permutations of the set ['a', 'b', 'c']
+   [['a', 'b', 'c'],
+    ['a', 'c', 'b'],
+    ['b', 'a', 'c'],
+    ['b', 'c', 'a'],
+    ['c', 'a', 'b'],
+    ['c', 'b', 'a']]
+
+A particular permutation can be extracted by a direct indication or by indexing:
+
+.. code-block:: python
+
+   sage: P3 = Permutations(3)
+   sage: L = P3.list()    
+   sage: p0 = P3([1, 2, 3])
+   sage: p1 = P3[1]
+   sage: p2 = L[2]    
+   sage: print L; p0, p1, p2
+
+   [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+   ([1, 2, 3], [1, 3, 2], [2, 1, 3]) 
+
+.. The function ``Permutation()`` converts a permutation written in a one-line 
+   or a cyclic notation into an object of the permutation class:
+
+Given a permutation :math:`\,p\,` written in one of the following ways:
+
+* list of integers, viewed as one-line permutation notation,
+
+* string of tuples of integers, expressing the permutation in cycle notation
+  :math:`\\`
+  (a 1-cycle may be used to set the size of permutation),
+
+* list of tuples, representing the cycles in cycle notation 
+  :math:`\\`
+  (a 1-cycle with a comma may be used to set the size of permutation),
+
+the function ``Permutation()`` returns :math:`\,p\,`  as an object
+of the class of permutations.
+
+.. code-block:: python
+   
+   sage: p1 = Permutation([4,1,3,5,2])
+   sage: p2 = Permutation('(1,3)(5)')
+   sage: p3 = Permutation([(1,4),(5,)])
+   sage: p4 = Permutation(((1,3,4),(2,5)))
+
+   sage: print p1
+   sage: print p2
+   sage: print p3
+   sage: print p4    
+
+   [4, 1, 3, 5, 2]
+   [3, 2, 1, 4, 5]
+   [4, 5, 3, 1, 2]
+   [3, 5, 4, 1, 2]
+
+.. :math:`\\`
+
+Permutations can be multiplied (composed) by means of the binary operator 
+:math:`\ " \ast "\,`. :math:`\\`
+Unfortunately, Sage assumes by default the left-to-right convention 
+of multiplying them, :math:`\\` which does not reflect the principle
+of composing permutations as mappings (see Eq. :eq:`compose`).
+
+.. is not what one might naturally expect and which is the reverse 
+   of the rule used in most textbooks, including the present one.
+
+.. code-block:: python
+   
+   sage: p1 = Permutation([4,1,3,5,2])
+   sage: p2 = Permutation('(1,3)(5)')
+
+   sage: print p1
+   sage: print p2
+   sage: print p1*p2
+   sage: print p2*p1
+
+   [4, 1, 3, 5, 2]
+   [3, 2, 1, 4, 5]
+   [4, 3, 1, 5, 2]
+   [3, 1, 4, 5, 2]
+  
+Admittedly, one has at disposal the method ``left_action_product()``
+that composes two permutations according to the right-to-left convention,
+as well as the method ``right_action_product()`` which acts exactly as 
+the multiplication operator :math:`\ " \ast "` , :math:`\,` i.e. according 
+to the left-to-right rule.
+
+.. code-block:: python
+
+   sage: p1 = Permutation([4,1,3,5,2])
+   sage: p2 = Permutation('(1,3)(5)')
+
+   sage: print p1.left_action_product(p2)  == p2*p1
+   sage: print p1.right_action_product(p2) == p1*p2
+
+   True
+   True
+
+.. There is also the method ``right_action_product()`` which acts exactly as 
+   the multiplication operator :math:`\ " \ast "` , :math:`\,` i.e. according 
+   to the left-to-right rule.
+
+.. code-block: python
+
+   sage: p1 = Permutation([4,1,3,5,2])
+   sage: p2 = Permutation('(1,3)(5)')
+   sage: p1.right_action_product(p2) == p1*p2
+
+   True
+
+The class of permutations contains several other useful methods [4]_,
+of which we shall mention here only a few.
+
+.. sagecellserver::
+
+   P5 = Permutations(5)
+   p = P5.random_element()
+   p.show()
+   print "p =", p
+   print "p reverse =", p.reverse()
+   print "p inverse =", p.inverse()
+   print "p in cycles =", p.to_cycles()
+   print "p is even?", p.is_even()
+
+
+
 .. [3] See http://math.mit.edu/~mckernan/Teaching/12-13/Spring/18.703/l_5.pdf
    for a proof.
+.. [4] http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/permutation.html
 
 
 
