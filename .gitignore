@@ -1,0 +1,7 @@
+*.pyc
+*~
+*.aux
+*.log
+*.bak
+build/
+.DS_Store
