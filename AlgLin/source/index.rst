@@ -113,9 +113,10 @@ Tensor (Kronecker) Product of Matrices
 .. toctree::
    :maxdepth: 2
 
-   iloczyn_tensorowy_wlasnosci
-   iloczyn_tensorowy_macierz_homomorfizmu
-   iloczyn_tensorowy_zadania
+   tensor_product_properties
+   tensor_product_vectorization
+   tensor_product_transformation-matrix
+   tensor_product_problems
 
 Systems of Linear Equations: Theory and Practice
 ================================================

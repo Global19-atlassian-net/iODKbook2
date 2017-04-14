@@ -1,14 +1,17 @@
-Definition and Properties of the Tensor Product
------------------------------------------------
+Definition and Properties
+-------------------------
 
-Definition and Examples
-~~~~~~~~~~~~~~~~~~~~~~~
+Definition and Example
+~~~~~~~~~~~~~~~~~~~~~~
 
-Niech będą dane macierze 
-:math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times n}\,,\ `
-:math:`\ \boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M(K).\ `
-Iloczyn tensorowy (iloczyn prosty, iloczyn Kroneckera) 
-tych macierzy ma w zapisie blokowym postać
+Let :math:`\,\boldsymbol{A}\ \text{and}\,\boldsymbol{B}\,` 
+be arbitrary matrices over a field :math:`\,K:` 
+:math:`\,\boldsymbol{A}\,=\,[a_{ij}]_{m\times n}\,,`
+:math:`\,\boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M(K).`
+Their :math:`\,` *tensor product* :math:`\,` (*Kronecker product*) 
+written in the block notation reads
+
+.. :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ ` is the block matrix 
 
 .. math::
    
@@ -24,11 +27,11 @@ tych macierzy ma w zapisie blokowym postać
            \ldots         & a_{mn}\,\boldsymbol{B} 
    \end{array}\right]\ \in\ M_{mp\times nq}(K). 
 
-Na przykład dla 
-:math:`\ \boldsymbol{A}\,=\,\left[\begin{array}{rc}
+For instance, :math:`\,` if
+:math:`\ \,\boldsymbol{A}\,=\,\left[\begin{array}{rc}
 3 & 2 \\ -1 & 1 \\ -2 & 0 \end{array}\right],\ `
 :math:`\ \boldsymbol{B}\,=\,\left[\begin{array}{rc}
-2 & -1 \\ 0 & 4 \end{array}\right]:`
+2 & -1 \\ 0 & 4 \end{array}\right]\,,\ \,` then
 
 .. math::
    
@@ -45,7 +48,7 @@ Na przykład dla
     6 & -3 & 4 & -2 \\ 0 & 12 & 0 & 8 \\
    -2 &  1 & 2 & -1 \\ 0 & -4 & 0 & 4 \\
    -4 &  2 & 0 &  0 \\ 0 & -8 & 0 & 0 
-   \end{array}\right];
+   \end{array}\right],
 
 .. math::
    
@@ -66,9 +69,10 @@ Na przykład dla
     0 & 0 & -8 &  0
    \end{array}\right].
 
-Elementy iloczynu tensorowego macierzy są numerowane podwójnymi wskaźnikami:
+The entries of a Kronecker product may be numbered by double indices
+:math:`\ ij\,` and :math:`\,kl\,:`
 
-.. math::
+.. math:
    
    \begin{array}{lr}
    (\boldsymbol{A}\otimes\boldsymbol{B})_{ij,kl}\,=\ 
@@ -79,35 +83,49 @@ Elementy iloczynu tensorowego macierzy są numerowane podwójnymi wskaźnikami:
    \end{array}
    \end{array}
 
-Wskaźniki :math:`\ i,k\ ` określają odpowiednio 
-wiersze, kolumny blokowe; :math:`\ \\`
-wskaźniki :math:`\ j,l\ ` określają odpowiednio 
-wiersze, kolumny elementarne.
+.. math::
+   
+   \begin{array}{lr}
+   (\boldsymbol{A}\otimes\boldsymbol{B})_{\,ij,\,kl}\,:\,=\ 
+   (\boldsymbol{A}\otimes\boldsymbol{B})_{\ (i-1)\,p\,+\,j,\ (k-1)\,q\,+\,l}\ =\ 
+   a_{ik}\,b_{jl}, &
+   \begin{array}{ll}
+   i=1,\ldots,m; & k=1,\ldots,n; \\
+   j=1,\ldots,p; & l=1,\ldots,q.
+   \end{array}
+   \end{array}
 
-Properties of the Tensor Product
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The indices :math:`\ i\ ` and :math:`\ k\ ` relate to block rows 
+and block columns, whereas :math:`\\` 
+the indices :math:`\ j\ ` and :math:`\ l\ ` designate elementary 
+rows and columns, respectively.
 
-**0.)** :math:`\,` Iloczyn prosty macierzy jest nieprzemienny:
+Properties of the Kronecker Product
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**0.)** :math:`\,` The tensor product of matrices is non-commutative:
 :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}
 \neq\boldsymbol{B}\otimes\boldsymbol{A}.`
 
-Jednak macierze :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ `
-i :math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ ` są permutacyjnie 
-równoważne, tzn. istnieją macierze permutacji :math:`\ \boldsymbol{P}\ ` 
-i :math:`\ \boldsymbol{Q}\ ` takie, że 
+However, matrices :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ ` and
+:math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ ` are permutation equivalent,
+meaning that :math:`\\` 
+there exist permutation matrices :math:`\ \boldsymbol{P}\ ` and  
+:math:`\ \boldsymbol{Q}\ ` such that 
 :math:`\ \boldsymbol{B}\otimes\boldsymbol{A} \ =\ 
 \boldsymbol{P}\,(\boldsymbol{A}\otimes\boldsymbol{B})\,\boldsymbol{Q}.`
 
-Jeżeli macierze :math:`\ \boldsymbol{A}\ ` i :math:`\ \boldsymbol{B}\ `
-są kwadratowe, to iloczyny :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ ` 
-i :math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ ` są permutacyjnie podobne,
-tzn. :math:`\ \boldsymbol{Q}=\boldsymbol{P}^{\,T}=\boldsymbol{P}^{-1}.\ `
-Oznacza to, że iloczyn :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ `
-można przekształcić do postaci :math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ `
-dokonując pewnej permutacji wierszy i takiej samej permutacji kolumn. [1]_
+If :math:`\ \boldsymbol{A}\ ` and :math:`\ \boldsymbol{B}\ ` are square
+matrices, then the products :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ ` 
+and :math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ ` are even permutation 
+similar: :math:`\ \boldsymbol{Q}\,=\,\boldsymbol{P}^{\,T}=\,
+\boldsymbol{P}^{-1}.\ ` That is to say, the product 
+:math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ ` can be transformed into 
+:math:`\ \boldsymbol{B}\otimes\boldsymbol{A}\ ` by means of a permutation 
+of rows followed by the same permutation of columns. [1]_
 
-**1.)** :math:`\,` Iloczyn prosty jest łączny 
-i rozdzielny względem dodawania macierzy: 
+**1.)** :math:`\,` The Kronecker product is associative and 
+distributive over addition of matrices: 
 
 .. math::
 
@@ -122,7 +140,7 @@ i rozdzielny względem dodawania macierzy:
    (\boldsymbol{A}\otimes\boldsymbol{B}_1)\pm
    (\boldsymbol{A}\otimes\boldsymbol{B}_2)
 
-oraz jest jednorodny w tym sensie, że
+and is compatible with the scalar multiplication of matrices:
    
 .. math::
    
@@ -130,10 +148,10 @@ oraz jest jednorodny w tym sensie, że
    \boldsymbol{A}\otimes(\gamma\,\boldsymbol{B})\ =\ 
    \gamma\ (\boldsymbol{A}\otimes\boldsymbol{B}),\quad\gamma\in K.
 
-**2.)** :math:`\,` Jeżeli rozmiary macierzy 
+**2.)** :math:`\,` If sizes of matrices 
 :math:`\ \boldsymbol{A},\boldsymbol{B},\boldsymbol{C},\boldsymbol{D}\ `
-są takie, że istnieją iloczyny :math:`\ \boldsymbol{A}\boldsymbol{C}\ ` 
-i :math:`\ \boldsymbol{B}\boldsymbol{D},\ ` to
+are such that there exist products :math:`\ \boldsymbol{A}\boldsymbol{C}\ ` 
+and :math:`\ \boldsymbol{B}\boldsymbol{D},\ ` then
 
 .. math::
    :label: mixed-product
@@ -142,9 +160,9 @@ i :math:`\ \boldsymbol{B}\boldsymbol{D},\ ` to
    (\boldsymbol{A}\otimes\boldsymbol{B})\,(\boldsymbol{C}\otimes\boldsymbol{D})
    \ =\ (\boldsymbol{A}\boldsymbol{C})\otimes(\boldsymbol{B}\boldsymbol{D}).
 
-**Dowód.** :math:`\ ` Przyjmiemy macierze 
+**Proof.** :math:`\ ` Suppose the matrices 
 :math:`\ \boldsymbol{A},\,\boldsymbol{B},\,\boldsymbol{C},\,\boldsymbol{D}\,`
-w postaci
+are given by
 
 .. math::
    
@@ -155,10 +173,10 @@ w postaci
    \boldsymbol{D}\,=\,[d_{ij}]_{s\times q}\,.
    \end{array}
 
-Sprawdzimy, że macierze po obydwu stronach równości :eq:`mixed-product` 
-mają te same rozmiary oraz składają się z tych samych elementów.
+We shall verify that matrices on both sides of Eq. :eq:`mixed-product`
+have equal dimensions and are composed of the same elements.
 
-a.) :math:`\ ` porównanie rozmiarów macierzy:
+a.) :math:`\ ` comparison of dimensions of matrices:
 
 .. math::
    
@@ -177,7 +195,7 @@ a.) :math:`\ ` porównanie rozmiarów macierzy:
    \end{array}
    \end{array}
 
-b.) :math:`\ ` porównanie odpowiednich elementów:
+b.) :math:`\ ` comparison of corresponding elements:
 
 .. math::
    
@@ -198,16 +216,19 @@ b.) :math:`\ ` porównanie odpowiednich elementów:
    \end{array}
    \\[8pt]
    \begin{array}{ll}
-   \text{gdzie} &
+   \text{where} &
    \begin{array}{ll}
    i=1,2,\ldots,m; & j=1,2,\ldots,p; \\
    k=1,2,\ldots,n; & l=1,2,\ldots,q.
    \end{array}
-   \end{array}
+   \end{array}\quad\bullet
 
-Warto zauważyć szczególny przypadek wzoru :eq:`mixed-product`, w którym
+It's worthwhile to write down a special case of Eq. :eq:`mixed-product`, 
+with :math:`\,\boldsymbol{A}\in M_m(C),\ ` :math:`\,\boldsymbol{B}\in M_p(C),\ `
+:math:`\,\boldsymbol{x}\in C^m\sim M_{m\times 1}(C),\ `
+:math:`\,\boldsymbol{y}\in C^p\sim M_{p\times 1}(C)\,:`
 
-.. math::
+.. math:
    
    \boldsymbol{A}\ =\ 
    \left[\begin{array}{ccc} 
@@ -231,18 +252,17 @@ Warto zauważyć szczególny przypadek wzoru :eq:`mixed-product`, w którym
    \end{array}\right]:
 
 .. math::
-   :label: mixed-product-2
-   
+
    (\boldsymbol{A}\otimes\boldsymbol{B})
    (\boldsymbol{x}\otimes\boldsymbol{y})\ =\ 
    \boldsymbol{A}\boldsymbol{x}\otimes\boldsymbol{B}\boldsymbol{y}.
-   
-Wzór :eq:`mixed-product-2` ma zastosowanie przy opisie 
-układu kwantowego złożonego z dwóch podukładów.
 
-**3.)** :math:`\,` Jeżeli 
+This formula is useful for a mathematical description 
+of a bipartite quantum system. :math:`\\`
+
+**3.)** :math:`\,` If
 :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times m}\in M_m(K),\   
-\boldsymbol{B}\,=\,[b_{ij}]_{n\times n}\in M_n(K),\ ` to
+\boldsymbol{B}\,=\,[b_{ij}]_{n\times n}\in M_n(K),\ ` then
 
 *i*.) :math:`\quad\text{Tr}\ (\boldsymbol{A}\otimes\boldsymbol{B})\ =\ 
 \text{Tr}\,\boldsymbol{A}\ \cdot\ \text{Tr}\,\boldsymbol{B}.`
@@ -250,12 +270,12 @@ układu kwantowego złożonego z dwóch podukładów.
 *ii*.) :math:`\quad\det{(\boldsymbol{A}\otimes\boldsymbol{B})}\ =\ 
 (\det{\boldsymbol{A}})^n\ \cdot\ (\det{\boldsymbol{B}})^m.`
 
-*iii*.) :math:`\ \ ` Jeżeli dodatkowo :math:`\ \det{\boldsymbol{A}}\neq 0,\ `
-:math:`\ \det{\boldsymbol{B}}\neq 0,\quad` to
+*iii*.) :math:`\ \ ` If additionally :math:`\ \det{\boldsymbol{A}}\neq 0,\ `
+:math:`\ \det{\boldsymbol{B}}\neq 0,\quad` then
 :math:`\quad (\boldsymbol{A}\otimes\boldsymbol{B})^{-1}\ =\ \,
 \boldsymbol{A}^{-1}\otimes\,\boldsymbol{B}^{-1}.`
 
-**Dowód.**
+**Proof.**
 
 .. math:
    
@@ -316,11 +336,11 @@ i.) \quad\text{Tr}\ (\boldsymbol{A}\otimes\boldsymbol{B}) &
 \displaystyle\sum_{i=1}^m \displaystyle\sum_{j=1}^n\ a_{ii}\ b_{jj}\ \ = \\
 & = \ \ \left(\displaystyle\sum_{i=1}^m a_{ii}\right)\ 
 \left(\displaystyle\sum_{j=1}^n b_{jj}\right)\ \ = \ \ 
-\text{Tr}\,\boldsymbol{A}\ \cdot\ \text{Tr}\,\boldsymbol{B}\,.   
+\text{Tr}\,\boldsymbol{A}\ \cdot\ \text{Tr}\,\boldsymbol{B}\,.\quad\bullet   
 \end{array}`
 
-*ii*.) :math:`\,` Korzystamy ze wzoru :eq:`mixed-product`
-oraz z uwag do punktu 0.) niniejszej dyskusji:
+*ii*.) :math:`\,` We shall use Eq. :eq:`mixed-product`
+and the remarks to the item **0.)** of the present discussion.
 
 .. math::
    
@@ -334,10 +354,10 @@ oraz z uwag do punktu 0.) niniejszej dyskusji:
    \boldsymbol{P}\ (\boldsymbol{I}_n\otimes
    \boldsymbol{A})\,\boldsymbol{P}^{-1}.
 
-Tutaj :math:`\ \boldsymbol{I}_m\ ` oraz   :math:`\ \boldsymbol{I}_n\ `
-są macierzami jednostkowymi stopnia :math:`\,m\,` oraz :math:`\,n,\ ` 
-a :math:`\ \boldsymbol{P}\ ` jest pewną macierzą permutacji.
-Na podstawie twierdzenia o wyznaczniku iloczynu macierzy mamy więc
+:math:`\ \boldsymbol{I}_m\ ` and   :math:`\ \boldsymbol{I}_n\ `
+are identity matrices of size :math:`\,m\,` and :math:`\,n,\ ` 
+whereas :math:`\ \boldsymbol{P}\ ` is a permutation matrix.
+Using the theorem on a determinant of a product of matrices, we get
 
 .. math:
    
@@ -378,7 +398,9 @@ Na podstawie twierdzenia o wyznaczniku iloczynu macierzy mamy więc
    \det{(\boldsymbol{I}_n\otimes\boldsymbol{A})}\,.
    \end{array}
 
-Tak więc wyznacznik iloczynu prostego dwóch macierzy wyraża się wzorem
+Therefore the determinant of a tensor product of two matrices, 
+:math:`\,\boldsymbol{A}\,` and :math:`\,\boldsymbol{B},\ `
+is given by 
 
 .. math::
    :label: det_AxB
@@ -387,9 +409,9 @@ Tak więc wyznacznik iloczynu prostego dwóch macierzy wyraża się wzorem
    \det{(\boldsymbol{I}_n\otimes\boldsymbol{A})}\,\cdot\,
    \det{(\boldsymbol{I}_m\otimes\boldsymbol{B})}\,.
 
-Macierze :math:`\ \boldsymbol{I}_n\otimes\boldsymbol{A}\ ` oraz
-:math:`\ \boldsymbol{I}_m\otimes\boldsymbol{B}\ ` są macierzami
-blokowo-diagonalnymi:
+The matrices :math:`\ \boldsymbol{I}_n\otimes\boldsymbol{A}\ ` and
+:math:`\ \boldsymbol{I}_m\otimes\boldsymbol{B}\ ` have block-diagonal 
+structure:
 
 .. math::
    
@@ -400,7 +422,7 @@ blokowo-diagonalnymi:
    \boldsymbol{0} & \boldsymbol{A} & \cdots & \boldsymbol{0} \\
    \cdots & \cdots & \cdots & \cdots \\
    \boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{A}
-   \end{array}\right]}_{n\ \text{bloków}}\,,
+   \end{array}\right]}_{n\ \text{blocks}}\,,
    \qquad
    \boldsymbol{I}_m\otimes\boldsymbol{B}\ =\ 
    \underbrace{
@@ -409,9 +431,9 @@ blokowo-diagonalnymi:
    \boldsymbol{0} & \boldsymbol{B} & \cdots & \boldsymbol{0} \\
    \cdots & \cdots & \cdots & \cdots \\
    \boldsymbol{0} & \boldsymbol{0} & \cdots & \boldsymbol{B}
-   \end{array}\right]}_{m\ \text{bloków}} \,,
+   \end{array}\right]}_{m\ \text{blocks}} \,,
 
-których wyznaczniki dane są przez
+whereby their determinants read
 
 .. math::
    :label: I_AB
@@ -423,13 +445,13 @@ których wyznaczniki dane są przez
    (\det{\boldsymbol{B}})^m\,.
    \end{array}
 
-Podstawienie wyników :eq:`I_AB` do :eq:`det_AxB` daje relację: 
+Inserting :eq:`I_AB` to :eq:`det_AxB` yields the desired relation:
 :math:`\ \det{(\boldsymbol{A}\otimes\boldsymbol{B})}\,=\,
-(\det{\boldsymbol{A}})^n\,\cdot\,(\det{\boldsymbol{B}})^m,\ `
-którą należało udowodnić.
-e
+(\det{\boldsymbol{A}})^n\,\cdot\,(\det{\boldsymbol{B}})^m\,.\ \ \bullet`
+
 *iii*.) :math:`\,` 
-Iloczyn prosty dwóch macierzy odwracalnych jest macierzą odwracalną:
+First, we note that the tensor product of two invertible matrices
+is invertible as well:
 
 .. math::
    
@@ -438,7 +460,7 @@ Iloczyn prosty dwóch macierzy odwracalnych jest macierzą odwracalną:
    \det{(\boldsymbol{A}\otimes\boldsymbol{B})}\ \equiv\ 
    (\det{\boldsymbol{A}})^n\,\cdot\,(\det{\boldsymbol{B}})^m\ \neq\ 0\,.
 
-Ponadto, korzystając ponownie ze wzoru :eq:`mixed-product`, można zapisać
+Next, making use of Eq. :eq:`mixed-product`, we obtain
 
 .. math::
    
@@ -454,33 +476,36 @@ Ponadto, korzystając ponownie ze wzoru :eq:`mixed-product`, można zapisać
    (\boldsymbol{A}^{-1}\boldsymbol{A})\otimes
    (\boldsymbol{B}^{-1}\boldsymbol{B})\ =\ 
    \boldsymbol{I}_m\otimes\boldsymbol{I}_n\ =\ 
-   \boldsymbol{I}_{mn}\,,
+   \boldsymbol{I}_{mn}\,.
 
-co oznacza, że: :math:`\quad (\boldsymbol{A}\otimes\boldsymbol{B})^{-1}\,=\ 
-\boldsymbol{A}^{-1}\otimes\,\boldsymbol{B}^{-1},\quad` co należało udowodnić. 
+This means that :math:`\quad (\boldsymbol{A}\otimes\boldsymbol{B})^{-1}\,=\ 
+\boldsymbol{A}^{-1}\otimes\,\boldsymbol{B}^{-1}\,.\quad\bullet` 
 
-**4.)** :math:`\,` Jeżeli 
+**4.)** :math:`\,` If 
 :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{m\times n}\in M_{m\times n}(K),\   
-\boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M_{p\times q}(K),\ ` to
+\boldsymbol{B}\,=\,[b_{ij}]_{p\times q}\in M_{p\times q}(K),\ ` then
 
 *i*.) :math:`\quad(\boldsymbol{A}\otimes\boldsymbol{B})^T\ =\ 
 \boldsymbol{A}^T\ \otimes\ \boldsymbol{B}^{\,T}.`
 
-Dla macierzy zespolonych (:math:`K=C`) zachodzą dodatkowo związki:
+For complex matrices (:math:`K=C`) 
+the rules for complex or Hermitian conjugate are:
 
-*ii*.) :math:`\quad(\boldsymbol{A}\otimes\boldsymbol{B})^*\ =\ 
-\boldsymbol{A}^*\otimes\ \boldsymbol{B}^*.`
+.. the two additional relations hold:
+
+*ii*.) :math:`\quad(\boldsymbol{A}\otimes\boldsymbol{B})^{\,\ast}\ =\ 
+\boldsymbol{A}^{\ast}\otimes\ \boldsymbol{B}^{\,\ast}.`
 
 *iii*.) :math:`\quad(\boldsymbol{A}\otimes\boldsymbol{B})^+\ =\ 
 \boldsymbol{A}^+\otimes\ \boldsymbol{B}^+.`
 
-**Dowód.**
+**Proof.**
 
 *i*.) :math:`\,` 
-Macierze po obydwu stronach równości mają 
-te same rozmiary oraz te same elementy:
+To be equal, two matrices should have the same sizes 
+and the same corresponding entries.
 
-a.) :math:`\ ` porównanie rozmiarów macierzy:
+a.) :math:`\ ` comparison of dimensions of matrices:
 
 .. math::
    
@@ -503,7 +528,7 @@ a.) :math:`\ ` porównanie rozmiarów macierzy:
    \end{array}
    \end{array}
 
-b.) :math:`\ ` porównanie odpowiednich elementów:
+b.) :math:`\ ` comparison of corresponding elements:
 
 .. math::
    
@@ -517,21 +542,23 @@ b.) :math:`\ ` porównanie odpowiednich elementów:
    \end{array}
    \\[8pt]
    \begin{array}{ll}
-   \text{gdzie} &
+   \text{where} & \quad
    \begin{array}{ll}
    i=1,2,\ldots,n; & j=1,2,\ldots,q; \\
-   k=1,2,\ldots,m; & l=1,2,\ldots,p.
+   k=1,2,\ldots,m; & l=1,2,\ldots,p.\qquad\bullet
    \end{array}
    \end{array}
 
-A zatem transpozycja iloczynu prostego dwóch macierzy równa się 
-iloczynowi prostemu :math:`\\` macierzy transponowanych 
-(z zachowaniem kolejności czynników).
+Therefore, the transpose of a tensor product of two matrices
+is equal to the tensor product of the transposed matrices, 
+the order of factors being preserved.
 
 *ii*.) :math:`\,`
-Macierze :math:`\ (\boldsymbol{A}\otimes\boldsymbol{B})^*\ ` 
-oraz :math:`\ \boldsymbol{A}^*\otimes\boldsymbol{B}^*\ ` 
-mają te same rozmiary, :math:`\ ` a ponadto
+Matrices :math:`\ (\boldsymbol{A}\otimes\boldsymbol{B})^*\ ` and
+:math:`\ \boldsymbol{A}^*\otimes\boldsymbol{B}^*\ ` are of the same size
+and have the same entries:
+
+.. Furthermore,
 
 .. math::
    
@@ -540,20 +567,16 @@ mają te same rozmiary, :math:`\ ` a ponadto
    (\boldsymbol{A}^*\otimes\,\boldsymbol{B}^*)_{\ |\ ij,\,kl}\,,
    \\[8pt]
    \begin{array}{ll}
-   \text{gdzie} &
+   \text{where} & \quad
    \begin{array}{ll}
    i=1,2,\ldots,m; & j=1,2,\ldots,p; \\
-   k=1,2,\ldots,n; & l=1,2,\ldots,q.
+   k=1,2,\ldots,n; & l=1,2,\ldots,q.\qquad\bullet
    \end{array}
    \end{array}
-
-Tak więc sprzężenie zespolone iloczynu prostego dwóch macierzy równa się 
-iloczynowi :math:`\\` prostemu macierzy sprzężonych
-(z zachowaniem kolejności czynników).
 
 *iii*.) :math:`\,`
-Sprzężenie hermitowskie macierzy jest złożeniem transpozycji 
-i sprzężenia zespolonego:
+The Hermitian conjugate being composed of complex conjugate and transpose,
+we obtain
 
 .. math::
    
@@ -561,7 +584,12 @@ i sprzężenia zespolonego:
    \left[\,(\boldsymbol{A}\otimes\boldsymbol{B})^T\right]^* =\ \,
    \left(\boldsymbol{A}^T\otimes\,\boldsymbol{B}^T\right)^*\ =\ \,
    (\boldsymbol{A}^T)^*\otimes\,(\boldsymbol{B}^T)^*\ =\ \,
-   \boldsymbol{A}^+\otimes\,\boldsymbol{B}^+.
+   \boldsymbol{A}^+\otimes\,\boldsymbol{B}^+.\ \bullet
+
+So the complex or Hermitian conjugate of a tensor product of two matrices
+is equal to the tensor product of the conjugated matrices, the order of factors
+being preserved.
+
 
 .. [1] H. V. Henderson; S. R. Searle (1980). "The vec-permutation matrix, 
    the vec operator and Kronecker products: a review". 

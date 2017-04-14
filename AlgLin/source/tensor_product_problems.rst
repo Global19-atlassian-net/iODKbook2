@@ -1,18 +1,17 @@
 
-Problems
---------
+Problems with Solutions
+-----------------------
 
-**Zadanie 1.** :math:`\,`
-Niech :math:`\ \boldsymbol{A}\,=\,[a_{ij}]_{2\times 2}\ `
-będzie dowolną macierzą nad ciałem :math:`\ K.\ `
-Dla :math:`\ n=2,\ 3\ ` pokaż bezpośrednio, że macierz 
-:math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_n\ ` można 
-przekształcić do postaci :math:`\ \boldsymbol{I}_n\otimes\boldsymbol{A}\ `
-poprzez pewne przestawienia wierszy :math:`R_i\ ` :math:`\,` i :math:`\,` 
-takie same przestawienia kolumn :math:`\ C_j\ \ (i,j=1,\ldots,n.`).
-
-Określ macierze permutacji :math:`\ \boldsymbol{P},\,\boldsymbol{Q}\ ` 
-w zależności
+**Problem 1.** :math:`\,`
+Let :math:`\ \boldsymbol{A}\,=\,[\,a_{ij}\,]_{\,2\times 2}\ ` 
+be an arbitrary square matrix of size two over a field :math:`\ K.\ ` 
+For :math:`\ n=2\ ` and :math:`\ 3\ ` show directly, that the matrix 
+:math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_n\ ` 
+may be converted into :math:`\,\boldsymbol{I}_n\otimes\boldsymbol{A}\ `
+by means of some transpositions of rows :math:`\ R_i\ ` associated with
+the same transpositions of columns :math:`\ C_j\quad (i,j=1,\ldots,n).\ `
+Determine the permutation matrices :math:`\ \boldsymbol{P}\ ` and 
+:math:`\ \boldsymbol{Q}\ ` in the relation
 
 .. math::
    
@@ -21,14 +20,17 @@ w zależności
    (\boldsymbol{A}\otimes\boldsymbol{I}_n)\ 
    \boldsymbol{Q}\,.
 
-Sprawdź, że :math:`\,\boldsymbol{Q} = \boldsymbol{P}^T =
-\boldsymbol{P}^{-1}\,` co oznacza, że jeśli :math:`\,\boldsymbol{P}\,`
-jest macierzą pewnej permutacji :math:`\,\sigma\,` wierszy, to
-:math:`\,\boldsymbol{Q}\,` jest macierzą tej samej permutacji 
-kolumn. Zapisz :math:`\,\sigma\,` w postaci dwuwierszowej.
+Verify that :math:`\,\boldsymbol{Q} = \boldsymbol{P}^T =
+\boldsymbol{P}^{-1},\ ` meaning that :math:`\,\boldsymbol{P}\ ` and
+:math:`\,\boldsymbol{Q}\ ` are, :math:`\,` respectively, :math:`\,` 
+the row and column permutation matrices of the same permutation 
+:math:`\,\sigma.\ ` Write down :math:`\,\sigma\,` in a two-line form.
 
-**Rozwiązanie** :math:`\,` dla :math:`\,` :math:`n=2\ ` 
-(wersja wierszowo-kolumnowa):
+.. if :math:`\,\boldsymbol{P}\,` is the matrix of a permutation 
+   :math:`\,\sigma\,` of rows, then :math:`\,\boldsymbol{Q}\,` 
+   is the matrix of the same permutation of columns. 
+
+**Solution** :math:`\,` for :math:`\,` :math:`n=2.\ ` 
 
 .. math::
    
@@ -68,12 +70,9 @@ kolumn. Zapisz :math:`\,\sigma\,` w postaci dwuwierszowej.
    \end{array}
    \\[4pt]
 
-.. **Wniosek**: :math:`\quad \det{(\boldsymbol{A}\otimes\boldsymbol{I}_2)}\,=\,
-   \det{(\boldsymbol{I}_2\otimes\boldsymbol{A})}\,=\,(\det{\boldsymbol{A}})^2.`
-
-Przekształcenie macierzy :math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_2\ `
-do postaci :math:`\ \boldsymbol{I}_2\otimes\boldsymbol{A}\ ` przebiega 
-w jednym podwójnym kroku:
+The transformation of matrix :math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_2\ `
+into :math:`\ \boldsymbol{I}_2\otimes\boldsymbol{A}\ ` proceeds in one
+double step:
 
 .. math::
    :label: trans-2
@@ -83,27 +82,11 @@ w jednym podwójnym kroku:
    (\boldsymbol{A}\otimes\boldsymbol{I}_2)\ 
    \boldsymbol{Q}_{23}\,,
 
-gdzie :math:`\ \boldsymbol{P}_{23}\ ` jest macierzą transpozycji wierszy 
-(drugiego i trzeciego), a :math:`\ \, \boldsymbol{Q}_{23}\ ` :math:`\ -\ \ `
-macierzą transpozycji kolumn (drugiej i trzeciej).
-
-.. Przy numerycznym sprawdzeniu wzoru :eq:`trans-2` należy pamiętać,
-   że w systemie Sage:
-   
-   * w kodzie programu początkowym numerem wierszy i kolumn jest liczba 0;
-   
-   * | macierz :math:`\ \boldsymbol{P}_{23}\ ` transpozycji wierszy 
-       jest macierzą elementarną 1. rodzaju,
-     | otrzymaną z macierzy jednostkowej przez przestawienie wiersza
-       drugiego z trzecim; 
-     | macierz ta przekształca daną macierz mnożąc ją z lewej strony;
-   
-   * | macierz :math:`\ \boldsymbol{Q}_{23}\ ` transpozycji kolumn 
-       jest macierzą elementarną 1. rodzaju,
-     | otrzymaną z macierzy jednostkowej przez przestawienie kolumny
-       drugiej z trzecią;
-     | macierz ta przekształca daną macierz mnożąc ją z prawej strony.
-       :math:`\ `
+where :math:`\ \boldsymbol{P}_{23}\ ` is the matrix of transposition of rows
+(the second and the third), :math:`\\` 
+whilst :math:`\ \,\boldsymbol{Q}_{23}\ ` is the matrix of transposition 
+of columns (the second and the third). :math:`\\` 
+These operations are performed by the following Sage code:
 
 .. code-block:: python
    
@@ -117,8 +100,8 @@ macierzą transpozycji kolumn (drugiej i trzeciej).
    sage: Q23 = elementary_matrix(4, col1=1, col2=2)
    
    sage: I2xA = P23 * AxI2 * Q23
-   sage: I2xA.subdivide(2,2)
-   
+   sage: I2xA.subdivide(2,2)  
+ 
    sage: (AxI2, I2xA)
    
    (
@@ -129,8 +112,9 @@ macierzą transpozycji kolumn (drugiej i trzeciej).
    [  0 a21|  0 a22], [  0   0|a21 a22]
    )
 
-**Rozwiązanie** :math:`\,` dla :math:`\,` :math:`n=3\ ` 
-(wersja wierszowo-kolumnowa):
+**Solution** :math:`\,` for :math:`\,` :math:`n=3\ ` 
+
+.. (wersja wierszowo-kolumnowa):
 
 .. math::
 
@@ -219,12 +203,8 @@ macierzą transpozycji kolumn (drugiej i trzeciej).
    \end{array}
    \\[10pt]
 
-.. **Wniosek**: :math:`\quad \det{(\boldsymbol{A}\otimes\boldsymbol{I}_3)}\,=\,
-   \det{(\boldsymbol{I}_3\otimes\boldsymbol{A})}\,=\,(\det{\boldsymbol{A}})^3.`
-
-Wykonane operacje na wierszach i kolumnach macierzy 
-:math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_3\ `
-można przedstawić wzorem
+The operations performed on rows and columns of the matrix 
+:math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_3\ ` may be written as
 
 .. math::
    :label: trans-3
@@ -243,17 +223,19 @@ można przedstawić wzorem
    \boldsymbol{Q}.
    \end{array}
    
-A zatem :math:`\ \boldsymbol{P} = 
+Thus :math:`\ \boldsymbol{P} = 
 \boldsymbol{P}_{56}\ \boldsymbol{P}_{46}\ \boldsymbol{P}_{24}\,,\ `
 :math:`\ \boldsymbol{Q} = 
 \boldsymbol{Q}_{24}\ \boldsymbol{Q}_{46}\ \boldsymbol{Q}_{56}\,,\ `
-gdzie :math:`\ \boldsymbol{P}_{ij}\ ` jest macierzą transpozycji wierszy 
-:math:`\ i,j\,,\ \,` a :math:`\ \, \boldsymbol{Q}_{ij}\ ` :math:`\ -\ \ `
-macierzą transpozycji kolumn :math:`\ i,j\,,\ ` 
+where :math:`\ \boldsymbol{P}_{ij}\ ` is a matrix of transposition of rows
+:math:`\ i,j\,,\ \,` and :math:`\ \, \boldsymbol{Q}_{ij}\ ` :math:`\ -\ \ `
+a matrix of transposition of columns :math:`\ i,j\,,\ ` 
 :math:`\ (i<j=1,2,\ldots,6.)`
 
-Ponieważ :math:`\ \boldsymbol{Q}_{ij} = \boldsymbol{P}_{ij}^{\,T} =
-\boldsymbol{P}_{ij}^{-1}\,,\ \ i<j=1,2,\ldots,6\,,\ ` to
+In view of the relations 
+:math:`\ \boldsymbol{Q}_{ij} = \boldsymbol{P}_{ij}^{\,T} =
+\boldsymbol{P}_{ij}^{-1}\,,\ \ i<j=1,2,\ldots,6\,,\ `
+we obtain 
 
 .. math::
 
@@ -277,32 +259,31 @@ Ponieważ :math:`\ \boldsymbol{Q}_{ij} = \boldsymbol{P}_{ij}^{\,T} =
    \boldsymbol{P}^{-1},
    \end{array}
 
-czyli :math:`\ \ \boldsymbol{Q}\ \,=\ \,\boldsymbol{P}^{\,T}\ =\ \,
-\boldsymbol{P}^{-1},\ \ ` czego należało oczekiwać.
+hence :math:`\ \ \boldsymbol{Q}\ \,=\ \,\boldsymbol{P}^{\,T}\ =\ \,
+\boldsymbol{P}^{-1},\ \ ` which was to be verified.
 
-**Wniosek**: :math:`\quad \det{(\boldsymbol{A}\otimes\boldsymbol{I}_3)}\,=\,
+**A practical conclusion:** :math:`\quad 
+\det{(\boldsymbol{A}\otimes\boldsymbol{I}_3)}\,=\,
 \det{(\boldsymbol{I}_3\otimes\boldsymbol{A})}\,=\,(\det{\boldsymbol{A}})^3.`
 
-Macierze :math:`\ \boldsymbol{P}\ ` i :math:`\ \boldsymbol{Q}\ `
-wyznaczymy numerycznie pamiętając o tym, że w systemie Sage:
+The matrices :math:`\ \boldsymbol{P}\ ` and :math:`\ \boldsymbol{Q}\ `
+shall be determined numerically, remembering that in Sage:
 
-* w kodzie programu początkowym numerem wierszy i kolumn jest liczba 0;
+* the numbering of rows and columns starts at zero;
 
-* | macierz :math:`\ \boldsymbol{P}_{ij}\ ` transpozycji wierszy 
-    :math:`\ i,j\ ` jest macierzą elementarną 1. rodzaju,
-  | otrzymaną z macierzy jednostkowej przez przestawienie wiersza
-    :math:`\ i`-tego z :math:`\ j`-tym 
-  | :math:`\ (i<j=1,2,\ldots,6.);\ `
-    macierz ta przekształca daną macierz mnożąc ją z lewej strony;
+* | the matrix :math:`\ \boldsymbol{P}_{ij}\ ` 
+    of transposition of rows is an elementary matrix,
+  | obtained from the identity matrix by swapping 
+    :math:`\ i`-th and :math:`\ j`-th rows; 
+  | :math:`\ \boldsymbol{P}_{ij}\ ` transforms any given matrix
+    by multiplying it from the left;    
 
-* | macierz :math:`\ \boldsymbol{Q}_{ij}\ ` transpozycji kolumn 
-    :math:`\ i,j\ ` jest macierzą elementarną 1. rodzaju,
-  | otrzymaną z macierzy jednostkowej przez przestawienie kolumny
-    :math:`\ i`-tej z :math:`\ j`-tą 
-  | :math:`\ (i<j=1,2,\ldots,6.);\ `
-    macierz ta przekształca daną macierz mnożąc ją z prawej strony.
-
-.. :math:`\ `
+* | the matrix :math:`\ \boldsymbol{Q}_{ij}\ ` 
+    of transposition of columns is an elementary matrix,
+  | obtained from the identity matrix by swapping  
+    :math:`\ i`-th and :math:`\ j`-th columns; 
+  | :math:`\ \boldsymbol{Q}_{ij}\ ` transforms any given matrix
+    by multiplying it from the right.
 
 .. code-block:: python
    
@@ -327,11 +308,7 @@ wyznaczymy numerycznie pamiętając o tym, że w systemie Sage:
    [0 0 0 0 1 0], [0 0 0 1 0 0]
    )
 
-.. :math:`\\`
-
-Sprawdzimy teraz numerycznie zależność macierzową :eq:`trans-3`: 
-
-.. :math:`\\`
+Now we shall verify numerically the relation :eq:`trans-3`: 
 
 .. code-block:: python
    
@@ -356,13 +333,21 @@ Sprawdzimy teraz numerycznie zależność macierzową :eq:`trans-3`:
    [  0   0 a21|  0   0 a22], [  0   0|  0   0|a21 a22]
    )
 
-Oznaczmy przez :math:`\ \sigma\in S_6\ ` permutację wierszy i kolumn,
-która przeprowadza macierz :math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_3\ `
-w :math:`\ \boldsymbol{I}_3\otimes\boldsymbol{A}.\ ` 
-Jeżeli w zapisie dwuwierszowym pierwszy wiersz ma postać 
+Let :math:`\ \sigma\in S_6\ ` be the permutation of rows and columns,
+which converts the matrix :math:`\ \boldsymbol{A}\otimes\boldsymbol{I}_3\ `
+into :math:`\ \boldsymbol{I}_3\otimes\boldsymbol{A}.\ `
+Remembering the definitions of permutation matrices in row and column 
+version, the permutation :math:`\ \sigma\ ` may be easily determined from 
+the matrix :math:`\ \boldsymbol{P}\ ` or :math:`\ \boldsymbol{Q}\ ` 
+calculated above.
+
+To obtain :math:`\ \sigma\ ` in a standard two-line notation, 
+we note that if the arguments in the first line are naturally ordered:
 :math:`\ \boldsymbol{r}_1\,=\,(1,\,2,\,3,\,4,\,5,\,6),\ ` 
-to drugi wiersz jest dany przez
-:math:`\ \ \boldsymbol{r}_2\ =\ (1,\,2,\,3,\,4,\,5,\,6)\ \boldsymbol{Q}:`
+then the second line of corresponding values is given by 
+:math:`\ \boldsymbol{r}_2\ =\ 
+\boldsymbol{r}_1\cdot\,\boldsymbol{Q}\,.\ `
+The Sage code returns :math:`\ \sigma\,` calculated in this way:
 
 .. code-block:: python
    
@@ -374,40 +359,42 @@ to drugi wiersz jest dany przez
    [1 2 3 4 5 6]
    [1 4 3 6 2 5]
 
-:math:`\\`
-A zatem poszukiwaną permutacją jest 
+.. :math:`\,`
 
-.. math::
+The permutation in demand is therefore
+:math:`\ \,\sigma\ = \ 
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6 \\
+1 & 4 & 3 & 6 & 2 & 5
+\end{array}\right)\,.`
 
-   \sigma\ = \ 
-   \left(\begin{array}{cccccc}
-   1 & 2 & 3 & 4 & 5 & 6 \\
-   1 & 4 & 3 & 6 & 2 & 5
-   \end{array}\right)\,.
-
-Permutację :math:`\sigma` można też wyliczyć bezpośrednio,
-jako złożenie transpozycji odpowiadających macierzom 
-:math:`\ \boldsymbol{P}_{ij}\ ` albo :math:`\ \boldsymbol{Q}_{ij}\,.\ `
-Trzeba przy tym wziąć pod uwagę, że dla wierszowych macierzy permutacji
-:math:`\ \boldsymbol{P}_{\sigma}\ \ ` i :math:`\ ` kolumnowych 
-macierzy permutacji :math:`\ \boldsymbol{Q}_{\sigma}\ ` 
-:math:`\ (\sigma\in S_6)\ \ ` zachodzą związki
+The permutation :math:`\sigma` may also be calculated by composing
+the transpositions corresponding to row permutation matrices 
+:math:`\ \boldsymbol{P}_{ij}\ ` or column permutation matrices
+:math:`\ \boldsymbol{Q}_{ij}\,,\ \ ` taking into account :math:`\\`
+the rules of their multiplication:  
 
 .. math::
    
-   \boldsymbol{P}_{\rho\ \cdot\ \sigma}\, = \ 
-   \boldsymbol{P}_{\sigma}\,\cdot\,\boldsymbol{P}_{\rho}\,,\qquad
-   \boldsymbol{Q}_{\rho\ \cdot\ \sigma}\, =\ 
-   \boldsymbol{Q}_{\rho}\ \cdot\ \boldsymbol{Q}_{\sigma}\,,\qquad
-   \rho,\sigma\in S_6\,.
+   \boldsymbol{P}_{\rho}\,\cdot\,
+   \boldsymbol{P}_{\sigma}\,\cdot\,
+   \boldsymbol{P}_{\tau}\, = \ 
+   \boldsymbol{P}_{\tau\ \circ\ \sigma\ \circ\ \rho}
+   \,,\qquad
+   \boldsymbol{Q}_{\rho}\ \cdot\ 
+   \boldsymbol{Q}_{\sigma}\ \cdot\ 
+   \boldsymbol{Q}_{\tau}\, =\ 
+   \boldsymbol{Q}_{\rho\ \circ\ \sigma\ \circ\ \tau}
+   \,,\qquad
+   \forall\ \rho,\,\sigma,\,\tau\in S_6\,.
 
-Na tej zasadzie obydwu iloczynom macierzy,
+That way both products of matrices, 
 :math:`\ \boldsymbol{P}_{56}\ \boldsymbol{P}_{46}\ \boldsymbol{P}_{24}\ `
-oraz
+and
 :math:`\ \boldsymbol{Q}_{24}\ \boldsymbol{Q}_{46}\ \boldsymbol{Q}_{56}\,,\ `
-odpowiada ten sam iloczyn transpozycji
+correspond to the same product of transpositions 
 :math:`\ \tau_{24}\ \tau_{46}\ \tau_{56}\,.\ ` 
-Otrzymujemy stąd ponownie permutację :math:`\ \sigma:`
+This yields again the permutation :math:`\ \sigma:`
 
 .. math::
    
@@ -432,7 +419,6 @@ Otrzymujemy stąd ponownie permutację :math:`\ \sigma:`
    1 & 4 & 3 & 6 & 2 & 5
    \end{array}\right).
    \end{array}
-
 
 .. **Rozwiązanie** :math:`\,` dla :math:`\,` :math:`n=3\ ` 
    (wersja kolumnowo-wierszowa):
@@ -523,8 +509,6 @@ Otrzymujemy stąd ponownie permutację :math:`\ \sigma:`
    \boldsymbol{I}_3\otimes\boldsymbol{A}\,.
    \end{array}
 
-.. :math:`\,`
-
 .. **Rozwiązanie** :math:`\,` dla :math:`\,` :math:`n=2\ ` 
    (wersja kolumnowo-wierszowa):
 
@@ -565,54 +549,29 @@ Otrzymujemy stąd ponownie permutację :math:`\ \sigma:`
    & \boldsymbol{I}_2\otimes\boldsymbol{A}\,.
    \end{array}
 
-**Zadanie 2.**
+:math:`\,`
 
-.. Wykorzystując podaną w tym rozdziale interpretację 
-   iloczynu prostego dwóch macierzy :
-
-.. admonition: :math:`\,`
-
-   Jeżeli :math:`\ \boldsymbol{A}\in M_{m\times n}(K),\ `
-   :math:`\ \boldsymbol{B}\in M_{p\times q}(K),\ ` to
-   :math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ `
-   jest macierzą homomorfizmu
-   
-   .. math::
-   
-      F_{AB}\,:\qquad 
-      M_{n\times q}(K)\ni\boldsymbol{G}
-      \ \ \mapsto\ \ 
-      F_{AB}(\boldsymbol{G}) :\,=
-      \boldsymbol{A}\boldsymbol{G}\boldsymbol{B}^T\in M_{m\times p}(K)
-   
-   w bazach kanonicznych 
-   :math:`\ \mathcal{E}_{n\times q}\ ` i :math:`\ \ \mathcal{E}_{m\times p}\ `
-   przestrzeni :math:`\ M_{n\times q}(K)\ ` i :math:`\ M_{m\times p}(K).\ `
-   Wówczas
-   
-   .. math::
-      :label: main-1
-      
-      (\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
-      \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
-      \ \,=\ \,
-      \boldsymbol{\Lambda}^{mp}
-      (\boldsymbol{A}\boldsymbol{G}\boldsymbol{B}^T)\,,
-
-   
-   gdzie :math:`\ \boldsymbol{\Lambda}^{rs}(\boldsymbol{X})\ `
-   jest kolumną współrzędnych macierzy 
-   :math:`\ \boldsymbol{X}\in M_{r\times s}(K)\ `
-   w bazie :math:`\ \mathcal{E}_{r\times s}\,.`
-
-.. gdzie :math:`\ \ \boldsymbol{A}\in M_{m\times n}(K),\ `
-   :math:`\ \boldsymbol{B},\,\boldsymbol{B}_1,\boldsymbol{B}_2
-   \in M_{p\times q}(K)\,.`
-
-Udowodnij, że dla 
-:math:`\ \,\boldsymbol{A}\in M_{m\times n}(K),\ `
+**Problem 2.** :math:`\,`
+Let :math:`\ \,\boldsymbol{A}\in M_{m\times n}(K),\ `
 :math:`\ \boldsymbol{B},\,\boldsymbol{B}_1,\boldsymbol{B}_2
-\in M_{p\times q}(K)\,:` 
+\in M_{p\times q}(K).\ ` Using the relation
+
+.. math::
+   :label: main-1
+
+   (\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
+   \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
+   \ \,=\ \,
+   \boldsymbol{\Lambda}^{mp}
+   (\boldsymbol{A}\,\boldsymbol{G}\boldsymbol{B}^T)\,,
+   \qquad\forall\ \ \boldsymbol{G}\in M_{n\times q}(K)\,,
+
+where :math:`\ \boldsymbol{\Lambda}^{rs}(\boldsymbol{X})\ `
+is a column of coordinates of the matrix
+:math:`\ \boldsymbol{X}\in M_{r\times s}(K)\ `
+in the basis :math:`\ \mathcal{E}_{r\times s}\,,`
+
+prove the following properties of the tensor product of matrices:
 
 .. math::
    
@@ -624,51 +583,11 @@ Udowodnij, że dla
    \boldsymbol{A}\otimes(\gamma\,\boldsymbol{B})\ =\ 
    \gamma\ (\boldsymbol{A}\otimes\boldsymbol{B}),\quad\gamma\in K.
 
-**Wskazówka.**
-
-Jeżeli :math:`\ \boldsymbol{A}\in M_{m\times n}(K),\ `
-:math:`\ \boldsymbol{B}\in M_{p\times q}(K),\ ` to
-:math:`\ \boldsymbol{A}\otimes\boldsymbol{B}\ `
-jest macierzą homomorfizmu
-   
-.. math::
-
-   F_{AB}\,:\qquad 
-   M_{n\times q}(K)\ni\boldsymbol{G}
-   \ \ \mapsto\ \ 
-   F_{AB}(\boldsymbol{G}) :\,=
-   \boldsymbol{A}\boldsymbol{G}\boldsymbol{B}^T\in M_{m\times p}(K)
-
-w bazach kanonicznych 
-:math:`\ \mathcal{E}_{n\times q}\ ` i :math:`\ \ \mathcal{E}_{m\times p}\ `
-przestrzeni :math:`\ M_{n\times q}(K)\ ` i :math:`\ M_{m\times p}(K).\ `
-
-.. math::
-   :label: main-1
-
-   \begin{array}{c}   
-   \boldsymbol{A}\otimes\boldsymbol{B}\ =\ 
-   M_{\mathcal{E}_{n\times q},\ \mathcal{E}_{m\times p}}(F_{AB})\,,
-   \\[7pt]
-   (\boldsymbol{A}\otimes\boldsymbol{B})\,\cdot\,
-   \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
-   \ \,=\ \,
-   \boldsymbol{\Lambda}^{mp}
-   (\boldsymbol{A}\boldsymbol{G}\boldsymbol{B}^T)\,,
-   \qquad\boldsymbol{G}\in M_{n\times q}(K)\,,
-   \end{array}
-
-gdzie :math:`\ \boldsymbol{\Lambda}^{rs}(\boldsymbol{X})\ `
-jest kolumną współrzędnych macierzy 
-:math:`\ \boldsymbol{X}\in M_{r\times s}(K)\ `
-w bazie :math:`\ \mathcal{E}_{r\times s}\,.`
-
-**Dowód.**   
-
-Podstawiając w :eq:`main-1` 
-:math:`\ \boldsymbol{B}\to\boldsymbol{B}_1 + \boldsymbol{B}_2\,,\ ` gdzie 
+**Solution.** :math:`\,`
+Substituting in :eq:`main-1` 
+:math:`\ \,\boldsymbol{B}\to\boldsymbol{B}_1 + \boldsymbol{B}_2\,,\ ` where 
 :math:`\ \boldsymbol{B}_1,\ \boldsymbol{B}_2 \in M_{p\times q}(K),\ `
-otrzymamy
+we get
 
 .. math::
    
@@ -703,20 +622,26 @@ otrzymamy
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
    \end{array}
 
-dla dowolnej macierzy :math:`\ \boldsymbol{G}\in M_{n\times q}(K).\ `
-Wynika stąd równość macierzowa
+for arbitrary matrix :math:`\ \boldsymbol{G}\in M_{n\times q}(K).\ `
+Inserting, in place of :math:`\ \boldsymbol{G},\ ` the consecutive matrices 
+of the standard basis :math:`\ \mathcal{E}_{n\times q}:\ `
+:math:`\ \boldsymbol{G} = \boldsymbol{E}_{11},\ 
+\boldsymbol{E}_{12},\ \ldots,\ \boldsymbol{E}_{nq}\,,\ ` 
+we come up with equality of the corresponding columns of matrices
+:math:`\ \boldsymbol{A}\otimes(\boldsymbol{B}_1 +\,\boldsymbol{B}_2)\ \,`
+and :math:`\ (\boldsymbol{A}\otimes\boldsymbol{B}_1)\ +\ 
+(\boldsymbol{A}\otimes\boldsymbol{B}_2)\,,\ ` which is equivalent to 
+the matrix equality in demand:
 
 .. math::
    
    \boldsymbol{A}\otimes(\boldsymbol{B}_1 +\,\boldsymbol{B}_2)\ \,=\ \,
    (\boldsymbol{A}\otimes\boldsymbol{B}_1)\ +\ 
-   (\boldsymbol{A}\otimes\boldsymbol{B}_2)\,,
+   (\boldsymbol{A}\otimes\boldsymbol{B}_2)\,.\quad\bullet
 
-którą należało udowodnić.
-
-Podstawiając w :eq:`main-1` 
-:math:`\ \boldsymbol{A}\to\gamma\,\boldsymbol{A}\,,\ ` 
-gdzie :math:`\ \gamma\in K,\ ` otrzymamy
+Substituting in :eq:`main-1` 
+:math:`\ \,\boldsymbol{A}\to\gamma\,\boldsymbol{A}\,,\ ` 
+where :math:`\ \gamma\in K,\ ` we get
 
 .. math::
    
@@ -745,17 +670,18 @@ gdzie :math:`\ \gamma\in K,\ ` otrzymamy
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
    \end{array}
 
-dla dowolnej macierzy :math:`\ \boldsymbol{G}\in M_{n\times q}(K).\ `
-Oznacza to równość macierzy
+for arbitrary matrix :math:`\ \boldsymbol{G}\in M_{n\times q}(K).\ `
+This is equivalent to the matrix equality
 
 .. math::
    
    (\gamma\,\boldsymbol{A})\otimes\boldsymbol{B}\ \,=\ \,
    \gamma\ \,(\boldsymbol{A}\otimes\boldsymbol{B}),\quad\gamma\in K.
+   \quad\bullet
 
-Z kolei podstawiając w :eq:`main-1` 
+On the other hand, substituting in :eq:`main-1` 
 :math:`\ \boldsymbol{B}\to\gamma\,\boldsymbol{B}\,,\ ` 
-gdzie :math:`\ \gamma\in K,\ ` dochodzimy do równosci
+where :math:`\ \gamma\in K,\ ` we obtain
 
 .. math::
    
@@ -788,15 +714,260 @@ gdzie :math:`\ \gamma\in K,\ ` dochodzimy do równosci
    \boldsymbol{\Lambda}^{nq}(\boldsymbol{G})
    \end{array}
 
-dla dowolnej macierzy :math:`\ \boldsymbol{G}\in M_{n\times q}(K),\ `
-wobec czego
+for arbitrary matrix :math:`\ \boldsymbol{G}\in M_{n\times q}(K),\ ` whereby
 
 .. math::
    
    \boldsymbol{A}\otimes(\gamma\,\boldsymbol{B})\ =\ 
    \gamma\ (\boldsymbol{A}\otimes\boldsymbol{B}),
-   \quad\gamma\in K.
+   \quad\gamma\in K.\quad\bullet
 
+**Problem 3.** :math:`\\`
+Given the matrices :math:`\,\boldsymbol{A}=[a_{ij}]_{m\times m}\,,\ `
+:math:`\,\boldsymbol{B}=[b_{ij}]_{n\times n}\ ` and
+:math:`\,\boldsymbol{C}=[c_{ij}]_{m\times n}\ ` over a field :math:`\,K,\ `
+consider a matrix equation
+
+.. math::
+   :label: mat_eqn
+   
+   \boldsymbol{A}\,\boldsymbol{X}\,\boldsymbol{B}\ =\ \boldsymbol{C}
+
+with the unknown matrix :math:`\,\boldsymbol{X}=[x_{ij}]_{m\times n}\,.\ `
+Prove that Equation :eq:`mat_eqn` has a unique solution if, and only if,
+the matrices :math:`\,\boldsymbol{A}\ ` and :math:`\,\boldsymbol{B}\ `
+are non-singular.
+
+**Solution.** :math:`\,`
+Equation :eq:`mat_eqn` implies that
+
+.. math::
+   
+   c_{ij}\ = \ 
+   \displaystyle\sum_{k=1}^m\sum_{l=1}^n\ a_{ik}\ x_{kl}\ b_{lj}\ = \  
+   \displaystyle\sum_{k=1}^m\sum_{l=1}^n\ a_{ik}\ b_{jl}^{\,T}\ x_{kl}\ = \ 
+   \displaystyle\sum_{k=1}^m\sum_{l=1}^n\ 
+   \left(\boldsymbol{A}\otimes\boldsymbol{B}^{\,T}\right)_{ij,\,kl}\ x_{kl}\,,
+   
+   i=1,2,\ldots,m;\ j=1,2,\ldots,n.
+
+The above :math:`\,mn\,` equations  may be rewritten in a compact matrix form:
+
+.. math::
+   :label: vec_eqn
+   
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{C})\ =\ 
+   (\boldsymbol{A}\otimes\boldsymbol{B}^{\,T})\ \cdot\ 
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{X})\,.
+
+That way, the matrix equation :eq:`mat_eqn` has been converted
+into a standard linear system with the square coefficient matrix
+:math:`\,\boldsymbol{A}\otimes\boldsymbol{B}^{\,T}\in M_{mn\times mn}(K)\,,\ ` 
+the column of unknowns :math:`\,\boldsymbol{\Lambda}^{mn}(\boldsymbol{X})\ `
+and the column of constants :math:`\,\boldsymbol{\Lambda}^{mn}(\boldsymbol{C}):`
+
+.. math::
+   
+   (\boldsymbol{A}\otimes\boldsymbol{B}^{\,T})\ \cdot\ 
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{X})\ =\ 
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{C})\,.
+
+The theory of linear systems says that such a system has a unique solution
+if, and only if, the coefficient matrix is non-singular. Here
+
+.. math::
+   
+   \det{(\boldsymbol{A}\otimes\boldsymbol{B}^{\,T})}\ =\ 
+   (\det{\boldsymbol{A})}^n \cdot\ (\det{\boldsymbol{B}^{\,T}})^m\ =\ 
+   (\det{\boldsymbol{A})}^n \cdot\ (\det{\boldsymbol{B})}^m\,;
+
+   \det{(\boldsymbol{A}\otimes\boldsymbol{B}^{\,T})}\neq 0
+   \quad\Leftrightarrow\quad
+   \left(\ \det{\boldsymbol{A}}\neq 0\ \land\ \det{\boldsymbol{B}}\neq 0\ \right)
+   \,.
+
+Thus we have proved that the linear system :eq:`vec_eqn`, as well as
+the equivalent matrix equation :eq:`mat_eqn`, :math:`\,` have a unique solution
+:math:`\,` if and only if :math:`\,` both matrices, :math:`\,\boldsymbol{A}\ ` 
+and :math:`\ \boldsymbol{B},\ ` are non-singular. :math:`\\`
+The aforesaid unique solution then reads: :math:`\ \boldsymbol{X}\ =\ 
+\boldsymbol{A}^{-1}\boldsymbol{C}\,\boldsymbol{B}^{-1}\,.`
+:math:`\quad\bullet`
+
+.. math:
+   
+   \boldsymbol{X}\ =\ 
+   \boldsymbol{A}^{-1}\boldsymbol{C}\,\boldsymbol{B}^{-1}\,.
+
+**Problem 4.** :math:`\,`
+
+Given the matrices :math:`\,\boldsymbol{A}\in M_{m\times p}(K)\,` and
+:math:`\,\boldsymbol{B}\in M_{p\times n}(K),\ ` the product  
+:math:`\,\boldsymbol{A}\boldsymbol{B}\ ` can be expressed 
+in the vectorized form as
+
+.. math::
+   :label: prod_vect
+
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,
+   \left(\,\boldsymbol{A}\otimes\boldsymbol{I}_n\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{pn}(\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{B^{\,T}}\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{mp}(\boldsymbol{A})\,.
+
+Using the relation between vectors representing a given matrix 
+:math:`\,\boldsymbol{C}\in M_{m\times n}(K)\,:`
+
+.. math::
+   :label: rel
+   
+   \boldsymbol{\Lambda}^{nm}(\boldsymbol{C^{\,T}})\ =\ 
+   \boldsymbol{\mathrm{V}}^{mn}(\boldsymbol{C})
+
+derive the relations analogous to :eq:`prod_vect` for 
+:math:`\,\boldsymbol{\mathrm{V}}^{mn}(\boldsymbol{A}\boldsymbol{B})\,.`
+
+**Solution.** :math:`\,`
+
+.. For :math:`\quad\begin{array}{l}
+   \boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,,\end{array}
+   \quad\text{we start from}\quad
+   \vartriangleright\quad
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{B^{\,T}}\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{mp}(\boldsymbol{A})\,.`
+
+Assume that the dimensions of the matrices are: :math:`\quad\begin{array}{l}
+\boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,.\end{array}
+\quad` We start from
+
+.. math:: 
+   
+   \vartriangleright\quad
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{B^{\,T}}\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{mp}(\boldsymbol{A})\,.
+
+The substitution
+:math:`\quad\begin{array}{ll}
+\boldsymbol{A}\rightarrow\boldsymbol{B}^{\,T}\ :\ m\times p\,; &
+\boldsymbol{B}\ :\ p\times m \\
+\boldsymbol{B}\rightarrow\boldsymbol{A}^{\,T}\ :\ p\times n\,; &
+\boldsymbol{A}\ :\ n\times p 
+\end{array}\quad`
+yields
+
+.. math:
+   
+   \begin{array}{ll}
+   \boldsymbol{A}\rightarrow\boldsymbol{B}^{\,T}\ :\ m\times p\,; &
+   \boldsymbol{B}\ :\ p\times m \\
+   \boldsymbol{B}\rightarrow\boldsymbol{A}^{\,T}\ :\ p\times n\,; &
+   \boldsymbol{A}\ :\ n\times p 
+   \end{array}
+
+.. math::
+   
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{B}^T\boldsymbol{A}^T)\ \,=\ \,
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{A}\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{mp}(\boldsymbol{B}^T)\,,
+
+   \boldsymbol{\Lambda}^{mn}
+   \left[\,\left(\boldsymbol{A}\boldsymbol{B}\right)^T\,\right]
+   \ \,=\ \,
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{A}\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{mp}(\boldsymbol{B}^T)\,.
+
+Making use of relation :eq:`rel` we get
+
+.. math::
+   
+   \boldsymbol{\mathrm{V}}^{nm}(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{I}_m\otimes\boldsymbol{A}\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{pm}(\boldsymbol{B})\,.
+
+To obtain the result for
+:math:`\quad\begin{array}{l}
+\boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,,\end{array}
+\quad` we exchange the denotements :math:`\ m\leftrightarrows n\,:`
+
+.. math::
+   
+   \blacktriangleright\quad
+   \boldsymbol{\mathrm{V}}^{mn}(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{I}_n\otimes\boldsymbol{A}\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{pn}(\boldsymbol{B})\,.
+   
+On the other hand, starting from
+ 
+.. math:: 
+   
+   \vartriangleright\quad
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{A}\boldsymbol{B})\ \,=\ \,
+   \left(\,\boldsymbol{A}\otimes\boldsymbol{I}_n\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{pn}(\boldsymbol{B})
+
+and making the substitution 
+:math:`\quad\begin{array}{ll}
+\boldsymbol{A}\rightarrow\boldsymbol{B}^{\,T}\ :\ m\times p\,; &
+\boldsymbol{B}\ :\ p\times m \\
+\boldsymbol{B}\rightarrow\boldsymbol{A}^{\,T}\ :\ p\times n\,; &
+\boldsymbol{A}\ :\ n\times p 
+\end{array}\quad` we get
+
+.. math::
+   
+   \boldsymbol{\Lambda}^{mn}(\boldsymbol{B}^T\boldsymbol{A}^T)\ \,=\ \,
+   \left(\,\boldsymbol{B}^T\otimes\boldsymbol{I}_n\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{pn}(\boldsymbol{A}^T)\,,
+
+   \boldsymbol{\Lambda}^{mn}
+   \left[\,\left(\boldsymbol{A}\boldsymbol{B}\right)^T\,\right]
+   \ \,=\ \,
+   \left(\,\boldsymbol{B}^T\otimes\boldsymbol{I}_n\,\right)\ \cdot\ 
+   \boldsymbol{\Lambda}^{pn}(\boldsymbol{A}^T)\,.
+
+Using once again the relation :eq:`rel` we obtain
+
+.. math::
+   
+   \boldsymbol{\mathrm{V}}^{nm}(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{B}^T\otimes\boldsymbol{I}_n\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{np}(\boldsymbol{A})\,.
+
+By exchange of the denotements :math:`\ m\leftrightarrows n\ `
+we get the relation for :math:`\quad\begin{array}{l}
+\boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,:\end{array}`
+
+.. math::
+   
+   \blacktriangleright\quad
+   \boldsymbol{\mathrm{V}}^{mn}(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{B}^T\otimes\boldsymbol{I}_m\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{mp}(\boldsymbol{A})\,.
+
+Collecting the results, we come up with the formula
+
+.. math::
+   
+   \boldsymbol{\mathrm{V}}^{mn}(\boldsymbol{A}\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{I}_n\otimes\boldsymbol{A}\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{pn}(\boldsymbol{B})\ =\ 
+   \left(\,\boldsymbol{B}^T\otimes\boldsymbol{I}_m\,\right)\ \cdot\ 
+   \boldsymbol{\mathrm{V}}^{mp}(\boldsymbol{A})
+
+valid for any matrices :math:`\,\boldsymbol{A}\in M_{m\times p}(K)\ `
+and :math:`\,\boldsymbol{B}\in M_{p\times n}(K).` :math:`\quad\bullet`
+
+
+
+
+
+
+
+
+   
+   
 
 
 

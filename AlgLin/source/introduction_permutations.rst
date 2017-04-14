@@ -377,7 +377,7 @@ of :math:`\,n\,` numbers, written in a one-line notation: :math:`\\`
      1 &   2 &   3 & \dots &   n  \\
    s_1 & s_2 & s_3 & \dots & s_n 
    \end{array}\right)\quad\sim\quad
-   [\,s_1,\ s_2,\ s_3,\ \ldots,\ s_n\,].
+   [\,s_1,\ s_2,\ s_3,\ \ldots,\ s_n\,]\,.
 
 .. code-block:: python
    
@@ -442,28 +442,83 @@ of the class of permutations.
    sage: p3 = Permutation([(1,4),(5,)])
    sage: p4 = Permutation(((1,3,4),(2,5)))
 
+   sage: print p1.parent()
    sage: print p1
    sage: print p2
    sage: print p3
    sage: print p4    
 
+   Standard permutations
    [4, 1, 3, 5, 2]
    [3, 2, 1, 4, 5]
    [4, 5, 3, 1, 2]
    [3, 5, 4, 1, 2]
 
-.. :math:`\\`
+.. :math:`\,`
 
-Permutations can be multiplied (composed) by means of the binary operator 
-:math:`\ " \ast "\,`. :math:`\\`
-Unfortunately, Sage assumes by default the left-to-right convention 
-of multiplying them, :math:`\\` which does not reflect the principle
-of composing permutations as mappings (see Eq. :eq:`compose`).
+There are two conventions, 
+:math:`\,` right-to-left :math:`\,` and :math:`\,` left-to-right, :math:`\,` 
+of composing (multiplying) :math:`\,` permutations.
+
+A composition may be effectuated by means of the methods
+``left_action_product()``, ``right_action_product()`` 
+:math:`\,` or :math:`\,` by the binary
+multiplication operator :math:`\,"\ast":`
+
+* ``p1.left_action_product(p2)`` returns the product of :math:`\,p1\,`
+  and :math:`\,p2,\ ` in which :math:`\,p2\ ` is applied first;
+  this right-to-left convention reflects the principle :eq:`compose` 
+  of composing permutations as mappings;
+
+* ``p1.right_action_product(p2)`` returns the product of :math:`\,p1\,`
+  and :math:`\,p2,\ ` in which :math:`\,p1\ ` is applied first;
+  this left-to-right convention becomes natural if the image of a 
+  number :math:`\,i\,` under a permutation :math:`\,p\,` 
+  is written as :math:`\,i^p\,;` :math:`\,` 
+  then :math:`\ i^{(pq)}=\left(i^p\right)^q\,.`
+
+* ``p1*p2`` :math:`\,` by default yields a product of :math:`\,p1\,` and 
+  :math:`\,p2\ ` calculated according to the latter (left-to-right) rule.
+
+The above regulations are illustrated by the following Sage code:
+
+.. sagecellserver::
+   
+   P5 = Permutations(5)
+   p1 = P5.random_element()
+   p2 = P5.random_element()
+
+   p3 = p1.left_action_product(p2)
+   p4 = p1.right_action_product(p2)
+   p5 = p1*p2
+
+   print p1, p2
+   print p3, p4, p5
+
+The class of permutations contains several other useful methods [4]_,
+of which we shall mention here only a few.
+
+.. sagecellserver::
+
+   P5 = Permutations(5)
+   p = P5.random_element()
+   p.show()
+   print "p =", p
+   print "p reverse =", p.reverse()
+   print "p inverse =", p.inverse()
+   print "p in cycles =", p.to_cycles()
+   print "p is even?", p.is_even()
+
+.. Permutations can be multiplied (composed) by means of the binary operator 
+   :math:`\ " \ast "\,`. :math:`\\`
+   Unfortunately, Sage assumes by default the left-to-right convention 
+   of multiplying them, :math:`\\` which does not reflect the principle
+   of composing permutations as mappings (see Eq. :eq:`compose`).
 
 .. is not what one might naturally expect and which is the reverse 
    of the rule used in most textbooks, including the present one.
 
-.. code-block:: python
+.. code-block: python
    
    sage: p1 = Permutation([4,1,3,5,2])
    sage: p2 = Permutation('(1,3)(5)')
@@ -478,13 +533,13 @@ of composing permutations as mappings (see Eq. :eq:`compose`).
    [4, 3, 1, 5, 2]
    [3, 1, 4, 5, 2]
   
-Admittedly, one has at disposal the method ``left_action_product()``
-that composes two permutations according to the right-to-left convention,
-as well as the method ``right_action_product()`` which acts exactly as 
-the multiplication operator :math:`\ " \ast "` , :math:`\,` i.e. according 
-to the left-to-right rule.
+.. Admittedly, one has at disposal the method ``left_action_product()``
+   that composes two permutations according to the right-to-left convention,
+   as well as the method ``right_action_product()`` which acts exactly as 
+   the multiplication operator :math:`\ " \ast "` , :math:`\,` i.e. according 
+   to the left-to-right rule.
 
-.. code-block:: python
+.. code-block: python
 
    sage: p1 = Permutation([4,1,3,5,2])
    sage: p2 = Permutation('(1,3)(5)')
@@ -507,20 +562,9 @@ to the left-to-right rule.
 
    True
 
-The class of permutations contains several other useful methods [4]_,
-of which we shall mention here only a few.
-
-.. sagecellserver::
-
-   P5 = Permutations(5)
-   p = P5.random_element()
-   p.show()
-   print "p =", p
-   print "p reverse =", p.reverse()
-   print "p inverse =", p.inverse()
-   print "p in cycles =", p.to_cycles()
-   print "p is even?", p.is_even()
-
+.. Permutations can be composed in three ways, using the methods
+   ``left_action_product()``, ``right_action_product()`` or the 
+   multiplication binary operator :math:`\,"\,\ast\,"\ `:
 
 
 .. [3] See http://math.mit.edu/~mckernan/Teaching/12-13/Spring/18.703/l_5.pdf
