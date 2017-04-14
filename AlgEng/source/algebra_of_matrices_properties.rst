@@ -228,9 +228,24 @@ b_3\,a_1 & b_3\,a_2 & b_3\,a_3
 \end{array}\right]\,.` 
 :math:`\\`
 
-The properties :math:`\ 1.-\,5.\ ` imply that :math:`\ M_n(K),\ ` 
-together with matrix addition, matrix multiplication, 
-and scalar matrix multiplication, is a noncommutative algebra with identity.
+.. The properties :math:`\ 1.-\,5.\ ` imply that :math:`\ M_n(K),\ ` 
+   together with matrix addition, matrix multiplication, 
+   and scalar matrix multiplication, is a noncommutative algebra with identity.
+
+The latter result is called the *outer product* 
+:math:`\ \boldsymbol{b}\otimes\boldsymbol{a}\ `
+of the two column vectors:
+:math:`\,\boldsymbol{b} = \boldsymbol{B}\ ` and 
+:math:`\,\boldsymbol{a} = \boldsymbol{A}^T\,.\ \,`
+Thus :math:`\,\boldsymbol{B} \boldsymbol{A}\ = \ 
+\boldsymbol{b}\,\boldsymbol{a}^T\ =\ 
+\boldsymbol{b}\otimes\boldsymbol{a}\,.\ `
+On the other hand, in this special case the product 
+:math:`\,\boldsymbol{B} \boldsymbol{A}\ ` equals the *tensor product*
+:math:`\,\boldsymbol{B}\otimes\boldsymbol{A}\ ` of these matrices,
+see Chapter xx of this textbook.
+
+.. (this is a special case of the *tensor product* of matrices).
 
 The Row Rule of Matrix Multiplication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

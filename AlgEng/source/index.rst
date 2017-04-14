@@ -76,6 +76,17 @@ Operations upon Matrices
    operations_on_matrices_appendices
    operations_on_matrices_problems
 
+Tensor (Kronecker) Product of Matrices
+======================================
+
+.. toctree::
+   :maxdepth: 2
+
+   tensor_product_properties
+   tensor_product_vectorization
+   tensor_product_transformation-matrix
+   tensor_product_problems
+
 Indices and tables
 ==================
 

@@ -480,7 +480,7 @@ multiplication operator :math:`\,"\ast":`
 * ``p1*p2`` :math:`\,` by default yields a product of :math:`\,p1\,` and 
   :math:`\,p2\ ` calculated according to the latter (left-to-right) rule.
 
-The above regulations may be validated by the following Sage code:
+The above regulations are illustrated by the following Sage code:
 
 .. sagecellserver::
    
