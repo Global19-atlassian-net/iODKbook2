@@ -246,9 +246,9 @@ On the other hand, in this special case the product
 see Chapter xx of this textbook.
 
 .. (this is a special case of the *tensor product* of matrices).
-
-The Row Rule of Matrix Multiplication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+The Row and Column Rules of Matrix Multiplication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Theorem.** :math:`\,`
 Consider the two matrices over a field :math:`\,K,\ ` 

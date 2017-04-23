@@ -837,9 +837,10 @@ derive the relations analogous to :eq:`prod_vect` for
    \left(\,\boldsymbol{I}_m\otimes\boldsymbol{B^{\,T}}\,\right)\ \cdot\ 
    \boldsymbol{\Lambda}^{mp}(\boldsymbol{A})\,.`
 
-Assume that the dimensions of the matrices are: :math:`\quad\begin{array}{l}
+Assume that the dimensions of the matrices are: 
+:math:`\ \ \left\{\ \begin{array}{l}
 \boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,.\end{array}
-\quad` We start from
+\right.\quad` We start from
 
 .. math:: 
    
@@ -849,12 +850,12 @@ Assume that the dimensions of the matrices are: :math:`\quad\begin{array}{l}
    \boldsymbol{\Lambda}^{mp}(\boldsymbol{A})\,.
 
 The substitution
-:math:`\quad\begin{array}{ll}
+:math:`\quad\left\{\ \begin{array}{ll}
 \boldsymbol{A}\rightarrow\boldsymbol{B}^{\,T}\ :\ m\times p\,; &
 \boldsymbol{B}\ :\ p\times m \\
 \boldsymbol{B}\rightarrow\boldsymbol{A}^{\,T}\ :\ p\times n\,; &
 \boldsymbol{A}\ :\ n\times p 
-\end{array}\quad`
+\end{array}\right.\quad`
 yields
 
 .. math:
@@ -887,9 +888,9 @@ Making use of relation :eq:`rel` we get
    \boldsymbol{\mathrm{V}}^{pm}(\boldsymbol{B})\,.
 
 To obtain the result for
-:math:`\quad\begin{array}{l}
+:math:`\ \ \left\{\ \begin{array}{l}
 \boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,,\end{array}
-\quad` we exchange the denotements :math:`\ m\leftrightarrows n\,:`
+\right.\ \ ` we exchange the denotements :math:`\ m\leftrightarrows n\,:`
 
 .. math::
    
@@ -908,12 +909,12 @@ On the other hand, starting from
    \boldsymbol{\Lambda}^{pn}(\boldsymbol{B})
 
 and making the substitution 
-:math:`\quad\begin{array}{ll}
+:math:`\quad\left\{\ \begin{array}{ll}
 \boldsymbol{A}\rightarrow\boldsymbol{B}^{\,T}\ :\ m\times p\,; &
 \boldsymbol{B}\ :\ p\times m \\
 \boldsymbol{B}\rightarrow\boldsymbol{A}^{\,T}\ :\ p\times n\,; &
 \boldsymbol{A}\ :\ n\times p 
-\end{array}\quad` we get
+\end{array}\right.\quad` we get
 
 .. math::
    
@@ -936,8 +937,9 @@ Using once again the relation :eq:`rel` we obtain
    \boldsymbol{\mathrm{V}}^{np}(\boldsymbol{A})\,.
 
 By exchange of the denotements :math:`\ m\leftrightarrows n\ `
-we get the relation for :math:`\quad\begin{array}{l}
-\boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,:\end{array}`
+we get the relation for :math:`\ \ \left\{\ \begin{array}{l}
+\boldsymbol{A}\,:\ m\times p\,,\\ \boldsymbol{B}\,:\ p\times n\,:
+\end{array}\right.`
 
 .. math::
    

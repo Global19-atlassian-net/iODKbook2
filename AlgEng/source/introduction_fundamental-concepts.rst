@@ -328,13 +328,13 @@ in a unique way as a linear combination of vectors from :math:`\,B\,:\ `
 
 .. math::
    
-   x\ \,=\ \,\displaystyle\sum_{v\in B}\,\alpha_v\ v\,,
+   x\ \,=\ \,\displaystyle\sum_{v\,\in\,B}\,\alpha_v\ v\,,
    \qquad\text{where}\quad
    \alpha_v\in K,\ \forall\ v\in B.
 
 A scalar :math:`\,\alpha_v\,` is named a *coordinate* 
-of the vector :math:`\,x,\,` corresponding to a basis vector 
-:math:`\,v,\,v\in B.`
+of the vector :math:`\,x,\,` corresponding to the basis vector 
+:math:`\,v\in B.`
 
 Thus every vector in a space :math:`\,V\,` is uniquely characterized 
 by the family :math:`\,\left(\alpha_v\right)_{v\,\in\,B}\,`
