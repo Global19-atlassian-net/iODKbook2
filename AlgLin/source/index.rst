@@ -79,18 +79,6 @@ Operations upon Matrices
    operations_on_matrices_appendices
    operations_on_matrices_problems
 
-Matrix Decompositions
-=====================
-
-| *LU decomposition of a matrix 
-  into the product of lower- and upper-triangular factors.*
-
-.. toctree::
-   :maxdepth: 2
-
-   macierze_trojkatne
-   rozklad_LU
-
 Determinants
 ============
 
@@ -106,6 +94,20 @@ Determinants
    wyznacznik_praktyczne_wyliczanie
    wyznacznik_zastosowania
    wyznacznik_zadania
+
+Matrix Decompositions
+=====================
+
+| *LU decomposition of a matrix 
+  into the product of lower- and upper-triangular factors.*
+
+.. toctree::
+   :maxdepth: 2
+
+   decomposition_LU-triangular-matrices
+   decomposition_LU-factorization
+   decomposition_LU-applications
+   decomposition_problems
 
 Tensor (Kronecker) Product of Matrices
 ======================================
