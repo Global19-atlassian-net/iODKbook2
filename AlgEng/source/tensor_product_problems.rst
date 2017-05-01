@@ -961,17 +961,104 @@ Collecting the results, we come up with the formula
 valid for any matrices :math:`\,\boldsymbol{A}\in M_{m\times p}(K)\ `
 and :math:`\,\boldsymbol{B}\in M_{p\times n}(K).` :math:`\quad\bullet`
 
+**Problem 5.** :math:`\,`
 
+Consider a one-dimensional motion along the :math:`\,x`-axis:
+:math:`\,x=x(t),\ t\in[\,0,T\,].\ `
+Given a vector of position data from a uniform division of the interval
+:math:`\,[\,0,T\,]\ ` into :math:`\,N\ ` segments, derive the corresponding acceleration vector by means of the one-dimensional discrete Laplacian. 
+Compare illustratively the exact and approximate results. 
 
+**Solution.** :math:`\,`
 
+The function ``ML(N)`` ('Minus Laplacian') returns the :math:`\,N\times N\ ` 
+matrix performing the discrete two-fold differentiation of a function 
+defined on a one-dimensional grid of :math:`\,N\,` points.
 
+.. sagecellserver::
 
+   def ML(N):
+       
+       D = matrix(QQ,N)
+       D[0,0],D[0,1] = -1,1
+       D[N-1,N-2],D[N-1,N-1] = 1,-1
+       for i in range(1,N-1): D[i,i-1],D[i,i],D[i,i+1] =  1,-2,1
+       
+       return D
 
+As an equation of motion, we choose a fourth-order polynomial of time,
+:math:`\ x(t),\ t \in [\,0,N\,],\ ` such that :math:`\,x(0)=x(N)=0.\ `
+The position is sampled in :math:`\,N+1\,` time points
+:math:`\,0,\,1,\,\ldots,\,N,\ ` but the acceleration is evaluated only in
+:math:`\,n=N-1\ ` internal time points :math:`\,1,\,\ldots,\,N-1.` 
 
+.. sagecellserver::
    
+   def x(N,t):
+       x = 10^(-4)*t^2*(N^2-t^2)
+       return x
+
+To compare the approximate vs exact results, 
+the exact acceleration is given:
+
+.. sagecellserver::
+
+   def a(N,t):
+       a = 10^(-4)*2*(N^2-6*t^2)
+       return a
+
+Before execution of the code below, 
+:math:`\,` **activate** :math:`\,` the three above functions **!**
+
+.. sagecellserver::
+
+   # Number of internal points in which 
+   # acceleration shall be calculated:
+   n = 20 
+
+   var ('t')
    
+   Plt_x = plot(x(n+1,t),(t,0,n+1),color='blue') # plot of x(t)
+   Plt_a = plot(a(n+1,t),(t,0,n+1),color='red')  # plot of a(t)
+   #show(Plt_x, axes_labels=['$t$','$x$'])
+   
+   # Vector of position data initialized and actualized:
+   X = vector(QQ,n+2) 
+   for t in range(n+2): X[t] = x(n+1,t)
 
+   # Two-fold differentiation by matrix multiplication:
+   D = ML(n+2) 
+   A = D * X   # approximate acceleration raw data
+   
+   # Actually only the internal points are meaningful:
+   APT = [(t,A[t]) for t in range(1,n+1)]
+ 
+   # Discrete plot of acceleration data:
+   Pnt_A = points(APT,color='black',size=15) 
 
+   # Display the exact and approximate results together:
+   show(Plt_a + Pnt_A, axes_labels=['$t$','$A,a$']) 
+   
+   # List of exact accelerations:
+   ac = [a(n+1,t) for t in range(n+2)]
+
+   print('%6s %11s %10s %13s \n' % ('t', 'A', 'a', '% diff:'))
+   
+   # For each internal time t prints the approximate (A)
+   # and exact (a) acceleration and the relative divergence:
+   for t in range(1,n+1):
+       print('%6d. %12.4f %10.4f %10.2f' 
+       % (t, A[t], ac[t], 100*(A[t]-ac[t])/A[t]))    
+
+**Output.** :math:`\,`
+On the background of the exact acceleration plot, the program displays
+the discrete values of acceleration calculated by the discrete two-fold
+differentiation. 
+Additionally, for each internal time :math:`\,t\in \{1,2,\ldots,n\}\ ` 
+the approximate (A) and exact (a) values of acceleration as well as
+the relative divergence thereof are listed in a table.
+By uncommenting a proper command, 
+the plot of :math:`\ x=x(t),\ t\in [0,N],\ ` may also be shown.
 
 
 

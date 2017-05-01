@@ -99,6 +99,7 @@ Tensor (Kronecker) Product of Matrices
    tensor_product_properties
    tensor_product_vectorization
    tensor_product_transformation-matrix
+   tensor_product_Kronecker-sum
    tensor_product_problems
 
 Indices and tables

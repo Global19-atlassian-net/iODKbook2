@@ -203,7 +203,7 @@ for independent proofs of some properties of the Kronecker product.
    Here :math:`\ \boldsymbol{\Lambda}^{rs}(\boldsymbol{X})\ `
    is a column of coordinates of matrix
    :math:`\ \boldsymbol{X}\in M_{r\times s}(K)\ `
-   in the base :math:`\ \mathcal{E}_{r\times s}\,.`
+   in the basis :math:`\ \mathcal{E}_{r\times s}\,.`
 
    .. math:
 

@@ -11,7 +11,7 @@ then :math:`\,\boldsymbol{L}\,` is named :math:`\,` a :math:`\,`
 Correspondingly, :math:`\,` in :math:`\,` an :math:`\,`  *upper triangular* 
 :math:`\,` matrix :math:`\,\boldsymbol{U}=[u_{ij}]_{n\times n}\in M_n(K)\,`
 vanishing are all elements below the main diagonal: 
-:math:`\,u_{ij}=0\ \ \text{dla}\ \ i>j,\ \ i,j=1,2,\dots,n\,.`
+:math:`\,u_{ij}=0\ \ \text{for}\ \ i>j,\ \ i,j=1,2,\dots,n\,.`
 
 For instance, triangular matrices of size :math:`\,4\,` have the 
 following general form:
