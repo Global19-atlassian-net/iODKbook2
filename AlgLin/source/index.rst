@@ -82,18 +82,19 @@ Operations upon Matrices
 Determinants
 ============
 
-| *Axiomatic definition and permutation expansion of the determinant.*
-| *The Laplace expansion as a practical method of calculation.*
-| *Properties and applications of determinants.*
+.. | *Axiomatic definition and permutation expansion of the determinant.*
+   | *The Laplace expansion as a practical method of calculation.*
+
+.. | *Properties and applications of determinants.*
 
 .. toctree::
    :maxdepth: 2
    
-   wyznacznik_definicja_i_wlasnosci
-   wyznacznik_rozwiniecie_permutacyjne
-   wyznacznik_praktyczne_wyliczanie
-   wyznacznik_zastosowania
-   wyznacznik_zadania
+   determinants_definition-properties
+   determinants_permutation-expansion
+   determinants_practical-calculation
+   determinants_applications
+   determinants_problems
 
 Matrix Decompositions
 =====================

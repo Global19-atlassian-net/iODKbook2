@@ -93,7 +93,7 @@ jest wektorem własnym operatora :math:`\,F\,` dla wartości
    czyli gdy :math:`\boldsymbol{A}\,\boldsymbol{x} = \lambda\,\boldsymbol{x}`,
 
 .. math::
-   :label: eigen
+   :label: eigen_1
    
    \begin{array}{rc}
    & F(\boldsymbol{x})\,=\,\lambda\,\boldsymbol{x}, \\
@@ -103,13 +103,13 @@ jest wektorem własnym operatora :math:`\,F\,` dla wartości
    (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x}\ =\ 
    \boldsymbol{0}\,.
 
-Jednorodny problem liniowy :eq:`eigen` ma niezerowe rozwiązanie 
+Jednorodny problem liniowy :eq:`eigen_1` ma niezerowe rozwiązanie 
 :math:`\,\boldsymbol{x}\,` wtedy i tylko wtedy, :math:`\\` 
 gdy :math:`\ \det{(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)}\ =\ 0\,,\ `
 czyli gdy :math:`\,\lambda\,` jest pierwiastkiem charakterystycznym macierzy :math:`\,\boldsymbol{A}`.
 
 Liczby :math:`\,\lambda\,` oraz odpowiadające im niezerowe wektory 
-:math:`\,\boldsymbol{x}\,` wyznaczone przez równanie :eq:`eigen`
+:math:`\,\boldsymbol{x}\,` wyznaczone przez równanie :eq:`eigen_1`
 będziemy nazywać wartościami własnymi oraz wektorami własnymi macierzy
 :math:`\,\boldsymbol{A}`.
 
