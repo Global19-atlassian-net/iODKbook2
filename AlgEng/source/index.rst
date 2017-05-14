@@ -76,6 +76,23 @@ Operations upon Matrices
    operations_on_matrices_appendices
    operations_on_matrices_problems
 
+Determinants
+============
+
+.. | *Axiomatic definition and permutation expansion of the determinant.*
+   | *The Laplace expansion as a practical method of calculation.*
+
+.. | *Properties and applications of determinants.*
+
+.. toctree::
+   :maxdepth: 2
+   
+   determinants_definition-properties
+   determinants_permutation-expansion
+   determinants_practical-calculation
+   determinants_applications
+   determinants_problems
+
 Matrix Decompositions
 =====================
 
