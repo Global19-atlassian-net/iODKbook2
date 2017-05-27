@@ -151,9 +151,9 @@ Linear Transformations
 .. toctree::
    :maxdepth: 2
    
-   przeksztalcenia_lin_definicje
-   przeksztalcenia_lin_wlasnosci_i_przyklady
-   przeksztalcenia_lin_jadro_i_obraz
+   linear_transformations_definitions
+   linear_transformations_properties-examples
+   linear_transformations_kernel-image
    przeksztalcenia_lin_uklady_rownan
    przeksztalcenia_lin_macierze
    przeksztalcenia_lin_operatory
