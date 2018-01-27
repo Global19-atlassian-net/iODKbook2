@@ -2,34 +2,35 @@
 Formulation of the Eigenproblem
 -------------------------------
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Niech :math:`\,F\ ` będzie operatorem liniowym określonym na przestrzeni wektorowej 
+   Let :math:`\,F\ ` be a linear operator defined on a vector space
    :math:`\,V(K)\,.\ \,`
-   Jeżeli dla pewnego wektora :math:`\,v\in V\!\smallsetminus\!\{\theta\}\ ` 
-   i :math:`\,` pewnej liczby :math:`\,\lambda\in K\ ` zachodzi równość
+   If a vector :math:`\,v\in V\!\smallsetminus\!\{\theta\}\ ` 
+   and :math:`\,` a scalar :math:`\,\lambda\in K\ ` satisfy the equality
    
    .. math::
       :label: eigen_eq
       
       Fv=\lambda\, v\,,
    
-   to :math:`\,\lambda\ ` jest *wartością własną* operatora :math:`\,F,\ `
-   a :math:`\ \,v\,` - :math:`\,` *wektorem własnym* operatora :math:`\,F\ `
-   należącym do wartości własnej :math:`\,\lambda\ `
-   (wektorem własnym dla wartości :math:`\,\lambda`).
+   then :math:`\,\lambda\ ` is an *eigenvalue* of the operator :math:`\,F,\ `
+   and :math:`\ \,v\,` - :math:`\,` an *eigenvector* of the operator :math:`\,F\ `
+   associated with the eigenvalue :math:`\,\lambda\ `
+   (an eigenvector for the value :math:`\,\lambda`).
 
-   Wzór :eq:`eigen_eq` przedstawia :math:`\,` *równanie własne* :math:`\,` (*problem własny*) 
-   :math:`\,` operatora liniowego :math:`\,F\,.` 
+   The formula :eq:`eigen_eq` presents an :math:`\,` *eigenequation* :math:`\,` (an *eigenproblem*) 
+   :math:`\,` of the linear operator :math:`\,F\,.` 
 
-**Uwagi i komentarze.**
+**Remarks and comments.**
 
-* Wektor zerowy :math:`\,\theta\ ` jest z założenia wykluczony ze zbioru wektorów własnych,
-  chociaż spełnia warunek :eq:`eigen_eq` z dowolną wartością :math:`\,\lambda.\ `
-  Natomiast wartość własna :math:`\,\lambda\ ` może być równa :math:`\,0.\ `
-  Jeżeli :math:`\,0\ ` jest wartością własną operatora :math:`\,F,\ `
-  to zbiór wszystkich wektorów własnych dla tej wartości, uzupełniony wektorem zerowym,
-  jest jądrem operatora :math:`\,F.`
+* The definition excludes the zero vector :math:`\,\theta\ ` from the set of eigenvectors
+  even though it satisfies the condition :eq:`eigen_eq` with an arbitrary eigenvalue 
+  :math:`\,\lambda.\ `
+  On the other, hand the eigenvalue :math:`\,\lambda\ ` may be equal to :math:`\,0.\ `
+  If :math:`\,0\ ` is an eigenvalue of the operator :math:`\,F,\ `
+  then the set of all eigenvectors associated with this eigenvalue, together with the zero vector,
+  is the kernel of the operator :math:`\,F.`
   
   .. W takim wypadku zbiór wszystkich wektorów własnych dla tej wartości, uzupełniony wektorem  
      zerowym, jest jądrem operatora :math:`\,F.`
@@ -39,29 +40,29 @@ Formulation of the Eigenproblem
   
   .. Jeżeli :math:`\,v\ ` jest wektorem własnym operatora :math:`\,F,\ `
   
-* Działanie operatora :math:`\,F\ ` na jego wektor własny :math:`\,v\ `
-  sprowadza się do pomnożenia go przez liczbę.
-  Gdy :math:`\,V\ ` jest przestrzenią wektorów geometrycznych, oznacza to 
-  że operator :math:`\,F\ ` działając na wektor :math:`\,v\ `
-  nie zmienia jego kierunku (może zmienić długość lub zwrot).
+* The action of the operator :math:`\,F\ ` on its eigenvector :math:`\,v\ `
+  boils down to multiplication :math:`\,v\ ` by a scalar.
+  If :math:`\,V\ ` is a space of the geometric vectors, then this means that the 
+  operator :math:`\,F\ ` acting on the vector :math:`\,v\ `
+  does not change its direction (it may change the length or the orientation).
 
-* W mechanice kwantowej wielkości fizyczne mierzalne w układzie kwantowym (obserwable)
-  są reprezentowane przez hermitowskie operatory liniowe określone na unitarnej 
-  przestrzeni stanów układu. Jeżeli operator :math:`\,F\ ` przedstawia obserwablę
-  :math:`\,\mathcal{F},\ ` to jego wartości własne są możliwymi wynikami pomiaru 
-  tej obserwabli. Hermitowskość operatora :math:`\,F\ ` gwarantuje, że tak obliczone 
-  wyniki pomiaru są liczbami rzeczywistymi.
+* In quantum mechanics, physical quantities that are measurable in a quantum system (observables)
+  are represented by Hermitian linear operators defined on a unitary space of states of the system.
+  If the operator :math:`\,F\ ` represents an observable
+  :math:`\,\mathcal{F},\ ` then its eigenvalues are possible measurement results of this observable. 
+  The Hermitian property of the operator :math:`\,F\ ` guarantees that the measurement results
+  obtained in such a way are real numbers. 
 
-Rozwiązanie problemu własnego :eq:`eigen_eq` operatora :math:`\,F\ `
-polega na wyznaczeniu wszystkich możliwych wartości własnych :math:`\,\lambda\ `
-oraz odpowiednich wektorów własnych :math:`\,v\ ` dla tych wartości.
+The solution of the eigenvalue problem :eq:`eigen_eq` for the operator :math:`\,F\ `
+is to find all its eigenvalues :math:`\,\lambda\ `
+and the eigenvectors :math:`\,v\ ` associated with these values.
 
-Wprowadźmy bazę :math:`\,\mathcal{B}\ ` w :math:`\,n`-wymiarowej przestrzeni :math:`\,V.\ `
-Wtedy operatorowi :math:`\,F\ ` odpowiada macierz 
+Let :math:`\,\mathcal{B}\ ` be a basis of the :math:`\,n`-dimensional space :math:`\,V.\ `
+Then the operator :math:`\,F\ ` correspods to the matrix
 :math:`\,M_{\mathcal{B}}(F)=\boldsymbol{A}=[\alpha_{ij}]_{n\times n}\in M_n(K)\,,\ `
-a wektorowi :math:`\,v\ ` - :math:`\,` kolumna jego współrzędnych 
-w bazie :math:`\,\mathcal{B}:\ \ I_{\mathcal{B}}(v)=\boldsymbol{x}\in K^n.\ `
-Równanie własne można przekształcić następująco:
+and a vector :math:`\,v\ ` - :math:`\,` to the column of its coefficients in the basis 
+:math:`\,\mathcal{B}:\ \ I_{\mathcal{B}}(v)=\boldsymbol{x}\in K^n.\ `
+The eigenequation may be rewritten as follows:
 
 .. math::
    :nowrap:
@@ -76,11 +77,10 @@ Równanie własne można przekształcić następująco:
    \qquad\qquad(\clubsuit)
    \end{eqnarray*}
 
-Ostatnie równanie, w którym :math:`\,\boldsymbol{I}_n\,` 
-jest macierzą jednostkową stopnia :math:`\,n,\ ` przedstawia jednorodny problem liniowy o macierzy 
-:math:`\ \boldsymbol{A}-\lambda\,\boldsymbol{I}_n\,.\ `
-Z teorii układów równań liniowych wiadomo, że niezerowe rozwiązania :math:`\,\boldsymbol{x}\,`
-(a takie nas tutaj interesują) istnieją wtedy i tylko wtedy, gdy
+The last equation, where :math:`\,\boldsymbol{I}_n\,` 
+denotes the identity matrix of size :math:`\,n,\ ` is a homogeneous linear problem with a matrix :math:`\ \boldsymbol{A}-\lambda\,\boldsymbol{I}_n\,.\ `
+The theory of linear system of equations tells us that the non-zero solutions :math:`\,\boldsymbol{x}\,`
+(and these are the one we are interested in here) exist if and only if
 
 .. math::
    :label: char_eqn_1
@@ -102,34 +102,28 @@ Z teorii układów równań liniowych wiadomo, że niezerowe rozwiązania :math:
    jest *równaniem charakterystycznym*, a jego rozwiązania nazywają się
    *pierwiastkami charakterystycznymi* tej macierzy.
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Niech :math:`\,\boldsymbol{A},\ \boldsymbol{I}_n\,\in\,M_n(K)\,,\ `
-   gdzie :math:`\,\boldsymbol{I}_n\ ` jest macierzą jednostkową.
-   Wielomian :math:`\,n`-tego stopnia 
+   Let :math:`\,\boldsymbol{A}\,\in\,M_n(K)\,,\ `
+   and :math:`\,\boldsymbol{I}_n\ ` be the identity matrix of size :math:`\,n.\,`
+   The degree :math:`\,n` polynomial 
    :math:`\,w(\lambda)=\det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ `
-   jest *wielomianem charakterystycznym* macierzy :math:`\,\boldsymbol{A}\,.\ `
-   Równanie :math:`\ w(\lambda)=0\ ` jest *równaniem charakterystycznym*, :math:`\,`
-   a jego rozwiązania są :math:`\,` *pierwiastkami charakterystycznymi* 
-   macierzy :math:`\,\boldsymbol{A}.`
+   is the *characteristic polynomial* of the matrix :math:`\,\boldsymbol{A}\,.\ `
+   The equation :math:`\ w(\lambda)=0\ ` is the *characteristic equation*, :math:`\,`
+   and its solutions are the :math:`\,` *characteristic roots* 
+   of the matrix :math:`\,\boldsymbol{A}.`
 
-Stwierdziliśmy, że rozwiązania :math:`\,v\neq\theta\ ` problemu własnego :eq:`eigen_eq`
-istnieją wtedy i tylko wtedy, gdy :math:`\,\lambda\ ` jest pierwiastkiem charakterystycznym
-macierzy operatora :math:`\,F\ ` w pewnej bazie :math:`\,\mathcal{B}\,.` 
+We have deduced that the solutions :math:`\,v\neq\theta\ ` of the eigenvalue problem :eq:`eigen_eq` exist if and only if :math:`\,\lambda\ ` is a characteristic root of the matrix of the operator :math:`\,F\ ` in a certain basis :math:`\,\mathcal{B}\,.` 
 
-W różnych bazach operator :math:`\,F\ ` jest jednak reprezentowany przez różne macierze,
-nasuwa się więc pytanie, czy dopuszczalne wartości :math:`\,\lambda\ ` 
-nie zależą od wybranej bazy. 
+However, in different bases the operator :math:`\,F\ ` is represented by different matrices. This leads to a question whether admissible values :math:`\,\lambda\ ` 
+depend on the chosen basis. 
 
-Okazuje się, że chociaż macierz operatora liniowego zmienia się przy przejściu
-do innej bazy, to wielomian charakterystyczny i jego pierwiastki
-od wyboru bazy nie zależą.
+It turns out that even though a change of basis results in a change of the matrix of the linear operator, the characteristic polynomial and its roots remain the same.
 
-Rzeczywiście, niech :math:`\,\mathcal{B}'\ ` będzie inną bazą przestrzeni 
-:math:`\,V\ \ \text{i}\ \ \ \text{niech}\ M_{\mathcal{B}'}(F)=\boldsymbol{A}'\,.` :math:`\\`
-Wtedy :math:`\,\boldsymbol{A}'=\boldsymbol{S}^{-1}\boldsymbol{A}\,\boldsymbol{S}\,,\ `
-gdzie :math:`\,\boldsymbol{S}\ ` jest macierzą przejścia od bazy :math:`\,\mathcal{B}\ `
-do bazy :math:`\,\mathcal{B}'\,.\ ` Ponadto
+Indeed, let :math:`\,\mathcal{B}'\ ` be another basis of the space
+:math:`\,V\ \ \text{and}\ \ \ \text{let}\ M_{\mathcal{B}'}(F)=\boldsymbol{A}'\,.` :math:`\\`
+Then :math:`\,\boldsymbol{A}'=\boldsymbol{S}^{-1}\boldsymbol{A}\,\boldsymbol{S}\,,\ `
+where :math:`\,\boldsymbol{S}\ ` is the transformation matrix of the basis :math:`\,\mathcal{B}\ ` to the basis :math:`\,\mathcal{B}'\,.\ ` Moreover,
 
 .. math::
 
@@ -152,7 +146,7 @@ do bazy :math:`\,\mathcal{B}'\,.\ ` Ponadto
    \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\,.
    \end{array}
 
-Z dotychczasowych rozważań wynika 
+The above considerations lead to 
 
 .. .. admonition:: Wniosek.
    
@@ -161,39 +155,38 @@ Z dotychczasowych rozważań wynika
    nad ciałem :math:`\,K\,,\ ` są pierwiastkami charakterystycznymi 
    macierzy tego operatora w dowolnej bazie przestrzeni :math:`\,V.`
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Jeżeli :math:`\,V\ ` jest skończenie wymiarową przestrzenią wektorową,
-   to wartości własne operatora liniowego :math:`\,F\in\text{End}(V)\ ` 
-   są pierwiastkami charakterystycznymi macierzy tego operatora 
-   w dowolnej bazie przestrzeni :math:`\,V\,.`
+   If :math:`\,V\ ` is a finite dimensional vector space,
+   then the eigenvalues of the linear operator :math:`\,F\in\text{End}(V)\ ` 
+   are characteristic roots of the matrix of this operator 
+   in any basis of the space :math:`\,V\,.`
 
-Kwestię rozwiązalności problemu własnego porusza 
+The question of solvability of the eigenvalue problem is treated in 
 
-.. admonition:: Twierdzenie 1.
+.. admonition:: Theorem 1.
    
-   Każdy operator liniowy określony na skończenie wymiarowej 
-   zespolonej przestrzeni wektorowej ma wektory własne.
+   Every linear operator defined on a finite dimensional complex vector space 
+   has eigenvectors.
 
-Wynika to z *zasadniczego twierdzenia algebry*, według którego
-każdy wielomian dodatniego stopnia o współczynnikach zespolonych 
-ma pierwiastek w ciele liczb zespolonych. 
+This follows from the *fundamental theorem of algebra*, which states that every polynomial 
+of positive degree with complex coefficients has at least one complex root. 
 
-Jeżeli więc :math:`\,K=C\,,\ `
-to równanie charakterystyczne :eq:`char_eqn_1` ma pierwiastek zespolony :math:`\,\lambda_0\,,\ `
-który podstawiony do równania (:math:`\clubsuit`) wyznacza odpowiedni wektor własny
-(faktycznie: co najmniej 1-wymiarową podprzestrzeń wektorów własnych).
+Hence, if :math:`\,K=C\,,\ `
+then the characteristic equation :eq:`char_eqn_1` has a complex root :math:`\,\lambda_0\ `
+which substituted to the equation (:math:`\clubsuit`) determines a suitable eigenvector
+(in fact: at least :math:`\,1`-dimensional subspace of eigenvectors).
 
-Twierdzenie 1. nie stosuje się do przestrzeni rzeczywistych. Dla przykładu rozważmy
-operator obrotu o kąt :math:`\,\phi\neq k\pi,\ k\in Z\,,\ `
-określony w (rzeczywistej) przestrzeni wektorów geometrycznych 
-zaczepionych w początku układu współrzędnych płaszczyzny. 
-Operator ten zmienia kierunek każdego niezerowego wektora, nie ma więc wektorów własnych.
+Theorem 1. is not true for real vector spaces. For example, consider an
+operator of rotation by an angle :math:`\,\phi\neq k\pi,\ k\in Z\,,\ ` which is
+defined on the (real) vector space of geometric vectors with the initial point at the 
+origin of the Cartesian coordinate system. This operator changes the direction of each non-zero vector, 
+and thus does not have eigenvectors.
 
-Gdy :math:`\,V\ ` jest :math:`\,n`-wymiarową przestrzenią zespoloną,
-to wielomian charakterystyczny :math:`\,w(\lambda)\ ` 
-operatora liniowego :math:`\,F\in\text{End}(V)\ `
-ma :math:`\,n\ ` (niekoniecznie różnych) pierwiastków:
+If :math:`\,V\ ` is an :math:`\,n`-dimensional complex vector space,
+then the characteristic polynomial :math:`\,w(\lambda)\ ` 
+of the linear operator :math:`\,F\in\text{End}(V)\ `
+has :math:`\,n\ ` (not necessarily different) roots:
 
 .. math::
    :label: prod
@@ -202,20 +195,19 @@ ma :math:`\,n\ ` (niekoniecznie różnych) pierwiastków:
                   (\lambda-\lambda_r)^{k_r}\,,\qquad
    k_1+\,k_2\,+\ldots\,+k_r=\,n
 
-(w przypadku przestrzeni rzeczywistej: :math:`\,K=R,\ ` 
-w rozkładzie :eq:`prod` mogą wystąpić trójmiany kwadratowe
-:math:`\,\lambda^2+p\,\lambda+q\ ` z ujemnym wyróżnikiem :math:`\,\Delta`).
-Wykładnik :math:`\,k_i\ ` jest krotnością pierwiastka :math:`\,\lambda_i\ `
-wielomianu :math:`\,w(\lambda)\ ` i :math:`\,` jednocześnie *krotnością algebraiczną* 
-wartości własnej :math:`\,\lambda_i\ ` operatora :math:`\,F\,.`
-Natomiast *krotnością geometryczną* (*krotnością zwyrodnienia*) 
-wartości własnej :math:`\,\lambda_i\ ` jest z definicji 
-liczba liniowo niezależnych wektorów własnych należących do tej wartości.
+(in case of a real vector space: :math:`\,K=R,\ ` 
+the factorisation :eq:`prod` may contain quadratic polynomials
+:math:`\,\lambda^2+p\,\lambda+q\ ` with negative discriminant :math:`\,\Delta`).
+The power :math:`\,k_i\ ` is the multiplicity of the root :math:`\,\lambda_i\ `
+of the polynomial :math:`\,w(\lambda)\ ` and at the same time the *algebraic  multiplicity* 
+of the eigenvalue :math:`\,\lambda_i\ ` of the operator :math:`\,F\,.`
+The *geometric  multiplicity* of the eigenvalue :math:`\,\lambda_i\ ` is, by definition, 
+the number of linearly independent eigenvectors associated with this eigenvalue.
 
-Zauważmy, że jeżeli 
+Note that if
 :math:`\ \ Fv_1=\lambda\,v_1\,,\ \ Fv_2=\lambda\,v_2\,,\quad 
 v_1,v_2\in V\!\smallsetminus\!\{\theta\}\,,\ \,` 
-to dla :math:`\ \ \alpha_1,\alpha_2\in K:`
+then for :math:`\ \ \alpha_1,\alpha_2\in K:`
 
 .. math::
 
@@ -225,39 +217,35 @@ to dla :math:`\ \ \alpha_1,\alpha_2\in K:`
    \lambda\ (\alpha_1\,v_1+\alpha_2\,v_2)\,.
    \end{array}
 
-Tak więc każda (różna od wektora zerowego) kombinacja liniowa wektorów własnych :math:`\\` 
-należących do wartości własnej :math:`\,\lambda\ ` jest również wektorem własnym dla tej samej wartości.
+Hence, each linear combination (which is not a zero vector) of eigenvectors :math:`\\` 
+associated with the eigenvalue :math:`\,\lambda\ ` gives an eigenvector associated with the same eigenvalue.
 
-Odwołując się do kryterium dla podprzestrzeni, można zapisać
+Referring to the criterion for the space, we can formulate
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Zbiór wszystkich wektorów własnych, należących do danej wartości własnej :math:`\,\lambda\ `
+   The set of all eigenvectors associated with the eigenvalue :math:`\,\lambda\ `
    :math:`\\`
-   operatora liniowego :math:`\,F\in\text{End}(V),\,`  uzupełniony wektorem zerowym 
-   :math:`\,\theta,\,` jest :math:`\\`
-   przestrzenią wektorową (podprzestrzenią przestrzeni :math:`\,V`)
-   o wymiarze równym :math:`\\`
-   krotności geometrycznej wartości własnej :math:`\,\lambda.`
+   of the linear operator :math:`\,F\in\text{End}(V),\,`  together with the zero vector
+   :math:`\,\theta,\,` forms :math:`\\`
+   a vector space (a subspace of the space :math:`\,V`)
+   of dimension :math:`\\`
+   equal to the geometric  multiplicity of the eigenvalue :math:`\,\lambda.`
 
-Praktyczne rozwiązanie problemu własnego operatora liniowego :math:`\,F\ ` działającego :math:`\\`
-w :math:`\,n`-wymiarowej przestrzeni wektorowej :math:`\,V(K)\ `
-składa się z trzech etapów:
+Practical solution of the eigenvalue problem for the linear operator :math:`\,F\ ` acting :math:`\\`
+on the :math:`\,n`-dimensional vector space :math:`\,V(K)\ `
+consists of three stages:
 
-0. Konstrukcja macierzy 
+0. Construction of the matrix 
    :math:`\,M_{\mathcal{B}}(F)\equiv\boldsymbol{A}=[\alpha_{ij}]_{n\times n}\in M_n(K)\ `
-   operatora :math:`\,F\ ` w dowolnie wybranej bazie :math:`\,\mathcal{B}\ ` 
-   przestrzeni :math:`\,V\,.`
+   of the operator :math:`\,F\ ` in a basis :math:`\,\mathcal{B}\ ` 
+   of the space :math:`\,V\,.`
 
-1. Wyliczenie wartości własnych :math:`\,\lambda\ ` operatora :math:`\,F\ ` jako pierwiastków 
-   równania charakterystycznego :eq:`char_eqn_1` macierzy :math:`\,\boldsymbol{A}\,`
-   i określenie ich krotności algebraicznych.
-
+1. Calculation of the eigenvalues :math:`\,\lambda\ ` of the operator :math:`\,F\ ` as the roots of the characteristic equation :eq:`char_eqn_1` of the matrix  :math:`\,\boldsymbol{A}\,` and determination of it algebraic multiplicities.
+  
    .. macierzy :math:`\,\boldsymbol{A}\,.`
 
-2. Podstawienie każdej wartości własnej :math:`\,\lambda\ ` do równania (:math:`\clubsuit`),
-   wyliczenie odpowiednich wektorów własnych (wyznaczonych poprzez ich współrzędne 
-   w bazie :math:`\,\mathcal{B}`) i określenie jej krotności geometrycznej. 
+2. Substitution of each eigenvalue :math:`\,\lambda\ ` to the equation (:math:`\clubsuit`), calculation of the associated eigenvectors (determined by their coordinates in the basis :math:`\,\mathcal{B}`) and determination of its geometric multiplicity. 
 
 
 

@@ -5,46 +5,40 @@ Problems
 Rank of a Matrix
 ~~~~~~~~~~~~~~~~
 
-**Zadanie 1.**
+**Exercise 1.**
 
-Dla macierzy :math:`\ \boldsymbol{A}\in M_{m\times p}(K),\ 
-\boldsymbol{B}\in M_{p\times n}(K)\ `
-pokazać, że :math:`\ \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ 
-\text{rz}\boldsymbol{A},\,\text{rz}\boldsymbol{B}.`
+Let :math:`\ \boldsymbol{A}\in M_{m\times p}(K),\ 
+\boldsymbol{B}\in M_{p\times n}(K).\ `
+Show that :math:`\ \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ 
+\text{rk}\boldsymbol{A},\,\text{rk}\boldsymbol{B}.`
 
-**Lemat.**
+**Lemma.**
 
-Niech :math:`\,V_1\,` i :math:`\,\ V_2\ ` będą podprzestrzeniami 
-skończonego wymiaru przestrzeni wektorowej :math:`\ V(K):`
-:math:`V_1,\,V_2\ <\ V.\ ` Wtedy
+Let :math:`\,V_1\,` and :math:`\,\ V_2\ ` be finite dimensional subspaces of a vector space :math:`\ V(K).` Then
 
 .. math::
    
-   V_1\ <\ V_2 \qquad\Rightarrow\qquad \dim{V_1}\ \leq\ \dim{V_2}\,.
+  \dim{V_1}\ \leq\ \dim{V_2}\,.
 
-**Dowód lematu** opiera się na stwierdzeniu, że w przestrzeni 
-:math:`\ d`-wymiarowej każdy układ liczący więcej niż 
-:math:`\ d\ ` wektorów jest liniowo zależny.
+**Proof of the lemma** bases on the fact that in a  
+:math:`\ d`-dimensional vector space every set consisting of more than :math:`\ d\ ` vectors is linearly dependent. 
 
-Oznaczmy :math:`\ \dim{V_1}=d_1,\ \dim{V_2}=d_2\ ` i :math:`\ ` 
-przypuśćmy, że :math:`\ V_1 < V_2, \ \ \text{przy czym}\ \ d_1>\,d_2\,.`
+Denote :math:`\ \dim{V_1}=d_1,\ \dim{V_2}=d_2\ ` and :math:`\ ` 
+assume that :math:`\ V_1 < V_2, \ \ \text{where}\ \ d_1>\,d_2\,.`
 
-Niech układ :math:`\ \mathcal{B}\,=\,(\boldsymbol{v}_1,\boldsymbol{v}_2,\dots,
-\boldsymbol{v}_{d_1})\ ` będzie bazą podprzestrzeni :math:`\ V_1.`
-Ponieważ :math:`\ V_1\subset V_2\,,\ ` to :math:`\ \mathcal{B}\ ` 
-byłby również liniowo niezaleznym układem wektorów podprzestrzeni 
-:math:`\ V_2,\ ` liczącym :math:`\ d_1>d_2\ ` wektorów 
-:math:`\ -\ ` sprzeczność ze wspomnianym na wstępie stwierdzeniem.
+Let :math:`\ \mathcal{B}\,=\,(\boldsymbol{v}_1,\boldsymbol{v}_2,\dots,
+\boldsymbol{v}_{d_1})\ ` be a basis of the subspace :math:`\ V_1.`
+Since :math:`\ V_1\subset V_2\,,\ ` so :math:`\ \mathcal{B}\ ` 
+gives also a set of linearly independent vectors of the subspace
+:math:`\ V_2.\ ` However, because it comprises of :math:`\ d_1>d_2\ ` vectors, this gives a contradiction with the aforementioned fact.
 
-A zatem musi być :math:`\ d_1\,\leq\,d_2\,,\ ` co należało udowodnić.
+Hence, we must have :math:`\ d_1\,\leq\,d_2\,,\ ` as required.
 
-**Dowód twierdzenia.**
+**Solution.**
 
-Rząd macierzy, równy z definicji liczbie liniowo niezależnych jej 
-kolumn (wierszy), równa się wymiarowi przestrzeni rozpiętej na jej 
-kolumnach (wierszach).
+Rank of a matrix, which by the definition is equal to the maximal number of its linearly independent columns (or rows), equals the dimension of the vector space spanned by its columns (rows).
 
-Stosując kolumnowy lub wierszowy zapis macierzy: 
+Using a column or row matrix notation: 
 
 .. math::
 
@@ -65,27 +59,24 @@ Stosując kolumnowy lub wierszowy zapis macierzy:
    \left[\begin{array}{c}
    \boldsymbol{R}_1 \\ \boldsymbol{R}_2 \\ \dots \\ \boldsymbol{R}_m 
    \end{array}\right]\ \,=\ \,
-   [c_{ij}]_{m\times n}\,.
+   [c_{ij}]_{m\times n}\,,
    \end{array}
 
-otrzymujemy wyrażenia dla rzędów tych macierzy:
+we obtain formulae for ranks of these matrices:
 
 .. math::
 
    \begin{array}{l}
-   \text{rz}\,\boldsymbol{A}\ =\ 
+   \text{rk}\,\boldsymbol{A}\ =\ 
    \dim L(\boldsymbol{A}_1\,\boldsymbol{A}_2\,\dots\,\boldsymbol{A}_p)\,,\quad 
-   \text{rz}\,\boldsymbol{B}\ =\ 
+   \text{rk}\,\boldsymbol{B}\ =\ 
    \dim L(\boldsymbol{B}_1\,\boldsymbol{B}_2\,\dots\,\boldsymbol{B}_p) \\ \\
-   \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ =\ 
+   \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ =\ 
    \dim L(\boldsymbol{C}_1\,\boldsymbol{C}_2\,\dots\,\boldsymbol{C}_n)\ =\ 
    \dim L(\boldsymbol{R}_1\,\boldsymbol{R}_2\,\dots\,\boldsymbol{R}_m)\,.
    \end{array}
 
-Według kolumnowej reguły mnożenia macierzowego, każda :math:`\,j`-ta kolumna
-macierzy :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` jest kombinacją liniową
-kolumn macierzy :math:`\ \boldsymbol{A},\ ` o współczynnikach z :math:`\,j`-tej
-kolumny macierzy :math:`\ \boldsymbol{B}`:
+According to the column rule for matrix multiplication, each :math:`\,j`-th column of the matrix :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is a linear combination of columns of the matrix :math:`\ \boldsymbol{A},\ ` with coefficients from the :math:`\,j`-th column of the matrix :math:`\ \boldsymbol{B}`:
 
 .. math::
    
@@ -93,24 +84,23 @@ kolumny macierzy :math:`\ \boldsymbol{B}`:
                         b_{2j}\,\boldsymbol{A}_2\,+\,\dots\,+\,
                         b_{pj}\,\boldsymbol{A}_p,\quad j=1,2,\dots,n.
 
-Kolumny :math:`\ \boldsymbol{C}_j\ ` należą więc do przestrzeni
-generowanej przez kolumny macierzy :math:`\ \boldsymbol{A}\,`:
+Therefore the columns :math:`\ \boldsymbol{C}_j\ ` belong to a subspace generated by the columns of the matrix :math:`\ \boldsymbol{A}\,`:
 
 .. math::
    
    \boldsymbol{C}_j\,\in\,L(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,
                             \boldsymbol{A}_p),\quad j=1,2,\dots,n\,,
 
-a przestrzeń, generowana przez kolumny :math:`\ \boldsymbol{C}_j`, 
-zawiera się w (dokładnie: jest podprzestrzenią) 
-przestrzeni generowanej przez kolumny macierzy :math:`\ \boldsymbol{A}\,`:
+and the space, generated by the columns :math:`\ \boldsymbol{C}_j`, 
+is contained in (more precisely: is a subspace) 
+a subspace generated by the columns of the matrix :math:`\ \boldsymbol{A}\,`:
 
 .. math::
    
    L(\boldsymbol{C}_1,\boldsymbol{C}_2,\dots,\boldsymbol{C}_n)\ <\ 
    L(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_p)\,.
 
-Wynika stąd relacja pomiędzy wymiarami rozważanych przestrzeni:
+This implies a relation between dimensions of the considered spaces:
 
 .. math::
    :label: rz_A
@@ -118,18 +108,15 @@ Wynika stąd relacja pomiędzy wymiarami rozważanych przestrzeni:
    \begin{array}{lc}   
    & \dim{L(\boldsymbol{C}_1,\boldsymbol{C}_2,\dots,\boldsymbol{C}_n)} 
    \ \leq\ 
-   \dim{L(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_p)}
+   \dim{L(\boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_p)}\, ,
    \\ \\
-   \text{czyli} &
-   \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rz}\boldsymbol{A}\,.
+   \text{and thus} &
+   \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rk}\boldsymbol{A}\,.
    \end{array}
 
 .. co, wobec :eq:`ranks` oznacza, że
 
-Według wierszowej reguły mnożenia macierzowego, każdy :math:`\,i`-ty wiersz
-macierzy :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` jest kombinacją liniową
-wierszy macierzy :math:`\ \boldsymbol{B},\ ` o współczynnikach 
-z :math:`\,i`-tego wiersza macierzy :math:`\ \boldsymbol{A}`:
+According to the row rule for matrix multiplication, each :math:`\,i`-th row of the matrix :math:`\ \boldsymbol{A}\boldsymbol{B}\ ` is a linear combination of rows of the matrix :math:`\ \boldsymbol{B},\ ` with coefficients from the :math:`\,i`-th row of the matrix :math:`\ \boldsymbol{A}`:
 
 .. math::
    
@@ -137,24 +124,23 @@ z :math:`\,i`-tego wiersza macierzy :math:`\ \boldsymbol{A}`:
                         a_{i2}\,\boldsymbol{B}_2\,+\,\dots\,+\,
                         a_{ip}\,\boldsymbol{B}_p,\quad i=1,2,\dots,m.
 
-Wiersze :math:`\ \boldsymbol{R}_i\ ` należą więc do przestrzeni
-generowanej przez wiersze macierzy :math:`\ \boldsymbol{B}\,`:
+Therefore the rows :math:`\ \boldsymbol{R}_i\ ` belong to a subspace generated by the rows of the matrix :math:`\ \boldsymbol{B}\,`:
 
 .. math::
    
    \boldsymbol{R}_i\,\in\,L(\boldsymbol{B}_1,\boldsymbol{B}_2,\dots,
                             \boldsymbol{B}_p),\quad i=1,2,\dots,m\,,
 
-a przestrzeń, generowana przez wiersze :math:`\ \boldsymbol{R}_i`, 
-zawiera się w (dokładnie: jest podprzestrzenią) 
-przestrzeni generowanej przez wiersze macierzy :math:`\ \boldsymbol{B}\,`:
+and the space, generated by the rows :math:`\ \boldsymbol{R}_i`, 
+is contained in (more precisely: is a subspace) 
+a subspace generated by the rows of the matrix :math:`\ \boldsymbol{B}\,`:
 
 .. math::
    
    L(\boldsymbol{R}_1,\boldsymbol{R}_2,\dots,\boldsymbol{R}_m)\ <\ 
    L(\boldsymbol{B}_1,\boldsymbol{B}_2,\dots,\boldsymbol{B}_p)\,.
 
-Wynika stąd relacja pomiędzy wymiarami rozważanych przestrzeni:
+This implies a relation between dimensions of the considered spaces:
 
 .. math::
    :label: rz_B
@@ -162,43 +148,42 @@ Wynika stąd relacja pomiędzy wymiarami rozważanych przestrzeni:
    \begin{array}{lc}   
    & \dim{L(\boldsymbol{R}_1,\boldsymbol{R}_2,\dots,\boldsymbol{R}_m)} 
    \ \leq\ 
-   \dim{L(\boldsymbol{B}_1,\boldsymbol{B}_2,\dots,\boldsymbol{B}_p)}
+   \dim{L(\boldsymbol{B}_1,\boldsymbol{B}_2,\dots,\boldsymbol{B}_p)}\, ,
    \\ \\
-   \text{czyli} &
-   \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rz}\boldsymbol{B}\,.
+   \text{and thus} &
+   \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rk}\boldsymbol{B}\,.
    \end{array}
 
-Z równań :eq:`rz_A` oraz :eq:`rz_B` wynika, że jednocześnie 
+The equations :eq:`rz_A` and :eq:`rz_B` imply that at the same time
 
 .. math::
 
    \begin{array}{lc}   
-   & \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rz}\boldsymbol{A}
-   \quad\text{oraz}\quad
-   \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rz}\boldsymbol{B} 
+   & \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rk}\boldsymbol{A}
+   \quad\text{and}\quad
+   \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ \text{rk}\boldsymbol{B} 
    \\ \\
-   \text{czyli} & \text{rz}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ 
-   \text{rz}\boldsymbol{A},\,\text{rz}\boldsymbol{B}\,,
+   \text{which means} & \text{rk}\,\boldsymbol{A}\boldsymbol{B}\ \leq\ 
+   \text{rk}\boldsymbol{A},\,\text{rk}\boldsymbol{B}\,,
    \end{array}
 
-co właśnie należało wykazać.
+as required.
 
-**Wniosek.** :math:`\\`
-Pomnożenie danej macierzy przez jakąkolwiek macierz 
-(z lewej bądź z prawej strony) nie podwyższa rzędu:
-otrzymujemy macierz, której rząd jest nie większy od rzędu wyjściowej macierzy.
+**Corollary.** :math:`\\`
+Multiplication of a matrix by another one (from the left or from the right) does not increase its rank:
+we obtain a matrix whose rank is not bigger than the rank of the matrix we started with.
 
-**Zadanie 2.**
+**Exercise 2.**
 
-Dane macierze: 
+Let
 :math:`\ \boldsymbol{A}\in M_{m\times n}(K),\ 
 \boldsymbol{B}\in M_m(K),\ \boldsymbol{C}\in M_n(K),\ 
-\det{\boldsymbol{B}},\,\det{\boldsymbol{C}}\neq 0`.
+\det{\boldsymbol{B}},\,` with :math:`\,\det{\boldsymbol{C}}\neq 0`.
 
-Udowodnić, że :math:`\ \text{rz}\,\boldsymbol{B}\boldsymbol{A}\ =\ 
-\text{rz}\,\boldsymbol{A}\boldsymbol{C}\ =\ \text{rz}\,\boldsymbol{A}`.
+Show that :math:`\ \text{rk}\,\boldsymbol{B}\boldsymbol{A}\ =\ 
+\text{rk}\,\boldsymbol{A}\boldsymbol{C}\ =\ \text{rk}\,\boldsymbol{A}`.
 
-**Rozwiązanie.**
+**Solution.**
 
 .. .. math::
    
@@ -209,30 +194,30 @@ Udowodnić, że :math:`\ \text{rz}\,\boldsymbol{B}\boldsymbol{A}\ =\
       \end{array}
       \end{cases}`
 
-Niech :math:`\ \boldsymbol{P}\,:\,=\,
+Let :math:`\ \boldsymbol{P}\,:\,=\,
 \boldsymbol{B}\boldsymbol{A}\ \in M_{m\times n}(K).\ `
-Wtedy :math:`\ \boldsymbol{A}\,=\,\boldsymbol{B}^{-1}\boldsymbol{P}\ ` oraz
+Then :math:`\ \boldsymbol{A}\,=\,\boldsymbol{B}^{-1}\boldsymbol{P}\ ` and
 
 .. math::
 
    \begin{array}{ccc}   
    \left.\begin{array}{l}
-   \text{rz}\,\boldsymbol{P}\ \,=\ \,
-   \text{rz}\,\boldsymbol{B}\,\boldsymbol{A}\ \ \leq\ \ 
-   \text{rz}\,\boldsymbol{A} \\
-   \text{rz}\,\boldsymbol{A}\ =\ 
-   \text{rz}\,\boldsymbol{B}^{-1}\,\boldsymbol{P}\ \leq\ 
-   \text{rz}\,\boldsymbol{P}
+   \text{rk}\,\boldsymbol{P}\ \,=\ \,
+   \text{rk}\,\boldsymbol{B}\,\boldsymbol{A}\ \ \leq\ \ 
+   \text{rk}\,\boldsymbol{A} \\
+   \text{rk}\,\boldsymbol{A}\ =\ 
+   \text{rk}\,\boldsymbol{B}^{-1}\,\boldsymbol{P}\ \leq\ 
+   \text{rk}\,\boldsymbol{P}
    \end{array}\right\}
    & \quad\Rightarrow &
-   \quad\text{rz}\,\boldsymbol{P}\ =\ \text{rz}\,\boldsymbol{A} \\
-   & & \quad\text{rz}\,\boldsymbol{B}\boldsymbol{A}\ =\ 
-   \text{rz}\,\boldsymbol{A}
+   \quad\text{rk}\,\boldsymbol{P}\ =\ \text{rk}\,\boldsymbol{A} \\
+   & & \quad\text{rk}\,\boldsymbol{B}\boldsymbol{A}\ =\ 
+   \text{rk}\,\boldsymbol{A}
    \end{array}
 
-Niech :math:`\ \boldsymbol{Q}\,:\,=\,
-\boldsymbol{A}\boldsymbol{C}\ \in M_{m\times n}(K).\ `
-Wtedy :math:`\ \boldsymbol{A}\,=\,\boldsymbol{Q}\boldsymbol{C}^{-1}\ ` oraz
+Similarly, if we put :math:`\ \boldsymbol{Q}\,:\,=\,
+\boldsymbol{A}\boldsymbol{C}\ \in M_{m\times n}(K),\ `
+then :math:`\ \boldsymbol{A}\,=\,\boldsymbol{Q}\boldsymbol{C}^{-1}\ ` and
 
 .. math::
 
@@ -251,19 +236,18 @@ Wtedy :math:`\ \boldsymbol{A}\,=\,\boldsymbol{Q}\boldsymbol{C}^{-1}\ ` oraz
    \text{rz}\,\boldsymbol{A}
    \end{array}
 
-**Wniosek.** :math:`\\`
-Pomnożenie danej macierzy przez macierz kwadratową nieosobliwą
-(z lewej bądź z prawej strony) nie zmienia rzędu: 
-otrzymujemy macierz tego samego rzędu, co macierz wyjściowa.
+**Corollary.** :math:`\\`
+Multiplication of a matrix by a square nonsingular matrix (from the left or from the right) does not change its rank:
+we obtain a matrix of the same rank as the matrix we started with.
 
 Systems of Linear Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Zadanie 1.**
-Używając tylko metod Sage'a dla operacji elementarnych na wierszach:
-``swap_rows()``, ``rescale_row()``, ``add_multiple_of_row()``, :math:`\,`
-doprowadź macierz :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej. :math:`\,`
-Sprawdź następnie wynik stosując metodę ``rref()``.
+**Exercise 1.**
+Use Sage methods only for elementary operations on rows, i.e. 
+``swap_rows()``, ``rescale_row()``, ``add_multiple_of_row()``, :math:`\,` and
+bring matrix :math:`\,\boldsymbol{A}\,` to the reduced row echelon form. :math:`\,`
+Then check your result with ``rref()``.
 
 .. Aby wygenerować macierz, naciśnij "Wykonaj";
    aby zmienić rozmiar macierzy, wpisz nową wartość n.
@@ -276,23 +260,23 @@ Sprawdź następnie wynik stosując metodę ``rref()``.
 
 :math:`\;`
 
-**Zadanie 2.** :math:`\,`
-Dana jest macierz rozszerzona :math:`\,\boldsymbol{B}\,` pewnego układu równań liniowych. :math:`\\`
-Opierając się na ogólnych twierdzeniach, :math:`\,` jeszcze przed rozwiązaniem:
+**Exercise 2.** :math:`\,`
+Let :math:`\,\boldsymbol{B}\,` be an augmented matrix of a system of linear equations. :math:`\\`
+First, basing only on general theorems:
      
-* | rozstrzygnij, czy układ jest oznaczony, nieoznaczony czy sprzeczny
-  | (które z tych sytuacji wchodzą tutaj w rachubę?);
+* | decide whether the system is consistent or inconsistent and whether it has a unique solution
+  | (which of these options are possible?);
 
-* | w przypadku nieoznaczonym określ ilość parametrów, 
-  | od których zależy ogólne rozwiązanie.    
+* | if the system has infinitely many solutions, 
+  | determine a number of parameters on which the general solution depends.    
 
-Rozwiąż następnie ten układ dwoma sposobami:
+Next, solve a system of equations using two methods:
    
-* | znajdując bezpośrednio jego rozwiązanie szczególne oraz bazę
-  | przestrzeni rozwiązań stowarzyszonego z nim układu jednorodnego;
+* | directly, find a particular solution and a basis for the solution space
+  | of the associated homogeneous system;
      
-* metodą eliminacji, doprowadzając macierz :math:`\,\boldsymbol{B}\,`
-  do zredukowanej postaci schodkowej.
+* the elimination method, bring the matrix :math:`\,\boldsymbol{B}\,`
+  to the reduced row echelon form.
 
 .. sagecellserver::
    

@@ -6,62 +6,61 @@ Theorems on Solutions of Linear Equations
 Rank of a Matrix
 ~~~~~~~~~~~~~~~~
 
-Niech :math:`\,\boldsymbol{A}\ ` będzie macierzą o :math:`\,m\,` wierszach
-:math:`\ \ \text{i}\ \ \,n\ ` kolumnach nad ciałem 
+Let :math:`\,\boldsymbol{A}\ ` be a matrix with :math:`\,m\,` rows
+:math:`\ \ \text{and}\ \ \,n\ ` columns over a field 
 :math:`\,K:\ \,\boldsymbol{A}\,\in M_{m\times n}(K). \\`
 
-.. admonition:: Definicja. :math:`\,`
+.. admonition:: Definition. :math:`\,`
 
-   *Rząd wierszowy* :math:`\,` macierzy :math:`\,\boldsymbol{A}\ \,`
-   jest liczbą liniowo niezależnych wierszy tej macierzy. :math:`\\`
-   Odpowiednio, :math:`\,` *rząd kolumnowy* :math:`\,` jest liczbą liniowo niezależnych kolumn.
+   The *row rank* :math:`\,` of the matrix :math:`\,\boldsymbol{A}\ \,`
+   is the number of linearly independent rows of this matrix. :math:`\\`
+   Similarly, the :math:`\,` *column rank* :math:`\,` is the number of linearly independent columns.
 
-.. admonition:: Twierdzenie. :math:`\,`
+.. admonition:: Theorem. :math:`\,`
 
-   Rząd kolumnowy równa się rzędowi wierszowemu.
+   The column rank is equal to the row rank of the matrix.
 
-Można więc mówić o rzędzie macierzy :math:`\,\boldsymbol{A},\,`
-równym liczbie liniowo niezależnych jej wierszy bądź kolumn.
-Oznaczamy go :math:`\ \text{rz}\,\boldsymbol{A}.`
+It makes sense then to talk about the rank of the matrix :math:`\,\boldsymbol{A},\,`
+which is equal to its number of linearly independent rows or columns.
+We denote it by :math:`\ \text{rk}\,\boldsymbol{A}.`
 
-.. **Wnioski:**
+.. **Corollaries:**
 
-   1. Rząd macierzy nie może przekroczyć żadnego z jej dwóch rozmiarów:
-   :math:`\ \,\text{rz}\,\boldsymbol{A}\,\leq\,m,n.`
+   1. The rank of the matrix cannot be greater than any of its two sizes:
+   :math:`\ \,\text{rk}\,\boldsymbol{A}\,\leq\,m,n.`
 
-   2. Rząd macierzy równa się wymiarowi przestrzeni rozpiętej na jej wierszach, :math:`\\`
-   a także wymiarowi przestrzeni rozpiętej na jej kolumnach.
+   2. The rank of the matrix equals the dimension of the space spanned by its rows, :math:`\\`
+   and also to the dimension of the space spanned by its columns.
 
-**Wniosek 1.** :math:`\\`
-Rząd macierzy nie może przekroczyć żadnego z jej dwóch rozmiarów:
-:math:`\ \,\text{rz}\boldsymbol{A}\,\leq\,m,n.`
+**Corollary 1.** :math:`\\`
+The rank of the matrix cannot be greater than any of its two dimensions:
+:math:`\ \,\text{rk}\boldsymbol{A}\,\leq\,m,n.`
 
-**Wniosek 2.** :math:`\\`
-Rząd macierzy równa się wymiarowi przestrzeni rozpiętej na jej wierszach, :math:`\\`
-a także wymiarowi przestrzeni rozpiętej na jej kolumnach. :math:`\\`
+**Corollary 2.** :math:`\\`
+The rank of the matrix equals the dimension of the space spanned by its rows, :math:`\\`
+and also to the dimension of the space spanned by its columns. :math:`\\`
 
-.. admonition:: Twierdzenie. :math:`\,`
+.. admonition:: Theorem. :math:`\,`
 
-   Operacje elementarne na wierszach bądź kolumnach nie zmieniają rzędu macierzy.
+   Elementary operations on rows or columns do not change rank of the matrix.
 
-.. **Wniosek.** :math:`\,`
+.. **Corollary.** :math:`\,`
 
-Rząd macierzy jest więc liczbą jedynek wiodących w jej zredukowanej postaci schodkowej.
+The rank of the matrix is equal then to the number of leading unities in its reduced row echelon form.
 
-.. admonition:: Twierdzenie. :math:`\,`
+.. admonition:: Theorem. :math:`\,`
 
-   Rząd macierzy równa się najwyższemu stopniowi jej niezerowych minorów.  
+   The rank of the matrix is equal to the highest order of its non-zero minors.  
 
-.. **Definicja.** :math:`\,`
-   *Minor stopnia* :math:`\,k\,` macierzy :math:`\,\boldsymbol{A}\,`
-   jest wyznacznikiem macierzy, :math:`\,` otrzymanej z :math:`\,\boldsymbol{A}\,` 
-   przez skreślenie wybranych :math:`\,m-k\,` wierszy :math:`\ `
-   i :math:`\ \ \,n-k\,` kolumn :math:`\ (1\leq k \leq m,n).`
+.. **Definition.** :math:`\,`
+   *Minor of order* :math:`\,k\,` of a matrix :math:`\,\boldsymbol{A}\,`
+   is the determinant of a matrix :math:`\,` obtained from :math:`\,\boldsymbol{A}\,` 
+   by deleting :math:`\,m-k\,` rows :math:`\ `
+   and :math:`\ \ \,n-k\,` columns :math:`\ (1\leq k \leq m,n).`
 
-Zastosujemy wymienione sposoby określania rzędu do konkretnej macierzy,
-wykorzystując przy tym funkcje wbudowane do systemu Sage. :math:`\\`
+We will apply the aforementioned methods to determine rank of a given matrix by using functions built in Sage. :math:`\\`
 
-Rząd macierzy określa bezpośrednio funkcja ``rank()``:
+Rank of the matrix is given by a direct function ``rank()``:
 
 .. code-block:: python
 
@@ -69,13 +68,13 @@ Rząd macierzy określa bezpośrednio funkcja ``rank()``:
                         [3, 4, 3,-1,-3],
                         [5, 6,-1, 3,-5]])
 
-   sage: rz_A = A.rank()
-   sage: print "Rank of the matrix A is", rz_A
+   sage: rk_A = A.rank()
+   sage: print "Rank of the matrix A is", rk_A
    
    Rank of the matrix A is 2
 
-Metody ``row_space()`` i ``column_space()`` tworzą przestrzeń rozpiętą na wierszach :math:`\\`
-i na kolumnach macierzy, :math:`\,` podczas gdy ``dimension()`` daje wymiar przestrzeni:
+The methods ``row_space()`` and ``column_space()`` create a space spanned by rows :math:`\\`
+and columns of the matrix, :math:`\,` while ``dimension()`` provides a dimension of the space:
 
 .. code-block:: python
 
@@ -87,7 +86,7 @@ i na kolumnach macierzy, :math:`\,` podczas gdy ``dimension()`` daje wymiar prze
    Dimension of the row space of matrix A: 2
    Dimension of the column space of matrix A: 2
 
-W zredukowanej postaci schodkowej macierz :math:`\,\boldsymbol{A}\,` ma dwie jedynki wiodące:
+In reduced row echelon form the matrix :math:`\,\boldsymbol{A}\,` has two leading unities:
 
 .. code-block:: python
 
@@ -106,8 +105,8 @@ W zredukowanej postaci schodkowej macierz :math:`\,\boldsymbol{A}\,` ma dwie jed
                                              0 & 0 &   0 &  0 &  0
                                           \end{array}\right)\,.
 
-Metoda ``minors(k)`` podaje listę wszystkich minorów stopnia :math:`\,k\ ` 
-badanej macierzy:
+The method ``minors(k)`` provides a list of all the minors of order :math:`\,k\ ` 
+of the given matrix:
 
 .. code-block:: python
    
@@ -120,80 +119,78 @@ badanej macierzy:
    
    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-Jak widać, dla macierzy :math:`\,\boldsymbol{A}\ ` istnieją niezerowe minory stopnia drugiego, 
-natomiast wszystkie minory stopnia trzeciego znikają. :math:`\\`
+As one can see, the matrix :math:`\,\boldsymbol{A}\ ` has non-zero minors of order two, whereas all the minors of order three vanish. :math:`\\`
 
-Ostatecznie, każda z zastosowanych metod daje ten sam wynik: 
-:math:`\ \,\text{rz}\,\boldsymbol{A} = 2.`
+Eventually, each of the methods used gives the same result: 
+:math:`\ \,\text{rk}\,\boldsymbol{A} = 2.`
 
 General Solution of a System of Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Zajmiemy się (niejednorodnym) układem równań liniowych o postaci macierzowej
+We consider a (nonhomogeneous) system of linear equations given by a matrix equation of the form
 
 .. math::
    :label: 05
 
    \boldsymbol{A}\,\boldsymbol{x}\,=\,\boldsymbol{b}
 
-oraz stowarzyszonym z nim układem jednorodnym
+and the corresponding homogeneous system
 
 .. math::
    :label: 06
 
    \boldsymbol{A}\,\boldsymbol{x}\,=\,\boldsymbol{0}\,,
 
-gdzie :math:`\,\boldsymbol{A}\,\in M_{m\times n}(K)\,`
-oraz :math:`\,\boldsymbol{b}\in K^m.`
+where :math:`\,\boldsymbol{A}\,\in M_{m\times n}(K)\,`
+and :math:`\,\boldsymbol{b}\in K^m.`
 
-Warunek konieczny i wystarczający dla istnienia jakichkolwiek rozwiązań układu podaje
+A necessary and sufficient condition for any solution to exist provides
 
-.. **Twierdzenie 0.** :math:`\,` (Kroneckera-Capellego) :math:`\\`
+.. **Theorem 0.** :math:`\,` (Kronecker-Capelli) :math:`\\`
 
-.. admonition:: Twierdzenie 0. :math:`\,` (Kroneckera-Capellego) :math:`\,`
+.. admonition:: Theorem 0. :math:`\,` (Kronecker-Capelli) :math:`\,`
 
-   Układ równań liniowych :eq:`05` 
-   ma rozwiązania (jest niesprzeczny) wtedy i tylko wtedy,
-   gdy rząd macierzy współczynników
-   równa się rzędowi macierzy rozszerzonej:
+   A system of linear equations :eq:`05` has a solution  
+   (is consistent) if and only if the rank of its coefficient matrix 
+   is equal to the rank of its augmented matrix:
 
    .. math::
       :label: 07
       
-      \text{rz}\,\boldsymbol{A}\,=\,\text{rz}\,\boldsymbol{B}\,,\qquad
-      \text{gdzie}\quad\boldsymbol{B}\,=\,[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,].
+      \text{rk}\,\boldsymbol{A}\,=\,\text{rk}\,\boldsymbol{B}\,,\qquad
+      \text{where}\quad\boldsymbol{B}\,=\,[\,\boldsymbol{A}\,|\,\boldsymbol{b}\,].
 
-Dla układu jednorodnego :eq:`06` warunek :eq:`07` jest zawsze spełniony,
-bo dopisanie kolumny zerowej nie zmienia rzędu macierzy.
-A zatem układ jednorodny nigdy nie jest sprzeczny :math:`\,` - :math:`\,` 
-zawsze istnieje co najmniej rozwiązanie zerowe :math:`\,\boldsymbol{x} = \boldsymbol{0}.\,`
-Kwestię istnienia rozwiązań niezerowych wyjaśnia
+For the homogeneous system :eq:`06` the condition :eq:`07` is always fulfilled,
+because adding a zero column does not change the rank of the matrix.
+Hence, the homogeneous system is always consistent :math:`\,` - :math:`\,` 
+there always exists at least a zero solution :math:`\,\boldsymbol{x} = \boldsymbol{0}.\,`
+The existence of non-zero solutions explains
 
-.. **Twierdzenie 1.** :math:`\\`
+.. **Theorem 1.** :math:`\\`
 
-.. admonition:: Twierdzenie 1. :math:`\,`
+.. admonition:: Theorem 1. :math:`\,`
 
-   Jednorodny układ równań :eq:`06` ma rozwiązania niezerowe wtedy i tylko wtedy,
-   gdy rząd macierzy współczynników jest mniejszy od liczby niewiadomych:
-   :math:`\ \ \text{rz}\boldsymbol{A}\,<\,n\,.`
+   The homogeneous system of equations :eq:`06` has non-zero solutions if and only if
+   the rank of its coefficient matrix is smaller than the number of unknowns:
+   :math:`\ \ \text{rk}\boldsymbol{A}\,<\,n\,.`
 
-W szczególności rozwiązania niezerowe istnieją, 
-gdy liczba równań jest mniejsza od liczby niewiadomych, czyli gdy :math:`\,m<n.`
+In particular, the non-zero solutions exist if the number of equations is smaller than the number of unknowns, that is when :math:`\,m<n.`
 
-Rozważmy ważny przypadek :math:`\ \,m=n.\ \,` 
-Wówczas warunek :math:`\ \,\text{rz}\boldsymbol{A}<n\ \,`
-jest spełniony wtedy i tylko wtedy, :math:`\,` gdy :math:`\ \det\boldsymbol{A}=0.\ \,` 
-Stąd, a także ze wzorów Cramera wynika
+Let us consider an important case of :math:`\ \,m=n.\ \,` 
+Then the condition :math:`\ \,\text{rk}\boldsymbol{A}<n\ \,`
+is satisfied if and only if :math:`\ \det\boldsymbol{A}=0.\ \,` 
+Hence, and also by Cramer's formulae follows
 
-.. admonition:: Twierdzenie 1a.
+.. admonition:: Theorem 1a.
    
-   Jednorodny układ równań o kwadratowej macierzy :math:`\,\boldsymbol{A}\,`
-   ma rozwiązania niezerowe wtedy i tylko wtedy, :math:`\,` gdy :math:`\ \det\boldsymbol{A}=0.`
+   The homogeneous system of equations given by the square matrix
+   :math:`\,\boldsymbol{A}\,`
+   has non-zero solutions if and only if :math:`\ \det\boldsymbol{A}=0.`
 
 :math:`\;`
 
-Wprowadźmy oznaczenia :math:`\ S\ \,` i :math:`\ \,S_0\ `
-dla zbiorów rozwiązań układów :math:`\,` :eq:`05` :math:`\ ` i :math:`\ \,` :eq:`06` : 
+Denote by :math:`\ S\ \,` and :math:`\ \,S_0\ `
+the sets of solutions for the systems :math:`\,` :eq:`05` :math:`\ ` and :math:`\ \,` :eq:`06` : 
 
 .. math::
    :label: 08
@@ -202,9 +199,9 @@ dla zbiorów rozwiązań układów :math:`\,` :eq:`05` :math:`\ ` i :math:`\ \,`
    \qquad
    S_0\ :\,=\ \{\,\boldsymbol{X}\in K^n:\ \boldsymbol{A}\boldsymbol{X}\,=\,\boldsymbol{0}\,\}\,.
 
-Z własności mnożenia macierzowego wynika, że jeżeli dwa rozwiązania,
-:math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,` należą do zbioru :math:`\,S_0,\,`
-to należy doń również dowolna ich kombinacja liniowa
+Due to the nature of matrix multiplication, it follows that if both
+:math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,` are in the set :math:`\,S_0,\,`
+then so is their every linear combination
 :math:`\,a_1\boldsymbol{X}_1+a_2\boldsymbol{X}_2,\ \,a_1,a_2\in K:`
 
 .. math::
@@ -215,28 +212,26 @@ to należy doń również dowolna ich kombinacja liniowa
    a_1\,\boldsymbol{A}\boldsymbol{X}_1\,+\ a_2\,\boldsymbol{A}\boldsymbol{X}_2\ =\ 
    \boldsymbol{0}\,.
 
-Oznacza to, że zbiór :math:`\,S_0\,` jest podprzestrzenią przestrzeni :math:`\,K^n\,.\ `
-Dokładniej charakteryzuje go
+This means that the set :math:`\,S_0\,` is a subspace of the space :math:`\,K^n\,.\ `
+More precisely, 
 
-.. **Twierdzenie 2.** :math:`\\`
+.. **Theorem 2.** :math:`\\`
 
-.. admonition:: Twierdzenie 2. :math:`\,`
+.. admonition:: Theorem 2. :math:`\,`
 
-   Zbiór :math:`\,S_0\,` rozwiązań jednorodnego układu równań :eq:`06`
-   jest przestrzenią wektorową (podprzestrzenią przestrzeni :math:`\,K^n`), :math:`\,`
-   której wymiar równa się różnicy liczby niewiadomych i rzędu macierzy współczynników:
+   The set :math:`\,S_0\,` of solutions of the homogeneous system of equations :eq:`06`
+   is a vector space (a subspace of the space :math:`\,K^n`), 
+   whose dimension is equal to the dieference of the number of unknowns 
+   and the rank of the coefficient matrix:
    
    .. math::
    
-      \text{dim}\,S_0\ =\ n - \text{rz}\boldsymbol{A}\,.
+      \text{dim}\,S_0\ =\ n - \text{rk}\boldsymbol{A}\,.
 
-Warto tu podkreślić, że zbiór :math:`\,S\,` rozwiązań układu niejednorodnego :eq:`05` 
-*nie jest* przestrzenią wektorową (jest mianowicie *rozmaitością liniową*).
-
-Gdy :math:`\,\text{rz}\boldsymbol{A} = n,\,` to :math:`\,\text{dim}\,S_0 = 0,\,`
-czyli przestrzeń :math:`\,S_0\,` redukuje się do zbioru jednoelementowego,
-zawierającego tylko wektor zerowy. Oznacza to, że (zgodnie z Twierdzeniem 1.) 
-układ równań ma tylko rozwiązanie  zerowe.
+We should emphasize that the set :math:`\,S\,` of solutions of the nonhomogeneous system of equations :eq:`05` *is not* a vector space (namely, it is a *linear variety*).
+If :math:`\,\text{rk}\boldsymbol{A} = n,\,` then :math:`\,\text{dim}\,S_0 = 0,\,`
+that is the space :math:`\,S_0\,` is reduced to the set containing only one element, the zero vector. This means (in accordance with Theorem 1.) 
+that the system of equations has only the zero solution.
 
 .. **Wniosek.** :math:`\,`
 
@@ -248,44 +243,42 @@ układ równań ma tylko rozwiązanie  zerowe.
    
 .. Wniosek ten wynika też bezpośrednio z Twierdzenia 1. :math:`\\`
 
-Związek pomiędzy zbiorami rozwiązań :math:`\ S\ \,` i :math:`\ \,S_0\ `
-zdefiniowanymi w równaniu :eq:`08` przedstawia
+A relation between the solution sets :math:`\ S\ \,` and :math:`\ \,S_0\ `
+defined in :eq:`08` presents
 
-.. **Twierdzenie 3.** :math:`\\`
+.. **Theorem 3.** :math:`\\`
 
-.. admonition:: Twierdzenie 3. :math:`\,`
+.. admonition:: Theorem 3. :math:`\,`
 
-   Niech :math:`\,\boldsymbol{X'}\,` będzie pewnym szczególnym rozwiązaniem układu :eq:`05`:
+   Let :math:`\,\boldsymbol{X'}\,` be a particular solution of the system :eq:`05`:
    
    .. math::
       
       \boldsymbol{A}\boldsymbol{X'} =\ \boldsymbol{b}\,.      
    
-   Wtedy zbiór :math:`\,S\,` wszystkich rozwiązań układu :eq:`05` otrzymamy
-   dodając :math:`\,\boldsymbol{X'}\,` :math:`\\` 
-   do każdego rozwiązania układu :eq:`06` ze zbioru :math:`\,S_0 :`
+   Then the set :math:`\,S\,` of all the solutions of the system :eq:`05` may be 
+   obtained by adding :math:`\,\boldsymbol{X'}\,` :math:`\\` 
+   to each solution of the system :eq:`06` from the set :math:`\,S_0 :`
    
    .. math::
    
       S\ =\ \{\,\boldsymbol{X'}\}\ +\ S_0\,.
 
-W ten sposób ogólne rozwiązanie niejednorodnego układu równań liniowych
-jest sumą pewnego szczególnego rozwiązania tego układu i ogólnego rozwiązania
-stowarzyszonego z nim układu jednorodnego.
+In this way the general solution of the nonhomogeneous system of linear equations is a sum of a particular solution of this system and the general solution of the corresponding homogeneous system.
 
-.. **Wniosek.** :math:`\\`
+.. **Corollary.** :math:`\\`
 
-.. admonition:: Wniosek. :math:`\,`
+.. admonition:: Corollary. :math:`\,`
 
-   Niejednorodny układ :eq:`05` ma dokładnie jedno rozwiązanie
-   wtedy i tylko wtedy, gdy rząd macierzy współczynników
-   równa się liczbie niewiadomych: :math:`\ \text{rz}\boldsymbol{A} = n\,.\ `
+   The nonhomogeneous system :eq:`05` has precisely one solution
+   if and only if the rank of the coefficient matrix equals the number of the
+   unknowns: :math:`\ \text{rk}\boldsymbol{A} = n\,.\ `
 
-.. Jest to konsekwencja poprzedniego wniosku z Twierdzenia 2. :math:`\\`
+.. This is a consequence of the previous corollary from Theorem 2. :math:`\\`
 
-Tak więc, przynajmniej w zasadzie, aby rozwiązać układ niejednorodny,
-wystarczy znaleźć (np. odgadnąć) jakieś jego szczególne rozwiązanie
-oraz rozwiązać ogólnie stowarzyszony z nim układ jednorodny. 
+Hence, at least in general, in order to solve a nonhomogeneous system,
+it suffices to find (or guess) its particular solution and solve
+the corresponding homogeneous system. 
 
 Systems of Linear Equations in Sage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -361,7 +354,7 @@ To this end the two methods in Sage may be used:
 
 :math:`\;`
 
-A zatem ogólnym rozwiązaniem układu jest zbiór wektorów postaci
+Hence, the general solution of the system consists of the vecors of the form
 
 .. math:: \\
 

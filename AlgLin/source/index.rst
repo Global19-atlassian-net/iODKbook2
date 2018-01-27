@@ -110,6 +110,8 @@ Matrix Decompositions
    decomposition_LU-applications
    decomposition_problems
 
+.. _ch_kronecker:
+
 Tensor (Kronecker) Product of Matrices
 ======================================
 

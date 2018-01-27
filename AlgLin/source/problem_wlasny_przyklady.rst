@@ -5,23 +5,19 @@ Examples of Eigenproblems
 A Linear Operator in the Space of Vectors on a Plane
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-W dwuwymiarowej przestrzeni wektorów geometrycznych :math:`\,V\ ` z bazą 
-:math:`\,\mathcal{B}=\{\vec{e}_1,\vec{e}_2\}\,,\ ` gdzie :math:`\\`
+In a two-dimensional space of geometric vectors :math:`\,V\ ` with a basis 
+:math:`\,\mathcal{B}=\{\vec{e}_1,\vec{e}_2\}\,,\ ` where :math:`\\`
 :math:`\,|\vec{e}_1|=|\vec{e}_2|=1,\  \ \vec{e}_1\perp\vec{e}_2\,,\ `
-zadajemy operator liniowy :math:`\,F\ ` podając obrazy wektorów bazy :math:`\,\mathcal{B}:`
+we define a linear operator :math:`\,F\ ` by assigning the image to the vectors from the basis :math:`\,\mathcal{B}:`
 
 .. math::
    
    F\vec{e}_1\,=\,2\,\vec{e}_1+\vec{e}_2\,,\qquad 
    F\vec{e}_2\,=\,\vec{e}_1+2\,\vec{e}_2\,.
 
-Szukamy wektorów :math:`\ \vec{r}\,\in\,V\!\smallsetminus\!\{\vec{0}\}\ ` spełniających równanie
-:math:`\,F\vec{r}=\lambda\,\vec{r}\ ` dla pewnego :math:`\ \lambda\in R\,.\ `
-Działając na te wektory, operator :math:`\,F\ ` nie zmienia ich kierunku, chociaż może
-zmienić długość lub zwrot. Pewną orientację w sytuacji daje program, który wyświetla kolejne 
-wektory :math:`\ \vec{r}\ ` z pewnego zbioru oraz ich obrazy, eksponując przypadki, 
-gdy :math:`\ F(\vec{r})\parallel\vec{r}\ ` 
-(po uruchomieniu programu przygotowanie animacji trwa kilkadziesiąt sekund). :math:`\\`
+We are looking for vectors :math:`\ \vec{r}\,\in\,V\!\smallsetminus\!\{\vec{0}\}\ ` which satisfy the equation
+:math:`\,F\vec{r}=\lambda\,\vec{r}\ ` for some :math:`\ \lambda\in R\,.\ `
+When the operator :math:`\,F\ ` acts on these vectors it does not change their direction, but it may change their length or orientation. An outline of this situation provides a program  which outputs the consecutive vectors :math:`\ \vec{r}\ ` from a cetain set together with their images, and emphasizes the cases when :math:`\ F(\vec{r})\parallel\vec{r}\ ` (after running the program, preparation of the animation takes several dozen seconds). :math:`\\`
 
 .. sagecellserver::
 
@@ -50,11 +46,10 @@ gdy :math:`\ F(\vec{r})\parallel\vec{r}\ `
 
    print a; a.show(delay=25, iterations=5)
 
-Problem własny dla operatora :math:`\,F\ ` rozwiążemy w tym przykładzie bezpośrednio,
-nie odwołując się do ogólnych wzorów z poprzedniej sekcji.
+In this example we solve the eigenvalue problem for the operator :math:`\,F\ ` directly, without referring to the general formulae from the previous section.
 
-Podstawiając :math:`\ \vec{r}=\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2\ ` 
-do równania własnego otrzymujemy kolejno:
+By substituting :math:`\ \vec{r}=\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2\ ` 
+to the eigenequation, we obtain:
 
 .. math::
    :nowrap:
@@ -68,9 +63,8 @@ do równania własnego otrzymujemy kolejno:
    \left[\,(2-\lambda)\,\alpha_1+\alpha_2\,\right]\,\vec{e}_1+\left[\,\alpha_1+(2-\lambda)\,\alpha_2\,\right]\,\vec{e}_2 & = & \vec{0}\,.
    \end{eqnarray*}
 
-Kombinacja niezależnych liniowo wektorów :math:`\ \vec{e}_1,\,\vec{e}_2\ `
-bazy :math:`\ \mathcal{B}\ ` równa się wektorowi zerowemu wtedy i tylko wtedy, 
-gdy jej współczynniki znikają:
+A linear combination of linearly independent vectors :math:`\ \vec{e}_1,\,\vec{e}_2\ `
+from the basis :math:`\ \mathcal{B}\ ` equals the zero vector if and only if its coefficients do not vanish:
 
 .. math::
    :label: 2_set
@@ -80,10 +74,9 @@ gdy jej współczynniki znikają:
    \alpha_1+(2-\lambda)\,\alpha_2\,=\,0
    \end{array}\end{cases}
 
-Wzór :eq:`2_set` przedstawia jednorodny układ dwóch równań liniowych na niewiadome 
-:math:`\ \alpha_1,\,\alpha_2` :math:`\\` z parametrem :math:`\ \lambda.\ `
-Rozwiązania niezerowe: :math:`\ \alpha_1^2+\alpha_2^2\,>\,0\,,\ `
-istnieją wtedy i tylko wtedy, gdy
+The formula :eq:`2_set` presents a homogeneous system of two linear equations with unknowns :math:`\ \alpha_1,\,\alpha_2` :math:`\\` and a parameter :math:`\ \lambda.\ `
+The non-zero solutions: :math:`\ \alpha_1^2+\alpha_2^2\,>\,0\,,\ `
+exist if and only if
 
 .. math::
    :label: det_eqn
@@ -92,19 +85,21 @@ istnieją wtedy i tylko wtedy, gdy
                            1 & 2-\lambda \end{array}\right|\ =\ 
    \lambda^2-4\,\lambda+3\ =\ (\lambda-1)(\lambda-3)\ =\ 0\,.
 
-Otrzymaliśmy w ten sposób dwie wartości własne operatora 
+In this way we obtained two eigenvalues of the operator 
 :math:`\,F:\quad\blacktriangleright\quad\lambda_1=1\,,\ \ \lambda_2=3\,.\ `
 
-Podstawienie :math:`\ \lambda=\lambda_1=1\ ` w :eq:`2_set` 
-daje nieoznaczony układ równań
-:math:`\quad\begin{cases}\ \begin{array}{c}
-\alpha_1+\alpha_2\,=\,0 \\ \alpha_1+\alpha_2\,=\,0
-\end{array}\end{cases}`
+Substitution of :math:`\ \lambda=\lambda_1=1\ ` into :eq:`2_set` 
+leads to an underdetermined system of equations
 
-którego rozwiązania mają ogólną postać:
+.. math::
+    \quad\begin{cases}\ \begin{array}{c}
+    \alpha_1+\alpha_2\,=\,0 \\ \alpha_1+\alpha_2\,=\,0
+    \end{array}\end{cases}
+
+whose solutions are of the form:
 :math:`\quad\alpha_1=\alpha\,,\ \ \alpha_2=-\;\alpha\,,\ \ \alpha\in R.`
 
-Wektory własne odpowiadające tej wartości:
+The eigenvectors associated with this eigenvalue:
 
 .. math::
    :label: eigen_vectors_1
@@ -114,19 +109,19 @@ Wektory własne odpowiadające tej wartości:
    \alpha\,(\vec{e}_1-\vec{e}_2)\ \equiv\ \alpha\,\vec{f}_1\,,\quad
    \alpha\in R\!\smallsetminus\!\{0\}\,,
 
-tworzą :math:`\,` (wespół z wektorem zerowym :math:`\,\vec{0}`) :math:`\,` 
-1-wymiarową podprzestrzeń :math:`\,V_1\ ` przestrzeni :math:`\,V,` :math:`\\`
-generowaną przez wektor :math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:` :math:`\ V_1=L(\vec{f}_1)\,.`
+comprise :math:`\,` (together with the zero vector :math:`\,\vec{0}`) :math:`\,` 
+a 1-dimensional subspace :math:`\,V_1\ ` of the space :math:`\,V,` :math:`\\`
+generated by the vector :math:`\,\vec{f}_1=\vec{e}_1-\vec{e}_2:` :math:`\ V_1=L(\vec{f}_1)\,.`
 
-Podstawiając :math:`\ \lambda=\lambda_2=3\ ` w :math:`\,` :eq:`2_set` :math:`\,`
-otrzymujemy układ
+By substituting :math:`\ \lambda=\lambda_2=3\ ` into :math:`\,` :eq:`2_set` :math:`,\,`
+we obtain the system
 :math:`\quad\begin{cases}\ \begin{array}{r}
 -\ \alpha_1+\alpha_2\,=\,0 \\ \alpha_1-\alpha_2\,=\,0
 \end{array}\end{cases}`
 
-o rozwiązaniach:
+with solutions:
 :math:`\quad\alpha_1=\alpha_2=\alpha\,,\ \ \alpha\in R.\ `
-Odpowiednie wektory własne 
+The associated eigenvectors 
 
 .. math::
    :label: eigen_vectors_2
@@ -136,12 +131,12 @@ Odpowiednie wektory własne
    \alpha\,(\vec{e}_1+\vec{e}_2)\ \equiv\ \alpha\,\vec{f}_2\,,\quad
    \alpha\in R\!\smallsetminus\!\{0\}
 
-również tworzą :math:`\,` (łącznie z wektorem zerowym) :math:`\,` 
-1-wymiarową podprzestrzeń, :math:`\\`
-generowaną tym razem przez wektor :math:`\,\vec{f}_2=\vec{e}_1+\vec{e}_2:\ \ V_2=L(\vec{f}_2)\,.`
+also comprise :math:`\,` (together with the zero vector) :math:`\,` 
+a 1-dimensional subspace, :math:`\\`
+this time generated by the vector :math:`\,\vec{f}_2=\vec{e}_1+\vec{e}_2:\ \ V_2=L(\vec{f}_2)\,.`
 
-Zauważmy, że wektory :math:`\,\vec{f}_1\,,\ \vec{f}_2\ \,`
-są wzajemnie prostopadłe oraz mają tę samą długość:
+Note that the vectors :math:`\,\vec{f}_1\,,\ \vec{f}_2\ \,`
+are perpendicular to each other and of the same length:
 
 .. math::
    
@@ -152,7 +147,7 @@ są wzajemnie prostopadłe oraz mają tę samą długość:
    |\,\vec{f}_{1,2}\,|^2\ =\ (\vec{e}_1\mp\vec{e}_2)^2\ =\ 
    \vec{e}_1\cdot\vec{e}_1\mp 2\ \,\vec{e}_1\cdot\vec{e}_2+\vec{e}_2\cdot\vec{e}_2\ =\ 2\,.
 
-Dzieląc każdy z wektorów :math:`\ \vec{f}_1,\,\vec{f}_2\ ` przez jego długość:
+After dividing each of the vectors :math:`\ \vec{f}_1,\,\vec{f}_2\ ` by its length:
 
 .. math::
    :label: normal
@@ -163,22 +158,22 @@ Dzieląc każdy z wektorów :math:`\ \vec{f}_1,\,\vec{f}_2\ ` przez jego długo�
    \vec{f}_2\ \ \rightarrow\ \ \frac{1}{|\,\vec{f}_2\,|}\ \,\vec{f}_2\ \ =\ \ 
                                \frac{1}{\sqrt{2}}\ \,(\vec{e}_1+\vec{e}_2)\,,
 
-otrzymamy parę :math:`\ (\vec{f}_1,\,\vec{f}_2)\ ` 
-wzajemnie prostopadłych wektorów jednostkowych.
+we obtain a pair :math:`\ (\vec{f}_1,\,\vec{f}_2)\ ` 
+of unit vectors perpendicular to each other.
 
-W ten sposób w przestrzeni :math:`\,V\ ` istnieją dwie bazy *ortonormalne*:
-wyjściowa baza :math:`\,\mathcal{B}=(\vec{e}_1,\vec{e}_2)\ ` oraz
-baza :math:`\,\mathcal{F}=(\vec{f}_1,\,\vec{f}_2)\ ` 
-złożona z wektorów własnych operatora :math:`\,F:`
+In this way, the space :math:`\,V\ ` possesses two *orthonormal* bases:
+the initial basis :math:`\,\mathcal{B}=(\vec{e}_1,\vec{e}_2)\ ` and
+the basis :math:`\,\mathcal{F}=(\vec{f}_1,\,\vec{f}_2)\ ` 
+consisting of the eigenvectors of the operator :math:`\,F:`
 
 .. image:: /figures/Rys_8.png
    :align: center
    :scale: 65%
 
-**Uwagi i komentarze.**
+**Comments and remarks.**
 
-Operator :math:`\,F\ ` jest hermitowski, 
-bo jego macierz w ortonormalnej bazie :math:`\,\mathcal{B}:`
+The operator :math:`\,F\ ` is Hermitian because in the orthonormal basis
+:math:`\,\mathcal{B}\,` its matrix 
 
 .. math::
    :label: mat_AF
@@ -187,40 +182,36 @@ bo jego macierz w ortonormalnej bazie :math:`\,\mathcal{B}:`
    \left[\,I_{\mathcal{B}}(F\vec{e}_1)\,|\,I_{\mathcal{B}}(F\vec{e}_2)\,\right]\ =\ 
    \left[\begin{array}{cc} 2 & 1 \\ 1 & 2 \end{array}\right]
 
-jest rzeczywista i symetryczna, a więc hermitowska. Ortogonalność należących do różnych wartości 
-wektorów własnych :math:`\ \,\vec{f}_1\ \ \text{i}\ \ \vec{f}_2\ \,` 
-oraz istnienie ortonormalnej bazy :math:`\ \mathcal{F}\ \,` przestrzeni :math:`\,V,\ ` 
-złożonej z wektorów własnych operatora :math:`\,F,\ \,` jest konsekwencją tej hermitowskości.
+is real and symmetric, and thus Hermitian. The orthogonality of the vectors 
+:math:`\ \,\vec{f}_1\ \ \text{and}\ \ \vec{f}_2\ \,` associated to  different eigenvalues,  
+and existence of the orthonormal basis :math:`\ \mathcal{F}\ \,` of the space :math:`\,V\ ` which comprises of the eigenvectors of the operator :math:`\,F\ \,` is a consequence of this Hermitian property.
 
-Wzór :eq:`det_eqn` przedstawia równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}.\ `
-Stąd, a także ze wzorów :math:`\,` :eq:`eigen_vectors_1` :math:`\,` i :math:`\,` :eq:`eigen_vectors_2` :math:`\,` wynika, że obydwie wartości własne, 
-:math:`\,` :math:`\ \lambda_1=1\ \ \text{i}\ \ \lambda_2=3\,,\ \ `
-są algebraicznie i geometrycznie 1-krotne. To, że krotność algebraiczna każdej wartości własnej
-równa się jej krotności geometrycznej, jest również cechą operatorów hermitowskich.
+The formula :eq:`det_eqn` presents the characteristic equation of the matrix :math:`\,\boldsymbol{A}.\ ` Hence, and also by the formulae
+:math:`\,` :eq:`eigen_vectors_1` :math:`\,` and :math:`\,` :eq:`eigen_vectors_2`, :math:`\,` the two eigenvalues
+:math:`\,` :math:`\ \lambda_1=1\ \ \text{and}\ \ \lambda_2=3\,,\ \ `
+are algebraic and of geometric multiplicty 1. The fact that the algebraic multiplicity of each eigenvalue is equal to its geometric multiplicity is also a feature of the Hermitian operators.
 
-Baza :math:`\,\mathcal{F}\ ` jest wynikiem obrotu bazy :math:`\,\mathcal{B}\ `
-o kąt :math:`\,\pi/4.\ ` 
-Jak należało oczekiwać, macierz przejścia między tymi dwiema ortonormalnymi bazami,
-wyznaczona przez związki :eq:`normal`:
+The basis :math:`\,\mathcal{F}\ ` is a result of the rotaion of the basis :math:`\,\mathcal{B}\ ` by the angle :math:`\,\pi/4.\ ` 
+As one should expect, the change-of-basis matrix between these two orthonormal bases,
+determined by the formuala :eq:`normal`:
 
 .. math::
    
    \boldsymbol{S}\ =\ \frac{1}{\sqrt{2}}\ \,
    \left[\begin{array}{rr} 1 & 1 \\ -1 & 1 \end{array}\right]
 
-jest unitarna (w tym wypadku: rzeczywista ortogonalna): 
+is unitary (in this case: real orthogonal): 
 :math:`\ \,\boldsymbol{S}^+\boldsymbol{S}=\boldsymbol{S}^{\,T}\boldsymbol{S}=\boldsymbol{I}_2\,.`
 
-Wzór :eq:`mat_AF` przedstawia macierz :math:`\,\boldsymbol{A}\ ` operatora :math:`\,F\ `
-w wyjściowej bazie :math:`\ \mathcal{B}.` :math:`\\`
-Wyliczymy teraz dwoma sposobami macierz :math:`\,\boldsymbol{F}=[\varphi_{ij}]\ ` 
-tego operatora w bazie :math:`\ \mathcal{F}.`
+The formula :eq:`mat_AF` presents a matrix :math:`\,\boldsymbol{A}\ ` of the operator :math:`\,F\ ` in the initial basis :math:`\ \mathcal{B}.` :math:`\\`
+Now we calculate the matrix :math:`\,\boldsymbol{F}=[\varphi_{ij}]\ ` 
+of this operator in the basis :math:`\ \mathcal{F}` by two methods.
 
 .. Macierz :math:`\,\boldsymbol{F}=M_{\mathcal{F}}(F)=[\,\varphi_{ij}\,]_{2\times 2}\in M_2(R)\ ` 
    operatora :math:`\,F\ ` w bazie :math:`\ \mathcal{F}\ ` wyliczymy dwoma sposobami.
 
-* Według wzorów transformacyjnych dla przejścia 
-  od bazy :math:`\,\mathcal{B}\ ` do bazy :math:`\,\mathcal{F}:`
+* According to transformation formuale for transition from the basis 
+  :math:`\,\mathcal{B}\ ` to :math:`\,\mathcal{F}:`
 
   .. math::
      
@@ -233,7 +224,7 @@ tego operatora w bazie :math:`\ \mathcal{F}.`
      \left[\begin{array}{rr} 1 & 1 \\ -1 & 1 \end{array}\right]\ =\ 
      \left[\begin{array}{cc} 1 & 0 \\ 0 & 3 \end{array}\right]\,.
 
-* To samo dają wzory dla elementów macierzowych operatora w bazie ortonormalnej:
+* We get the same result by using the formulae for the matrix elements of the operator in the orthonormal basis:
   
   .. math::
      
@@ -247,49 +238,48 @@ tego operatora w bazie :math:`\ \mathcal{F}.`
      \varphi_{22}\,=\,\boldsymbol{f}_2\cdot F\boldsymbol{f}_2\,=\,
      3\ \ \boldsymbol{f}_2\cdot\boldsymbol{f}_2\,=\,3\,.
 
-Macierz operatora :math:`\,F\ ` w ortonormalnej bazie :math:`\ \mathcal{F}\ `
-złożonej z jego wektorów własnych jest diagonalna, z wartościami własnymi na przekątnej.
+Matrix of the operator :math:`\,F\ ` in the orthonormal basis :math:`\ \mathcal{F}\ `
+consisting of its eigenvectors is diagonal, with the eigenvalues on the diagonal.
 
-**Dygresja.**
+**Digression.**
 
-Każdy wektor :math:`\,\vec{r}\ ` przestrzeni :math:`\,V\ ` 
-wektorów geometrycznych na płaszczyźnie
-można zapisać jednoznacznie w postaci kombinacji liniowej
-wektorów bazowych :math:`\,\vec{f}_1,\,\vec{f}_2:`
+Each vector :math:`\,\vec{r}\ ` of the space :math:`\,V\ ` 
+of geometric vectors on a surface may be written in a unique way as 
+a linear combination of the basis vectors :math:`\,\vec{f}_1,\,\vec{f}_2:`
 
 .. math::
    
    \vec{r}\,=\,\beta_1\,\vec{f}_1+\beta_2\,\vec{f}_2\,,\qquad\beta_1,\,\beta_1\in R\,.
 
-Ale :math:`\ \,\beta_1\,\vec{f}_1\in V_1\,,\ \ \beta_2\,\vec{f}_2\in V_2\,,\ \,`
-gdzie :math:`\ \,V_1=L(\vec{f}_1)\ \ \text{i}\ \ \,V_2=L(\vec{f}_2)\ \,` 
-są podprzestrzeniami wektorów własnych operatora :math:`\,F\ `
-odpowiednio dla wartości :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2.\ \,`
-Wobec tego dla każdego wektora :math:`\,\vec{r}\in V\ ` zachodzi jednoznaczny rozkład
+Moreover, :math:`\ \,\beta_1\,\vec{f}_1\in V_1\,,\ \ \beta_2\,\vec{f}_2\in V_2\,,\ \,`
+where :math:`\ \,V_1=L(\vec{f}_1)\ \ \text{and}\ \ \,V_2=L(\vec{f}_2)\ \,` 
+are the subspaces of the eigenvectors of the operator :math:`\,F\ `
+associated with the eigenvalues :math:`\ \lambda_1\ \ \text{and}\ \ \lambda_2,\ \,`
+correspondingly. Hence, each vector :math:`\,\vec{r}\in V\ ` satisfies a unique decomposition
 
 .. math::
    
    \vec{r}\,=\,\vec{r}_1\,+\,\vec{r}_2\,,\qquad\vec{r}_1\in V_1\,,\ \ \vec{r}_2\in V_2\,.
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Niech :math:`\ V_1\,,\ \,V_2\ \,` będą podprzestrzeniami 
-   przestrzeni wektorowej :math:`\,V.\ ` :math:`\\`
-   Jeżeli każdy wektor :math:`\,x\in V\ ` można przedstawić jednoznacznie w postaci 
-   :math:`\,x_1+x_2\,,\ ` gdzie :math:`\,x_1\in V_1\ \ \text{i}\ \ x_2\in V_2\,,\ `
-   to mówimy, że przestrzeń :math:`\,V\ ` *rozkłada się na sumę prostą* swoich podprzestrzeni
-   :math:`\,V_1\ \ \text{i}\ \ V_2\,,\ ` co zapisujemy: :math:`\ \  V\,=\,V_1\,\oplus\,V_2\,.`
+   Let :math:`\ V_1\,,\ \,V_2\ \,` be subspaces of the vector space 
+   :math:`\,V.\ ` :math:`\\` If each vector :math:`\,x\in V\ ` may be uniquely 
+   represented in a form :math:`\,x_1+x_2\,,\ ` where 
+   :math:`\,x_1\in V_1\ \ \text{i}\ \ x_2\in V_2\,,\ `
+   then we say that the space :math:`\,V\ ` *decomposes as direct product* 
+   of its subspaces :math:`\,V_1\ \ \text{and}\ \ V_2\,,\ ` what we write as:
+   :math:`\ \  V\,=\,V_1\,\oplus\,V_2\,.`
 
-W naszym przykładzie przestrzeń :math:`\ V,\ ` w której działa operator :math:`\,F,\ `
-rozkłada się na sumę prostą podprzestrzeni :math:`\ V_1\ \ \text{i}\ \ V_2\,,\ `
-odpowiadających dwóm wartościom własnym :math:`\ \lambda_1\ \ \text{i}\ \ \lambda_2\ `
-tego operatora.
+In our example the space :math:`\ V,\ ` with the action of the operator :math:`\,F,\ `
+decomposes as direct product of the subspaces :math:`\ V_1\ \ \text{and}\ \ V_2\,,\ `
+associated with two eigenvalues :math:`\ \lambda_1\ \ \text{and}\ \ \lambda_2\ `
+of this operator.
 
 Transposition of :math:`\ 2\times 2\ ` square matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Definiujemy operator transpozycji :math:`\ T\ ` określony na algebrze :math:`\ M_2(R)` :math:`\\`
-rzeczywistych kwadratowych macierzy 2. stopnia:
+We define the transposition operator :math:`\ T\ ` defined on the algebra :math:`\ M_2(R)` :math:`\\` of real square matrices of order 2:
 
 .. math::
    
@@ -305,16 +295,16 @@ rzeczywistych kwadratowych macierzy 2. stopnia:
    \end{array}\right]\,,\quad
    \alpha_1,\,\alpha_2,\,\alpha_3,\,\alpha_4\in R\,.
 
-Ze względu na bijektywność i liniowość, :math:`\,` operator :math:`\,T\ ` 
-jest automorfizmem algebry :math:`\,M_2(R).`
+Because the operator :math:`\,T\ ` is linear and bijective, it is an 
+automorfism of the algebra :math:`\,M_2(R).`
 
-Problem własny operatora :math:`\,T\ ` rozwiążemy stosując schemat postępowania
-z poprzedniej sekcji.
+We solve the eigenvalue problem of the operator :math:`\,T\ ` using the method 
+presented in the previous section.
 
-0.) Konstrukcja macierzy :math:`\,\boldsymbol{A}=M_{\mathcal{B}}(T)\ ` 
-automorfizmu :math:`\,T\ ` w bazie 
+0.) Konstruction of the matrix :math:`\,\boldsymbol{A}=M_{\mathcal{B}}(T)\ ` 
+of the automorfism :math:`\,T\ ` in a basis 
 :math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,,\ `
-gdzie
+where
    
 .. math::
       
@@ -323,8 +313,7 @@ gdzie
    \boldsymbol{e}_3\ =\ \left[\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right]\,,\quad
    \boldsymbol{e}_4\ =\ \left[\begin{array}{cc} 0 & 0 \\ 0 & 1 \end{array}\right]\,.
 
-Jeżeli obrazy kolejnych macierzy z bazy :math:`\ \mathcal{B}\ ` przedstawimy 
-w tej samej bazie :math:`\ \mathcal{B}:`
+If we represent the images of the consecutive vectors from the basis :math:`\ \mathcal{B}\ ` in the same basis :math:`\ \mathcal{B}:`
 
 .. math::
    :nowrap:
@@ -352,8 +341,8 @@ w tej samej bazie :math:`\ \mathcal{B}:`
                                          1\cdot\boldsymbol{e}_4\,,
    \end{alignat*}
 
-to :math:`\ j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ `
-składa się ze współrzędnych macierzy :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2,3,4:`
+then the :math:`\ j`-th column of the matrix :math:`\,\boldsymbol{A}\ `
+comprises of the coefficients of the matrix :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2,3,4:`
 
 .. math::
    :label: mat_AT
@@ -364,7 +353,7 @@ składa się ze współrzędnych macierzy :math:`\,T\boldsymbol{e}_j\,,\ \ j=1,2
                              0 & 1 & 0 & 0 \\ 
                              0 & 0 & 0 & 1 \end{array}\right]\,.
 
-Teraz równanie własne dla operatora :math:`\,T:`
+Now the eigenequation of the operator :math:`\,T:`
 
 .. math::
    
@@ -377,7 +366,7 @@ Teraz równanie własne dla operatora :math:`\,T:`
    \alpha_1 & \alpha_2 \\ \alpha_3 & \alpha_4
    \end{array}\right]
 
-przyjmuje postać jednorodnego problemu liniowego:
+takes the form of a homogeneous linear problem:
 
 .. math::
    :label: hom_eqn
@@ -395,7 +384,7 @@ przyjmuje postać jednorodnego problemu liniowego:
    0 \\ 0 \\ 0 \\ 0
    \end{array}\right]\,. 
 
-1.) Wyliczenie wartości własnych jako pierwiastków równania charakterystycznego.
+1.) Calculation of the eigenvalues as the roots of the characteristic equation.
 
 .. math::
    
@@ -408,15 +397,15 @@ przyjmuje postać jednorodnego problemu liniowego:
    \end{array}\right|\ =\ 
    (1-\lambda)^2\,(\lambda^2-1)\ =\ (\lambda-1)^3\,(\lambda+1)\ =\ 0\,.
 
-Wartości własne (i ich krotności algebraiczne) są więc następujące:
+The eigenvalues (and their algebraic multiplicities) are then the following:
 
 .. math::
    
    \blacktriangleright\qquad\lambda_1=1\quad(3)\,,\qquad\lambda_2=-1\quad(1)\,.
 
-2.) Wyznaczenie wektorów (tutaj: macierzy) własnych.
+2.) Determination of eigenvectors (here: eigenmatrices).
 
-Wstawiając :math:`\,\lambda=\lambda_1=1\ ` do równania :eq:`hom_eqn` otrzymujemy
+By inserting :math:`\,\lambda=\lambda_1=1\ ` into the equation :eq:`hom_eqn`, we obtain
 
 .. math::
    
@@ -431,16 +420,16 @@ Wstawiając :math:`\,\lambda=\lambda_1=1\ ` do równania :eq:`hom_eqn` otrzymuje
    \end{array}\right]\ =\ 
    \left[\begin{array}{c}
    0 \\ 0 \\ 0 \\ 0
-   \end{array}\right]\qquad\text{czyli}\qquad
+   \end{array}\right] ,\qquad\text{and thus}\qquad
    \begin{cases}\ \begin{array}{r}
    -\ \alpha_2+\alpha_3\,=\,0\,, \\ \alpha_2-\alpha_3\,=\,0\,.
    \end{array}\end{cases}
 
-Rozwiązanie ma postać: 
+The solution is of the form: 
 :math:`\quad\alpha_1=\alpha\,,\ \ \alpha_2=\alpha_3=\beta\,,\ \ \alpha_4=\gamma\,,\quad
 \alpha,\,\beta,\,\gamma\in R.`
 
-Macierze własne operatora :math:`\,T\ ` dla wartości :math:`\,\lambda_1=1\,:`
+The eigenmatrices of the operator :math:`\,T\ ` associated with the eigenvalue :math:`\,\lambda_1=1\,:`
 
 .. math::
    
@@ -465,9 +454,8 @@ Macierze własne operatora :math:`\,T\ ` dla wartości :math:`\,\lambda_1=1\,:`
    \alpha^2+\beta^2+\gamma^2>0
    \end{array}
 
-tworzą :math:`\,` (po dodaniu macierzy zerowej) :math:`\,` 
-trójwymiarową podprzestrzeń :math:`\ V_1\ ` przestrzeni :math:`\\`
-wektorowej :math:`\ V=M_2(R),\ ` generowaną przez liniowo niezależne macierze
+comprise :math:`\,` (after adjoining the zero matrix) :math:`\,` 
+a 3-dimensional subspace :math:`\ V_1\ ` of the vector space :math:`\ V=M_2(R),\ ` generated by linearly independent matrices
 
 .. math::
    
@@ -485,9 +473,9 @@ wektorowej :math:`\ V=M_2(R),\ ` generowaną przez liniowo niezależne macierze
    \end{array}\right]\,:\qquad
    V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\,.
 
-Wartość własna :math:`\ \lambda_1=1\ ` jest zatem algebraicznie i geometrycznie 3-krotna.
+The eigenvalue :math:`\ \lambda_1=1\ ` has then both algebraic and geometric multilplicity 3.
 
-Podstawienie :math:`\ \lambda=\lambda_2=-1\ ` do równania :eq:`hom_eqn` daje
+Substitution of :math:`\ \lambda=\lambda_2=-1\ ` into the equation :eq:`hom_eqn` gives
 
 .. math::
    
@@ -502,14 +490,13 @@ Podstawienie :math:`\ \lambda=\lambda_2=-1\ ` do równania :eq:`hom_eqn` daje
    \end{array}\right]\ =\ 
    \left[\begin{array}{c}
    0 \\ 0 \\ 0 \\ 0
-   \end{array}\right]\qquad\text{czyli}\qquad
+   \end{array}\right] ,\qquad\text{and thus}\qquad
    \begin{cases}\ \begin{array}{r}
    2\,\alpha_1\,=\,0\,, \\ \alpha_2+\alpha_3\,=\,0\,, \\ 
    \alpha_2+\alpha_3\,=\,0\,, \\ 2\,\alpha_4\,=\,0\,.
    \end{array}\end{cases}
 
-Stąd :math:`\ \ \alpha_1=\alpha_4=0\,,\ \ \alpha_2=-\ \alpha_3=\delta\,,\ \ \delta\in R\,,\ \,`
-a macierze własne dla wartości :math:`\ \lambda_2=-1:`
+Hence :math:`\ \ \alpha_1=\alpha_4=0\,,\ \ \alpha_2=-\ \alpha_3=\delta\,,\ \ \delta\in R\,,\ \,` and the eigenmatrices for the eigenvalue :math:`\ \lambda_2=-1:`
 
 .. math::
    
@@ -528,17 +515,17 @@ a macierze własne dla wartości :math:`\ \lambda_2=-1:`
    \end{array}\right]\,,\quad
    \delta\in R\smallsetminus\!\{0\}\,,
 
-tworzą :math:`\,` (razem z macierzą zerową) :math:`\,` 
-1-wymiarową podprzestrzeń :math:`\ V_{-1}=L(\boldsymbol{t}_4)\,.` :math:`\\`
-Krotność geometryczna wartości własnej :math:`\ \lambda_2\ ` 
-równa się jej krotności algebraicznej i wynosi 1.
+comprise :math:`\,` (together with the zero matrix) :math:`\,` 
+a 1-dimensional subspace :math:`\ V_{-1}=L(\boldsymbol{t}_4)\,.` :math:`\\`
+The geometric multiplicity of the eigenvalue :math:`\ \lambda_2\ ` 
+is the same as its algebraic multiplicity and is equal to 1.
 
-**Uwagi i komentarze.**
+**Comments and remarks.**
 
-Macierze własne 
+The eigenmatrices 
 :math:`\ \boldsymbol{t}_1,\,\boldsymbol{t}_2,\,\boldsymbol{t}_3,\,\boldsymbol{t}_4\ `
-są liniowo niezależne. :math:`\\`
-Rzeczywiście, jeżeli ich kombinacja liniowa równa się macierzy zerowej:
+are linearly independent. :math:`\\`
+Indeed, if their linear combination is equal to the zero matrix:
 
 .. math::
    
@@ -546,8 +533,7 @@ Rzeczywiście, jeżeli ich kombinacja liniowa równa się macierzy zerowej:
    \gamma\ \boldsymbol{t}_3\,+\,\delta\ \boldsymbol{t}_4\ =\ 
    \boldsymbol{0}\,,
 
-to, wykonując działania po lewej stronie równości, otrzymujemy
-
+then, adding the left hand side, we obtain
 .. math::
    
    \left[\begin{array}{cc}
@@ -555,18 +541,18 @@ to, wykonując działania po lewej stronie równości, otrzymujemy
    \end{array}\right]\ =\ 
    \left[\begin{array}{cc}
    0 & 0 \\ 0 & 0
-   \end{array}\right]\quad\text{czyli}\quad
+   \end{array}\right] ,\quad\text{so}\quad
    \begin{cases}\ \begin{array}{r}
    \alpha=0\,, \\ \beta+\delta=0\,, \\ \beta-\delta=0\,, \\ \gamma=0\,,
-   \end{array}\end{cases}\quad\text{skąd}\quad
+   \end{array}\end{cases}\quad\text{and thus}\quad
    \begin{cases}\ \begin{array}{r}
    \alpha=0\,, \\ \beta=0\,, \\ \gamma=0\,, \\ \delta=0\,.
    \end{array}\end{cases}
 
-Układ :math:`\ \mathcal{T}=(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3,\boldsymbol{t}_4)\ `
-jest więc bazą algebry :math:`\,M_2(R),\ ` alternatywną względem wyjściowej bazy
-:math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,.\ `
-Związki między wektorami tych baz:
+The system :math:`\ \mathcal{T}=(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3,\boldsymbol{t}_4)\ `
+is then a basis of the algebra :math:`\,M_2(R),\ ` an alternative for the initial 
+basis :math:`\ \mathcal{B}=(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{e}_3,\boldsymbol{e}_4)\,.\ `
+The connections between the vectors of these bases:
 
 .. math::
    :nowrap:
@@ -590,8 +576,7 @@ Związki między wektorami tych baz:
                                         0\cdot\boldsymbol{e}_4 \,,
    \end{alignat*}
 
-dają macierz przejścia :math:`\,\boldsymbol{S}\ ` od bazy :math:`\,\mathcal{B}\ ` 
-do bazy :math:`\,\mathcal{T}:`
+gives a change-of-basis matrix :math:`\,\boldsymbol{S}\ ` from the basis :math:`\,\mathcal{B}\ ` to the basis :math:`\,\mathcal{T}:`
 
 .. math::
    
@@ -603,14 +588,13 @@ do bazy :math:`\,\mathcal{T}:`
    0 & 0 & 1 &  0 
    \end{array}\right]\,.
 
-Wzór :math:`\,` :eq:`mat_AT` :math:`\,` przedstawia 
-macierz :math:`\,\boldsymbol{A}\ ` operatora :math:`\,T\ `
-w wyjściowej bazie :math:`\ \mathcal{B}.` :math:`\\`
-Macierz :math:`\ \boldsymbol{T}=[\tau_{ij}]\ ` operatora :math:`\ T\ `
-w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
+The formula :math:`\,` :eq:`mat_AT` :math:`\,` presents a matrix 
+:math:`\,\boldsymbol{A}\ ` of the operator :math:`\,T\ `
+in the initial basis :math:`\ \mathcal{B}.` :math:`\\`
+The matrix :math:`\ \boldsymbol{T}=[\tau_{ij}]\ ` of the operator :math:`\ T\ `
+in the basis :math:`\ \mathcal{T}\ ` will be calculated by two methods.
 
-* Z definicji, :math:`\,` elementy :math:`\,\tau_{ij}\ ` macierzy :math:`\,\boldsymbol{T}\ `
-  określone są przez związki
+* By the definition, :math:`\,` the entries :math:`\,\tau_{ij}\ ` of the matrix :math:`\,\boldsymbol{T}\ ` are defined by the equalities
   
   .. math::
      
@@ -620,8 +604,8 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      \tau_{3j}\ \boldsymbol{t}_3\ +\ 
      \tau_{4j}\ \boldsymbol{t}_4\,,\qquad j=1,2,3,4.
 
-  Biorąc pod uwagę, że :math:`\,\boldsymbol{t}_i\,,\ i=1,2,3,4,\ ` 
-  są macierzami własnymi operatora :math:`\,T,\ ` mamy:
+  Taking into account that :math:`\,\boldsymbol{t}_i\,,\ i=1,2,3,4,\ ` 
+  are eigenmatrices of the operator :math:`\,T,\ ` we have:
   
   .. math::
      :nowrap:
@@ -649,8 +633,8 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
                                              1\cdot\boldsymbol{t}_4 \,.
      \end{alignat*}
   
-  Macierz :math:`\,\boldsymbol{T}\ ` jest więc diagonalna, 
-  z wartościami własnymi operatora :math:`\,T\ ` na przekątnej:
+  The matrix :math:`\,\boldsymbol{T}\ ` is then diagonal, 
+  with the eigenvalues of the operator :math:`\,T\ ` on the diagonal:
   
   .. math::
      
@@ -662,10 +646,10 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      0 & 0 & 0 & -1
      \end{array}\right]\,.
 
-* | Wzory transformacyjne dla przejścia od bazy :math:`\ \mathcal{B}\ ` 
-    do bazy :math:`\ \mathcal{T}\ ` dają:
+* | The transforamtin formulae for the transition from the basis :math:`\ \mathcal{B}\ ` 
+    to the basis :math:`\ \mathcal{T}\ ` give:
     :math:`\ \ \boldsymbol{T}\ =\ \boldsymbol{S}^{-1}\boldsymbol{A}\,\boldsymbol{S}\,.`
-  | W rachunkach macierzowych wykorzystamy pakiet Sage:
+  | In matrix calculations we use Sage:
   
   .. code-block:: python
      
@@ -685,11 +669,9 @@ w bazie :math:`\ \mathcal{T}\ ` wyliczymy dwoma sposobami.
      [ 0  0  1  0]
      [ 0  0  0 -1]
 
-Powtarzając argumentację z poprzedniego przykładu
-można stwierdzić, że przestrzeń :math:`\ M_2(R)\ ` 
-rozkłada się na sumę prostą podprzestrzeni 
-:math:`\,V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\ ` macierzy symetrycznych
-oraz podprzestrzeni :math:`\,V_{-1}=L(\boldsymbol{t}_4)\ ` macierzy antysymetrycznych:
+Powtarzając argumentację from the previous example we can state that the space
+:math:`\ M_2(R)\ ` decomposes as direct product of subspaces
+:math:`\,V_1=L(\boldsymbol{t}_1,\boldsymbol{t}_2,\boldsymbol{t}_3)\ ` of symmetric matrices and the subspaces :math:`\,V_{-1}=L(\boldsymbol{t}_4)\ ` of antisymmetric matrices:
 
 .. math::
    

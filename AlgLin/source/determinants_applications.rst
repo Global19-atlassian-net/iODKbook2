@@ -29,7 +29,7 @@ We assume that the columns
 :math:`\ \boldsymbol{A}_1,\boldsymbol{A}_2,\dots,\boldsymbol{A}_n\ `
 are linearly dependent.
 
-Then one out of the columns is a linear combination of the remaining ones. 
+Then one of the columns is a linear combination of the remaining ones. 
 Let for example
 
 .. math::

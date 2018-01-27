@@ -280,7 +280,7 @@ The set :math:`\,\{x,y,z\}\,` is :math:`\,` l.dp., :math:`\,` because
 * :math:`\,z\,=\,2\,x\,+\,2\,y\quad`
   (one of the vectors can be expressed linearly by the remaining two).
 
-Both above conditions are mutually equivalent and suffice it to ascertain 
+Both above conditions are mutually equivalent and it suffices to ascertain 
 only one of them.
 
 **Example 2.** :math:`\ `
@@ -323,14 +323,14 @@ Basis of a Vector Space
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 A set :math:`\,B\subset V\,` is by definition a *basis* of the vector space 
-:math:`\,V(K)\,,\ ` when every vector :math:`\,x\in V\,` can be represented
+:math:`\,V(K)\,\ ` when every vector :math:`\,x\in V\,` can be represented
 in a unique way as a linear combination of vectors from :math:`\,B\,:\ `
 
 .. math::
    
    x\ \,=\ \,\displaystyle\sum_{v\,\in\,B}\,\alpha_v\ v\,,
    \qquad\text{where}\quad
-   \alpha_v\in K,\ \forall\ v\in B.
+   \alpha_v\in K,\, v\in B.
 
 A scalar :math:`\,\alpha_v\,` is named a *coordinate* 
 of the vector :math:`\,x,\,` corresponding to the basis vector 
@@ -354,7 +354,7 @@ with finite bases (finite-dimensional spaces).
 To represent vectors by columns of their coordinates
 and linear transformations by matrices, one has to impose an order
 on basis vectors and, consequently, on coordinates.
-This motivates to the following modification of the definition of basis.
+This motivates the following modification of the definition of basis.
 
 .. Given a basis :math:`\,B\,` in the above sense, 
 

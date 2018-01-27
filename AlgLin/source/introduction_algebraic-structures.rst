@@ -148,7 +148,7 @@ then we are dealing with a *ring with identity*.
 * The integer ring :math:`\ \mathbb{Z} \,=\, (Z,\ +\,,\ \cdot\,)\ `
   with the usual addition and multiplication of numbers.
 
-* | The ring of integers modulo :math:`\,n:\,` 
+* | The ring of integers modulo :math:`\,n>1:\,` 
     :math:`\ \mathbb{Z}_n = (Z_n,\ +_n\,,\ \cdot_n\,)\,,\ `
     where :math:`\ Z_n\,=\,\{0,1,\ldots,n-1\}\ ` 
   | and the operations :math:`\ \,+_n\ \ ` and :math:`\ \ \cdot_n\ \,` 
@@ -173,7 +173,7 @@ then we are dealing with a *ring with identity*.
   | and the identity is the function :math:`\ e(x)=1,\ \ x\in [\,0,\,1\,]\,.`
 
 An example of noncommutative ring is given by the set of square matrices
-of size :math:`\,n\,` over a ring with identity, considered together 
+of size :math:`\,n>1\,` over a ring with identity, considered together 
 with the operations of matrix addition and multiplication. :math:`\\`
 
 .. :math:`\ `
@@ -246,8 +246,8 @@ Basic properties of fields are discussed in Appendix A1.
    is often identified with its underlying set. :math:`\\` 
    So one says :math:`\ ` 
    ":math:`\ \sigma\,` is an element of the permutation group :math:`\,S_n\,`"
-   :math:`\ ` :math:`\\` or :math:`\,` " the set :math:`\,2Z\,` 
-   of even integers is a commutative ring without identity ".
+   :math:`\ ` :math:`\\` or :math:`\,` "the set :math:`\,2Z\,` 
+   of even integers is a commutative ring without identity".
 
 .. :math:`\;`
 
@@ -308,7 +308,7 @@ will be denoted shortly by :math:`\,V(K).` :math:`\\`
 Usually, the field :math:`\,K\,` is either 
 the field of real numbers :math:`\,R\,` or 
 the field of complex numbers :math:`\,C.` :math:`\\`
-Accordingly, we say of a real vector space :math:`\,V(R)\,` 
+Accordingly, we talk about a real vector space :math:`\,V(R)\,` 
 :math:`\,` or :math:`\,` of a complex one :math:`\,V(C).`
 
 **Examples** of vector spaces.
@@ -347,7 +347,7 @@ the simplified notation:
 
 Basic properties of vector spaces are described in Appendix A2. :math:`\\`
 A vector space over the field :math:`\,R\ ` or :math:`\,C\ ` 
-is a fundamental objects of linear algebra. 
+is a fundamental object of linear algebra. 
 However, the computer algebraic system Sage is based on 
 a more general concept of a module over a ring.
 
@@ -420,7 +420,7 @@ becomes a vector space.
 
 * On the same lines, the set :math:`\,M_{m\times n}(P)\ `
   of rectangular matrices over a ring :math:`\,P\ `
-  is (left as well as right) :math:`\,P`-module.
+  is a (left as well as right) :math:`\,P`-module.
   In particular we get the module :math:`\,M_{m\times n}(Z)\ ` 
   of matrices with integer entries.
 
@@ -535,8 +535,7 @@ For example, for groups one may easily prove (see Appendix A3) the following
    .. math::
       
       a,b\,\in\, H\quad \Rightarrow\quad
-      \left(\ a\;\bot\;b\ \in\ H\ \ \land\ \ a^{-1}\,\in\,H \ \right)
-      \qquad\forall\ \ a,b \in G\,.
+      \left(\ a\;\bot\;b\ \in\ H\ \ \land\ \ a^{-1}\,\in\,H \ \right)\,.
    
    (a subset :math:`\,H\,` of the group :math:`\,G\,` is 
    a subgroup iff it is closed under products and inverses).      
@@ -567,7 +566,7 @@ for a subset to be a subspace of a space.
       w_1,w_2\,\in\,W \quad\Rightarrow\quad
       \alpha_1\,w_1 + \alpha_2\,w_2\,\in\,W
       
-   (a subset :math:`\,W\,` of a vector space :math:`\,V(K)\,` is a subspace
+   (a subset :math:`\,W\,` of a vector space :math:`\,V(K)\,` is a vector subspace
    iff :math:`\,W\,` is closed under vector addition and scalar multiplication, 
    :math:`\,` that is :math:`\,` iff for any two vectors from :math:`\,W,\ ` 
    every linear combination of them also belongs to :math:`\,W`).  

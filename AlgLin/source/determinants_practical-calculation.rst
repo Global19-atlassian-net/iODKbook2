@@ -434,7 +434,7 @@ determinant of a transpose matrix:
 
    sage: det_A  = A.determinant()
 
-   # Shorthand notation for transposition and determinant:
+   # Shorthand notation for a determinant of a transposed matrix:
    sage: det_At = A.T.det()
 
    sage: print "det A =", det_A; det_A==det_At

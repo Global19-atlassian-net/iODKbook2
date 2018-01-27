@@ -243,7 +243,7 @@ Thus :math:`\,\boldsymbol{B} \boldsymbol{A}\ = \
 On the other hand, in this special case the product 
 :math:`\,\boldsymbol{B} \boldsymbol{A}\ ` equals the *tensor product*
 :math:`\,\boldsymbol{B}\otimes\boldsymbol{A}\ ` of these matrices,
-see Chapter xx of this textbook.
+see Chapter :ref:`ch_kronecker` of this textbook.
 
 .. (this is a special case of the *tensor product* of matrices).
  
@@ -282,7 +282,7 @@ may be written as follows: :math:`\\`
 .. math::
    :label: rule_verse_1
 
-   \boldsymbol{A}\boldsymbol{B}\ \equiv\    
+   \boldsymbol{A}\boldsymbol{B}\ =\    
    \left[\begin{array}{c}
          \boldsymbol{A}_1 \\ 
          \boldsymbol{A}_2 \\
@@ -308,7 +308,7 @@ may be written as follows: :math:`\\`
 
 .. math::
    
-   \boldsymbol{W}\ \equiv\ \left[\begin{array}{c}
+   \boldsymbol{W}\ =\ \left[\begin{array}{c}
                             \boldsymbol{W}_1 \\ 
                             \boldsymbol{W}_2 \\
                             \dots            \\
