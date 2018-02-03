@@ -2,8 +2,9 @@
 Application to Homogeneous Systems of Equations
 -----------------------------------------------
 
-Zastosujemy teraz teorię przekształceń liniowych przestrzeni wektorowych do określenia 
-zbioru rozwiązań jednorodnego układu równań liniowych nad ciałem :math:`\,K`:
+We will now apply a theory of linear transformations of vector spaces   to describe 
+the set of solutions of homogeneous system of linear equations over a field 
+:math:`\,K`:
 
 .. math::
    :label: set_eqn_0
@@ -15,8 +16,8 @@ zbioru rozwiązań jednorodnego układu równań liniowych nad ciałem :math:`\,
       a_{m1}\,x_1\; + \ \,a_{m2}\,x_2\; + \ \,\ldots\  + \ \;a_{mn}\,x_n \ \, = \ \ 0
    \end{array}
 
-Układ ma postać macierzową 
-:math:`\quad\boldsymbol{A}\boldsymbol{X}\,=\,\boldsymbol{0}\,,\quad` gdzie 
+The system has a matrix form
+:math:`\quad\boldsymbol{A}\boldsymbol{X}\,=\,\boldsymbol{0}\,,\quad` where 
 
 .. math::
 
@@ -32,39 +33,40 @@ Układ ma postać macierzową
    \boldsymbol{0}\ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ \dots \\ 0 \end{array}\right]\in K^m\,.
 
-Zbiór rozwiązań układu :eq:`set_eqn_0` definiujemy jako
+We define the set of solutions of the system :eq:`set_eqn_0` as
  
 .. math::
    
    S_0\ :\,=\ \{\,\boldsymbol{X}\in K^n:\ \boldsymbol{A}\boldsymbol{X}=\boldsymbol{0}\,\}\,.
 
-Oczywiście :math:`\ \,S_0\subset K^n.\ \,` Własności zbioru :math:`\ S_0\ ` opisuje dokładniej
+Of course, :math:`\ \,S_0\subset K^n.\ \,` The properties of the set :math:`\ S_0\ ` are better described in
 
-.. admonition:: Twierdzenie 9. :math:`\\`
+.. admonition:: Theorem 9. :math:`\\`
 
-   Zbiór rozwiązań jednorodnego układu równań :eq:`set_eqn_0` 
-   jest przestrzenią wektorową nad ciałem :math:`\,K\ ` 
-   (podprzestrzenią przestrzeni :math:`\,K^n`), :math:`\,` której wymiar 
-   równa się różnicy liczby niewiadomych i rzędu macierzy współczynników :math:`\boldsymbol{A}:`
+   The set of solutions of homogeneous system of linear equations :eq:`set_eqn_0` 
+   is a vector space over a field :math:`\,K\ ` 
+   (subspace of the space :math:`\,K^n`), :math:`\,` whose dimension equals 
+   the difference of the number of unknowns and the rank of the coefficient matrix
+   :math:`\boldsymbol{A}:`
    
    .. math::
       :label: sol_0
       
-      S_0\,<\,K^n,\qquad\dim\,S_0\,=\,n-\text{rz}\,\boldsymbol{A}\,.
+      S_0\,<\,K^n,\qquad\dim\,S_0\,=\,n-\text{rk}\,\boldsymbol{A}\,.
    
 .. gdzie :math:`\,r\ ` jest rzędem macierzy :math:`\,\boldsymbol{A}.`
 
-**Dowód.**
+**Proof.**
 
-Podzbiór :math:`\ S_0\ ` przestrzeni :math:`\,K^n\ ` jest podprzestrzenią,
-bo jest domknięty ze względu na dodawanie wektorów i mnożenie ich przez liczby z ciała :math:`\,K.\ `
-Rzeczywiście,
+The subset :math:`\ S_0\ ` of the space :math:`\,K^n\ ` is a subspace
+because it is closed under addition of vectors and their multiplications by scalars from the field :math:`\,K.\ `
+Indeed,
 
-jeżeli :math:`\qquad\boldsymbol{X}_1,\,\boldsymbol{X}_2\,\in\,S_0:
+if :math:`\qquad\boldsymbol{X}_1,\,\boldsymbol{X}_2\,\in\,S_0:
 \qquad\boldsymbol{A}\boldsymbol{X}_1=\,\boldsymbol{0}\,, 
 \quad\boldsymbol{A}\boldsymbol{X}_2=\,\boldsymbol{0}\,,`
 
-to
+then
 :math:`\qquad
 \boldsymbol{A}\,(\boldsymbol{X}_1+\boldsymbol{X}_2)\ =\ 
 \boldsymbol{A}\boldsymbol{X}_1+\boldsymbol{A}\boldsymbol{X}_2\ =\ 
@@ -73,38 +75,36 @@ to
 \boldsymbol{A}\,(c\,\boldsymbol{X}_1)\ =\ c\,(\boldsymbol{A}\boldsymbol{X}_1)\ =\ 
 \boldsymbol{0}\,,`
 
-czyli :math:`\qquad 
+so :math:`\qquad 
 \boldsymbol{X}_1+\boldsymbol{X}_2\,\in\,S_0\,,\qquad 
 c\,\boldsymbol{X}_1\in S_0\,,\quad c\in K\,.`
 
 .. Podzbiór :math:`\,S_0\ ` przestrzeni :math:`\,K^n\ ` jest domknięty ze względu na dodawanie
    wektorów i mnożenie ich przez liczby z ciała :math:`\,K\ `
 
-W dowodzie drugiej części tezy oznaczamy :math:`\ r\,:\,=\,\text{rz}\,\boldsymbol{A}\,.\ `
-Oczywiście :math:`\ r\le m,n\,.`
+For the proof of the second part of the hypothesis, denote :math:`\ r\,:\,=\,\text{rk}\,\boldsymbol{A}\,.\ `
+Of course, :math:`\ r\le m,n\,.`
 
-W macierzy :math:`\boldsymbol{A}\ ` jest :math:`\ r\ ` liniowo niezależnych wierszy
-i tyle samo liniowo niezależnych kolumn. Nie zmniejszając ogólności rozważań można przyjąć, 
-że liniowo niezależny jest układ pierwszych :math:`\ r\ ` wierszy, :math:`\,` 
-a także układ :math:`\ r\ ` pierwszych kolumn.
+The matrix :math:`\boldsymbol{A}\ ` has :math:`\ r\ ` linearly independent rows and
+the same number of linearly independent columns. Without loss of generality, we may assume that the linearly independent set is determined by 
+first :math:`\ r\ ` rows, :math:`\,` 
+and also by first :math:`\ r\ ` columns.
 
-Jeżeli :math:`\ m>r,\ ` to odrzucamy :math:`\ m-r\ ` ostatnich równań, bo każde z nich jest kombinacją liniową pierwszych :math:`\ r\ ` równań.
+If :math:`\ m>r,\ ` then we discard last :math:`\ m-r\ ` equations because each of them is a linear combination of the first :math:`\ r\ ` equations.
 
 .. Mamy więc do czynienia z układem :math:`\ r\ ` liniowo niezależnych równań o :math:`\,n\ `
    niewiadomych.
 
-Jako punkt wyjścia do dalszej dyskusji można więc przyjąć układ :math:`\ r\ ` równań 
-o :math:`\ n\ ` niewiadomych, :math:`\,` przy czym :math:`\ r\le n.\ `
-W tej sytuacji mogą wystąpić dwa przypadki.
+As a starting point of the further discussion we may take a set of
+:math:`\ r\ ` equations with :math:`\ n\ ` unknowns, :math:`\,` where :math:`\ r\le n.\ ` In this situation there are two possibilities. 
 
-I.) :math:`\,` Jeżeli :math:`\ r=n,\ ` mamy układ równań o kwadratowej nieosobliwej macierzy 
-:math:`\boldsymbol{A}.\ ` Jest to układ kramerowski, który ma jedynie rozwiązanie zerowe:
-:math:`\ S_0=\{\boldsymbol{0}\}.\ ` W tym przypadku równanie :eq:`sol_0` jest spełnione:
+I.) :math:`\,` If :math:`\ r=n,\ ` we have a system with a square non-degenerate matix 
+:math:`\boldsymbol{A}.\ ` This is a Cramer system which has only a zero solution:
+:math:`\ S_0=\{\boldsymbol{0}\}.\ ` In this case the equation :eq:`sol_0` is fulfilled:
 :math:`\ 0=\dim\,S_0=n-r.`
 
-II.) :math:`\,` Niech :math:`\ r<n.\ ` Niewiadome o numerach większych od :math:`\ r\ `
-przyjmujemy za dowolne parametry: :math:`\ x_k\rightarrow s_k,\ k=r+1,\dots,n,\ \,` 
-po czym rozwiązujemy kramerowski układ równań o niewiadomych :math:`\ \,x_1,\,\dots,\,x_r:`
+II.) :math:`\,` Let :math:`\ r<n.\ ` We treat the unknowns indexed by numbers greater than  :math:`\ r\ ` as parameters: :math:`\ x_k\rightarrow s_k,\ k=r+1,\dots,n,\ \,` 
+and then solve a Cramer system with the unknowns :math:`\ \,x_1,\,\dots,\,x_r:`
 
 .. .. math::
    :label: set_eqn_r
@@ -136,13 +136,13 @@ po czym rozwiązujemy kramerowski układ równań o niewiadomych :math:`\ \,x_1,
    \end{array}
 
 
-Niech :math:`\ (c_1,\dots,c_r)\ ` będzie układem wartości niewiadomych 
+Let :math:`\ (c_1,\dots,c_r)\ ` be a tuple of the values of the unknowns 
 :math:`\ x_1,\,\dots,\,x_r\,,\ ` 
-odpowiadającym zadanym wartościom parametrów :math:`\ s_{r+1},\,\dots,\,s_n.\\` 
-Wtedy układ :math:`\ (c_1,\dots,c_r,\,s_{r+1},\dots,\,s_n)\ `
-jest jednym z rozwiązań układu równań :eq:`set_eqn_0`.
+corresponding to fixed values of the parameters :math:`\ s_{r+1},\,\dots,\,s_n.\\` 
+Then the tuple :math:`\ (c_1,\dots,c_r,\,s_{r+1},\dots,\,s_n)\ `
+is one of solutions of the sytem fo equations :eq:`set_eqn_0`.
 
-Definiujemy odwzorowanie :math:`\ \Phi:\ S_0\rightarrow K^{n-r}\ ` następująco:
+Define a mapping :math:`\ \Phi:\ S_0\rightarrow K^{n-r}\ ` as follows:
 
 .. math::
    
@@ -161,14 +161,12 @@ Definiujemy odwzorowanie :math:`\ \Phi:\ S_0\rightarrow K^{n-r}\ ` następująco
    \right]
    \,\in\,K^{n-r}\,.
 
-Łatwo sprawdzić, że :math:`\ \Phi\ ` jest przekształceniem liniowym.
-Ponieważ każdemu układowi wartości parametrów :math:`\ s_{r+1},\,\dots,\,s_n\ `
-odpowiada dokładnie jedno rozwiązanie :math:`\ (c_1,\dots,c_r)\ ` kramerowskiego 
-układu równań :eq:`set_eqn_r`, :math:`\ \Phi\ ` jest również bijekcją.
+It is easy to check that :math:`\ \Phi\ ` is a linear mapping. Moreover, because each tuple of the values of the parameters :math:`\ s_{r+1},\,\dots,\,s_n\ `
+corresponds to exactly one solution :math:`\ (c_1,\dots,c_r)\ ` of the Cramer system :eq:`set_eqn_r`, :math:`\ \Phi\ ` is also a bijection.
 
-Tak więc odwzorowanie :math:`\ \Phi,\ ` jako bijektywny homomorfizm, jest izomorfizmem
-przestrzeni rozwiązań :math:`\ S_0\ ` na przestrzeń :math:`\ K^{n-r}.\ ` 
-Korzystając z Twierdzenia 8. dochodzimy do tezy :eq:`sol_0`:
+Hence, the mapping :math:`\ \Phi,\ ` as a bijective homomorphism, is an isomorphism
+of the solution space :math:`\ S_0\ ` onto the space :math:`\ K^{n-r}.\ ` 
+By Theorem 8. we obtain the hypothesis :eq:`sol_0`:
 
 .. math::
    

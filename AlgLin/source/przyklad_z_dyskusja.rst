@@ -3,7 +3,7 @@
 Example with Discussion
 -----------------------
 
-Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`\,Q:`
+We will use the aforementioned methods to solve a system of equations over a field :math:`\,Q:`
 
 .. math::
    :nowrap:
@@ -14,9 +14,9 @@ Zastosujemy omówione do tej pory metody do układu równań nad ciałem :math:`
       x_1 & {\,} + {\,} & 3\,x_2 & {\,} + {\,} &    x_3 & {\,} + {\,} & 6\,x_4 & {\,} - {\,} & 4\,x_5 & {\;} = {\;} & 4
    \end{alignat*}
 
-Zaczynamy od zapisania macierzy współczynników :math:`\,\boldsymbol{A},\ `
-kolumny wolnych wyrazów :math:`\,\boldsymbol{b}\ `
-oraz macierzy rozszerzonej :math:`\,\boldsymbol{B}\,` tego układu:
+First, write down the coefficient matrix :math:`\,\boldsymbol{A},\ `
+the column of constants :math:`\,\boldsymbol{b}\ `
+and the augmented matrix :math:`\,\boldsymbol{B}\,` of this system:
 
 .. math::
 
@@ -63,8 +63,7 @@ Transformation of the augmented matrix to the reduced row echelon form:
                                              0 & 0 & 0 & 0 & 0 & 0
                                           \end{array}\right)
 
-Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych dwóch spośród nich
-(co jest zrozumiałe, bo równanie trzecie było po prostu sumą tych dwóch):
+Hence, the initial system of three equations is equivalent to a system consisting of the first two equations (which is understandable as the third equation is just a sum of the first two):
 
 .. math::
    :nowrap:
@@ -74,18 +73,15 @@ Wyjściowy układ trzech równań jest więc równoważny układowi pierwszych d
           & {\,}   {\,} &        & {\,}   {\,} &    x_3 & {\,} + {\,} & 4\,x_4 & {\,} - {\,} & 3\,x_5 & {\;} = {\;} & 2 \\
    \end{alignat*}
 
-Warto zauważyć, że ze zredukowanej postaci schodkowej macierzy rozszerzonej :eq:`09`
-można odczytać pewne szczególne rozwiązanie układu wyjściowego: :math:`\,`
-liczby w ostatniej kolumnie tej macierzy dają wartości niewiadomych
-odpowiadających kolumnom z jedynkami wiodącymi, przy zerowych wartościach 
-pozostałych niewiadomych. Tym szczególnym rozwiązaniem jest 
+It is worth to notice that one can read off a particular solution of the initial system from the reduced row echelon form of the augmented matrix :eq:`09`: :math:`\,`
+the numbers in the last column of this matrix are the values of the unknowns corresponding to the columns with leading units, if the values of the other unknowns are taken to be zero. This particular solution is 
 
 .. math::
    :label: 10
 
    x_1 = x_3 = 2,\quad x_2 = x_4 = x_5 = 0.
 
-Otrzymany powyżej układ dwóch równań przepisujemy jako
+We rewrite the above system of two equations as 
 
 .. math::
    :nowrap:
@@ -95,14 +91,14 @@ Otrzymany powyżej układ dwóch równań przepisujemy jako
       x_3 & {\,} = {\,} & 2 & {\,} - {\,} & 4\,x_4 & {\,} + {\,} & 3\,x_5  
    \end{alignat*}
 
-Niewiadome :math:`\ x_2,\,x_4\ \,\text{i}\ \, x_5\ `
-(odpowiadające kolumnom bez jedynek wiodących) przyjmujemy za dowolne parametry:
+We take the unknowns :math:`\ x_2,\,x_4\ \,\text{and}\ \, x_5\ `
+(corresponding to the columns without leading units) as parameters:
 
 .. math::
    
    x_2 = s,\ \,x_4 = t,\ \,x_5 = u,\qquad s,t,u\,\in\,Q,
 
-wobec czego otrzymujemy rozwiązanie w postaci
+so that the solution is of the form
 
 .. math::
 
@@ -115,7 +111,7 @@ wobec czego otrzymujemy rozwiązanie w postaci
    \end{array}\qquad\quad
    s,t,u\,\in\,Q\,.
 
-Ostatecznie, rozwiązanie układu w wersji wektorowej przedstawia się następująco:
+Finally, a solution of the system may be written in a vector form
 
 .. math::
    :label: 11
@@ -135,9 +131,7 @@ Ostatecznie, rozwiązanie układu w wersji wektorowej przedstawia się następuj
 A Direct Approach
 ~~~~~~~~~~~~~~~~~
 
-Użyjemy metod ``solve_right()`` oraz ``right_kernel_matrix()`` do wyznaczenia
-szczególnego rozwiązania wyjściowego układu niejednorodnego oraz ogólnego rozwiązania 
-stowarzyszonego z nim układu jednorodnego:
+We use the methods ``solve_right()`` and ``right_kernel_matrix()`` to determine a particular solution of the initial unhomogeneous system, and also a general solution of the associated homogeneous system:
 
 .. code-block:: python
 
@@ -164,8 +158,8 @@ stowarzyszonego z nim układu jednorodnego:
       0 & 2 & 0 & -9 & -12 \\
       0 & 0 & 2 &  1 &   2
    \end{array}\ \right)\quad\right)
-
-Rozwiązaniem ogólnym jest więc zbiór wektorów postaci
+   
+Hence, a general solution comprises a set of vectors of the form
 
 .. math::
    :label: 12
@@ -180,13 +174,10 @@ Rozwiązaniem ogólnym jest więc zbiór wektorów postaci
 Comparison of Results
 ~~~~~~~~~~~~~~~~~~~~~
 
-Wzory :eq:`11` i :eq:`12`, przedstawiające ogólne rozwiązanie układu równań,
-nie są identyczne: zawierają takie samo rozwiązanie szczególne, 
-ale różne są wektory rozpinające przestrzenie rozwiązań układu jednorodnego.
+Formulae :eq:`11` and :eq:`12` presenting a general solution of the system are not identical: they contain the same particular solution, but the vectors spanning the solution spaces of the homogeneous system are different.
 
-Aby sprawdzić wzajemną zgodność tych wzorów, zbudujemy i porównamy obie wymienione
-przestrzenie. Znajdzie tu zastosowanie funkcja ``span()``,
-która zwraca przestrzeń rozpiętą na podanych (w postaci listy) wektorach:
+In order to check the consistence of these formulae we construct and compare the aforementioned space. We make use of the function ``span()``,
+which returns the space spanned by the given (in a list form) vectors:
 
 .. code-block:: python
 
@@ -212,16 +203,15 @@ która zwraca przestrzeń rozpiętą na podanych (w postaci listy) wektorach:
    [   0    1    0 -9/2   -6]
    [   0    0    1  1/2    1] 
   
-Różnica we wzorach :eq:`11` i :eq:`12` mogła wystąpić dlatego,
-że baza przestrzeni wektorowej nie jest określona jednoznacznie:
-bazą jest *każdy* maksymalny liniowo niezależny układ wektorów.
-Nietrywialne przestrzenie nad ciałami liczbowymi :math:`\,Q,\,R,\,C\,`
-mają nieskończenie wiele baz.
+A difference between the formulae :eq:`11` and :eq:`12` might have occured because a basis of the vector space is not given unambigously:
+*every* maximal set of linearly independent vectors defines a basis.
+Non-trivial spaces over number fields :math:`\,Q,\,R,\,C\,`
+have infinitely many bases.
 
 Alternative Solution of the Homogeneous System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Występujący w tym przykładzie jednorodny układ równań o postaci macierzowej
+The homogeneous system of equations from the previous example, having a matrix form 
 
 .. math::
    :label: 13
@@ -235,39 +225,35 @@ Występujący w tym przykładzie jednorodny układ równań o postaci macierzowe
       1 & 3 & 1 & 6 & -4
    \end{array}\right]\,,
 
-można rozwiązać też innym, niestandardowym sposobem.
+may be solved in a different, non-standard way.
 
-Przede wszystkim wyznaczymy rząd macierzy :math:`\,\boldsymbol{A}\ \,`
-i :math:`\ ` wymiar przestrzeni rozwiązań :math:`\,S_0.\ ` Stwierdzamy, że:
+First, we determine rank of the matrix :math:`\,\boldsymbol{A}\ \,`
+and :math:`\ ` dimension of the solution space :math:`\,S_0.\ ` Note that:
 
-* :math:`\ \text{rz}\boldsymbol{A} < 3,\,` bo wiersze są liniowo zależne
-  (trzeci jest sumą pierwszych dwóch);
-* | :math:`\ \text{rz}\boldsymbol{A}\geq 2,\,` bo istnieją niezerowe minory stopnia drugiego
-  | :math:`\qquad\qquad\ ` (np. minor wycięty w prawym górnym rogu).
+* :math:`\ \text{rk}\boldsymbol{A} < 3,\,` because the rows are linearly dependent
+  (the third is a sum of the first two);
+* | :math:`\ \text{rk}\boldsymbol{A}\geq 2,\,` because there exist non-zero minors of  order two
+  | :math:`\qquad\qquad\ ` (eg. a minor in a top right corner).
 
-A zatem :math:`\ \,\text{rz}\boldsymbol{A} = 2,\ ` a wymiar przestrzeni :math:`\,S_0\,,`
-równy różnicy liczby niewiadomych i rzędu macierzy :math:`\,\boldsymbol{A},\,`
-wynosi :math:`\ 5 - 2 = 3.\ `
-Dla określenia przestrzeni :math:`\,S_0\,` wystarczy podać jakąkolwiek jej bazę,
-złożoną z trzech liniowo niezależnych wektorów kolumnowych należących do przestrzeni :math:`\,Q^5.`
+Hence, :math:`\ \,\text{rk}\boldsymbol{A} = 2\ ` and a dimension of the space :math:`\,S_0\,,` equal to a difference between the number of the unknowns and rank of the matrix :math:`\,\boldsymbol{A},\,` is :math:`\ 5 - 2 = 3.\ `
+To determine the space :math:`\,S_0\,` it suffices to provide any of its bases consisting of three linearly independent column vectors belonging to the space
+:math:`\,Q^5.`
 
-**Dyskusja ogólna.**
+**General discussion.**
 
-W tej sytuacji zagadnienie rozwiązania układu :eq:`13` jest równoważne wyznaczeniu
-macierzy :math:`\,\boldsymbol{X}\,` o pięciu wierszach i trzech liniowo niezależnych kolumnach,
-spełniającej warunek
+In this situation a problem of solving the system :eq:`13` is equivalent to  finding a matrix :math:`\,\boldsymbol{X}\,` with five rows and three linearly independent columns, which satisfies the condition
 
 .. math::
    :label: 14
 
    \boldsymbol{A}\,\boldsymbol{X}\ =\ \boldsymbol{O}_3\,,
 
-gdzie po prawej stronie występuje zerowa macierz kwadratowa stopnia trzeciego.
+where the right hand side is a square zero matrix of order three. 
 
-Rzeczywiście, załóżmy, że macierz :math:`\,\boldsymbol{X}\in M_{5\times 3}(Q)\,`
-spełnia równanie :eq:`14`. Oznaczając jej kolumny przez
+Indeed, assume that the matrix :math:`\,\boldsymbol{X}\in M_{5\times 3}(Q)\,`
+satisfies the equation :eq:`14`. Denote its columns by
 :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ \,`
-i :math:`\ \,` stosując kolumnowy zapis macierzy, mamy
+so that :math:`\ \,` in column matrix notation 
 
 .. math::
 
@@ -278,26 +264,25 @@ i :math:`\ \,` stosując kolumnowy zapis macierzy, mamy
    \boldsymbol{A}\boldsymbol{X}_1\,|\;
    \boldsymbol{A}\boldsymbol{X}_2\,|\;
    \boldsymbol{A}\boldsymbol{X}_3\,\right]\ \,=\ \,
-   \left[\,\boldsymbol{0}\,|\,\boldsymbol{0}\,|\,\boldsymbol{0}\,\right]
+   \left[\,\boldsymbol{0}\,|\,\boldsymbol{0}\,|\,\boldsymbol{0}\,\right]\,.
 
-skąd, przez przyrównanie do siebie odpowiednich kolumn dwóch ostatnich macierzy:
+Now, if we compare the columns of the last two matrices:
  
 .. math::
 
    \boldsymbol{A}\boldsymbol{X}_1\ =\ \boldsymbol{0},\qquad
    \boldsymbol{A}\boldsymbol{X}_2\ =\ \boldsymbol{0},\qquad
-   \boldsymbol{A}\boldsymbol{X}_3\ =\ \boldsymbol{0}\,.
+   \boldsymbol{A}\boldsymbol{X}_3\ =\ \boldsymbol{0}\,,
 
-A zatem kolumny :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
-macierzy :math:`\,\boldsymbol{X}\,` spełniają równanie :eq:`13` :math:`\,`
-i :math:`\,` (z założenia ich liniowej niezależności) tworzą poszukiwaną bazę 
-przestrzeni :math:`\,S_0.`
+we see that the columns :math:`\,\boldsymbol{X}_1,\,\boldsymbol{X}_2,\,\boldsymbol{X}_3\ `
+of the matrix :math:`\,\boldsymbol{X}\,` satisfy the equation :eq:`13` :math:`\,`
+and :math:`\,` (by their linear independence) comprise a basis of the space 
+:math:`\,S_0.`
 
-**Wyznaczenie bazy przestrzeni rozwiązań.**
+**Determination of a basis for the solution space.**
 
-Szukaną macierz :math:`\,\boldsymbol{X}\,` można zbudować, biorąc za punkt wyjścia
-zredukowaną postać schodkową :math:`\,\boldsymbol{C}\,` macierzy współczynników 
-:math:`\,\boldsymbol{A}\,` układu :eq:`13`. :math:`\ ` Według wzoru :eq:`09`:
+The desired matrix :math:`\,\boldsymbol{X}\,` may be constructed from  the reduced row echelon form :math:`\,\boldsymbol{C}\,` of the coefficient matrix 
+:math:`\,\boldsymbol{A}\,` of the system :eq:`13`. :math:`\ ` By the formula :eq:`09`:
  
 .. math::
    :label: 15
@@ -309,9 +294,9 @@ zredukowaną postać schodkową :math:`\,\boldsymbol{C}\,` macierzy współczynn
       0 & 0 & 0 & 0 &  0
    \end{array}\right]\,.
 
-Przestawienie drugiej i trzeciej kolumny w :math:`\,\boldsymbol{C}\,`
-daje macierz :math:`\,\boldsymbol{D}\,` o przejrzystej strukturze blokowej
-(oznaczenia bloków zawierają ich rozmiary):
+Swapping the second and the third column of :math:`\,\boldsymbol{C}\,`
+leads to a matrix :math:`\,\boldsymbol{D}\,` with a clear block structure
+(notation of blocks includes their sizes):
 
 .. math::
    :label: 16   
@@ -330,9 +315,8 @@ daje macierz :math:`\,\boldsymbol{D}\,` o przejrzystej strukturze blokowej
       \boldsymbol{O_{12}}   & \boldsymbol{O_{13}}
    \end{array}\right]\,.
 
-Zauważmy od razu, że :math:`\,\boldsymbol{D}\,` jest (zredukowaną schodkową) macierzą układu,
-otrzymanego z :eq:`13` przez zmianę numeracji niewiadomych: :math:`\ x_2\leftrightarrow x_3.\ \,`
-Wprowadzamy nową macierz
+Note that :math:`\,\boldsymbol{D}\,` is a matrix (in a reduced echelon form) of the system which we obtaind from :eq:`13` by changing the numeration of unknowns: :math:`\ x_2\leftrightarrow x_3.\ \,`
+We define a new matrix
 
 .. math::
    :label: 17
@@ -353,7 +337,7 @@ Wprowadzamy nową macierz
        0 &  0 & 1
     \end{array}\right]\,.
 
-Z reguł mnożenia macierzy blokowych wynika, że
+Applying the rules for multiplication of block matrices, we get
 
 .. math::
    :label: 18
@@ -387,12 +371,10 @@ Z reguł mnożenia macierzy blokowych wynika, że
       \boldsymbol{O_{13}}
    \end{array}\right]\ \,=\ \,\boldsymbol{O_3}.
 
-Kolumny macierzy :math:`\,\boldsymbol{Y}\,` są więc rozwiązaniami układu
-o zredukowanej schodkowej macierzy :math:`\,\boldsymbol{D},\,` 
-czyli z przestawionymi niewiadomymi :math:`\ x_2,\,x_3.\ `
-Rozwiązaniami wyjściowego układu :eq:`13` będą kolumny macierzy :math:`\,\boldsymbol{X},\,`
-otrzymanej z :math:`\,\boldsymbol{Y}\,` poprzez przestawienie drugiego i trzeciego wiersza
-(bo w tych macierzach wiersze odnoszą się do kolejnych niewiadomych):
+The columns of the matrix :math:`\,\boldsymbol{Y}\,` are then solutions of the system with a matrix :math:`\,\boldsymbol{D}\,` in a reduced echelon form, that is with the swapped unknowns :math:`\ x_2,\,x_3.\ `
+Solutions of the initial system :eq:`13` are the columns of the matrix :math:`\,\boldsymbol{X}\,` obtained from :math:`\,\boldsymbol{Y}\,` by
+swapping the second and the third row 
+(because in these matrices, rows correspond with consecutive unknowns):
 
 .. math::
    :label: 19
@@ -406,10 +388,9 @@ otrzymanej z :math:`\,\boldsymbol{Y}\,` poprzez przestawienie drugiego i trzecie
        0 &  0 & 1
     \end{array}\right]\,.
 
-Trzeba jeszcze sprawdzić, że kolumny macierzy :math:`\,\boldsymbol{X}\,`
-są liniowo niezależne, czyli że :math:`\,\text{rz}\,\boldsymbol{X} = 3.\,`
-Świadczy o tym niezerowy minor 3. stopnia, utworzony z pierwszych trzech wierszy
-macierzy:
+We still have to check that the columns of the matrix :math:`\,\boldsymbol{X}\,`
+are linearly independent, i.e. that :math:`\,\text{rk}\,\boldsymbol{X} = 3.\,`
+This is testified by  the non-zero minor of  order 3. composed from first three rows of the matrix:
 
 .. math::
 
@@ -420,7 +401,7 @@ macierzy:
     0 & -4 & 3
    \end{array}\right]\ \,=\ \, 2.
 
-Ostatecznie, ogólne rozwiązanie jednorodnego układu :eq:`13` ma postać
+Finaly, a general solution of the homogeneous sytem :eq:`13` is of the form
 
 .. math::
    :label: 20
@@ -431,14 +412,14 @@ Ostatecznie, ogólne rozwiązanie jednorodnego układu :eq:`13` ma postać
    u\ \,\left[\begin{array}{r}  1  \\  0  \\  3  \\  0  \\  1 \end{array}\right]\,,\qquad
    s,t,u\,\in\,Q\,,
 
-zgodną z rozwiązaniem :eq:`11` układu niejednorodnego. :math:`\\`
+which coincides with the solution :eq:`11` of unhomogeneous system. :math:`\\`
 
-**Zastosowanie algebry komputerowej.**
+**Application of computer algebra.**
 
-Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji macierzowych.
+Now we use tools of Sage to perform matrix operations described above.
 
-1. Przekształcenie macierzy :math:`\,\boldsymbol{A}\,` do zredukowanej postaci schodkowej 
-   :math:`\,\boldsymbol{C}\,` (wzór :eq:`15`):
+1. Transformation of the matrix :math:`\,\boldsymbol{A}\,` to reduced echelon form 
+   :math:`\,\boldsymbol{C}\,` (formula :eq:`15`):
 
    .. code-block:: python
 
@@ -452,9 +433,9 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [ 0  0  1  4 -3]
       [ 0  0  0  0  0]
 
-2. | Utworzenie macierzy :math:`\,\boldsymbol{D}\,` poprzez przestawienie
-     drugiej i trzeciej kolumny macierzy :math:`\,\boldsymbol{C}\,`
-   | i zaznaczenie struktury blokowej macierzy :math:`\,\boldsymbol{D}\,` (wzór :eq:`16`):
+2. Construction of the matrix :math:`\,\boldsymbol{D}\,` by swapping the second and 
+   the third column of the matrix :math:`\,\boldsymbol{C},\,`
+   and indication of its block structure (formula :eq:`16`):
 
    .. code-block:: python
 
@@ -466,8 +447,8 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [-----+--------]
       [ 0  0| 0  0  0]
 
-3. Wyodrębnienie bloku :math:`\,\boldsymbol{F_{23}}\,`
-   i utworzenie macierzy :math:`\,\boldsymbol{Y}\ ` (wzór :eq:`17`):
+3. Isolation of the block :math:`\,\boldsymbol{F_{23}}\,`
+   and construction of the matrix :math:`\,\boldsymbol{Y}\ ` (formula :eq:`17`):
 
    .. code-block:: python
 
@@ -482,8 +463,9 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [ 0  1  0]
       [ 0  0  1]
 
-4. Sprawdzenie, że iloczyn macierzy :math:`\,\boldsymbol{D}\ \,\text{i}\ \,\boldsymbol{Y}\,`
-   równa się macierzy zerowej 3. stopnia :math:`\\` (wzór :eq:`18`):
+4. Verification that a product of matrices :math:`\,\boldsymbol{D}\,`
+   and :math:`\,\boldsymbol{Y}\,`
+   is equal to the zero matrix of order 3. :math:`\\` (formula :eq:`18`):
 
    .. code-block:: python
 
@@ -494,9 +476,9 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [-----]
       [0 0 0]
 
-5. | Utworzenie macierzy :math:`\,\boldsymbol{X}\,` przez przestawienie
-     drugiego i trzeciego wiersza macierzy :math:`\,\boldsymbol{Y}\,`
-   | i usunięcie struktury blokowej macierzy :math:`\,\boldsymbol{X}\,` (wzór :eq:`19`):
+5. Construction of the matrix :math:`\,\boldsymbol{X}\,` by swapping the second 
+   and the third row of the matrix :math:`\,\boldsymbol{Y},\,`
+   and removing block structure of :math:`\,\boldsymbol{X}\,` (formula :eq:`19`):
 
    .. code-block:: python
 
@@ -509,7 +491,7 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [ 0  1  0]
       [ 0  0  1]
 
-6. Sprawdzenie, że otrzymana macierz :math:`\,\boldsymbol{X}\,` spełnia równanie :eq:`14`:
+6. Verification that the matrix :math:`\,\boldsymbol{X}\,` satisfies the equation :eq:`14`:
 
    .. code-block:: python
 
@@ -519,12 +501,12 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
       [0 0 0]
       [0 0 0]
 
-.. admonition:: Uwaga:
+.. admonition:: Remark:
    
-   W odróżnieniu od metod ``swap_columns()`` i :math:`\,` ``swap_rows()``,
-   które wykonują operacje bezpośrednio na oryginalnej macierzy, 
-   użyte tutaj metody ``with_swapped_columns()`` i ``with_swapped_rows()`` 
-   zwracają przekształconą macierz zachowując przy tym niezmieniony oryginał.  
+   As opposed to the methods ``swap_columns()`` and ``swap_rows()``,
+   which perform the operations directly on the original matrix, 
+   the methods ``with_swapped_columns()`` and ``with_swapped_rows()`` 
+   used here output a tranformed matrix without changing the original one.
 
 .. Na uwagę zasługuje użycie metod ``with_swapped_columns()`` oraz ``with_swapped_rows()`` 
    zamiast ``swap_columns()`` oraz ``swap_rows()`` w punktach 2. i :math:`\,` 5. :math:`\ `
@@ -534,7 +516,7 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
    zwracają zmienioną macierz (którą można oznaczyć nową nazwą i dalej wykorzystać) 
    zachowując przy tym niezmieniony oryginał. :math:`\\` 
 
-Łącząc wszystkie operacje otrzymamy wynik :eq:`20`:
+Joining all the operations we obtain the result :eq:`20`:
 
 .. sagecellserver::
 
@@ -557,15 +539,12 @@ Użyjemy teraz narzędzi systemu Sage do przeprowadzenia opisanych operacji maci
         cmpnt % ('u', X[0,2], X[1,2], X[2,2], X[3,2], X[4,2]) + '$\\,,$ ' +\
         '$\\qquad s,t,u \\in Q.$')
 
-Trzeba jednak zaznaczyć, że przedstawiony w tej sekcji sposób rozwiązania układu :eq:`13`,
-chociaż pouczający, nie jest metodą uniwersalną: okazał się skuteczny tylko dzięki
-specyficznej budowie macierzy współczynników :math:`\,\boldsymbol{A},\,`
-prowadzącej do postaci blokowej :eq:`16`. Podstawowym postępowaniem jest opisana wcześniej
-metoda bezpośrednia bądź metoda eliminacji. 
+We should emphasize though that a method presented in this section to solve the system  :eq:`13`, even though it is instructive, it is not universal: it turned out effective  only because of a specific structure of the coefficient matrix
+:math:`\,\boldsymbol{A},\,` which led to a block form :eq:`16`. The standard procedure is either a direct method described before or the elimination method.
 
-| **Ćwiczenie.**
-| Sprawdź odręcznym rachunkiem, 
-  że macierz :math:`\,\boldsymbol{X}\,` dana wzorem :eq:`19` spełnia równanie :eq:`14`.
+| **Exercise.**
+| Check by hand calculation that the matrix 
+  :math:`\,\boldsymbol{X}\,` given by the formula :eq:`19` satisfies the equation :eq:`14`.
 
 
 
