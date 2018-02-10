@@ -2,59 +2,57 @@
 Orthogonality of Vectors
 ------------------------
 
-Przyjmujemy, że :math:`\,V\ ` jest przestrzenią unitarną bądź euklidesową.
+We assume that :math:`\,V\ ` is a unitary or Euclidean vector space.
 
 .. Niech :math:`\,x,\,y\in V. ` 
 
-Jeżeli iloczyn skalarny wektorów :math:`\,x,y\in V\ ` równa się zeru: 
+If an inner product of vectors :math:`\,x,y\in V\ ` equals zero: 
 :math:`\,\langle x,y\rangle=0\,,\ `
-to mówimy, że wektory te są :math:`\,` *ortogonalne*. :math:`\,`
-Ortogonalność jest więc uogólnieniem pojęcia prostopadłości wektorów geometrycznych.
+then we say that these vectors are :math:`\,` *orthogonal*. :math:`\,`
+Orthogonality is thus the generalization of the notion of perpendicularity of geometric vectors.
 
 Orthogonal Set of Vectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Układ :math:`\ (x_1,x_2,\dots,x_r)\ ` parami ortogonalnych niezerowych 
-   wektorów przestrzeni :math:`\,V:`
+   A set :math:`\ (x_1,x_2,\dots,x_r)\ ` of pairwise orthogonal non-zero
+   vectors from the space :math:`\,V,`i.e.
    
    .. math::
       
       x_i\neq \theta
-      \qquad\text{oraz}\qquad
-      \langle\,x_i,x_j\rangle=0\quad\text{dla}\quad i\neq j\,,\qquad i,j=1,2,\dots,r\,,
+      \qquad\text{and}\qquad
+      \langle\,x_i,x_j\rangle=0\quad\text{for}\quad i\neq j\,,\qquad i,j=1,2,\dots,r\,,
 
-   nazywa się :math:`\,` *układem ortogonalnym*. :math:`\,` 
-   Ortogonalny układ wektorów jednostkowych (czyli wektorów o normie :math:`\,1`) :math:`\,`
-   jest :math:`\,` *układem ortonormalnym*.
+   is called an :math:`\,` *orthogonal set*. :math:`\,` 
+   An orthogonal set of unit vectors (that is, of the vectors having norm :math:`\,1`)
+   :math:`\,` is an :math:`\,` *orthonormal set*.
 
-A zatem iloczyn skalarny wektorów ortonormalnego układu :math:`\ (x_1,x_2,\dots,x_r)\ `
-dany jest przez
+Hence, an inner product of any two vectors from an orthonormal set :math:`\ (x_1,x_2,\dots,x_r)\ ` is given by
 
 .. math::
    
-   \langle\,x_i,x_j\rangle=\delta_{ij}\,,\quad\text{gdzie}\quad\delta_{ij}\ \,=\ \,
+   \langle\,x_i,x_j\rangle=\delta_{ij}\,,\quad\text{where}\quad\delta_{ij}\ \,=\ \,
    \left\{\ 
-   \begin{array}{cc} 1 & \text{dla}\ \ i=j, \\ 0 & \text{dla}\ \ i\ne j; \end{array}
+   \begin{array}{cc} 1 & \text{for}\ \ i=j, \\ 0 & \text{for}\ \ i\ne j; \end{array}
    \right.\quad
    i,j=1,2,\ldots,r\quad
-   \text{(delta Kroneckera).}
+   \text{(the Kronecker delta).}
 
-Związek między ortogonalnością i liniową niezależnością układu wektorów przedstawia
+A relation between othogonality and linear independence of vectors presents 
 
-.. admonition:: Twierdzenie 3.
+.. admonition:: Theorem 3.
    
-   Każdy ortogonalny układ wektorów przestrzeni :math:`\,V\ ` jest liniowo niezależny.
+   Every orthogonal set of vectors of the space :math:`\,V\ ` is linearly independent.
 
-**Dowód.** :math:`\,` Zakładamy, że układ :math:`\ (x_1,x_2,\dots,x_r)\ ` wektorów 
-przestrzeni :math:`\,V\ ` jest ortogonalny:
+**Proof.** :math:`\,` Assume that the set :math:`\ (x_1,x_2,\dots,x_r)\ ` of vectors from the space :math:`\,V\ ` is orthogonal:
 
 .. math::
    :label: assumpt
    
    \langle\,x_i,x_i\rangle>0\,,\qquad\quad
-   \langle\,x_i,x_j\rangle=0\quad\text{dla}\quad i\neq j\,,\qquad\quad i,j=1,2,\dots,r\,.
+   \langle\,x_i,x_j\rangle=0\quad\text{for}\quad i\neq j\,,\qquad\quad i,j=1,2,\dots,r\,.
 
 .. Dla wykazania liniowej niezależności tego układu przypuśćmy, że
    
@@ -62,10 +60,11 @@ przestrzeni :math:`\,V\ ` jest ortogonalny:
    
    \alpha_1\,x_1\,+\;\alpha_2\,x_2\,+\,\dots\,+\,\alpha_r\,x_r\ =\ \theta\,.
 
-Niech :math:`\quad\alpha_1\,x_1\,+\;\alpha_2\,x_2\,+\,\dots\,+\,\alpha_r\,x_r\ =\ \theta\,.`
+Let :math:`\quad\alpha_1\,x_1\,+\;\alpha_2\,x_2\,+\,\dots\,+\,\alpha_r\,x_r\ =\ \theta\,.`
 
-Mnożąc tę równość skalarnie z lewej strony kolejno przez :math:`\ x_1,\;x_2,\,\dots,\,x_r\ \,`
-i :math:`\,` korzystając z liniowości iloczynu skalarnego względem drugiego czynnika wektorowego, :math:`\,` otrzymujemy
+After applying an inner product to both sides of the above equality  
+with the vectors :math:`\ x_1,\;x_2,\,\dots,\,x_r\ \,`
+on the left hand side and :math:`\,` using linearity of an inner product with respect to the second variable, :math:`\,` we obtain
 
 .. .. math::
    
@@ -87,47 +86,47 @@ i :math:`\,` korzystając z liniowości iloczynu skalarnego względem drugiego c
    \alpha_1\,\langle x_r,x_1\rangle & {\,} + {\ } & \alpha_2\,\langle x_r,x_2\rangle & {\,} + {\ } & \ldots   & {\ \ } + {\ } & \alpha_r\,\langle x_r,x_r\rangle & {\ } = {\ \,} & 0 
    \end{alignat*}
 
-Z warunków :eq:`assumpt` wynika, że
+Conditions :eq:`assumpt` imply that
 :math:`\quad\alpha_1\,=\;\alpha_2\,=\;\dots\;=\,\alpha_r\ =\ 0\,.`
 
-Zachodzi więc implikacja
+Hence, the implication
 
 .. math::
    
    \alpha_1\,x_1+\,\alpha_2\,x_2+\ldots+\,\alpha_r\,x_r\ =\ \theta
    \qquad\Rightarrow\qquad   
-   \alpha_1=\,\alpha_2=\ldots=\,\alpha_r\,=\,0\,,
+   \alpha_1=\,\alpha_2=\ldots=\,\alpha_r\,=\,0\,
 
-która oznacza liniową niezależność wektorów :math:`\ x_1,\,x_2,\,\dots,\,x_r\,.`
+is true, and thus the vectors :math:`\, x_1,\,x_2,\,\dots,\,x_r\,` are linearly independent.
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   W :math:`\,n`-wymiarowej przestrzeni unitarnej bądź euklidesowej:
+   In :math:`\,n`-dimensional unitary or Euclidean vector space:
 
-   1. każdy ortogonalny układ :math:`\,n\ ` wektorów jest bazą ;
+   1. every orthogonal set of :math:`\,n\ ` vectors comprises a basis;
 
-   2. układ ortogonalny nie może zawierać więcej niż :math:`\,n\ ` wektorów.
+   2. an orthogonal set of vectors cannot contain more than :math:`\,n\ ` vectors.
 
 Orthonormal Basis
 ~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Bazę skończenie wymiarowej przestrzeni :math:`\,V,\ ` której wektory
-   tworzą układ ortogonalny (ortonormalny), nazywamy *bazą ortogonalną*
-   (odpowiednio *ortonormalną*).
+   A basis of finite dimensional space :math:`\,V\ ` whose vectors
+   comprise an orthogonal (orthonormal) set is called an *orthogonal basis*
+   (resp. an *orthonormal basis*).
 
 .. **Zależności w bazie ortonormalnej.**
 
-Załóżmy, że baza :math:`\,\mathcal{B}=(u_1,u_2,\dots,u_n)\ ` przestrzeni :math:`\,V\ `
-jest ortonormalna:
+Assume that a basis :math:`\,\mathcal{B}=(u_1,u_2,\dots,u_n)\ ` of the space :math:`\,V\ `
+is orthonormal:
 
 .. math::
    
    \langle\,u_i,u_j\rangle\,=\,\delta_{ij}\,,\qquad i,j=1,2,\dots,n.
 
-1. Niech :math:`\ \,v\,=\,\displaystyle\sum_{k\,=\,1}^n\ \alpha_k\,u_k\,.\ \,` 
-   Wtedy, z definicji iloczynu skalarnego:
+1. Let :math:`\ \,v\,=\,\displaystyle\sum_{k\,=\,1}^n\ \alpha_k\,u_k\,.\ \,` 
+  Then, by definition of an inner product:
    
    .. math::
       :label: ortho_1
@@ -142,11 +141,12 @@ jest ortonormalna:
       \blacktriangleright\quad\alpha_i\ =\ \langle\,u_i,v\,\rangle\,,\qquad i=1,2,\dots,n.
       \end{array}
 
-   :math:`\,i`-ta współrzędna wektora :math:`\,v\ ` w bazie :math:`\ \mathcal{B}\ `
-   równa się iloczynowi skalarnemu :math:`\,i`-tego wektora bazy :math:`\,\mathcal{B}\ ` 
-   przez wektor :math:`\,v\,,\quad i=1,2,\dots,n.`
+   The :math:`\,i`-th coordinate of the vector :math:`\,v\ ` in basis 
+   :math:`\ \mathcal{B}\ ` is equal to an inner product of the :math:`\,i`-th
+   vector from the basis :math:`\,\mathcal{B}\ ` 
+   and the vector :math:`\,v\,,\quad i=1,2,\dots,n.`
 
-2. Niech :math:`\quad v\,=\,\displaystyle\sum_{i\,=\,1}^n\ \alpha_i\,u_i\,,\ \ 
+2. Let :math:`\quad v\,=\,\displaystyle\sum_{i\,=\,1}^n\ \alpha_i\,u_i\,,\ \ 
    w\,=\,\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,:\quad
    I_{\mathcal{B}}(v)=
    \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\ \ 
@@ -169,14 +169,15 @@ jest ortonormalna:
                                                              \,I_{\mathcal{B}}(w)\,\rangle\,.
       \end{array}
 
-   Iloczyn skalarny wektorów :math:`\,v\ \,\text{i}\ \ w\ ` 
-   (w przestrzeni unitarnej albo euklidesowej :math:`\,V`) :math:`\,` 
-   równa się iloczynowi skalarnemu :math:`\,` (w przestrzeni :math:`\,C^n` 
-   albo odpowiednio :math:`\,R^n`) :math:`\,` wektorów kolumnowych przedstawiających współrzędne
-   wektorów :math:`\,v\ \,\text{i}\ \ w\ ` w bazie :math:`\,\mathcal{B}.`
+   An inner product of th vectors :math:`\,v\,` and :math:`\,w\,` 
+   (in a unitary or Euclidean space :math:`\,V`) :math:`\,` 
+   is equal to an inner product :math:`\,` (in the space :math:`\,C^n` 
+   or :math:`\,R^n,\,` respectively) :math:`\,` of column vectors
+   representing coordinates of the vectors
+   :math:`\,v\,` and :math:`\,w\,` in the basis :math:`\,\mathcal{B}.`
 
-3. Niech :math:`\,F\in\text{End}(V)\,,\ \ M_{\mathcal{B}}(F)=[\,\varphi_{ij}\,]_{n\times n}\,.\ `
-   Z definicji macierzy operatora liniowego :
+3. Let :math:`\,F\in\text{End}(V)\,,\ \ M_{\mathcal{B}}(F)=[\,\varphi_{ij}\,]_{n\times n}\,.\ `
+   By definition of matrix of a linear operator:
 
    .. math::
       :label: ortho_3
@@ -193,49 +194,49 @@ jest ortonormalna:
       \blacktriangleright\quad\varphi_{ij} & = & \langle\,u_i,Fu_j\rangle\,,\qquad i,j=1,2,\dots,n.
       \end{array}
 
-   Element :math:`\,\varphi_{ij}\ ` macierzy operatora liniowego :math:`\,F\,` 
-   w bazie :math:`\,\mathcal{B}\ ` równa się iloczynowi skalarnemu 
-   :math:`\,i`-tego wektora bazy :math:`\,\mathcal{B}\ ` przez obraz :math:`\,` 
-   (przy przekształceniu :math:`F`) :math:`\ \,j`-tego wektora tej bazy, 
+   An element :math:`\,\varphi_{ij}\ ` of matrix of a linear operator :math:`\,F\,` 
+   in basis :math:`\,\mathcal{B}\ ` is equal to an inner product of the  
+   :math:`\,i`-th vector from the basis :math:`\,\mathcal{B}\ ` and the image :math:`\,` 
+   (under the transformation :math:`F`) of the :math:`\ \,j`-th vector from this basis, 
    :math:`\ \ i,j=1,2,\dots,n.`
 
-Warto zauważyć, że o ile w dowolnej bazie :math:`\,\mathcal{B}=(v_1,v_2,\dots,v_n)\ `
-współrzędne :math:`\,\alpha_i\ ` wektora :math:`\,v\ ` oraz elementy :math:`\,\varphi_{ij}\ `
-macierzy operatora :math:`\,F\ ` określone są w sposób uwikłany poprzez związki
+It is worth to notice that while in an arbitrary basis :math:`\,\mathcal{B}=(v_1,v_2,\dots,v_n)\ ` coordinates :math:`\,\alpha_i\ ` of a vector :math:`\,v\ ` and elements :math:`\,\varphi_{ij}\ ` of matrix of a linear operator
+:math:`\,F\ ` are defined implicitely by relations
 
 .. math::
    
    v\,=\,\sum_{i\,=\,1}^n\ \alpha_i\,v_i\,,\qquad Fv_j\,=\,\sum_{i\,=\,1}^n\ \varphi_{ij}\,v_i\,,
    \quad j=1,2,\dots,n\,,
 
-to w bazie ortonormalnej wielkości te dane są *explicite* 
-przez wzory :eq:`ortho_1` :math:`\,` i :math:`\,` :eq:`ortho_3`.
+then in an orthonormal basis these quantities are given *explicitely* 
+by formulae :eq:`ortho_1` :math:`\,` and :math:`\,` :eq:`ortho_3`.
 
-Ponadto, z równania :eq:`ortho_1` wynika, że dowolny wektor :math:`\,v\in V\ ` można zapisać jako
+Moreover, the equation :eq:`ortho_1` implies that every vector :math:`\,v\in V\ ` may be written as
 
 .. math::
    :label: coord
    
    v\ \,=\ \,\sum_{i\;\,=\ \,1}^n\ \alpha_i\,u_i\ =\ \sum_{i\,=\,1}^n\ \langle u_i,v\rangle\;u_i\,.
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Niech :math:`\,u,v\in V\,.\ `
-   Jeżeli wektor :math:`\,u\ ` ma normę :math:`\,1:\ \ \|u\|=1\,,\ \\`
-   to iloczyn skalarny :math:`\,\langle u,v\rangle\ ` nazywamy 
-   *współrzędną wektora* :math:`\,v\ ` *na osi* :math:`\,` u.
+   Let :math:`\,u,v\in V\,.\ `
+   If a vector :math:`\,u\ ` has norm :math:`\,1:\ \ \|u\|=1\,,\ \\`
+   then an inner product :math:`\,\langle u,v\rangle\ ` is called 
+   a *coordinate of vector* :math:`\,v\ ` *on the axis* :math:`\,` u.
 
-Wzór :eq:`coord` stwierdza, że współrzędne wektora :math:`\,v\ ` w bazie ortonormalnej 
-:math:`\,\mathcal{B}=(u_1,u_2,\dots,u_n)\ ` są jego współrzędnymi na osiach 
+The formula :eq:`coord` states that coordinates of vector :math:`\,v\ ` in 
+an orthonormal basis :math:`\,\mathcal{B}=(u_1,u_2,\dots,u_n)\ ` 
+are its coordinates on axes
 :math:`\,\text{u}_1,\,\text{u}_2,\,\dots,\,\text{u}_n\,.`
 
-**Przykłady.**
+**Example.**
 
-1. W rzeczywistej trójwymiarowej przestrzeni wektorów geometrycznych bazą ortonormalną
-   jest trójka wzajemnie prostopadłych wektorów jednostkowych 
-   :math:`\,\mathcal{E}=(\vec{e}_1,\vec{e}_2,\vec{e}_3).\ ` Iloczyn skalarny wektorów 
+1. An orthonormal basis of real 3-dimensional space of geometric vectors
+   consists of three mutually perpendicular unit vectors
+   :math:`\,\mathcal{E}=(\vec{e}_1,\vec{e}_2,\vec{e}_3).\ ` An inner product of vectors 
    :math:`\,\vec{a}=\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2+\alpha_3\,\vec{e}_3\,,\ 
-   \vec{b}=\beta_1\,\vec{e}_1+\beta_2\,\vec{e}_2+\beta_3\,\vec{e}_3\ ` wynosi
+   \vec{b}=\beta_1\,\vec{e}_1+\beta_2\,\vec{e}_2+\beta_3\,\vec{e}_3\ ` equals
    
    .. math::
       
@@ -244,9 +245,8 @@ Wzór :eq:`coord` stwierdza, że współrzędne wektora :math:`\,v\ ` w bazie or
       (\beta_1\,\vec{e}_1+\beta_2\,\vec{e}_2+\beta_3\,\vec{e}_3)\ =\ 
       \alpha_1\,\beta_1\,+\,\alpha_2\,\beta_2\,+\,\alpha_3\,\beta_3\,.
 
-2. W unitarnej przestrzeni :math:`\,C^n\ ` (a także w euklidesowej przestrzeni :math:`\,R^n`)
-   przykładem bazy ortonormalnej jest baza kanoniczna :math:`\,\mathcal{E}=(e_1,e_2,\dots,e_n),\ `
-   gdzie :math:`\,i`-ty wektor  równa się
+2. An example of an orthonormal basis of a unitary space :math:`\,C^n\ ` (and also Euclidean space :math:`\,R^n`) 
+   is a canonical basis :math:`\,\mathcal{E}=(e_1,e_2,\dots,e_n),\ ` where the :math:`\,i`-th vector  equals
    
    .. math::
       

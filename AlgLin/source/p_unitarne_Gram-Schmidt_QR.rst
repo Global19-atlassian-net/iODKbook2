@@ -2,27 +2,26 @@
 Gram-Schmidt Orthonormalization and QR Decomposition of a Matrix
 ----------------------------------------------------------------
 
-.. admonition:: Twierdzenie 4.
+.. admonition:: Theorem 4.
    
-   W każdej skończenie wymiarowej przestrzeni unitarnej (euklidesowej) istnieje baza ortonormalna.
+   In every finite dimensional unitary (Euclidean) vector space exists an orthonormal basis.
 
-**Dowód** twierdzenia, który podaje efektywną metodę konstrukcji takiej bazy,
-przebiega w dwóch realizowanych równolegle etapach. Biorąc za punkt wyjścia dowolną bazę, buduje się metodą *ortogonalizacji Grama-Schmidta* bazę ortogonalną, z której po unormowaniu powstaje baza ortonormalna.
+**Proof** of this theorem, which provides an effective method of construction of such a basis, poceeds in two parallel stages. One starts with an arbitrary basis, uses *Gram-Schmidt orthogonalization* method to construct an orthogonal basis, which after normalisation gives an orthonormal basis.
 
 Construction of the Orthonormal Basis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Niech :math:`\,\dim\,V=n.\ ` Dowód przebiega według następującego schematu:
+Let :math:`\,\dim\,V=n.\ ` Proof proceeds according to the following diagram:
 
 .. math::
    
    \begin{array}{cccccc}
                 & \mathcal{B}=(v_1,v_2,\dots,v_n) & \longrightarrow & \mathcal{P}=(y_1,y_2,\dots,y_n) & \longrightarrow & \mathcal{Q}=(u_1,u_2,\dots,u_n) \\
-   \text{Baza:} & \text{wyjściowa}                &                 & \text{ortogonalna}              &                 & \text{ortonormalna}
+   \text{Basis:} & \text{initial}                &                 & \text{orthogonal}              &                 & \text{orthonormal}
    \end{array}
 
-Kolejne wektory baz :math:`\ \mathcal{P}\ \ \text{i}\ \ \,\mathcal{Q}\ \,`
-przyjmujemy w następującej postaci:
+We choose the vectors for the bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ `
+as follows:
    
 :math:`\triangleright\quad y_1\,=\,v_1,\quad u_1\,=\,\displaystyle\frac{y_1}{\|y_1\|}\,;`
 
@@ -30,28 +29,28 @@ przyjmujemy w następującej postaci:
 v_2\,-\ \displaystyle\frac{\langle\,y_1,v_2\rangle}{\|y_1\|^2}\ \ y_1\ =\ 
 v_2-\,\langle\,u_1,v_2\rangle\ u_1\,,\qquad u_2\,=\,\displaystyle\frac{y_2}{\|y_2\|}\ ,`
 
-gdzie :math:`\ \alpha_1\ ` zostało wyznaczone z warunku :math:`\ \langle\,y_1,y_2\rangle=0\,;`
+where :math:`\ \alpha_1\ ` has been determined from the condition :math:`\ \langle\,y_1,y_2\rangle=0\,;`
 
 :math:`\triangleright\quad y_3\,=\,\beta_1\,y_1+\,\beta_2\,y_2+\,v_3\ =\ 
 v_3\,-\ \displaystyle\frac{\langle y_1,v_3\rangle}{\|y_1\|^2}\ \ y_1\,-\ 
 \displaystyle\frac{\langle y_2,v_3\rangle}{\|y_2\|^2}\ \ y_2\ =\ 
 v_3\,-\,\langle u_1,v_3\rangle\ u_1 - \langle u_2,v_3\rangle\ u_2\,,`
 
-gdzie :math:`\ \beta_1,\,\beta_2\ ` zostały wyznaczone z warunków 
+where :math:`\ \beta_1,\,\beta_2\ ` have been determined from the conditions 
 :math:`\,\langle\,y_1,y_3\rangle = \langle\,y_2,y_3\rangle = 0\,;\qquad
 u_3\,=\,\displaystyle\frac{y_3}{\|y_3\|}\,;`
 
-Przypuśćmy, że zbudowaliśmy w ten sposób układ ortogonalny 
-:math:`\ (y_1,y_2,\dots,y_{j-1}),\ ` przy czym, jak wynika z przyjętej metody konstrukcji
+Assume that in this way we have constructed an orthogonal set
+:math:`\ (y_1,y_2,\dots,y_{j-1}),\ ` where, as follows from the construction method,
 
 .. math::
    :label: y_k
    
    y_k\,\in\,L(v_1,v_2,\dots,v_k)\qquad k=1,2,\dots,j-1\,,
 
-to znaczy, że każdy :math:`\,k`-ty wektor układu :math:`\,(y_1,y_2,\dots,y_{j-1})\ `
-jest kombinacją liniową jedynie pierwszych :math:`\,k\ ` wektorów bazy :math:`\,\mathcal{B}.\ `
-Następnymi wektorami baz :math:`\ \mathcal{P}\ \ \text{i}\ \ \,\mathcal{Q}\ \,` będą :math:`\\`
+that is, every :math:`\,k`-th vector of the set :math:`\,(y_1,y_2,\dots,y_{j-1})\ `
+is a linear combination of only first :math:`\,k\ ` vectors from the basis :math:`\,\mathcal{B}.\ `
+The next vectors of bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ \,` are :math:`\\`
 
 :math:`\begin{array}{rcl} \triangleright\quad y_j & = & 
 \lambda_1\,y_1\,+\;\lambda_2\,y_2\,+\;\dots\,+\;\lambda_{j-1}\,y_{j-1}\,+\;v_j\ \ =
@@ -67,8 +66,8 @@ Następnymi wektorami baz :math:`\ \mathcal{P}\ \ \text{i}\ \ \,\mathcal{Q}\ \,`
 \qquad u_j\ =\ \displaystyle\frac{y_j}{\|y_j\|}\ ,
 \end{array}`
 
-gdzie współczynniki :math:`\ \lambda_1,\,\lambda_2,\,\dots,\,\lambda_{j-1}\ \,`
-zostały wyznaczone z warunków ortogonalności
+where the coefficients :math:`\ \lambda_1,\,\lambda_2,\,\dots,\,\lambda_{j-1}\ \,`
+have been determined from the orthogonality conditions
 
 .. math::
    
@@ -81,33 +80,29 @@ zostały wyznaczone z warunków ortogonalności
 
 .. Warunek :eq:`y_k` gwarantuje, że wektor :math:`\,y_j\neq\theta.\ `
 
-Wektor :math:`\,y_j\ ` jest kombinacją liniowo niezależnych wektorów 
+The vector :math:`\,y_j\ ` is a combination of linearly independent vectors
 :math:`\,v_1,\,v_2,\,\dots,\,v_j.\ `
-Z własności :eq:`y_k` wynika, że jest to kombinacja nietrywialna, bo współczynnik przy wektorze
-:math:`\,v_j\ ` równa się :math:`\,+1.\ ` Oznacza to, że wszystkie 
-wektory :math:`\,y_j\ ` są niezerowe: :math:`\,y_j\neq\theta,\ j=1,2,\dots,n.\ `
-Stąd mamy pewność, że :math:`\,\mathcal{P}\ ` jest układem ortogonalnym
-oraz że dzieląc każdy kolejny wektor :math:`\,y_j\ ` przez jego normę otrzymamy 
-wektor jednostkowy :math:`\,u_j\,.`
+The property :eq:`y_k` implies that it is a non-trivial combination, because the coefficient of the vector :math:`\,v_j\ ` equals :math:`\,+1.\ `This means that all the vectors :math:`\,y_j\ ` are non-zero: :math:`\,y_j\neq\theta,\ j=1,2,\dots,n.\ `
+Hence, the set :math:`\,\mathcal{P}\ ` is orthogonal, and if we divide each vector
+:math:`\,y_j\ ` by its norm, we obtain a unit vector :math:`\,u_j\,.`
 
-Ortogonalizację Grama-Schmidta można zastosować do dowolnego (niekoniecznie liniowo niezależnego)
-układu wektorów. W wyniku otrzymamy układ :math:`\,\mathcal{Y},\ ` którego wektory będą parami ortogonalne, ale może to nie być układ ortogonalny, bo wśród jego wektorów mogą wystąpić wektory zerowe.
+Gram-Schmidt orthogonalization may be applied to any (not necessarily linearly independent set) of vectors. As a result we obtain a set :math:`\,\mathcal{Y},\ ` whose vectors are pairwise orthogonal, but :math:`\,\mathcal{Y},\ ` itself is not necessarily orthogonal as it may contain zero vectors.
 
-Po ostatnim kroku procedury, w którym :math:`\,j=n,\ ` otrzymujemy 
-ortogonalną bazę :math:`\ \mathcal{P}\ \\`
-i ortonormalną bazę :math:`\ \mathcal{Q}\ ` przestrzeni :math:`\,V.`
+After the last step of the procedure, where :math:`\,j=n,\ ` we obtain an
+orthogonal basis :math:`\ \mathcal{P}\ \\`
+and orthonormal basis :math:`\ \mathcal{Q}\ ` of the space :math:`\,V.`
 
-**Przykład:** konstrukcja wielomianów Legendre'a.
+**Example:** Construction of Legendre polynomials.
 
-Rozważmy przestrzeń euklidesową :math:`\,P\ ` wielomianów rzeczywistych z iloczynem skalarnym
+Consider a Euclidean space :math:`\,P\ ` of rela polynomials with an inner product
 
 .. math::
    
    \langle\,p,q\,\rangle\ \,=\ \,\int_{-1}^{+1}\ p(x)\,q(x)\,dx\,,\qquad p,q\in P\,.
 
-Przyjmując za punkt wyjścia bazę :math:`\,\mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots)\ `
-zbudujemy bazę ortogonalną :math:`\,\mathcal{P}\,=\,(p_0,\,p_1,\,p_2,\,p_3,\,\dots)\ \,` 
-i :math:`\,` bazę ortonormalną :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3,\,\dots)\,.\\`
+Taking :math:`\,\mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots)\ ` as the initial basis
+we will construct an orthogonal basis :math:`\,\mathcal{P}\,=\,(p_0,\,p_1,\,p_2,\,p_3,\,\dots)\ \,` 
+and :math:`\,` orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3,\,\dots)\,.\\`
 
 0. :math:`\ p_0(x)\,=\,1\,;\qquad
    \|\,p_0\|^2\,=\,\langle\,p_0,p_0\,\rangle\ =\ \int_{-1}^{+1}\ 1\cdot 1\ \ dx\ =\ 2\,;\qquad
@@ -118,7 +113,7 @@ i :math:`\,` bazę ortonormalną :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
    \frac{1}{\sqrt{2}}\ \ .\\`
 
 1. :math:`\ p_1(x)\ =\ \alpha_0\cdot 1+x\,,\ \ ` 
-   gdzie :math:`\ \ \alpha_0\ ` wyznacza się z warunku :math:`\ \ \langle\,p_0,p_1\rangle\ =\ 0\,.`
+   where :math:`\ \ \alpha_0\ ` is determined from the condition :math:`\ \ \langle\,p_0,p_1\rangle\ =\ 0\,.`
    
    :math:`\ \langle\,p_0,p_1\rangle\ =\ \int_{-1}^{+1}\ 1\cdot(\alpha_0+x)\ dx\ \ =\ \ 
    \int_{-1}^{+1}\ (\alpha_0+x)\,dx\ =\ 2\,\alpha_0\ =\ 0\,:\quad\alpha_0=0\,.`
@@ -132,7 +127,7 @@ i :math:`\,` bazę ortonormalną :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
    \sqrt{\,\frac{3}{2}}\ \ x\ .\\`
 
 2. :math:`\ p_2(x)\ =\ \beta_0\cdot 1+\beta_1\cdot x+x^2\,,\ \ `
-   gdzie :math:`\ \ \beta_0,\,\beta_1:\ \  
+   where :math:`\ \ \beta_0,\,\beta_1:\ \  
    \langle\,p_0,p_2\rangle\ =\ \langle\,p_1,p_2\rangle\ =\ 0\,.`
 
    :math:`\ \langle\,p_0,p_2\rangle\ =\ \int_{-1}^{+1}\ (\beta_0+\beta_1\,x+x^2)\,dx\ =\ 
@@ -156,14 +151,14 @@ i :math:`\,` bazę ortonormalną :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
    \widetilde{\gamma_0}\cdot 1+\gamma_1\cdot x+\gamma_2\cdot(x^2-\;\frac{1}{3})+x^3\ =\ 
    \gamma_0+\,\gamma_1\,x\,+\,\gamma_2\,x^2\,+\,x^3\,,`
 
-   :math:`\ \text{gdzie}\quad\gamma_0,\,\gamma_1,\,\gamma_2:\quad
+   :math:`\ \text{where}\quad\gamma_0,\,\gamma_1,\,\gamma_2:\quad
    \langle\,p_0,p_3\rangle\,=\,\langle\,p_1,p_3\rangle\,=\,\langle\,p_2,p_3\rangle\,=\,0\,.`
    
    :math:`\ \langle\,p_0,p_3\rangle\,=\,2\,\gamma_0+\frac{2}{3}\,\gamma_2\,=\,0\,;\quad
    \langle\,p_1,p_3\rangle\,=\,\frac{2}{3}\,\gamma_1+\frac{2}{5}\,=\,0\,;\quad
    \langle\,p_2,p_3\rangle\,=\,\frac{8}{45}\,\gamma_2\,=\,0\,;`
    
-   :math:`\ \text{skąd}\quad\gamma_0=\gamma_2=0\,,\quad\gamma_1=-\ \frac{3}{5}\,.`
+   :math:`\ \text{hence}\quad\gamma_0=\gamma_2=0\,,\quad\gamma_1=-\ \frac{3}{5}\,.`
 
    :math:`\ p_3(x)\,=\,x^3-\,\frac{3}{5}\,x\,;\qquad\|\,p_3\|\ =\ \frac{2}{5}\ \sqrt{\frac{2}{7}}\,.`
 

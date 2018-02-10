@@ -5,12 +5,12 @@ Inner (Scalar) Product
 Axiomatic Definition and its Implementations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   | Niech będzie dana zespolona przestrzeń wektorowa :math:`\,V(C).\ `
-   | *Iloczyn skalarny* jest odwzorowaniem :math:`\,f:\ V\times V\rightarrow C\ `
-     spełniającym warunki 
-   | (z oznaczenia :math:`\,f(x,y)=\langle x,y\rangle,\ \ x,y\in V`) :
+   | Let :math:`\,V(C)\ ` be a vector space.
+   | An *inner product* is a map :math:`\,f:\ V\times V\rightarrow C\ `
+     satisfying the conditions 
+   | (and denoted :math:`\,f(x,y)=\langle x,y\rangle,\ \ x,y\in V`) :
 
    1. :math:`\,\langle y,x\rangle\,=\,\langle x,y\rangle^*\,,`
 
@@ -21,25 +21,26 @@ Axiomatic Definition and its Implementations
    4. :math:`\,\langle x,x\rangle\geq 0\quad\land\quad
       [\ \,\langle x,x\rangle=0\ \ \Leftrightarrow\ \ x=\theta\ \,]\,.`
 
-**Uwagi i komentarze.**
+**Comments and remarks.**
 
-* Iloczyn skalarny dwóch wektorów należących do zespolonej przestrzeni :math:`\,V\ `
-  jest liczbą zespoloną.
+* An inner product of two vectors belonging to the complex space :math:`\,V\ `
+  is a complex number.
 
-* Warunek 1. stwierdza, że przestawienie czynników jest równoważne
-  sprzężeniu zespolonemu iloczynu skalarnego.
-  Przyjmując :math:`\ y=x\ ` otrzymujemy: :math:`\ \langle x,x\rangle=\langle x,x\rangle^*\,,\ `
-  co oznacza, że kwadrat skalarny jest liczbą rzeczywistą. Dzięki temu ma sens warunek 4.,
-  w którym dodatkowo żąda się, żeby :math:`\ \langle x,x\rangle\geq 0.` 
+* The condition 1. states that swapping of vectors is equivalent to 
+  complex conjugation of an inner product.
+  If :math:`\ y=x,\ ` then: :math:`\ \langle x,x\rangle=\langle x,x\rangle^*\,,\ `
+  which means that an inner product of a vector with itself is a real number. 
+  Because of this, it makes sense to introduce 
+  an additional condition 4., which requires that :math:`\ \langle x,x\rangle\geq 0.` 
 
-* Warunki 2. i :math:`\,` 3. stwierdzają odpowiednio addytywność i jednorodność 
-  iloczynu skalarnego ze względu na *drugi* czynnik wektorowy.
+* The conditions 2. and :math:`\,` 3. state in turn additivity and homogeneity of 
+  an inner product with respect to the *second* vector.
 
-* Warunek 4. postuluje, że kwadrat skalarny jest liczbą nieujemną,
-  przy czym jedynym wektorem, którego kwadrat skalarny równa się zeru,
-  jest wektor zerowy.
-
-Bezpośrednio z definicji wynikają dalsze własności iloczynu skalarnego:
+* The condition 4. imposes that an inner product of a vector with itself 
+  is a non-negative number, and the only vector for which it is zero
+  is the zero vector.
+  
+The definition directly implies further properties of an inner product:
 
 .. math::
    
@@ -50,8 +51,7 @@ Bezpośrednio z definicji wynikają dalsze własności iloczynu skalarnego:
    \langle\alpha\,x,y\rangle\,=\,\langle y,\alpha\,x\rangle^*=\,[\,\alpha\,\langle y,x\rangle\,]^*=
    \,\alpha^*\langle y,x\rangle^*=\,\alpha^*\langle x,y\rangle\,.
 
-A zatem iloczyn skalarny jest liniowy względem drugiego czynnika wektorowego
-i antyliniowy względem pierwszego:
+Hence, an inner product is linear with respect to the second vector and antilinear with respect to the first one:
 
 .. math::
    
@@ -61,65 +61,65 @@ i antyliniowy względem pierwszego:
    \langle\,\alpha_1\,x_1\,+\,\alpha_2\,x_2,\,y\,\rangle\ =\ 
    \alpha_1^*\ \langle x_1,y\rangle\,+\,\alpha_2^*\,\langle x_2,y\rangle\,,
 
-gdzie :math:`\ \,\alpha_1,\alpha_2\in C,\ \ x,\,x_1,x_2,\ y,\,y_1,y_2\in V\,.`
+where :math:`\ \,\alpha_1,\alpha_2\in C,\ \ x,\,x_1,x_2,\ y,\,y_1,y_2\in V\,.`
 
-Definicja iloczynu skalarnego w podręcznikach matematycznych 
-może różnić się od podanej tutaj w punkcie 3., który zapisywany bywa w postaci: 
+The definition of an inner product which is given in mathematical textbooks 
+may differ from the one given here in point 3., which tends to be written as: 
 :math:`\,(\alpha\,x,y)=\alpha\,(x,y)\,,\ \ \alpha\in C.\ `
-Wtedy iloczyn skalarny jest liniowy względem pierwszego i antyliniowy względem drugiego czynnika. 
-W zastosowaniach fizycznych, a zwłaszcza w mechanice kwantowej, bardziej odpowiednia jest definicja przyjęta w tym skrypcie.
+Then an inner product is linear with respect to the first vector and antilinear 
+with respect to the second one. For applications in physics, and especially in 
+quantum mechanics, more suitable is the definition taken in this script.
 
-Łatwo można udowodnić następujące 
+One can easily prove the following 
 
-.. admonition:: Twierdzenie 0.
+.. admonition:: Theorem 0.
 
-   Jeżeli jeden z czynników jest wektorem zerowym, to iloczyn skalarny znika:
+    If one of the two vectors is zero, then the inner product vanishes:
    
    .. math::
       :label: zero
       
       (\,x=\theta\quad\lor\quad y=\theta\,)\qquad\Rightarrow\qquad \langle x,y\rangle\,=\,0\,.
 
-Rzeczywiście, :math:`\,` jeżeli np. :math:`\ y=\theta,\ \ \text{to}\ \ y=0\cdot y\ \,` 
-oraz :math:`\ \,\langle x,y\rangle=\langle x,\,0\cdot y\rangle=0\cdot\langle x,y\rangle\,=\,0.`
+Indeed, :math:`\,` if for example :math:`\ y=\theta,\ ` then :math:`\ y=0\cdot y\ ` 
+and :math:`\ \,\langle x,y\rangle=\langle x,\,0\cdot y\rangle=0\cdot\langle x,y\rangle\,=\,0.`
 
-.. admonition:: Uwaga:
+.. admonition:: Remark:
    
-   Twierdzenie odwrotne do :eq:`zero` nie jest prawdziwe: 
-   iloczyn skalarny dwóch niezerowych wektorów może być równy zeru
-   (mówimy wtedy o wektorach *ortogonalnych*).
+   The converse of the theorem :eq:`zero` is not true: 
+   an inner product of two non-zero vectors may be zero 
+   (then we talk about *orthogonal* vectors).
 
-Iloczyn skalarny określony w rzeczywistej przestrzeni wektorowej :math:`\,V(R)\ `
-jest odwzorowaniem :math:`\,f:\ V\times V\rightarrow R\,,\ ` spełniającym warunki 1.- 4.
-Postulat 1. staje się wtedy warunkiem przemienności: 
+An inner product defined on a real vector space :math:`\,V(R)\ `
+is a map :math:`\,f:\ V\times V\rightarrow R\,,\ ` satisfying the conditions 1.- 4.
+The postulate 1. becomes then a symmetry condition: 
 :math:`\ \langle y,x\rangle=\langle x,y\rangle,\ \ x,y\in V,\ `
-przez co iloczyn skalarny jest liniowy ze względu na każdy czynnik wektorowy z osobna 
-(można go wtedy zdefiniować jako istotnie dodatnio określony rzeczywisty symetryczny funkcjonał dwuliniowy).
+and thus an inner product is linear with respect to both variables 
+(it may be then defined as a real positive definite symmetric bilinear functional).
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   *Przestrzeń unitarna* :math:`\,` jest zespoloną przestrzenią wektorową, 
-   w której został określony iloczyn skalarny.
+   A *unitary space* :math:`\,` is a complex vector space with an inner product.
 
-   Rzeczywista przestrzeń wektorowa z iloczynem skalarnym nazywa się :math:`\,`
-   *przestrzenią euklidesową*.
+   A real vector space with an inner product is called a :math:`\,`
+   *Euclidean space*.
    
-**Przykłady.**
+**Examples.**
 
-1.) Podstawową realizacją przestrzeni unitarnej jest przestrzeń wektorów kolumnowych
+1.) A standard unitary space is a space of column vectors
 
 .. math::
    
    C^n\ =\ \,\left\{\ 
    \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,:\ \ 
-   \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in C\ \right\}\,.
+   \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in C\ \right\}\,,
 
-Dla wektorów :math:`\quad 
+where an inner product of vectors :math:`\quad 
 \boldsymbol{x}\,=\,
 \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
 \boldsymbol{y}\,=\,
 \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
-iloczyn skalarny wyraża się wzorem
+is given by a formula
 
 .. math::
    
@@ -128,31 +128,31 @@ iloczyn skalarny wyraża się wzorem
         \,=\;[\,\alpha_1^*,\,\alpha_2^*,\,\dots,\,\alpha_n^*\,]\ 
         \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\,.
 
-Na przykład dla :math:`\ \ \boldsymbol{x}\,=\,
+For example, if :math:`\ \ \boldsymbol{x}\,=\,
 \left[\begin{array}{c} 1+i \\ -2 \\ 4\,i \end{array}\right]\,,\ \ 
 \boldsymbol{y}\,=\,
 \left[\begin{array}{c} -i \\ -1+2\,i \\ 0 \end{array}\right]\ \in\ C^3\quad` 
-iloczyn skalarny wynosi
+then
 
 .. math::
    
    \langle\boldsymbol{x},\boldsymbol{y}\rangle\ =\ 
    (1-i)\,(-i)\,+\,(-2)\,(-1+2\,i)\,+\,(-4\,i)\,0\ =\ -i-1+2-4\,i\ =\ 1-5\,i\,.
 
-2.) Przykładem przestrzeni euklidesowej jest zbiór :math:`\,n`-elementowych wektorów kolumnowych
+2.) An example of a Euclidean space is a set of column vectors
 
 .. math::
    
    R^n\ =\ \,\left\{\ 
    \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,:\ \ 
-   \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in R\ \right\}\,.
+   \alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\in R\ \right\}\,,
              
-Dla wektorów :math:`\quad 
+where an inner product of vectors :math:`\quad 
 \boldsymbol{x}\,=\,
 \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]\,,\quad
 \boldsymbol{y}\,=\,
 \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\quad`
-iloczyn skalarny dany jest przez
+is given by a formula
 
 .. math::
    
@@ -161,25 +161,24 @@ iloczyn skalarny dany jest przez
    \,=\;[\,\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n\,]\ 
    \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\,.
 
-3.) W mechanice kwantowej ma zastosowanie unitarna przestrzeń :math:`\,L^2\ `
-złożona z funkcji zespolonych określonych na osi rzeczywistej, całkowalnych w kwadracie modułu:
+3.) A special application in quantum mechanics finds a unitary space :math:`\,L^2\ `
+consisting of complex functions defined on a real line which are square integrable:
 
 .. math::
    
    L^2\ \,=\ \,\left\{\ \varphi : R\rightarrow C\ \ :\ \ 
-   \int_{-\infty}^{+\infty}\ |\,\varphi(x)\,|^2\,<\,\infty\ \right\}\,.
+   \int_{-\infty}^{+\infty}\ |\,\varphi(x)\,|^2\,<\,\infty\ \right\}\,,
 
-Dla :math:`\quad\varphi,\,\psi\in L^2\quad` iloczyn skalarny ma postać 
+where an inner product of :math:`\quad\varphi,\,\psi\in L^2\quad` is given by 
 :math:`\quad \langle\varphi,\psi\rangle\ =\ 
 \displaystyle\int_{-\infty}^{+\infty}\ [\,\varphi(x)\,]^*\,\psi(x)\ dx\,.`
 
-4.) Przestrzenią euklidesową jest (dwu- albo trójwymiarowa) przestrzeń wektorów geometrycznych
-z iloczynem skalarnym danym przez 
+4.) A Euclidean space is a (2- or 3-dimensinal) vector space of geometric vectors
+with an inner product given by
 :math:`\ \ \vec{a}\cdot\vec{b}\,=\,|\vec{a}|\,|\vec{b}|\,\cos\phi\,,
-\ \ \text{gdzie}\ \ \phi=\angle(\vec{a},\vec{b})\,.`
+\ ` where :math:`\,\phi=\angle(\vec{a},\vec{b})\,.`
 
-Biorąc pod uwagę zastosowania, będziemy rozważać przede wszystkim przestrzenie unitarne (czyli zespolone). Wprowadzone pojęcia, własności i twierdzenia są na ogół (choć z wyjątkami) 
-ważne również w przestrzeniach euklidesowych.
+Having in mind applications, we wil mainly consider unitary (and so: complex) vector spaces. However, the introduced notions, properties and theorems are in general (with some exceptions) also true in Euclidean spaces.
 
 .. Podstawową własność iloczynu skalarnego przedstawia
 
@@ -188,22 +187,20 @@ ważne również w przestrzeniach euklidesowych.
 The Schwarz Inequality
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Twierdzenie 1. :math:`\,` (nierówność Schwarza)
+.. admonition:: Theorem 1. :math:`\,` (Schwarz inequality)
    
-   Dla dowolnych wektorów :math:`\,x,y\ ` unitarnej przestrzeni :math:`\,V(C)\ `
-   kwadrat modułu iloczynu skalarnego jest nie większy od iloczynu kwadratów skalarnych
-   tych wektorów:
-   
+   For any vectors :math:`\,x,y\ ` belonging to a unitary vector space :math:`\,V(C):`
+      
    .. math::
       :label: Schwarz
       
       |\,\langle x,y\rangle\,|^2\ \ \leq\ \ 
       \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(C)\,.
 
-**Dowód.** :math:`\,` Gdy :math:`\,y=\theta,\ \,` słaba nierówność :eq:`Schwarz` realizuje się jako równość: :math:`\,0\,\leq 0\,.`
+**Proof.** :math:`\,` If :math:`\,y=\theta,\ \,` the inequality :eq:`Schwarz` reads: :math:`\,0\,\leq 0\,.`
 
-Załóżmy więc, że :math:`\ \,y\neq\theta\,.\ \,` 
-Wtedy, :math:`\,` dla dowolnego :math:`\,\alpha\in C:`
+We may assume then that :math:`\ \,y\neq\theta\,.\ \,` 
+Then, :math:`\,` for any :math:`\,\alpha\in C:`
 
 .. math::
    
@@ -215,7 +212,7 @@ Wtedy, :math:`\,` dla dowolnego :math:`\,\alpha\in C:`
    \langle x,x\rangle\ -\ \alpha\,\langle x,y\rangle\ -\ 
    \alpha^*\,\langle x,y\rangle^*\ +\ \alpha^*\alpha\ \langle y,y\rangle\ \ \geq\ \ 0\,.
 
-Podstawiamy teraz :math:`\ \ \alpha\ =\ 
+In particular, we may substitute :math:`\ \ \alpha\ =\ 
 \displaystyle\frac{\langle x,y\rangle^*}{\langle y,y\rangle}\,:`
 
 .. math::
@@ -225,7 +222,7 @@ Podstawiamy teraz :math:`\ \ \alpha\ =\
    \frac{\langle x,y\rangle}{\langle y,y\rangle}\ \frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ 
    \langle y,y\rangle\ \ \geq\ \ 0\,.
 
-Mnożąc obie strony nierówności przez :math:`\ \;\langle y,y\rangle>0\ \;` otrzymujemy
+If we multilpy both sides of the inequality by :math:`\ \;\langle y,y\rangle>0,\ \;` we obtain
 
 .. math::
    
@@ -234,19 +231,18 @@ Mnożąc obie strony nierówności przez :math:`\ \;\langle y,y\rangle>0\ \;` ot
 
    \langle x,x\rangle\,\langle y,y\rangle\ \ \geq\ \ |\,\langle x,y\rangle\,|^2\,.
 
-Można udowodnić, że słaba nierówność :eq:`Schwarz` przechodzi w równość wtedy i tylko wtedy,
-gdy wektory :math:`\,x,y\ ` są liniowo zależne. Dla przestrzeni euklidesowej nierówność 
-przyjmuje postać:
+One can prove that the inequality :eq:`Schwarz` turns into equality if and only if vectors
+:math:`\,x,y\ ` are linearly independent. In a Euclidean space the inequality is of the form:
 
 .. math::
    :label: Schwarz_real
    
    \langle x,y\rangle^2\ \ \leq\ \ \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V(R)\,.   
 
-**Przykłady.**
+**Examples.**
 
-1.) Nierówność Schwarza zastosowana do przestrzeni unitarnej :math:`\,C^n\ ` stwierdza, że dla
-:math:`\\` dowolnych dwóch ciągów liczb zespolonych 
+1.) Schwarz Inequality applied to the space :math:`\,C^n\ ` states that
+:math:`\\` for any two complex sequences 
 :math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,\ \ (\beta_1,\,\beta_2,\,\dots,\,\beta_n) :`
 
 .. math::
@@ -256,10 +252,9 @@ przyjmuje postać:
    \left(\ \sum_{i\,=\,1}^n\ |\,\alpha_i|^2\,\right)\ 
    \left(\ \sum_{i\,=\,1}^n\ |\,\beta_i\,|^2\,\right)\,.
 
-2.) Odnosząc nierówność :eq:`Schwarz_real` do przestrzeni euklidesowej :math:`\,R^n\ `
-otrzymujemy dla dowolnych dwóch ciągów liczb rzeczywistych 
-:math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,\ \ (\beta_1,\,\beta_2,\,\dots,\,\beta_n)\ `
-warunek:
+2.) In a Euclidean space :math:`\,R^n,\ ` for any two real sequences 
+:math:`\ \,(\alpha_1,\,\alpha_2,\,\dots,\,\alpha_n)\,,\ \ (\beta_1,\,\beta_2,\,\dots,\,\beta_n),\ `
+the inequality :eq:`Schwarz_real` implies:
 
 .. math::
    
@@ -268,8 +263,8 @@ warunek:
    \left(\ \sum_{i\,=\,1}^n\ \alpha_i^2\,\right)\ 
    \left(\ \sum_{i\,=\,1}^n\ \beta_i^2\,\right)\,,
 
-3.) W przestrzeni :math:`\,L^2\ ` funkcji całkowalnych w kwadracie modułu 
-dla dowolnych funkcji :math:`\,\varphi,\psi\ ` spełniona jest nierówność
+3.) In a unitary space :math:`\,L^2\ ` of square-inegrable functions, any functions
+:math:`\,\varphi,\psi\ ` satisfy the inequality
 
 .. math::
    
@@ -278,20 +273,20 @@ dla dowolnych funkcji :math:`\,\varphi,\psi\ ` spełniona jest nierówność
    \int_{-\infty}^{+\infty}\ |\,\varphi(x)\,|^2\ dx\ \ \cdot\  
    \int_{-\infty}^{+\infty}\ |\,\psi(x)\,|^2\ dx\,.
 
-4.) W euklidesowej przestrzeni wektorów geometrycznych z iloczynem skalarnym
+4.) In a Euclidean space of geometric vectors with an inner product
 
 .. math::
    
    \vec{a}\cdot\vec{b}\,=\,|\vec{a}|\,|\vec{b}|\,\cos\phi\,,
 
-nierówność Schwarza daje: :math:`\quad (\vec{a}\cdot\vec{b})^2\ \,\leq\ \,|\vec{a}|^2\ |\vec{b}|^2\,,
-\quad\text{czyli}\quad |\,\vec{a}\cdot\vec{b}\,|\ \,\leq\ \,|\vec{a}|\ |\vec{b}|\,.`
+Schwarz Inequality gives: :math:`\quad (\vec{a}\cdot\vec{b})^2\ \,\leq\ \,|\vec{a}|^2\ |\vec{b}|^2\,,
+\quad\text{that is}\quad |\,\vec{a}\cdot\vec{b}\,|\ \,\leq\ \,|\vec{a}|\ |\vec{b}|\,.`
 
 .. (\vec{a}\cdot\vec{b})^2\ \,\leq\ \,|\vec{a}|^2\ |\vec{b}|^2\,,
    \qquad\text{czyli}\qquad
    |\,\vec{a}\cdot\vec{b}\,|\ \,\leq\ \,|\vec{a}|\ |\vec{b}|\,,
 
-Warunek ten jest skądinąd oczywisty, :math:`\,` bo :math:`\ \,|\cos\phi\,|\,\leq\,1\,.`
+This condition though is quite obvious, :math:`\,` because :math:`\ \,|\cos\phi\,|\,\leq\,1\,.`
 
 
 

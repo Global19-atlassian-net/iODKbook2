@@ -2,40 +2,36 @@
 Change of Basis
 ---------------
 
-Jeżeli w przestrzeni wektorowej została wybrana baza, to każdy wektor jest jednoznacznie
-określony przez swoje współrzędne, a każdy operator liniowy :math:`\,` - :math:`\,` przez 
-swoją macierz w tej bazie. W różnych bazach ten sam wektor ma jednak różne współrzędne,
-a ten sam operator :math:`\,` - :math:`\,` różne macierze.
+If we choose a basis in a vector space, then each vector is uniquely characterised by its coordinates, and each linear operator :math:`\,` - :math:`\,` by its matrix in this basis. However, in different bases one vector has different coordinates, and one linear operator :math:`\,` - :math:`\,` different matrices.
 
-W tej sekcji wyprowadzimy wzory, opisujące transformację współrzędnych wektorów 
-i macierzy operatorów liniowych przy przejściu od jednej do drugiej bazy.
+In this section we introduce formulae which describe a change of vector coordinates and matrices of linear operators under the change of basis.
 
 Change-of-Basis Matrix
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Niech układy :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
-i :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ ` będą dwiema bazami
-przestrzeni wektorowej :math:`\,V\ ` nad ciałem :math:`\,K.`
+Let :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
+and :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ ` be two bases of a vector space :math:`\,V\ ` over a field :math:`\,K.`
 
-.. admonition:: Lemat.
+.. admonition:: Lemma.
    
-   Przekształcenie liniowe :math:`\ T:\,V\rightarrow V,\ ` zadane równaniem 
+   A linear transformation :math:`\ T:\,V\rightarrow V\ ` given by
    
    .. math::
    
       Tv_i\ :\,=\ v_i'\,,\qquad i=1,2,\dots,n,
    
-   jest automorfizmem przestrzeni wektorowej :math:`\,V.\ \\`
-   Nazywamy go :math:`\,` *automorfizmem przejścia* :math:`\,` 
-   od bazy :math:`\ \mathcal{B}\ ` do bazy :math:`\ \mathcal{B'}.`
+   is an automorphism of the vector space :math:`\,V.\ \\`
+   We call it an :math:`\,` *automorphism of transition* :math:`\,` 
+   from basis :math:`\ \mathcal{B}\ ` to basis :math:`\ \mathcal{B'}.`
 
 .. które przekształca wektory bazy :math:`\ \mathcal{B}\ ` w odpowiednie wektory
    bazy :math:`\ \mathcal{B}':`
 
-**Dowód.** :math:`\, \\` 
-Zadanie obrazów wektorów bazy :math:`\ \mathcal{B}\ ` określa przekształcenie liniowe :math:`\,T\ ` jednoznacznie (patrz wniosek do Twierdzenia 5.).
+**Proof.** :math:`\, \\` 
+A linear transformation :math:`\,T\ ` is uniquely defined if we fix images of vectors
+from basis :math:`\ \mathcal{B}\ ` (cf. Corollary to Theorem 5.).
 
-Dla dowolnego wektora :math:`\displaystyle\ \,v=\sum_{i\,=\,1}^n\ a_i\,v_i\,\in\,V\ \,` mamy
+For a vector :math:`\displaystyle\ \,v=\sum_{i\,=\,1}^n\ a_i\,v_i\,\in\,V\ \,` we have
 
 .. math::
    
@@ -43,30 +39,27 @@ Dla dowolnego wektora :math:`\displaystyle\ \,v=\sum_{i\,=\,1}^n\ a_i\,v_i\,\in\
    \sum_{i\,=\,1}^n\ a_i\;Tv_i\ \ =\ \ \sum_{i\,=\,1}^n\ a_i\,v_i'\,.
 
 
-Wektor, którego współrzędnymi w bazie :math:`\ \mathcal{B}\ \,` są 
-:math:`\ \,\,a_1,\,a_2,\,\dots,\,a_n\,,\ \,`
-jest przekształcony w wektor o tych samych współrzędnych w bazie :math:`\ \mathcal{B}'.\ `
-Ponieważ, przy ustalonej bazie, przyporządkowanie wektorom układów współrzędnych 
-jest wzajemnie jednoznaczne, 
-przekształcenie :math:`\ T\ ` jest endomorfizmem bijektywnym, czyli automorfizmem.
+Hence, a vector with coordinates :math:`\ \,\,a_1,\,a_2,\,\dots,\,a_n\,\ \,` in basis :math:`\ \mathcal{B}\ \,` is mapped to a vector with the same coordinates in basis :math:`\ \mathcal{B}'.\ `
+Recall that in a vector space with a chosen basis the vector coordiates are determined uniquely.
+Therefore the transformation :math:`\ T\ ` is a bijective endomorphism, or in other words, an automorphism.
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   | *Macierz przejścia* :math:`\ \boldsymbol{S}\ ` 
-     od bazy :math:`\ \mathcal{B}\ ` do bazy :math:`\ \mathcal{B}'\ `
-     przestrzeni wektorowej :math:`\,V\,` 
-   | jest macierzą automorfizmu przejścia :math:`\,T\ ` 
-     w bazie :math:`\,\mathcal{B}:\quad\boldsymbol{S}\ :\,=\ M_{\mathcal{B}}(T)\,.`
+   | A *transition matrix* :math:`\ \boldsymbol{S}\ ` 
+     from basis :math:`\ \mathcal{B}\ ` to basis :math:`\ \mathcal{B}'\ `
+     of a vector space :math:`\,V\,` 
+   | is a matrix of an automorphism of transition :math:`\,T\ ` 
+     in the basis :math:`\,\mathcal{B}:\quad\boldsymbol{S}\ :\,=\ M_{\mathcal{B}}(T)\,.`
 
-Niech :math:`\ \boldsymbol{S}\ =\ [\,s_{ij}\,]_{n\times n}\,.\ `
-Z definicji macierzy operatora liniowego wynikają związki
+Let :math:`\ \boldsymbol{S}\ =\ [\,s_{ij}\,]_{n\times n}\,.\ `
+Definition of matrix of a linear operator implies the relations
 
 .. math::
    :label: base_0
 
    \begin{array}{lcl}
    & & v_j'\;=\ Tv_j\;=\ \displaystyle\sum_{i\,=\,1}^n\ s_{ij}\:v_i\,,\qquad j=1,2,\dots,n\,, \\ \\
-   \text{czyli} & \qquad\quad &
+   \text{that is} & \qquad\quad &
    \begin{array}{l}
    v_1'\ =\ s_{11}\,v_1\,+\ s_{21}\,v_2\,+\ \dots\ +\ s_{n1}\,v_n \\
    v_2'\ =\ s_{12}\,v_1\,+\ s_{22}\,v_2\,+\ \dots\ +\ s_{n2}\,v_n \\
@@ -75,14 +68,15 @@ Z definicji macierzy operatora liniowego wynikają związki
    \end{array}
    \end{array}
 
-z których wynika praktyczny sposób konstrukcji macierzy przejścia:
+which give us a practical method to construct transition matrix:
 
-.. admonition:: Wniosek 1. :math:`\\`
+.. admonition:: Corollary 1. :math:`\\`
    
-   :math:`j`-ta kolumna macierzy przejścia :math:`\ \boldsymbol{S}\ `
-   od bazy :math:`\ \mathcal{B}\ ` do bazy :math:`\ \mathcal{B}'\ ` przestrzeni :math:`\,V\,` 
-   jest kolumną współrzędnych :math:`\,` (w bazie :math:`\ \mathcal{B}`) :math:`\,`
-   :math:`j`-tego wektora bazy :math:`\ \mathcal{B}',\ \ j=1,2,\dots,n:`
+   The :math:`j`-th column of transition matrix :math:`\ \boldsymbol{S}\ `
+   from basis :math:`\ \mathcal{B}\ ` to :math:`\ \mathcal{B}'\ ` of 
+   vector space :math:`\,V\,` 
+   is a column of coordinates :math:`\,` (in basis :math:`\ \mathcal{B}`) :math:`\,`
+   of the :math:`j`-th vector from basis :math:`\ \mathcal{B}',\ \ j=1,2,\dots,n:`
    
    .. math::
       :label: S_col
@@ -92,25 +86,22 @@ z których wynika praktyczny sposób konstrukcji macierzy przejścia:
                                      \dots\,|\,
                                      I_{\mathcal{B}}(v_n')\,\right]\,.
 
-Istotną własność macierzy przejścia stwierdza
+A crucial property of transition matrices states
 
-.. admonition:: Wniosek 2. 
+.. admonition:: Corollary 2. 
    
-   Macierz przejścia jest nieosobliwa: :math:`\ \ \det\,\boldsymbol{S}\neq 0\,.`
+   Transition matrix is nondegenerate: :math:`\ \ \det\,\boldsymbol{S}\neq 0\,.`
 
-**Dowód.** :math:`\,` Odwzorowanie :math:`\,I_{\mathcal{B}},\ ` jako izomorfizm
-przestrzeni :math:`\,V\ ` na przestrzeń :math:`\,K^n,\ ` zachowuje liniową niezależność wektorów.
-Z liniowej niezależności wektorów :math:`\ v_1',\,v_2',\,\dots,\,v_n'\ ` bazy :math:`\ \mathcal{B'}\ `
-wynika więc liniowa niezależność kolumn macierzy :math:`\ \boldsymbol{S},\ \,` 
-a to implikuje niezerową wartość jej wyznacznika.
+**Proof.** :math:`\,` The mapping :math:`\,I_{\mathcal{B}},\ ` being an isomorphism of the space :math:`\,V\ ` onto the space :math:`\,K^n,\ ` preserves linear independence of vectors. Linear independence of vectors :math:`\ v_1',\,v_2',\,\dots,\,v_n'\ ` 
+from the basis :math:`\ \mathcal{B'}\ ` implies then linear independence of columns of the matrix :math:`\ \boldsymbol{S},\ \,` which further implies nonvanishing of its determinant.
 
-**Przykład.**
+**Example.**
 
-Rozważmy trójwymiarową przestrzeń :math:`\,V\ ` z bazami 
-:math:`\ \mathcal{B}=(v_1,\,v_2,\,v_3)\ \,\text{i}\ \ \mathcal{B'}=(v_1',\,v_2',\,v_3'),\ \,`
-gdzie :math:`\ \ v_1'=\,v_1,` :math:`\ \ v_2'=\,v_1+\,v_2,` :math:`\ \ v_3'=\,v_1+\,v_2+\,v_3\,.`
+Consider 3-dimensional vector space :math:`\,V\ ` with bases 
+:math:`\ \mathcal{B}=(v_1,\,v_2,\,v_3)\ ` and :math:`\ \mathcal{B'}=(v_1',\,v_2',\,v_3'),\ \,`
+where :math:`\ \ v_1'=\,v_1,` :math:`\ \ v_2'=\,v_1+\,v_2,` :math:`\ \ v_3'=\,v_1+\,v_2+\,v_3\,.`
 
-Związki pomiędzy wektorami obydwu baz można zapisać jako
+Relations between vectors from the two bases may be written as
 
 .. math::
    
@@ -119,23 +110,23 @@ Związki pomiędzy wektorami obydwu baz można zapisać jako
    v_2'\ =\ 1\cdot v_1\,+\;1\cdot v_2\,+\;0\cdot v_3 \\
    v_3'\ =\ 1\cdot v_1\,+\;1\cdot v_2\,+\;1\cdot v_3\,,
    \end{array}
-   \qquad\text{skąd macierz przejścia}\qquad
+   \qquad\text{and thus the transition matrix}\qquad
    \boldsymbol{S}\ =\ 
    \left[\begin{array}{ccc} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{array}\right]\,. 
 
 Change-of-Basis Transformation Formulae
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Odtąd bazy :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
-i :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ `
-będą nazywane odpowiednio starą i nową bazą.
-Relacje :eq:`base_0` pomiędzy ich wektorami można przepisać następująco:
+From now on, the bases :math:`\ \mathcal{B}\,=\,(v_1,\,v_2,\,\dots,\,v_n)\ ` 
+and :math:`\ \,\mathcal{B'}\,=\,(v_1',\,v_2',\,\dots,\,v_n')\ `
+will be called the old and the new basis respectively.
+The relations :eq:`base_0` between their vectors may be writtes as:
 
 .. math::
 
    \begin{array}{lcl}
    & & v_i'\;=\ Tv_i\;=\ \displaystyle\sum_{j\,=\,1}^n\ s_{ij}^T\:v_j\,,\qquad i=1,2,\dots,n\,, \\ \\
-   \text{czyli} & \qquad\quad &
+   \text{and thus} & \qquad\quad &
    \begin{array}{l}
    v_1'\ =\ s_{11}^T\,v_1\,+\ s_{12}^T\,v_2\,+\ \dots\ +\ s_{1n}^T\,v_n \\
    v_2'\ =\ s_{21}^T\,v_1\,+\ s_{22}^T\,v_2\,+\ \dots\ +\ s_{2n}^T\,v_n \\
@@ -144,7 +135,7 @@ Relacje :eq:`base_0` pomiędzy ich wektorami można przepisać następująco:
    \end{array}
    \end{array}
 
-Ten układ :math:`\,n\ ` równości jest równoważny jednemu równaniu macierzowemu
+This system of :math:`\,n\ ` equalities is equivalent to a matrix equation 
 
 .. math::
    :label: trans_base
@@ -154,17 +145,16 @@ Ten układ :math:`\,n\ ` równości jest równoważny jednemu równaniu macierzo
    \boldsymbol{S}^{\,T}\,
    \left[\begin{array}{c} v_1 \\ v_2 \\ \dots \\ v_n \end{array}\right]\,.
    
-.. admonition:: Reguła 0. :math:`\,` Transformacja wektorów bazy.
+.. admonition:: Rule 0. :math:`\,` Transformation of basis vectors.
    
-   Kolumna złożona z wektorów nowej bazy równa się iloczynowi transponowanej macierzy przejścia 
-   przez kolumnę, złożoną z wektorów starej bazy.
+   A column consisting of vectors from the new basis is equal to a product of
+   transposed transition matrix and a column consisting of vectors from the old basis.
 
-Warto zauważyć, że (inaczej niż w dotychczasowych równaniach macierzowych) elementami kolumn
-po obydwu stronach są nie *skalary* (liczby), ale *wektory*.
-Natomiast macierz w tym równaniu jest zwykłą macierzą liczbową.
+It is worth to notice that (contrary to matrix equations we have seen so far) the elements of columns on both sides are not *scalars* (numbers), but *vectors*.
+However, the matrix in this equation is a standard numerical matrix.
 
-Aby określić sposób transformowania się współrzędnych wektorów przy zmianie bazy,
-zapiszemy przedstawienie dowolnego wektora :math:`\,v\in V\ ` w starej i nowej bazie:
+To find out the transformation of vector coordinates under a change of basis, we write 
+a vector :math:`\,v\in V\ ` with respect to the old and the new basis:
 
 .. math::
    :nowrap:
@@ -177,13 +167,13 @@ zapiszemy przedstawienie dowolnego wektora :math:`\,v\in V\ ` w starej i nowej b
                                         \sum_{j\,=\,1}^n\ s_{ij}\:a_j'\right)\;v_i\,.
    \end{eqnarray*}
 
-Z jednoznaczności przedstawienia wektora w bazie :math:`\ \mathcal{B}\ ` wynikają związki
+By uniqueness of representation of a vector in basis :math:`\, \mathcal{B},` 
 
 .. math::
    
    \begin{array}{lcl}
    & & a_i\ =\ \displaystyle\sum_{j\,=\,1}^n\ s_{ij}\:a_j'\,,\qquad i=1,2,\dots,n\,, \\ \\
-   \text{czyli} & \qquad\quad &
+   \text{that is} & \qquad\quad &
    \begin{array}{l}
    a_1\ =\ s_{11}\,a_1'\,+\ s_{12}\,a_2'\,+\ \dots\ +\ s_{1n}\,a_n' \\
    a_2\ =\ s_{21}\,a_1'\,+\ s_{22}\,a_2'\,+\ \dots\ +\ s_{2n}\,a_n' \\
@@ -192,7 +182,7 @@ Z jednoznaczności przedstawienia wektora w bazie :math:`\ \mathcal{B}\ ` wynika
    \end{array}
    \end{array}
 
-Przechodząc do zapisu macierzowego, otrzymujemy
+If we write it in a matrix form, we obtain
 
 .. math::
    :label: trans_coord
@@ -205,28 +195,24 @@ Przechodząc do zapisu macierzowego, otrzymujemy
    \ \,=\ \,\boldsymbol{S}^{-1}\,
    \left[\begin{array}{c} a_1 \\ a_2 \\ \dots \\ a_n \end{array}\right]\,.
 
-.. admonition:: Reguła 1. :math:`\,` Transformacja współrzędnych wektora.
+.. admonition:: Rule 1. :math:`\,` Transformation of vector coordinates.
    
-   .. Kolumna współrzędnych wektora w starej bazie równa się iloczynowi macierzy przejścia 
-      przez kolumnę współrzędnych w nowej bazie.
-
-   Kolumna współrzędnych wektora w nowej bazie równa się iloczynowi odwrotności macierzy przejścia 
-   przez kolumnę współrzędnych w starej bazie.
-
+   .. A column of vector coordinates in the new basis is equal to a product of 
+      an inverse of transition matrix and a column of the coordinates in the old basis.
+  
    .. math::
       
       I_{\mathcal{B}'}(v)\ \ =\ \ \boldsymbol{S}^{-1}\,\cdot\,I_{\mathcal{B}}(v)\,,\qquad
       v\in V.
       
 
-Zajmiemy się teraz transformacją macierzy operatora liniowego.
+We discuss now transformation of a matrix of a linear operator. 
 
-Niech :math:`\,F\in\text{End}(V),\quad 
+Let :math:`\,F\in\text{End}(V),\quad 
 M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,f_{ij}\,]_{n\times n}\,,\quad
 M_{\mathcal{B}'}(F)=\boldsymbol{F}'=[\,f_{ij}'\,]_{n\times n}\,.`
 
-Wychodząc z definicji macierzy operatora :math:`\,F\ ` w bazie :math:`\,\mathcal{B}'\ ` 
-otrzymujemy (:math:`j=1,2,\dots,n`):
+Starting from definition of a matrix of the opeartor :math:`\,F\ ` in basis :math:`\,\mathcal{B},\,` we obtain (:math:`j=1,2,\dots,n`):
 
 .. math::
    :nowrap:
@@ -238,8 +224,8 @@ otrzymujemy (:math:`j=1,2,\dots,n`):
    (T^{-1}\circ\,F\,\circ\,T)\ v_j & = & \sum_{i\,=\,1}^n\ f_{ij}'\ v_i\,.
    \end{eqnarray*}
 
-Ostatnie równanie stwierdza, że :math:`\,\boldsymbol{F}'\ ` jest macierzą 
-:math:`\,` (w bazie :math:`\,\mathcal{B}`) :math:`\,` operatora
+The last equation states that :math:`\,\boldsymbol{F}\,` is a matrix 
+:math:`\,` (in basis :math:`\,\mathcal{B}\,`) :math:`\,` of the operator
 :math:`\ \,T^{-1}\circ\,F\,\circ\,T` :
 
 .. math::
@@ -251,8 +237,8 @@ Ostatnie równanie stwierdza, że :math:`\,\boldsymbol{F}'\ ` jest macierzą
    [\,M_{\mathcal{B}}(T)\,]^{-1}\,\cdot\,M_{\mathcal{B}}(F)\,\cdot\,M_{\mathcal{B}}(T)\ \,=\ \,
    \boldsymbol{S}^{-1}\,\boldsymbol{F}\ \boldsymbol{S}\,.
 
-W ten sposób macierz :math:`\,\boldsymbol{F}'\ ` operatora liniowego :math:`\,F\ `
-w bazie :math:`\,\mathcal{B}'\ ` dana jest przez
+In this way, the matrix :math:`\,\boldsymbol{F}'\ ` of the linear operator
+:math:`\,F\ ` in basis :math:`\,\mathcal{B}'\ ` is given by
 
 .. math::
    :label: F_prim
@@ -273,10 +259,10 @@ w bazie :math:`\,\mathcal{B}'\ ` dana jest przez
    wyraża się wzorem
 
    
-.. admonition:: Reguła 2. :math:`\,` Transformacja macierzy operatora liniowego.
+.. admonition:: Rule 2. :math:`\,` Transformation of a matrix of a linear operator.
    
-   Przy zmianie bazy opisanej przez macierz przejścia :math:`\,\boldsymbol{S}\ `
-   macierz operatora liniowego :math:`\,F\ ` transformuje się według wzoru:
+   Under a change of basis described by the transition matrix :math:`\,\boldsymbol{S},\ `
+   a matrix of the linear operator :math:`\,F\ ` changes according to the formula:
    
    .. math::
       
@@ -301,41 +287,42 @@ w bazie :math:`\,\mathcal{B}'\ ` dana jest przez
    \boldsymbol{S}^{-1}\,\cdot\,M_{\mathcal{B}}(F)\,\cdot\,\boldsymbol{S}\,.
    \end{array}
 
-**Uwaga.**
+**Remark.**
 
-Z porównania wzorów :eq:`trans_base` oraz :eq:`trans_coord` wynika, że przy zmianie bazy
-współrzędne wektorów transformują się inaczej niż wektory bazy, :math:`\,` chyba że 
+From comparison of the formulae :eq:`trans_base` and :eq:`trans_coord`, we see that 
+under a change of basis the vector coordinates change differently than the basis vectors, :math:`\,` unless 
 
 .. math::
    :label: orth_mat
    
    \boldsymbol{S}^{-1}\;=\ \boldsymbol{S}^{\,T}\,,
-   \qquad\text{czyli}\qquad
+   \qquad\text{that is}\qquad
    \boldsymbol{S}^{\,T}\boldsymbol{S}\ =\ \boldsymbol{I}_n\,.
 
-Macierz :math:`\,\boldsymbol{S}\in M_n(K)\ ` spełniająca warunek :eq:`orth_mat` 
-nazywa się :math:`\,` *macierzą ortogonalną*.
+A matrix :math:`\,\boldsymbol{S}\in M_n(K)\ ` satisfying the condition :eq:`orth_mat` 
+is called an :math:`\,` *orthogonal matrix*.
 
-Przykładem jest macierz :math:`\,\boldsymbol{S}\,` przedstawiająca obrót 
-bazy :math:`\,\mathcal{B}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ ` trójwymiarowej przestrzeni
-wektorów geometrycznych, gdzie :math:`\,(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ ` 
-jest trójką wzajemnie prostopadłych wektorów jednostkowych.
-Ortogonalne są również macierze permutacji.
+An example of an orthogonal matrix may be a matrix :math:`\,\boldsymbol{S}\,` 
+representating rotation of the basis :math:`\,\mathcal{B}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ ` 
+of 3-dimensional space of geometric vectors, where :math:`\,(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ ` 
+is a triple of mutually perpendicular unit vectors with right-handed coordinates.
+Matrices of permutation are also orthogonal.
 
 .. Innym przykładem mogą być macierze permutacji.
   
-**Ćwiczenie.**
+**Exercise.**
 
-1. Uzasadnij, że macierz przejścia :math:`\ \boldsymbol{S}\ ` od bazy :math:`\,\mathcal{B}\ `
-   do bazy :math:`\,\mathcal{B}'\ ` można równoważnie zdefiniować 
-   jako macierz automorfizmu przejścia :math:`\,T\ ` w nowej bazie :math:`\,\mathcal{B}':`
+1. Justify that transition matrix :math:`\ \boldsymbol{S}\ ` from basis
+   :math:`\,\mathcal{B}\ ` to :math:`\,\mathcal{B}'\ ` may be equivalently defined 
+   as a matrix of a transition automorphism :math:`\,T\ ` 
+   in the new basis :math:`\,\mathcal{B}':`
    
    .. math::
       
       \boldsymbol{S}\ :\,=\ M_{\mathcal{B}}(T)\ =\ M_{\mathcal{B}'}(T)\,.
 
-2. W uzupełnieniu wyprowadzenia wzoru :eq:`F_prim` pokaż, 
-   że jeżeli :math:`\,T\in\text{Aut}(V),\ ` to
+2. Complete discussion leading to a formula :eq:`F_prim` by proving that
+   for :math:`\,T\in\text{Aut}(V),\ ` we have
 
    .. math::
       
@@ -344,11 +331,11 @@ Ortogonalne są również macierze permutacji.
 Examples
 ~~~~~~~~
 
-**Przykład 0.**
+**Example 0.**
 
-W przestrzeni :math:`\,R^4\,` należy znaleźć macierz przejścia:
+In the space :math:`\,R^4\,` find a transition matrix :
 
-a. | od bazy kanonicznej :math:`\ \mathcal{E}\,=\,
+a. | from the canonical basis :math:`\ \mathcal{E}\,=\,
      (\boldsymbol{e}_1,\,\boldsymbol{e}_2,\,\boldsymbol{e}_3,\,\boldsymbol{e}_4)\ =\ 
      \left(\ 
      \left[\begin{array}{c} 1 \\ 0 \\ 0 \\ 0 \end{array}\right]\,,  
@@ -357,7 +344,7 @@ a. | od bazy kanonicznej :math:`\ \mathcal{E}\,=\,
      \left[\begin{array}{c} 0 \\ 0 \\ 0 \\ 1 \end{array}\right]
      \ \right)`
    |
-   | do bazy :math:`\ \mathcal{F}\,=\,
+   | to :math:`\ \mathcal{F}\,=\,
      (\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\boldsymbol{f}_3,\,\boldsymbol{f}_4)\ =\ 
      \left(\ 
      \left[\begin{array}{r}  1 \\  2 \\ -1 \\ 0 \end{array}\right]\,,  
@@ -366,9 +353,9 @@ a. | od bazy kanonicznej :math:`\ \mathcal{E}\,=\,
      \left[\begin{array}{r} -1 \\ -1 \\  0 \\ 1 \end{array}\right]
      \ \right)\,.`
 
-b. | od bazy :math:`\,\mathcal{F}\,=\,
+b. | from basis :math:`\,\mathcal{F}\,=\,
      (\boldsymbol{f}_1,\,\boldsymbol{f}_2,\,\boldsymbol{f}_3,\,\boldsymbol{f}_4)`
-   | do bazy :math:`\,\mathcal{G}\,=\,
+   | to :math:`\,\mathcal{G}\,=\,
      (\boldsymbol{g}_1,\,\boldsymbol{g}_2,\,\boldsymbol{g}_3,\,\boldsymbol{g}_4)\,=\,
      \left(\ 
      \left[\begin{array}{r}  2 \\ 1 \\ 0 \\ 1 \end{array}\right],  
@@ -377,10 +364,10 @@ b. | od bazy :math:`\,\mathcal{F}\,=\,
      \left[\begin{array}{r}  1 \\ 3 \\ 1 \\ 2 \end{array}\right]
      \ \right).`
 
-**Rozwiązanie.**
+**Solution.**
 
-Wprowadzamy macierz :math:`\,\boldsymbol{F},\ ` złożoną kolumnowo 
-z wektorów bazy :math:`\,\mathcal{F}:`
+We start with a matrix :math:`\,\boldsymbol{F}\ ` whose columns consist of 
+vectors from a basis :math:`\,\mathcal{F}:`
 
 .. math::
    
@@ -392,8 +379,8 @@ z wektorów bazy :math:`\,\mathcal{F}:`
          -1 &  1 &  1 &  0 \\
           0 &  1 &  1 &  1 \end{array}\right]\,.
 
-Kolumny macierzy przejścia od bazy :math:`\,\mathcal{E}\,` do bazy :math:`\,\mathcal{F}\,`
-składają się ze współrzędnych wektorów bazy :math:`\ \mathcal{F}\ \,` w bazie :math:`\ \mathcal{E}:`
+The columns of transition matrix from the basis :math:`\,\mathcal{E}\,` to :math:`\,\mathcal{F}\,` consist of coordinates of the vectors from basis 
+:math:`\ \mathcal{F}\ \,` in basis :math:`\ \mathcal{E}:`
 
 .. math::
    
@@ -403,13 +390,13 @@ składają się ze współrzędnych wektorów bazy :math:`\ \mathcal{F}\ \,` w b
       I_{\mathcal{E}}(\boldsymbol{f}_3)\,|\,
       I_{\mathcal{E}}(\boldsymbol{f}_4)\,]\,.
 
-Ale w przestrzeni :math:`\,R^4\ ` każdy wektor jest kolumną swoich współrzędnych w bazie kanonicznej:
+Now recall that in the space :math:`\,R^4\ ` every vector is actually a column of its coordinates in the canonical basis:
 
 .. math::
    
    I_{\mathcal{E}}(\boldsymbol{x})\ =\ \boldsymbol{x}\,,\qquad \boldsymbol{x}\in R^4\,.
 
-W takim razie szukana macierz przejścia jest dana po prostu przez
+Hence, the transition matrix we are looking for is simply given by
 
 .. math::
    :label: S_EF
@@ -424,12 +411,9 @@ W takim razie szukana macierz przejścia jest dana po prostu przez
          -1 &  1 &  1 &  0 \\
           0 &  1 &  1 &  1 \end{array}\right]\,.
 
-**Wniosek** (uogólnienie).
+**Corollary** (generalisation).
 
-W przestrzeni :math:`\,K^n\ ` macierz przejścia od bazy kanonicznej :math:`\ \mathcal{E}\ ` 
-do bazy :math:`\,\mathcal{B}\ ` jest macierzą :math:`\,\boldsymbol{B},\ `
-otrzymaną przez zestawienie wektorów bazy :math:`\,\mathcal{B}\ `
-zapisanych w postaci kolumnowej.
+In the space :math:`\,K^n\,` transition matrix from the canonical basis :math:`\ \mathcal{E}\ ` to a basis :math:`\,\mathcal{B}\ ` is equal to a matrix :math:`\,\boldsymbol{B}\ ` whose columns are vectors from the basis  :math:`\,\mathcal{B}\ ` (taken in the same order).
 
 .. [\,\boldsymbol{f}_1\,|\,\boldsymbol{f}_2\,|\,\boldsymbol{f}_3\,|\,\boldsymbol{f}_4\,]\,=\,
    [\,\boldsymbol{g}_1\,|\,\boldsymbol{g}_2\,|\,\boldsymbol{g}_3\,|\,\boldsymbol{g}_4\,]\,=\,
@@ -440,8 +424,7 @@ zapisanych w postaci kolumnowej.
           0 & 2 &  1 & 1 \\
           1 & 2 &  2 & 2 \end{array}\right]\,.
 
-Przy opisie przejścia :math:`\ \mathcal{F}\rightarrow\mathcal{G}\ ` przydatna będzie,
-oprócz macierzy :math:`\,\boldsymbol{F},\ ` również macierz
+To describe a transition :math:`\ \mathcal{F}\rightarrow\mathcal{G}\ ` it will be useful to have, apart from a matrix :math:`\,\boldsymbol{F},\ ` also the matrix
 
 .. math::
    
@@ -453,30 +436,29 @@ oprócz macierzy :math:`\,\boldsymbol{F},\ ` również macierz
           0 & 2 &  1 & 1 \\
           1 & 2 &  2 & 2 \end{array}\right]\,.
 
-Z definicji (patrz wzór :eq:`base_0`), :math:`\,j`-ta kolumna macierzy 
+By definition (see formula :eq:`base_0`), the :math:`\,j`-th column of the transition matrix 
 :math:`\,\boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\equiv\boldsymbol{S}=
 [\,s_{ij}\,]_{4\times 4}(R)\ `
-przejścia od bazy :math:`\ \mathcal{F}\ ` do bazy :math:`\ \mathcal{G}\ ` jest 
-kolumną współrzędnych (w bazie :math:`\ \mathcal{F}`) :math:`\,j`-tego wektora
-bazy :math:`\ \mathcal{G}:`
+from basis :math:`\ \mathcal{F}\ ` to :math:`\ \mathcal{G}\ ` is
+equal to a column of coordinates (in basis :math:`\ \mathcal{F}\ `) of the :math:`\,j`-th vector from the basis :math:`\ \mathcal{G}:`
 
 .. math::
    :label: S_4
    
    \boldsymbol{g}_j\ =\ \sum_{i\,=\,1}^4\ s_{ij}\:\boldsymbol{f}_i\,,\qquad j=1,2,3,4.
 
-Relację :eq:`S_4` można zinterpretować w duchu kolumnowej reguły mnożenia macierzowego:
-:math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{G}\ ` jest kombinacją liniową
-kolumn macierzy :math:`\,\boldsymbol{F},\ ` o współczynnikach z :math:`\,j`-tej kolumny
-macierzy :math:`\,\boldsymbol{S},\ \ j=1,2,3,4.\ ` Oznacza to, że 
+The relation :eq:`S_4` may be interpreted by the column rule of matrix multiplication:
+the :math:`\,j`-th column of the matrix  :math:`\,\boldsymbol{G}\ ` is a linear combination
+of columns of matrix :math:`\,\boldsymbol{F}\ ` with coordinates from the :math:`\,j`-th column of the matrix  :math:`\,\boldsymbol{S},\ \ j=1,2,3,4.\ ` This means that 
 
 .. math::
    
    \boldsymbol{G}\ =\ \boldsymbol{F}\boldsymbol{S}\,.
 
-Macierz :math:`\,\boldsymbol{F},\ ` złożona z liniowo niezależnych kolumn
+The matrix :math:`\,\boldsymbol{F},\ ` composed of linearly independent columns
 :math:`\ \boldsymbol{f}_1\,,\,\boldsymbol{f}_2\,,\,\boldsymbol{f}_3\,,\,\boldsymbol{f}_4\,,\ `
-jest nieosobliwa: :math:`\ \det\,\boldsymbol{F}\neq 0,\ \,` a więc odwracalna. Stąd szukana macierz przejścia
+is nondegenerate: :math:`\ \det\,\boldsymbol{F}\neq 0,\ \,` and thus invertible. 
+Hence, the transition matrix
 
 .. math::
    :label: S_FG
@@ -485,24 +467,24 @@ jest nieosobliwa: :math:`\ \det\,\boldsymbol{F}\neq 0,\ \,` a więc odwracalna. 
    \boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\ =\ 
    \boldsymbol{F}^{-1}\,\boldsymbol{G}\,.
 
-**Wariant rozwiązania.**
+**Variant of a solution.**
 
-Niech :math:`\ T\in\text{Aut}(R^4)\ ` będzie automorfizmem przejścia
-od bazy :math:`\ \mathcal{F}\ ` do bazy :math:`\ \mathcal{G}.\ ` Wtedy
-szukana macierz przejścia jest macierzą automorfizmu :math:`\,T\,` w bazie 
-:math:`\,\mathcal{F}:\ \boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\equiv\boldsymbol{S}=
-M_{\mathcal{F}}(T).\ ` Ponadto 
+Let :math:`\ T\in\text{Aut}(R^4)\ ` be an automorphism of transition from 
+basis :math:`\ \mathcal{F}\ ` to :math:`\ \mathcal{G}.\ ` Then
+a transition matrix we are looking for is a matrix of the automorphism :math:`\,T\,` 
+in basis :math:`\,\mathcal{F}:\ \boldsymbol{S}_{\mathcal{F}\rightarrow\mathcal{G}}\equiv\boldsymbol{S}=
+M_{\mathcal{F}}(T).\ ` Moreover, 
 
 .. math::
    
    \boldsymbol{g}_j\,=\,T\,\boldsymbol{f}_j\,,
-   \qquad\text{skąd}\qquad
+   \qquad\text{and so}\qquad
    \boldsymbol{g}_j\,=\,\boldsymbol{T}\cdot\boldsymbol{f}_j\,,
    \qquad j=1,2,3,4\,,
 
-gdzie :math:`\ \,\boldsymbol{T}:\,=M_{\mathcal{E}}(T)\ \,` 
-jest macierzą automorfizmu :math:`\,T\ ` w bazie kanonicznej. 
-Na podstawie kolumnowej reguły mnożenia macierzowego stwierdzamy, że z równości wektorowych
+where :math:`\ \,\boldsymbol{T}:\,=M_{\mathcal{E}}(T)\ \,` 
+is a matrix of automorphism :math:`\,T\ ` in the canonical basis. 
+By the column rule of matrix multiplication, we state that vector equalities
 
 .. math::
    
@@ -511,18 +493,18 @@ Na podstawie kolumnowej reguły mnożenia macierzowego stwierdzamy, że z równo
    \boldsymbol{g}_3\,=\,\boldsymbol{T}\cdot\boldsymbol{f}_3\,,\quad
    \boldsymbol{g}_4\,=\,\boldsymbol{T}\cdot\boldsymbol{f}_4\,,
 
-wynika równość macierzowa
+imply an equality of matrices
 
 .. math::
    
    [\,\boldsymbol{g}_1\,|\,\boldsymbol{g}_2\,|\,\boldsymbol{g}_3\,|\,\boldsymbol{g}_4\,]\ =\ 
    \boldsymbol{T}\,\cdot\,
    [\,\boldsymbol{f}_1\,|\,\boldsymbol{f}_2\,|\,\boldsymbol{f}_3\,|\,\boldsymbol{f}_4\,]\,,
-   \qquad\text{czyli}\qquad
+   \qquad\text{that is}\qquad
    \boldsymbol{G}\ =\ \boldsymbol{T}\boldsymbol{F}\,.
 
-Stąd :math:`\ \,\boldsymbol{T}\equiv M_{\mathcal{E}}(T)\ =\ \boldsymbol{G}\boldsymbol{F}^{-1}.\ \,`
-Potrzebną macierz :math:`\,\boldsymbol{S}\equiv M_{\mathcal{F}}(T)\ ` można wyliczyć ze wzoru 
+Hence, :math:`\ \,\boldsymbol{T}\equiv M_{\mathcal{E}}(T)\ =\ \boldsymbol{G}\boldsymbol{F}^{-1}.\ \,`
+The necessary matrix :math:`\,\boldsymbol{S}\equiv M_{\mathcal{F}}(T)\ ` may be calculated from the formula 
 
 .. math::
    
@@ -530,8 +512,8 @@ Potrzebną macierz :math:`\,\boldsymbol{S}\equiv M_{\mathcal{F}}(T)\ ` można wy
                           M_{\mathcal{E}}(T)\,\cdot\,
                           \boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{F}}\,.
 
-Ale, jak zostało wcześniej pokazane (równanie :eq:`S_EF`):
-:math:`\ \,\boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{F}}=\boldsymbol{F},\ \,` wobec czego
+However, as we showed earlier (equation :eq:`S_EF`):
+:math:`\ \,\boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{F}}=\boldsymbol{F},\ \,` and thus
 
 .. math::
    
@@ -539,17 +521,16 @@ Ale, jak zostało wcześniej pokazane (równanie :eq:`S_EF`):
    \boldsymbol{F}^{-1}\,(\boldsymbol{G}\boldsymbol{F}^{-1})\,\boldsymbol{F}\ =\ 
    \boldsymbol{F}^{-1}\,\boldsymbol{G}\,.
 
-Dla sprawdzenia poprawności rozwiązania :eq:`S_FG` rozważmy szczególny przypadek, gdy
-baza :math:`\ \mathcal{F}\ \,` jest bazą kanoniczną: :math:`\ \mathcal{F}=\mathcal{E}.\ \,`
-Wtedy :math:`\ \boldsymbol{F}=\boldsymbol{I}_4\ \ ` i :math:`\,` dochodzimy do wzoru
-:math:`\ \boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{G}}\ =\ \boldsymbol{G},\ `
-zgodnego (przy innym oznaczeniu) z poprzednim wynikiem :eq:`S_EF`.
+To check correctness of the solution :eq:`S_FG`, let us consider a particular case when the basis :math:`\ \mathcal{F}\ \,` is the canonical basis: :math:`\ \mathcal{F}=\mathcal{E}.\ \,`
+Then :math:`\ \boldsymbol{F}=\boldsymbol{I}_4,\ \ ` and so we get a formula
+:math:`\ \boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{G}}\ =\ \boldsymbol{G}\ `
+which is consistent (under different notation) with a previous result :eq:`S_EF`.
 
 .. .. math::
    
    \boldsymbol{S}_{\mathcal{E}\rightarrow\mathcal{G}}\ =\ \boldsymbol{G}\,,
 
-Przechodząc do rachunków, trzeba obliczyć iloczyn macierzowy
+Now, turning to calculations, we have to find product of matrices
 
 .. math::
    
@@ -565,7 +546,7 @@ Przechodząc do rachunków, trzeba obliczyć iloczyn macierzowy
           0 & 2 &  1 & 1 \\
           1 & 2 &  2 & 2 \end{array}\right]\,.
 
-Komputerowe obliczenia przedstawiają się następująco:
+Computer calculations are the following:
 
 .. code-block:: python
 
@@ -586,27 +567,25 @@ Komputerowe obliczenia przedstawiają się następująco:
    [0 1 1 1]
    [0 0 1 0]
 
-**Przykład 1.**
+**Example 1.**
 
-W 4-wymiarowej przestrzeni :math:`\,V(R)\ ` wektor :math:`\,v\ ` ma w bazie
-:math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3,\,v_4)\ ` współrzędne :math:`\ 2,\ -3,\ 0,\ 4.\ `
-Jakie współrzędne ma ten wektor w bazie :math:`\,\mathcal{B}'=(v_1',\,v_2',\,v_3',\,v_4'),\ `
-gdzie
+In 4-dimensional space :math:`\,V(R)\ ` with basis :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3,\,v_4),\ ` the vector :math:`\,v\ ` has coordinates
+:math:`\ 2,\ -3,\ 0,\ 4.\ ` What are its coordinates in basis :math:`\,\mathcal{B}'=(v_1',\,v_2',\,v_3',\,v_4'),\ `
+where
 
 .. math::
    
    v_1'\,=\,-\ v_1\,,\quad v_2'\,=\,2\,v_1-\,v_3\,,\quad v_3'\,=\,v_1+\,v_2-\,v_3-\,2\,v_4\,,\quad
    v_4'\,=\,v_2-\,v_3+\,v_4\quad ?
 
-**Rozwiązanie.** :math:`\,` 
-Punktem wyjścia jest Reguła 1. przedstawiająca transformację współrzędnych:
+**Solution.** :math:`\,` 
+The starting point is the Rule 1. which describes transformation of vector coordinates:
 
 .. math::
    
    I_{\mathcal{B}'}(v)\ \ =\ \ \boldsymbol{S}^{-1}\,\cdot\,I_{\mathcal{B}}(v)\,.
 
-Macierz przejścia :math:`\,\boldsymbol{S}\ ` wyznaczymy z relacji
-pomiędzy wektorami starej i nowej bazy:
+The transition matrix :math:`\,\boldsymbol{S}\ ` may be determined from a relation between vectors from the old and the new basis:
 
 .. math::
    :nowrap:
@@ -618,7 +597,8 @@ pomiędzy wektorami starej i nowej bazy:
    v_4' & {\ } = {\ } &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4
    \end{alignat*}
 
-Mianowicie, na podstawie Wniosku 1. po definicji macierzy przejścia (równanie :eq:`S_col`) : 
+Namely, by Corollary 1. stated after definition of transition matrix 
+(equation :eq:`S_col`) : 
 
 .. math::
  
@@ -629,13 +609,11 @@ Mianowicie, na podstawie Wniosku 1. po definicji macierzy przejścia (równanie 
                               0 & -1 & -1 & -1 \\
                               0 &  0 & -2 &  1 \end{array}\right]\,.
 
-Z treści zadania:
-:math:`\quad I_{\mathcal{B}}(v)\ =\ 
-\left[\begin{array}{r} 2 \\ -3 \\ 0 \\ 4 \end{array}\right]\,;\quad`
-przy oznaczeniu
-:math:`\quad I_{\mathcal{B}'}(v)\ =\ 
-\left[\begin{array}{r} a_1' \\ a_2' \\ a_3' \\ a_4' \end{array}\right]\quad`
-mamy
+For our vector :math:`v`:
+:math:`\quad I_{\mathcal{B}}(v)\ =\ \left[\begin{array}{r} 2 \\ -3 \\ 0 \\ 4 \end{array}\right]\, .\quad`
+If we denote
+:math:`\quad I_{\mathcal{B}'}(v)\ =\ \left[\begin{array}{r} a_1' \\ a_2' \\ a_3' \\ a_4' \end{array}\right] ,\quad`
+then
 
 .. math::
    :label: ex_1
@@ -647,24 +625,24 @@ mamy
                               0 &  0 & -2 &  1 \end{array}\right]^{-1}\cdot\quad
    \left[\begin{array}{r} 2 \\ -3 \\ 0 \\ 4 \end{array}\right]\,.
 
-Dalsze obliczenia można wykonać dwoma sposobami. :math:`\\`
+Further calculations may be done in two ways. :math:`\\`
  
-**Sposób 1.** :math:`\,` Bezpośrednie wyliczenie macierzy odwrotnej do :math:`\,\boldsymbol{S}.`
+**Method 1.** :math:`\,` By direct calculation of an inverse of the matrix :math:`\,\boldsymbol{S}.`
 
-Macierz :math:`\,\boldsymbol{S}^{-1}\ ` można wyliczyć odręcznie, korzystając ze wzoru
+Matrix :math:`\,\boldsymbol{S}^{-1}\ ` may be calculated by hand from the formula 
 
 .. math::
    
    (\boldsymbol{S}^{-1})_{ij}\ \,=\ \ \frac{1}{\det\boldsymbol{S}}\ \ S_{ji}\,,\qquad
    i,j=1,2,\dots,n\,,
 
-gdzie :math:`\,S_{ij}\,` jest dopełnieniem algebraicznym elementu :math:`\,s_{ij}\,`
-macierzy :math:`\,\boldsymbol{S},\ \\`
-albo komputerowo, korzystając z funkcji wbudowanych do pakietu Sage. :math:`\\`
+where :math:`\,S_{ij}\,` is an algebraic complement of the element :math:`\,s_{ij}\,`
+of the matrix :math:`\,\boldsymbol{S},\ \\`
+or by a computer, using functions provided by Sage. :math:`\\`
 
-W drugim przypadku, po wyliczeniu macierzy :math:`\,\boldsymbol{S}^{-1}\ `
-można od razu wykonać mnożenie macierzowe po prawej stronie równania :eq:`ex_1`,
-co daje wynik w postaci kolumny współrzędnych wektora :math:`\,v\,` w bazie :math:`\,\mathcal{B}'.`
+In the second case, after computation of the matrix :math:`\,\boldsymbol{S}^{-1}\ `
+we can perform matrix multipliction on the right hand side of the equation :eq:`ex_1` straight away. The result is a column of coordinates of the vector :math:`\,v\,`
+in basis :math:`\,\mathcal{B}'.`
 
 .. code-block:: python
    
@@ -676,7 +654,7 @@ co daje wynik w postaci kolumny współrzędnych wektora :math:`\,v\,` w bazie :
    # Inverse of the matrix S:
    sage: S_1 = S.I
    
-   # Column of coordinates of the vector v in base B:
+   # Column of coordinates of the vector v in basis B:
    sage: I_B = vector(QQ,[2,-3,0,4]).column()
    
    sage: table([[S_1,'*',I_B,'=',S_1*I_B]])
@@ -696,14 +674,14 @@ co daje wynik w postaci kolumny współrzędnych wektora :math:`\,v\,` w bazie :
    \quad=\quad
    \left(\begin{array}{r} \frac{5}{3} \\ 3 \\ -\frac{7}{3} \\ -\frac{2}{3} \end{array}\right)
 
-Dla przejrzystego zapisu liczbowych elementów macierzy i wektorów obliczenia zostały wykonane w ciele :math:`\,Q\,` liczb wymiernych.
+For clear presentation of vectors and numerical elements of the matrix, the calculations have been done in a field :math:`\,Q\,` of rational numbers.
 
-**Odpowiedź.** :math:`\,` 
-Współrzędne wektora :math:`\,v\ ` w bazie :math:`\,\mathcal{B}'\ ` wynoszą:
+**Answer.** :math:`\,` 
+The coordinates of the vector :math:`\,v\ ` in basis :math:`\,\mathcal{B}'\ ` are:
 :math:`\textstyle\quad\frac{5}{3}\,,\ \ \ 3\,,\ \ -\ \frac{7}{3}\,,\ \ -\ \frac{2}{3}\,. \\`
 
-**Sposób 2.** :math:`\,` 
-Zamiast bezpośredniego wyliczania macierzy :math:`\,\boldsymbol{S}^{-1},\ ` odwrócimy relacje
+**Method 2.** :math:`\,` 
+Instead of direct computation of the matrix :math:`\,\boldsymbol{S}^{-1},\ ` we may invert the relations
 
 .. math::
    :nowrap:
@@ -715,7 +693,7 @@ Zamiast bezpośredniego wyliczania macierzy :math:`\,\boldsymbol{S}^{-1},\ ` odw
    v_4' & {\ } = {\ } & Tv_4 & {\ \,} = {\ \,} &        &             & v_2 & {\,} - {\;} & v_3 & {\,} + {\;} &    v_4
    \end{alignat*}
 
-Po prostych elementarnych rachunkach otrzymujemy wzory 
+After simple elementary calculations we obtain the formulae 
 
 .. math::
    :nowrap:
@@ -727,8 +705,8 @@ Po prostych elementarnych rachunkach otrzymujemy wzory
    v_4 & {\ } = {\ } & T^{-1}\,v_4' & {\ \,} = {\ \,} & -\ \textstyle\frac{1}{3}\ v_1' &             &      & {\,} - {\;} & \textstyle\frac{1}{3}\ v_3' & {\,} + {\;} & \textstyle\frac{1}{3}\ v_4'
    \end{alignat*}
 
-na podstawie których można wypisać macierz automorfizmu :math:`\,T^{-1}\ `
-w bazie :math:`\,\mathcal{B}':`
+which allow us to write down a matrix of the automorphism :math:`\,T^{-1}\ `
+in basis :math:`\,\mathcal{B}':`
 
 .. math::
    :label: MB_prim_T_1
@@ -741,8 +719,8 @@ w bazie :math:`\,\mathcal{B}':`
           0 &  \frac{2}{3} &  0 &  \frac{1}{3}
          \end{array}\right]\,.
 
-Nas interesuje raczej macierz :math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1}.\ \,`
-Ale, zgodnie z Regułą 2.:
+We are rather interested in matrix :math:`\ \boldsymbol{S}^{-1}=[\,M_{\mathcal{B}}(T)\,]^{-1},\ \,`
+but according to the Rule 2.:
 
 .. math::
    
@@ -751,19 +729,20 @@ Ale, zgodnie z Regułą 2.:
    \boldsymbol{S}^{-1}\cdot [\,M_{\mathcal{B}}(T)\,]^{-1}\cdot\boldsymbol{S}\ \,=\ \,
    \boldsymbol{S}^{-1}\cdot\boldsymbol{S}^{-1}\cdot\boldsymbol{S}\ \,=\ \,\boldsymbol{S}^{-1}\,.
 
-Równanie :eq:`MB_prim_T_1` daje więc szukaną macierz :math:`\ \boldsymbol{S}^{-1},\ `
-co prowadzi dalej do wyniku :eq:`calc_comp`.
+The equation :eq:`MB_prim_T_1` gives us then the matrix :math:`\ \boldsymbol{S}^{-1},\ `
+which further leads to the result :eq:`calc_comp`.
 
 .. a rozwiązanie przykładu daje wzór :eq:`calc_comp`.
 
-**Wariant rozwiązania.** :math:`\,`
+**Variant of a solution.** :math:`\,`
 
-Związek :eq:`trans_coord` pomiędzy współrzędnymi wektora w nowej i starej bazie, zapisany w postaci
+The relation :eq:`trans_coord` between coordinates of a vector in the new and the old basis,
+written in a form
 
 .. math::
    
    \boldsymbol{S}\cdot I_{\mathcal{B}'}(v)\ =\  I_{\mathcal{B}}(v)
-   \qquad\text{czyli}\qquad
+   \qquad\text{that is}\qquad
    \left[\begin{array}{rrrr} -1 &  2 &  1 &  0 \\
                               0 &  0 &  1 &  1 \\
                               0 & -1 & -1 & -1 \\
@@ -771,7 +750,7 @@ Związek :eq:`trans_coord` pomiędzy współrzędnymi wektora w nowej i starej b
    \left[\begin{array}{r} a_1' \\ a_2' \\ a_3' \\ a_4' \end{array}\right]\ =\ 
    \left[\begin{array}{r} 2 \\ -3 \\ 0 \\ 4 \end{array}\right]
 
-przedstawia kramerowski układ równań
+gives Cramer system of equations
 
 .. math::
    :nowrap:
@@ -783,7 +762,7 @@ przedstawia kramerowski układ równań
            &             &         & {\,} - {\,} & 2\,a_3' & {\,} + {\,} & a_4' & {\;} = {} &  4
    \end{alignat*}
 
-który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu Sage:
+which may be solved by hand or by computer, using functions provided by Sage:
 
 .. code-block:: python
    
@@ -800,10 +779,10 @@ który można rozwiązać odręcznie albo komputerowo z użyciem funkcji pakietu
 
 :math:`\;`
 
-**Przykład 2.**
+**Example 2.**
 
-W bazie :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ ` przestrzeni wektorowej 
-:math:`\,V(R)\ ` operator :math:`\,F\in\text{End}(V)\ ` ma macierz
+In basis :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ ` of the vector space 
+:math:`\,V(R)\ ` an operator :math:`\,F\in\text{End}(V)\ ` has a matrix
 
 .. math::
    
@@ -813,16 +792,16 @@ W bazie :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ ` przestrzeni wektorowej
          2 &  1 & -3 \\
          1 &  3 &  2 \end{array}\right]\,.
 
-Należy podać macierz :math:`\,\boldsymbol{F}'\ ` tego operatora w bazie
+Find a matrix :math:`\,\boldsymbol{F}'\ ` of this operator in basis
 :math:`\,\mathcal{B}'=(v_1',\,v_2',\,v_3'):\,=(v_3,\,v_2,\,v_1).`
 
-**Rozwiązanie.**
+**Solution.**
 
-**Sposób 1.** (bezpośredni) :math:`\,` 
+**Method 1.** (direct) :math:`\,` 
 
-Z definicji macierzy :math:`\,\boldsymbol{F}=[\,f_{ij}\,]_{3\times 3}\ ` oraz
-:math:`\,\boldsymbol{F}'=[\,f_{ij}'\,]_{3\times 3}\ ` operatora :math:`\,F\ `
-w bazach :math:`\,\mathcal{B}\ ` oraz :math:`\,\mathcal{B}':`
+By definition of matrices :math:`\,\boldsymbol{F}=[\,f_{ij}\,]_{3\times 3}\ ` and
+:math:`\,\boldsymbol{F}'=[\,f_{ij}'\,]_{3\times 3}\ ` of the operator :math:`\,F\ `
+in bases :math:`\,\mathcal{B}\ ` and :math:`\,\mathcal{B}':`
 
 .. math::
    
@@ -831,7 +810,7 @@ w bazach :math:`\,\mathcal{B}\ ` oraz :math:`\,\mathcal{B}':`
    Fv_j'\,=\ f_{1j}'\,v_1'+\,f_{2j}'\,v_2'+\,f_{3j}'\,v_3'\,,
    \qquad j=1,2,3,
 
-oraz z zależności :math:`\ v_1'=v_3,\ v_2'=v_2,\ v_3'=v_1\ ` wynikają związki
+and by relations :math:`\, v_1'=v_3,\, v_2'=v_2,\, v_3'=v_1,` 
 
 .. math::
    
@@ -847,7 +826,7 @@ oraz z zależności :math:`\ v_1'=v_3,\ v_2'=v_2,\ v_3'=v_1\ ` wynikają związk
    Fv_3'\,=\ 1\,v_1'+\,2\,v_2'+\,3\,v_3'\,.
    \end{array}
 
-Z drugiego układu równości odczytujemy:
+The second system of equations provides:
 
 .. math::
    
@@ -857,20 +836,20 @@ Z drugiego układu równości odczytujemy:
          -3 &  1 & 2 \\
          -1 & -2 & 3 \end{array}\right]\,.
 
-**Sposób 2.** (standardowy)
+**Method 2.** (standard)
 
-Stosujemy Regułę 2. transformacji macierzy operatora liniowego (wzór :eq:`F_prim`):
+We use the Rule 2. describing transformation of a matrix of a linear operator (formula :eq:`F_prim`):
 
 .. math::
    :label: F_prim_bis
    
    \boldsymbol{F}'\ =\ \boldsymbol{S}^{-1}\,\boldsymbol{F}\ \boldsymbol{S}\,,
 
-gdzie :math:`\,\boldsymbol{S}\ ` jest macierzą przejścia 
-od bazy :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ `
-do bazy :math:`\,\mathcal{B}'=(v_3,\,v_2,\,v_1).`
+where :math:`\,\boldsymbol{S}\ ` is a transition matrix
+from basis :math:`\,\mathcal{B}=(v_1,\,v_2,\,v_3)\ `
+to :math:`\,\mathcal{B}'=(v_3,\,v_2,\,v_1).`
 
-Zapisując związki pomiędzy wektorami nowej i starej bazy
+Relations between vectors from the new and the old basis
 
 .. math::
    
@@ -879,17 +858,17 @@ Zapisując związki pomiędzy wektorami nowej i starej bazy
    v_2'\,=\ 0\,v_1+\,1\,v_2+\,0\,v_3 \\
    v_3'\,=\ 1\,v_1+\,0\,v_2+\,0\,v_3
    \end{array}
-   \qquad\text{otrzymujemy}\qquad
+   \qquad\text{lead to}\qquad
    \boldsymbol{S}\ =\ 
    \left[\begin{array}{ccc} 0 & 0 & 1 \\ 
                             0 & 1 & 0 \\ 
                             1 & 0 & 0 \end{array}\right]\,.
 
-Zamiast wyliczać bezpośrednio macierz :math:`\,\boldsymbol{S}^{-1}\ `
-zauważmy, że automorfizm przejścia :math:`\,T,\ ` który przekształca 
-wektory bazy :math:`\,\mathcal{B}\ ` w odpowiednie 
-wektory bazy :math:`\,\mathcal{B}':\ \ Tv_i=v_i',\ \ i=1,2,3,\ \ `
-spełnia warunek :math:`\,T^2=I,\ ` gdzie :math:`\,I\ ` jest przekształceniem identycznościowym:
+Instead of direct computation of the matrix :math:`\,\boldsymbol{S}^{-1}\ `
+note that the transition automorphism :math:`\,T,\ ` which maps 
+vectors from basis :math:`\,\mathcal{B}\ ` to the corresponding vectors from the basis
+:math:`\,\mathcal{B}':\ \ Tv_i=v_i',\ \ i=1,2,3,\ \ `
+satisfies a condition :math:`\,T^2=I,\ ` where :math:`\,I\ ` is an identity mapping:
 
 .. math::
    
@@ -899,10 +878,9 @@ spełnia warunek :math:`\,T^2=I,\ ` gdzie :math:`\,I\ ` jest przekształceniem i
    T^2\,v_1=\,Tv_3=\,v_1=\,I\,v_1 \\ T^2\,v_2=\,Tv_2=\,v_2=\,I\,v_2 \\ T^2\,v_3=\,Tv_1=\,v_3=\,I\,v_3
    \end{array}
 
-Z multiplikatywności macierzowej reprezentacji operatorów liniowych wynika, że analogiczną własność ma macierz przejścia: :math:`\ \boldsymbol{S}^2\ =\ \boldsymbol{I}_3,\ \,` 
-skąd :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
+By multiplicativity of matrix representation of linear operators, it follows taht the analogous property has transition matrix: :math:`\ \boldsymbol{S}^2\ =\ \boldsymbol{I}_3,\ \,` and thus :math:`\ \boldsymbol{S}^{-1}=\,\boldsymbol{S}.`
 
-Wyznaczone macierze podstawiamy do wzoru :eq:`F_prim_bis`. :math:`\\`
+We substitute these matrices to the formula :eq:`F_prim_bis`. :math:`\\`
 
 .. code-block:: python
 

@@ -5,11 +5,11 @@ Linear Operators
 A linear operator is a linear transformation of a vector space into itself, that is, an endomorphism. All theorems proved for homomorphisms are also valid for endomorphisms.
 However, because we will only deal with one vector space and one basis, some notation  may be simplified. 
 
-Let :math:`\,F\ ` be a linear operator defined on :math:`\,n`-dimensional space :math:`\,V\ ` over a field :math:`\,K.\ ` 
+Let :math:`\,F\ ` be a linear operator defined on an :math:`\,n`-dimensional vector space :math:`\,V\ ` over a field :math:`\,K.\ ` 
 We denote a matrix of the operator :math:`\,F\ ` with respect to basis :math:`\ \mathcal{B}=(v_1,v_2,\dots,v_n)\ `
 of the space :math:`\,V\ ` by any of: 
 :math:`\ M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,f_{ij}\,]_{n\times n}\in M_n(K).\ `
-Its entries are defined by a system of equations, which present images of consecutive vectors from the basis :math:`\ \mathcal{B}\ ` *in the same basis*:
+Its entries are defined by a system of equations which present images of consecutive vectors from the basis :math:`\ \mathcal{B}\ ` *in the same basis*:
 
 .. math::
    
@@ -32,7 +32,7 @@ Therefore, in a column form:
    I_{\mathcal{B}}(Fv_n\,\right]\,,
 
 where :math:`\ I_{\mathcal{B}}(v)\ ` is a column of coordinates 
-:math:`\,` (in the basis :math:`\,\mathcal{B}`) :math:`\,` of vector :math:`\,v\in V.`
+:math:`\,` (in the basis :math:`\,\mathcal{B}\,`) :math:`\,` of a vector :math:`\,v\in V.`
 
 Theorem 10. may be now stated as follows
 
@@ -44,18 +44,18 @@ Theorem 10. may be now stated as follows
    \qquad v,v'\in V.
 
 The set :math:`\ \text{End}(V)\ ` of linear operators on the space :math:`\,V\ `
-is equipped with the operations of addition, multiplication by scalars from
+is equipped with operations of addition, multiplication by scalars from
 the field :math:`\,K\ ` and composition
 (with these operations :math:`\,\text{End}(V)\,` is an algebra over the field :math:`\,K`). :math:`\,`
-A form of a matrix associated with composition of two operators is described in
+Form of a matrix associated with composition of two operators is described in
 
 .. admonition:: Theorem 12. :math:`\\`
    
-   Let :math:`\,F,\,G\in\text{End}(V),\ ` where :math:`\,V\,` is finite dimensional
+   Let :math:`\,F,\,G\in\text{End}(V),\ ` where :math:`\,V\,` is a finite dimensional
    vector space with basis :math:`\,\mathcal{B}.\ `
    Then the matrix :math:`\,` (in basis :math:`\,\mathcal{B}`) :math:`\,`
    associated with composition of the operators :math:`\,F\ ` and  :math:`\,G\ ` 
-   is equal to a product of their matrices in this basis:
+   is equal to product of their matrices in this basis:
    
    .. math::
       :label: multi
@@ -113,7 +113,7 @@ multiplicative in a sense of :eq:`multi`. This allows us to formulate
 .. admonition:: Corollary. :math:`\\`
 
    If :math:`\,V\,` is a vector space over a field :math:`\,K\,` with basis
-   :math:`\,\mathcal{B}=(v_1,\dots,v_n),\ ` than mapping
+   :math:`\,\mathcal{B}=(v_1,\dots,v_n),\ ` then mapping
    
    .. math::
       
@@ -129,11 +129,11 @@ multiplicative in a sense of :eq:`multi`. This allows us to formulate
 
 One of the reasons why current definition of matrix multiplication has been adopted is because then the mapping :math:`\,M_{\mathcal{B}}\,` is multiplicative:
 product (i.e. composition) of operators corresponds to product of matrices.
-Another explanation of such definition is that then determinant of product of two matrices equal a mroduct of determinants.
+Another explanation of such definition is that then determinant of product of two matrices equals a product of determinants.
 
 **Example.**
 
-We discuss matrix representation of a linear operator :math:`\,F\,` defined on real three dimensional space :math:`\,V\,` of geometric vectors by a formula
+We discuss matrix representation of a linear operator :math:`\,F\,` defined on the real three dimensional space :math:`\,V\,` of geometric vectors by a formula
 
 .. math::
    
@@ -142,7 +142,7 @@ We discuss matrix representation of a linear operator :math:`\,F\,` defined on r
 where :math:`\,\vec{a}\,` is a fixed vector. 
 Linearity of :math:`\,F\,` follows from properties of the cross product.
 
-As a basis of the space :math:`\,V\,` we choose a triple of mutually orthogonal unit vectors with right-handed coordinates :math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3).\ ` Let 
+As a basis of the space :math:`\,V\,` we choose a triple of mutually perpendicular unit vectors with right-handed coordinates: :math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3).\ ` Let 
 :math:`\ \,\vec{a}=a_1\,\vec{e}_1+a_2\,\vec{e}_2+a_3\,\vec{e}_3,\ \,
 \vec{r}=x_1\,\vec{e}_1+x_2\,\vec{e}_2+x_3\,\vec{e}_3.\ `
 Writing cross product in a form of determinant, we obtain
@@ -193,7 +193,7 @@ Hence:
 (On a side, note that the matrix :math:`\ M_{\mathcal{E}}(F)\equiv\boldsymbol{F}\,`
 is antisymmetric: :math:`\ \boldsymbol{F}^{\,T}=-\,\boldsymbol{F}.`)
 
-If we denote 
+If we put 
 :math:`\ \,F(\vec{r})\,=\,\vec{r}\;'\,=\ x_1'\;\vec{e}_1+\,x_2'\;\vec{e}_2+\,x_3'\;\vec{e}_3\,,\ \,` 
 then by equation :eq:`prod_det` :
 
@@ -214,7 +214,7 @@ then by equation :eq:`prod_det` :
    \end{array}\right] 
    \left[\begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array}\right]\,.
 
-The last equality states that, :math:`\,` in consonance with :eq:`fund_end`, :math:`\,` that 
+The last equality states, :math:`\,` in consonance with :eq:`fund_end`, :math:`\,` that 
 :math:`\ \ I_{\mathcal{E}}(\vec{r}\;')\,=\,M_{\mathcal{E}}(F)\cdot I_{\mathcal{E}}(\vec{r})\,.`
 
 

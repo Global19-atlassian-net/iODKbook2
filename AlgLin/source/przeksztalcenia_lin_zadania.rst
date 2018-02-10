@@ -2,71 +2,71 @@
 Problems
 --------
 
-**Zadanie 1.**
+**Exercise 1.**
 
-Podaj interpretację geometryczną jądra i obrazu operatora liniowego :math:`\,F\ `
-zadanego przez
+Give geometric interpretation of kernel and image of a linear operator :math:`\,F\ `
+given by
 
 .. math::
    
    F(\vec{r})\,:\,=\,\vec{a}\times\vec{r}\,,\qquad\vec{r}\in V\,,
 
-gdzie :math:`\,\vec{a}\ ` jest ustalonym wektorem 
-trójwymiarowej przestrzeni wektorów geometrycznych :math:`\,V.`
+where :math:`\,\vec{a}\ ` is a fixed vector from 3-dimensional 
+vector space :math:`\,V\,` of geometric vectors.
 
 .. gdzie :math:`\,V\ ` jest trójwymiarową przestrzenią wektorów geometrycznych,
    oraz :math:`\,\vec{0}\neq\vec{a}\ ` jest ustalonym wektorem.
 
-Określ defekt i rząd tego operatora. :math:`\,` 
-Czy :math:`\,\text{def}\,F + \text{rz}\,F = \dim V\ ?`
+Describe defect and rank of this operator. :math:`\,` 
+Does :math:`\,\text{def}\,F + \text{rk}\,F = \dim V\ ?`
 
-**Zadanie 2.**
+**Exercise 2.**
 
-W trójwymiarowej przestrzeni wektorów geometrycznych :math:`\,V\,`
-z bazą :math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ `
-trzech wzajemnie prostopadłych wektorów jednostkowych :math:`\,`
-określamy odwzorowanie
+In 3-dimensional vector space :math:`\,V\,` of geometric vectors
+with basis :math:`\ \mathcal{E}=(\vec{e}_1,\,\vec{e}_2,\,\vec{e}_3)\ `
+consisting of three mutually perpendicular unit vectors, :math:`\,`
+we define a mapping
 
 .. math::
    
    F(\vec{r})\,:\,=\,(\vec{b}\cdot\vec{r})\ \vec{a}\,,
-   \qquad\vec{a},\vec{b},\vec{r}\in V,\quad\vec{a},\vec{b}\ -\ \text{ustalone niezerowe wektory}.
+   \qquad\vec{a},\vec{b},\vec{r}\in V,\quad\vec{a},\vec{b}\ -\ \text{fixed non-zero vectors}.
 
-0. Uzasadnij, że :math:`\,F\ ` jest operatorem liniowym.
+0. Justify that :math:`\,F\ ` is a linear operator.
 
-1. Czym geometrycznie jest jądro i obraz operatora :math:`\,F\,?`
+1. What is geometric interpretation of kernel and image of the operator :math:`\,F\,?`
 
-2. Określ defekt i rząd tego operatora oraz sprawdź warunek 
-   :math:`\,\text{def}\,F + \text{rz}\,F = \dim V.`
+2. Describe defect and rank of this operator and check the condition 
+   :math:`\,\text{def}\,F + \text{rk}\,F = \dim V.`
 
-3. Zapisz macierz :math:`\,M(F)\ ` operatora :math:`\,F\,` w bazie :math:`\,\mathcal{E}.`
+3. Find the matrix :math:`\,M(F)\ ` of the operator :math:`\,F\,` in basis :math:`\,\mathcal{E}.`
 
-4. Wyznacz rząd macierzy :math:`\,M(F)\ ` 
-   i :math:`\,` sprawdź, że :math:`\,\text{rz}\,F = \text{rz}\,M(F).`
+4. Calculate rank of the matrix :math:`\,M(F)\ ` 
+   and :math:`\,` check that :math:`\,\text{rk}\,F = \text{rk}\,M(F).`
 
-**Zadanie 3.**
+**Exercise 3.**
 
-Niech :math:`\,F\in\text{Hom}(V,W),\ ` gdzie :math:`\,V\ \,\text{i}\ \ W\ ` 
-są skończenie wymiarowymi przestrzeniami nad ciałem :math:`\,K.\ `
-Zbadaj prawdziwość następujących twierdzeń, rozważanych dla dowolnych
-wektorów :math:`\,v_1,\,v_2,\,\dots,\,v_r\in V\ `
-(l.n. = liniowo niezależne, :math:`\,` l.z. = liniowo zależne):
+Let :math:`\,F\in\text{Hom}(V,W),\ ` where :math:`\,V\ ` and :math:`\ W\ ` 
+are finite dimensional vector spaces over a field :math:`\,K.\ `
+Verify correctness of the following statements for 
+vectors :math:`\,v_1,\,v_2,\,\dots,\,v_r\in V\ `
+(l.i. = linearly independent, :math:`\,` l.d. = linearly dependent):
 
-1. :math:`\quad v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.n.}
+1. :math:`\quad v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.i.}
    \qquad\Rightarrow\qquad
-   Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.n.}`
+   Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.i.}`
 
-2. :math:`\quad v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.z.}
+2. :math:`\quad v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.d.}
    \qquad\Rightarrow\qquad
-   Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.z.}`
+   Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.d.}`
 
-3. :math:`\quad Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.n.}
+3. :math:`\quad Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.i.}
    \qquad\Rightarrow\qquad
-   v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.n.}`
+   v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.i.}`
 
-4. :math:`\quad Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.z.}
+4. :math:`\quad Fv_1,\,Fv_2,\,\dots,\,Fv_r\ \ -\ \ \text{l.d.}
    \qquad\Rightarrow\qquad
-   v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.z.}`
+   v_1,\,v_2,\,\dots,\,v_r\ \ -\ \ \text{l.d.}`
 
 
 
