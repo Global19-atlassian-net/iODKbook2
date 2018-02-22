@@ -4,9 +4,9 @@ Gram-Schmidt Orthonormalization and QR Decomposition of a Matrix
 
 .. admonition:: Theorem 4.
    
-   In every finite dimensional unitary (Euclidean) vector space exists an orthonormal basis.
+   In every finite dimensional unitary (Euclidean) vector space an orthonormal basis exists.
 
-**Proof** of this theorem, which provides an effective method of construction of such a basis, poceeds in two parallel stages. One starts with an arbitrary basis, uses *Gram-Schmidt orthogonalization* method to construct an orthogonal basis, which after normalisation gives an orthonormal basis.
+**Proof** of this theorem, which provides an effective method of construction of such a basis, poceeds in two parallel stages. One starts with an arbitrary basis, applies the *Gram-Schmidt orthogonalization* method to construct an orthogonal basis, and then by normalisation obtains an orthonormal basis.
 
 Construction of the Orthonormal Basis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,7 +20,7 @@ Let :math:`\,\dim\,V=n.\ ` Proof proceeds according to the following diagram:
    \text{Basis:} & \text{initial}                &                 & \text{orthogonal}              &                 & \text{orthonormal}
    \end{array}
 
-We choose the vectors for the bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ `
+We choose vectors for bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ `
 as follows:
    
 :math:`\triangleright\quad y_1\,=\,v_1,\quad u_1\,=\,\displaystyle\frac{y_1}{\|y_1\|}\,;`
@@ -41,7 +41,7 @@ where :math:`\ \beta_1,\,\beta_2\ ` have been determined from the conditions
 u_3\,=\,\displaystyle\frac{y_3}{\|y_3\|}\,;`
 
 Assume that in this way we have constructed an orthogonal set
-:math:`\ (y_1,y_2,\dots,y_{j-1}),\ ` where, as follows from the construction method,
+:math:`\ (y_1,y_2,\dots,y_{j-1}),\ ` where, as follows from the construction,
 
 .. math::
    :label: y_k
@@ -50,7 +50,7 @@ Assume that in this way we have constructed an orthogonal set
 
 that is, every :math:`\,k`-th vector of the set :math:`\,(y_1,y_2,\dots,y_{j-1})\ `
 is a linear combination of only first :math:`\,k\ ` vectors from the basis :math:`\,\mathcal{B}.\ `
-The next vectors of bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ \,` are :math:`\\`
+Next vectors of bases :math:`\ \mathcal{P}\ ` and :math:`\ \mathcal{Q}\ \,` are :math:`\\`
 
 :math:`\begin{array}{rcl} \triangleright\quad y_j & = & 
 \lambda_1\,y_1\,+\;\lambda_2\,y_2\,+\;\dots\,+\;\lambda_{j-1}\,y_{j-1}\,+\;v_j\ \ =
@@ -82,27 +82,27 @@ have been determined from the orthogonality conditions
 
 The vector :math:`\,y_j\ ` is a combination of linearly independent vectors
 :math:`\,v_1,\,v_2,\,\dots,\,v_j.\ `
-The property :eq:`y_k` implies that it is a non-trivial combination, because the coefficient of the vector :math:`\,v_j\ ` equals :math:`\,+1.\ `This means that all the vectors :math:`\,y_j\ ` are non-zero: :math:`\,y_j\neq\theta,\ j=1,2,\dots,n.\ `
+The property :eq:`y_k` implies that it is a non-trivial combination, because the coefficient of the vector :math:`\,v_j\ ` equals :math:`\,+1.\,` This means that all the vectors :math:`\,y_j\ ` are non-zero: :math:`\,y_j\neq\theta,\ j=1,2,\dots,n.\ `
 Hence, the set :math:`\,\mathcal{P}\ ` is orthogonal, and if we divide each vector
 :math:`\,y_j\ ` by its norm, we obtain a unit vector :math:`\,u_j\,.`
 
-Gram-Schmidt orthogonalization may be applied to any (not necessarily linearly independent set) of vectors. As a result we obtain a set :math:`\,\mathcal{Y},\ ` whose vectors are pairwise orthogonal, but :math:`\,\mathcal{Y},\ ` itself is not necessarily orthogonal as it may contain zero vectors.
+Gram-Schmidt orthogonalization may be applied to any (not necessarily linearly independent set) of vectors. As a result we obtain a set :math:`\,\mathcal{Y},\ ` whose vectors are pairwise orthogonal, but :math:`\,\mathcal{Y}\ ` itself is not necessarily orthogonal as it may contain zero vectors.
 
 After the last step of the procedure, where :math:`\,j=n,\ ` we obtain an
 orthogonal basis :math:`\ \mathcal{P}\ \\`
-and orthonormal basis :math:`\ \mathcal{Q}\ ` of the space :math:`\,V.`
+and an orthonormal basis :math:`\ \mathcal{Q}\ ` of the space :math:`\,V.`
 
 **Example:** Construction of Legendre polynomials.
 
-Consider a Euclidean space :math:`\,P\ ` of rela polynomials with an inner product
+Consider a Euclidean space :math:`\,P\ ` of real polynomials with an inner product
 
 .. math::
    
    \langle\,p,q\,\rangle\ \,=\ \,\int_{-1}^{+1}\ p(x)\,q(x)\,dx\,,\qquad p,q\in P\,.
 
-Taking :math:`\,\mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots)\ ` as the initial basis
+Taking :math:`\,\mathcal{B}\,=\,(1,\,x,\,x^2,\,x^3,\,\dots)\ ` as the initial basis,
 we will construct an orthogonal basis :math:`\,\mathcal{P}\,=\,(p_0,\,p_1,\,p_2,\,p_3,\,\dots)\ \,` 
-and :math:`\,` orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3,\,\dots)\,.\\`
+and :math:`\,` an orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3,\,\dots)\,.\\`
 
 0. :math:`\ p_0(x)\,=\,1\,;\qquad
    \|\,p_0\|^2\,=\,\langle\,p_0,p_0\,\rangle\ =\ \int_{-1}^{+1}\ 1\cdot 1\ \ dx\ =\ 2\,;\qquad
@@ -151,14 +151,14 @@ and :math:`\,` orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
    \widetilde{\gamma_0}\cdot 1+\gamma_1\cdot x+\gamma_2\cdot(x^2-\;\frac{1}{3})+x^3\ =\ 
    \gamma_0+\,\gamma_1\,x\,+\,\gamma_2\,x^2\,+\,x^3\,,`
 
-   :math:`\ \text{where}\quad\gamma_0,\,\gamma_1,\,\gamma_2:\quad
+   where :math:`\quad\gamma_0,\,\gamma_1,\,\gamma_2:\quad
    \langle\,p_0,p_3\rangle\,=\,\langle\,p_1,p_3\rangle\,=\,\langle\,p_2,p_3\rangle\,=\,0\,.`
    
    :math:`\ \langle\,p_0,p_3\rangle\,=\,2\,\gamma_0+\frac{2}{3}\,\gamma_2\,=\,0\,;\quad
    \langle\,p_1,p_3\rangle\,=\,\frac{2}{3}\,\gamma_1+\frac{2}{5}\,=\,0\,;\quad
    \langle\,p_2,p_3\rangle\,=\,\frac{8}{45}\,\gamma_2\,=\,0\,;`
    
-   :math:`\ \text{hence}\quad\gamma_0=\gamma_2=0\,,\quad\gamma_1=-\ \frac{3}{5}\,.`
+   hence :math:`\quad\gamma_0=\gamma_2=0\,,\quad\gamma_1=-\ \frac{3}{5}\,.`
 
    :math:`\ p_3(x)\,=\,x^3-\,\frac{3}{5}\,x\,;\qquad\|\,p_3\|\ =\ \frac{2}{5}\ \sqrt{\frac{2}{7}}\,.`
 
@@ -179,50 +179,50 @@ and :math:`\,` orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,q_3
 Orthogonal Matrices and the QR Decomposition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rozważania w tej sekcji dotyczą dziedziny rzeczywistej, 
-a więc macierzy rzeczywistych :math:`\\` i :math:`\,` przestrzeni euklidesowych.
-Później wprowadzone tu pojęcia i twierdzenia będą przeniesione do dziedziny zespolonej.
+Considerations of this section concern real domain, that is, real matrices :math:`\\` and :math:`\,` Euclidean spaces. Later we will translate the notions and theorems introduced below for complex domain.
 
 .. Przeniesienie wprowadzonych tu pojęć i twierdzeń 
    do dziedziny zespolonej będzie dokonane później.
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Macierz :math:`\ \boldsymbol{B}\,=\,[\,\boldsymbol{b}_1\,|\,\boldsymbol{b}_2\,|\,\dots\,|\,
-   \boldsymbol{b}_n\,]\,=\,[\,\beta_{ij}\,]_{n\times n}\in M_n(R)\ \,` jest :math:`\,`  
-   *ortogonalna*, :math:`\,` gdy 
+   Matrix :math:`\ \boldsymbol{B}\,=\,[\,\boldsymbol{b}_1\,|\,\boldsymbol{b}_2\,|\,\dots\,|\,
+   \boldsymbol{b}_n\,]\,=\,[\,\beta_{ij}\,]_{n\times n}\in M_n(R)\ \,` is :math:`\,`  
+   *orthogonal*, :math:`\,` if 
    
    .. math::
       :label: orthogonal
       
       \boldsymbol{B}^T\boldsymbol{B}\,=\,\boldsymbol{I}_n\,.
    
-**Własności** macierzy ortogonalnych.
+**Properties** of orthogonal matrices.
 
-1. Przyrównując do siebie wyznaczniki obu stron równania :eq:`orthogonal` otrzymujemy
+1. Taking determinant on both sides of the equation :eq:`orthogonal`, we obtain
    
    .. math::
       
       \det\,(\boldsymbol{B}^T\boldsymbol{B})=\det\boldsymbol{B}^T\cdot\,\det\boldsymbol{B}=
       (\det\boldsymbol{B})^2\quad=\quad\det\boldsymbol{I}_n=1\,,
 
-   skąd :math:`\,\det\boldsymbol{B}=\pm 1.\ ` Macierz ortogonalna jest zatem nieosobliwa,
-   a więc odwracalna: :math:`\ \boldsymbol{B}^{-1}=\,\boldsymbol{B}^T\,.\ `
-   Mnożąc tę równość z lewej strony przez :math:`\ \boldsymbol{B}\ ` otrzymamy
-   :math:`\ \boldsymbol{B}\boldsymbol{B}^T=\boldsymbol{I}_n\,.\ ` Macierze ortogonalne
-   spełniają więc równości :math:`\ \ \boldsymbol{B}^T\boldsymbol{B}\,=\,
+   and thus :math:`\,\det\boldsymbol{B}=\pm 1.\ ` Hence, the orthogonal matrix is 
+   nondegenerate, and thus invertible:
+   :math:`\ \boldsymbol{B}^{-1}=\,\boldsymbol{B}^T\,.\ `
+   After multilplying this equality on the left by :math:`\ \boldsymbol{B}\ ` we obtain
+   :math:`\ \boldsymbol{B}\boldsymbol{B}^T=\boldsymbol{I}_n\,.\ ` This means that
+   orthogonal matrices satisfy equalities
+   :math:`\ \ \boldsymbol{B}^T\boldsymbol{B}\,=\,
    \boldsymbol{B}\boldsymbol{B}^T=\boldsymbol{I}_n\,.`
 
-2. Warunek :math:`\ \boldsymbol{B}\boldsymbol{B}^T=\boldsymbol{I}_n\ ` można przepisać jako
-   :math:`\ (\boldsymbol{B}^T)^T\boldsymbol{B}^T=\boldsymbol{I}_n\,,\ ` z czego wynika,
-   że jeśli :math:`\ \boldsymbol{B}\in M_n(R)\ ` jest macierzą ortogonalną, to ortogonalna
-   jest również macierz transponowana :math:`\ \boldsymbol{B}^T\ ` oraz macierz odwrotna
-   :math:`\ \boldsymbol{B}^{-1}\,.`
+2. The condition :math:`\ \boldsymbol{B}\boldsymbol{B}^T=\boldsymbol{I}_n\ ` may be 
+   written as :math:`\ (\boldsymbol{B}^T)^T\boldsymbol{B}^T=\boldsymbol{I}_n\,,\ ` 
+   which implies that if :math:`\ \boldsymbol{B}\in M_n(R)\ ` is an orthogonal matrix, 
+   then orthogonal are also the transposed matrix :math:`\ \boldsymbol{B}^T\ ` 
+   and the inverse matrix :math:`\ \boldsymbol{B}^{-1}\,.`
 
-3. Niech :math:`\ \boldsymbol{B}_1,\boldsymbol{B}_2\in M_n(R)\ ` będą macierzami ortogonalnymi:
+3. Let :math:`\ \boldsymbol{B}_1,\boldsymbol{B}_2\in M_n(R)\ ` be orthogonal matrices:
    :math:`\ \ \boldsymbol{B}_1^T\,\boldsymbol{B}_1=\boldsymbol{B}_2^T\,\boldsymbol{B}_2=
    \boldsymbol{I}_n\,.\ ` 
-   Wtedy, korzystając z własności operacji transponowania macierzy, otrzymujemy
+   Then, by properties of the transpose of a matrix, we obtain
    
    .. math::
       
@@ -231,16 +231,16 @@ Później wprowadzone tu pojęcia i twierdzenia będą przeniesione do dziedziny
       \boldsymbol{B}_2^T\,\boldsymbol{I}_n\,\boldsymbol{B}_2\ =\ 
       \boldsymbol{B}_2^T\,\boldsymbol{B}_2\ =\ \boldsymbol{I}_n\,.
    
-   Tak więc iloczyn macierzy ortogonalnych jest macierzą ortogonalną. 
-   Ponieważ macierz jednostkowa :math:`\ \boldsymbol{I}_n\ ` jest ortogonalna,
-   można zapisać
+   Hence, product of orthogonal matrices is also an orthogonal matrix. 
+   Since the identity matrix :math:`\ \boldsymbol{I}_n\ ` is orthogonal,
+   we deduce
    
-   .. admonition:: Wniosek 1.
+   .. admonition:: Corollary 1.
       
-      Macierze ortogonalne stopnia :math:`\,n\ ` tworzą (nieprzemienną) grupę 
-      ze względu na mnożenie  macierzowe.
-
-4. Przechodząc do elementów macierzowych, warunek :eq:`orthogonal` można przepisać jako
+      A set of orthogonal matrices of size :math:`\,n\ ` together with matrix
+      multiplication comprises a (nonabelian) group. 
+      
+4. The condition :eq:`orthogonal` may be rewritten in terms of matrix' entries as
    
    .. math::
       
@@ -248,43 +248,43 @@ Później wprowadzone tu pojęcia i twierdzenia będą przeniesione do dziedziny
       \langle\,\boldsymbol{b}_i,\boldsymbol{b}_j\rangle\ =\ \delta_{ij}\,,\qquad
       i,j=1,2,\dots,n\,.
    
-   Oznacza to, że kolumny macierzy :math:`\,\boldsymbol{B},\,` interpretowane jako wektory
-   przestrzeni :math:`\,R^n\,,\ \,` tworzą układ ortonormalny. 
-   Ponieważ macierz :math:`\ \boldsymbol{B}^T\ ` jest również ortogonalna, 
-   to samo można powiedzieć o wierszach macierzy :math:`\ \boldsymbol{B}.`
+   This means that columns of the matrix :math:`\,\boldsymbol{B},\,` interpreted as vectors
+   of the space :math:`\,R^n\,,\ \,` comprise an orthonormal system. 
+   Since the matrix :math:`\ \boldsymbol{B}^T\ ` is also orthogonal, 
+   this is also the case for rows of the matrix :math:`\ \boldsymbol{B}.`
    
-   .. admonition:: Wniosek 2.
+   .. admonition:: Corollary 2.
       
-      Macierz :math:`\ \boldsymbol{B}\in M_n(R)\ ` jest ortogonalna 
-      wtedy :math:`\,` i :math:`\,` tylko wtedy,
-      gdy jej kolumny :math:`\,` (a także wiersze) :math:`\,` 
-      tworzą w przestrzeni :math:`\,R^n\ ` układ ortonormalny.
+      Matrix :math:`\ \boldsymbol{B}\in M_n(R)\ ` is orthogonal 
+      if :math:`\,` and :math:`\,` only if
+      its columns :math:`\,` (and also rows) :math:`\,` 
+      comprise an orthonormal system in the space :math:`\,R^n`.
 
-Niech będzie dana nieosobliwa macierz :math:`\ \boldsymbol{A}\,=\,
+Consider a nondegenerate matrix :math:`\ \boldsymbol{A}\,=\,
 [\,\boldsymbol{a}_1\,|\,\boldsymbol{a}_2\,|\,\dots\,|\,\boldsymbol{a}_n\,]\in M_n(R).\ `
-Jej kolumny są liniowo niezależne i tworzą w przestrzeni :math:`\,R^n\ ` bazę 
-:math:`\,\mathcal{B}=(\boldsymbol{a}_1\,,\,\boldsymbol{a}_2\,,\,\dots,\,\boldsymbol{a}_n)\,.`
-Zastosujemy do niej ortogonalizację Grama-Schmidta otrzymując ortogonalną bazę
+Its columns are linearly independent and comprise a basis 
+:math:`\,\mathcal{B}=(\boldsymbol{a}_1\,,\,\boldsymbol{a}_2\,,\,\dots,\,\boldsymbol{a}_n)\,`
+of the space :math:`\,R^n`. We will apply to this basis Gram-Schmidt orthogonalization in order to obtain an orthogonal basis
 :math:`\,\mathcal{P}=(\boldsymbol{y}_1\,,\,\boldsymbol{y}_2\,,\,\dots,\,\boldsymbol{y}_n)\ \ `
-i :math:`\,` ortonormalną bazę 
+and :math:`\,` an orthonormal basis
 :math:`\,\mathcal{Q}=(\boldsymbol{u}_1\,,\,\boldsymbol{u}_2\,,\,\dots,\,\boldsymbol{u}_n).\ `
-Wektory baz :math:`\,\mathcal{P}\ \,\text{i}\ \ \mathcal{Q}\ ` są związane relacjami
+Vectors of the bases :math:`\,\mathcal{P}\ ` and :math:`\ \mathcal{Q}\ ` are related by identities 
 
 .. math::
    
    \boldsymbol{u}_i\ =\ \,\frac{1}{\|\,\boldsymbol{y}_i\|}\ \ \boldsymbol{y}_i\,,
    \qquad i=1,2,\dots,n.
 
-Celem będzie przedstawienie macierzy :math:`\ \boldsymbol{A}\ `  
-w postaci iloczynu ortogonalnej macierzy :math:`\\ \boldsymbol{Q}\,=\,
+Our goal is to write the matrix :math:`\ \boldsymbol{A}\ `  
+as a product of an orthogonal matrix :math:`\\ \boldsymbol{Q}\,=\,
 [\,\boldsymbol{u}_1\,|\,\boldsymbol{u}_2\,|\,\dots\,|\,\boldsymbol{u}_n\,]\ \,`
-i :math:`\,` pewnej górnej (czyli prawej) macierzy trójkątnej :math:`\ \boldsymbol{R} :
+and :math:`\,` certain uppertriangular matrix :math:`\ \boldsymbol{R} :
 \ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,.`
 
 .. W :math:`\,j`-tym kroku procedury Grama-Schmidta zastosowanej do bazy :math:`\,\mathcal{B}\ \,`
    (:math:`j=2,\dots,n`) :
 
-Procedura Grama-Schmidta zastosowana do bazy :math:`\,\mathcal{B}\ \,` daje (:math:`j=2,\dots,n`) :
+The Gram-Schmidt process applied to the basis :math:`\,\mathcal{B}\ \,` gives (:math:`j=2,\dots,n`) :
 
 .. math::
    
@@ -301,11 +301,11 @@ Procedura Grama-Schmidta zastosowana do bazy :math:`\,\mathcal{B}\ \,` daje (:ma
                    \boldsymbol{u}_{j-1}\,;
    \end{array}
 
-(:math:`\,\lambda_i\ ` zostały wyznaczone z warunków ortogonalności
+(:math:`\,\lambda_i\ ` have been computed from the orthogonality conditions
 :math:`\,\langle\,\boldsymbol{y}_i,\boldsymbol{y}_j\rangle=0\,,\ \ i=1,2,\dots,j-1.`) 
 
-Przedstawienie wektorów wyjściowej bazy :math:`\,\mathcal{B}\,`
-w ortonormalnej bazie :math:`\,\mathcal{Q}\,` jest więc następujące:
+Hence, vectors from the initial basis :math:`\,\mathcal{B}\,` may be represented 
+by vectors from an orthonormal basis :math:`\,\mathcal{Q}\,` in the following way:
 
 .. math::
    
@@ -334,7 +334,7 @@ w ortonormalnej bazie :math:`\,\mathcal{Q}\,` jest więc następujące:
 .. Definiujemy (górną trójkątną) macierz 
    :math:`\ \boldsymbol{R}\,=\,[\,\rho_{ij}\,]_{n\times n}\ ` następująco:
 
-Związki te można zapisać przy użyciu (górnej trójkątnej) macierzy 
+These relations may be written in terms of an (uppertriangular) matrix 
 :math:`\ \boldsymbol{R}\,=\,[\,\rho_{ij}\,]_{n\times n}\,:`
 
 .. math::
@@ -351,11 +351,11 @@ Związki te można zapisać przy użyciu (górnej trójkątnej) macierzy
    \sum_{i\,=\,1}^j\ \langle\,\boldsymbol{u}_i,\boldsymbol{a}_j\rangle\ \boldsymbol{u}_i\ \ =\ \ 
    \sum_{i\,=\,1}^n\ \rho_{ij}\;\boldsymbol{u}_i\,,\qquad j=1,2,\dots,n.
 
-Ostatnia równość stwierdza, że :math:`\,j`-ta kolumna macierzy :math:`\,\boldsymbol{A}\ `
-jest kombinacją liniową kolumn macierzy :math:`\,\boldsymbol{Q},\ ` o współczynnikach 
-z :math:`\,j`-tej kolumny macierzy :math:`\,\boldsymbol{R}.\ `
-Według kolumnowej reguły mnożenia macierzowego oznacza to zależność
-:math:`\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,,\ ` jaką właśnie należało wyprowadzić.
+The last equality states that the :math:`\,j`-th column of the matrix :math:`\,\boldsymbol{A}\ ` is a linear combination of columns of the matrix
+:math:`\,\boldsymbol{Q},\ ` with coefficients from the
+:math:`\,j`-th column of the matrix :math:`\,\boldsymbol{R}.\ `
+According to the column rule of matrix multiplication this is nothing else than the identity
+:math:`\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\ ` we were looking for.
 
 .. W całej okazałości macierz :math:`\ \boldsymbol{R}\ ` przedstawia się następująco:
 
@@ -388,34 +388,33 @@ Według kolumnowej reguły mnożenia macierzowego oznacza to zależność
    \end{array}
    \right]\,.
 
-**Zastosowanie rozkładu QR.** :math:`\ `
+**Application of the QR decomposition.** :math:`\ `
 
-Niech będzie dany kramerowski układ równań nad ciałem :math:`\,R\ ` z macierzą współczynników
+Consider a Cramer system of equations over a field :math:`\,R\ ` with the coefficient matrix
 :math:`\,\boldsymbol{A}\in M_n(R)\ ` 
-i kolumną wolnych wyrazów :math:`\,\boldsymbol{b}\in R^n\,.\ `
-Dysponując rozkładem :math:`\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\ `
-można ten układ przekształcić następująco:
+and a column vector of constants :math:`\,\boldsymbol{b}\in R^n\,.\ `
+If :math:`\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R},\ ` 
+then this system may be written as:
 
 .. math::
    :nowrap:
    
    \begin{eqnarray*}
-   \boldsymbol{A}\,\boldsymbol{x}                 & \!\! = \!\! & \boldsymbol{b}\,, \\
-   (\boldsymbol{Q}\boldsymbol{R})\,\boldsymbol{x} & \!\! = \!\! & \boldsymbol{b}\,, \\   
-   \boldsymbol{Q}(\boldsymbol{R}\boldsymbol{x})   & \!\! = \!\! & \boldsymbol{b}\,.
+   \boldsymbol{A}\,\boldsymbol{x}                 &  =  & \boldsymbol{b}\,, \\
+   (\boldsymbol{Q}\boldsymbol{R})\,\boldsymbol{x} &  =  & \boldsymbol{b}\,, \\   
+   \boldsymbol{Q}(\boldsymbol{R}\boldsymbol{x})   &  =  & \boldsymbol{b}\,.
    \end{eqnarray*}
 
-Ortogonalność macierzy :math:`\,\boldsymbol{Q}\,` pozwala zastąpić kosztowną operację wyliczenia odwrotności przez transpozycję: :math:`\ \ \boldsymbol{Q}^{-1}=\;\boldsymbol{Q}^T,\ \ `
-wobec czego
+Orthogonality of matrix :math:`\,\boldsymbol{Q}\,` allows to replace an expensive operation of taking an inverse by a transpose: 
+:math:`\ \ \boldsymbol{Q}^{-1}=\;\boldsymbol{Q}^T,\ \ ` and so
 
 .. math::
    
    \boldsymbol{R}\,\boldsymbol{x}\ =\ \boldsymbol{Q}^T\,\boldsymbol{b}\,.
 
-Układ równań z trójkątną macierzą :math:`\,\boldsymbol{R}\ ` rozwiązuje się 
-szybko metodą podstawiania "wstecz".
+A system of equations with triangular matrix :math:`\,\boldsymbol{R}\ ` may be solved quickly by the "back-substitution" method.
 
-Dla przykładu przeprowadzimy rozkład QR dla macierzy
+For an illustration, we perform the QR decomposition for the matrix
 
 .. math::
    
@@ -426,11 +425,11 @@ Dla przykładu przeprowadzimy rozkład QR dla macierzy
     1 & -7 &  -8
    \end{array}\right]\,.
 
-Ortogonalizacja Grama-Schmidta zastosowana do układu kolumn macierzy :math:`\,\boldsymbol{A}\ `
-da macierz :math:`\,\boldsymbol{P}\ ` o kolumnach tworzących układ ortogonalny oraz docelową
-ortogonalną macierz :math:`\,\boldsymbol{Q}.\ \\`
-Znając :math:`\,\boldsymbol{Q},\ ` macierz :math:`\,\boldsymbol{R}\ `
-można łatwo wyliczyć jako :math:`\ \boldsymbol{R}=\boldsymbol{Q}^T\boldsymbol{A}\,.`
+The Gram-Schmidt orthogonalization applied to columns of the matrix :math:`\,\boldsymbol{A}\ `
+gives a matrix :math:`\,\boldsymbol{P}\ ` whose columns comprise an orthogonal system and 
+further the target orthogonal matrix :math:`\,\boldsymbol{Q}.\ \\`
+If one knows :math:`\,\boldsymbol{Q},\ ` the matrix :math:`\,\boldsymbol{R}\ `
+may be easily computed from :math:`\ \boldsymbol{R}=\boldsymbol{Q}^T\boldsymbol{A}\,.`
 
 
 .. code-block:: python
@@ -468,9 +467,8 @@ można łatwo wyliczyć jako :math:`\ \boldsymbol{R}=\boldsymbol{Q}^T\boldsymbol
    \left(\begin{array}{rrr} 3 & -15 & -6 \\ 0 & 3 & -12 \\ 0 & 0 & 21 \end{array}\right)
    \end{array}
 
-W systemie Sage istnieje funkcja (metoda) ``QR()``, która wykonuje rozkład QR dla zadanej macierzy
-:math:`\,\boldsymbol{A}\ ` i zwraca parę macierzy :math:`\,(\boldsymbol{Q},\boldsymbol{R})\,.\ `
-Wymagany jest dokładny pierścień, zawierający liczby wymierne i pierwiastki kwadratowe (np. ciało liczb algebraicznych ``QQbar``). Obliczenia numeryczne powinny być wykonane w ciele ``RDF`` liczb podwójnej precyzji.
+Sage contains a function (method) ``QR()``, which performs the QR decomposition for a given matrix :math:`\,\boldsymbol{A}\ ` and returns a pair of matrices :math:`\,(\boldsymbol{Q},\boldsymbol{R})\,.\ `
+It requires a ring which contains square roots and rational numbers (for example a field of algebraic numbers ``QQbar``). Numerical computations should be done over a field ``RDF`` of real numbers with double precision.
 
 .. code-block:: python 
 

@@ -5,7 +5,7 @@ Application of Sage
 Inner Product
 ~~~~~~~~~~~~~
 
-Iloczyn skalarny wektorów :math:`\quad
+An inner product of vectors :math:`\quad
 \boldsymbol{x}\,=\,
 \left[\begin{array}{c} x_1 \\ x_2 \\ \dots \\ x_n \end{array}\right]\,,
 \quad
@@ -13,14 +13,14 @@ Iloczyn skalarny wektorów :math:`\quad
 \left[\begin{array}{c} y_1 \\ y_2 \\ \dots \\ y_n \end{array}\right]\quad
 \in K^n\,,` :math:`\\`
 
-gdzie :math:`\ K=R\ \,` lub :math:`\ K=C\,,\ ` można obliczyć stosując operację mnożenia 
-:math:`\,` * :math:`\,`  bądź metody Sage'a:  
+where :math:`\ K=R\ \,` or :math:`\ K=C\,,\ ` may be computed by multiplication operation 
+:math:`\,` * :math:`\,`  or Sage methods:  
 :math:`\,` ``dot_product()``, :math:`\,` ``hermitian_inner_product()``, 
 :math:`\,` ``inner_product()``.
 
 .. Metoda :math:`\,` ``dot_product()`` :math:`\,` oblicza iloczyn skalarny według wzoru
 
-Pierwsze dwa sposoby obliczają iloczyn skalarny według wzoru
+First two methods compute an inner product according to the formula
 
 .. math::
    :label: xTy
@@ -29,9 +29,8 @@ Pierwsze dwa sposoby obliczają iloczyn skalarny według wzoru
    \boldsymbol{x}^T\boldsymbol{y}\ \ =\ \ 
    \sum_{i\,=\,1}^n\ x_i\;y_i\,,
 
-odpowiedniego dla wektorów rzeczywistych. 
-Poniższy kod wyświetla iloczyn skalarny dwóch wektorów stopnia :math:`\,n\ `
-w postaci symbolicznej i sprawdza, czy obydwa sposoby są równoważne:
+which is suitable for real vectors. The code below returns an inner product of two vectors  
+of size :math:`\,n\ ` in a symbolic form and verifies whether the two methods are equivalent:
 
 .. code-block:: python
    
@@ -42,7 +41,7 @@ w postaci symbolicznej i sprawdza, czy obydwa sposoby są równoważne:
 
    x1*y1 + x2*y2 + x3*y3 + x4*y4 True
 
-Wektory mogą pochodzić z różnych pierścieni, jeśli operacje na ich elementach mają sens:
+The vectors may come from different rings as long as the operations on their entries make sense: 
 
 .. code-block:: python
    
@@ -53,7 +52,7 @@ Wektory mogą pochodzić z różnych pierścieni, jeśli operacje na ich element
    
    7.0 Complex Double Field
 
-Metoda :math:`\,` ``hermitian_inner_product()`` :math:`\,` wylicza iloczyn skalarny w postaci
+The method :math:`\,` ``hermitian_inner_product()`` :math:`\,` computes an inner product of the form
 
 .. math::
    
@@ -61,8 +60,8 @@ Metoda :math:`\,` ``hermitian_inner_product()`` :math:`\,` wylicza iloczyn skala
    \boldsymbol{x}^+\boldsymbol{y}\ \ =\ \ 
    \sum_{i\,=\,1}^n\ x_i^*\,y_i\,,
 
-odpowiedniej dla unitarnej przestrzeni :math:`\,C^n\ \,` 
-(``dot_product()`` daje tu wynik błędny):
+which is suitable for the unitary space :math:`\,C^n\ \,` 
+(here ``dot_product()`` returns an incorrect result):
 
 .. code-block:: python
 
@@ -76,7 +75,7 @@ odpowiedniej dla unitarnej przestrzeni :math:`\,C^n\ \,`
    Erroneous result:  I - 4
    Correct result: -7*I + 6
 
-Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej ogólnie
+An inner product in the space :math:`\,R^n\ ` may be also defined in a more general way:
 
 .. math::
    :label: xTAy
@@ -85,7 +84,7 @@ Iloczyn skalarny w przestrzeni :math:`\,R^n\ ` można też określić bardziej o
    \boldsymbol{x}^T\boldsymbol{A}\,\boldsymbol{y}\ \ =\ \ 
    \sum_{i,\,j=1}^n\ a_{ij}\;x_i\,y_j\,,
       
-gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierzą symetryczną i dodatnio określoną:
+where :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` is a symmetric positive definite matrix:
 
 .. math::
    :label: ATA
@@ -99,14 +98,14 @@ gdzie :math:`\ \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(R)\ ` jest macierz
    \boldsymbol{x}=\boldsymbol{0}\ \right)\ \right]\,,\ \ 
    \boldsymbol{x}\in R^n\,.
 
-(warunek :eq:`ATA` będzie spełniony wtedy i tylko wtedy, gdy 
+(the condition :eq:`ATA` is satisfied if and only if 
 :math:`\ \boldsymbol{A}=\boldsymbol{C}^T\boldsymbol{C}\,,\ \ \det\boldsymbol{C}\neq 0\,`).
 
-Do wyliczenia iloczynu skalarnego w postaci :eq:`xTAy` służy metoda 
+To compute an inner product of the form :eq:`xTAy` one may use the method 
 :math:`\,` ``inner_product()``. 
-Macierz :math:`\,\boldsymbol{A}\ ` może być tam zadeklarowana
-w definicji pierścienia, do którego należy wektor :math:`\,\boldsymbol{x}.`
-Przy braku takiej deklaracji metoda działa tak, jak :math:`\,` ``dot_product()``:
+The matrix :math:`\,\boldsymbol{A}\ ` may be included in a definition of the ring
+to which the vector :math:`\,\boldsymbol{x}\ ` belongs. If it is not included, then the method
+works exactly the same as :math:`\,` ``dot_product()``:
 
 .. code-block:: python
 
@@ -117,14 +116,14 @@ Przy braku takiej deklaracji metoda działa tak, jak :math:`\,` ``dot_product()`
 
    (-7, True)
 
-Podany niżej kod wylicza iloczyn skalarny :eq:`xTAy` 
-z macierzą :math:`\ \,\boldsymbol{A}=\boldsymbol{C}^T\boldsymbol{C}\ \,`
-dla tych samych wektorów :math:`\,` ``x,y`` :math:`\,`
-i :math:`\,` sprawdza poprawność wyniku bezpośrednim rachunkiem.  
-Macierz :math:`\,\boldsymbol{A}\ `
-jest odczytywana z definicji pierścienia *pierwszego* czynnika.
-Przestawienie czynników daje więc inny wynik
-(w tym wypadku zwykły iloczyn skalarny :eq:`xTy`).
+The code below computes an inner product :eq:`xTAy` 
+with matrix :math:`\ \,\boldsymbol{A}=\boldsymbol{C}^T\boldsymbol{C}\ \,`
+for the same vectors :math:`\,` ``x,y`` :math:`\,`
+and :math:`\,` verifies correctness of the result by direct computation.  
+Matrix :math:`\,\boldsymbol{A}\ `
+is read from a definition of the *first* factor.
+Hence, change of order of the factors returns a different result
+(in this case: a standard inner product :eq:`xTy`).
 
 .. code-block:: python
 
@@ -159,8 +158,8 @@ Przestawienie czynników daje więc inny wynik
 Norm
 ~~~~
 
-Funkcja (metoda) :math:`\,` ``norm()`` :math:`\,` oblicza :math:`\,p`-normę 
-rzeczywistego albo zespolonego wektora
+Function (method) :math:`\,` ``norm()`` :math:`\,` computes a :math:`\,p`-norm 
+of a real or complex vector
 
 .. math::
    
@@ -168,18 +167,18 @@ rzeczywistego albo zespolonego wektora
    \left[\begin{array}{c} x_1 \\ x_2 \\ \ldots \\ x_n \end{array}\right]\ 
    \in K^n\,,\qquad K=R\quad\lor\quad K=C
 
-według wzoru:
+according to the formula:
 :math:`\qquad\|\boldsymbol{x}\|_p\ \ :\,=\ \ 
 \left(\ \displaystyle\sum_{i\,=\,1}^n\ |x_i|^{\,p}\right)^{1/p}\,,\qquad
 1 \leq p \leq \infty\,.`
 
-Szczególne przypadki:
+Particular cases:
 
 :math:`\quad\|\boldsymbol{x}\|_1\ \ =\ \ 
 |x_1|+\,|x_2|+\,\ldots\,+\,|x_n|\ ;`
 
 :math:`\quad\|\boldsymbol{x}\|_2\ \ =\ \ 
-\sqrt{\,|x_1|^2+\,|x_2|^2+\ldots\,+\,|x_n|^2\,}\quad` (norma euklidesowa)
+\sqrt{\,|x_1|^2+\,|x_2|^2+\ldots\,+\,|x_n|^2\,}\quad` (Euclidean norm)
 
 :math:`\quad\|\boldsymbol{x}\|_\infty\ \ =\ \ 
 \displaystyle\lim_{p\rightarrow\infty}\|\boldsymbol{x}\|_p\ \ =\ \ 

@@ -5,29 +5,30 @@ Hermitian and Unitary Matrices
 Hermitian Conjugation of a Matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
 
-   *Sprzężeniem hermitowskim* prostokątnej zespolonej macierzy 
+   *Hermitian conjugate* of a rectangular complex matrix 
    :math:`\ \boldsymbol{A}\,=\,[\,\alpha_{ij}]_{m\times n}\ `
-   jest macierz :math:`\ \boldsymbol{A}^+=\,[\,\alpha_{ij}^+\,]_{n\times m}\,,\ \,`
-   gdzie :math:`\ \alpha_{ij}^+\,:\,=\,\alpha_{ji}^*\,,\ ` :math:`i=1,2,\dots,n,\ \ j=1,2,\dots,m\,.`
+   is a matrix :math:`\ \boldsymbol{A}^+=\,[\,\alpha_{ij}^+\,]_{n\times m}\,,\ \,`
+   where :math:`\ \alpha_{ij}^+\,:\,=\,\alpha_{ji}^*\,,\ ` :math:`i=1,2,\dots,n,\ \ j=1,2,\dots,m\,.`
    
-   Operacja sprzężenia hermitowskiego jest zatem złożeniem transponowania macierzy :math:`\\`
-   i sprzężenia zespolonego jej elementów (dwie ostatnie operacje są przemienne):
+   Operation of Hermitian conjugation is thus a composition of matrix transposition
+   :math:`\\` and complex conjugation of its elements (the last two operations are
+   commutative):
    
    .. math::
       :label: A_plus
       
       \boldsymbol{A}^+\,:\,=\ (\boldsymbol{A}^T)^*\,=\ (\boldsymbol{A}^*)^T\,.
 
-Nazwa pochodzi od nazwiska francuskiego matematyka Charlesa Hermite'a (1822-1901).
+The name comes from French mathematician Charles Hermite (1822-1901).
 
-W analogii do sprzężenia zespolonego, termin "sprzężenie hermitowskie" będzie oznaczać również operację, której wynikiem jest sprzężenie hermitowskie macierzy..
+In analogy to complex conjugation, we will use the notion "Hermitian conjugation" also for  an operation whose result is Hermitian conjugate of a matrix.
 
 .. W dalszym ciągu termin "sprzężenie hermitowskie" będzie oznaczać (zależnie do kontekstu)
    operację    sprzężenia bądź jej wynik.
 
-**Przykład.**
+**Example.**
 
 .. math::
    
@@ -40,39 +41,37 @@ W analogii do sprzężenia zespolonego, termin "sprzężenie hermitowskie" będz
    2+i & 0 \\ 3 & -1-2\,i \\ 1-i & -4\,i
    \end{array}\right]\in M_{3\times 2}(C)\,.
 
-**Własności operacji sprzężenia hermitowskiego.**
+**Properties of Hermitian conjugation.**
 
-1. Sprzężenie sumy macierzy :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_{m\times n}(C)\ `
-   równa się sumie ich sprzężeń:
+1. Hermitian conjugate of sum of matrices :math:`\ \boldsymbol{A},\boldsymbol{B}\in M_{m\times n}(C)\ ` is equal to sum of their Hermitian conjugates:
 
    .. math::
       
       (\boldsymbol{A}+\boldsymbol{B})^+\,=\ \boldsymbol{A}^+\,+\ \boldsymbol{B}^+\,.
 
-2. Pomnożenie macierzy przez :math:`\,\alpha\in C\ ` mnoży jej sprzężenie przez :math:`\,\alpha^*:`
+2. Multiplication of a matrix by scalar :math:`\,\alpha\in C\ ` multiplies its Hermitian conjugate by :math:`\,\alpha^*:`
    
    .. math::
       
       (\alpha\boldsymbol{A})^+\,=\ \alpha^*\boldsymbol{A}^+\,,\qquad
       \alpha\in C\,,\ \ \boldsymbol{A}\in M_{m\times n}(C)\,.
 
-3. Sprzężenie iloczynu macierzy 
-   :math:`\ \boldsymbol{A}\in M_{m\times p}\ \,\text{i}\ \ \boldsymbol{B}\in M_{p\times n}\ `
-   równa się iloczynowi sprzężeń z odwróceniem kolejności czynników:
+3. Hermitian conjugate of product of matrices
+   :math:`\ \boldsymbol{A}\in M_{m\times p}\ ` and :math:`\ \boldsymbol{B}\in M_{p\times n}\ ` is equal to product of Hermitian conjugates with reverse order of the factors:
    
    .. math::
       
       (\boldsymbol{A}\boldsymbol{B})^+\,=\ \boldsymbol{B}^+\boldsymbol{A}^+\,.
 
-4. Dwukrotne sprzężenie przywraca wyjściową macierz:
+4. Double Hermitian conjugation returns the initial matrix:
    
    .. math::
       
       (\boldsymbol{A}^+)^+\,=\ \boldsymbol{A}\,,\qquad\boldsymbol{A}\in M_{m\times n}(C)\,.
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Sprzężenie hermitowskie jest operacją antyliniową:
+   Hermitian conjugation is an antilinear operation:
    
    .. math::
       
@@ -80,18 +79,17 @@ W analogii do sprzężenia zespolonego, termin "sprzężenie hermitowskie" będz
       \alpha_1^*\,\boldsymbol{A}_1^+\,+\,\alpha_2^*\,\boldsymbol{A}_2^+\,,\quad
       \alpha_1,\alpha_2\in C\,,\ \ \boldsymbol{A}_1,\boldsymbol{A}_2\in M_{m\times n}(C)\,.
 
-Dla rzeczywistej macierzy :math:`\,\boldsymbol{A}\in M_{m\times n}(R)\ `
-sprzężenie hermitowskie sprowadza się do transpozycji: 
+For a real matrix :math:`\,\boldsymbol{A}\in M_{m\times n}(R),\ `
+Hermitian conjugate boils down to transpose: 
 :math:`\,\boldsymbol{A}^+\,=\ \boldsymbol{A}^T\,.`
 
-W przestrzeni :math:`\,C^n\ ` iloczyn skalarny wektorów :math:`\ \  
+Now, an inner product of vectors :math:`\ \  
 \boldsymbol{x}\,=\,
 \left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \dots \\ \alpha_n \end{array}\right]
-\ \ \ \text{i}\quad
+\ \ \ ` and :math:`\quad
 \boldsymbol{y}\,=\,
 \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]`
-
-można teraz zapisać zwięźle w postaci iloczynu macierzowego:
+in the space :math:`\,C^n\ ` may be concisely written in a form of a matrix product:
 
 .. math::
    :label: x_y
@@ -102,23 +100,23 @@ można teraz zapisać zwięźle w postaci iloczynu macierzowego:
    \left[\begin{array}{c} \beta_1 \\ \beta_2 \\ \dots \\ \beta_n \end{array}\right]\ \,=\ \,
    \boldsymbol{x}^+\,\boldsymbol{y}\,.
 
-.. admonition:: Twierdzenie 5.
+.. admonition:: Theorem 5.
 
-   Dla danej macierzy :math:`\,\boldsymbol{A}\in M_n(C),\ ` 
-   :math:`\ \boldsymbol{A}^+\ ` jest jedyną macierzą spełniającą warunek
+   For a given matrix :math:`\,\boldsymbol{A}\in M_n(C),\ `
+   :math:`\ \boldsymbol{A}^+\ ` is the only matrix satisfying the condition
    
    .. math::
       :label: x_A_y 
       
       \langle\,\boldsymbol{x},\boldsymbol{A}^+\boldsymbol{y}\,\rangle\ =\ 
       \langle\,\boldsymbol{A}\boldsymbol{x},\boldsymbol{y}\,\rangle\qquad
-      \text{dla dowolnych}\ \ \boldsymbol{x},\boldsymbol{y}\in C^n\,.
+      \text{for every}\ \ \boldsymbol{x},\boldsymbol{y}\in C^n\,.
 
-**Dowód.**
+**Proof.**
 
 .. Najpierw sprawdzimy, że macierz :math:`\,\boldsymbol{A}^+\ ` spełnia warunek :eq:`x_A_y`:
 
-Korzystając z 3. własności sprzężenia hermitowskiego i wzoru :eq:`x_y` stwierdzamy, że
+The property 3. of Hermitian conjugation and the formula :eq:`x_y` imply that
 
 .. math::
    
@@ -128,20 +126,20 @@ Korzystając z 3. własności sprzężenia hermitowskiego i wzoru :eq:`x_y` stwi
    (\boldsymbol{A}\boldsymbol{x})^+\boldsymbol{y}\,=\,
    \langle\boldsymbol{A}\boldsymbol{x},\boldsymbol{y}\rangle\,.
 
-Tak więc macierz :math:`\,\boldsymbol{A}^+\ ` spełnia warunek :eq:`x_A_y`.
-Aby pokazać, że jest to jedyna macierz o tej własności, :math:`\,`
-oznaczmy :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\ ` i :math:`\,` przypuśćmy,
-że dla pewnej macierzy :math:`\,\boldsymbol{B}=[\,\beta_{ij}\,]_{n\times n}:`
+Hence, the matrix :math:`\,\boldsymbol{A}^+\ ` satisfies the condition  :eq:`x_A_y`.
+To show that this is the only matrix with such property :math:`\,`
+denote :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\ ` and :math:`\,` assume
+that for certain matrix :math:`\,\boldsymbol{B}=[\,\beta_{ij}\,]_{n\times n}:`
 
 .. math::
 
    \langle\,\boldsymbol{x},\boldsymbol{B}\boldsymbol{y}\,\rangle\ =\ 
    \langle\,\boldsymbol{A}\boldsymbol{x},\boldsymbol{y}\,\rangle\qquad
-   \text{dla dowolnych}\ \ \boldsymbol{x},\boldsymbol{y}\in C^n\,.
+   \text{for every}\ \ \boldsymbol{x},\boldsymbol{y}\in C^n\,.
 
-Podstawiając za 
-:math:`\ \,\boldsymbol{x},\,\boldsymbol{y}\ \,` wektory bazy kanonicznej
-:math:`\ \,\boldsymbol{e}_i,\,\boldsymbol{e}_j\ \,` otrzymamy :math:`\,`
+In particular, if 
+:math:`\ \,\boldsymbol{x},\,\boldsymbol{y}\ \,` are the canonical basis vectors 
+:math:`\ \,\boldsymbol{e}_i,\,\boldsymbol{e}_j\ ,\,` we obtain :math:`\,`
 (:math:`\ i,j=1,2,\dots,n`) :
 
 .. math::
@@ -153,51 +151,50 @@ Podstawiając za
    (\boldsymbol{e}_j^+\boldsymbol{A}\;\boldsymbol{e}_i)^*\,=\ \alpha_{ji}^*\,=\ 
    \alpha_{ij}^+\,,
 
-co oznacza równość macierzową :math:`\ \boldsymbol{B}=\boldsymbol{A}^+\,.`
+which gives the equality :math:`\ \boldsymbol{B}=\boldsymbol{A}^+\,.`
 
-Warunek :eq:`x_A_y` można więc przyjąć jako równoważną definicję sprzężenia hermitowskiego
-:math:`\ \boldsymbol{A}^+\,` *kwadratowej* macierzy :math:`\,\boldsymbol{A}.\ `
-Jak zobaczymy dalej, w taki właśnie sposób definiuje się sprzężenie hermitowskie operatora liniowego.
+Hence, the condition :eq:`x_A_y` may be treated as an equivalent definition for Hermitian conjugate :math:`\ \boldsymbol{A}^+\,` of a *square* matrix :math:`\,\boldsymbol{A}.\ `
+Further we will see that exactly in this way one defines Hermitian conjugation of a linear operator.
 
 .. Tutaj raczej przyjęliśmy bardziej ogólne określenie :eq:`A_plus`, natomiast warunek analogiczny
    do :eq:`x_A_y` pojawi się w definicji sprzężenia hermitowskiego operatora liniowego.
 
-.. admonition:: Twierdzenie 6.
+.. admonition:: Theorem 6.
    
-   Wyznacznik sprzężenia hermitowskiego zespolonej macierzy kwadratowej 
-   równa się sprzężeniu zespolonemu jej wyznacznika:
+   Determinant of Hermitian conjugate of a square complex matrix 
+   is equal to complex conjugate of its determinant:
    
    .. math::
       
       \det\boldsymbol{A}^+\ =\ (\det\boldsymbol{A})^*\,,\qquad\boldsymbol{A}\in M_n(C)\,.
  
-**Dowód.** :math:`\,` Niech :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\in M_n(C).`
-Na podstawie definicji :eq:`A_plus` mamy 
+**Proof.** :math:`\,` Let :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\in M_n(C).`
+By definition :eq:`A_plus`, we have 
 
 .. math::
    
    \det\boldsymbol{A}^+\,=\ \det\,(\boldsymbol{A}^*)^T\,=\ \det\boldsymbol{A}^*\,,
-   \qquad\text{gdzie}\quad\boldsymbol{A}^*=[\,\alpha_{ij}^*\,]_{n\times n}\,.
+   \qquad\text{where}\quad\boldsymbol{A}^*=[\,\alpha_{ij}^*\,]_{n\times n}\,.
 
-Przywołując rozwinięcie permutacyjne wyznacznika łatwo uzasadnić, że wyznacznik macierzy sprzężonej (w sensie sprzężenia zespolonego) równa się sprzężeniu zespolonemu jej wyznacznika:
+Now it is easy to see from permutation expansion of the determinant that the determinant of complex conjugate of a matrix is equal to  complex conjugate of its determinant:
 :math:`\ \,\det\boldsymbol{A}^*\equiv\det[\,\alpha_{ij}^*\,]\ =\ (\det\boldsymbol{A})^*\,,\ \,`
-co bezpośrednio prowadzi do tezy.
+which leads directly to the hypothesis.
 
 Hermitian Matrices
 ~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
 
-   Macierz :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\in M_n(C)\ `
-   nazywa się *macierzą hermitowską*, :math:`\,` gdy równa się swojemu sprzężeniu hermitowskiemu:
+   Matrix :math:`\,\boldsymbol{A}=[\,\alpha_{ij}\,]_{n\times n}\in M_n(C)\ `
+   is a *Hermitian matrix* :math:`\,` if it is equal to its Hermitian conjugation:
    
    .. math::
       :label: A_hermit
       
-      \boldsymbol{A}\,=\,\boldsymbol{A}^+\,,\qquad\text{czyli}\quad
+      \boldsymbol{A}\,=\,\boldsymbol{A}^+\,,\qquad\text{that is}\quad
       \alpha_{ij}=\alpha_{ji}^*\,,\quad i,j=1,2,\dots,n.
 
-**Przykład** macierzy hermitowskiej:
+**Example** of a Hermitian matrix:
 
 .. math::
    
@@ -206,30 +203,28 @@ Hermitian Matrices
    3 & 2-i & -4+3\,i \\ 2+i & -1 & -i \\ -4-3\,i & i & 5 
    \end{array}\right]\,.
 
-Przytoczone poniżej własności polegają na tym,  
-że pewna wielkość związana z (zespoloną) :math:`\,` macierzą hermitowską jest rzeczywista. 
-Gdy trzeba pokazać, że dana liczba zespolona jest liczbą rzeczywistą,
-przydatny jest następujący 
+The properties given below state that certain quantity related with a (complex)  
+:math:`\,` Hermitian matrix is real. To show that a complex number is a real number, it is useful to have the following
 
-**Lemat.** :math:`\,` Niech :math:`\,z\in C.\ \,` 
-Wtedy :math:`\quad z\in R\quad\Leftrightarrow\quad z=z^*\,.`
+**Lemma.** :math:`\,` Let :math:`\,z\in C.\ \,` 
+Then :math:`\quad z\in R\quad\Leftrightarrow\quad z=z^*\,.`
 
-Istotnie, :math:`\,` jeżeli :math:`\ z=a+b\,i\,,\ ` to warunek :math:`\ \,z=z^*\ \,`
-oznacza :math:`\ \,a+b\,i=a-b\,i\,,\ \,` :math:`\\`
-co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
+Indeed, :math:`\,` if :math:`\ z=a+b\,i\,,\ ` then the condition :math:`\ \,z=z^*\ \,`
+means that :math:`\ \,a+b\,i=a-b\,i\,,\ \,` :math:`\\`
+which is equivalent to saying that :math:`\ \,b\equiv\text{im}\,z=0.`
 
-**Własności** macierzy hermitowskich.
+**Properties** of Hermitian matrix.
 
-1. Diagonalne elementy macierzy hermitowskiej są liczbami rzeczywistymi. :math:`\\`
-   Istotnie, zapisując warunek :eq:`A_hermit` dla :math:`\,i=j\ ` otrzymujemy
+1. Diagonal entries of a Hermitian matrix are real numbers. :math:`\\`
+   Indeed, if we write the condition :eq:`A_hermit` for :math:`\,i=j\ ` we obtain
    :math:`\ \alpha_{ii}=\alpha_{ii}^*\,,\ ` :math:`\\`
-   co oznacza, że :math:`\ \alpha_{ii}\in R\,,\ \ i=1,2,\dots,n\,.`
+   which means that :math:`\ \alpha_{ii}\in R\,,\ \ i=1,2,\dots,n\,.`
    
 
-2. Ślad i wyznacznik macierzy hermitowskiej są rzeczywiste:
+2. Trace and determinant of a Hermitian matrix are real:
    :math:`\ \text{tr}\,\boldsymbol{A},\,\det\boldsymbol{A}\,\in\,R\,.`
-   Wynika to z definicji śladu jako sumy elementów diagonalnych macierzy 
-   oraz z Twierdzenia 6. o wyznaczniku sprzężenia hermitowskiego macierzy:
+   This follows from the definition of trace as a sum of diagonal entries of the matrix 
+   and from Theorem 6. about determinant of Hermitian conjugate of a matrix:
    
    .. math::
       
@@ -238,10 +233,10 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
                                       &             & \det\boldsymbol{A}\ =\ (\det\boldsymbol{A})^* & \Leftrightarrow & \det\boldsymbol{A}\in R\,. 
       \end{array}
 
-3. Jeżeli :math:`\,\boldsymbol{A}\in M_n(C)\ ` jest macierzą hermitowską,
-   to dla każdego wektora :math:`\ \boldsymbol{x}\in C^n\ ` iloczyn skalarny
+3. If :math:`\,\boldsymbol{A}\in M_n(C)\ ` is a Hermitian matrix,
+   then for every vector :math:`\ \boldsymbol{x}\in C^n\ ` an inner product
    :math:`\ \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle\ `
-   jest liczbą rzeczywistą:
+   is a real number:
 
    .. math::
       :label: xAx
@@ -250,9 +245,9 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       \boldsymbol{x}\in C^n\,.
       
    
-   **Dowód.** :math:`\,` Podstawiając  
+   **Proof.** :math:`\,` Substitution  
    :math:`\ \,\boldsymbol{A}^+=\boldsymbol{A},\ \ \boldsymbol{y}=\boldsymbol{x}\ `
-   w równaniu :eq:`x_A_y` otrzymujemy
+   in equation :eq:`x_A_y` leads to
    
    .. math::
       :label: xAx_Axx
@@ -261,34 +256,35 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       \langle\,\boldsymbol{A}\boldsymbol{x},\boldsymbol{x}\,\rangle\,,\qquad
       \boldsymbol{x}\in C^n\,.
 
-   Ale :math:`\ \,\langle\,\boldsymbol{A}\boldsymbol{x},\boldsymbol{x}\,\rangle=
-   \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle^*\,,\ \,` więc 
+   But since :math:`\ \,\langle\,\boldsymbol{A}\boldsymbol{x},\boldsymbol{x}\,\rangle=
+   \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle^*\,,\ \,` we have 
    :math:`\ \,\langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle=
-   \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle^*\,,\ \,` skąd
+   \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle^*\,,\ \,` and thus
    :math:`\ \,\langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle\,\in R\,.`
 
-   Można udowodnić, że warunek :eq:`xAx` jest nie tylko konieczny, ale i wystarczający 
-   do tego, aby zespolona macierz :math:`\,\boldsymbol{A}\ ` była hermitowska. Wynika stąd
+   One can prove that the condition :eq:`xAx` is not only necessary, but also sufficient 
+   for a complex matrix :math:`\,\boldsymbol{A}\ ` to be Hermitian. This implies
 
-   .. admonition:: Wniosek.
+   .. admonition:: Corollary.
       
-      Jeżeli :math:`\ \boldsymbol{A}\in M_n(C)\,,\ ` to
+      If :math:`\ \boldsymbol{A}\in M_n(C)\,,\ ` then
       :math:`\qquad        
       \boldsymbol{A}\ =\ \boldsymbol{A}^+\quad\Leftrightarrow\quad
       \langle\,\boldsymbol{x},\boldsymbol{A}\boldsymbol{x}\,\rangle\in R\,,\quad
       \boldsymbol{x}\in C^n\,.`
 
-4. Dla hermitowskiej macierzy :math:`\,\boldsymbol{A}\in M_n(C)\ `
-   pierwiastki wielomianu charakterystycznego 
+4. For a Hermitian matrix :math:`\,\boldsymbol{A}\in M_n(C)\ `
+   the roots of characteristic polynomial
    :math:`\,w(\lambda)=\det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ `
-   są liczbami rzeczywistymi.
+   are real numbers.
    
-   **Dowód.**
+   **Proof.**
    
-   Jeżeli :math:`\ \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)=0\,,\ ` to jednorodny problem 
-   liniowy o macierzy :math:`\,\boldsymbol{A}-\lambda\,\boldsymbol{I}_n\ ` :math:`\\` 
-   ma rozwiązania niezerowe. :math:`\,` 
-   Istnieje więc niezerowy wektor :math:`\,\boldsymbol{x}\in C^n\,,\ \,` dla którego
+   If :math:`\ \det\,(\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)=0\,,\ ` then
+   homogeneous linear problem with matrix
+   :math:`\,\boldsymbol{A}-\lambda\,\boldsymbol{I}_n\ ` :math:`\\` 
+   has nonzero solutions. :math:`\,` 
+   Hence, there exists a nonzero vector :math:`\,\boldsymbol{x}\in C^n\ \,` for which
    
    .. math::
       :nowrap:
@@ -297,10 +293,10 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x} & \! = \! & \boldsymbol{0}\,,  \\
       \boldsymbol{A}\,\boldsymbol{x} & \! = \! & \lambda\,\boldsymbol{I}_n\,\boldsymbol{x}\,, \\
       \boldsymbol{A}\,\boldsymbol{x} & \! = \! & \lambda\,\boldsymbol{x}\,, 
-      \quad\text{gdzie}\quad\boldsymbol{x}\neq\boldsymbol{0}\,.
+      \quad\text{where}\quad\boldsymbol{x}\neq\boldsymbol{0}\,.
       \end{eqnarray*}
 
-   Wstawiając ostatnią równość do wzoru :eq:`xAx_Axx` otrzymujemy
+   If we substitute the last equality to the formula :eq:`xAx_Axx`, we obtain
 
    .. math::
       :nowrap:
@@ -312,13 +308,13 @@ co jest równoważne stwierdzeniu, że :math:`\ \,b\equiv\text{im}\,z=0.`
       \langle\,\lambda\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,,                 \\
       \lambda\ \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle & \! = \! &        
       \lambda^*\;\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,,
-      \quad\text{gdzie}\quad\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,;             \\
+      \quad\text{where}\quad\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,;             \\
       \lambda & \! = \! & \lambda^*
       \quad\ \ \Leftrightarrow\quad\ \ \,\lambda\in R\,.
       \end{eqnarray*}
 
-Rzeczywista macierz hermitowska jest macierzą symetryczną: :math:`\,`
-dla :math:`\ \boldsymbol{A}\in M_n(R)`
+Real Hermitian matrix is a symmetrix matrix: :math:`\,`
+for :math:`\ \boldsymbol{A}\in M_n(R)`,
 
 .. math:: 
    
@@ -327,12 +323,12 @@ dla :math:`\ \boldsymbol{A}\in M_n(R)`
 Unitary Matrices
 ~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Macierz :math:`\ \boldsymbol{B}\in M_n(C)\ \,` jest :math:`\,` *unitarna*, :math:`\,` gdy
-   iloczyn sprzężenia hermitowskiego :math:`\\`
-   macierzy :math:`\boldsymbol{B}\ ` 
-   i :math:`\,` samej macierzy :math:`\boldsymbol{B}\ ` równa się macierzy jednostkowej:
+   Matrix :math:`\ \boldsymbol{B}\in M_n(C)\ \,` is :math:`\,` *unitary* :math:`\,` if
+   a product of Hermitian conjugate of a :math:`\\`
+   matrix :math:`\boldsymbol{B}\ ` 
+   and :math:`\,` the matrix :math:`\boldsymbol{B}\ ` itself is an identity matrix:
  
 
    .. \,=\,[\,\boldsymbol{b}_1\,|\,\boldsymbol{b}_2\,|\,\dots\,|\,
@@ -345,7 +341,7 @@ Unitary Matrices
 
 :math:`\;`
 
-**Przykład.**
+**Example.**
 :math:`\qquad\boldsymbol{B}\ =\ \displaystyle\frac{1}{\sqrt{2}}\ 
 \left[\begin{array}{rr} 1 & i \\ i & 1 \end{array}\right]\,;\qquad
 \boldsymbol{B}^+\ =\ \displaystyle\frac{1}{\sqrt{2}}
@@ -361,26 +357,26 @@ Unitary Matrices
 
 :math:`\;`
 
-**Własności macierzy unitarnych.** :math:`\\`
+**Properties of unitary matrices.** :math:`\\`
 
-0. Warunek :eq:`unitary` oznacza, że :math:`\,\boldsymbol{B}^+=\boldsymbol{B}^{-1},\ `
-   z czego wynika dalej, że :math:`\,\boldsymbol{B}\boldsymbol{B}^+\,=\,\boldsymbol{I}_n\,.\ `
-   Unitarna macierz :math:`\,\boldsymbol{B}\ ` spełnia więc równości
+0. The condition :eq:`unitary` means that :math:`\,\boldsymbol{B}^+=\boldsymbol{B}^{-1},\ `
+   which futrher implies that :math:`\,\boldsymbol{B}\boldsymbol{B}^+\,=\,\boldsymbol{I}_n\,.\ `
+   Hence, a unitary matrix :math:`\,\boldsymbol{B}\ ` satisfies identities
    
    .. math::
       
       \boldsymbol{B}^+\boldsymbol{B}\,=\,\boldsymbol{B}\boldsymbol{B}^+\,=\,\boldsymbol{I}_n\,.
 
-1. Warunek :math:`\ \boldsymbol{B}\boldsymbol{B}^+=\boldsymbol{I}_n\ ` można przepisać jako
-   :math:`\ (\boldsymbol{B}^+)^+\boldsymbol{B}^+=\boldsymbol{I}_n\ ` co oznacza,
-   że jeśli :math:`\ \boldsymbol{B}\in M_n(C)\ ` jest macierzą unitarną, to unitarna
-   jest również macierz sprzężona :math:`\ \boldsymbol{B}^+\ ` oraz macierz odwrotna
+1. The condition :math:`\ \boldsymbol{B}\boldsymbol{B}^+=\boldsymbol{I}_n\ ` may be 
+   written as :math:`\ (\boldsymbol{B}^+)^+\boldsymbol{B}^+=\boldsymbol{I}_n\,,\ ` which means that
+   if :math:`\ \boldsymbol{B}\in M_n(C)\ ` is a unitary matrix, then so are the 
+   Hermitian conjugate :math:`\ \boldsymbol{B}^+\ ` and the inverse matrix
    :math:`\ \boldsymbol{B}^{-1}\,.`
 
-2. Niech :math:`\ \boldsymbol{B}_1,\boldsymbol{B}_2\in M_n(C)\ ` będą macierzami unitarnymi:
+2. Let :math:`\ \boldsymbol{B}_1,\boldsymbol{B}_2\in M_n(C)\ ` be unitary matrices:
    :math:`\ \ \boldsymbol{B}_1^+\,\boldsymbol{B}_1=\boldsymbol{B}_2^+\,\boldsymbol{B}_2=
    \boldsymbol{I}_n\,.\ ` 
-   Wtedy, korzystając z własności sprzężenia hermitowskiego macierzy, otrzymujemy
+   Then, by properties of Hermitian conjugation of matrices,
    
    .. math::
       
@@ -389,17 +385,17 @@ Unitary Matrices
       \boldsymbol{B}_2^+\,\boldsymbol{I}_n\,\boldsymbol{B}_2\ =\ 
       \boldsymbol{B}_2^+\,\boldsymbol{B}_2\ =\ \boldsymbol{I}_n\,.
    
-   Tak więc iloczyn macierzy unitarnych jest macierzą unitarną. :math:`\\`
-   Ponieważ macierz jednostkowa :math:`\ \boldsymbol{I}_n\ ` jest unitarna,
-   można zapisać
+   Hence, a product of unitary matrices is also a unitary matrix. :math:`\\`
+   In this way, because an identity matrix :math:`\ \boldsymbol{I}_n\ ` is unitary,
+   we may write
    
-   .. admonition:: Wniosek 1.
+   .. admonition:: Corollary 1.
       
-      Macierze unitarne stopnia :math:`\,n\ ` tworzą (nieprzemienną) grupę :math:`\\`
-      ze względu na mnożenie  macierzowe.
+      A set of unitary matrices of size :math:`\,n\ ` together with matrix 
+      multiplication comprises a (nonabelian) group.
 
-3. Iloczyn skalarny :math:`\,i`-tej oraz :math:`\,j`-tej
-   kolumny unitarnej macierzy :math:`\,\boldsymbol{B}\ ` dany jest przez
+3. An inner product of the :math:`\,i`-th and the :math:`\,j`-th
+   column of a unitary matrix :math:`\,\boldsymbol{B}\ ` is given by
    
    .. math::
       
@@ -408,22 +404,22 @@ Unitary Matrices
       \left(\boldsymbol{B}^+\boldsymbol{B}\right)_{ij}\ \,=\ \,
       \left(\boldsymbol{I}_n\right)_{ij}\ \,=\ \,\delta_{ij}\,,\qquad i,j=1,2,\dots,n\,,
 
-   gdyż :math:`\,\boldsymbol{b}_i^+\ ` jest :math:`\,i`-tym wierszem macierzy 
+   because :math:`\,\boldsymbol{b}_i^+\ ` is the :math:`\,i`-th row of a matrix 
    :math:`\,\boldsymbol{B}^+,\ \ i=1,2,\dots,n.`
    
-   Biorąc pod uwagę fakt, że macierz :math:`\,\boldsymbol{B}^+,\ `
-   której kolumny są hermitowsko sprzężonymi wierszami macierzy :math:`\,\boldsymbol{B},\ `
-   jest również unitarna, zapisujemy
+   Taking into account the fact that matrix :math:`\,\boldsymbol{B}^+,\ `
+   whose columns are Hermitian conjugates of rows of matrix :math:`\,\boldsymbol{B},\ `
+   is also unitary, we may write
 
-   .. admonition:: Wniosek 2.
+   .. admonition:: Corollary 2.
       
-      Macierz :math:`\ \boldsymbol{B}\in M_n(C)\ ` jest unitarna 
-      wtedy i tylko wtedy, :math:`\,`  gdy jej kolumny :math:`\\` 
-      (a także wiersze) :math:`\,` 
-      tworzą w przestrzeni :math:`\,C^n\ ` układ ortonormalny.
+      Matrix :math:`\ \boldsymbol{B}\in M_n(C)\ ` is unitary 
+      if and only if its columns :math:`\\` 
+      (and also rows) :math:`\,` 
+      comprise an orthonormal system in the space :math:`\,C^n.`
 
-4. Unitarna macierz :math:`\,\boldsymbol{B}\in M_n(C)\ ` zachowuje 
-   iloczyn skalarny w przestrzeni :math:`\,C^n:`
+4. Unitary matrix :math:`\,\boldsymbol{B}\in M_n(C)\ ` preserves 
+   an inner product in the space :math:`\,C^n:`
    
    .. math::
       
@@ -431,7 +427,7 @@ Unitary Matrices
       \langle\boldsymbol{x},\boldsymbol{y}\rangle\,,\qquad 
       \boldsymbol{x},\boldsymbol{y}\in C^n\,.
 
-   Rzeczywiście, na podstawie definicji iloczynu skalarnego w przestrzeni :math:`\,C^n\ ` mamy
+   Indeed, by definition  of an inner product in the space :math:`\,C^n,\ ` we have
    
    .. math::
       
@@ -445,7 +441,7 @@ Unitary Matrices
       \boldsymbol{x}^+\boldsymbol{y}\ =\ 
       \langle\boldsymbol{x},\boldsymbol{y}\rangle\,.
 
-   W szczególności, dla :math:`\,\boldsymbol{y}=\boldsymbol{x}\ ` otrzymujemy równość
+   In particular, if :math:`\,\boldsymbol{y}=\boldsymbol{x},\ ` we get an identity
 
    .. math::
       :label: Bx_Bx
@@ -454,18 +450,18 @@ Unitary Matrices
       \langle\boldsymbol{x},\boldsymbol{x}\rangle\,,\qquad 
       \boldsymbol{x}\in C^n\,,
 
-   która oznacza zachowanie normy :  
+   which describes behaviour of the norm:  
    :math:`\quad\|\,\boldsymbol{B}\boldsymbol{x}\,\|=
    \|\boldsymbol{x}\|\,,\ \ \boldsymbol{x}\in C^n\,.`
 
-   Ostatnia własność pozwala interpretować operację pomnożenia (z lewej strony)
-   wektora :math:`\,\boldsymbol{x}\in C^n\ ` przez unitarną macierz :math:`\,\boldsymbol{B}\ `
-   jako uogólniony obrót tego wektora.
+   The last property allows to interpret multiplication (on the left hand side)
+   of vector :math:`\,\boldsymbol{x}\in C^n\ ` by a unitary matrix
+   :math:`\,\boldsymbol{B}\ ` as a generalised rotation of this vector.
 
-5. Wyznacznik unitarnej macierzy :math:`\,\boldsymbol{B}\ ` jest liczbą zespoloną o module 1:
+5. Determinant of a unitary matrix :math:`\,\boldsymbol{B}\ ` is a complex number of modulus 1:
    :math:`\ \,|\det\boldsymbol{B}\,|=1\,.`
 
-   Istotnie, przyrównując do siebie wyznaczniki obu stron równości :eq:`unitary` otrzymujemy
+   Indeed, applying determinant on both sides of the equality :eq:`unitary`, we obtain
    
    .. math::
       
@@ -475,16 +471,17 @@ Unitary Matrices
       |\det\boldsymbol{B}\,|^2\quad=\quad
       \det\boldsymbol{I}_n=1\,.
 
-6. Dla unitarnej macierzy :math:`\,\boldsymbol{B}\in M_n(C)\ `
-   pierwiastki wielomianu charakterystycznego 
+6. For a unitarny matrix :math:`\,\boldsymbol{B}\in M_n(C)\ `
+   the roots of a characteristic polynomial 
    :math:`\,w(\lambda)=\det\,(\boldsymbol{B}-\lambda\,\boldsymbol{I}_n)\ `
-   są liczbami zespolonymi o module 1.
+   are complex numbers of modulus 1.
    
-   **Dowód.** :math:`\,` 
-   Jeżeli :math:`\ \det\,(\boldsymbol{B}-\lambda\,\boldsymbol{I}_n)=0\,,\ ` to jednorodny problem 
-   liniowy o macierzy :math:`\,\boldsymbol{B}-\lambda\,\boldsymbol{I}_n\ `  
-   ma rozwiązania niezerowe: :math:`\,` istnieje niezerowy wektor 
-   :math:`\,\boldsymbol{x}\in C^n\,,\ \,` dla którego
+   **Proof.** :math:`\,` 
+   If :math:`\ \det\,(\boldsymbol{B}-\lambda\,\boldsymbol{I}_n)=0\,,\ ` then 
+   homogeneous linear problem with matrix
+   :math:`\,\boldsymbol{B}-\lambda\,\boldsymbol{I}_n\ ` :math:`\\` 
+   has nonzero solutions: :math:`\,` there exists a nonzero vector
+   :math:`\,\boldsymbol{x}\in C^n\ \,` for which
    
    .. math::
       :nowrap:
@@ -493,10 +490,10 @@ Unitary Matrices
       (\boldsymbol{B}-\lambda\,\boldsymbol{I}_n)\;\boldsymbol{x} & \! = \! & \boldsymbol{0}\,,  \\
       \boldsymbol{B}\,\boldsymbol{x} & \! = \! & \lambda\,\boldsymbol{I}_n\,\boldsymbol{x}\,, \\
       \boldsymbol{B}\,\boldsymbol{x} & \! = \! & \lambda\,\boldsymbol{x}\,, 
-      \quad\text{gdzie}\quad\boldsymbol{x}\neq\boldsymbol{0}\,.
+      \quad\text{where}\quad\boldsymbol{x}\neq\boldsymbol{0}\,.
       \end{eqnarray*}
 
-   Wstawiając ostatnią równość do wzoru :eq:`Bx_Bx` otrzymujemy
+   If we substitute the last equality to the formula :eq:`Bx_Bx`, we obtain
  
    .. math::
       :nowrap:
@@ -510,33 +507,32 @@ Unitary Matrices
       \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,, \\
       |\lambda|^2\ \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle & \! = \! &        
       \langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle\,,
-      \quad\text{gdzie}\quad\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,; \\
+      \quad\text{where}\quad\langle\,\boldsymbol{x},\boldsymbol{x}\,\rangle>0\,; \\
       |\lambda|^2 & \! = \! & 1
       \quad\Rightarrow\quad|\lambda|=1\,.
       \end{eqnarray*}
 
-Związek macierzy unitarnej z uogólnionym obrotem sugeruje również
+Relation of a unitary matrix with a generalised rotation is also suggested by 
 
-.. admonition:: Twierdzenie 7.
+.. admonition:: Theorem 7.
    
-   Dana skończenie wymiarowa przestrzeń unitarna :math:`\,V(C)\ ` z ortonormalną bazą 
+   Let :math:`\,V(C)\ ` be a unitary finite dimensional vector space with an orhonormal basis 
    :math:`\,\mathcal{B}.` :math:`\\`
-   Baza :math:`\,\mathcal{C}\ ` tej przestrzeni jest ortonormalna 
-   wtedy i tylko wtedy, :math:`\\`
-   gdy macierz przejścia :math:`\,\boldsymbol{S}\ ` 
-   od bazy :math:`\,\mathcal{B}\ ` do bazy :math:`\,\mathcal{C}\ ` jest unitarna.
+   Basis :math:`\,\mathcal{C}\ ` of this space is orthonormal if and only if 
+   a transition matrix :math:`\,\boldsymbol{S}\ ` 
+   from basis :math:`\,\mathcal{B}\ ` to :math:`\,\mathcal{C}\ ` is unitary.
 
-**Dowód.** :math:`\,`
-Niech :math:`\ \ \dim V=n\,,\ \ \mathcal{B}=(u_1,u_2,\dots,u_n)\,,\ \ 
+**Proof.** :math:`\,`
+Let :math:`\ \ \dim V=n\,,\ \ \mathcal{B}=(u_1,u_2,\dots,u_n)\,,\ \ 
 \mathcal{C}=(w_1,w_2,\dots,w_n)\,,\ \ \boldsymbol{S}=[\,\sigma_{ij}\,]_{n\times n}\,.`
 
-Baza :math:`\,\mathcal{B}\ ` jest z założenia ortonormalna: 
+By assumption, basis :math:`\,\mathcal{B}\ ` is orthonormal: 
 :math:`\quad\langle u_i,u_j\rangle\,=\,\delta_{ij}\,,\quad i,j=1,2,\dots,n.`
 
-Z definicji macierzy przejścia wynikają związki:
+Definition of transition matrix implies the relations:
 :math:`\quad w_j\ =\ \displaystyle\sum_{i\,=\,1}^n\ \sigma_{ij}\,u_i\,,\quad j=1,2,\dots,n.`
 
-Rozważmy iloczyn skalarny dwóch wektorów bazy :math:`\,\mathcal{C}\ \ (i,j=1,2,\dots,n):`
+Consider an inner product of two vectors from basis :math:`\,\mathcal{C}\ \ (i,j=1,2,\dots,n):`
 
 .. math::
    
@@ -552,7 +548,7 @@ Rozważmy iloczyn skalarny dwóch wektorów bazy :math:`\,\mathcal{C}\ \ (i,j=1,
    \left(\,\boldsymbol{S}^+\boldsymbol{S}\,\right)_{ij}\ .
    \end{array}
 
-W szczególności wynika stąd, że
+This implies in particular that
 
 .. math::
    
@@ -560,10 +556,10 @@ W szczególności wynika stąd, że
    \left(\,\boldsymbol{S}^+\boldsymbol{S}\,\right)_{ij}=\delta_{ij}=
    \left(\,\boldsymbol{I}_n\right)_{ij}\,,\qquad i,j=1,2,\dots,n,
 
-czyli, że baza :math:`\,\mathcal{C}\ ` jest ortonormalna wtedy i tylko wtedy, :math:`\,` 
-gdy :math:`\ \boldsymbol{S}^+\boldsymbol{S}=\boldsymbol{I}_n.` :math:`\\`
+that is, basis :math:`\,\mathcal{C}\ ` is orthonormal if and only if
+:math:`\ \boldsymbol{S}^+\boldsymbol{S}=\boldsymbol{I}_n.` :math:`\\`
 
-Rzeczywista macierz unitarna jest macierzą ortogonalną. Mianowicie, dla 
+A real unitary matrix is an orthogonal matrix. Namely, for
 :math:`\ \boldsymbol{B}\in M_n(R):`
 
 .. math:: 
