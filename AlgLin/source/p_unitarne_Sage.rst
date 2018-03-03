@@ -184,16 +184,16 @@ Particular cases:
 \displaystyle\lim_{p\rightarrow\infty}\|\boldsymbol{x}\|_p\ \ =\ \ 
 \max_{i=1\dots n} |x_i|\,.`
 
-Polecenie ``norm`` może wystąpić jako funkcja: ``norm(x)``, 
-bądź jako metoda: ``x.norm(p)``, :math:`\\`
-przy czym domyślną wartością parametru :math:`\,p\ ` jest 2, co odpowiada normie euklidesowej.
+The command ``norm`` may be used as a function: ``norm(x)``, 
+or as a method: ``x.norm(p)``, :math:`\\`
+where a default value for the parameter :math:`\,p\ ` is 2, which corresponds to the Euclidean norm.
 
-.. admonition:: Poeksperymentuj z Sage:
+.. admonition:: Experiment with Sage:
    
-   Zadając stopień :math:`\,n\ ` wektora :math:`\,\boldsymbol{x}\ ` 
-   oraz parametr normy :math:`\,p\,,\ ` otrzymasz symboliczne :math:`\\`
-   wyrażenia dla normy euklidesowej i dla :math:`\,p`-normy
-   wektora :math:`\,\boldsymbol{x}.\ ` 
+   If you set the size :math:`\,n\ ` of a vector :math:`\,\boldsymbol{x}\ ` 
+   and the norm parameter :math:`\,p\,,\ ` you obtain a symbolic :math:`\\`
+   expression for the Euclidean norm and the :math:`\,p`-norm of a vector
+   :math:`\,\boldsymbol{x}.\ ` 
 
 .. sagecellserver::
   
@@ -205,7 +205,7 @@ przy czym domyślną wartością parametru :math:`\,p\ ` jest 2, co odpowiada no
 
 :math:`\;`
 
-Metoda ``norm()`` wylicza również normę macierzową
+The method ``norm()`` also computes the matrix norm
 
 .. math::
    :label: m_norm
@@ -214,24 +214,24 @@ Metoda ``norm()`` wylicza również normę macierzową
    \frac{\|\boldsymbol{A}\boldsymbol{x}\|_p}{\|\boldsymbol{x}\|_p}\ ,\qquad
    \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(K)\,,\quad 1 \leq p \leq \infty\,,
 
-indukowaną w algebrze :math:`\,M_n(K)\ ` przez :math:`\,p`-normę w :math:`\,K^n\,,\ ` 
-a także macierzową normę Frobeniusa
+induced in algebra :math:`\,M_n(K)\ ` by the :math:`\,p`-norm on :math:`\,K^n\,,\ ` 
+and also the Frobenius norm
 
 .. math::
    
    \|\boldsymbol{A}\|_F\ \ :\,=\ \ \sqrt{\,\sum_{i,\,j=1}^n\ |a_{ij}|^2}\,,\qquad
    \boldsymbol{A}=[\,a_{ij}\,]_{n\times n}\in M_n(K)\,,
 
-która jest bezpośrednim uogólnieniem wektorowej normy euklidesowej. :math:`\\`
-Szczególnymi przypadkami normy :eq:`m_norm` są:
+which is a direct generalisation of the Euclidean vector norm. :math:`\\`
+Particular cases of the norm :eq:`m_norm` are:
 
 :math:`\quad\|\boldsymbol{A}\|_1\ \,=\ \,
 \displaystyle\max_{j=1\dots n}\ \sum_{i\,=\,1}^n\ |a_{ij}|\quad`
-(największa suma kolumnowa) ;
+(the greatest column sum) ;
 
 :math:`\quad\|\boldsymbol{A}\|_\infty\ \,=\ \,
 \displaystyle\max_{i=1\dots n}\ \sum_{j\,=\,1}^n\ |a_{ij}|\quad`  
-(największa suma wierszowa) .
+(the greatest row sum) .
 
 .. **Przykłady dla**
    :math:`\quad\boldsymbol{x}\ =\ 
@@ -240,11 +240,11 @@ Szczególnymi przypadkami normy :eq:`m_norm` są:
    \left[\begin{array}{c} -2 \\ 2-i \\ 1 \\ 3+2\,i \end{array}\right]\quad
    \in\ C^4\,.`
 
-.. admonition:: Poeksperymentuj z Sage:
+.. admonition:: Experiment with Sage:
    
-   Wypróbuj działanie programów dla różnych wektorów i macierzy.
+   Try the following programs for different vectors and matrices.
 
-Iloczyny skalarne i normy wektorów zespolonych.
+Inner products and norms of complex vectors.
 
 .. sagecellserver::
    
@@ -280,7 +280,7 @@ Iloczyny skalarne i normy wektorów zespolonych.
    True
    5.9160797831 <= 5.65685424949 + 4.79583152331 = 10.4526857728
 
-Różne normy macierzy kwadratowej i prostokątnej:
+Different norms of square and rectangular matrices:
 
 .. sagecellserver::
 
@@ -306,16 +306,16 @@ Różne normy macierzy kwadratowej i prostokątnej:
 
    10.690331129154468?
 
-Dla liczb zespolonych jako wektorów przestrzeni :math:`\,C^1,\ ` naturalną normą jest moduł:
+If we view complex numbers as vectors in the space :math:`\,C^1,\ ` then the natural norm becomes the modulus:
 
 .. math::
    
    \|z\|\ =\ |z|\,,\quad z\in C\,,
 
-gdzie dla :math:`\ z=a+b\,i:\ |z|\,=\,\sqrt{z^*z}\,=\,\sqrt{a^2+b^2}\,.`
+where for :math:`\ z=a+b\,i:\ |z|\,=\,\sqrt{z^*z}\,=\,\sqrt{a^2+b^2}\,.`
 
-Niespodzianką jest to, że funkcja ``norm()``, zastosowana do liczb zespolonych,
-zwraca nie moduł, ale kwadrat modułu:
+It is surprising that the function ``norm()`` applied to complex numbers
+does not return the modulus, but its square:
 
 .. code-block:: python
 
@@ -325,9 +325,8 @@ zwraca nie moduł, ale kwadrat modułu:
    
    a^2 + b^2
 
-Tego rodzaju "norma" (niespełniająca warunków definicji normy) jest używana w teorii liczb.
-Aby otrzymać prawidłowy wynik, trzeba liczbę zespoloną przekształcić do jednoelementowego
-wektora albo jednoelementowej macierzy:
+A "norm" of this type (which does not satisfy conditions required by a definition of the norm) is used in number theory.
+In order to obtain a correct result one has to rewrite a complex number as a one-dimensional vector or a matrix of size one:
 
 .. code-block:: python 
 
@@ -341,32 +340,32 @@ wektora albo jednoelementowej macierzy:
 Operations on Matrices
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Operacje na macierzach rzeczywistych bądź zespolonych obsługiwane przez metody Sage'a:
+Operations on real or complex matrices implemented in Sage:
 
-* transpozycja: :math:`\,` ``transpose()``, :math:`\,` w skrócie :math:`\,` ``T`` ;
+* transpose: :math:`\,` ``transpose()``, :math:`\,` in short :math:`\,` ``T`` ;
 
-* sprzężenie zespolone: :math:`\,` ``conjugate()``, :math:`\,` w skrócie :math:`\,` ``C`` ;
+* complex conjugation: :math:`\,` ``conjugate()``, :math:`\,` in short :math:`\,` ``C`` ;
 
-* sprzężenie hermitowskie: :math:`\,` ``conjugate_transpose()``, :math:`\,` 
+* Hermitian conjugation: :math:`\,` ``conjugate_transpose()``, :math:`\,` 
   w skrócie :math:`\,` ``H`` ;
 
-* odwrotność: :math:`\,` ``inverse()``, :math:`\,` w skrócie :math:`\,` ``I`` .
+* inverse: :math:`\,` ``inverse()``, :math:`\,` in short :math:`\,` ``I`` .
 
-Następujące metody testują określone własności macierzy, a mianowicie:
+The following methods verify different properties of a matrix, namely whether it is:
 
-* symetryczność: :math:`\,` ``is_symmetric()`` ;
+* symmetric: :math:`\,` ``is_symmetric()`` ;
 
-* antysymetryczność :math:`\,` ``is_skew_symmetric()`` ;
+* antisymmetric: :math:`\,` ``is_skew_symmetric()`` ;
 
-* hermitowskość: :math:`\,` ``is_hermitian()`` ;
+* Hermitian: :math:`\,` ``is_hermitian()`` ;
 
-* unitarność: :math:`\,` ``is_unitary()`` ; 
+* unitary: :math:`\,` ``is_unitary()`` ; 
 
-* osobliwość: :math:`\,` ``is_singular()``
+* singular: :math:`\,` ``is_singular()``
 
-* kwadratowość: :math:`\,` ``is_square()`` :math:`\\`
+* square: :math:`\,` ``is_square()`` :math:`\\`
 
-**Przykład.**
+**Example.**
 
 .. :math:`\;`
 

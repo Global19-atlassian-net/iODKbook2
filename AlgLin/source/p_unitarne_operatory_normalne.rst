@@ -5,19 +5,19 @@ Normal Operators
 Commutator and its Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Niech :math:`\,A,\,B\ ` będą elementami nieprzemiennej algebry,
-np. zespolonymi bądź rzeczywistymi macierzami kwadratowymi stopnia :math:`\,n\ ` 
-albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklidesowej. 
+Let :math:`\,A,\,B\ ` be elements of a non-abelian algebra,
+e.g. complex or real square matrices of size :math:`\,n\ ` 
+or linear operators defined on a unitary or Euclidean space. 
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Wyrażenie :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` nazywa się :math:`\,` *komutatorem* :math:`\,`
-   elementów :math:`\,A\ \ \,\text{i}\ \ B\,.`
+   An expression :math:`\ \ [\,A,B\,]\ :\,=\ AB-BA\ \ ` is called the :math:`\,` *commutator* :math:`\,`
+   of the elements :math:`\,A\ ` and :math:`\ B\,.`
    
-   Jeżeli :math:`\ [\,A,B\,]\,=\,0\,,\ \ \text{czyli}\ \ AB=BA\,,\ \ `
-   to mówimy, że elementy :math:`\,A\ \ \,\text{i}\ \ B\ ` *komutują*.
+   If :math:`\ [\,A,B\,]\,=\,0\,,\ ` that is :math:`\ AB=BA\,,\ \ `
+   we say that the elements :math:`\,A\ ` and :math:`\ B\ ` *commute*.
 
-**Własności komutatorów:**
+**Properties of commutators:**
 
 .. math::
 
@@ -28,15 +28,15 @@ albo operatorami liniowymi określonymi na przestrzeni unitarnej bądź euklides
    \left[\,A_1\,,B\,\right]\ +\ \left[\,A_2\,,B\,\right]\,, & \\ \\
    \left[\,A,\,B_1+B_2\,\right]\ =\ \left[\,A,B_1\,\right]\ +\ \left[\,A,B_2\,\right]\,, & \\ \\
    \left[\,\lambda,A\,\right]\ =\ \left[\,A,\lambda\,\right]\ =\ 0\,, & 
-   \lambda\equiv\lambda\,I,\ \ I\ \ \text{-}\ \ \text{element jednostkowy,} \\ \\
+   \lambda\equiv\lambda\,I,\ \ I\ \ \text{-}\ \ \text{the identity element,} \\ \\
    \left[\,\lambda\,A,\,B\,\right]\ =\ \left[\,A,\,\lambda\,B\,\right]\ =\ 
-   \lambda\ \left[\,A,B\,\right]\,, & \lambda\ \ \text{-}\ \ \text{czynnik liczbowy.}
+   \lambda\ \left[\,A,B\,\right]\,, & \lambda\ \ \text{-}\ \ \text{scalar factor.}
    \end{array}
 
-Komutator :math:`\ [\,A,B\,]\ ` jest więc wyrażeniem liniowym ze względu na obydwa elementy
-:math:`\,A\ \ \,\text{i}\ \ \,B\,.`
+The commutator :math:`\ [\,A,B\,]\ ` is thus linear with respect to both variables
+:math:`\,A\ ` and :math:`\ B\,.`
 
-Stosując zasadę indukcji matematycznej można pokazać, że:
+One can use mathematical induction to show that:
 
 .. math::
 
@@ -52,7 +52,7 @@ Stosując zasadę indukcji matematycznej można pokazać, że:
    A_1A_2\ldots A_{n-1}\left[A_n\,,B\right]\,.
    \end{array}
 
-W szczególności, dla :math:`\,n=2\ ` otrzymuje się często używane wzory:
+In particular, for :math:`\,n=2\ ` one obtains often used formulae:
 
 .. math::
 
@@ -63,8 +63,8 @@ W szczególności, dla :math:`\,n=2\ ` otrzymuje się często używane wzory:
    A_1\,\left[\,A_2\,,B\,\right]\ +\ \left[\,A_1\,,B\,\right]\,A_2\,, &
    \end{array}
 
-Gdy :math:`\ [A,B]=\lambda\,I\,,\ \lambda\in R,\,C,\ \ ` to 
-kładąc :math:`\ B_1=\ldots=B_n=B\,,\ \ A_1=\ldots=A_n=A\ ` mamy:
+If :math:`\ [A,B]=\lambda\,I\,,\ \lambda\in R,\,C,\ \ ` then 
+putting :math:`\ B_1=\ldots=B_n=B\,,\ \ A_1=\ldots=A_n=A\,,\ ` we obtain:
 
 .. :math:`\quad\left[\,A,B^n\,\right]\ =\ n\,\lambda\,B^{n-1},\quad
    \left[\,A^n,B\,\right]\ =\ n\,\lambda\,A^{n-1},\qquad n\in N.`
@@ -74,9 +74,9 @@ kładąc :math:`\ B_1=\ldots=B_n=B\,,\ \ A_1=\ldots=A_n=A\ ` mamy:
    \left[\,A,B^n\right]\ =\ n\,\lambda\,B^{n-1},\qquad 
    \left[\,A^n,B\,\right]\ =\ n\,\lambda\,A^{n-1},\qquad n\in N.
 
-Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` można odnotować dalsze własności 
+For matrices :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` we can list futher properties 
 :math:`\\`
-(ostatni związek dotyczy też operatorów liniowych w przestrzeni unitarnej bądź euklidesowej):
+(the last identity also makes sense for linear operators on a unitary or Euclidean space):
 
 .. math::
    
@@ -87,52 +87,53 @@ Dla macierzy :math:`\,A,\,B\,\in M_n(K)\,,\ \ K=R,\,C,\ \ ` można odnotować da
 Normal Matrices and Normal Operators
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Niech :math:`\ \boldsymbol{A}\in M_n(C)\,,\ F\in\text{End}(V)\,,\ \,\text{gdzie}\ \ V\ `
-   - :math:`\,`  przestrzeń unitarna.
-
-   Macierz :math:`\ \boldsymbol{A}\ ` jest *normalna*, :math:`\,` 
-   gdy komutuje ze swoim sprzężeniem hermitowskim:
+   Let :math:`\ V\ ` be a unitary space, 
+   :math:`\ \boldsymbol{A}\in M_n(C)\,,\ F\in\text{End}(V)\,.`
+   
+   We say that a matrix :math:`\ \boldsymbol{A}\ ` is *normal* :math:`\,` 
+   if it commutes with its Hermitian conjugate:
    
    .. math::
       
-      [\,\boldsymbol{A},\boldsymbol{A}^+\,]\ =\ 0\qquad\text{czyli}\qquad
+      [\,\boldsymbol{A},\boldsymbol{A}^+\,]\ =\ 0\qquad\text{that is}\qquad
       \boldsymbol{A}\,\boldsymbol{A}^+\ =\ \boldsymbol{A}^+\boldsymbol{A}\,.
    
-   Operator :math:`\,F\ ` jest *normalny*, :math:`\,`
-   gdy komutuje ze swoim sprzężeniem hermitowskim:
+   An operator :math:`\,F\ ` is *normal* :math:`\,`
+   if it commutes with its Hermitian conjugation:
    
    .. math::
       
-      [\,F,F^+\,]\ =\ 0\qquad\text{czyli}\qquad F\,F^+\ =\ F^+F\,.
+      [\,F,F^+\,]\ =\ 0\qquad\text{that is}\qquad F\,F^+\ =\ F^+F\,.
 
-Do macierzy normalnych zaliczają się np. macierze hermitowskie i unitarne,
-ale również rzeczywiste macierze symetryczne, antysymetryczne i ortogonalne.
-Podobnie, normalne są np. operatory hermitowskie i unitarne.
+Among complex matrices, normal are Hermitian and unitary matrices; and among real matrices:  
+symmetric, antisymmetric and orthogonal.
+
+Similarly, Hermitian and unitary operators are normal.
  
-Związek pomiędzy macierzami normalnymi i operatorami normalnymi przedstawia
+A relation between normal matrices and normal operators describes
 
-.. admonition:: Twierdzenie 11.
+.. admonition:: Theorem 11.
    
-   Operator liniowy :math:`\,F\,` określony na przestrzeni unitarnej :math:`\,V\,` 
-   jest normalny wtedy i tylko wtedy, 
-   gdy jego macierz w dowolnej ortonormalnej bazie :math:`\,\mathcal{B}\ ` jest normalna:
+   A linear operator :math:`\,F\,` defined on a unitary space :math:`\,V\,` 
+   is normal if and only if 
+   in every orthonormal basis :math:`\,\mathcal{B}\ ` its matrix is normal:
    
    .. math::
       
       F\,F^+\;=\ F^+F\qquad\Leftrightarrow\qquad
       \boldsymbol{A}\,\boldsymbol{A}^+\;=\ \boldsymbol{A}^+\boldsymbol{A}\,,
    
-   gdzie :math:`\ \ \boldsymbol{A}\,=\,M_{\mathcal{B}}(F)\,.`
+   where :math:`\ \ \boldsymbol{A}\,=\,M_{\mathcal{B}}(F)\,.`
 
-**Dowód.**
+**Proof.**
 
-Podobnie jak przy dowodzie Twierdzenia 10., wykorzystamy bijektywność i multiplikatywność
-odwzorowania :math:`\ M_{\mathcal{B}}\ ` oraz to, że w przy bazie ortonormalnej 
-macierz sprzężenia hermitowskiego operatora równa się sprzężeniu hermitowskiemu jego macierzy.
+This proof is similar to a proof of Theorem 10.: we will use bijectivity and multiplicativity 
+of the mapping :math:`\ M_{\mathcal{B}}\ ` and the fact that in an orthonormal basis a matrix 
+of Hermitian conjugation of an operator is equal to Hermitian conjugate of its matrix.
 
-Następujące warunki są wzajemnie równoważne:
+The following conditions are equivalent:
 
 .. math::
    :nowrap:
@@ -146,29 +147,29 @@ Następujące warunki są wzajemnie równoważne:
    \boldsymbol{A}\,\boldsymbol{A}^+ & = & \boldsymbol{A}^+\boldsymbol{A}\,.
    \end{eqnarray*}
 
-Okazuje się, że ortogonalność wektorów własnych należących do różnych wartości
-dotyczy nie tylko operatorów hermitowskich i unitarnych (co udowodniliśmy),
-ale jest cechą szerszej klasy operatorów normalnych. Mówi o tym
+It turns out that orthogonality of eigenvectors asssociated with different eigenvalues 
+is not only a property of Hermitian and unitary operators (as we proved in the previous section),
+but is a feature of a wider class of normal operators. This is the statement of
 
-.. admonition:: Twierdzenie 12.
+.. admonition:: Theorem 12.
    
-   Wektory własne operatora normalnego,  
-   należące do różnych wartości własnych, :math:`\\`
-   są ortogonalne.
+   Eigenvectors of a normal operator   
+   asssociated with different eigenvalues  :math:`\\`
+   are orthogonal.
 
 .. :math:`\;`
 
-**Lemat.** :math:`\,` Dla normalnego operatora :math:`\ F\in\text{End}(V):`
+**Lemma.** :math:`\,` For a normal operator :math:`\ F\in\text{End}(V):`
 
 .. math::
    :label: Lemma
    
    Fx=\lambda\,x\quad\Leftrightarrow\quad F^+\,x=\lambda^*\,x\,,\qquad x\in V,\quad\lambda\in C.
 
-**Dowód lematu.** :math:`\,`
+**Proof of the lemma.** :math:`\,`
  
-Zauważmy najpierw, że jeżeli :math:`\,F\ ` jest operatorem normalnym, to
-dla dowolnego :math:`\,x\in V:`
+Note first that if :math:`\,F\ ` is a normal operator, then
+for every :math:`\,x\in V:`
 
 .. :math:`\ \|\,Fx\,\| = \|\,F^+x\,\|\,,\ x\in V.\ `
    Wynika to stąd, że
@@ -178,16 +179,15 @@ dla dowolnego :math:`\,x\in V:`
    \|\,Fx\,\|^2\ =\ \langle Fx,Fx\rangle\ =\ \langle F^+F\,x,x\rangle\ =\ 
    \langle FF^+x,x\rangle\ =\ \langle F^+x,F^+x\rangle\ =\ \|\,F^+x\,\|^2\,,
 
-skąd otrzymujemy równość norm:
+which gives equality of the norms:
 
 .. math::
    :label: norm_eq
    
    \|\,Fx\,\|\ =\ \|\,F^+x\,\|\,,\quad x\in V\,.
 
-Dalej, jeżeli operator :math:`\ F\ ` jest normalny,
-to normalny jest również operator :math:`\ F-\lambda\,I\,,` :math:`\\`
-gdzie :math:`\ \,\lambda\in C,\ \ I\ ` - operator jednostkowy:
+Further, if an operator :math:`\ F\ ` is normal,
+then normal is also the operator :math:`\ F-\lambda\,I\,,\ ` where :math:`\ \,\lambda\in C,\ \ I\ ` the idenity operator:
 
 .. to również operator :math:`\ F-\lambda\,I\ ` jest normalny:
 
@@ -206,18 +206,18 @@ gdzie :math:`\ \,\lambda\in C,\ \ I\ ` - operator jednostkowy:
    \left[\,F,F^+\,\right]\ =\ 0\,.
    \end{array}
 
-Podstawiając :math:`\ F\rightarrow F-\lambda\,I\ ` w równaniu :eq:`norm_eq`, otrzymujemy
+Substitution :math:`\ F\rightarrow F-\lambda\,I\ ` in the equation :eq:`norm_eq` leads to
 
 .. math::
    
    \begin{array}{ccc}
    & \|\,(F-\lambda\,I)\,x\,\|\ =\ \|\,(F-\lambda\,I)^+\,x\,\| &
    \\ \\
-   \text{czyli} 
+   \text{that is} 
    & \|\,F x-\lambda\,x\,\|\ =\ \|\,F^+x-\lambda^*\,x\,\|\,, & \lambda\in C\,,\ \ x\in V\,.
    \end{array}
 
-Na tej podstawie można zapisać ciąg równoważności, który kończy dowód lematu:
+Now the following equalities finish the proof:
 
 .. math::
    
@@ -229,10 +229,9 @@ Na tej podstawie można zapisać ciąg równoważności, który kończy dowód l
    & & \quad F^+x\ =\ \lambda^*\,x\,.
    \end{array}
 
-**Dowód twierdzenia 12.** :math:`\,` Zakładamy, że :math:`\,F\ ` jest operatorem normalnym.
-
-Niech :math:`\quad Fx_1\,=\ \lambda_1\,x_1\,,\quad Fx_2\,=\ \lambda_2\,x_2\,,\quad
-x_1,\,x_2\,\in\,V\!\smallsetminus\!\{\theta\}\,,\ \ \lambda_1\neq\lambda_2\,.\ \,` Wtedy
+**Proof of theorem 12.** :math:`\,` Assume that :math:`\,F\ ` is a normal operator, and let
+:math:`\quad Fx_1\,=\ \lambda_1\,x_1\,,\quad Fx_2\,=\ \lambda_2\,x_2\,,\quad
+x_1,\,x_2\,\in\,V\!\smallsetminus\!\{\theta\}\,,\ \ \lambda_1\neq\lambda_2\,.\ \,` Then
 
 .. math::
    
@@ -247,10 +246,10 @@ x_1,\,x_2\,\in\,V\!\smallsetminus\!\{\theta\}\,,\ \ \lambda_1\neq\lambda_2\,.\ \
    \lambda_1\ \langle\,x_1,x_2\rangle\,.
    \end{array}
 
-Odejmując stronami mamy
+Hence,
 :math:`\ \ (\lambda_2-\lambda_1)\,\langle\,
 x_1,x_2\rangle = 0\,,\ `
-skąd :math:`\ \langle\,x_1,x_2\rangle=0\,,\ ` co należało udowodnić.
+and thus :math:`\ \langle\,x_1,x_2\rangle=0\ ` as required.
 
 
 

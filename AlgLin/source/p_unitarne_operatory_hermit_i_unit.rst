@@ -4,42 +4,41 @@ Hermitian and Unitary Operators
 
 .. Rozważamy skończenie wymiarową przestrzeń unitarną :math:`\,V(C).\ `
 
-Zaczniemy od zapisania dwóch lematów przydatnych w dalszych rozważaniach. :math:`\\`
+We start with two lemmas which will be useful in further considerations. :math:`\\`
 
-.. admonition:: Lemat 0.
+.. admonition:: Lemma 0.
    
-   Niech :math:`\ y\in V\,,\ ` gdzie :math:`\ V\ ` jest przestrzenią unitarną.  
-   Wówczas   
+   Let :math:`\ y\in V\,,\ ` where :math:`\ V\ ` is a unitary space.  
+   Then   
 
    .. math::
       
-      \langle x,y\rangle = 0 \quad\text{dla wszystkich}\quad x\in V
+      \langle x,y\rangle = 0 \quad\text{for all}\quad x\in V
       \qquad\Leftrightarrow\qquad y = \theta\,.
 
-**Dowód.**
+**Proof.**
 
 :math:`\ \Rightarrow\ :\ `
-Jeżeli :math:`\ \ \langle x,y\rangle = 0\,,\ \ x\in V\,,\ `
-to kładąc :math:`\ x=y\ ` otrzymujemy :math:`\ \langle y,y\rangle = 0\,,\ `
-skąd :math:`\ y=\theta.`
+If :math:`\ \ \langle x,y\rangle = 0\,,\ \ x\in V\,,\ `
+then putting :math:`\ x=y\ ` we obtain :math:`\ \langle y,y\rangle = 0\,,\ `
+and thus :math:`\ y=\theta.`
 
 :math:`\ \Leftarrow\ :\ `
-Jeżeli :math:`\ y = \theta\,,\ ` to z własności iloczynu skalarnego
+If :math:`\ y = \theta\,,\ ` then by properties of an inner product,
 :math:`\ \langle x,y\rangle = \langle x,\theta\rangle = 0\,.`
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Jeżeli :math:`\ \,y_1,\,y_2\,\in\,V\,,\ ` gdzie :math:`\ V\ ` jest przestrzenią unitarną, 
-   :math:`\,` to
+If :math:`\ \,y_1,\,y_2\,\in\,V\,,\ ` where :math:`\ V\ ` is a unitary space, :math:`\,` then
 
    .. math::
       
-      \langle x,y_1\rangle = \langle x,y_2\rangle \quad\text{dla wszystkich}\quad x\in V
+      \langle x,y_1\rangle = \langle x,y_2\rangle \quad\text{for all}\quad x\in V
       \qquad\Leftrightarrow\qquad y_1 = y_2\,.
 
-Istotnie, warunek 
-:math:`\ \langle x,y_1\rangle = \langle x,y_2\rangle\ \ \,\text{dla wszystkich}\quad x\in V\ `
-oznacza, że
+Indeed, if the condition 
+:math:`\ \langle x,y_1\rangle = \langle x,y_2\rangle\ ` holds for all :math:`\ x\in V\,,`
+then
 
 .. math::
    
@@ -48,50 +47,45 @@ oznacza, że
    
    \;
 
-W następnym lemacie występuje
-*operator zerowy* :math:`\ \mathcal{O}\,,\ ` 
-określony przez: :math:`\ \ \mathcal{O}(v)=\theta\,,\ \ v\in V. \\` 
+The *zero operator* :math:`\ \mathcal{O}\ ` which occurs in the next 
+lemma is defined by: :math:`\ \ \mathcal{O}(v)=\theta\,,\ \ v\in V. \\` 
 
-.. admonition:: Lemat 1.
+.. admonition:: Lemma 1.
    
-   Niech :math:`\ F\ ` będzie operatorem liniowym 
-   określonym na unitarnej przestrzeni :math:`\,V.\ ` 
-   Wtedy 
+   Let :math:`\ F\ ` be a linear operator defined on a
+   unitary space :math:`\,V.\ ` Then
    
    .. math::
       
-      \langle\,x,Fy\,\rangle\,=\,0 \quad\text{dla wszystkich}\quad x,y\in V
+      \langle\,x,Fy\,\rangle\,=\,0 \quad\text{for all}\quad x,y\in V
       \qquad\Leftrightarrow\qquad F=\mathcal{O}\,.
 
-**Dowód.**
+**Proof.**
 
 :math:`\ \Rightarrow\ :\ ` 
-Jeżeli :math:`\ \ \langle x,Fy\rangle = 0 \ \ \,\text{dla wszystkich}\ \ x,y\in V\,,\ `
-to kładąc :math:`\ x=Fy\ ` otrzymujemy:
+If :math:`\ \ \langle x,Fy\rangle = 0 \ ` for all :math:`\ \ x,y\in V\,,\ `
+then putting :math:`\ x=Fy\ ` we obtain:
  
  :math:`\ \langle Fy,Fy\rangle = 0\ \,`  
- czyli :math:`\ \,Fy=\theta\ \,` dla każdego :math:`\ y\in V\,,\ \,` 
- a to oznacza, że :math:`\ \,F=\mathcal{O}\,.` 
+ and thus :math:`\ \,Fy=\theta\ \,` for every :math:`\ y\in V\,,\ \,` 
+ which means that :math:`\ \,F=\mathcal{O}\,.` 
 
 :math:`\ \Leftarrow\ :\ `
-Jeżeli :math:`\ \,F=\mathcal{O}\,,\ ` to dla dowolnych :math:`\ x,y\in V:\ \ 
+If :math:`\ \,F=\mathcal{O}\,,\ ` then for arbitrary :math:`\ x,y\in V:\ \ 
 \langle x,Fy\rangle = \langle x,\mathcal{O}y\rangle = \langle x,\theta\rangle = 0\,.`
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   .. Niech będą dane  operatory liniowe :math:`\ F,\,G\,\in\,\text{End}(V)\,.\ ` Wtedy
-
-   Jeżeli :math:`\ F,\,G\ ` są operatorami liniowymi
-   określonymi na unitarnej przestrzeni :math:`\,V,\ \,` to
+   If :math:`\ F,\,G\ ` are linear operators defined on a unitary space
+   :math:`\,V,\ \,` then
  
    .. math::
       
       \langle\,x,Fy\,\rangle\,=\,\langle\,x,G\,y\,\rangle
-      \quad\text{dla wszystkich}\quad x,y\in V
+      \quad\text{for all}\quad x,y\in V
       \qquad\Leftrightarrow\qquad F=\,G\,.
 
-Rzeczywiście, warunek :math:`\ \langle\,x,Fy\,\rangle\,=\,\langle\,x,Gy\,\rangle
-\ \ \text{dla wszystkich}\ \ x,y\in V\ ` oznacza, że
+Indeed, if the condition :math:`\ \langle\,x,Fy\,\rangle\,=\,\langle\,x,Gy\,\rangle\,` holds for every :math:`\ x,y\in V\,,` then
 
 .. math::
    
@@ -105,18 +99,18 @@ Rzeczywiście, warunek :math:`\ \langle\,x,Fy\,\rangle\,=\,\langle\,x,Gy\,\rangl
 Hermitian Conjugation of a Linear Operator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   *Sprzężeniem hermitowskim* :math:`\,` operatora liniowego :math:`\ F\in\,\text{End}(V)` :math:`\\`
-   jest operator liniowy :math:`\ F^+\in\,\text{End}(V)\ ` spełniający warunek
+   *Hermitian conjugation* :math:`\,` of a linear operator :math:`\ F\in\,\text{End}(V)` :math:`\\`
+   is a linear operator :math:`\ F^+\in\,\text{End}(V)\ ` which satisfies the condition
    
    .. math::
       :label: F_plus_0
       
       \langle\,x,F^+y\,\rangle\,=\,\langle\,Fx,y\,\rangle
-      \quad\text{dla wszystkich}\quad x,y\in V\,.
+      \quad\text{for all}\quad x,y\in V\,.
 
-Zauważmy od razu, że jeżeli zachodzi :eq:`F_plus_0`, :math:`\,` to
+Observe that if the condition :eq:`F_plus_0` holds, :math:`\,` then
 
 .. math::
    :label: F_plus_1
@@ -125,13 +119,13 @@ Zauważmy od razu, że jeżeli zachodzi :eq:`F_plus_0`, :math:`\,` to
    \langle\,y,\,F^+x\,\rangle^*\ =\ \langle\,Fy,\,x\,\rangle^*\ =\ 
    \langle\,x,\,Fy\,\rangle\,.
 
-Na odwrót, z :eq:`F_plus_1` wynika :eq:`F_plus_0`. Można więc zapisać
+The reverse implication is also true: the condition :eq:`F_plus_1` implies :eq:`F_plus_0`. We may write then
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Operator :math:`\,F^+\ ` sprzężony po hermitowsku do operatora 
+   Hermitian conjugation :math:`\,F^+\,` of the operator 
    :math:`\,F\in\text{End}(V)\ ` :math:`\\`
-   czyni zadość dwóm równoważnym warunkom:
+   satisfies two equivalent conditions:
    
    .. math::
       :label: F_plus_2
@@ -141,33 +135,33 @@ Na odwrót, z :eq:`F_plus_1` wynika :eq:`F_plus_0`. Można więc zapisać
       \\ \\     
       \langle\,F^+x,\,\,y\,\rangle\ =\ \langle\,x,\,Fy\,\rangle
       \end{array}      
-      \qquad\text{dla wszystkich}\quad x,y\in V\,.
+      \qquad\text{for all}\quad x,y\in V\,.
    
-Wyjaśnimy teraz następujące kwestie związane z tak sformułowaną definicją:
+We will explain the following issues that arise from using such a definition:
 
-1. czy wzory :eq:`F_plus_2` określają operator :math:`\,F^+\ ` w tym sensie, 
-   że przy danym operatorze :math:`F\,` można efektywnie wyznaczyć 
-   obraz :math:`\,F^+y\ ` dowolnego wektora :math:`\,y\in V\,?`
+1. do the formulae :eq:`F_plus_2` define the operator :math:`\,F^+\,,\ ` i.e., 
+   for a given operator :math:`F\,` is it possible to effectively determine 
+   the image :math:`\,F^+y\ ` of any vector :math:`\,y\in V\,?`
 
-2. czy faktycznie operator :math:`\,F^+\ ` jest liniowy?
+2. is the operator :math:`\,F^+\ ` linear?
 
-3. czy operator :math:`\,F^+\ ` jest określony jednoznacznie?
+3. is the operator :math:`\,F^+\ ` uniquely defined?
 
-Dla odpowiedzi załóżmy, że :math:`\,\dim V=n\ ` oraz że 
-:math:`\ \mathcal{B}=(u_1,u_2,\ldots,u_n)\ ` jest bazą ortonormalną.
+For the sake of an answer, assume that :math:`\,\dim V=n\ ` and 
+:math:`\ \mathcal{B}=(u_1,u_2,\ldots,u_n)\ ` is an orthonormal basis.
 
-1. Podstawienie :math:`\ x=u_i\ ` w :eq:`F_plus_0` daje wyrażenie
-   dla :math:`\,i`-tej współrzędnej wektora :math:`\,F^+y :`
+1. Substitution :math:`\ x=u_i\ ` in :eq:`F_plus_0` gives a formula
+   for the :math:`\,i`-th coordinate of a vector :math:`\,F^+y\,` in terms of basis vectors:
    
    .. math::
       
       (F^+y)_{\,i}\ =\ \langle u_i,F^+y\rangle\ =\ \langle Fu_i,y\rangle\,,
       \qquad i=1,2,\dots,n.
 
-   W ten sposób wektor :math:`\,F^+y\ ` jest wyznaczony 
-   poprzez swoje współrzędne w bazie :math:`\ \mathcal{B}.`
+   Hence, the vector :math:`\,F^+y\ ` is determined by its coordinates in basis 
+   :math:`\ \mathcal{B}.`
 
-2. Z własności iloczynu skalarnego wynika, że dla dowolnego :math:`\,x\in V:`
+2. Properties of an inner product imply that for arbitrary :math:`\,x\in V:`
    
    .. math::
 
@@ -179,39 +173,38 @@ Dla odpowiedzi załóżmy, że :math:`\,\dim V=n\ ` oraz że
       & = & \langle\,x,\,\alpha_1\,F^+y_1+\alpha_2\,F^+y_2\,\rangle\,.
       \end{array}
 
-   Korzystając z wniosku do Lematu 0. stwierdzamy liniowość operatora :math:`\,F^+:`
+   Corollary to Lemma 0. implies linearity of the operator :math:`\,F^+:`
    
    .. math::
       
       F^+(\alpha_1\,y_1+\alpha_2\,y_2)\,=\ \alpha_1\,F^+y_1+\alpha_2\,F^+y_2\,,
       \qquad\alpha_1,\alpha_2\in C,\ \ y_1,y_2\in V\,.
 
-3. Dla wykazania jednoznaczności określenia operatora :math:`\,F^+\ ` przypuśćmy, :math:`\\`
-   że oprócz niego jakiś inny operator :math:`\,G\ ` spełnia warunek
-   :eq:`F_plus_0`:
+3. In order to prove that the operator :math:`\,F^+\ ` is uniquely defined assume that 
+   there exists an operator :math:`\,G\ ` which satisfies the condition :eq:`F_plus_0`:
    
    .. math::
       
       \langle\,x,F^+y\,\rangle\,=\,\langle\,Fx,y\,\rangle
-      \quad\text{oraz}\quad
+      \quad\text{and}\quad
       \langle\,x,Gy\,\rangle\,=\,\langle\,Fx,y\,\rangle
-      \quad\text{dla wszystkich}\quad x,y\in V\,.
+      \quad\text{for all}\quad x,y\in V\,.
 
-   Oznacza to, że :math:`\ \langle\,x,F^+y\,\rangle\,=\,\langle\,x,Gy\,\rangle\ `
-   dla wszystkich :math:`\ x,y\in V\,.\ ` Z Lematu 1. wynika, że wtedy :math:`\,G=F^+.\ `
-   Warunki :eq:`F_plus_2` określają więc operator :math:`\,F^+\ ` jednoznacznie.
+   This means that :math:`\ \langle\,x,F^+y\,\rangle\,=\,\langle\,x,Gy\,\rangle\ `
+   for all :math:`\ x,y\in V\,.\ ` Lemma 1. implies that in this case :math:`\,G=F^+.\ `
+   Hence, the conditions :eq:`F_plus_2` define the operator :math:`\,F^+\ ` uniquely.
 
    .. Istnieje więc dokładnie jeden operator liniowy :math:`\,F^+,\ `
       spełniający :eq:`F_plus_2`. :math:`\\`
 
-Kwestię istnienia i jednoznaczności operatora :math:`\,F^+\ ` wyjaśnia niezależnie
+The issue of existence and uniqueness of the operator :math:`\,F^+\ ` may be independently explained by
 
-.. admonition:: Twierdzenie 8.
+.. admonition:: Theorem 8.
    
-   Operator liniowy :math:`\,\widetilde{F}\ ` jest sprzężeniem hermitowskim
-   operatora liniowego :math:`\,F\ ` :math:`\\`
-   wtedy i tylko wtedy, gdy jego macierz w ortonormalnej bazie :math:`\,\mathcal{B}\ ` :math:`\\` 
-   jest sprzężeniem hermitowskim macierzy operatora :math:`\,F\ ` w tej bazie:
+   A linear operator :math:`\,\widetilde{F}\ ` is a Hermitian conjugation of the linear
+   operator :math:`\,F\ ` :math:`\\`
+   if and only if its matrix in an orthonormal basis :math:`\,\mathcal{B}\ ` :math:`\\` 
+   is a Hermitian congujate of the matrix of the operator :math:`\,F\ ` in this basis:
 
    .. math::
       
@@ -219,7 +212,7 @@ Kwestię istnienia i jednoznaczności operatora :math:`\,F^+\ ` wyjaśnia niezal
       M_{\mathcal{B}}(\widetilde{F})\,=\,[\,M_{\mathcal{B}}(F)\,]^+\,,
       \qquad F,\,\widetilde{F}\,\in\,\text{End}(V)\,.
 
-**Dowód.** :math:`\,` Niech :math:`\ \ \mathcal{B}=(u_1,u_2,\ldots,u_n),\ \ 
+**Proof.** :math:`\,` Let :math:`\ \ \mathcal{B}=(u_1,u_2,\ldots,u_n),\ \ 
 M_{\mathcal{B}}(F)=\boldsymbol{F}=[\,\varphi_{ij}\,]_{n\times n}\,,\ \ 
 M_{\mathcal{B}}(\widetilde{F})=\widetilde{\boldsymbol{F}}=
 [\,\widetilde{\varphi}_{ij}\,]_{n\times n}\,.`
@@ -230,16 +223,16 @@ M_{\mathcal{B}}(\widetilde{F})=\widetilde{\boldsymbol{F}}=
    M_{\mathcal{B}}(F^+)=\widetilde{\boldsymbol{F}}=[\,\widetilde{\varphi}_{ij}\,]_{n\times n}\,.
 
 :math:`\ \Rightarrow\ :\ `
-Zakładamy, że :math:`\ \widetilde{F}=F^+,\ ` czyli że dla operatora :math:`\ \widetilde{F}\ `
-spełniony jest warunek :eq:`F_plus_0`:
+Assume that :math:`\ \widetilde{F}=F^+,\ ` that is, the operator :math:`\ \widetilde{F}\ `
+satisfies the condition :eq:`F_plus_0`:
 
 .. math::
    :label: x_Ft_y
       
    \langle\,x,\widetilde{F}y\,\rangle\,=\,\langle\,Fx,y\,\rangle
-   \quad\text{dla wszystkich}\quad x,y\in V\,.
+   \quad\text{for all}\quad x,y\in V\,.
 
-Podstawiając tam :math:`\,x=u_i,\,y=u_j\ ` otrzymujemy:
+In particular, for :math:`\,x=u_i,\,y=u_j\ ` we obtain:
 
 .. math::
    
@@ -248,24 +241,24 @@ Podstawiając tam :math:`\,x=u_i,\,y=u_j\ ` otrzymujemy:
    \langle\,u_j,Fu_i\,\rangle^*\,=\,
    \varphi_{ji}^*\,=\,\varphi_{ij}^+\,,\qquad i,j=1,2,\ldots,n.
 
-Równość odpowiednich elementów macierzowych oznacza równość macierzy:
+Equality of the corresponding matrix elements implies equality of matrices:
    
 .. math::
       
-   \widetilde{\boldsymbol{F}}=\boldsymbol{F}^+
-   \qquad\text{czyli}\qquad
+   \widetilde{\boldsymbol{F}}=\boldsymbol{F}^+\,,
+   \qquad\text{and thus}\qquad
    M_{\mathcal{B}}(\widetilde{F})\ =\ \left[\,M_{\mathcal{B}}(F)\,\right]^+.
 
 :math:`\ \Leftarrow\ :\ `
-Przyjmujemy, że :math:`\ M_{\mathcal{B}}(\widetilde{F})\ =\ 
+Assume that :math:`\ M_{\mathcal{B}}(\widetilde{F})\ =\ 
 \left[\,M_{\mathcal{B}}(F)\,\right]^+,\ \,`
-czyli że :math:`\ \widetilde{\boldsymbol{F}}=\boldsymbol{F}^+.`
+that is, :math:`\ \widetilde{\boldsymbol{F}}=\boldsymbol{F}^+.`
 
-Trzeba pokazać, że operator :math:`\,\widetilde{F}\ ` spełnia warunek :eq:`x_Ft_y`, :math:`\,`
-co będzie oznaczać, że :math:`\ \widetilde{F}=F^+.`
+We have to show that the operator :math:`\,\widetilde{F}\ ` satisfies the condition :eq:`x_Ft_y`, :math:`\,`
+which will mean that :math:`\ \widetilde{F}=F^+.`
 
-Niech :math:`\ \ x\,=\,\displaystyle\sum_{i\,=\,1}^n\ \alpha_i\,u_i\,,\ \ 
-y=\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,.\ ` Wtedy
+Let :math:`\ \ x\,=\,\displaystyle\sum_{i\,=\,1}^n\ \alpha_i\,u_i\,,\ \ 
+y=\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,.\ ` Then
 
 .. math::
       
@@ -290,14 +283,15 @@ y=\displaystyle\sum_{j\,=\,1}^n\ \beta_j\,u_j\,.\ ` Wtedy
    \ \ \langle\,Fx,y\,\rangle\,.
    \end{array}
 
-Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, można zapisać
+If we use the notion of Hermitian conjugation also for the operation of Hermitian conjugation, we may write
 
 .. Tezę twierdzenia 8. można powtórzyć bardziej konkretnie jako
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Sprzężenie hermitowskie operatora liniowego :math:`\,F\ ` jest równoważne sprzężeniu :math:`\\` 
-   hermitowskiemu macierzy tego operatora w każdej ortonormalnej bazie :math:`\,\mathcal{B}:`
+   Hermitian conjugation of a linear operator :math:`\,F\ ` is equivalent to 
+   Hermitian conjugation of the matrix of this operator in every orthonormal 
+   basis :math:`\,\mathcal{B}:`
 
    .. math::
       :label: M_B_F_plus
@@ -311,38 +305,38 @@ Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, mo
 
 :math:`\;`
 
-**Własności operacji sprzężenia hermitowskiego.** :math:`\\`
+**Properties of Hermitian conjugation.** :math:`\\`
 
-1. Sprzężenie sumy operatorów równa się sumie ich sprzężeń :
+1. Hermitian conjugation of sum of two operators is equal to sum of their Hermitian conjugations:
    
    .. math::
       
       (F+G)^+\,=\;F^++\:G^+\,,\qquad F,\,G\,\in\,\text{End}(V)\,.
 
-2. Pomnożenie operatora przez liczbę zespoloną :math:`\ \alpha\ ` 
-   mnoży jego sprzężenie przez :math:`\ \alpha^*:`
+2. Multiplication of an operator by a complex number :math:`\ \alpha\ ` multiplies its Hermitian conjugation 
+   by :math:`\ \alpha^*:`
    
    .. math:: 
       
       (\alpha\,F)^+\ =\ \;\alpha^*\,F^+\,,\qquad\alpha\in C,\ \ F\in\text{End}(V)\,.
 
-3. Sprzężenie iloczynu (tj. złożenia) operatorów równa się iloczynowi sprzężeń :math:`\\`
-   z odwróceniem kolejności czynników :
+3. Hermitian conjugate of product (i.e., composition) of operators is equal to product 
+   of Hermitian conjugations with reverse order of the factors:
    
    .. math::
       
       (F\,G)^+\ =\ \;G^+\,F^+\,,\qquad F,\,G\,\in\,\text{End}(V)\,.
 
-4. Dwukrotne sprzężenie przywraca wyjściowy operator :
+4. Double Hermitian conjugation returns the initial operator :
    
    .. math::
       
       (F^+)^+\,=\ F\,,\qquad F\in\text{End}(V)\,.
 
 
-**Dowody własności** opierają się na Lemacie 1. poprzedzającym tę sekcję. :math:`\\`
+**Proof of the properties** bases on Lemma 1. preceding this section. :math:`\\`
 
-1. Wykorzystując definicję sumy dwóch operatorów liniowych otrzymujemy równości:
+1. Definition of a sum of two linear operators implies the equalities:
    
    .. math::
       
@@ -362,9 +356,9 @@ Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, mo
       \langle\,x,\,(F+G)^+\,y\,\rangle = \langle\,x,(F^+\!+G^+)\,y\,\rangle, \ \ x,y\in V
       \quad\Rightarrow\quad (F+G)^+\ =\ F^++\,G^+ .
 
-2. Dowód w tym przypadku przebiega podobnie jak w punkcie 1.
+2. A proof of this property proceeds in a similar way as in the point 1.
 
-3. Z definicji złożenia dwóch operatorów liniowych wynikają równości:
+3. By definition of composition of two linear operators:
    
    .. math::
       
@@ -381,7 +375,7 @@ Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, mo
       \qquad\Rightarrow\qquad
       (F\,G)^+\ =\ G^+F^+\,.
 
-4. Odwołując się do wzorów :eq:`F_plus_2` otrzymujemy:
+4. Formulae :eq:`F_plus_2` imply:
    
    .. math::
       
@@ -394,9 +388,9 @@ Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, mo
       (F^+)^+\ =\ F\,.
       \end{array}
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
    
-   Sprzężenie hermitowskie jest operacją antyliniową:
+   Hermitian conjugation is an antilinear operation:
    
    .. math::
       
@@ -404,84 +398,81 @@ Nazywając sprzężeniem hermitowskim również samą operację sprzężenia, mo
       \alpha^*\,F^+\,+\,\beta^*\,G^+\,,\qquad
       \alpha,\beta\in C\,,\quad F,\,G\in\,\text{End}(V)\,.
 
-W świetle Twierdzenia 8. i wynikającego z niego wniosku analogia między własnościami
-operacji sprzężenia hermitowskiego macierzy i operatorów liniowych jest nieprzypadkowa. :math:`\\`
+In view of Theorem 8. and its corollary, an anlogy between properties of Hermitian conjugation of matrices and linear operators is not coincidental. :math:`\\`
 
 
 Hermitian Operators
 ~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Operator liniowy :math:`\,F\in\text{End}(V)\ ` jest :math:`\,` 
-   *operatorem hermitowskim*, :math:`\\`
-   gdy równa się swojemu sprzężeniu hermitowskiemu :
+   A linear operator :math:`\,F\in\text{End}(V)\ ` is a :math:`\,` 
+   *Hermitian operator* :math:`\\`
+   if it is equal to its Hermitian conjugation:
    
    .. math::
       
-      F=F^+\qquad\text{czyli}\qquad\langle\,x,Fy\,\rangle\ =\ \langle\,Fx,y\,\rangle\quad
-      \text{dla wszystkich}\quad x,y\in V\,.
+      F=F^+\qquad\text{that is}\qquad\langle\,x,Fy\,\rangle\ =\ \langle\,Fx,y\,\rangle\quad
+      \text{for all}\quad x,y\in V\,.
 
-W szczególności, dla hermitowskiego operatora :math:`\,F\,:`
+In particular, for a Hermitian operator :math:`\,F\,:`
 
 .. math::
    :label: x_F_x
    
    \langle\,x,Fx\,\rangle\ =\ \langle\,Fx,x\,\rangle\quad
-   \text{dla wszystkich}\quad x\in V\,.
+   \text{for all}\quad x\in V\,.
 
-Z wniosku do Twierdzenia 8. wynika bezpośrednio
+A corollary to Theorem 8. implies immediately
 
-.. admonition:: Twierdzenie 9.
+.. admonition:: Theorem 9.
    
-   Operator liniowy :math:`\,F\in\text{End}(V)\ ` jest hermitowski 
-   wtedy i tylko wtedy, 
-   gdy jego macierz w każdej ortonormalnej bazie :math:`\,\mathcal{B}\ ` przestrzeni :math:`\ V\ `
-   jest hermitowska:
+   A linear operator :math:`\,F\in\text{End}(V)\ ` is Hermitian
+   if and only if in every orthonormal basis :math:`\,\mathcal{B}\ ` 
+   of the space :math:`\ V\ ` its matrix is Hermitian:
 
    .. math::
       
       F=F^+\quad\Leftrightarrow\quad M_{\mathcal{B}}(F)\,=\,[\,M_{\mathcal{B}}(F)\,]^+\,,
       \qquad F\in\text{End}(V)\,.
 
-W dalszym ciągu będziemy się odwoływać do kryterium rzeczywistości liczby zespolonej :math:`\,z:`
+In what follows we will make use of a criterion for a complex number :math:`\,z\,` to be real:
 
 .. math::
    
    z\in R\quad\Leftrightarrow\quad z^*=\,z\,,\qquad z\in C\,.
 
-**Własności operatorów hermitowskich.** :math:`\\`
+**Properties of Hermitian operators.** :math:`\\`
 
-Niech będzie dany operator hermitowski :math:`\,F\in\text{End}(V).\ ` Wtedy: :math:`\\`
+Let :math:`\,F\in\text{End}(V)\ ` be a Hermitian operator. Then: :math:`\\`
 
-1. Wyrażenie :math:`\,\langle x,Fx\rangle\ ` jest liczbą rzeczywistą 
-   dla każdego :math:`\,x\in V.`
+1. For every :math:`\,x\in V\,` an expression :math:`\,\langle x,Fx\rangle\ ` is a real number.
    
-   Istotnie, na podstawie definicji iloczynu skalarnego i wzoru :eq:`x_F_x` mamy
+   Indeed, according to the definition of an inner product and the formula 
+   :eq:`x_F_x`, we have
  
    .. math::
       
       \langle\,x,Fx\,\rangle^*\ =\ \langle\,Fx,x\,\rangle\ =\ \langle\,x,Fx\,\rangle
       \qquad\Rightarrow\qquad\langle\,x,Fx\,\rangle\in R.
 
-   Można udowodnić, że warunek rzeczywistości wyrażenia :math:`\,\langle x,Fx\rangle\ `
-   dla każdego :math:`\,x\in V\ ` jest nie tylko konieczny, ale i wystarczający 
-   dla hermitowskości operatora :math:`\,F.\ ` Stąd
+   One can prove that the condition :math:`\,\forall_{x\in V}\langle x,Fx\rangle\in R\,` 
+   is not only necessary, but also sufficient for an operator :math:`\,F\ ` to be
+   Hermitian. Hence,
 
-   .. admonition:: Wniosek.
+   .. admonition:: Corollary.
       
-      Jeżeli :math:`\,F\in\text{End}(V)\,,\ ` to
+      If :math:`\,F\in\text{End}(V)\,,\ ` then
       :math:`\qquad F\ =\ F^+\quad\Leftrightarrow\quad
       \langle\,x,Fx\,\rangle\in R\,,\quad x\in V\,.`
 
 :math:`\;`
 
-2. Wartości własne operatora :math:`\,F\ ` są rzeczywiste.
+2. Eigenvalues of the operator :math:`\,F\ ` are real.
    
-   **Dowód.** :math:`\,` 
-   Niech :math:`\quad Fv\,=\,\lambda\,v\,,\quad v\in V\!\smallsetminus\!\{\theta\},\quad
-   \lambda\in C\,.\ \ ` 
-   Wzór :eq:`x_F_x` daje:
+   **Proof.** :math:`\,` 
+   Assume that :math:`\quad Fv\,=\,\lambda\,v\,,\quad v\in V\!\smallsetminus\!\{\theta\},\quad\lambda\in C\,.\ \ ` 
+   By the formula :eq:`x_F_x`,
    
    .. math::
       :nowrap:
@@ -490,17 +481,17 @@ Niech będzie dany operator hermitowski :math:`\,F\in\text{End}(V).\ ` Wtedy: :m
       \langle\,v,Fv\,\rangle & \! = \! & \langle\,Fv,v\,\rangle\,,                   \\
       \langle\,v,\,\lambda\,v\,\rangle & \! = \! & \langle\,\lambda\,v,v\,\rangle\,, \\
       \lambda\ \langle v,v\rangle & \! = \! & \lambda^*\;\langle v,v\rangle\,,       
-      \quad\text{gdzie}\quad\langle v,v\rangle>0\,;                                  \\
+      \quad\text{where}\quad\langle v,v\rangle>0\,;                                  \\
       \lambda & \! = \! & \lambda^* \quad\ \ \Leftrightarrow\quad\ \ \,\lambda\in R\,.
       \end{eqnarray*}
 
-3. Wektory własne operatora :math:`\,F,\ ` należące do różnych wartości własnych, są ortogonalne.
+3. Eigenvectors of the operator :math:`\,F\ ` associated with different eigenvalues are orthogonal.
 
-   **Dowód.** :math:`\,` 
-   Niech :math:`\quad Fv_1\,=\,\lambda_1\,v_1\,,\ \ Fv_2\,=\,\lambda_2\,v_2\,,\quad
+   **Proof.** :math:`\,` 
+   Assume that :math:`\quad Fv_1\,=\,\lambda_1\,v_1\,,\ \ Fv_2\,=\,\lambda_2\,v_2\,,\quad
    v_1,v_2\in V\!\smallsetminus\!\{\theta\}\,,\quad\lambda_1\neq\lambda_2\,.`
    
-   Biorąc za punkt wyjścia definicję operatora hermitowskiego, otrzymujemy
+   Starting from a definition of the Hermitian operator, we obtain
    
    .. math::
       :nowrap:
@@ -513,20 +504,18 @@ Niech będzie dany operator hermitowski :math:`\,F\in\text{End}(V).\ ` Wtedy: :m
       (\lambda_2-\lambda_1)\ \langle v_1,v_2\rangle & = & 0\,.
       \end{eqnarray*}
    
-   Skoro z założenia :math:`\ \lambda_1\neq\lambda_2\,,\ ` 
-   to musi być :math:`\ \langle v_1,v_2\rangle=0\,,\ ` co należało wykazać. :math:`\\`
+   Since by an assumption :math:`\ \lambda_1\neq\lambda_2\,,\ ` 
+   so we must have :math:`\ \langle v_1,v_2\rangle=0\,,\ ` as required. :math:`\\`
 
-Wektory własne hermitowskiego operatora :math:`\,F\ ` należące do różnych wartości własnych
-tworzą więc układ ortogonalny.
-Z każdego ortogonalnego układu wektorów można otrzymać, poprzez unormowanie jego elementów, 
-układ ortonormalny. Wynika stąd
+Hence, eigenvectors of the Hermitian operator :math:`\,F\ ` associated with different eigenvalues comprise an orthogonal system. Recall that one may normalise any
+ortoghonal set of vectors and thus obtain an orthonormal system. This implies
 
-.. admonition:: Wniosek.
+.. admonition:: Corollary.
       
-   Jeżeli operator hermitowski :math:`\,F,\ ` określony na :math:`\,n`-wymiarowej
-   przestrzeni unitarnej :math:`\,V,\ ` ma :math:`\,n\,` różnych wartości własnych,
-   to istnieje ortonormalna baza przestrzeni :math:`\,V,\ ` 
-   złożona z wektorów własnych tego operatora.
+   If a Hermitian operator :math:`\,F\ ` defined on an :math:`\,n`-dimensional
+   unitary space :math:`\,V\ ` has :math:`\,n\,` distinct eigenvalues,
+   then one may choose an orthonormal basis for the space :math:`\,V\ ` 
+   consisting of eigenvectors of this operator.
 
 .. (faktycznie, warunek :math:`\,n\,` różnych wartości własnych 
    nie jest konieczny do istnienia takiej bazy)
@@ -534,40 +523,40 @@ układ ortonormalny. Wynika stąd
 Unitary Operators
 ~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Operator liniowy :math:`\,U\ ` określony na przestrzeni unitarnej :math:`\,V\ `
-   jest *unitarny*, :math:`\,` gdy
+   A linear operator :math:`\,U\ ` defined on a unitary space :math:`\,V\ `
+   is *unitary* :math:`\,` if
    
    .. math::
       
       U^+U\ =\ I\,,
       
-   gdzie :math:`\,I\ ` jest operatorem jednostkowym 
-   określonym przez warunek: :math:`\,I(v)=v\,,\ v\in V.`
+   where :math:`\,I\ ` is an identity operator defined by the condition: 
+   :math:`\,I(v)=v\,,\ v\in V.`
 
-Operatory unitarne są ściśle związane z macierzami unitarnymi. Zachodzi mianowicie
+Unitary operators are closely related with unitary matrices. Namely,
 
-.. admonition:: Twierdzenie 10.
+.. admonition:: Theorem 10.
    
-   Operator liniowy :math:`\ U\ ` określony na :math:`\,n`-wymiarowej 
-   przestrzeni unitarnej :math:`\,V\ ` jest unitarny wtedy i tylko wtedy, 
-   gdy jego macierz w każdej ortonormalnej bazie :math:`\ \mathcal{B}\ ` jest unitarna:
+   A linear operator :math:`\ U\ ` defined on an :math:`\,n`-dimensional
+   unitary space :math:`\,V\ ` is unitary if and only if 
+   in every orthonormal basis :math:`\ \mathcal{B}\ ` its matrix is unitary:
    
    .. math::
       
       U^+U\ =\ I\qquad\Leftrightarrow\qquad
       \boldsymbol{B}^+\boldsymbol{B}\ =\ \boldsymbol{I}_n\,,
    
-   gdzie :math:`\ \ \boldsymbol{B}\,=\,M_{\mathcal{B}}(U)\,,\ \ \boldsymbol{I}_n\ ` 
-   - :math:`\,` macierz jednostkowa stopnia :math:`\,n.`
+   where :math:`\ \ \boldsymbol{B}\,=\,M_{\mathcal{B}}(U)\,,\ \ \boldsymbol{I}_n\ ` 
+   - :math:`\,` an identity matrix of size :math:`\,n.`
 
-**Dowód.**
+**Proof.**
 
-Odwzorowanie :math:`\,M_{\mathcal{B}}:\,\text{End}(V)\rightarrow M_n(C)\,,\,`
-które przypisuje operatorom liniowym macierze, jako izomorfizm algebr jest wzajemnie jednoznaczne 
-i multiplikatywne. :math:`\\`
-Stąd, a także z równania :eq:`M_B_F_plus` wynika ciąg równoważnych związków:
+The mapping :math:`\,M_{\mathcal{B}}:\,\text{End}(V)\rightarrow M_n(C)\,`
+which assigns matrices to linear operators is - as an algebra isomorphism - 
+bijective and multiplicative. :math:`\\`
+Hence, and also by the equation :eq:`M_B_F_plus`, the following equalities are equivalent:
 
 .. math::
    :nowrap:
@@ -580,31 +569,30 @@ Stąd, a także z równania :eq:`M_B_F_plus` wynika ciąg równoważnych związk
    \boldsymbol{B}^+\boldsymbol{B} & = & \boldsymbol{I}_n\,.
    \end{eqnarray*} 
 
-**Własności operatorów unitarnych.**
+**Properties of unitary operators.**
 
-Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przestrzeni :math:`\,V:`
+Consider a unitary operator :math:`\ U\ ` defined on a unitary space :math:`\,V:`
 
 .. math::
    :label: U0
 
    U^+U\ =\ I\,.
 
-0. Z warunku :eq:`U0` wynika istnienie operatora odwrotnego :math:`\ U^{-1}=U^+\ ` oraz zależność
+0. The condition :eq:`U0` implies existence of the inverse operator :math:`\ U^{-1}=U^+\ ` and an identity
    
    .. math::
       
       UU^+\ =\ \left(U^+\right)^+\,U^+\ =\ I\,,
 
-   która oznacza, że jeśli :math:`\ U\ ` jest operatorem unitarnym, 
-   to unitarny jest również :math:`\\`
-   operator sprzężony :math:`\ U^+\ ` 
-   i :math:`\,` operator odwrotny :math:`\ U^{-1}\,.`
+   which means that if :math:`\ U\ ` is a unitary operator, 
+   then both the conjugate operator :math:`\ U^+\ ` 
+   and :math:`\,` the inverse operator :math:`\ U^{-1}\,` are unitary.
 
-1. Iloczyn (tj. złożenie) dwóch operatorów unitarnych jest operatorem unitarnym.
+1. Product (i.e., composition) of two unitary operators is a unitary operator.
    
-   Rzeczywiście, jeżeli :math:`\,U_1^+U_1=U_2^+U_2=I\,,\ \ ` to
-   korzystając z własności sprzężenia :math:`\\` 
-   hermitowskiego operatorów i z łączności składania operatorów, otrzymujemy
+   Indeed, if :math:`\,U_1^+U_1=U_2^+U_2=I\,,\ \ ` then by properties of Hermitian
+   conjugation :math:`\\` 
+   of operators and by associativity of composition of operators, we obtain
    
    .. math::
       
@@ -614,51 +602,51 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
       U_2^+\,I\ U_2\ =\ 
       U_2^+\,U_2\ =\ I\,.
    
-   Składanie jest więc działaniem w zbiorze operatorów unitarnych. :math:`\\`
-   Ponieważ operator jednostkowy :math:`\,I\,` jest unitarny oraz odwrotność
-   operatora unitarnego jest operatorem unitarnym, można zapisać
+   Hence, composition is an operation on the set of unitary operators. :math:`\\`
+   Further, since the identity operator :math:`\,I\,` is unitary and so is an 
+   inverse of a unitary operator, we may write
    
-   .. admonition:: Wniosek.
+   .. admonition:: Corollary.
       
-      Operatory unitarne określone na przestrzeni :math:`\,V\ ` tworzą (nieprzemienną) grupę 
-      ze względu na składanie operatorów.
+      Unitary operators defined on the space :math:`\,V\ ` together with their
+      composition comprise a (nonabelian) group.
 
    :math:`\,`
 
-2. Operator :math:`\ U\ ` zachowuje iloczyn skalarny wektorów:
+2. The operator :math:`\ U\ ` preserves an inner product:
    
    .. math::
       :label: U1
       
       \langle\,Ux,\,Uy\,\rangle\ =\ \langle x,y\rangle\,,\qquad x,y\in V\,,
    
-   bo :math:`\quad\langle\,Ux,\,Uy\,\rangle\ =\ \langle\,U^+U\,x,\,y\,\rangle\ =\ 
+   since :math:`\quad\langle\,Ux,\,Uy\,\rangle\ =\ \langle\,U^+U\,x,\,y\,\rangle\ =\ 
    \langle\,Ix,y\,\rangle\ =\ \langle x,y\rangle\,.`
    
-   W szczególności, :math:`\ U\ ` zachowuje kwadrat skalarny,  a więc i normę wektora:
+   In particular, :math:`\ U\ ` preserves a vector norm:
    
    .. math::
       :label: U2
       
       \|\,Ux\,\|\ =\ \|x\|\,,\qquad x\in V\,,
 
-   bo :math:`\quad\|\,Ux\,\|^{\,2}\ =\ \langle\,Ux,Ux\,\rangle\ =\ \langle\,U^+U\,x,\,x\,\rangle\ =\ 
+   because :math:`\quad\|\,Ux\,\|^{\,2}\ =\ \langle\,Ux,Ux\,\rangle\ =\ \langle\,U^+U\,x,\,x\,\rangle\ =\ 
    \langle x,x\rangle\,.`
 
-   Zachowanie normy (uogólnionej długości) wektora przy działaniu operatora :math:`\ U\ ` 
-   pozwala interpretować to działanie jako operację uogólnionego obrotu
-   wektora w przestrzeni :math:`\ V.`
+   Preservation of a norm (which is a generalised length) of a vector by the operator :math:`\ U\ ` 
+   allows to interpret its action as a generalised rotation of a vector in the space
+   :math:`\ V.`
    
-   Można udowodnić, że warunki :math:`\,` :eq:`U0`, :math:`\,` :eq:`U1` :math:`\,` 
-   i :math:`\,` :eq:`U2` :math:`\,` są sobie równoważne, :math:`\\`
-   wobec czego każdy z nich może stanowić definicję operatora unitarnego. :math:`\\`
+   One may prove that the conditions :math:`\,` :eq:`U0`, :math:`\,` :eq:`U1` :math:`\,` 
+   and :math:`\,` :eq:`U2` :math:`\,` are equivalent, :math:`\\`
+   and thus each of them may serve as a definition of a unitary operator. :math:`\\`
 
-3. Wartości własne operatora :math:`\ U\ ` są liczbami zespolonymi o module :math:`\,1.`
+3. Eigenvalues of the operator :math:`\ U\ ` are complex numbers with modulus :math:`\,1.`
    
-   **Dowód.** :math:`\,`
+   **Proof.** :math:`\,`
 
-   Załóżmy, że :math:`\ v\ ` jest wektorem własnym operatora :math:`\ U\ ` 
-   dla wartości :math:`\ \lambda\in C.\ ` Wtedy
+   Assume that :math:`\ v\ ` is an eigenvector of the operator :math:`\ U\ ` 
+   associated with an eigenvalue :math:`\ \lambda\in C.\ ` Then
 
    .. Niech :math:`\quad Uv=\lambda\,v\,,\quad\theta\neq v\in V\,,\quad\lambda\in C.\ ` Wtedy
    
@@ -674,15 +662,15 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
       |\lambda| & = & 1\,.
       \end{eqnarray*}
 
-4. Wektory własne operatora :math:`\ U\ ` należące do różnych wartości są ortogonalne.
+4. Eigenvectors of the operator :math:`\ U\ ` associated with different eigenvalues are orthogonal.
 
-   **Dowód.** :math:`\,` 
-   Niech :math:`\quad Uv_1\,=\,\lambda_1\,v_1\,,\ \ Uv_2\,=\,\lambda_2\,v_2\,,\quad
+   **Proof.** :math:`\,` 
+   Assume that :math:`\quad Uv_1\,=\,\lambda_1\,v_1\,,\ \ Uv_2\,=\,\lambda_2\,v_2\,,\quad
    v_1,v_2\in V\!\smallsetminus\!\{\theta\}\,,\quad\lambda_1\neq\lambda_2\,.`
 
-   Wiemy już, że :math:`\quad|\lambda_1|=|\lambda_2|=1\,,\quad`
-   skąd :math:`\quad|\lambda_1|^2=\lambda_1^*\,\lambda_1=1\,,\quad\lambda_1^*=1/\lambda_1\,.\ `
-   Stąd
+   We already know that :math:`\quad|\lambda_1|=|\lambda_2|=1\,,\quad`
+   and thus :math:`\quad|\lambda_1|^2=\lambda_1^*\,\lambda_1=1\,,\quad\lambda_1^*=1/\lambda_1\,.\ `
+   Hence,
 
    .. .. math::
       
@@ -699,8 +687,8 @@ Niech :math:`\ U\ ` będzie operatorem unitarnym, określonym na unitarnej przes
    \displaystyle\frac{\lambda_2}{\lambda_1}\ \ \langle v_1,v_2\rangle\,,`
 
    :math:`\left(\,1\ -\ \displaystyle\frac{\lambda_2}{\lambda_1}\;\right)\ 
-   \langle v_1,v_2\rangle\ =\ 0\,,\quad\text{więc}\ \ \text{jeśli}\quad\lambda_1\neq\lambda_2\,,
-   \quad\text{to}\quad\langle v_1,v_2\rangle\ =\ 0\,.`
+   \langle v_1,v_2\rangle\ =\ 0\,,\quad\text{and}\ \ \text{so}\quad\lambda_1\neq\lambda_2\,,
+   \quad\text{implies}\quad\langle v_1,v_2\rangle\ =\ 0\,.`
 
 
    

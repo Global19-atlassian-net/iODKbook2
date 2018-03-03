@@ -2,51 +2,50 @@
 Problems
 --------
 
-**Zadanie 1.** :math:`\,`
+**Exercise 1.** :math:`\,`
 
-Niech :math:`\,V\ ` będzie przestrzenią unitarną, 
-a :math:`\ \,Y\ ` - :math:`\,` jej podprzestrzenią: :math:`\ Y<V\,.\ ` :math:`\\`
-*Dopełnieniem ortogonalnym* podprzestrzeni :math:`\,Y\,` nazywa się 
-zbiór :math:`\,Y^\perp\,` wszystkich wektorów przestrzeni :math:`\,V\,`
-ortogonalnych do każdego wektora podprzestrzeni :math:`\,Y:`
+Let :math:`\,V\ ` be a unitary space, 
+and :math:`\ \,Y\ ` its subspace: :math:`\ Y<V\,.\ ` :math:`\\`
+The *orthogonal complement* of a subspace :math:`\,Y\,` is the set 
+:math:`\,Y^\perp\,` of all vectors in the space :math:`\,V\,`
+that are orthogonal to every vector in the space :math:`\,Y:`
 
 .. math::
    
    Y^\perp\ :\,=\ \,\{\,x\in V:\ \ \langle x,y\rangle = 0\quad
-   \text{dla każdego}\ \ y\in Y\,\}\,.
+   \text{for every}\ \ y\in Y\,\}\,.
 
-Udowodnij, że :math:`\ Y^\perp\ ` jest podprzestrzenią: :math:`\ \,Y^\perp<V\,.`
+Prove that :math:`\ Y^\perp\ ` is a subspace: :math:`\ \,Y^\perp<V\,.`
    
-**Zadanie 2.**
+**Exercise 2.**
 
-Metoda ``gram_schmidt()`` pakietu Sage ortogonalizuje układ *wierszy*
-zadanej macierzy :math:`\,\boldsymbol{A}.\ `
+The method ``gram_schmidt()`` of Sage orthogonalizes a set of *rows*
+of a given matrix :math:`\,\boldsymbol{A}.\ `
  
-W wyniku metoda zwraca dwójkę macierzy :math:`\,(\boldsymbol{G},\boldsymbol{M}).\ `
-Wiersze macierzy :math:`\,\boldsymbol{G}\ ` tworzą układ ortogonalny
-(ale na ogół nie ortonormalny) otrzymany przez zastosowanie procedury Grama-Schmidta
-do układu wierszy macierzy :math:`\boldsymbol{A},\ `
-natomiast dolna trójkątna macierz :math:`\boldsymbol{M}` spełnia warunek
+The method returns a pair of matrices :math:`\,(\boldsymbol{G},\boldsymbol{M}).\ `
+The rows of matrix :math:`\,\boldsymbol{G}\ ` comprise an orthogonal set
+(but, in general, not orthonormal) obtained by application of the Gram-Schmidt process
+to the rows of matrix :math:`\boldsymbol{A},\ `
+and a lower triangular matrix :math:`\boldsymbol{M}` satisfies the condition
 :math:`\,\boldsymbol{A}=\boldsymbol{M}\boldsymbol{G}\ `
-(w starszej wersji pakietu Sage do :math:`\,\boldsymbol{M}\ ` 
-trzeba dodać macierz jednostkową :math:`\,\boldsymbol{I}`).
+(in an older version of Sage one had to add an identity matrix :math:`\,\boldsymbol{I}\ ` to :math:`\,\boldsymbol{M}`).
 
-Jeżeli :math:`\,\boldsymbol{A}\ ` jest macierzą kwadratową stopnia :math:`\,n,\ ` to
-według wierszowej reguły mnożenia macierzowego, elementy :math:`\,i`-tego wiersza
-macierzy :math:`\,\boldsymbol{M}\ ` są współczynnikami kombinacji liniowej
-wierszy macierzy :math:`\,\boldsymbol{G},\ ` równej 
-:math:`\,i`-temu wierszowi macierzy :math:`\,\boldsymbol{A},\ \ i=1,2,\dots,n.` 
+If :math:`\,\boldsymbol{A}\ ` is a square matrix of size :math:`\,n,\ ` then 
+according to the row matrix multiplication rule, the entries of the :math:`\,i`-th row
+of the matrix :math:`\,\boldsymbol{M}\ ` are coefficients of a linear combination
+of rows of the matrix :math:`\,\boldsymbol{G},\ ` which is equal to the 
+:math:`\,i`-th row of the matrix :math:`\,\boldsymbol{A},\ \ i=1,2,\dots,n.` 
 
-Wykonaj poniższy kod i sprawdź, czy
+Run the following code and check whether
 
-* spełniony jest warunek 
-  :math:`\,\boldsymbol{A}=\boldsymbol{M}\boldsymbol{G}\ \,?`
+* the condition
+  :math:`\,\boldsymbol{A}=\boldsymbol{M}\boldsymbol{G}\ ` holds?
 
-* iloczyn :math:`\,\boldsymbol{G}\boldsymbol{G}^{\,T}\ ` jest macierzą diagonalną :math:`\\`
-  (co jest równoważne ortogonalności układu *wierszy* macierzy :math:`\,\boldsymbol{G}`) ?
+* the product :math:`\,\boldsymbol{G}\boldsymbol{G}^{\,T}\ ` is a diagonal matrix :math:`\\`
+  (which is equivalent to orthogonality of the set of *rows* of matrix :math:`\,\boldsymbol{G}`) ?
 
-* iloczyn :math:`\,\boldsymbol{G}^{\,T}\boldsymbol{G}\ ` jest macierzą diagonalną :math:`\\`
-  (co jest równoważne ortogonalności układu *kolumn* macierzy :math:`\,\boldsymbol{G}`) ?
+* the product :math:`\,\boldsymbol{G}^{\,T}\boldsymbol{G}\ ` is a diagonal matrix :math:`\\`
+  (which is equivalent to orthogonality of the set of *columns* of matrix :math:`\,\boldsymbol{G}`) ?
 
 .. sagecellserver::
    
@@ -56,10 +55,11 @@ Wykonaj poniższy kod i sprawdź, czy
    G,M = A.gram_schmidt()
    show((G,M))
 
-Macierz :math:`\,\boldsymbol{Q}\ ` powstała przez unormowanie wierszy macierzy 
-:math:`\,\boldsymbol{G}.\ ` :math:`\\`
-Zbadaj teraz iloczyny 
-:math:`\,\boldsymbol{Q}\boldsymbol{Q}^{\,T}\ ` oraz 
+Let :math:`\,\boldsymbol{Q}\ ` be a matrix obtained from the matrix :math:`\,\boldsymbol{G}\ `
+after normalization of its rows.
+
+Compute the products 
+:math:`\,\boldsymbol{Q}\boldsymbol{Q}^{\,T}\ ` and 
 :math:`\,\boldsymbol{Q}^{\,T}\boldsymbol{Q}\,:`
 
 .. sagecellserver::
@@ -72,38 +72,37 @@ Zbadaj teraz iloczyny
 
 :math:`\;`
 
-.. admonition:: Wniosek. 
+.. admonition:: Corollary. 
 
-   Ortogonalność układu wierszy macierzy :math:`\,\boldsymbol{G}\in M_n(R)\ ` nie implikuje 
-   ortogonalności układu jej kolumn i vice versa: na ogół
+   Orthogonality of rows of matrix :math:`\,\boldsymbol{G}\in M_n(R)\ ` does not imply  
+   orthogonality of its columns and vice versa: in general
    :math:`\,\boldsymbol{G}\,\boldsymbol{G}^{\,T}\neq\boldsymbol{G}^{\,T}\boldsymbol{G},\,`
-   chyba, że :math:`\,\boldsymbol{G}=\lambda\,\boldsymbol{Q},\ \lambda\in R,` gdzie 
-   :math:`\,\boldsymbol{Q}\ ` jest macierzą ortogonalną; :math:`\,` wtedy
+   unless :math:`\,\boldsymbol{G}=\lambda\,\boldsymbol{Q},\ \lambda\in R,` where 
+   :math:`\,\boldsymbol{Q}\ ` is an orthogonal matrix; :math:`\,` then
    :math:`\,\boldsymbol{G}\,\boldsymbol{G}^{\,T}=\,\boldsymbol{G}^{\,T}\boldsymbol{G}\,=\,
    \lambda^2\,\boldsymbol{I}_n\,.`
 
-**Dyskusja.**
+**Discussion**
 
-Wniosek wiąże się z własnością macierzy diagonalnych, którą przedstawia 
+The above corollary is related to a property of diagonal matrices which is described in 
 
-.. admonition:: Lemat.
+.. admonition:: Lemma.
    
-   W algebrze :math:`\,M_n(R)\ ` rzeczywistych macierzy kwadratowych stopnia :math:`\,n\,,\,`
-   diagonalna macierz :math:`\,\boldsymbol{D}\ ` komutuje z każdą macierzą
-   :math:`\,\boldsymbol{A}\ ` tej algebry wtedy i tylko wtedy, gdy jest proporcjonalna
-   do macierzy jednostkowej:
+   In algebra :math:`\,M_n(R)\ ` of real square matrices of size :math:`\,n\,,\,`
+   a diagonal matrix :math:`\,\boldsymbol{D}\ ` commutes with every matrix
+   :math:`\,\boldsymbol{A}\ ` of this algebra if and only if it is proportional to the idenity matrix:   
    
    .. math::
       
       [\,\boldsymbol{A},\boldsymbol{D}\,]\equiv
       \boldsymbol{A}\boldsymbol{D}-\boldsymbol{D}\boldsymbol{A}=
       \boldsymbol{0}\quad
-      \text{dla każdej macierzy}\ \boldsymbol{A}
+      \text{for every matrix}\ \boldsymbol{A}
       \quad\ \ \Leftrightarrow\quad\ \ 
       \boldsymbol{D}=\alpha\,\boldsymbol{I}_n\,,\ \alpha\in R\,. 
 
-Wprowadzamy oznaczenie dla diagonalnej macierzy o elementach
-:math:`\ \alpha_1,\,\alpha_2,\,\ldots,\,\alpha_n:`
+We will denote a diagonal matrix with entries
+:math:`\ \alpha_1,\,\alpha_2,\,\ldots,\,\alpha_n\ ` by:
 
 .. math::
    
@@ -120,11 +119,11 @@ Wprowadzamy oznaczenie dla diagonalnej macierzy o elementach
    :math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\ldots,\,\boldsymbol{C}_n\ ` - :math:`\,`
    kolumny dowolnej macierzy, to wierszowa i kolumnowa reguła mnożenia macierzowego daje odpowiednio
 
-Niech będzie dana dowolna macierz :math:`\ \boldsymbol{A}\in M_n(R)\ ` o kolumnach
+Consider a matrix :math:`\ \boldsymbol{A}\in M_n(R)\ ` with columns
 :math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\ldots,\,\boldsymbol{C}_n\ `
-i wierszach :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\ldots,\,\boldsymbol{R}_n\,.\ `
-Wychodząc z ogólnej reguły mnożenia macierzowego, możemy zapisać kolumnową i wierszową
-regułę mnożenia macierzy :math:`\ \boldsymbol{A}\ ` przez macierz diagonalną:
+and rows :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\ldots,\,\boldsymbol{R}_n\,.\ `
+The above lemma allows us to write the column and row rule of matrix multilplication 
+for a product of matrix :math:`\ \boldsymbol{A}\ ` and a diagonal matrix:
 
 .. Jeżeli przez :math:`\ \boldsymbol{C}_1,\,\boldsymbol{C}_2,\,\ldots,\,\boldsymbol{C}_n\ `
    oznaczymy kolumny, a przez 
@@ -134,7 +133,8 @@ regułę mnożenia macierzy :math:`\ \boldsymbol{A}\ ` przez macierz diagonalną
 
 .. math::
 
-   [\,\boldsymbol{C}_1\,|\,\boldsymbol{C}_2\,|\,\ldots\,|\,\boldsymbol{C}_n\,]\ \cdot\ 
+   [\,\boldsymbol{C}_1\,|\,\boldsymbol{C}_2\,|\,\ldots\,|\,
+   \boldsymbol{C}_n\,]\,\cdot\ 
    \text{diag}\,(\alpha_1,\alpha_2,\ldots,\alpha_n)\ \ =\ \ 
    [\,\alpha_1\,\boldsymbol{C}_1\,|\,\alpha_2\,\boldsymbol{C}_2\,|\,\ldots\,|\,
    \alpha_n\,\boldsymbol{C}_n\,]\,,
@@ -147,17 +147,16 @@ regułę mnożenia macierzy :math:`\ \boldsymbol{A}\ ` przez macierz diagonalną
    \alpha_1\,\boldsymbol{R}_1 \\ \alpha_2\,\boldsymbol{R}_2 \\ \ldots \\ \alpha_n\,\boldsymbol{R}_n
    \end{array}\right]\,.
 
-**Dowód lematu.**
+**Proof of the lemma.**
 
-:math:`\ \Rightarrow\ :\ ` Pokażemy, że gdy 
+:math:`\ \Rightarrow\ :\ ` We will show that if 
 :math:`\ \boldsymbol{D}\neq\alpha\,\boldsymbol{I}_n\,,\ `
-to istnieje macierz :math:`\,\boldsymbol{A}\,,\ `
-dla której :math:`\,\boldsymbol{A}\boldsymbol{D}\neq\boldsymbol{D}\boldsymbol{A}\,.`
+then there exists a matrix :math:`\,\boldsymbol{A}\ `
+such that :math:`\,\boldsymbol{A}\boldsymbol{D}\neq\boldsymbol{D}\boldsymbol{A}\,.`
 
-Jeżeli :math:`\ \boldsymbol{D}=\text{diag}\,(\alpha_1,\alpha_2,\dots,\alpha_n)\,,\ `
-gdzie :math:`\ \alpha_p\neq\alpha_q\,,\quad 1\leq p<q \leq n\,,\ `
-to :math:`\ \boldsymbol{A}\ ` może być macierzą, której jedyny niezerowy element jest jedynką
-w :math:`\,p`-tym wierszu i :math:`\,` w :math:`\,q`-tej kolumnie:
+If :math:`\ \boldsymbol{D}=\text{diag}\,(\alpha_1,\alpha_2,\dots,\alpha_n)\,,\ `
+where :math:`\ \alpha_p\neq\alpha_q\,,\quad 1\leq p<q \leq n\,,\ `
+then we may choose :math:`\ \boldsymbol{A}\ ` to be the matrix whose only non-zero element, equal to 1, say, is in the :math:`\,p`-th row and :math:`\,` in the :math:`\,q`-th column:
 
 .. Niech :math:`\ \boldsymbol{A}\ ` będzie macierzą, której jedyny niezerowy element jest jedynką
    w :math:`\,p`-tym wierszu :math:`\\`
@@ -171,10 +170,11 @@ w :math:`\,p`-tym wierszu i :math:`\,` w :math:`\,q`-tej kolumnie:
    \boldsymbol{D}=[\,d_{ij}\,]_{n\times n}\,,\ \ d_{ij}=\alpha_i\,\delta_{ij}\,;\quad\ \ 
    i,j=1,2,\dots,n\,.
 
-Oznaczmy: 
+Denote: 
 :math:`\ \boldsymbol{A}\boldsymbol{D}=[\,b_{ij}\,]_{n\times n}\,,\ 
-\boldsymbol{D}\boldsymbol{A}=[\,c_{ij}\,]_{n\times n}\,.\ ` :math:`\\`
-Reguły mnożenia macierzowego, a także bezpośredni rachunek:
+\boldsymbol{D}\boldsymbol{A}=[\,c_{ij}\,]_{n\times n}\,.\ ` 
+
+Matrix multiplication rules and direct computation:
 
 .. math::
    
@@ -186,13 +186,13 @@ Reguły mnożenia macierzowego, a także bezpośredni rachunek:
                \sum_{k\,=\,1}^n\ \alpha_i\;\delta_{ik}\;\delta_{kp}\;\delta_{jq}\ =\ 
                \alpha_p\;\delta_{ip}\;\delta_{jq}\,,
 
-stwierdzają, że 
+state that
 :math:`\,\boldsymbol{A}\boldsymbol{D}\neq\boldsymbol{D}\boldsymbol{A}\,,\ `
-bo jedyny niezerowy element jednej i drugiej macierzy znajduje się w nich na tej samej pozycji,
-ale ma różną wartość: :math:`\ \ b_{pq}=\alpha_q\ \neq\ c_{pq}=\alpha_p\,.`
+because the only non-zero element of both matrices is in the same place and has a different value:
+:math:`\ \ b_{pq}=\alpha_q\ \neq\ \alpha_p=c_{pq}\,.`
 
-:math:`\ \Leftarrow\ :\ ` Jeżeli :math:`\ \boldsymbol{D}=\alpha\,\boldsymbol{I}_n\,,\ ` 
-to z własności działań na macierzach łatwo wynika, że
+:math:`\ \Leftarrow\ :\ ` If :math:`\ \boldsymbol{D}=\alpha\,\boldsymbol{I}_n\,,\ ` 
+then properties of operations on matrices imply immediately that
 
 .. math::
    
@@ -201,32 +201,32 @@ to z własności działań na macierzach łatwo wynika, że
    \alpha\,(\boldsymbol{I}_n\boldsymbol{A})\ =\ (\alpha\,\boldsymbol{I}_n)\,\boldsymbol{A}\ =\  
    \boldsymbol{D}\boldsymbol{A}\,.
 
-Można teraz wyjaśnić związek pomiędzy omówionymi wyżej :math:`\,`
-Wnioskiem :math:`\,` i :math:`\,` Lematem.
+Now we can explain a relation between the above :math:`\,`
+Corollary :math:`\,` and :math:`\,` Lemma.
 
-Załóżmy, że wiersze :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\ldots,\,\boldsymbol{R}_n\ `
-macierzy :math:`\,\boldsymbol{G}\in M_n(R)\ ` tworzą układ ortogonalny:
+Assume that rows :math:`\ \boldsymbol{R}_1,\,\boldsymbol{R}_2,\,\ldots,\,\boldsymbol{R}_n\ `
+of matrix :math:`\,\boldsymbol{G}\in M_n(R)\ ` comprise an orthogonal set:
 
 .. math::
    
    \langle\,\boldsymbol{R}_i,\boldsymbol{R}_j\,\rangle\ =\ \alpha_i\;\delta_{ij}\,,\quad
    \alpha_i\neq 0\,,\qquad i,j=1,2,\dots,n\,.
 
-Wtedy macierz :math:`\ \boldsymbol{G}\,\boldsymbol{G}^{\,T}\ ` jest diagonalna:
+Then the matrix :math:`\ \boldsymbol{G}\,\boldsymbol{G}^{\,T}\ ` is diagonal:
 :math:`\ \ \boldsymbol{G}\,\boldsymbol{G}^{\,T}\ =\ \boldsymbol{D}\ =\ 
 \text{diag}\,(\alpha_1,\alpha_2,\dots,\alpha_n)\,,\ ` :math:`\\`
-przy czym :math:`\ \alpha_i=\|\,\boldsymbol{R}_i\,\|^2\,,\quad i=1,2,\dots,n\,.`
+where :math:`\ \alpha_i=\|\,\boldsymbol{R}_i\,\|^2\,,\quad i=1,2,\dots,n\,.`
 
-Gdy dodatkowo normy wszystkich wierszy są jednakowe:
+If additionally the norms of all the rows are equal:
 
 .. math::
    :label: equal
    
    \alpha_1=\alpha_2=\dots=\alpha_n=\alpha\,,
 
-to :math:`\ \boldsymbol{D}=\alpha\,\boldsymbol{I}_n\ \,` i :math:`\,` 
-macierz :math:`\ \boldsymbol{D}\ ` komutuje ze wszystkimi 
-macierzami :math:`\ \boldsymbol{A}\in M_n(R)\,.\ ` Wówczas
+then :math:`\ \boldsymbol{D}=\alpha\,\boldsymbol{I}_n\ \,` and :math:`\,` 
+the matrix :math:`\ \boldsymbol{D}\ ` commutes with all the matrices 
+:math:`\ \boldsymbol{A}\in M_n(R)\,.\ ` Then
 
 .. math::
    :label: verse_col
@@ -239,41 +239,41 @@ macierzami :math:`\ \boldsymbol{A}\in M_n(R)\,.\ ` Wówczas
    \quad\Leftrightarrow\quad
    \boldsymbol{G}^{\,T}\boldsymbol{G}=\boldsymbol{D}
 
-i ortogonalność układu wierszy jest równoważna ortogonalności układu kolumn macierzy
+and so orthogonality of rows is equivalent to orthogonality of columns of matrix
 :math:`\ \boldsymbol{G}\,.\ ` 
-Wtedy też :math:`\ \,\boldsymbol{G}=\lambda\,\boldsymbol{Q}\,,\ \,`
-gdzie przy :math:`\ \,\lambda=\sqrt{\alpha}\ \,` macierz :math:`\ \,\boldsymbol{Q}\ \,` 
-jest ortogonalna:
+Moreover, :math:`\ \,\boldsymbol{G}=\lambda\,\boldsymbol{Q}\,;\ \,`
+and if :math:`\ \,\lambda=\sqrt{\alpha}\,, \,` the matrix :math:`\ \,\boldsymbol{Q}\ \,` 
+is orthogonal:
 
 .. math::
    
    \boldsymbol{Q}\,\boldsymbol{Q}^{\,T}\ =\ \,
    \boldsymbol{Q}^{\,T}\boldsymbol{Q}\ =\ \boldsymbol{I}_n\,.
 
-Jeżeli jednak warunek równości norm :eq:`equal` nie jest spełniony,
-to :math:`\ \boldsymbol{D}\neq\alpha\,\boldsymbol{I}_n\ \,` i :math:`\,` 
-macierz :math:`\ \boldsymbol{D}\ ` może nie komutować z 
-:math:`\ \boldsymbol{G}^{-1}\ ` przy przekształceniach :eq:`verse_col`.  
-Wtedy z ortogonalności wierszy nie wynika ortogonalność kolumn macierzy :math:`\ \boldsymbol{G}\,.`
+However, if the norms of the rows are not equal, that is, the condition :eq:`equal` does not hold,
+then :math:`\ \boldsymbol{D}\neq\alpha\,\boldsymbol{I}_n\ \,` and so :math:`\,` 
+the matrix :math:`\ \boldsymbol{D}\ ` does not have to commute with
+:math:`\ \boldsymbol{G}^{-1}.` Therefore the equivalences :eq:`verse_col` may not hold,  
+and thus orthogonality of rows does not imply orthogonality of columns of matrix :math:`\ \boldsymbol{G}\,.`
 
 
 
-**Zadanie 3.**
+**Exercise 3.**
 
-Operator liniowy :math:`\,F\ ` na przestrzeni unitarnej :math:`\,V(C)\ `
-jest *antyhermitowski*, gdy :math:`\,F^+=-F.`
+A linear operator :math:`\,F\ ` defined on a unitary space :math:`\,V(C)\ `
+is *anti-Hermitian* if :math:`\,F^+=-F.`
 
-Pokaż, że wartości własne takiego operatora są liczbami czysto urojonymi :math:`\\`
-(liczba zespolona :math:`\,z\ ` jest *czysto urojona*, gdy :math:`\,\text{re}\,z=0,\ `
-czyli gdy :math:`\,z=i\,\alpha,\ \alpha\in R.`)
+Show that eigenvalues of such an operator are purely imaginary numbers :math:`\\`
+(a complex number :math:`\,z\ ` is *purely imaginary* if :math:`\,\text{re}\,z=0,\ `
+that is, if :math:`\,z=i\,\alpha,\ \alpha\in R.`)
 
-**Zadanie 4.**
+**Exercise 4.**
 
-Udowodnij, że iloczyn dwóch operatorów hermitowskich :math:`\,F_1,\,F_2\ ` jest hermitowski 
+Prove that a product of two Hermitian operators :math:`\,F_1,\,F_2\ ` is Hermitian 
 :math:`\\` 
-wtedy i tylko wtedy, gdy operatory te komutują: :math:`\ [F_1,F_2]=0.`
+if and only if these operators commute: :math:`\ [F_1,F_2]=0.`
 
-Dla porównania, iloczyn operatorów unitarnych jest bezwarunkowo operatorem unitarnym.
+For a comparison, a product of unitary operators is always unitary.
 
 
 
