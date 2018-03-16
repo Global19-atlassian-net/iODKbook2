@@ -1,29 +1,29 @@
 Diagonalization by a Similarity Transformation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Macierz :math:`\ \boldsymbol{A}\in M_n(C)\ ` może być zdiagonalizowana 
-   przekształceniem podobieństwa, gdy istnieje odwracalna macierz
-   :math:`\ \boldsymbol{P}\in M_n(C)\ ` taka, że
+   A matrix :math:`\ \boldsymbol{A}\in M_n(C)\ ` is diagonalizable by a similarity 
+   transformation if there exists an invertible matrix
+   :math:`\ \boldsymbol{P}\in M_n(C)\ ` such that
    
    .. math::
       :label: similarity
       
-      \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D}
+      \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D},
    
-   gdzie :math:`\ \boldsymbol{D}\in M_n(C)\ ` jest macierzą diagonalną.
+   where :math:`\ \boldsymbol{D}\in M_n(C)\ ` is a diagonal matrix.
    
-   Wówczas :math:`\ \boldsymbol{P}\ ` jest macierzą diagonalizującą
-   macierz :math:`\ \boldsymbol{A}.`
+   We say that :math:`\ \boldsymbol{P}\ ` is a diagonalizing matrix 
+   or that it diagonalizes the matrix :math:`\ \boldsymbol{A}.`
 
-**Lemat.** 
+**Lemma.** 
 
-Niech będą dana macierze :math:`\ \boldsymbol{A},\,\boldsymbol{P}\in M_n(C).`
-Kolumny 
+Consider matrices :math:`\ \boldsymbol{A},\,\boldsymbol{P}\in M_n(C).`
+Columns 
 :math:`\ \boldsymbol{X}_1,\ \boldsymbol{X}_2,\ldots, \boldsymbol{X}_n\ `
-macierzy :math:`\ \boldsymbol{P}\ ` są wektorami własnymi
-macierzy :math:`\ \boldsymbol{A}:`
+of the matrix :math:`\ \boldsymbol{P}\ ` are eigenvectors
+of the matrix :math:`\ \boldsymbol{A}:`
 
 .. math::
    :label: eigen
@@ -33,17 +33,17 @@ macierzy :math:`\ \boldsymbol{A}:`
    \ldots\quad
    \boldsymbol{A}\,\boldsymbol{X}_n\,=\,\lambda_n\,\boldsymbol{X}_n
 
-wtedy i tylko wtedy, gdy
+if and only if
 
 .. math::
    :label: products
    
-   \boldsymbol{A}\,\boldsymbol{P}\,=\,\boldsymbol{P}\,\boldsymbol{D}
+   \boldsymbol{A}\,\boldsymbol{P}\,=\,\boldsymbol{P}\,\boldsymbol{D},
 
-gdzie :math:`\ \boldsymbol{D}\,=\,
+where :math:`\ \boldsymbol{D}\,=\,
 \text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n)\,.`
 
-Rzeczywiście, według kolumnowej reguły mnożenia macierzowego:
+Indeed, according to the column rule of matrix multiplication:
 
 .. math::
    
@@ -58,7 +58,7 @@ Rzeczywiście, według kolumnowej reguły mnożenia macierzowego:
    \boldsymbol{P}\,\boldsymbol{D} \!\! & 
    =\ \ [\ \lambda_1\,\boldsymbol{X}_1\,|\ 
    \lambda_2\,\boldsymbol{X}_2\,|\  \ldots\,|\ 
-   \lambda_n\,\boldsymbol{X}_n\,]
+   \lambda_n\,\boldsymbol{X}_n\,] ,
    \end{array}
 
 .. .. math::
@@ -75,15 +75,15 @@ Rzeczywiście, według kolumnowej reguły mnożenia macierzowego:
    \lambda_2\,\boldsymbol{X}_2\,|\  \ldots\,|\ 
    \lambda_n\,\boldsymbol{X}_n\,]
 
-wobec czego warunki :eq:`eigen` i :eq:`products` są równoważne.
+and thus the conditions :eq:`eigen` and :eq:`products` equivalent.
 
-**Twierdzenie 7.**
+**Theorem 7.**
 
-Macierz :math:`\ \boldsymbol{A}\ ` może być zdiagonalizowana przekształceniem
-podobieństwa :eq:`similarity` wtedy i tylko wtedy, :math:`\ ` gdy w przestrzeni
-:math:`\,C^n\,` istnieje baza :math:`\,\mathcal{B} = (\boldsymbol{X}_1,\, 
-\boldsymbol{X}_2,\,\ldots,\,\boldsymbol{X}_n),\ ` 
-złożona z wektorów własnych macierzy :math:`\ \boldsymbol{A}:`
+A matrix :math:`\ \boldsymbol{A}\ ` is diagonalizable by a similarity 
+transformation :eq:`similarity` if and only if the space
+:math:`\,C^n\,` has a basis :math:`\,\mathcal{B} = (\boldsymbol{X}_1,\, 
+\boldsymbol{X}_2,\,\ldots,\,\boldsymbol{X}_n)\ ` 
+consisting of eigenvectors of the matrix :math:`\ \boldsymbol{A}:`
 
 .. math::
    
@@ -93,66 +93,67 @@ złożona z wektorów własnych macierzy :math:`\ \boldsymbol{A}:`
    \boldsymbol{A}\,\boldsymbol{X}_n\,=\,\lambda_n\,\boldsymbol{X}_n\,,\quad
    \lambda_1,\lambda_2,\ldots,\lambda_n\in C\,.
 
-Wówczas macierzą diagonalizującą jest macierz :math:`\ \boldsymbol{P}\,=\,
+Then the matrix :math:`\ \boldsymbol{P}\,=\,
 [\ \boldsymbol{X}_1\,|\,\boldsymbol{X}_2\,|\,\ldots\,|\,\boldsymbol{X}_n\ ],\ `
-której kolumny są wektorami bazy :math:`\,\mathcal{B}.`
+whose columns are vectors from the basis :math:`\,\mathcal{B}\,,\ ` diagonalizes the matrix :math:`\,\boldsymbol{A}.`
 
 .. złożona kolumnowo z wektorów bazy :math:`\ \mathcal{B}.`
 
-**Dowód.**
+**Proof.**
 
-Macierz :math:`\ \boldsymbol{A}\ ` może być zdiagonalizowana 
-poprzez przekształcenie podobieństwa, gdy
-istnieje odwracalna macierz :math:`\ \boldsymbol{P}\,\equiv\,
-[\ \boldsymbol{X}_1\,|\ \boldsymbol{X}_2\,|\ \ldots\,|\ \boldsymbol{X}_n\,],\ `
-taka, że
+A matrix :math:`\ \boldsymbol{A}\ ` is diagonalizable by a similarity 
+transformation if there exists an invertible matrix
+:math:`\ \boldsymbol{P}\,\equiv\,
+[\ \boldsymbol{X}_1\,|\ \boldsymbol{X}_2\,|\ \ldots\,|\ \boldsymbol{X}_n\,]\ `
+such that
 
 .. math::
    
-   \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D}
+   \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D},
    
-gdzie macierz :math:`\ \boldsymbol{D}\ ` jest diagonalna: 
+where :math:`\ \boldsymbol{D}\ ` is a diagonal matrix: 
 :math:`\ \boldsymbol{D}\,=\,\text{diag}(\lambda_1,\lambda_2,\ldots,\lambda_n).\ `
-Jest to równoważne warunkom
+This is equivalent to the conditions
 
 .. math::
    
    \boldsymbol{A}\,\boldsymbol{P}\,=\,\boldsymbol{P}\,\boldsymbol{D}
-   \quad\text{i}\quad \det{\boldsymbol{P}}\neq 0.
+   \quad\text{and}\quad \det{\boldsymbol{P}}\neq 0.
 
-Warunek :math:`\ \det{\boldsymbol{P}}\neq 0\ ` oznacza, 
-że :math:`\ \mathcal{B} = 
+The condition :math:`\ \det{\boldsymbol{P}}\neq 0\ ` means that 
+:math:`\ \mathcal{B} = 
 (\boldsymbol{X}_1,\, \boldsymbol{X}_2,\,\ldots,\,\boldsymbol{X}_n)\ `
-jest liniowo niezależnym układem wektorów przestrzeni :math:`\ C^n.\ `
-Ponadto, na podstawie Lematu:
+comprises a linearly independent set of vectors of the space :math:`\ C^n.\ `
+Moreover, by the above Lemma:
 
 .. math::
    
    \boldsymbol{A}\,\boldsymbol{X}_1\,=\,\lambda_1\,\boldsymbol{X}_1,\quad
    \boldsymbol{A}\,\boldsymbol{X}_2\,=\,\lambda_2\,\boldsymbol{X}_2,\quad
    \ldots\quad
-   \boldsymbol{A}\,\boldsymbol{X}_n\,=\,\lambda_n\,\boldsymbol{X}_n
+   \boldsymbol{A}\,\boldsymbol{X}_n\,=\,\lambda_n\,\boldsymbol{X}_n .
 
-W :math:`\ n`-wymiarowej przestrzeni wektorowej każdy liniowo niezależny 
-układ :math:`\,n\,` wektorów jest bazą. Ponieważ :math:`\ \dim{C^n}=n,\ ` to
-:math:`\,\mathcal{B}\ ` jest bazą przestrzeni :math:`\ C^n,\ `
-złożoną z wektorów własnych macierzy :math:`\,\boldsymbol{A}.`
+In an :math:`\ n`-dimensional vector space every set of :math:`\,n\,` linearly 
+independent vectors is a basis. Therefore, since :math:`\ \dim{C^n}=n,\ ` so
+:math:`\,\mathcal{B}\ ` is a basis of the space :math:`\ C^n;\ `
+it is the basis consisting of eigenvectors of the matrix :math:`\,\boldsymbol{A}.`
 
-Odwrotnie, jeżeli wektory własne :math:`\ \boldsymbol{X}_1,\,\boldsymbol{X}_2,\,
-\ldots,\,\boldsymbol{X}_n\ ` macierzy :math:`\,\boldsymbol{A}\in M_n(C)\,`
-rozpinają przestrzeń :math:`\,C^n,\ ` to macierz :math:`\,\boldsymbol{P}\,` 
-zestawiona kolumnowo z tych wektorów diagonalizuje macierz 
+On the other hand, if eigenvectors :math:`\ \boldsymbol{X}_1,\,\boldsymbol{X}_2,\,
+\ldots,\,\boldsymbol{X}_n\ ` of the matrix :math:`\,\boldsymbol{A}\in M_n(C)\,`
+span the space :math:`\,C^n,\ ` then the matrix :math:`\,\boldsymbol{P}\,` 
+whose columns are the basis vectors diagonalizes the matrix 
 :math:`\,\boldsymbol{A}.`
  
-**Komentarze i wnioski.**
+**Comments and corollaries.**
 
-**1.)** Każda macierz :math:`\,\boldsymbol{A}\in M_n(C)\,` ma co najmniej 
-jedną wartość własną :math:`\,\lambda\,` i odpowiedni wektor własny 
-:math:`\,\boldsymbol{X}.\ ` Ponieważ w równaniu :eq:`eigen` wartości
-:math:`\,\lambda_i\ ` i :math:`\,` odpowiednie wektory 
-:math:`\,\boldsymbol{X}_i\ ` mogą się powtarzać, zawsze istnieje macierz 
-:math:`\,\boldsymbol{P},\ ` spełniająca :eq:`products`. 
-W szczególności można przyjąć
+**1.)** Every matrix :math:`\,\boldsymbol{A}\in M_n(C)\,` has at least
+one eigenvalue :math:`\,\lambda\,` and the associated eigenvector
+:math:`\,\boldsymbol{X}.\ ` Hence, because the equation :eq:`eigen` does not 
+require that the eigenvalues
+:math:`\,\lambda_i\ ` and :math:`\,` the associated eigenvectors
+:math:`\,\boldsymbol{X}_i\ ` are distinct, there always exists a matrix 
+:math:`\,\boldsymbol{P}\ ` such that the equation :eq:`products` holds. 
+In particular, one may take
 
 .. math::
    
@@ -160,68 +161,67 @@ W szczególności można przyjąć
    \boldsymbol{X}_1\,=\,\boldsymbol{X}_2\,=\,\ldots\boldsymbol{X}_n\,=\,
    \boldsymbol{X}.
 
-Wtedy :math:`\,\boldsymbol{A}\boldsymbol{P}=
+Then :math:`\,\boldsymbol{A}\boldsymbol{P}=
 \boldsymbol{P}\boldsymbol{D}=\lambda\,\boldsymbol{P},\ `
-ale macierz :math:`\ \boldsymbol{P}\ ` nie jest odwracalna
-i nie zachodzi związek :eq:`similarity`.
+but the matrix :math:`\ \boldsymbol{P}\ ` is not invertible and thus
+the relation does not hold :eq:`similarity`.
 
-**2.)** Wzór :math:`\ \boldsymbol{D}\,=\,
-\boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ ` można interpretować
-w terminach transformacji macierzy operatora liniowego przy zmianie bazy.
-:math:`\boldsymbol{A}\ ` jest macierzą, w bazie kanonicznej 
+**2.)** The formula :math:`\ \boldsymbol{D}\,=\,
+\boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ ` may be interpreted
+in terms of transformation of a matrix of a linear operator under a change of basis.
+Consider the space :math:`\,C^n\ ` with the canonical basis 
 :math:`\ \mathcal{E}\,=\,(\boldsymbol{e}_1,\boldsymbol{e}_2,\ldots\,
-\boldsymbol{e}_n)\ ` przestrzeni :math:`\,C^n,\ ` operatora liniowego
-:math:`F\in \text{End}(C^n)\ ` określonego wzorem 
+\boldsymbol{e}_n).\ ` Let :math:`\boldsymbol{A}\ ` be the matrix of a linear 
+operator :math:`F\in \text{End}(C^n)\ ` defined by
 :math:`\ F(\boldsymbol{x})\,:\,=\,\boldsymbol{A}\boldsymbol{x},\ `
-:math:`\,\boldsymbol{x}\in C^n.\ ` Jeżeli wektory własne 
+:math:`\,\boldsymbol{x}\in C^n.\ ` If eigenvectors
 :math:`\ \boldsymbol{X}_1,\boldsymbol{X}_2,\ldots,\boldsymbol{X}_n\ ` 
-operatora :math:`\,F\,` są liniowo niezależne, to macierz 
+of the operator :math:`\,F\,` are linearly independent, then the matrix
 :math:`\ \boldsymbol{P}\,=\,
 [\ \boldsymbol{X}_1\,|\,\boldsymbol{X}_2\,|\,\ldots\,|\,\boldsymbol{X}_n\ ]\ ` 
-jest macierzą przejścia od bazy kanonicznej
-:math:`\,\mathcal{E}\,` do bazy wektorów własnych :math:`\,\mathcal{B}\,=\,
-(\boldsymbol{X}_1,\boldsymbol{X}_2,\ldots\,\boldsymbol{X}_n).`
+is the transition matrix from the canonical basis
+:math:`\,\mathcal{E}\,` to the basis :math:`\,\mathcal{B}\,=\,
+(\boldsymbol{X}_1,\boldsymbol{X}_2,\ldots\,\boldsymbol{X}_n)\ ` consisting of the eigenvectors.
 
-:math:`\boldsymbol{D}\ ` jest więc macierzą operatora :math:`\,F\ ` w bazie 
-:math:`\,\mathcal{B}\ ` jego wektorów własnych. Jak należało oczekiwać, 
-jest to macierz diagonalna, z wartościami własnymi operatora :math:`\,F\ ` na przekątnej.
+Hence, :math:`\boldsymbol{D}\ ` is a matrix of the operator :math:`\,F\ ` in the basis
+:math:`\,\mathcal{B}\ ` consisting of its eigenvectors. As one should expect,  
+this is a diagonal matrix with the eigenvalues of :math:`\,F\ ` on the diagonal.
 
-**3.)** Wiadomo, że wektory własne operatora liniowego, należące do różnych 
-wartości własnych, są liniowo niezależne.
+**3.)** We know already that the eigenevectors of a linear operator which 
+are associated to different eigenvalues are linearly independent.
 
-**Wniosek.** Jeżeli macierz :math:`\,\boldsymbol{A}\in M_n(C)\ ` ma 
-:math:`\,n\,` różnych wartości własnych, to istnieje transformacja podobieństwa
-diagonalizująca tę macierz.
+**Corollary.** If a matrix :math:`\,\boldsymbol{A}\in M_n(C)\ ` has 
+:math:`\,n\,` distinct eigenvalues, then there exists a similarity transformation
+which diagonalizes this matrix.
 
-Rzeczywiście, macierz :math:`\,\boldsymbol{P}\,` złożona kolumnowo z wektorów
-własnych macierzy :math:`\,\boldsymbol{A}\,` dla tych różnych wartości jest 
-nieosobliwa: :math:`\,\det{\boldsymbol{P}}\neq 0,\ ` a więc odwracalna.
+Indeed, if columns of the matrix :math:`\,\boldsymbol{P}\,` are eigenvectors 
+of the matrix :math:`\,\boldsymbol{A}\,` which are associated 
+with distinct eigenvalues, then the matrix :math:`\,\boldsymbol{P}\,`
+is non-degenerate: :math:`\,\det{\boldsymbol{P}}\neq 0,\ ` and thus invertible.
 
-**4.)** Wektory własne operatora normalnego, należące do różnych wartości 
-własnych, tworzą układ ortogonalny, a po unormowaniu - układ ortonormalny.
-Macierz, której kolumny tworzą układ ortonormalny, jest macierzą unitarną.
+**4.)** Eigenvectors of a normal operator which are associated 
+with distinct eigenvalues comprise an orthogonal system, and after normalization - an orthonormal system.
+A matrix whose columns comprise an orthonormal system is unitary.
 
-**Wniosek.** Niech :math:`\,\boldsymbol{A}\in M_n(C)\ ` będzie macierzą 
-normalną (np. hermitowską albo unitarną). Jeżeli :math:`\,\boldsymbol{A}\ `
-ma :math:`\,n\,` różnych wartości własnych, to istnieje unitarna 
-transformacja podobieństwa diagonalizująca tę macierz (macierz diagonalizująca 
-:math:`\,\boldsymbol{P}\ ` jest unitarna: 
+**Corollary.** Let :math:`\,\boldsymbol{A}\in M_n(C)\ ` be a 
+normal (e.g. Hermitian or unitary) matrix. If :math:`\,\boldsymbol{A}\ `
+has :math:`\,n\,` distinct eigenvalues, then there exists a unitary  
+similarity transformation which diagonalizes this matrix (a diagonalizing 
+matrix :math:`\,\boldsymbol{P}\ ` is unitary: 
 :math:`\ \boldsymbol{P}^+\boldsymbol{P}=\boldsymbol{I}_n).`
    
-**Uwaga.** Warunek istnienia :math:`\,n\,` różnych wartości własnych macierzy
-normalnej nie jest konieczny. Można mianowicie udowodnić ogólne
+**Remark.** A normal matrix does not have to have :math:`\,n\,` 
+distinct eigenvectors to be diagonalizable. Namely, one can prove a more general
 
-**Twierdzenie 8.**
+**Theorem 8.**
 
-Macierz :math:`\,\boldsymbol{A}\in M_n(C)\ ` może być sprowadzona do postaci
-diagonalnej poprzez unitarną transformację podobieństwa wtedy i tylko wtedy,
-gdy jest normalna.
+A matrix :math:`\,\boldsymbol{A}\in M_n(C)\ ` is diagonalizable by a unitary similarity transformation if and only if it is normal.
 
-**Zastosowanie do macierzy rzeczywistych.**
+**Application to real matrices.**
 
-Niech :math:`\,\boldsymbol{A}\ ` będzie macierzą rzeczywistą:
-:math:`\,\boldsymbol{A}\in M_n(R).\ ` Wtedy
-:math:`\,\boldsymbol{A}^+=\boldsymbol{A}^T,\ ` wobec czego
+For a real matrix :math:`\,\boldsymbol{A}:\ ` 
+:math:`\,\boldsymbol{A}\in M_n(R),\ ` we have
+:math:`\,\boldsymbol{A}^+=\boldsymbol{A}^T.\ ` Therefore
 
 .. math::
    
@@ -229,7 +229,7 @@ Niech :math:`\,\boldsymbol{A}\ ` będzie macierzą rzeczywistą:
    \quad\Leftrightarrow\quad
    \boldsymbol{A}^T=\boldsymbol{A}
 
-(rzeczywista macierz hermitowska jest macierzą symetryczną),
+(a real Hermitian matrix is symmetric), and
 
 .. math::
    
@@ -237,44 +237,40 @@ Niech :math:`\,\boldsymbol{A}\ ` będzie macierzą rzeczywistą:
    \quad\Leftrightarrow\quad
    \boldsymbol{A}^T\boldsymbol{A}=\boldsymbol{I}_n
 
-(rzeczywista macierz unitarna jest macierzą ortogonalną).
+(a real unitary matrix is orthogonal).
 
-**Twierdzenie 9.**
+**Theorem 9.**
 
-Każda rzeczywista macierz symetryczna albo ortogonalna może być
-zdiagonalizowana poprzez unitarną transformację podobieństwa.
+Every real symmetric or orthogonal matrix is 
+diagonalizable by a unitary similarity transformation.
 
-Wartości własne, a więc również wektory własne, 
-rzeczywistej macierzy symetrycznej są rzeczywiste.
-Unitarna macierz diagonalizująca jest zatem tutaj 
-rzeczywistą macierzą ortogonalną.
+Eigenvalues, and thus also eigenvectors, of a real symmetric matrix
+are real. Hence, a unitary diagonalizing matrix is a real orthogonal matrix.
 
-**Wniosek.** Każda rzeczywista macierz symetryczna może być sprowadzona 
-do postaci diagonalnej poprzez rzeczywistą ortogonalną transformację
-podobieństwa.
+**Corollary.** Every real symmetric matrix is 
+diagonalizable by a real orthogonal similarity transformation.
 
-W odróżnieniu od poprzedniego przypadku, wartości własne
-rzeczywistej macierzy ortogonalnej (a więc i jej wektory własne)
-mogą być zespolone nierzeczywiste. Wtedy unitarna macierz diagonalizująca
-będzie również zespolona nierzeczywista.
+In comparison to the previous case, eigenvalues of a real orthogonal matrix
+(and thus also its eigenvectors) may be complex and not real.
+Then the unitary diagonalizing matrix will be also
+complex and not real.
 
-**Twierdzenie 10.**
+**Theorem 10.**
 
-Jeżeli macierz :math:`\ \boldsymbol{A}\ ` można zdiagonalizować
-przekształceniem podobieństwa, to dla każdej jej wartości własnej
-krotność algebraiczna równa się krotności geometrycznej.
+If a matrix :math:`\ \boldsymbol{A}\ ` is diagonalizable by a similarity
+transformation, then an algebraic multiplicity of every eigenvalue is equal
+to the geometric multiplicity.
 
-**Dowód.** :math:`\ ` 
-Jeżeli przekształcenie :math:`\ \boldsymbol{A}\ \rightarrow\ 
+**Proof.** :math:`\ ` 
+If a transformation :math:`\ \boldsymbol{A}\ \rightarrow\ 
 \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ \equiv\boldsymbol{D}\ `
-diagonalizuje macierz :math:`\ \boldsymbol{A},\ ` 
-to :math:`\ \boldsymbol{D}\,=
-\text{diag}(\lambda_1,\,\lambda_2,\,\ldots,\,\lambda_k),\ ` gdzie
-:math:`\ \lambda_1,\lambda_2,\ldots,\lambda_k\ ` są wartościami własnymi
-macierzy :math:`\,\boldsymbol{A}.\ `
-Liczba wystąpień danej wartości :math:`\,\lambda_i\,` na przekątnej 
-macierzy :math:`\ \boldsymbol{D}\ ` jest jednocześnie
-krotnością algebraiczną i krotnością geometryczną tej wartości własnej.
+diagonalizes the matrix :math:`\ \boldsymbol{A},\ ` 
+then :math:`\ \boldsymbol{D}\,=
+\text{diag}(\lambda_1,\,\lambda_2,\,\ldots,\,\lambda_k),\ ` where
+:math:`\ \lambda_1,\lambda_2,\ldots,\lambda_k\ ` are eigenvalues of the
+matrix :math:`\,\boldsymbol{A}.\ `
+The number with which :math:`\,\lambda_i\,` occurs on a diagonal of the matrix
+:math:`\ \boldsymbol{D}\ ` is equal to both an algebraic and geometric multiplicity of this eigenvalue.
 
 
 

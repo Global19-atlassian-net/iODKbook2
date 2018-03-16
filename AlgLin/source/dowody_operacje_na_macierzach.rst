@@ -5,16 +5,16 @@ Operations upon Matrices
 Elementary Operations and Elementary Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Aby wykonać operację elementarną :math:`\,O\,` na iloczynie dwóch macierzy
-:math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-należy zastosować ją tylko do pierwszego czynnika iloczynu:
+To perform an elementary operation :math:`\,O\,` on a product of two matrices
+:math:`\,\boldsymbol{A}\ ` and :math:`\ \boldsymbol{B},\ ` :math:`\\` 
+one has to apply it to the first factor of the product:
 :math:`\ O(\boldsymbol{A}\boldsymbol{B}) = (O\boldsymbol{A})\,\boldsymbol{B}.\ ` :math:`\\`
-Dokładniej wyraża to
+A more precise description is given by
 
-.. admonition:: Lemat. :math:`\,`
+.. admonition:: Lemma. :math:`\,`
    
-   Jeżeli :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ ` 
-   to :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1:`
+   If :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ ` 
+   then :math:`\,` for :math:`\ i,j=0,1,\ldots,m-1:`
    
    #. :math:`\ O_1(i,j)\,(\boldsymbol{A}\boldsymbol{B})\ \ =\ \ 
       [\,O_1(i,j)\,\boldsymbol{A}\,]\ \boldsymbol{B}\,,`
@@ -25,7 +25,7 @@ Dokładniej wyraża to
    #. :math:`\ O_3(i,j,a)\,(\boldsymbol{A}\boldsymbol{B})\ \ =\ \ 
       [\,O_3(i,j,a)\,\boldsymbol{A}\,]\ \boldsymbol{B}\,.`
 
-**Dowód** wykorzystuje wierszową regułę mnożenia macierzowego:
+**Proof** makes use of the row matrix multiplication rule:
 
 .. math::
 
@@ -42,8 +42,8 @@ Dokładniej wyraża to
          \dots            \\
          \boldsymbol{A}_m\,\boldsymbol{B} \end{array}\right]\,.
 
-Wobec tego wyprowadzenie związków :math:`\,` 1., :math:`\,` 2. :math:`\,` i :math:`\,` 3. :math:`\,`
-przebiega następująco:
+Hence, the identities :math:`\,` 1., :math:`\,` 2. :math:`\,` and :math:`\,` 3. :math:`\,`
+may be derived as follows:
 
 .. math::
    
@@ -144,24 +144,24 @@ przebiega następująco:
    [\,O_3(i,j,a)\,\boldsymbol{A}\,]\ \boldsymbol{B}\,.
 
 
-Wykonanie operacji elementarnej na prostokątnej macierzy 
-:math:`\,\boldsymbol{A}\ ` jest równoważne pomnożeniu (z lewej strony)
-tej macierzy przez odpowiednią macierz elementarną. Zapiszemy to jako
+Applying an elementary operation on a matrix 
+:math:`\,\boldsymbol{A}\ ` is equivalent to mutliplication of this matrix 
+(on the left) by a suitable elementary matrix. We state this as
 
-.. admonition:: Twierdzenie. :math:`\,` 
+.. admonition:: Theorem. :math:`\,` 
 
-   Niech :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
-   Wtedy :math:`\,` dla :math:`\ i,j=0,1,\ldots,m-1:`
+   Let :math:`\,\boldsymbol{A}\in M_{m\times n}(K).\ ` 
+   Then :math:`\,` for :math:`\ i,j=0,1,\ldots,m-1:`
 
    #. :math:`\,O_1(i,j)\,\boldsymbol{A}\ =\ \boldsymbol{E}_1(i,j)\,\boldsymbol{A}\,,`
    #. :math:`\,O_2(i,a)\,\boldsymbol{A}\ =\ \boldsymbol{E}_2(i,a)\,\boldsymbol{A}\,,\qquad (a\ne 0)`
    #. :math:`\,O_3(i,j,a)\,\boldsymbol{A}\ = \boldsymbol{E}_3(i,j,a)\,\boldsymbol{A}\,,`
 
-   gdzie 
+   where 
    :math:`\ \boldsymbol{E}_1(i,j),\ \boldsymbol{E}_2(i,a),\ \boldsymbol{E}_3(i,j,a)\in M_m(K).`
 
-**Dowód.** Biorąc pod uwagę że :math:`\,\boldsymbol{A} = \boldsymbol{I}_m\boldsymbol{A},\ `
-korzystając z lematu i odwołując się do definicji macierzy elementarnych, otrzymujemy:
+**Proof.** Taking into account that :math:`\,\boldsymbol{A} = \boldsymbol{I}_m\boldsymbol{A},\ `
+the above Lemma and the definition of elementary matrices imply:
 
 :math:`\ 
 O_1(i,j)\,\boldsymbol{A}\ =\ O_1(i,j)\,(\boldsymbol{I}_m\boldsymbol{A})\ =\ 
@@ -179,28 +179,28 @@ O_3(i,j,a)\,\boldsymbol{A}\ =\ O_3(i,j,a)\,(\boldsymbol{I}_m\boldsymbol{A})\ =\
 Permutation Matrices
 ~~~~~~~~~~~~~~~~~~~~
 
-Aby wykonać operację permutacji wierszy :math:`\,O_{\sigma}\,` na iloczynie dwóch macierzy
+To perform an operation :math:`\,O_{\sigma}\,` of row permutation on a product of two matrices
 :math:`\,\boldsymbol{A}\ \ \text{i}\ \ \boldsymbol{B},\ ` :math:`\\` 
-należy zastosować ją tylko do pierwszego czynnika iloczynu.
+one has to apply it only to the first factor of the product.
 
-Wykonanie operacji permutacji wierszy :math:`\,O_{\sigma}\,` na prostokątnej macierzy 
-:math:`\,\boldsymbol{A}\ ` jest równoważne pomnożeniu (z lewej strony)
-tej macierzy przez odpowiednią macierz permutacji.
+Applying the row permutation :math:`\,O_{\sigma}\,` on a rectangular matrix
+:math:`\,\boldsymbol{A}\ ` is equivalent to mutliplication of this matrix 
+(on the left) by a suitable permutation matrix.
 
-Dokładnie ujmuje to następujące
+It is described more precisely in the following
 
-.. admonition:: Twierdzenie. :math:`\,`
+.. admonition:: Theorem. :math:`\,`
    
-   Jeżeli 
+   If 
    :math:`\,\boldsymbol{A}\in M_{m\times p}(K),\ \boldsymbol{B}\in M_{p\times n}(K),\ \ 
-   \sigma\in S_m,\ \ ` to: 
+   \sigma\in S_m,\ \ ` then: 
 
    1. :math:`\ \,O_\sigma\,(\boldsymbol{A}\boldsymbol{B})\ =\ 
       (O_\sigma\boldsymbol{A})\,\boldsymbol{B}\,;`
    2. :math:`\ \,O_\sigma\,\boldsymbol{A}\ =\ \boldsymbol{P}_\sigma\,\boldsymbol{A}\,,\qquad
-      \text{gdzie}\quad\boldsymbol{P}_\sigma\,=\,O_\sigma\,\boldsymbol{I}_m\in M_m(K)\,.`
+      \text{where}\quad\boldsymbol{P}_\sigma\,=\,O_\sigma\,\boldsymbol{I}_m\in M_m(K)\,.`
 
-**Dowód** opiera się na wierszowej regule mnożenia macierzowego:
+**Proof** bases on the row matrix multiplication rule:
 
 .. math::
 
@@ -220,7 +220,7 @@ Dokładnie ujmuje to następujące
          \end{array}
    \right]\,.
 
-Na tej podstawie otrzymujemy 1. część tezy:
+In this way we obtain the 1. part of the thesis:
 
 .. math::
    
@@ -248,7 +248,7 @@ Na tej podstawie otrzymujemy 1. część tezy:
    \right]\boldsymbol{B}\ =\ 
    (O_\sigma\boldsymbol{A})\,\boldsymbol{B}\,.
 
-Wykorzystując poprzedni wynik łatwo wyprowadzamy 2. część tezy twierdzenia:
+This easily implies the 2. part of the theorem:
 
 .. math::
 
@@ -260,19 +260,19 @@ Wykorzystując poprzedni wynik łatwo wyprowadzamy 2. część tezy twierdzenia:
 
 :math:`\;`
 
-Iloczyn dwóch macierzy permutacji jest macierzą permutacji. Dokładniej formułuje to
+A product of two permutation matrices is a permutation matrix. It is formulated more precisely by
 
-.. admonition:: Twierdzenie. :math:`\,`
+.. admonition:: Theorem. :math:`\,`
    
-   Jeżeli 
+   If
    :math:`\quad P_\rho = O_\rho\,\boldsymbol{I}_m,\ \,P_\sigma = O_\sigma\,\boldsymbol{I}_m,\quad`
-   to 
+   then
    :math:`\quad\boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ \boldsymbol{P}_{\sigma\,\circ\,\rho}\,,
    \qquad\rho,\sigma\in S_m\,.`
 
-**Dowód.**
+**Proof.**
 
-Zauważmy najpierw, że
+Assume first that
 
 .. :math:`\boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma\ =\ 
    (\boldsymbol{P}_\rho\,\boldsymbol{P}_\sigma)\,\boldsymbol{I}_n\ =\ 
@@ -303,9 +303,9 @@ Zauważmy najpierw, że
          \boldsymbol{e}'_m
          \end{array}
    \right]\,,
-   \quad\text{gdzie}\quad\boldsymbol{e}'_i\ =\ \boldsymbol{e}_{\sigma(i)}\,,\quad i=1,2,\ldots,m.
+   \quad\text{where}\quad\boldsymbol{e}'_i\ =\ \boldsymbol{e}_{\sigma(i)}\,,\quad i=1,2,\ldots,m.
 
-A zatem iloczyn dwóch macierzy permutacji można zapisać w postaci
+Hence, a product of two permutation matrices may be written as
 
 .. math::
    
@@ -328,15 +328,15 @@ A zatem iloczyn dwóch macierzy permutacji można zapisać w postaci
          \end{array}
    \right]\,.
 
-Podstawienie :math:`\ \ i\rightarrow\rho(i)\ \ ` 
-w równaniu :math:`\ \ \boldsymbol{e}'_i\ =\ \boldsymbol{e}_{\sigma(i)}\ \ ` daje
+Substitution :math:`\ \ i\rightarrow\rho(i)\ \ ` 
+in the equation :math:`\ \ \boldsymbol{e}'_i\ =\ \boldsymbol{e}_{\sigma(i)}\ \ ` gives
 
 .. math::
 
    \boldsymbol{e}'_{\rho(i)}\ =\ \boldsymbol{e}_{\sigma[\rho(i)]}\ =\ 
    \boldsymbol{e}_{(\sigma\,\circ\,\rho)(i)}\,,\qquad i=1,2,\ldots,m.
 
-Wobec tego
+Hence,
 
 .. math::
    

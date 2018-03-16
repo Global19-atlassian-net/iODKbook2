@@ -2,42 +2,43 @@
 Fundamental Concepts in Linear Algebra
 --------------------------------------
 
-.. admonition:: Twierdzenie.
+.. admonition:: Theorem.
    
-   Jeżeli w przestrzeni wektorowej istnieje baza :math:`\,n`-elementowa,
-   to każdy układ liczący więcej niż :math:`\,n\,` wektorów jest liniowo zależny.
+   If a vector space has an :math:`\,n`-element basis, then every set  
+   consisting of more than :math:`\,n\,` vectors is linearly dependent.
 
-**Dowód.**
+**Proof.**
 
-Załóżmy, że układ :math:`\ \mathcal{B}\,=\,(v_1,v_2,\ldots,v_n)\ ` 
-jest bazą przestrzeni :math:`\,V(K).\ `
+Let :math:`\ \mathcal{B}\,=\,(v_1,v_2,\ldots,v_n)\ ` 
+be a basis of the space :math:`\,V(K).\ `
 
-Trzeba pokazać, że dla :math:`\ p>n\ ` każdy układ :math:`\ \mathcal{C}=(w_1,w_2,\ldots,w_p)\ `
-jest liniowo zależny.
+We have to show that every set :math:`\ \mathcal{C}=(w_1,w_2,\ldots,w_p)\ `
+with :math:`\ p>n\ ` is linearly dependent.
 
-Warunek ten oznacza, że istnieje nietrywialna kombinacja liniowa wektorów
-:math:`\ w_1,w_2,\ldots,w_p\ ` równa wektorowi zerowemu :math:`\,\theta,\ ` czyli że równanie
+This condition means that there exists a non-trivial linear combination of vectors
+:math:`\ w_1,w_2,\ldots,w_p\ ` which is equal to a zero vector :math:`\,\theta,\ ` that is, 
+the equation
 
 .. math::
    :label: eqn_theta
    
    c_1\ w_1\ +\ c_2\ w_2\ +\ \ldots\ +\ c_p\ w_p\ =\ \theta
 
-na współczynniki :math:`\ c_1,\,c_2,\,\ldots,\,c_p\in K\ \,` ma rozwiązania niezerowe.
+with coefficients :math:`\ c_1,\,c_2,\,\ldots,\,c_p\in K\ \,` has a non-zero solution.
 
-Każdy z wektorów :math:`\ w_j\ ` można zapisać w postaci 
-kombinacji liniowej wektorów bazy :math:`\ \mathcal{B}:`
+Each of the vectors :math:`\ w_j\ ` may be written as a  
+linear combination of the basis vectors:
 
 .. math::
    :label: eqn_wj
    
    w_j\ =\ \sum_{i\,=\,1}^n\ a_{ij}\,v_i\,,\qquad j=1,2,\ldots,p.
 
-Tutaj :math:`\ a_{1j},\,a_{2j},\,\ldots,\,a_{nj}\ ` są współrzędnymi wektora :math:`\ w_j\ `
-w bazie :math:`\ \mathcal{B},\quad j=1,2,\ldots,p.`
+Here :math:`\ a_{1j},\,a_{2j},\,\ldots,\,a_{nj}\ ` are coefficients of a vector :math:`\ w_j\ `
+in basis :math:`\ \mathcal{B},\quad j=1,2,\ldots,p.`
 
-Wstawiamy :eq:`eqn_wj` do :eq:`eqn_theta` i zapisujemy lewą stronę równania :eq:`eqn_theta`
-w postaci kombinacji liniowej wektorów bazy :math:`\ \mathcal{B}:`
+We substitute :eq:`eqn_wj` into :eq:`eqn_theta` and write the left hand side of the equation
+:eq:`eqn_theta` as a linear combination of the basis vectors:
 
 .. math::
    
@@ -51,15 +52,15 @@ w postaci kombinacji liniowej wektorów bazy :math:`\ \mathcal{B}:`
    \dots\ \ +\ \ 
    \left(\ \sum_{j\,=\,1}^p\,a_{nj}\,c_j\right)\ v_n\ \ =\ \ \theta\,. 
    
-Wektory bazy :math:`\ v_1,\,v_2,\,\ldots,\,v_n\ ` są liniowo niezależne. 
-Przyrównanie do wektora zerowego :math:`\,\theta\,` ich kombinacji liniowej 
-implikuje zerowanie się współczynników tej kombinacji:
+The basis vectors :math:`\ v_1,\,v_2,\,\ldots,\,v_n\ ` are linearly independent. 
+Hence, if their linear combination gives a zero vector :math:`\,\theta ,\,`  
+then the coefficients must be equal to zero:
 
 .. math::
    
    \sum_{j\,=\,1}^p\ a_{ij}\ c_j\ \,=\ \,0\,,\qquad i=1,2,\ldots,n.
 
-Po rozpisaniu otrzymujemy układ równości
+Unfolding these equalities we obtain
 
 .. math::
    
@@ -69,50 +70,45 @@ Po rozpisaniu otrzymujemy układ równości
    \ \ \dots\qquad\quad\dots\qquad\,\dots\qquad\ \dots\qquad\ \dots\quad         \\
    a_{n1}\ c_1\ +\ \,a_{n2}\ c_2\ +\ \,\dots\ \,+\ \,a_{np}\ c_p\ \,=\ \ 0
    \end{array}
-   \,,
 
-który jest jednorodnym układem :math:`\,n\,` równań liniowych 
-na :math:`\,p\,` niewiadomych :math:`\ c_1,\,c_2,\,\ldots,\,c_p\,,\ `
-gdzie liczba równań jest mniejsza od liczby niewiadomych.
+a homogeneous system of :math:`\,n\,` linear equations 
+with :math:`\,p\,` unknowns :math:`\ c_1,\,c_2,\,\ldots,\,c_p\,,\ `
+where the number of equations is smaller than the number of unknowns.
 
-Taki układ ma rozwiązania niezerowe.
-Rzeczywiście, rozwiązanie układu metodą eliminacji Gaussa polega na zastosowaniu operacji elementarnych na wierszach macierzy współczynników w celu doprowadzenia jej do zredukowanej postaci schodkowej.
-Następnie niewiadome, odpowiadające kolumnom bez jedynek wiodących przyjmuje się za dowolne parametry, przez które wyrażają się pozostałe niewiadome (odpowiadające kolumnom z jedynkami wiodącymi).
-Liczba parametrów jest różnicą liczby niewiadomych i liczby jedynek wiodących,
-przy czym ta druga liczba (równa rzędowi macierzy współczynników) 
-jest nie większa od liczby równań.
-Jeżeli równań jest mniej niż niewiadomych, to liczba parametrów jest dodatnia, 
-a to właśnie oznacza istnienie rozwiązań niezerowych. :math:`\\`
+Such a system has non-zero solutions. Indeed, if we solve this system by the Gauss elimination method,
+we perform elementary operations on rows of the coefficient matrix in order to bring it to the reduced row echelon form. Then the unknowns corresponding to the columns without leading unities are taken as parameters on which the other (i.e. corresponding to the columns with leading unities) unknowns depend.
+The number of parameters is equal to a difference between the number of unknowns and the number of leading unities, and the second number (equal to the rank of the coefficient matrix) is not greater than the number of equations. If there are more unknowns than the number of equations, then the number of parameters is positive, and that is equivalent to the existence of non-zero solutions. 
+ :math:`\\`
 
-.. admonition:: Wniosek 1.
+.. admonition:: Corollary 1.
    
-   Jeżeli w przestrzeni wektorowej istnieje baza :math:`\,n`-elementowa,
-   to każda baza tej przestrzeni liczy :math:`\,n\ ` elementów.
+   If a vector space has an :math:`\,n`-element basis,
+   then each basis of this space has :math:`\,n\ ` elements.
 
-Dla dowodu przypuśćmy, że przestrzeń :math:`\,V(K)\,` ma dwie bazy:
-bazę :math:`\ \mathcal{B}\ ` o :math:`\,n\,` elementach oraz 
-bazę :math:`\ \mathcal{C}\ ` o :math:`\,m\,` elementach.
+Suppose the space :math:`\,V(K)\,` has two bases:
+basis :math:`\ \mathcal{B}\ ` with :math:`\,n\,` elements and 
+basis :math:`\ \mathcal{C}\ ` with :math:`\,m\,` elements.
 
-Gdyby :math:`\,n>m,\ ` to układ :math:`\ \mathcal{B}\ ` byłby liniowo zależny (sprzeczność).
-:math:`\,` A zatem :math:`\ \,n\le m.`
+If :math:`\,n>m,\ ` then the set :math:`\ \mathcal{B}\ ` is linearly dependent (contradiction).
+:math:`\,` Hence :math:`\ \,n\le m.`
 
-Gdyby :math:`\,m>n,\ ` to układ :math:`\ \mathcal{C}\ ` byłby liniowo zależny (sprzeczność).
-:math:`\,` A zatem :math:`\ \,m\le n.`
+If :math:`\,m>n,\ ` then the set :math:`\ \mathcal{C}\ ` is linearly dependent (contradiction).
+:math:`\,` Hence :math:`\ \,m\le n.`
 
-Tak więc jednocześnie :math:`\ \,n\le m\ \ \text{i}\ \ m\le n,\ \,` skąd :math:`\ \,m=n.` 
+In this way :math:`\ \,n\le m\ ` and :math:`\ m\le n,\ \,` and thus :math:`\ \,m=n.` 
 
-Wniosek 1. pozwala na wprowadzenie pojęcia wymiaru przestrzeni wektorowej jako liczby elementów dowolnej skończonej bazy przestrzeni (o ile taka skończona baza istnieje). :math:`\\`
+Corollary 1. allows to introduce a notion of dimension for a vector space as the number of elements of any finite basis of this space (if such a finite basis exists). :math:`\\`
 
-.. admonition:: Wniosek 2.
+.. admonition:: Corollary 2.
    
-   W przestrzeni :math:`\,n`-wymiarowej każdy układ liczący więcej niż :math:`\,n\,` wektorów
-   jest liniowo zależny.
+   In an :math:`\,n`-dimensional vector space each set containing more than :math:`\,n\,` 
+   vectors is linearly dependent.
 
-.. admonition:: Wniosek 3.
+.. admonition:: Corollary 3.
    
-   W przestrzeni :math:`\,n`-wymiarowej każdy liniowo niezależny układ :math:`\,n\,` wektorów jest 
-   bazą.
+   In an :math:`\,n`-dimensional vector space each linarly independent set  :math:`\,n\,` 
+   of vectors comprises a basis.
 
-Istotnie, wobec Wniosku 2. taki liniowo niezależny układ :math:`\,n\,` wektorów jest maksymalnym liniowo niezależnym układem, czyli jest bazą.
+Indeed, Corollary 2. implies that such a linearly independent set of :math:`\,n\,` vectors is a maximal linearly independent set, and thus a basis.
 
 

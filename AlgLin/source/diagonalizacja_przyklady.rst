@@ -1,29 +1,30 @@
 Matrix Diagonalization - Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Przykład 0.**
+**Example 0.**
 
-Pokazać, że macierzy :math:`\ \boldsymbol{A}\ =\ 
+Show that the matrix :math:`\ \boldsymbol{A}\ =\ 
 \left[\begin{array}{cc} 1 & a \\ 0 & 1 \end{array}\right]
-\in M_2(R),\quad a\neq 0,\ ` nie można zdiagonalizować
-poprzez przekształcenie podobieństwa, :math:`\ ` czyli że 
-nie istnieje nieosobliwa macierz :math:`\ \boldsymbol{P}\ ` taka, że
+\in M_2(R),\quad a\neq 0,\ ` is not diagonalizable by a similarity
+transformation, :math:`\ ` that is, 
+there is no non-degenerate matrix :math:`\ \boldsymbol{P}\ ` such that
 
 .. math::
    :label: simil
    
-   \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D}
+   \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ \boldsymbol{D},
 
-gdzie :math:`\ \boldsymbol{D}\ ` jest macierzą diagonalną.
+where :math:`\ \boldsymbol{D}\ ` is diagonal.
 
-**Dowód.**
+**Proof.**
 
-**I.** :math:`\,` Macierz :math:`\,\boldsymbol{A}\in M_n(K)\,` 
-może być doprowadzona do postaci diagonalnej poprzez przekształcenie podobieństwa :eq:`simil` wtedy i tylko wtedy, gdy jej wektory własne 
-rozpinają przestrzeń :math:`\,K^n,\ ` czyli gdy w przestrzeni :math:`\,K^n\,` 
-istnieje baza, złożona z wektorów własnych macierzy :math:`\,\boldsymbol{A}.`
+**I.** :math:`\,` The matrix :math:`\,\boldsymbol{A}\in M_n(K)\,` 
+is diagonalizable by a similarity transformation :eq:`simil` 
+if and only if its eigenvectors span the space
+:math:`\,K^n,\ ` that is, eigenvectors of the matrix :math:`\,\boldsymbol{A}` 
+comprise a basis of the space :math:`\,K^n.` 
 
-Równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}:`
+The characteristic equation of the matrix :math:`\,\boldsymbol{A}:`
 
 .. math::
    
@@ -31,11 +32,11 @@ Równanie charakterystyczne macierzy :math:`\,\boldsymbol{A}:`
    \left|\begin{array}{cc} 1-\lambda &a \\ 0 & 1-\lambda \end{array}\right|\ =\ 
    (1-\lambda)^2 =\,0
 
-dostarcza jedną, algebraicznie podwójną, wartość własną :math:`\,\lambda=1.`
+provides one eigenvalue :math:`\,\lambda=1\,` whose algebraic multiplicity is equal to 2.
 
-Wektory własne :math:`\,\boldsymbol{x}\,` dla tej wartości wyznaczamy z równania
+Eigenvectors :math:`\,\boldsymbol{x}\,` associated with this eigenvalue may be determined from the equation
 :math:`\ (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\,\boldsymbol{x}\,=\,
-\boldsymbol{0},\ ` czyli
+\boldsymbol{0},\ ` that is
 
 .. math::
    
@@ -44,15 +45,15 @@ Wektory własne :math:`\,\boldsymbol{x}\,` dla tej wartości wyznaczamy z równa
    \left[\begin{array}{c} 0 \\ 0 \end{array}\right]
    \quad : \quad
    \begin{cases} 
-   \ \ x_1 \text{  -  dowolne,} \\ \ \ a\,x_2=0\,;  
+   \ \ x_1 \text{  arbitrary,} \\ \ \ a\,x_2=0\,;  
    \end{cases}
    \ : \quad
    \begin{cases} 
-   \ \ x_1 \text{  -  dowolne,} \\ \ \ x_2=0\,.  
+   \ \ x_1 \text{  arbitrary,} \\ \ \ x_2=0\,.  
    \end{cases}
    \,,
 
-Wektory własne są więc postaci
+Hence, the eigenvectors are of the form
 
 .. math::
    
@@ -61,54 +62,54 @@ Wektory własne są więc postaci
    \beta\ \left[\begin{array}{c} 1 \\ 0 \end{array}\right],\quad
    \beta\in R\setminus\{0\}
 
-i tworzą (razem z wektorem zerowym) 1-wymiarową podprzestrzeń: 
-krotność geometryczna wartości własnej :math:`\,\lambda=1\,` 
-wynosi 1 :math:`\,` i :math:`\,` jest różna od krotności algebraicznej.
+and comprise (together with a zero vector) 1-dimensional subspace: 
+geometric multiplicity of the eigenvalue :math:`\,\lambda=1\,` 
+is 1 :math:`\,` and thus :math:`\,` it is different from the algebraic multiplicity.
 
-Nie istnieje więc baza przestrzeni :math:`\,R^2,\ ` złożona z wektorów własnych 
-macierzy :math:`\,\boldsymbol{A},\ ` gdyż dowolne dwa wektory własne tej 
-macierzy są liniowo zależne. Stąd nie istnieje również nieosobliwa macierz 
-:math:`\,\boldsymbol{P},\ ` diagonalizująca macierz :math:`\,\boldsymbol{A}.`
+Hence, since any two eigenvectors of the matrix :math:`\,\boldsymbol{A}\ ` are linearly dependent,
+they do not form a basis of the space :math:`\,R^2.\ ` This means that it is not possible 
+to diagonalize the matrix :math:`\,\boldsymbol{A}\ ` by a non-degenerate matrix 
+:math:`\,\boldsymbol{P}.`  
 
-**II.** :math:`\,` Macierze podobne mają taki sam wielomian charakterystyczny,
-a więc również taki sam zbiór wartości własnych o takich samych odpowiednich krotnościach algebraicznych.
+**II.** :math:`\,` Similar matrices have the same chracteristic polynomial,
+and thus also the same set of eigenvalues with the same corresponding algebraic multiplicities.
 
-Łatwo widać, że macierz :math:`\,\boldsymbol{A}\,` ma jedną wartość własną
-:math:`\,\lambda=1\,` o krotności algebraicznej 2.
+It is easy to see that the matrix :math:`\,\boldsymbol{A}\,` has an eigenvalue
+:math:`\,\lambda=1\,` with algebraic multiplicity 2.
 
-Gdyby istniała nieosobliwa macierz :math:`\,\boldsymbol{P}\,` 
-spełniająca warunek :eq:`simil`, :math:`\,` to macierz 
-:math:`\,\boldsymbol{D}\,` w tym równaniu byłaby diagonalną macierzą 2. stopnia 
-o podwójnej algebraicznie wartości własnej :math:`\,\lambda=1.\ ` 
-Warunki te określają jednoznacznie macierz jednostkową: 
+If there exists a matrix :math:`\,\boldsymbol{P}\,` 
+satisfying the condition :eq:`simil`, :math:`\,` then the matrix 
+:math:`\,\boldsymbol{D}\,` in that equation is a diagonal matrix of size 2 
+having an eigenvalue :math:`\,\lambda=1\ ` with algebraic multiplicity 2.
+These conditions uniquely determine an identity matrix: 
 :math:`\ \boldsymbol{D}\,=\,\boldsymbol{I}_2.` 
 
-W konsekwencji byłoby
+Therefore we would have
 :math:`\ \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P}\ =\ 
-\boldsymbol{I}_2,\ ` skąd :math:`\ \boldsymbol{A}\,=\,
+\boldsymbol{I}_2,\ ` and thus :math:`\ \boldsymbol{A}\,=\,
 \boldsymbol{P}\,\boldsymbol{I}_2\boldsymbol{P}^{-1}\ =\ 
 \boldsymbol{P}\boldsymbol{P}^{-1}\ =\ \boldsymbol{I}_2.`
 
-Doszliśmy do sprzeczności, 
-bo :math:`\ \boldsymbol{A}\neq\boldsymbol{I}_2.\ `
-Nie istnieje więc macierz :math:`\,\boldsymbol{P}\,` spełniająca :eq:`simil`.
+This gives a contradiction as :math:`\ \boldsymbol{A}\neq\boldsymbol{I}_2.\ `
+Hence, there is no matrix :math:`\,\boldsymbol{P}\,` for which 
+the equation :eq:`simil` would hold.
 
-**Przykład 1.**
+**Example 1.**
 
-Macierz :math:`\ \boldsymbol{\sigma}_x\,=\,
+The matrix :math:`\ \boldsymbol{\sigma}_x\,=\,
 \left[\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right]\in M_2(C)\ `
-jest rzeczywista i symetryczna, a więc hermitowska.
-Sprawdzimy, że:
+is real and symmetric, and thus Hermitian.
 
-* jej wartości własne są rzeczywiste,
-* wektory własne, należące do różnych wartości, są ortogonalne,
-* dla każdej wartości własnej krotność algebraiczna równa się
-  krotności geometrycznej,
-* w przestrzeni :math:`\,C^2\,` istnieje ortonormalna baza, 
-  złożona z jej wektorów własnych,
-* można ją zdiagonalizować poprzez rzeczywistą transformację ortogonalną.
+We will verify that:
 
-Równanie charakterystyczne macierzy :math:`\,\boldsymbol{\sigma}_x\,:`
+* its eigenvalues are real,
+* eigenvectors associated with distinct eigenvalues are orthogonal,
+* algebraic multiplicity of every eigenvalue is equal to its geometric multiplicity,
+* eigenvectors of the matrix :math:`\ \boldsymbol{\sigma}_x\ ` comprise an orthonormal
+  basis of the space :math:`\,C^2,` 
+* the matrix :math:`\ \boldsymbol{\sigma}_x\ ` is diagonalizable by a real orthogonal similarity transformation.
+
+The characteristic equation of the matrix :math:`\,\boldsymbol{\sigma}_x\,:`
 
 .. math::
    
@@ -118,22 +119,22 @@ Równanie charakterystyczne macierzy :math:`\,\boldsymbol{\sigma}_x\,:`
    \end{array}\ \right|\ =\ 
    (-\lambda)^2-1\ =\ \lambda^2-1\ =\ (\lambda-1)(\lambda+1)\ =\ 0
 
-daje dwie wartości własne i ich krotności algebraiczne:
+provides two eigenvalues with their algebraic multiplicities:
 
 .. math::
    
    \lambda_1\,=\ 1\quad(1)\,,\qquad\lambda_2\,=\ -1\quad(1)\,.
 
-Podstawiając kolejno wyliczone wartości własne do równania
+We substitute them to the equation
 
 .. math::
    
    (\boldsymbol{\sigma}_x -\lambda\,\boldsymbol{I}_2)\,\boldsymbol{x}\ =
    \ \boldsymbol{0}
 
-wyznaczamy odpowiednie wektory własne :math:`\ \boldsymbol{x}.`
+to determine the associated eigenvectors :math:`\ \boldsymbol{x}.`
 
-Wektory własne dla wartości :math:`\,\lambda_1=\,1:`
+Eigenvectors associated with the eigenvalue :math:`\,\lambda_1=\,1:`
 
 .. math::
    
@@ -154,7 +155,7 @@ Wektory własne dla wartości :math:`\,\lambda_1=\,1:`
    \quad\alpha\in C\setminus\{0\}.
    \end{array}
 
-Wektory własne dla wartości :math:`\,\lambda_2=\,-1:`
+Eigenvectors associated with the eigenvalue :math:`\,\lambda_2=\,-1:`
 
 .. math::
    
@@ -175,9 +176,9 @@ Wektory własne dla wartości :math:`\,\lambda_2=\,-1:`
    \quad\beta\in C\setminus\{0\}.
    \end{array}
 
-Krotność geometryczna obydwu wartości własnych wynosi 1 i zgadza się 
-z ich krotnością algebraiczną. Każde dwa wektory własne należące do 
-różnych wartości są ortogonalne:
+Geometric multiplicity of the two eigenvalues is equal to  1 
+and agrees with the algebraic multiplicity. Moreover, every two eigenvectors  
+associated with distinct eigenvalues are orthogonal:
 
 .. math::
    
@@ -188,22 +189,20 @@ różnych wartości są ortogonalne:
    \alpha^*\beta\,+\,\alpha^*(-\beta)\ =\ 
    \alpha^*\beta\,-\,\alpha^*\beta\ =\ 0.
 
-Ortonormalna baza :math:`\ \mathcal{F}\ ` przestrzeni :math:`\,C^2\ ` 
-jest złożona z unormowanych wektorów własnych macierzy 
-:math:`\ \boldsymbol{\sigma}_x\,:`
+Hence, normalised eigenvectors of the matrix :math:`\ \boldsymbol{\sigma}_x\,`
+comprise an orthonormal basis :math:`\ \mathcal{F}\ ` of the space :math:`\,C^2\,:` 
 
 .. math::
    
    \mathcal{F}\ =\ \,(\,\boldsymbol{f}_1,\,\boldsymbol{f}_2\,)\,,
-   \quad\text{gdzie}\quad
+   \quad\text{where}\quad
    \boldsymbol{f}_1\ =\ \textstyle{\frac{1}{\sqrt{2}}}\,
    \left[\begin{array}{c} 1 \\ 1 \end{array}\right]\,,\quad
    \boldsymbol{f}_2\ =\ \textstyle{\frac{1}{\sqrt{2}}}\,
    \left[\begin{array}{c} 1 \\ -1 \end{array}\right]\,.
 
-Wektory bazy :math:`\,\mathcal{F}\ ` tworzą 
-macierz :math:`\,\boldsymbol{P}\ `
-diagonalizującą macierz :math:`\,\boldsymbol{\sigma}_x:`
+The basis vectors form a matrix :math:`\,\boldsymbol{P}\ `
+which diagonalizes the matrix :math:`\,\boldsymbol{\sigma}_x:`
 
 .. math::
    
@@ -212,9 +211,9 @@ diagonalizującą macierz :math:`\,\boldsymbol{\sigma}_x:`
    \textstyle{\frac{1}{\sqrt{2}}}\,
    \left[\begin{array}{rr} 1 & 1 \\ 1 & -1 \end{array}\right]\,.
 
-Zauważmy, że :math:`\,\boldsymbol{P}\,` jest macierzą rzeczywistą, 
-jednocześnie hermitowską (symetryczną) :math:`\\` i :math:`\ ` unitarną 
-(ortogonalną):
+Note that :math:`\,\boldsymbol{P}\,` is a real matrix which is both :math:`\ ` 
+Hermitian (symmetric) :math:`\ ` and :math:`\ ` unitary 
+(orthogonal):
 
 .. math::
    
@@ -224,11 +223,11 @@ jednocześnie hermitowską (symetryczną) :math:`\\` i :math:`\ ` unitarną
    \boldsymbol{P}^T\boldsymbol{P}\ =\ 
    \boldsymbol{I}_2\,;
 
-   \text{ponadto:}\qquad
+   \text{moreover:}\qquad
    \boldsymbol{P}^2\ =\ \boldsymbol{I}_2,\quad
    \boldsymbol{P}^{-1}\ =\ \boldsymbol{P}^+\ =\ \boldsymbol{P}\,.
 
-Numeryczna diagonalizacja macierzy :math:`\,\boldsymbol{\sigma}_x:`
+Numerical diagonalization of the matrix :math:`\,\boldsymbol{\sigma}_x:`
 
 .. code-block:: python
    
@@ -253,13 +252,13 @@ Numeryczna diagonalizacja macierzy :math:`\,\boldsymbol{\sigma}_x:`
 
 .. :math:`\\[14pt]`
 
-**Przykład 2.**
+**Example 2.**
 
-Macierz :math:`\ \boldsymbol{R}_\phi\ =\ 
+The matrix :math:`\ \boldsymbol{R}_\phi\ =\ 
 \left[\begin{array}{cc}
 \cos{\phi} & -\sin{\phi} \\ \sin{\phi} & \cos{\phi}
 \end{array}\right] \in M_2(C)\ `
-jest rzeczywista i ortogonalna, a więc unitarna:
+is real orthogonal, and thus unitary:
 
 .. math::
    
@@ -267,39 +266,37 @@ jest rzeczywista i ortogonalna, a więc unitarna:
    \boldsymbol{R}_\phi^T\,\boldsymbol{R}_\phi\ =\ 
    \boldsymbol{I}_2.
    
-Sprawdzimy, że:
+We will verify that:
 
-* jej wartości własne są liczbami zespolonymi o module 1,
+* its eigenvalues are complex numbers of modulus 1,
 
-* wektory własne, należące do różnych wartości własnych, są ortogonalne,
+* eigenvectors associated with distinct eigenvalues are orthogonal,
 
-* dla każdej wartości własnej krotność algebraiczna równa się
-  krotności geometrycznej,
+* algebraic multiplicity of every eigenvalue is equal to its geometric multiplicity,
 
-* w przestrzeni :math:`\,C^2\,` istnieje ortonormalna baza, 
-  złożona z jej wektorów własnych,
+* eigenvectors of the matrix :math:`\ \boldsymbol{R}_\phi\ ` comprise an orthonormal
+  basis of the space :math:`\,C^2,` 
+  
+* the matrix :math:`\ \boldsymbol{R}_\phi\ ` is diagonalizable by a unitary similarity transformation.
 
-* można ją zdiagonalizować poprzez unitarną transformację podobieństwa.
+If :math:`\,\phi=0\ ` or :math:`\,\phi=\pi,\ ` 
+then the matrix :math:`\ \boldsymbol{R}_\phi\ ` is diagonal and equals
+:math:`\,\boldsymbol{I}_2\ ` or :math:`\ -\,\boldsymbol{I}_2,\ ` correspondingly.
+We will assume then that :math:`\ \phi\neq 0,\,\pi.`
 
-Dla :math:`\,\phi=0\ ` oraz :math:`\,\phi=\pi\ ` 
-macierz :math:`\ \boldsymbol{R}_\phi\ ` już jest diagonalna i
-równa się odpowiednio :math:`\,\boldsymbol{I}_2\ ` albo
-:math:`\ -\,\boldsymbol{I}_2.\ ` W dalszym ciągu zakładamy więc,
-że :math:`\ \phi\neq 0,\,\pi.`
+A unitary matrix diagonalizing the matrix :math:`\ \boldsymbol{R}_\phi\ `
+is a transition matrix from the canonical basis :math:`\,\mathcal{E}\,=\,
+(\boldsymbol{e}_1,\, \boldsymbol{e}_2)\ ` of the space :math:`\,C^2\ ` 
+to an orthonormal basis :math:`\,\mathcal{F}\,=\,
+(\boldsymbol{f}_1,\boldsymbol{f}_2)\ ` consisting of normalised eigenvectors 
+of the matrix :math:`\ \boldsymbol{R}_\phi.`
 
-Macierz unitarna, diagonalizująca macierz :math:`\ \boldsymbol{R}_\phi,\ `
-jest macierzą przejścia od bazy kanonicznej :math:`\,\mathcal{E}\,=\,
-(\boldsymbol{e}_1,\, \boldsymbol{e}_2)\ ` przestrzeni :math:`\,C^2\ ` 
-do ortonormalnej bazy :math:`\,\mathcal{F}\,=\,
-(\boldsymbol{f}_1,\boldsymbol{f}_2),\ ` złożonej z unormowanych wektorów 
-własnych macierzy :math:`\ \boldsymbol{R}_\phi.`
+We solve an eigenproblem of the matrix :math:`\ \boldsymbol{R}_\phi\ `
+and :math:`\,` construct the basis :math:`\,\mathcal{F}.`
 
-Rozwiążemy problem własny macierzy :math:`\ \boldsymbol{R}_\phi\ `
-i :math:`\,` zbudujemy bazę :math:`\,\mathcal{F}.`
-
-Wielomian charakterystyczny :math:`\,w(\lambda)\,=\,
+The characteristic polynomial :math:`\,w(\lambda)\,=\,
 \det(\boldsymbol{R}_\phi -\,\lambda\,\boldsymbol{I}_2)\ `
-jest dany przez
+is given by
 
 .. math::
    
@@ -312,8 +309,8 @@ jest dany przez
    =\ 1\, -\, 2\,\lambda\,\cos{\phi}\ +\,\lambda^2.
    \end{array}
 
-Wartości własne macierzy :math:`\ \boldsymbol{R}_\phi\ `
-są pierwiastkami równania charakterystycznego :math:`\,w(\lambda)=0:`
+Eigenvalues of the matrix :math:`\ \boldsymbol{R}_\phi\ `
+are roots of the characteristic equation :math:`\,w(\lambda)=0:`
 
 .. math::
    
@@ -329,7 +326,7 @@ są pierwiastkami równania charakterystycznego :math:`\,w(\lambda)=0:`
                     =\ e^{\ \pm\,i\,\phi}\,.                       
    \end{array}
 
-Otrzymaliśmy dwie wartości własne, obie algebraicznie pojedyncze:
+We obtained two eigenvalues with algebraic multiplicities equal to 1:
 
 .. math::
    
@@ -337,17 +334,17 @@ Otrzymaliśmy dwie wartości własne, obie algebraicznie pojedyncze:
    \lambda_1\,=\ e^{\ +\,i\,\phi}\,,\qquad
    \lambda_2\,=\ e^{\ -\,i\,\phi}\,.
 
-Podstawiając kolejno wyliczone wartości własne do równania
+We substitute these values to the equation
 
 .. math::
    
    (\boldsymbol{R}_\phi-\lambda\,\boldsymbol{I}_2)\ \boldsymbol{x}\ =
    \ \boldsymbol{0}
 
-wyznaczamy odpowiednie wektory własne :math:`\ \boldsymbol{x}.`
+in order to determine the associated eigenvectors :math:`\ \boldsymbol{x}.`
 
-Dla wektorów własnych należących do wartości :math:`\ \lambda_1 =\,
-e^{\ +\,i\,\phi}\,=\,\cos{\phi}\,+\,i\,\sin{\phi}\ ` otrzymujemy:
+For an eigenvalue :math:`\ \lambda_1 =\,
+e^{\ +\,i\,\phi}\,=\,\cos{\phi}\,+\,i\,\sin{\phi}\ :` 
 
 .. math::
    
@@ -361,7 +358,7 @@ e^{\ +\,i\,\phi}\,=\,\cos{\phi}\,+\,i\,\sin{\phi}\ ` otrzymujemy:
    \left[\begin{array}{cc} -i & -1 \\ 1 & -i \end{array}\right]
    \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right] \ =\ 
    \left[\begin{array}{c} 0 \\ 0 \end{array}\right],\quad
-   \text{przy czym  }\sin{\phi}\neq 0\,;
+   \text{where  }\sin{\phi}\neq 0\,;
 
    \left[\begin{array}{cc} -i & -1 \\ 1 & -i \end{array}\right]
    \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right] \ =\ 
@@ -379,9 +376,8 @@ e^{\ +\,i\,\phi}\,=\,\cos{\phi}\,+\,i\,\sin{\phi}\ ` otrzymujemy:
    \alpha\,\left[\begin{array}{r} i \\ 1 \end{array}\right],
    \quad\alpha\in C\setminus\{0\}.
 
-Wektory własne dla wartości :math:`\ \lambda_2 =\,
-e^{\ -\,i\,\phi}\,=\,\cos{\phi}\,-\,i\,\sin{\phi}\ `
-wyznaczone są przez warunki:
+For an eigenvalue :math:`\ \lambda_2 =\,
+e^{\ -\,i\,\phi}\,=\,\cos{\phi}\,-\,i\,\sin{\phi}\ :`
 
 .. math::
    
@@ -395,7 +391,7 @@ wyznaczone są przez warunki:
    \left[\begin{array}{cc} i & -1 \\ 1 & i \end{array}\right]
    \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right] \ =\ 
    \left[\begin{array}{c} 0 \\ 0 \end{array}\right],\quad
-   \text{przy czym  }\sin{\phi}\neq 0\,;
+   \text{where  }\sin{\phi}\neq 0\,;
 
    \left[\begin{array}{cc} i & -1 \\ 1 & i \end{array}\right]
    \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right] \ =\ 
@@ -413,12 +409,12 @@ wyznaczone są przez warunki:
    \beta\,\left[\begin{array}{r} 1 \\ i \end{array}\right],
    \quad\beta\in C\setminus\{0\}.
 
-Zauważmy, że wektory własne nie zależą od kąta :math:`\,\phi.\ `
-Krotności geometryczne obydwu wartości własnych 
-:math:`\ \lambda_1,\,\lambda_2\ ` są równe 1 
-i zgadzają się z krotnościami algebraicznymi. 
+Note that the eigenvectors do not depend on the angle :math:`\,\phi.\ `
+Geometric multiplicities of the eigenvalues
+:math:`\ \lambda_1,\,\lambda_2\ ` are equal to 1 
+and agree with the algebraic multiplicities. 
 
-Każde dwa wektory własne, należące do różnych wartości własnych, są ortogonalne:
+Furthermore, any two vectors associated with distinct eigenvalues are orthogonal:
 
 .. math::
    
@@ -428,15 +424,15 @@ Każde dwa wektory własne, należące do różnych wartości własnych, są ort
    \right\rangle\ =\ 
    -i\,\alpha^*\beta\,+\,\alpha^*\,i\,\beta\ =\ 0.
 
-Można teraz zbudować ortonormalną bazę :math:`\ \mathcal{F}\ ` 
-przestrzeni :math:`\,C^2,\ ` składającą się z unormowanych 
-wektorów własnych macierzy :math:`\ \boldsymbol{R}_\phi,\ ` 
-należących do różnych wartości własnych:
+Hence, we may now construct an orthonormal basis :math:`\ \mathcal{F}\ ` 
+of the space :math:`\,C^2\ ` consisting of normalized eigenvectors 
+of the matrix :math:`\ \boldsymbol{R}_\phi\ ` 
+associated with distinct eigenvalues:
 
 .. math::
    
    \mathcal{F}\ =\ (\,\boldsymbol{f}_1,\,\boldsymbol{f}_2\,),
-   \quad\text{gdzie}\quad
+   \quad\text{where}\quad
    \boldsymbol{f}_1\ =\ 
    \textstyle{\frac{1}{\sqrt{2}}}\,
    \left[\begin{array}{c} i \\ 1 \end{array}\right],\quad
@@ -444,9 +440,9 @@ należących do różnych wartości własnych:
    \textstyle{\frac{1}{\sqrt{2}}}\,
    \left[\begin{array}{c} 1 \\ i \end{array}\right]\,.
 
-Macierz przejścia :math:`\ \boldsymbol{P}\ ` 
-od bazy kanonicznej :math:`\ \mathcal{E}\ ` do bazy :math:`\ \mathcal{F}\ `,
-zestawiona z kolumn :math:`\ \boldsymbol{f}_1,\,\boldsymbol{f}_2:`
+The transition matrix :math:`\ \boldsymbol{P}\ ` 
+from the canonical basis :math:`\ \mathcal{E}\ ` to the basis :math:`\ \mathcal{F}\ `,
+which we form from the columns :math:`\ \boldsymbol{f}_1,\,\boldsymbol{f}_2:`
 
 .. math::
 
@@ -454,7 +450,7 @@ zestawiona z kolumn :math:`\ \boldsymbol{f}_1,\,\boldsymbol{f}_2:`
    \textstyle{\frac{1}{\sqrt{2}}}\,\left[\begin{array}{cc}
    i & 1 \\ 1 & i \end{array}\right]   
    
-jest unitarna i diagonalizuje macierz :math:`\ \boldsymbol{R}_\phi:`
+is unitary and diagonalizes the matrix :math:`\ \boldsymbol{R}_\phi:`
 
 .. math::
    
@@ -484,13 +480,13 @@ jest unitarna i diagonalizuje macierz :math:`\ \boldsymbol{R}_\phi:`
                                     [1, I]])
    sage: P.I*R*P
 
-Macierz :math:`\ \boldsymbol{R}_\phi\ ` reprezentuje operację obrotu wektora 
-na płaszczyźnie o kąt :math:`\,\phi.\ ` Przy tej interpretacji zrozumiały jest 
-fakt, że z wyjątkiem przypadków :math:`\,\phi=0,\,\pi\ ` wartości własne 
-macierzy są zespolone nierzeczywiste: wektor obrócony o kąt :math:`\,\phi\ `
-nie jest równoległy do wektora wyjściowego. W tej sytuacji diagonalizacja 
-rzeczywistej macierzy :math:`\ \boldsymbol{R}_\phi\ ` wymaga użycia zespolonej 
-nierzeczywistej unitarnej macierzy :math:`\ \boldsymbol{P}.`
+The matrix :math:`\ \boldsymbol{R}_\phi\ ` represents an operation of rotation 
+of a vector on a plane by the angle :math:`\,\phi.\ ` This interpretation explains why, 
+apart from the cases when :math:`\,\phi=0,\,\pi\,,` the eigenvalues are imaginary and not real: 
+a vector rotated by an angle :math:`\,\phi\ `
+is not parallel to the initial vector. In this situation diagonalization 
+of a real matrix :math:`\ \boldsymbol{R}_\phi\ ` requires a unitary non-real matrix 
+:math:`\ \boldsymbol{P}.`
 
 .. , chyba że właśnie 
    :math:`\,\phi=0,\,\pi\ ` (w tych dwóch przypadkach wartość własna wynosi 
@@ -504,30 +500,29 @@ nierzeczywistej unitarnej macierzy :math:`\ \boldsymbol{P}.`
 
 .. :math:`\ `
 
-**Przykład 3.**
+**Example 3.**
 
-Macierz :math:`\ \boldsymbol{A}\ =\ 
+The matrix :math:`\ \boldsymbol{A}\ =\ 
 \left[\begin{array}{ccc} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{array}\right]
-\in M_3(R)\ ` jest rzeczywista i symetryczna, a więc hermitowska.
+\in M_3(R)\ ` is real and symmetric, and thus Hermitian.
 
-Sprawdzimy, że:
+We will verify that:
 
-* jej wartości własne są rzeczywiste,
-* wektory własne, należące do różnych wartości, są ortogonalne,
-* dla każdej wartości własnej krotność algebraiczna równa się
-  krotności geometrycznej,
-* w przestrzeni :math:`\,R^3\,` istnieje ortonormalna baza, 
-  złożona z jej wektorów własnych,
-* można ją zdiagonalizować poprzez rzeczywistą transformację ortogonalną.
+* its eigenvalues are real,
+* eigenvectors associated with distinct eigenvalues are orthogonal,
+* algebraic multiplicity of every eigenvalue is equal to its geometric multiplicity,
+* eigenvectors of the matrix :math:`\ \boldsymbol{A}\ ` comprise an orthonormal
+  basis of the space :math:`\,R^3,` 
+* the matrix :math:`\ \boldsymbol{A}\ ` is diagonalizable by a real orthogonal similarity transformation.
 
-Macierzą ortogonalną diagonalizującą macierz :math:`\ \boldsymbol{A}\ `
-jest macierz przejścia od bazy kanonicznej :math:`\,\mathcal{E}\,`
-przestrzeni :math:`\,R^3\,` do ortonormalnej bazy :math:`\,\mathcal{F}^0\,`
-złożonej z unormowanych wektorów własnych tej macierzy.
-Należy więc rozwiązać problem własny macierzy :math:`\ \boldsymbol{A}\ `
-i następnie skonstruować ortonormalną bazę, złożoną z jej wektorów własnych.
+An orthogonal matrix which diagonalizes the matrix :math:`\ \boldsymbol{A}\ `
+is a transition matrix from the canonical basis :math:`\,\mathcal{E}\,`
+of the space :math:`\,R^3\,` to an orthonormal basis :math:`\,\mathcal{F}^0\,`
+consisting of normalized eigenvectors of this matrix.
+Hence, we have to solve an eigenproblem of the matrix :math:`\ \boldsymbol{A}\ `
+and then construct an orthonormal basis consisting of its eigenvectors.
 
-Równanie charakterystyczne:
+The characteristic equation:
 
 .. math::
    
@@ -538,14 +533,14 @@ Równanie charakterystyczne:
    \ -\lambda^3+3\,\lambda + 2\ =
    -(\lambda-2)(\lambda+1)^2\ =\ 0
 
-daje wartości własne i ich krotności algebraiczne:
+provides the eigenvalues with their algebraic multiplicities:
 
 .. math::
    
    \lambda_1=\,2 \quad (1)\,,\qquad \lambda_2=\,-1 \quad (2)\,.
 
-Ogólnie, wektory własne :math:`\,\boldsymbol{x}\,` 
-dla wartości :math:`\,\lambda\,` wyznacza się z równania
+In general, vectors :math:`\,\boldsymbol{x}\,` 
+associated with an eigenvalue :math:`\,\lambda\,` may be determined from the equation
 
 .. math::
    :label: eigen_vector
@@ -553,8 +548,8 @@ dla wartości :math:`\,\lambda\,` wyznacza się z równania
    (\boldsymbol{A}-\lambda\,\boldsymbol{I}_n)\ \boldsymbol{x}\ =
    \ \boldsymbol{0}.
 
-Dla :math:`\ \lambda\,=\,\lambda_1=\,2\ ` równanie :eq:`eigen_vector` 
-przyjmuje postać
+For :math:`\ \lambda\,=\,\lambda_1=\,2\ ` the equation :eq:`eigen_vector` 
+is of the form
 
 .. math::
    
@@ -565,8 +560,8 @@ przyjmuje postać
    \ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 
-Metoda ``rref()`` systemu Sage przekształca macierz tego jednorodnego problemu
-liniowego do zredukowanej wierszowej postaci schodkowej:
+The method ``rref()`` of Sage transforms matrix of this homogeneous linear problem
+to reduced row echelon form:
 
 .. code-block:: python
    
@@ -579,7 +574,7 @@ liniowego do zredukowanej wierszowej postaci schodkowej:
    [ 0  1 -1]
    [ 0  0  0]
    
-Otrzymany równoważny problem liniowy
+We obtain an equivalent linear problem
 
 .. math::
    
@@ -590,7 +585,7 @@ Otrzymany równoważny problem liniowy
    \ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]
 
-odpowiada układowi równań
+corresponding to a system of equations
 
 .. math::
    :nowrap:
@@ -600,9 +595,9 @@ odpowiada układowi równań
        & \  \ & x_2 & \  - \ \ & x_3 & \  = \ \ & 0
    \end{alignat*}
 
-którego ogólnym rozwiązaniem jest 
+whose general solution is 
 :math:`\ x_1=x_2=x_3=\alpha, \ \ \alpha\in R.\ ` :math:`\\`
-Wektory własne dla wartości :math:`\,\lambda_1=2\,` mają więc postać
+Hence, the eigenvectors associated with the eigenvalue :math:`\,\lambda_1=2\,` are of the form
 
 .. math::
    
@@ -614,11 +609,11 @@ Wektory własne dla wartości :math:`\,\lambda_1=2\,` mają więc postać
    \alpha\ \left[\begin{array}{c} 1 \\ 1 \\ 1 \end{array}\right],
    \quad\alpha\in R\setminus\{0\}.
 
-Krotność geometryczna tej wartości wynosi 1 
-i zgadza się z jej krotnością algebraiczną.
+Geometric multiplicity of this eigenvalue is 1 
+and agrees with the algebraic multiplicity.
 
-Podstawienie :math:`\ \lambda\,=\,\lambda_2=\,-1\ ` 
-do wzoru :eq:`eigen_vector` daje równanie 
+Substitution of :math:`\ \lambda\,=\,\lambda_2=\,-1\ ` 
+to the equation :eq:`eigen_vector` gives 
 
 .. math::
    
@@ -629,9 +624,9 @@ do wzoru :eq:`eigen_vector` daje równanie
    \ =\ 
    \left[\begin{array}{c} 0 \\ 0 \\ 0 \end{array}\right]\,.
 
-Funkcja ``right_kernel_matrix()`` systemu Sage zwraca macierz, 
-której wiersze tworzą bazę przestrzeni rozwiązań jednorodnego 
-problemu liniowego. Tutaj otrzymujemy
+The function ``right_kernel_matrix()`` of Sage returns a matrix 
+whose rows comprise a basis for the solution space of a  
+homogeneous linear problem. In our case we obtain
 
 .. code-block:: python
    
@@ -644,7 +639,7 @@ problemu liniowego. Tutaj otrzymujemy
    [ 1  0 -1]
    [ 0  1 -1]
    
-Wektory własne dla wartości :math:`\ \lambda_2\,=-1\ ` są więc postaci
+Hence, the eigenvectors associated with the eigenvalue :math:`\ \lambda_2\,=-1\ ` are of the form
 
 .. math::
    
@@ -656,10 +651,10 @@ Wektory własne dla wartości :math:`\ \lambda_2\,=-1\ ` są więc postaci
    \end{array}\right]\,,
    \quad\alpha,\beta\in R,\ \ \alpha^2+\,\beta^2>0.
 
-Krotność geometryczna, zgodna z krotnością algebraiczną, wynosi 2.
+Geometric multiplicity of this eigenvalue is 2 
+and agrees with the algebraic multiplicity.
 
-Zauważmy, że wektory własne należące do różnych wartości własnych 
-są ortogonalne:
+Note that eigenvectors associated with distinct eigenvalues are orthogonal:
 
 .. math::
    
@@ -671,8 +666,8 @@ są ortogonalne:
    \right\rangle\ \ =\ \ 
    \alpha\beta\,+\,\alpha\gamma\,+\,\alpha\,(-\,\beta-\gamma)\ =\ 0\,.
 
-Wprowadzamy oznaczenia dla trzech liniowo niezależnych wektorów własnych 
-macierzy :math:`\ \boldsymbol{A}:`
+Denote three linearly independent eigenvectors of the matrix 
+:math:`\ \boldsymbol{A}\ ` as:
 
 .. math::
    
@@ -683,15 +678,15 @@ macierzy :math:`\ \boldsymbol{A}:`
    \boldsymbol{g}_3\,=\ 
    \left[\begin{array}{r} 0 \\ 1 \\ -1 \end{array}\right],
 
-które tworzą bazę :math:`\,\mathcal{G}=
-(\boldsymbol{g}_1,\boldsymbol{g}_2,\boldsymbol{g}_3)\ ` przestrzeni
+so that :math:`\,\mathcal{G}=
+(\boldsymbol{g}_1,\boldsymbol{g}_2,\boldsymbol{g}_3)\ ` is a basis of the space
 :math:`\,R^3.\ ` 
 
-W tej sytuacji macierz :math:`\ \boldsymbol{P}\,=\,
+Matrix :math:`\ \boldsymbol{P}\,=\,
 [\ \boldsymbol{g}_1\,|\,\boldsymbol{g}_2\,|\,\boldsymbol{g}_3\ ]\ =\ 
 \left[\begin{array}{rrr} 
 1 & 1 & 0 \\ 1 & 0 & 1 \\ 1 & -1 & -1 
-\end{array}\right]\ ` diagonalizuje :math:`\ \boldsymbol{A}:`
+\end{array}\right]\ ` diagonalizes the matrix :math:`\ \boldsymbol{A}:`
 
 .. code-block:: python
    
@@ -708,12 +703,12 @@ W tej sytuacji macierz :math:`\ \boldsymbol{P}\,=\,
    [ 0 -1  0]
    [ 0  0 -1]
    
-:math:`\ \boldsymbol{P}\ ` nie jest macierzą ortogonalną, bo iloczyn skalarny
+The matrix :math:`\ \boldsymbol{P}\ ` is not orthogonal because the inner product
 :math:`\ \langle\boldsymbol{g}_2,\boldsymbol{g}_3\rangle = 1 \neq 0.`  
-Dla otrzymania bazy ortogonalnej 
+To construct an orthogonal basis 
 :math:`\ \mathcal{F}=(\boldsymbol{f}_1,\boldsymbol{f}_2,\boldsymbol{f}_3)`, 
-a następnie ortonormalnej :math:`\ \mathcal{F}^0=
-(\boldsymbol{f}_1^0,\boldsymbol{f}_2^0,\boldsymbol{f}_3^0)`, trzeba przeprowadzić ortogonalizację Grama-Schmidta. Kładziemy 
+and later an orthonormal basis :math:`\ \mathcal{F}^0=
+(\boldsymbol{f}_1^0,\boldsymbol{f}_2^0,\boldsymbol{f}_3^0)`, we have to apply the Gram-Schmidt ortogonalization process. Put 
 
 .. math::
    
@@ -724,9 +719,9 @@ a następnie ortonormalnej :math:`\ \mathcal{F}^0=
    \boldsymbol{f}_3=\,\boldsymbol{g}_3+\eta\,\boldsymbol{f}_2=\,
    \left[\begin{array}{c} \eta \\ 1 \\ -1-\eta \end{array}\right],
 
-gdzie :math:`\,\eta\,` wyznaczamy z warunku ortogonalności
-:math:`\ \langle\boldsymbol{f}_2,\boldsymbol{f}_3\rangle\,=\,2\eta+1\,=\,0.\ ` 
-Stąd
+where :math:`\,\eta\,` may be determined from the orthogonality condition
+:math:`\ \langle\boldsymbol{f}_2,\boldsymbol{f}_3\rangle\,=\,2\eta+1\,=\,0,\ ` 
+so that
 
 .. math::
    
@@ -736,7 +731,7 @@ Stąd
    \ =\ -\frac{1}{2}\ \left[\begin{array}{r} 1 \\ -2 \\ 1 \end{array}\right]
    \ \ \sim\ \ \left[\begin{array}{r} 1 \\ -2 \\ 1 \end{array}\right]\,.
 
-Ortogonalna baza :math:`\ \mathcal{F}\ ` składa się więc z wektorów własnych
+Hence, the orthogonal basis :math:`\ \mathcal{F}\ ` consists of eigenvectors
 
 .. math::
    
@@ -747,8 +742,8 @@ Ortogonalna baza :math:`\ \mathcal{F}\ ` składa się więc z wektorów własnyc
    \boldsymbol{f}_3\,=\ 
    \left[\begin{array}{r} 1 \\ -2 \\ 1 \end{array}\right]\,,
 
-a bazę ortonormalną :math:`\ \mathcal{F}^0\ ` otrzymamy 
-dzieląc każdy wektor przez jego normę:
+and the orthonormal basis :math:`\ \mathcal{F}^0\ ` may be obtained by dividing
+each vector by its norm:
 
 .. math::
    
@@ -759,12 +754,12 @@ dzieląc każdy wektor przez jego normę:
    \boldsymbol{f}_3\,=\ \textstyle{\frac{1}{\sqrt{6}}}
    \left[\begin{array}{r} 1 \\ -2 \\ 1 \end{array}\right]\,.
 
-Wektory kolumnowe 
+The column vectors 
 :math:`\ \boldsymbol{f}_1^0,\,\boldsymbol{f}_2^0,\boldsymbol{f}_3^0\ `
-składają się na ortogonalną macierz przejścia :math:`\ \boldsymbol{P}^0\ `
-od bazy kanonicznej :math:`\,\mathcal{E}\,` do bazy :math:`\ \mathcal{F}^0\ `
-przestrzeni :math:`\,R^3.\ ` Jest to macierz diagonalizująca macierz
-:math:`\,\boldsymbol{A}\,` poprzez ortogonalną transformację podobieństwa:
+comprise an orthogonal transition matrix :math:`\ \boldsymbol{P}^0\ `
+from the canonical basis :math:`\,\mathcal{E}\,` to the basis :math:`\ \mathcal{F}^0\ `
+of the space :math:`\,R^3.\ ` This is the matrix which diagonalizes the matrix
+:math:`\,\boldsymbol{A}\,` by an orthogonal similarity transformation:
 
 .. math::
    
@@ -775,7 +770,7 @@ przestrzeni :math:`\,R^3.\ ` Jest to macierz diagonalizująca macierz
    \frac{1}{\sqrt{3}} & -\,\frac{1}{\sqrt{2}} &    \frac{1}{\sqrt{6}}
    \end{array}\right]\,.
 
-Sprawdzenie numeryczne:
+Numerical verification:
 
 .. code-block:: python
    

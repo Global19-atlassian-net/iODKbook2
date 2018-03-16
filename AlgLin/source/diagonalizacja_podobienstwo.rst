@@ -1,33 +1,34 @@
 Similarity Transformation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Definicja.
+.. admonition:: Definition.
    
-   Macierze :math:`\,\boldsymbol{A},\,\boldsymbol{B}\in M_n(C)\,`
-   są *podobne*, gdy istnieje macierz 
-   :math:`\ \boldsymbol{P}\in M_n(C)\ ` taka, że
+   Matrices :math:`\,\boldsymbol{A},\,\boldsymbol{B}\in M_n(C)\,`
+   are *similar* if there exists a matrix 
+   :math:`\ \boldsymbol{P}\in M_n(C)\ ` such that
    
    .. math::
       
       \boldsymbol{B}\ =\ \boldsymbol{P}^{-1} \boldsymbol{A}\,\boldsymbol{P}\,.
    
-   Wtedy macierz :math:`\,\boldsymbol{B}\,` jest związana 
-   z :math:`\,\boldsymbol{A}\,` *przekształceniem podobieństwa*.
+   Then the matrix :math:`\,\boldsymbol{B}\,` is related with 
+   :math:`\,\boldsymbol{A}\,` by a *similarity transformation*.
 
-**Twierdzenie 4.** :math:`\ `
-Macierze podobne mają ten sam wielomian charakterystyczny.
+**Theorem 4.** :math:`\ `
+Characteristic polynomials of similar matrices are equal.
 
-Mianowicie, jeżeli :math:`\ \boldsymbol{B}\,=\,
+Namely, if :math:`\ \boldsymbol{B}\,=\,
 \boldsymbol{P}^{-1} \boldsymbol{A}\,\boldsymbol{P},\ \ \ 
 \boldsymbol{A},\boldsymbol{B},\boldsymbol{P}\in M_n(C),\ 
-\det\boldsymbol{P}\neq 0\,,\ ` to
+\det\boldsymbol{P}\neq 0\,,\ ` then
 :math:`\ \ w_{\boldsymbol{B}}(\lambda) = w_{\boldsymbol{A}}(\lambda)\,,\ `
-gdzie wielomian charakterystyczny :math:`\ w_{\boldsymbol{X}}(\lambda) = 
-\det(\boldsymbol{X}-\lambda\,\boldsymbol{I}_n)\,,\ `
-:math:`\boldsymbol{X} = \boldsymbol{A},\,\boldsymbol{B}\,;\ \ 
-\boldsymbol{I}_n\ -\ ` macierz jednostkowa stopnia :math:`n`.
+where :math:`\ w_{\boldsymbol{X}}(\lambda) = 
+\det(\boldsymbol{X}-\lambda\,\boldsymbol{I}_n)\,` with
+:math:`\ \boldsymbol{I}_n\ ` an identity matrix of size :math:`n`
+denotes a characteristic polynomial
+of matrix :math:`\boldsymbol{X} = \boldsymbol{A},\,\boldsymbol{B}\,.` 
 
-**Dowód** opiera się na twierdzeniu Cauchy'ego o wyznaczniku iloczynu macierzy:
+**Proof** bases on Cauchy's theorem on determinant of a product of matrices:
 
 .. math::
    
@@ -52,19 +53,17 @@ gdzie wielomian charakterystyczny :math:`\ w_{\boldsymbol{X}}(\lambda) =
 .. **Wniosek.** Macierze podobne mają takie same wartości własne, 
    o takich samych krotnościach algebraicznych.
 
-**Wniosek.** Macierze podobne mają taki sam zbiór wartości własnych.
-Odpowiednie wartości własne mają takie same krotności algebraiczne.
+**Corollary.** Similar matrices have the same set of eigenvalues.
+The corresponding eigenvalues have the same algebraic multiplicities.
 
-**Twierdzenie 5.** :math:`\\`
-Odpowiednie wartości własne macierzy podobnych 
-mają tę samą krotność geometryczną.
+**Theorem 5.** :math:`\\`
+The corresponding eigenvalues of similar matrices have the same geometric multilplicity.
 
-**Dowód.** :math:`\\`
-Niech :math:`\ \lambda\in C\ ` będzie wartością własną macierzy 
-:math:`\ \boldsymbol{A}\in M_n(C)\ ` o krotności geometrycznej :math:`\,k`.
-Istnieje więc :math:`\,k\,` liniowo niezależnych wektorów własnych
-:math:`\ \boldsymbol{x}_i\,` macierzy :math:`\ \boldsymbol{A}\ `
-dla tej wartości:
+**Proof.** :math:`\\`
+Let :math:`\ \lambda\in C\ ` be an eigenvalue of the matrix
+:math:`\ \boldsymbol{A}\in M_n(C)\ ` with  geometric mutliplicity :math:`\,k`.
+Then this eigenvalue is associated with :math:`\,k\,` linearly independent eigenvectors
+:math:`\ \boldsymbol{x}_i\,` of the matrix :math:`\ \boldsymbol{A}:`
 
 .. math::
    :label: condition
@@ -75,11 +74,11 @@ dla tej wartości:
    \sum_{i=1}^k\,\alpha_i\,\boldsymbol{x}_i\ =\ \boldsymbol{0}
    \quad\Rightarrow\quad\alpha_i=0,\ \ i=1,2,\ldots,k\,.
 
-Niech :math:`\ \boldsymbol{B}\,=\,
+Let :math:`\ \boldsymbol{B}\,=\,
 \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P},\ `
 :math:`\ \boldsymbol{y}_i\,=\,\boldsymbol{P}^{-1}\,\boldsymbol{x}_i,\ \ 
 i=1,2,\ldots,k\,,\ ` :math:`\ \boldsymbol{P}\in M_n(C),\,
-\det{\boldsymbol{P}}\neq 0.\ ` Wtedy
+\det{\boldsymbol{P}}\neq 0.\ ` Then
 
 .. math::
 
@@ -109,7 +108,8 @@ i=1,2,\ldots,k\,,\ ` :math:`\ \boldsymbol{P}\in M_n(C),\,
    \quad\Rightarrow\quad
    \alpha_i=0,\ \ i=1,2,\ldots,k.
 
-A zatem, w analogii do :eq:`condition`, spełnione są warunki
+Hence, the matrix :math:`\ \boldsymbol{B}\ ` satisfies the conditions 
+analogous to :eq:`condition`:
 
 .. math::
    
@@ -119,37 +119,36 @@ A zatem, w analogii do :eq:`condition`, spełnione są warunki
    \sum_{i=1}^k\,\alpha_i\,\boldsymbol{y}_i\ =\ \boldsymbol{0}
    \quad\Rightarrow\quad\alpha_i=0,\ \ i=1,2,\ldots,k\,,
 
-co oznacza, że :math:`\ \lambda\ ` jest wartością własną macierzy
-:math:`\ \boldsymbol{B}\ ` o tej samej 
-(co dla macierzy :math:`\,\boldsymbol{A})` krotności geometrycznej 
+which means that :math:`\ \lambda\ ` is an eigenvalue of the matrix
+:math:`\ \boldsymbol{B}\ ` with the same 
+(as the matrix :math:`\,\boldsymbol{A})` geometric multiplicity 
 :math:`\,k`.
 
-**Twierdzenie 6.** :math:`\\`
-Dwie macierze podobne mają ten sam wyznacznik i ślad oraz są tego samego rzędu.
-
-Dokładnie, jeżeli :math:`\ \boldsymbol{B}\,=\,
+**Theorem 6.** :math:`\\`
+Similar matrices have the same determinant and trace, and are of the same rank, 
+i.e., if :math:`\ \boldsymbol{B}\,=\,
 \boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P},\ `
 :math:`\boldsymbol{A},\boldsymbol{B},\boldsymbol{P}\in M_n(C),
-\ \det{\boldsymbol{P}}\neq 0,\ \ ` to
+\ \det{\boldsymbol{P}}\neq 0,\ \ ` then
 
 .. math::
    
    \det{\boldsymbol{B}}\,=\det{\boldsymbol{A}},\quad 
    \text{Tr}\,{\boldsymbol{B}}\,=\,\text{Tr}\,{\boldsymbol{A}},\quad
-   \text{rz}\,{\boldsymbol{B}}\,=\,\text{rz}\,{\boldsymbol{A}}\,.
+   \text{rk}\,{\boldsymbol{B}}\,=\,\text{rk}\,{\boldsymbol{A}}\,.
    
-Pierwsze dwie równości wynikają z udowodnionego twierdzenia o równości 
-wielomianów charakterystycznych macierzy podobnych. 
-Mianowicie, :math:`\ \det{\boldsymbol{A}},\,\det{\boldsymbol{B}}\ `
-są wolnymi wyrazami (współczynnikami przy :math:`\ \lambda^0`), :math:`\ ` 
-a :math:`\ \text{Tr}\,\boldsymbol{A},\,\text{Tr}\,\boldsymbol{B}\ -\ ` 
-współczynnikami przy potędze :math:`\ \lambda^{(n-1)}\ ` w wielomianach charakterystycznych macierzy :math:`\ \boldsymbol{A},\,\boldsymbol{B}`.
-Równość wielomianów implikuje równość współczynników przy tych samych 
-potęgach :math:`\ \lambda.`
+First two equalities follow from a previous theorem on equality of 
+characteristic polynomials of similar matrices. 
+Namely, :math:`\ \det{\boldsymbol{A}},\,\det{\boldsymbol{B}}\ `
+are constant terms (coefficients of :math:`\ \lambda^0`), :math:`\ ` 
+and :math:`\ \text{Tr}\,\boldsymbol{A},\,\text{Tr}\,\boldsymbol{B}\ ` 
+are coefficients of the term :math:`\ \lambda^{(n-1)}\ ` in 
+characteristic polynomials of matrices :math:`\ \boldsymbol{A},\,\boldsymbol{B}`.
+Equality of polynomials implies equality of the coefficients of the 
+terms having the same power :math:`\ \lambda.`
 
-Związki te można też udowodnić bezpośrednio w oparciu o własności
-wyznacznika i śladu macierzy. Na podstawie twierdzenia Cauchy'ego
-o wyznaczniku iloczynu macierzy mamy
+These relations may be also proved directly from properties of determinant and trace of a matrix.
+Cauchy's theorem on determinant of a product of matrices implies that
 
 .. math::
    
@@ -166,7 +165,7 @@ o wyznaczniku iloczynu macierzy mamy
    \det{\boldsymbol{A}}\ \cdot\ 
    \det{\boldsymbol{P}}\ =\ \det{\boldsymbol{A}}\,,
 
-a przestawiając cyklicznie czynniki pod symbolem śladu otrzymujemy
+and reordering cyclicly the factors under the trace symbol, we obtain 
 
 .. math::
    
@@ -175,15 +174,15 @@ a przestawiając cyklicznie czynniki pod symbolem śladu otrzymujemy
    \text{Tr}\,(\boldsymbol{A}\,\boldsymbol{P}\,\boldsymbol{P}^{-1})\ =\ 
    \text{Tr}\,\boldsymbol{A}\,.
 
-Warunek równości rzędów macierzy podobnych wynika stąd, że pomnożenie danej
-macierzy, z lewej bądź z prawej strony, przez nieosobliwą macierz kwadratową
-nie zmienia jej rzędu:
+Equality of ranks of similar matrices follows from the fact that multiplication
+of a given matrix by a square non-degenerate matrix (on the left or on the right) 
+does not change its rank:
 
 .. math::
-   \text{rz}\,\boldsymbol{A}\ =\ 
-   \text{rz}\,(\boldsymbol{A}\,\boldsymbol{P})\ =\ 
-   \text{rz}\,(\boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P})\ =\ 
-   \text{rz}\,{\boldsymbol{B}}\,.
+   \text{rk}\,\boldsymbol{A}\ =\ 
+   \text{rk}\,(\boldsymbol{A}\,\boldsymbol{P})\ =\ 
+   \text{rk}\,(\boldsymbol{P}^{-1}\boldsymbol{A}\,\boldsymbol{P})\ =\ 
+   \text{rk}\,{\boldsymbol{B}}\,.
 
 .. .. math::
    
