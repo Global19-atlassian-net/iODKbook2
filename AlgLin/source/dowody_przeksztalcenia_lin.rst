@@ -6,7 +6,7 @@ Linear Transformations
    
    Let :math:`\,V\ ` and :math:`\,W\ ` be vector spaces over a field 
    :math:`\,K,\ \ F\in\text{Hom}(V,W).` :math:`\\`
-   Transformation :math:`\,F\ ` is an injective mapping if and only if 
+   The transformation :math:`\,F\ ` is an injective mapping if and only if 
    
    .. math::
       
@@ -15,7 +15,7 @@ Linear Transformations
 **Proof and discussion.**
 
 A tranformation :math:`\;F\;` is injective :math:`\,` 
-if different arguments correspond to different images:
+if distinct arguments are mapped to distinct images:
 
 .. math::
    
@@ -33,11 +33,11 @@ if different arguments correspond to different images:
 
 .. :math:`\;`
 
-Image o the space :math:`\;V\;` under the transformation :math:`\;F\;` may be 
-(as in the diagram above) a properr subset of the space 
+Image of the space :math:`\;V\;` under the transformation :math:`\;F\;` may be 
+(as in the diagram above) a proper subset of the space 
 :math:`\;W:\ \ \text{Im}\,F\equiv F(V)\subsetneq W\,,\ `
 but each element :math:`\;w\in\text{Im}\,F\ ` corresponds to exactly 
-one element :math:`\;v\in V,\ ` the one whose image is :math:`\;w\.` 
+one element :math:`\;v\in V,\ ` the one whose image is :math:`\;w.` 
 
 .. W szczególności wektor zerowy :math:`\;\theta_W\ ` jest obrazem
    tylko wektora zerowego :math:`\;\theta_V.`
@@ -50,7 +50,7 @@ Kernel of the transformation :math:`\;F\in\text{Hom}(V,W)\ ` is by definition a 
 
 :math:`\;\Rightarrow\,:\ ` Assume that :math:`\;F\ ` is injective.
 Then the zero vector :math:`\;\theta_W\ ` of the space :math:`\;W\ ` 
-is an image of only the zero wector :math:`\;\theta_V,\ ` which means 
+is an image only of the zero wector :math:`\;\theta_V,\ ` which means 
 that :math:`\ \,\text{Ker}\,F=\{\,\theta_V\}\ ` and :math:`\ \text{def}\,F=0\,.`
 
 :math:`\;\Leftarrow\,:\ ` Assume that :math:`\;F\ ` is not injective. :math:`\\`
@@ -142,9 +142,9 @@ with basis :math:`\,\mathcal{B}=(v_1,\,v_2,\,\dots,\,v_n).\ ` The mapping
 which transforms a vector :math:`\,x\ ` into a column of coordinates of this vector in basis :math:`\,\mathcal{B}\ ` is an isomorphism of the space
 :math:`\,V\ ` onto the space :math:`\,K^n,\ ` and thus it is injective. Hence,
 :math:`\,I_{\mathcal{B}}\ ` preserves linear independence of vectors.
-The same property holds for the inverse transformation, whcih is also an isomorphism. 
+The same property holds for the inverse transformation, which is also an isomorphism. 
 
-Consider a set :math:`\,(x_1,\,x_2,\,\dots,\,x_r),\ ` of vectors, where
+Consider a set :math:`\,(x_1,\,x_2,\,\dots,\,x_r)\ ` of vectors, where
 
 .. math::
    
@@ -216,7 +216,7 @@ If :math:`\,r=n,\ ` then the columns of coordinates form a square matrix
    [\,I_{\mathcal{B}}(x_1)\,|\,I_{\mathcal{B}}(x_2)\,|\,\dots\,|\,I_{\mathcal{B}}(x_n)\,]\,.
 
 An element :math:`\,a_{ij}\ ` of this matrix is the :math:`\,i`-th coordinate of the :math:`\,j`-th vector from the set :math:`\,(x_1,\,x_2,\,\dots,\,x_n).\ \\` 
-Properties of a determinant imply
+Properties of determinant imply
 
 .. math::
    
@@ -236,7 +236,7 @@ Properties of a determinant imply
    is non-zero.   
 
 Taking into account that in an :math:`\,n`-dimensional vector space every set of 
-:math:`\,n\ ` linearly independent vectors comprises a basis :math:`\,` 
+:math:`\,n\ ` linearly independent vectors comprises a basis, :math:`\,` 
 we may formulate
 
 .. admonition:: Corollary 3.
