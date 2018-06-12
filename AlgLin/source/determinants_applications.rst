@@ -2,11 +2,15 @@
 Applications of Determinants
 ----------------------------
 
+.. _twtest:
+
 Examination of the Linear Dependence of Vectors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 .. admonition:: Theorem 5. :math:`\\`
    
+
    The determinant of a matrix vanishes if, and only if,
    its columns are linearly dependent.
 

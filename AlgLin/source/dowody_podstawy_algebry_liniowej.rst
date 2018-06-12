@@ -75,10 +75,20 @@ a homogeneous system of :math:`\,n\,` linear equations
 with :math:`\,p\,` unknowns :math:`\ c_1,\,c_2,\,\ldots,\,c_p\,,\ `
 where the number of equations is smaller than the number of unknowns.
 
-Such a system has non-zero solutions. Indeed, if we solve this system by the Gauss elimination method,
-we perform elementary operations on rows of the coefficient matrix in order to bring it to the reduced row echelon form. Then the unknowns corresponding to the columns without leading unities are taken as parameters on which the other (i.e. corresponding to the columns with leading unities) unknowns depend.
-The number of parameters is equal to a difference between the number of unknowns and the number of leading unities, and the second number (equal to the rank of the coefficient matrix) is not greater than the number of equations. If there are more unknowns than the number of equations, then the number of parameters is positive, and that is equivalent to the existence of non-zero solutions. 
- :math:`\\`
+Such a system has non-zero solutions. Indeed, if we solve this system
+by the Gauss elimination method, we perform elementary operations on
+rows of the coefficient matrix in order to bring it to the reduced row
+echelon form. Then the unknowns corresponding to the columns without
+leading unities are taken as parameters on which the other
+(i.e. corresponding to the columns with leading unities) unknowns
+depend.
+
+The number of parameters is equal to a difference between the number
+of unknowns and the number of leading unities, and the second number
+(equal to the rank of the coefficient matrix) is not greater than the
+number of equations. If there are more unknowns than the number of
+equations, then the number of parameters is positive, and that is
+equivalent to the existence of non-zero solutions. 
 
 .. admonition:: Corollary 1.
    

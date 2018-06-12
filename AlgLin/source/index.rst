@@ -94,6 +94,7 @@ Determinants
    determinants_permutation-expansion
    determinants_practical-calculation
    determinants_applications
+   operations_app_Hill_cipher
    determinants_problems
 
 Matrix Decompositions
@@ -176,6 +177,8 @@ Eigenvalues and Eigenvectors
    problem_wlasny_definicja
    problem_wlasny_przyklady
    problem_wlasny_rownania_rozniczkowe
+   problem_wlasny_Google
+   problem_wlasny_zadania
 
 Unitary Spaces
 ==============

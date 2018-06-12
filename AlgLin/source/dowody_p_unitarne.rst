@@ -2,31 +2,30 @@
 Unitary Spaces
 --------------
 
-.. admonition:: Twierdzenie 1.
+.. admonition:: Theorem 1.
    
-   Nierówność Schwarza w unitarnej przestrzeni :math:`\,V(C):`
+   Schwarz inequality in a unitary space :math:`\,V(C):`
    
    .. math::
       
       |\,\langle x,y\rangle\,|^2\ \ \leq\ \ 
       \langle x,x\rangle\,\langle y,y\rangle\,,\qquad x,y\in V\,,
    
-   przechodzi w równość wtedy i tylko wtedy, :math:`\,`
-   gdy wektory :math:`\,x,y\ ` są liniowo zależne:
+   becomes equality if and only if :math:`\,`
+   the vectors :math:`\,x,y\ ` are linearly dependent:
    
    .. math::
    
       |\,\langle x,y\rangle\,|^2\ \,=\ \,\langle x,x\rangle\,\langle y,y\rangle
       \qquad\Leftrightarrow\qquad
-      (x,y)\ \ -\ \ \text{układ liniowo zależny}\,.
+      x,y\ \ \text{linearly dependent}\,.
 
-**Dowód.**
+**Proof.**
 
-:math:`\ \Rightarrow\,:\ ` Załóżmy, że wektory :math:`\,x,y\ ` są liniowo niezależne. 
+:math:`\ \Rightarrow\,:\ ` Assume that vectors :math:`\,x,y\ ` are linearly independent. 
 
-Wtedy :math:`\ y\neq\theta,\ ` a ponadto (ponieważ każda nietrywialna kombinacja liniowa 
-wektorów liniowo niezależnych jest różna od wektora zerowego)  
-dla dowolnego :math:`\,\alpha\in C:`
+Then :math:`\ y\neq\theta,\ ` and moreover (since every non-trivial linear combination of linearly independent vectors is a non-zero vector)  
+for every :math:`\,\alpha\in C:`
 
 .. math::
    
@@ -39,36 +38,35 @@ dla dowolnego :math:`\,\alpha\in C:`
    :math:`\ \ \alpha\ =\ \displaystyle\frac{(x,y)^*}{(y,y)}\,,\ `
    dochodzimy do ostrej nierówności
 
-Podstawiając, jak w dowodzie nierówności Schwarza:
-:math:`\ \,\alpha\ =\ 
-\displaystyle\frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ ,\ ` otrzymujemy
+If we take :math:`\ \,\alpha\ =\ 
+\displaystyle\frac{\langle x,y\rangle^*}{\langle y,y\rangle}\ ` as in the proof of Schwarz inequality, we obtain 
 
 .. math::
    
    \langle x,x\rangle\,\langle y,y\rangle\ \ >\ \ |\,\langle x,y\rangle\,|^2\,.
 
-Pokazaliśmy więc, że
+That is, we get the implication
 
 .. math::
    
-   x,y\ \ \text{są liniowo niezależne}
+   x,y\ \ \text{linearly independent}
    \qquad\Rightarrow\qquad
    |\,\langle x,y\rangle\,|^2\ \ \neq\ \ \langle x,x\rangle\,\langle y,y\rangle\,,
 
-co przez kontrapozycję jest równoważne implikacji
+which by contraposition is equivalent to
 
 .. math::
    
    |\,\langle x,y\rangle\,|^2\ \ =\ \ \langle x,x\rangle\,\langle y,y\rangle
    \qquad\Rightarrow\qquad
-   x,y\ \ \text{są liniowo zależne}\,.
+   x,y\ \ \text{linearly dependent}\,.
 
-:math:`\ \Leftarrow\,:\ ` Zakładamy, że wektory :math:`\,x,y\ ` są liniowo zależne. 
+:math:`\ \Leftarrow\,:\ ` Assume that vectors :math:`\,x,y\ ` are linearly dependent. 
 
-Wtedy :math:`\ \,y=\alpha\,x\ \ \text{lub}\ \ \,x=\beta\,y\ \,` dla pewnych 
+Then :math:`\ \,y=\alpha\,x\ ` or :math:`\ \,x=\beta\,y\ \,` for some 
 :math:`\ \alpha,\beta\in C.`
 
-W pierwszym przypadku
+In the first case:
 
 .. math::
    
@@ -79,10 +77,10 @@ W pierwszym przypadku
    \langle x,x\rangle\,\langle y,y\rangle\ \,=\ \,
    \langle x,x\rangle\,\langle\alpha\,x,\,\alpha\,x\rangle\ \,=\ \,
    \langle x,x\rangle\ \alpha^*\alpha\,\langle x,x\rangle\ \,=\ \,
-   |\alpha|^2\ \langle x,x\rangle^2\,.
+   |\alpha|^2\ \langle x,x\rangle^2\,,
    \end{array}
 
-W drugim przypadku
+an in the second one:
 
 .. math::
    
@@ -97,22 +95,22 @@ W drugim przypadku
    |\beta|^2\ \langle y,y\rangle^2\,.
    \end{array}
 
-W obydwu sytuacjach 
+Hence, in both cases
 :math:`\ \ |\,\langle x,y\rangle\,|^2\ \,=\ \,\langle x,x\rangle\,\langle y,y\rangle\,.`
 
-W ten sposób stwierdziliśmy, że
+In this way we proved the remaining implication
 
 .. math::
    
-   x,y\ \ \text{są liniowo zależne}
+   x,y\ \ \text{linearly dependent}
    \qquad\Rightarrow\qquad
    |\,\langle x,y\rangle\,|^2\ \ =\ \ \langle x,x\rangle\,\langle y,y\rangle\,.
    
    \;
 
-Lemat 1. przedstawia warunki konieczne i wystarczające 
-dla *operatora zerowego* :math:`\,\mathcal{O},` :math:`\\` 
-zdefiniowanego przez warunek :math:`\ \mathcal{O}\,x=\theta.`
+Lemma 1. presents necessary and sufficient conditions 
+for a linear operator to be the *zero operator* :math:`\,\mathcal{O},` :math:`\\` 
+which is defined as :math:`\ \mathcal{O}\,x=\theta.`
 
 .. .. math::
    
@@ -120,52 +118,52 @@ zdefiniowanego przez warunek :math:`\ \mathcal{O}\,x=\theta.`
    
 .. admonition:: Lemat 1. :math:`\\`
    
-   Dany operator liniowy  :math:`\ F\in\text{End}(V)\,,\ V=V(K)\,,\ K\in\{R,C\}\,.\ ` :math:`\\`
+   Let :math:`\ F\in\text{End}(V)\,` be a linear operator defined on the space :math:`\ V=V(K)\,,\ K\in\{R,C\}\,.\ ` :math:`\\`
    
-   0. Jeżeli :math:`\ F\ ` jest określony na przestrzeni unitarnej :math:`\,V(C)\ ` :math:`\\`
-      albo euklidesowej :math:`\,V(R)\,,\ ` to
+   0. If :math:`\ F\ ` is defined on a unitary space :math:`\,V(C)\ ` :math:`\\`
+      or a Euclidean space :math:`\,V(R)\,,\ ` then
       
       .. math::
          
          F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
-         \langle\,x,Fy\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x,y\in V\,.
+         \langle\,x,Fy\,\rangle\,=\,0\quad\text{for all}\ \ x,y\in V\,.
 
-   1. Jeżeli :math:`\ F\ ` jest operatorem samosprzężonym: :math:`\ F^+=\,F\,,\ ` :math:`\\`
-      określonym na przestrzeni euklidesowej :math:`\,V(R),\ `  to
+   1. If :math:`\ F\ ` is a Hermitian operator: :math:`\ F^+=\,F\,,\ ` :math:`\\`
+      defined on a Euclidean space :math:`\,V(R),\ `  then
       
       .. math::
          
          F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
-         \langle\,x,Fx\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V\,.
+         \langle\,x,Fx\,\rangle\,=\,0\quad\text{for all}\ \ x\in V\,.
 
-   2. Jeżeli :math:`\ F\ ` jest określony na przestrzeni unitarnej :math:`\,V(C)\,,\ ` to
+   2. If :math:`\ F\ ` is defined on a unitary space :math:`\,V(C)\,,\ ` then
       
       .. math::
          
          F\ =\ \mathcal{O}\qquad\Leftrightarrow\qquad
-         \langle\,x,Fx\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V\,.
+         \langle\,x,Fx\,\rangle\,=\,0\quad\text{for all}\ \ x\in V\,.
 
-**Dowód.**
+**Proof.**
 
-0. :math:`\Rightarrow\ :\ ` Jeżeli :math:`\ F=\mathcal{O}\,,\ \,` to
+0. :math:`\Rightarrow\ :\ ` If :math:`\ F=\mathcal{O}\,,\ \,` then
    :math:`\ \,\langle\,x,Fy\,\rangle\,=\,
    \langle\,x,\mathcal{O}\,y\,\rangle\,=\,
    \langle\,x,\theta\,\rangle\,=\,0\,.`
    
    :math:`\Leftarrow\ :\ ` 
-   Zakładamy, że :math:`\,\langle\,x,Fy\,\rangle\,=\,0\quad\text{dla wszystkich}\ \ x,y\in V\,.`
+   Assume that :math:`\,\langle\,x,Fy\,\rangle\,=\,0\ ` for all :math:`\ x,y\in V\,.`
 
-   Kładąc :math:`\ x=Fy\ ` mamy :math:`\ \langle\,Fy,Fy\,\rangle=0\,,\ `
-   czyli :math:`\ Fy=\theta\quad\text{dla wszystkich}\ \ y\in V,\ \\` 
-   co oznacza, że :math:`\ F=\mathcal{O}\,.`
+   Then for :math:`\ x=Fy\ ` we have :math:`\ \langle\,Fy,Fy\,\rangle=0\,,\ `
+   and thus :math:`\ Fy=\theta\ ` for all :math:`\ y\in V.\ \\` 
+   This means that :math:`\ F=\mathcal{O}\,.`
 
-1. :math:`\Rightarrow\ :\ ` Dowód jak w punkcie 0.
+1. :math:`\Rightarrow\ :\ ` The same proof as in point 0.
 
    :math:`\Leftarrow\ :\ ` 
-   Zakładamy, że :math:`\ \langle x,Fx\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V(R).`
+   Assume that :math:`\ \langle x,Fx\rangle\,=\,0\ ` for all :math:`\ x\in V(R).`
    
-   Podstawiając :math:`\ \,x\rightarrow x+y\ \,` otrzymamy 
-   :math:`\ \,\langle\,x+y,F(x+y)\,\rangle\,=\,0\,,\ \ x,y\in V\,,\ \ ` czyli
+   In particular, if we put :math:`\ x+y\ ` in place of :math:`\ x\ ,\ ` we obtain 
+   :math:`\ \,\langle\,x+y,F(x+y)\,\rangle\,=\,0\,,\ \ x,y\in V\,,\ \ ` that is
    
    .. math::
       :label: x_F_y
@@ -179,26 +177,26 @@ zdefiniowanego przez warunek :math:`\ \mathcal{O}\,x=\theta.`
       =\ 
       \langle\,x,Fy\,\rangle\,+\,\langle\,y,Fx\,\rangle\,=\,0\,,\quad x,y\in V\,.
 
-   Skoro :math:`\,F\ ` jest operatorem samosprzężonym w przestrzeni rzeczywistej, :math:`\,` to
+   Since :math:`\,F\ ` is a Hermitian operator on a real space, 
    
    .. math::
       :label: y_F_x
       
       \langle\,y,Fx\,\rangle\ =\ \langle\,Fy,x\,\rangle\ =\ \langle\,x,Fy\,\rangle\,.
 
-   Podstawienie :eq:`y_F_x` do :eq:`x_F_y` daje równości
-   :math:`\ \langle\,x,Fy\,\rangle=0\,,\ \ x,y\in V\,,\\`
-   które, :math:`\,` na podstawie punktu 0., :math:`\,` są równoważne warunkowi 
+   Substitution of the equality :eq:`y_F_x` into :eq:`x_F_y` gives
+   :math:`\ \langle\,x,Fy\,\rangle=0\,,\ \ x,y\in V\,,\ \\`
+   which :math:`\,` by the point 0. :math:`\,` is equivalent to  
    :math:`\ F=\mathcal{O}.\\`
 
-2. :math:`\Rightarrow\ :\ ` Dowód jak w punkcie 0.
+2. :math:`\Rightarrow\ :\ ` The same proof as in point 0.
 
    :math:`\Leftarrow\ :\ ` 
-   Zakładamy, że :math:`\ \langle x,Fx\rangle\,=\,0\quad\text{dla wszystkich}\ \ x\in V(C).`
+   Assume that :math:`\ \langle x,Fx\rangle\,=\,0\ ` for all :math:`\ x\in V(C).`
 
-   Podstawiając jak w punkcie 1. kolejno 
-   :math:`\ x\rightarrow x+y\ \,` oraz :math:`\ \,x\rightarrow x+i\,y\,,\ `
-   otrzymujemy
+   We make two substitutions, similar to the one in point  1.:
+   :math:`\ x\rightarrow x+y\ \,` and :math:`\ \,x\rightarrow x+i\,y\,.\ `
+   Then
    
    .. math::
       
@@ -208,55 +206,55 @@ zdefiniowanego przez warunek :math:`\ \mathcal{O}\,x=\theta.`
       \langle\,x,F(iy)\,\rangle\,+\,\langle\,iy,Fx\,\rangle\,=\,0
       \end{array}\right. & \quad x,y\in V\,,
       \\ \\
-      \text{czyli} & \left\{\ \begin{array}{r}
+      \text{and thus} & \left\{\ \begin{array}{r}
       \langle\,x,Fy\,\rangle\,+\,\langle\,y,Fx\,\rangle\,=\,0 \\
       \langle\,x,Fy\,\rangle\,-\,\langle\,y,Fx\,\rangle\,=\,0
       \end{array}\right. & \quad x,y\in V\,.
       \end{array}
    
-   Dodając stronami dwie ostatnie równości stwierdzamy, że
+   Adding the two last equalities we obtain
    :math:`\ \langle\,x,Fy\,\rangle=0\,,\ \ x,y\in V\,,\ ` 
-   skąd :math:`\,F=\mathcal{O}.\,` 
-   W zespolonej przestrzeni :math:`V\,` założenie samosprzężoności (hermitowskości)
-   operatora :math:`\ F\ ` nie było potrzebne. :math:`\\`
+   which means that :math:`\,F=\mathcal{O}.\,` 
+   Note that in a complex space :math:`V\,` the assumption on the 
+   operator :math:`\ F\ ` to be Hermitian is not necessary. :math:`\\`
 
-.. admonition:: Wniosek. :math:`\\`
+.. admonition:: Corollary. :math:`\\`
    
-   Jeżeli jest spełniony jeden z dwóch warunków: :math:`\\`
+   If one of the two following conditions holds: :math:`\\`
    
-   1. :math:`\ F\ \ \text{i}\ \ G\ ` są samosprzężonymi operatorami liniowymi:
+   1. :math:`\ F\ ` and :math:`\ G\ ` are Hermitian linear operators:
       :math:`\ F^+=\,F\,,\ \ G^+=\,G\,,` :math:`\\`
-      określonymi na euklidesowej przestrzeni :math:`\,V(R)\,,` :math:`\\`
+      defined on a Euclidean space :math:`\,V(R)\,,` :math:`\\`
    
-   2. :math:`\ F\ \ \text{i}\ \ G\ ` są operatorami liniowymi
-      określonymi na unitarnej przestrzeni :math:`\,V(C)\,,` :math:`\\`
+   2. :math:`\ F\ ` and :math:`\ G\ ` are linear operators
+      defined on a unitary space :math:`\,V(C)\,,` :math:`\\`
 
-   to :math:`\qquad\quad F\ =\ G\quad\Leftrightarrow\quad
+   then :math:`\qquad\quad F\ =\ G\quad\Leftrightarrow\quad
    \langle\,x,Fx\,\rangle\,=\,\langle\,x,G\,x\,\rangle
-   \quad\text{dla wszystkich}\ \ x\in V\,.`
+   \quad\text{for all}\ \ x\in V\,.`
 
-Rzeczywiście, z warunku :math:`\ \ \langle\,x,Fx\,\rangle=\langle\,x,G\,x\,\rangle
-\ \ \text{dla wszystkich}\ \ x\in V\ \ ` wynika, że :math:`\\ \\` 
-:math:`\ \ \langle\,x,(F-G)\,x\,\rangle\,=\,0\,,\ \ x\in V\,,\ ` przy czym, w przypadku 1.:
-:math:`\ \ (F-G)^+=F^+-G^+=F-G\,.\\ \\` 
-Stąd :math:`\ \ F-G=\mathcal{O}\,,\ \ ` czyli :math:`\ \ F=G.`
+Indeed, if the equality :math:`\ \ \langle\,x,Fx\,\rangle=\langle\,x,G\,x\,\rangle
+\ ` holds for all :math:`\ x\in V\ \ ` then :math:`\\ \\` 
+:math:`\ \ \langle\,x,(F-G)\,x\,\rangle\,=\,0\,,\ \ x\in V\,,\ ` where in case 1.:
+:math:`\ \ (F-G)^+=F^+-G^+=F-G\,.\ \\ \\` 
+Hence :math:`\ \ F-G=\mathcal{O}\,,\ \ ` and thus :math:`\ \ F=G.`
 
-Zapiszemy teraz i udowodnimy ważne kryterium hermitowskości operatora liniowego:
+Now we state and prove an important criterion for a linear operator to be Hermitian:
 
-.. admonition:: Twierdzenie 2. 
+.. admonition:: Theorem 2. 
    
-   Jeżeli :math:`\,F\ ` jest operatorem liniowym 
-   określonym na unitarnej przestrzeni :math:`\,V(C)\,,\ \,` to
+   If :math:`\,F\ ` is a linear operator
+   defined on a unitary space :math:`\,V(C)\,,\ \,` then
    
    .. math::
       
       F=F^+\qquad\Leftrightarrow\qquad
-      \langle\,x,Fx\,\rangle\in R\quad\text{dla wszystkich}\ \ x\in V\,.
+      \langle\,x,Fx\,\rangle\in R\quad\text{for all}\ \ x\in V\,.
 
-**Dowód.** :math:`\,`
-Ponieważ :math:`\ \ \langle\,x,F^+x\,\rangle\ =\ 
+**Proof.** :math:`\,`
+Because :math:`\ \ \langle\,x,F^+x\,\rangle\ =\ 
 \langle\,Fx,x\,\rangle\ =\ \langle\,x,Fx\,\rangle^*\,,\ \ x\in V\,,\ \\`
-to z wniosku do Lematu 1. wynika równoważność następujących warunków: 
+Lemma 1. implies equivalence of the following conditions: 
 
 .. math::
    
@@ -268,49 +266,54 @@ to z wniosku do Lematu 1. wynika równoważność następujących warunków:
 
    \langle\,x,Fx\,\rangle\in R\,,\ \ x\in V\,.
 
-W mechanice kwantowej stany układu kwantowego są reprezentowane przez wektory pewnej
-unitarnej przestrzeni stanów :math:`\,V(C)\,,\ ` natomiast wielkościom fizycznym 
-mierzalnym w układzie odpowiadają operatory liniowe określone na tej przestrzeni.
-Przyjmuje się, że jeżeli :math:`\,\|x\|=1\,,\ ` to wyrażenie :math:`\,\langle\,x,Fx\,\rangle\ `
-przedstawia *wartość średnią* wielkości :math:`\,F\ ` w stanie :math:`\,x.\ `
-Postulat ten ma sens tylko wtedy, gdy to wyrażenie jest rzeczywiste dla każdego
-:math:`\,x\in V.\ ` Warunek taki spełniają tylko operatory hermitowskie,
-tylko one mogą więc reprezentować wielkości fizyczne. :math:`\\`
+In quantum mechanics, the states of quantum system are represented by vectors from certain unitary space  :math:`\,V(C)\ ` of states, and measurable physical quantities of the system correspond to linear 
+operators defined on this space.
+It is assumed that if :math:`\,\|x\|=1\,,\ ` then the expression :math:`\,\langle\,x,Fx\,\rangle\ `
+represents the *mean value* of the quantity :math:`\,F\ ` in the state :math:`\,x.\ `
+This postulate makes sense if and only if the expression takes real values for all
+:math:`\,x\in V.\ ` Such a condition is fulfilled only by Hermitian operators. Hence,
+only these operators can represent physical quantities. :math:`\\`
 
-.. admonition:: Twierdzenie 3.
+.. admonition:: Theorem 3.
    
-   Niech :math:`\,U\,` będzie operatorem liniowym określonym na euklidesowej albo unitarnej 
-   przestrzeni :math:`\,V(K),\ K\in\{R,C\}.\ \,`
-   Wtedy następujące trzy warunki są równoważne:
+   Let :math:`\,U\,` be a linear operator
+   defined on a Euclidean or unitary space :math:`\,V(K),\ K\in\{R,C\}.\ \,`
+   Then the following conditions are equivalent:
    
-   1. :math:`\ U^+U=I\,,\quad\text{gdzie}\ \,I\ \,
-      \text{jest operatorem jednostkowym:}\ \,Ix=x,\ x\in V\,;`
+   1. :math:`\ U^+U=I\,,\ ` where :math:`\,I\ ` is the identity operator:
+      :math:`\ \,Ix=x,\ x\in V\,;`
    
    2. :math:`\ \langle\,Ux,Uy\,\rangle\,=\,\langle x,y\rangle\quad
-      \text{dla dowolnych}\ \,x,y\in V\,;`
+      \text{for all}\ \,x,y\in V\,;`
    
-   3. :math:`\ \|\,Ux\,\|\,=\,\|x\|\quad\text{dla każdego}\ \,x\in V\,.`
+   3. :math:`\ \|\,Ux\,\|\,=\,\|x\|\quad\text{for every}\ \,x\in V\,.`
 
-**Dowód.**
+**Proof.**
+
+Note that 
 
 .. math::
    
    \begin{array}{l}
    U^+U=I\quad\Rightarrow\quad\langle\,Ux,Uy\,\rangle\,=\,
    \langle\,U^+U\,x,y\,\rangle\,=\,\langle\,Ix,y\,\rangle\,=\,
-   \langle x,y\rangle\,,\quad x,y\in V\,;
-   \\ \\
+   \langle x,y\rangle\,,\quad x,y\in V
+   \end{array}
+
+and 
+
+.. math::
+
    \begin{array}{lcl}
    \langle\,Ux,Uy\,\rangle\,=\,\langle x,y\rangle & \quad\Rightarrow & \quad
    \|\,Ux\,\|^{\,2}\,=\,\langle\,Ux,Ux\,\rangle\,=\,\langle x,x\rangle\,=\,\|x\|^2 
    \\ \\
    & \quad\Rightarrow & \quad\|\,Ux\,\|\,=\,\|x\|\,,\quad x\in V\,.
    \end{array}
-   \end{array}
-
-Pokazaliśmy, że :math:`\ \,\text{1.}\,\Rightarrow\,\text{2.}\ \,` 
-oraz że :math:`\ \,\text{2.}\,\Rightarrow\,\text{3.}\ \,`
-Wystarczy teraz stwierdzić, że :math:`\ \,\text{3.}\,\Rightarrow\,\text{1.}`
+   
+This proves the implications :math:`\ \,\text{1.}\,\Rightarrow\,\text{2.}\ \,` 
+and :math:`\ \,\text{2.}\,\Rightarrow\,\text{3.}\ \,`
+Now it remains to show that :math:`\ \,\text{3.}\,\Rightarrow\,\text{1.}`
 
 .. math::
    :nowrap:
@@ -322,10 +325,10 @@ Wystarczy teraz stwierdzić, że :math:`\ \,\text{3.}\,\Rightarrow\,\text{1.}`
    \langle\,x,\,U^+U\,x\,\rangle & = & \langle x,Ix\rangle
    \end{eqnarray*}
 
-Operatory :math:`\ U^+U\ \ \text{i}\ \ I\ ` są samosprzężone: 
-:math:`\ (U^+U)^+=U^+U,\ \ I^+=I.\ ` W tej sytuacji z wniosku do Lematu 1. wynika, 
-że zarówno w euklidesowej (rzeczywistej), jak i w unitarnej (zespolonej)
-przestrzeni :math:`\,V\ ` zachodzi równość :math:`\,U^+U=I,\ ` co należało wykazać.
+The operators :math:`\ U^+U\ \ ` and :math:`\ I\ ` are Hermitian: 
+:math:`\ (U^+U)^+=U^+U,\ \ I^+=I.\ ` Hence, corollary to Lemma 1. implies that both 
+in a Euclidean (real) and unitary (complex)
+space :math:`\,V\ ` the equality :math:`\,U^+U=I\ ` holds.
 
    
    

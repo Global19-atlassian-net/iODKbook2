@@ -443,7 +443,7 @@ we get, by analogy with :eq:`eqn_C1`, :eq:`eqn_C2`:
    \end{array}
 
 The definition :math:`\,` :eq:`rule_col_1` :math:`\,`
-and formula :math:`\,` :eq:`eqn_C3` :math:`\,` which arises therefrom 
+and formula :math:`\,` :eq:`eqn_C3` :math:`\,` which arises from it
 may be restated as
 
 .. admonition:: Rule 1. :math:`\ ` 
@@ -494,7 +494,7 @@ by the :math:`\,j`-th column of matrix :math:`\,\boldsymbol{B}:`
    b_{1j} \\ b_{2j} \\ \ldots \\ b_{pj} 
    \end{array}\right]\,.
 
-We get therefrom the practical recipe for calculating elements of the 
+In this way we get the practical recipe for calculating elements of the 
 matrix product:
 
 .. admonition:: Rule 2. :math:`\ `
