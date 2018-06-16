@@ -186,7 +186,7 @@ combination, :math:`\,` which should equal the column vector of constants
    Using the sliders, set the values of coefficients
    :math:`\ x_1\ ` and :math:`\ x_2\ ` so that the vector
    :math:`\;x_1\ \vec{a}_1 + x_2\ \vec{a}_2\;` (coloured grey)
-   be equal to the vector :math:`\,\vec{b}`.
+   is equal to the vector :math:`\,\vec{b}`.
 
 .. sagecellserver::
 
@@ -307,7 +307,7 @@ of three linear equations in three unknowns in the column form :eq:`col`:
            comp % (3, L[2][0],L[2][1],L[2][2]) + ' $\\ =\\ $ ' +\
            clmn %    (L[3][0],L[3][1],L[3][2])))            
 
-The function has to be called with a list of equations as argument:
+The function has to be called with a list of equations as the argument:
 
 .. sagecellserver::
 

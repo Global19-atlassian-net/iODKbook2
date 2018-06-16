@@ -1,4 +1,4 @@
-Google's Application - PageRank algorithm
+Google's Application - PageRank Algorithm
 -----------------------------------------
 
 A big part of Google's success is its PageRank Algorithm which rates importance of the websites and then presents them accordingly to the user. Quite often most relevant and helpful pages are listed first. It turns out that the reason is yet another disguise of the eigenvector problem. This section is based on an article of Bryan and Leise "The \$25,000,000,000 Eigenvector. The Linear Algebra Behind Google", which is available at https://www.rose-hulman.edu/~bryan/google.html .

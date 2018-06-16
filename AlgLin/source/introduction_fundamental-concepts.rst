@@ -107,6 +107,7 @@ The subspaces are bound by the relations
    L(\vec{v}_1,\vec{v}_2)\,<\,
    L(\vec{v}_1,\vec{v}_2,\vec{v}_3)\,.
 
+
 Linear Dependence and Independence
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

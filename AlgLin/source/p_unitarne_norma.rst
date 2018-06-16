@@ -44,7 +44,7 @@ is called a *normed vector space*.
    x\,=\,\left[\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{array}\right] :\quad
    \|x\|\,=\,\sqrt{\alpha_1^2+\alpha_2^2+\alpha_3^2}\ .`
 
-4. On a vector space of geometric vectors the norm is the legth of a vector.
+4. On a vector space of geometric vectors the norm is the length of a vector.
    If we choose a basis :math:`\,\mathcal{E}=(\vec{e}_1,\vec{e}_2,\vec{e}_3)\,` of three
    mutually perpendicular unit vectors, a norm of the vector
    :math:`\ \vec{a}=\alpha_1\,\vec{e}_1+\alpha_2\,\vec{e}_2+\alpha_3\,\vec{e}_3\ `

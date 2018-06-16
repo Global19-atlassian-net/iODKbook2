@@ -1,13 +1,7 @@
-Application to Hill cipher
+Application to Hill Cipher
 --------------------------
 
-to jest ref  :ref:`twtest` 
-
-
-
-
-This cipher was constructed in 1929 by a mathematician Lester Hill
-[BIB001]_. To describe it concisely, it will be useful to introduce
+This cipher was constructed in 1929 by a mathematician Lester Hill. To describe it concisely, it will be useful to introduce
 two basic notions from cryptography:
 
 
@@ -54,7 +48,7 @@ First we remove the spaces and write the message in terms of numbers. Next, beca
     
 If the number of letters in the plaintext is not divisible by :math:`m,` we complete the last vector with arbitrary numbers, e.g. with :math:`0` as above. 
 
-If the plaintext is long, doing the above substitution by hand may be time consumming and lead to mistakes. It may be better to use SAGE for this purpose:
+If the plaintext is long, doing the above substitution by hand may be time consumming and lead to mistakes. It may be better to use Sage for this purpose:
 
 .. code-block:: python
 
@@ -153,7 +147,7 @@ Now we multiply the above vectors by the matrix :math:`\, K\,` on the right:
     494 & 504 & 600
     \end{array}\right]
     
-Or in SAGE:
+Or in Sage:
 
 .. code-block:: python
 
@@ -175,7 +169,7 @@ To interpret the above vectors again as a text we have to replace each entry wit
     {\tt O\ W\ \ } & & \to & & \left[\right. 494 & 504 & 600 \left.\right] & & \to & & \left[\right.\, 0 & 10 & 20 \left.\right] & &\to & & {\tt A\ K \ C }\\
     \end{array}
     
-Or better in SAGE:
+Or better in Sage:
 
 .. code-block:: python
 
@@ -249,7 +243,7 @@ Because we chose to use an alphabet that consists of :math:`26` letters (and we 
     
     2^{-1}, 4^{-1}, \ldots, 13^{-1},\, \text{etc.}\quad\text{do not exist.} 
     
-These operations can be made easily in SAGE: 
+These operations can be made easily in Sage: 
 
 .. sagecellserver:: 
 
@@ -269,7 +263,7 @@ In fact,
     modulo :math:`N` is a commutative ring with identity, we denote it by :math:`\ \mathbb{Z}_N = (Z_N,\ +_N\,,\ \cdot_N\,)\ ` 
     and call a *ring of integers modulo* :math:`N`. It is a field if and only if :math:`N` is a prime number.
     
-The ring of integers modulo :math:`N` is implemented in SAGE under the name ``Integers(N)``. If we define a matrix over this ring,   all the operations will be naturally made over :math:`\ Z_N\,`. :math:`\,` For example,
+The ring of integers modulo :math:`N` is implemented in Sage under the name ``Integers(N)``. If we define a matrix over this ring,   all the operations will be naturally made over :math:`\ Z_N\,`. :math:`\,` For example,
 
 .. code-block:: python
 
@@ -358,8 +352,6 @@ Exercises
 **Exercise 1.**
 
 You intercepted the message that was encrypted via Hill's cipher with the key matrix of size :math:`3.` Most probably the plaintext starts with :math:`\ {\tt TOGENERAL}\ ` . Find the key matrix and decrypt the rest of the ciphertext: 
+
 :math:`\ {\tt AVQLPGSNJJLYMLQYCTQCUHIQZNTRDJPTPSAJOKDKXTSGZGFPIUANHFDNIHROMZEKKFUMNZDIACYVZHMSSKJRQEW }` .
 
-
-.. [BIB001] Odnośnik dsafa
-   asdfa dfa  asd f
