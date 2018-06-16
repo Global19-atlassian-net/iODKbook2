@@ -236,10 +236,10 @@ The proof of the second part of the proposition goes along similar lines:
    \alpha\cdot\theta\,+\,\alpha\cdot\theta\ \,=\ 
    \,\alpha\cdot(\theta+\theta)\ =\ \alpha\cdot\theta\,,
    
-   [\,\alpha\cdot\theta\,+\,\alpha\cdot\theta\,]\,+\,[\,-(\alpha\cdot\theta)\,]\ \,=\ \,
-   \alpha\cdot\theta\,+\,[\,-(\alpha\cdot\theta)\,]\,,
+   \left[\,\alpha\cdot\theta\,+\,\alpha\cdot\theta\,\right]\,+\,\left[\,-(\alpha\cdot\theta)\,\right]\ \,=\ \,
+   \alpha\cdot\theta\,+\,\left[\,-(\alpha\cdot\theta)\,\right]\,,
 
-   \alpha\cdot\theta\,+\,[\,\alpha\cdot\theta\,-\,\alpha\cdot\theta\,]\ =\ 
+   \alpha\cdot\theta\,+\,\left[\,\alpha\cdot\theta\,-\,\alpha\cdot\theta\,\right]\ =\ 
    \alpha\cdot\theta\,-\,\alpha\cdot\theta\,,
 
    \alpha\cdot\theta\,+\,\theta\ =\ \theta\,,

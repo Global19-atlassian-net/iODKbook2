@@ -1,4 +1,5 @@
 .. -*- coding: utf-8 -*-
+.. _algebra-of-matrices-Sage:
 
 Vectors and Matrices in Sage
 ----------------------------

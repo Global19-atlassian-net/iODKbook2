@@ -46,6 +46,18 @@ and multiplied by scalars :math:`\, c \in K`:
    c\; x_1 \\ c\; x_2 \\ \ldots \\ c\; x_n 
    \end{array}\right]\,.
 
+In Sage it is equally simple: 
+
+.. sagecellserver::
+
+    v = vector([5,8,3])
+    w = vector([1,2,3])
+    c = 10
+    print 'v + w = ', v + w
+    print 'cv =', c*v
+    
+Press **Activate** to see the outcome of the code. You can modify the code yourself too. See what happens if the vectors are of different size. In section :ref:`algebra-of-matrices-Sage` we explain how to indicate the underlying field.
+
 The addition and scalar multiplication of column vectors in :math:`\,K^n\,`
 consist in addition and multiplication of scalars in :math:`\,K.\ `
 On that basis, it's easy to validate the following properties,
@@ -86,11 +98,11 @@ under addition of column vectors.
      the opposite is :math:`\ \,(-\,\boldsymbol{x})\,=\,
      \left[\begin{array}{c}
      -x_{1} \\ -x_{2} \\ \ldots \\ -x_{n} 
-     \end{array}\right]\,.\quad\bullet`
+     \end{array}\right]\,.`
    | :math:`\,` 
 
 Furthermore, since the scalar multiplication of column vectors 
-is distributive, :math:`\\`
+is distributive, 
 both over addition of scalars and over addition of vectors:
 
 .. math::
@@ -110,11 +122,13 @@ and satisfies the compatibility conditions
 
 the set :math:`\ K^n\ ` is a vector space over the field :math:`\,K\,`
 under addition and scalar multiplication of column vectors. 
-:math:`\quad\bullet`
+
 
 Column vectors over the real field :math:`\,R\,` of size two or three
 can be associated with geometric vectors in a plane or in the space, 
-respectively:
+respectively. Namely, if :math:`\ \,\vec{e}_1,\,\vec{e}_2\ \,` or
+:math:`\ \,\vec{e}_1,\,\vec{e}_2\,,\vec{e}_3\ \,` form a basis
+of mutually perpendicular unit vectors, then:
  
 :math:`\quad\boldsymbol{x}\ =\ 
 \left[\begin{array}{c} x_1 \\ x_2 \end{array}\right]
@@ -126,10 +140,6 @@ respectively:
 \quad\simeq\quad
 \vec{v}\ =\ x_1\,\vec{e}_1 + x_2\,\vec{e}_2 + x_3\,\vec{e}_3\,.`
 
-Here the vectors :math:`\ \,\vec{e}_1,\,\vec{e}_2\ \,` or
-:math:`\ \,\vec{e}_1,\,\vec{e}_2\,,\vec{e}_3\ \,` form a basis
-of mutually perpendicular unit vectors.
-
 The relation :math:`\ \simeq\ ` between the column and geometric vectors
 has the property that
 
@@ -139,7 +149,7 @@ if
 
 then 
 :math:`\qquad\ \boldsymbol{x}+\boldsymbol{y}\ \,\simeq\ \,\vec{v}+\vec{w}\qquad`
-and :math:`\qquad c\ \boldsymbol{x}\ \simeq\ c\ \vec{v}\,,\quad\forall\ c\in R.`
+and :math:`\qquad c\ \boldsymbol{x}\ \simeq\ c\ \vec{v}\ ` for all :math:`\ c\in R.`
 
 A bijective correspondence between two vector spaces over the same field 
 (geometric vectors also form a real vector space), 
