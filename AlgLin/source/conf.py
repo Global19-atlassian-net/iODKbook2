@@ -43,7 +43,8 @@ extensions = [
 	'sphinx.ext.ifconfig',
 	'sphinx.ext.mathjax',
 	'sphinx.ext.viewcode',
-	'icsecontrib.sagecellserver']
+        'sphinx-sagecell-ext.sagecell' ]
+#	'icsecontrib.sagecellserver'
 #'sphinx.ext.intersphinx',
 
 # Add any paths that contain templates here, relative to this directory.
