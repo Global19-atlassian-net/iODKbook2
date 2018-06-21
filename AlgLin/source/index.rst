@@ -16,8 +16,9 @@ Introduction
    introduction_algebraic-structures
    introduction_fundamental-concepts
    introduction_permutations
-   introduction_appendices
    introduction_references
+..   introduction_appendices
+   
 
 A Primer on Linear Systems
 ==========================

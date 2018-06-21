@@ -342,7 +342,17 @@ Consider a web from Example 3. and take :math:`\ m=0.15\,.` Then the matrix :mat
     [0.0250 0.0250 0.0250 0.0250 0.0250  0.875]
     [0.0250 0.0250 0.0250 0.0250  0.875 0.0250]
     
-Unfortunately, because of big sizes of entries we cannot immediately determine the eigenvector: (try yourself different options)
+We can easily in SageMath determine the eigenvector corresponding to eigenvalue 1. 
+
+.. note:: 
+
+   It is important to change ring of the matrix :math:`M` to RDF or CDF, since the computations might cause problems in exact arithmetics.
+   
+
+.. admonition:: Experiment with Sage!
+
+	Run the code below to compute the eigenvector for eigenvalue 1.
+   
 
 .. sagecellserver::
 
@@ -353,127 +363,16 @@ Unfortunately, because of big sizes of entries we cannot immediately determine t
     l=1-m
     S=ones_matrix(QQ,n)/n # the all ones matrix multiplied by 1/n
     M = l*A + m*S
-    Mn=M-identity_matrix(n)
-    Mn.rref()
-
-However, we can perform the Gauss-Jordan elimination ourselves. Well, with help of Sage:
-
-.. code-block:: python
-
-    sage: var('m')
-    sage: A=matrix(QQ,[[0, 0, 1/3, 1/2, 0, 0], [1/2, 0, 1/3, 1/2, 0, 0], [0, 1, 0, 0, 0, 0], [1/2, 0, 1/3, 0, 0, 0], 
-    [0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 0]])
-    sage: n=A.ncols()
-    sage: S=ones_matrix(QQ,n)/n # the all ones matrix multiplied by 1/n
-    sage: M=(1-m)*A+m*S
-    sage: Mn=M-identity_matrix(n)
-    sage: Mn.add_multiple_of_row(0,1,1)
-    sage: Mn.add_multiple_of_row(0,2,1)
-    sage: Mn.add_multiple_of_row(0,3,1)
-    sage: Mn.add_multiple_of_row(0,4,1)
-    sage: Mn.add_multiple_of_row(0,5,1)
-    sage: Mn.add_multiple_of_row(1,3,-1)
-    sage: Mn.add_multiple_of_row(5,4,-1)
-    sage: Mn.rescale_row(2,6/m)
-    sage: Mn.rescale_row(4,6/m)
-    sage: Mn.rescale_row(5,1/(2-m))
-    sage: Mn.rescale_row(1,-1)
-    sage: Mn.swap_rows(1,4)
-    sage: Mn.swap_rows(2,4)
-    sage: Mn.add_multiple_of_row(1,2,-1)
-    sage: Mn.add_multiple_of_row(1,5,(6-m)/m)
-    sage: Mn.add_multiple_of_row(3,2,-1/6*m)
-    sage: Mn.add_multiple_of_row(3,5,-1/6*m)
-    sage: Mn.rescale_row(4,m)
-    sage: Mn.add_multiple_of_row(3,1,1/3*m - 1/2)
-    sage: Mn.add_multiple_of_row(4,1,-m)
-    sage: Mn.add_multiple_of_row(4,2,5*m-6)
-    sage: Mn.rescale_row(4,-1/6)
-    sage: Mn.add_multiple_of_row(1,4,-1)
-    sage: Mn.add_multiple_of_row(3,4,-1/6*m + 1/6)
-    sage: Mn.add_multiple_of_row(1,5,-m/6)
-    sage: Mn.add_multiple_of_row(4,5,m/6)
-    sage: Mn
-
-    [ 0    0   0               0                                         0                      0 ]
-    [ 1    0   0    1/12*(5*m - 6)*(m - 3) + 1/12*(m - 5)*m - 1/3*m + 5/2      0
-                   1/6*m*((5*m - 6)/m - (m - 6)/m) + 1/3*m - (5*m - 6)/m + (m - 6)/m]
-    [ 0    1   0          1/2*m - 3/2                                    0                      0 ]
-    [ 0    0   0
-    1/72*((5*m - 6)*(m - 3) + (m - 5)*m + 2*m)*(m - 1) - 1/12*(2*m - 3)*(m - 5) - 1/12*(m - 3)*m + 1/6*m - 1
-                                                                  1/36*(m - 1)*m
-    1/36*(m*((5*m - 6)/m - (m - 6)/m) + m)*(m - 1) - 1/6*(2*m - 3)*((5*m - 6)/m - (m - 6)/m) + 1/3*m]
-    [ 0    0    1   -1/12*(5*m - 6)*(m - 3) - 1/12*(m - 5)*m - 1/6*m     0   -1/6*m*((5*m - 6)/m - (m - 6)/m) - 1/3*m]
-    [ 0    0    0              0                                         1                     -1 ]
-
-Now we evaluate this at :math:`\ m=0.15\ `:
-
-.. code-block:: python
-
-    sage: m=0.15
-    sage: K=matrix(QQ,[[0, 0, 0, 0, 0, 0], [1, 0, 0, 1/12*(5*m - 6)*(m - 3) + 1/12*(m - 5)*m - 1/3*m + 5/2, 0, 
-    1/6*m*((5*m - 6)/m - (m - 6)/m) + 1/3*m - (5*m - 6)/m + (m - 6)/m], [0, 1, 0, 1/2*m - 3/2, 0, 0],
-    [0, 0, 0, 1/72*((5*m - 6)*(m - 3) + (m - 5)*m + 2*m)*(m - 1) - 1/12*(2*m - 3)*(m - 5) - 1/12*(m - 3)*m + 1/6*m - 1,
-    1/36*(m - 1)*m, 1/36*(m*((5*m - 6)/m - (m - 6)/m) + m)*(m - 1) - 1/6*(2*m - 3)*((5*m - 6)/m - (m - 6)/m) + 1/3*m],
-    [0, 0, 1, -1/12*(5*m - 6)*(m - 3) - 1/12*(m - 5)*m - 1/6*m, 0, -1/6*m*((5*m - 6)/m - (m - 6)/m) - 1/3*m], 
-    [0 , 0, 0, 0, 1, -1]])
-    print K
-  
-    [ 0      0       0            0                0                      0               ]
-    [ 1      0       0        2909/800             0      -117154449766073/30429727211967 ]
-    [ 0      1       0         -57/40              0                      0               ]
-    [ 0      0       0       -70471/32000       -17/4800              1759/960            ]
-    [ 0      0       1        -969/800             0                    -3/20             ]
-    [ 0      0       0            0                1                     -1               ]
-    
-Hence 
-
-.. math::
-
-    \begin{eqnarray*}
-    x_5 & = & x_6\\
-    x_3 & = & 969/800*x_4+3/20*x_6  \\
-    -70471/32000*x_4 & = & (17/4800-1759/960)*x_6\\
-    x_2 & = & 57/40*x_4\\
-    x_1 & = & -2909/800 *x_4+117154449766073/30429727211967*x_6  
-    \end{eqnarray*}
-
-and thus, putting for example :math:`\ x_6=1\ `,    
-
-.. code-block:: python
-
-    sage: x_6=1
-    sage: x_5=x_6
-    sage: x_4=-(17/4800-1759/960)*x_6*32000/70471
-    sage: x_3=969/800*x_4+3/20*x_6              
-    sage: x_2=57/40*x_4
-    sage: x_1=-2909/800 *x_4+117154449766073/30429727211967*x_6  
-    sage: v=vector([x_1, x_2, x_3, x_4, x_5, x_6])
-    sage: print v; '\n' 
-    sage: print (M-identity_matrix(n))*v # to check whether v is indeed an eigenvector
-    
-    (1874471196257170909/2257277164583712060, 4389/3709, 4287/3709, 3080/3709, 1, 1)
-    
-    (-1.65839564303383e-15, 6.73072708679001e-16, 1.45716771982052e-16, 8.39606162372775e-16, 1.11022302462516e-16,
-    1.11022302462516e-16)
-    
-where the notation :math:`\ Xe-n\ ` means :math:`\ X\cdot 10^{-n}\ `. Therefore we may assume that indeed :math:`\ (M-identity\_matrix(n))*v = 0\ `. 
-
-In this way, 
-
-.. math::
-
-    V_1(A)=L(v),\quad \text{where}\quad 
-    v=(1874471196257170909/2257277164583712060, 4389/3709, 4287/3709, 3080/3709, 1, 1)
-    
-Furthermore, since in a decimal form
-
-.. code-block:: python
-
-    sage: v=vector(RR,v)
-    sage: print 'v =', v
-    
-    v = (0.830412510110544, 1.18333782690752, 1.15583715287139, 0.830412510110542, 1.00000000000000, 1.00000000000000)
+	
+    for e,evs,k in M.change_ring(RDF).eigenvectors_right():
+	if abs(e-1)<1e-6:
+	    if k==1:
+	        ev = evs[0]
+	        print(ev)
+	    else:
+	        print("k not 0",k)
+	
+	
 
 we see that the most important website is the second one, and just after it is the third one, which agrees to some extent with both normalised and basic approach.
 
