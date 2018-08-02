@@ -1,5 +1,7 @@
 .. -*- coding: utf-8 -*-
 
+.. _`Example with Discussion`:
+
 Example with Discussion
 -----------------------
 

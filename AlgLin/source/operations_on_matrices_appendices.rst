@@ -260,11 +260,11 @@ Thus
 
 .. math::
    
-   [\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,]\ \ \boldsymbol{I}_m\ \ =
+   \left[\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,\right]\ \ \boldsymbol{I}_m\ \ =
    \ \ \boldsymbol{I}_m\,,
 
-   [\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,]\ \,\boldsymbol{I}_m\ =\ 
-   [\,\boldsymbol{E}_2(i,a^{-1})\cdot\boldsymbol{E}_2(i,a)\,]\,
+   \left[\,O_2(i,a^{-1})\,\circ\,O_2(i,a)\,\right]\ \,\boldsymbol{I}_m\ =\ 
+   \left[\,\boldsymbol{E}_2(i,a^{-1})\cdot\boldsymbol{E}_2(i,a)\,\right]\,
    \boldsymbol{I}_m\ =\ 
    \boldsymbol{E}_2(i,a^{-1})\cdot\boldsymbol{E}_2(i,a)\,.
 

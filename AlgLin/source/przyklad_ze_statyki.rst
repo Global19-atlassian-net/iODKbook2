@@ -3,26 +3,25 @@
 Equilibrium of a Linear Set of Masses Connected by Springs
 ----------------------------------------------------------
 
-Rozważmy układ :math:`\,n+1\,` punktów materialnych :math:`\,P_0,\,P_1,\,\ldots,\,P_n\,,\ `
-rozmieszczonych na pionowej osi o początku :math:`\,\boldsymbol{O}.\ ` 
-Każde dwa sąsiednie punkty są połączone sprężyną
-o długości :math:`\,d\,` i stałej sprężystości :math:`\,k.\,`
-Gdy nie działają siły zewnętrzne, układ jest w pierwotnym stanie równowagi:
-cząstka :math:`\,P_0\,` jest w punkcie :math:`\,\boldsymbol{O},\ `
-a współrzędne :math:`\,X_i\ ` cząstek przyjmują wartości
+Consider a system of :math:`\,n+1\,` point masses :math:`\,P_0,\,P_1,\,\ldots,\,P_n\ `
+placed on a vertical axis with the origin :math:`\,\boldsymbol{O}.\ ` 
+Every pair of neighbouring points is connected via a spring of length :math:`\,d\,` and of constant springiness :math:`\,k.\,`
+If there are no external forces, the system remains at the original equilibrium state:
+the particle :math:`\,P_0\,` is at the point :math:`\,\boldsymbol{O},\ `
+and the coordinates :math:`\,X_i\ ` of the particles take values
  
 .. math::
    
    X_i^o\,=\,i\cdot d\,,\qquad i = 0,1,\ldots,n\,.
 
-Aby dopuścić inne konfiguracje, wprowadzamy oznaczenie :math:`\,x_i\,`
-dla odchylenia :math:`\,i`-tej cząstki od jej położenia w pierwotnym stanie równowagi:
+To allow different configurations, we introduce variables :math:`\,x_i\,`
+measuring deviation of the :math:`\,i`-th particle from its original equilibrium state:
 
 .. math::
 
    X_i\,=\,X_i^o\,+\,x_i\,=\,i\cdot d\,+\,x_i\,,\qquad i = 0,1,\ldots,n\,.
 
-Siła, wywierana na każdą wewnętrzną :math:`\,i`-tą cząstkę przez jej sąsiadów, wynosi
+The force which acts on every internal particle :math:`\,i\,` by its neighbours is equal to
 
 .. math::
 
@@ -35,30 +34,29 @@ Siła, wywierana na każdą wewnętrzną :math:`\,i`-tą cząstkę przez jej są
 
 .. Wyobraźmy sobie teraz, że
 
-Odwołując się do konkretnej sytuacji fizycznej, założymy dodatkowo że:
+Having in mind a concrete physical situation we assume additionally that:
 
-* cząstki mają jednakowe masy :math:`\,m\,` i podlegają działaniu siły ciężkości;
+* the particles have the same mass :math:`\,m\,` and are subject to the gravitational force;
 
-* skrajne punkty :math:`\,P_0\ \,\text{i}\ \,P_n\,`
-  są unieruchomione w ich pierwotnym położeniu równowagi:
+* the external points :math:`\,P_0\ ` and :math:`\,P_n\,`
+  are fixed in their original equilibrium state:
   
   .. math::
      :label: 21
      
      X_0\,=\,0\,,\quad X_n\,=\,n\cdot d\,,
-     \qquad\text{czyli}\qquad x_0 = x_n = 0\,;
+     \qquad\text{that is}\qquad x_0 = x_n = 0\,.
 
-Obrazowo sytuację tę można opisać następująco: mamy wiszący pionowo łańcuch złożony z :math:`\,n\,`
-jednakowych ciężarków i :math:`\,n\,` rozdzielających je jednakowych sprężyn.
-Pierwszy ciężarek jest zawieszony na sprężynie, przymocowanej górnym końcem bezpośrednio do sufitu
-(punkt materialny :math:`\,P_0\,` jest punktem zamocowania tej sprężyny),
-natomiast ostatni ciężarek spoczywa na podłodze. Wysokość pomieszczenia równa się długości łańcucha, 
-jaką miałby on w stanie nieważkości.
+This situation may be illustrated as follows: we have a vertically hanging chain which consists of :math:`\,n\,` uniform weights and
+:math:`\,n\,` uniform separating springs.
+First weight hangs on a spring which is attached on one side directly to the ceiling 
+(the mass point :math:`\,P_0\,` is the point where the spring is fixed to the ceiling), 
+and the last weight rests on the floor. 
+Height of the room is equal to the length of the chain in the state of weightlessness.
 
-Wyznaczymy stan równowagi układu, określając go przez zbiór
-odchyleń :math:`\,x_1,\,\ldots,\,x_{n-1}\,.`
+We determine the state of equilibrium of the system by describing the set of deviations :math:`\,x_1,\,\ldots,\,x_{n-1}\,.`
 
-W równowadze wypadkowa sił działających na każdą cząstkę wewnętrzną równa się zeru:
+In the state of equilibrium the net force acting on every internal particle equals zero:
 
 .. math::
    :label: 22
@@ -66,21 +64,20 @@ W równowadze wypadkowa sił działających na każdą cząstkę wewnętrzną r�
    F_i\ =\ k\ (x_{i-1}\,-\,2\,x_i\,+\,x_{i+1})\ +\ mg\ =\ 0\,,
    \qquad i = 1,\ldots,n-1\,.
 
-Łącząc warunki :eq:`21` i :eq:`22` otrzymujemy układ :math:`\,n+1\,` równań
-o :math:`\,n+1\,` niewiadomych:
+If we combine the conditions :eq:`21` and :eq:`22`, we obtain a system of :math:`\,n+1\,` equation with :math:`\,n+1\,` unknowns:
 
 .. math::
    :label: 23
 
    \begin{cases}\ \ \begin{array}{l}
       x_0\,=\,0 \\
-      x_{i-1}\,-\,2\,x_i\,+\,x_{i+1}\,=\,-\,p\,,\qquad i = 1,\ldots,n-1\,; \\
+      x_{i-1}\,-\,2\,x_i\,+\,x_{i+1}\,=\,-\,p\,,\qquad i = 1,\ldots,n-1\,, \\
       x_n\,=\,0
    \end{array}\end{cases}
 
-gdzie :math:`\ p\,=\,mg/k\,` jest parametrem o wymiarze długości.
+where :math:`\ p\,=\,mg/k\,` is a parameter describing length.
 
-Dla przykładu, :math:`\,` przy :math:`\ n=5\ ` układ równań przedstawia się następująco:
+For example, :math:`\,` for :math:`\ n=5\ ` the above system may be written as:
 
 .. math::
    :label: 24
@@ -94,7 +91,7 @@ Dla przykładu, :math:`\,` przy :math:`\ n=5\ ` układ równań przedstawia się
       x_5\,=\,0
    \end{array}\end{cases}
 
-czyli w wersji macierzowej
+so that in a matrix form
 
 .. math::
 
@@ -113,15 +110,13 @@ czyli w wersji macierzowej
       0 \\ 1 \\ 1 \\ 1 \\ 1 \\ 0
    \end{array}\right]\,.
 
-Dla realistycznych wartości:
+For realistic values:
 :math:`\quad mg = 1 \ \text{N}\,,
 \quad k = 1\ \frac{\text{N}}{\text{cm}}\ =\ 100\ \frac{\text{N}}{\text{m}}\,,\ ` 
-otrzymujemy :math:`\ p\,=\,0.01\ \text{m}\,.\\` 
-Zauważmy, że we wzorach nie występuje długość sprężyn :math:`\,d\,.`
+we obtain :math:`\ p\,=\,0.01\ \text{m}\,.\\` 
+Note that the formulae do not include the length :math:`\,d\,` of the springs.
 
-Narzędzia systemu Sage pozwalają rozwiązać układ :eq:`23` dla dowolnego zadanego :math:`\,n.`
-Przy dużych :math:`\,n,\,` zamiast wykazu wartości odchyleń :math:`\,x_i\,,\,`
-warto wyświetlić obraz graficzny wyniku przy pomocy funkcji ``list_plot()``:
+The tools of Sage packet give a possibility to solve :eq:`23` for any given :math:`\,n`. For large values of :math:`\,n\,` it may be better to not show the deviation values :math:`\,x_i\,` but rather a graphical illustration of the result; this can be done via function ``list_plot()``:
 
 .. sagecellserver::  
    
@@ -137,11 +132,10 @@ warto wyświetlić obraz graficzny wyniku przy pomocy funkcji ``list_plot()``:
    #print L\f
    list_plot(L\f, axes_labels=['$i$','$x_i$'], figsize=5)
 
-Jak widać, odchylenia od pierwotnych położeń są największe w środku łańcucha
-i maleją symetrycznie w kierunku jego krańców.
+As one can see, deviations from the original state are biggest in the middle of the chain and decrease symmetrically towards its ends.
 
-**Ćwiczenie.** :math:`\\`
-Wykorzystując powyższy program, znajdź liczbowe rozwiązanie układu :eq:`24`.
+**Exercise.** :math:`\\`
+Use the program above to find a numerical solution of the system :eq:`24`.
 
 
 

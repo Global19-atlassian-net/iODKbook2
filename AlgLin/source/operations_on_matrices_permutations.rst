@@ -554,7 +554,7 @@ where :math:`\,\boldsymbol{e}_i\ ` is the :math:`\ i`-th :math:`\,` *row*
 
 .. :math:`\ `
 
-In Chapter 1. we have described another approach to permutations in Sage, 
+In section :ref:`Permutations-in-Sage` we have described another approach to permutations in Sage, 
 based on the class of permutations, created by the command ``Permutations()``. 
 Specifically, ``Permutations(n)`` returns the class of permutations of 
 :math:`\,n\,` initial natural numbers, given in a one-line notation. 

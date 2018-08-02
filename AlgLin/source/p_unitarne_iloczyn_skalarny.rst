@@ -1,3 +1,4 @@
+.. _`inner-product`:
 
 Inner (Scalar) Product
 ----------------------
@@ -173,12 +174,26 @@ where an inner product of :math:`\quad\varphi,\,\psi\in L^2\quad` is given by
 :math:`\quad \langle\varphi,\psi\rangle\ =\ 
 \displaystyle\int_{-\infty}^{+\infty}\ [\,\varphi(x)\,]^*\,\psi(x)\ dx\,.`
 
-4.) A Euclidean space is a (2- or 3-dimensinal) vector space of geometric vectors
+4.) An example of a Euclidean space is a (2- or 3-dimensional) vector space of geometric vectors
 with an inner product given by
 :math:`\ \ \vec{a}\cdot\vec{b}\,=\,|\vec{a}|\,|\vec{b}|\,\cos\phi\,,
 \ ` where :math:`\,\phi=\angle(\vec{a},\vec{b})\,.`
 
-Having in mind applications, we wil mainly consider unitary (and so: complex) vector spaces. However, the introduced notions, properties and theorems are in general (with some exceptions) also true in Euclidean spaces.
+In a Euclidean space of 2-dimensional geometric vectors an inner product of a vector :math:`\vec{v}` and a unit vector :math:`\vec{a}` represents the *scalar projection* of :math:`\vec{v}` onto :math:`\vec{a}`, that is, it is equal to the length of the segment :math:`AB`:
+
+.. figure:: figures/vector_projection.png
+    :scale: 80 %
+    :align: center
+       
+Furthermore, the vector :math:`\ \vec{AB}:=\ (\vec{v}\cdot\vec{a} )\,\vec{a}\ ` 
+is the *vector projection* of :math:`\vec{v}` onto :math:`\vec{a}`.
+If :math:`\vec{a}` is not the unit vector, then the scalar projection and 
+the vector projection of :math:`\vec{v}` onto :math:`\vec{a}` are given respectively by 
+:math:`\ \vec{v}\cdot\frac{\vec{a}}{|\vec{a}|}\ ` and 
+:math:`\ \frac{(\vec{v}\cdot\vec{a} )\,\vec{a}}{|\vec{a}|^2}\ `.
+
+Having in mind applications, we wil mainly consider unitary (and so: complex) vector spaces. 
+However, the introduced notions, properties and theorems are in general (with some exceptions) also true in Euclidean spaces.
 
 .. Podstawową własność iloczynu skalarnego przedstawia
 

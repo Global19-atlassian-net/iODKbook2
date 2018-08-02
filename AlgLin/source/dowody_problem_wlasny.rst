@@ -253,15 +253,16 @@ If the eigenvalues :math:`\ \lambda_1,\,\lambda_2,\,\dots,\lambda_n\ ` are disti
 then the square matrix on the left hand side is nondegenerate, as follows from the formula for the Vandermonde determinant:
 
 .. math::
+    :label: Vandermonde
    
-   \left|\begin{array}{cccc} 1               & 1               & \dots & 1               \\
+    \left|\begin{array}{cccc} 1               & 1               & \dots & 1               \\
                              \lambda_1       & \lambda_2       & \dots & \lambda_n       \\
                              \lambda_1^2     & \lambda_2^2     & \dots & \lambda_n^2     \\
                              \cdots          & \cdots          &\cdots & \cdots          \\ 
                              \lambda_1^{n-1} & \lambda_2^{n-1} & \dots & \lambda_n^{n-1}
-   \end{array}\right|
-   \quad =\ \ 
-   \prod_{1\,\leq\,l\,<\,k\,\leq\,n}^n\ (\lambda_k-\lambda_l)\quad\neq\quad0\,.
+    \end{array}\right|
+    \quad =\ \ 
+    \prod_{1\,\leq\,l\,<\,k\,\leq\,n}^n\ (\lambda_k-\lambda_l)\quad\neq\quad0\,.
 
 Therefore, since the inverse matrix exists, we obtain
 

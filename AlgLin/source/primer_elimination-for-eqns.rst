@@ -59,6 +59,8 @@ We note that then in each :math:`\,k`-th equation
 of the system the variables :math:`\ x_1,\dots,x_{k-1}\ \,` are absent 
 :math:`(k=2,\dots,m)\,.` 
 
+.. _`Gaussian Elimination`:
+
 Gaussian Elimination 
 ~~~~~~~~~~~~~~~~~~~~
 

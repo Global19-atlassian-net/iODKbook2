@@ -2,25 +2,24 @@
 Systems of Linear Equations
 ---------------------------
 
-**Zadanie 0.** :math:`\\`
-Zapisz następujące problemy w postaci układu równań liniowych :math:`\\`
-i znajdź (dowolnym sposobem) rozwiązania.
+**Exercise 0.** :math:`\\`
+Write down the following problems in a form of a system of linear equations and find its solutions (by any means).
 
-#. | Andrzej jest dwa razy starszy od Piotra, a suma ich lat życia wynosi 33.
-   | Podaj wiek Andrzeja i Piotra.
+#. | Andrew is two times older than Peter, and the sum of their age equals 33.
+   | How old are Andrew and Peter?
 
-#. | Punkty :math:`\ P_1=(2,5)\ ` i :math:`\ P_2=(3,7)\ ` leżą na prostej o równaniu
+#. | The points :math:`\ P_1=(2,5)\ ` and :math:`\ P_2=(3,7)\ ` lie on a line given by the equation
      :math:`\ y=ax+b.\ ` 
-   | Określ :math:`\ a\ ` i  :math:`\ b.`
+   | Find the parameters :math:`\ a\ ` and  :math:`\ b.`
 
-#. | Parabola przechodzi przez punkty :math:`\ P_1=(1,4),\ P_2=(2,8)\ ` i :math:`\ P_3=(3,14).\ `
-   | Wyznacz współczynniki :math:`\ a,\,b,\,c\ ` w jej równaniu :math:`\ y=ax^2+bx+c.` 
+#. | The parabola passes through the points :math:`\ P_1=(1,4),\ P_2=(2,8)\ ` and :math:`\ P_3=(3,14).\ `
+   | Find the coefficients :math:`\ a,\,b,\,c\ ` which determine the equation :math:`\ y=ax^2+bx+c\ ` of this parabola.
 
-**Zadanie 1.** :math:`\\`
-Wykonując operacje elementarne na całych równaniach (patrz sekcja 2.3.2)
-albo na wierszach odpowiednich macierzy (sekcja 4.1.3), bez używania funkcji  ``solve()``, 
+**Exercise 1.** :math:`\\`
+Perform elementary operations on the equations (cf. :ref:`Gaussian Elimination`)
+or rows of the corresponding matrices (cf. :ref:`Practical Elimination in Sage`), without applying functions ``solve()``, 
 :math:`\,`   ``X.solve_right()``, :math:`\,` ``X\y``, :math:`\,` ``X.rref()``, :math:`\,` 
-rozwiąż układy równań nad ciałem :math:`\ Q:`
+in order to solve the following systems of equations over the field :math:`\ Q:`
 
 #. .. math::
       :nowrap:
@@ -87,12 +86,12 @@ rozwiąż układy równań nad ciałem :math:`\ Q:`
    
    .. (6, 20, -27/2, -7/2), rank A: 4
 
-**Zadanie 2.** :math:`\,`
-Wykorzystując teraz wszystkie potrzebne funkcje Sage'a (patrz sekcja 6.2), :math:`\\`
-rozwiąż rzeczywiste problemy liniowe postaci :math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{b}\ \,` 
-dla następujących danych:
+**Exercise 2.** :math:`\,`
+Now use all necessary functions of Sage (c.f. :ref:`Example with Discussion`) 
+to solve real linear problems of the form :math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{b}\ \,` 
+for the following data:
 
-#. .. math::
+1. .. math::
       
       \boldsymbol{A}\ =\ 
       \left[\begin{array}{rrrr}
@@ -106,7 +105,7 @@ dla następujących danych:
       -1 \\ 0 \\ 4 \\ 4
       \end{array}\right]\,;
 
-#. .. math::
+2. .. math::
       
       \boldsymbol{A}\ =\ 
       \left[\begin{array}{rrrr}
@@ -134,7 +133,7 @@ dla następujących danych:
       0 \\ 0 \\ 0 \\ 0
       \end{array}\right]\,;
 
-#. .. math::
+3. .. math::
       
       \boldsymbol{A}\ =\ 
       \left[\begin{array}{rrr}
@@ -147,13 +146,13 @@ dla następujących danych:
       -1 \\ -5 \\ 1 
       \end{array}\right]\,.
 
-Dowolną bazę przestrzeni rozwiązań jednorodnego problemu liniowego
-:math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{0}\ ` nazywamy :math:`\,`
-*fundamentalnym układem rozwiązań* :math:`\,` tego problemu.
+A basis of the solution space of the homogeneous linear problem
+:math:`\ \boldsymbol{A}\,\boldsymbol{x}=\boldsymbol{0}\ ` is called a :math:`\,`
+*fundamental set of solutions* :math:`\,` for this problem.
 
-**Zadanie 3.** :math:`\,`
-Wyznacz fundamentalny układ rozwiązań jednorodnego problemu liniowego :math:`\\` 
-nad ciałem :math:`\ Q\ ` o macierzy współczynników
+**Exercise 3.** :math:`\,`
+Find a fundamental set of solutions of the homogeneous linear problem  
+over :math:`\ Q\ ` with coefficient matrix
 
 .. math::
    
@@ -165,10 +164,9 @@ nad ciałem :math:`\ Q\ ` o macierzy współczynników
       -2 &  -8 & -12 &  2
    \end{array}\right]\,.
 
-**Zadanie 4.** :math:`\,`
-Znajdź jednorodny układ równań, składający się z 
-:math:`\,` a.) dwóch :math:`\,` b.) trzech :math:`\,` równań, 
-dla którego wektory
+**Exercise 4.** :math:`\,`
+Find a homogeneous system of equations consisting of 
+:math:`\,` a.) two :math:`\,` b.) three :math:`\,` equations so that the vectors 
 
 .. math::
    
@@ -176,15 +174,15 @@ dla którego wektory
    \left[\begin{array}{r} 3 \\ 13 \\ -1 \\ 2 \\  1 \end{array}\right]\,,\quad
    \left[\begin{array}{r} 2 \\  7 \\ -8 \\ 4 \\ -5 \end{array}\right]
 
-tworzą fundamentalny układ rozwiązań.
+comprise its fundamental set of solutions.
 
 .. (4.4.30)
 
-**Zadanie 5.** :math:`\,`
-Czy istnieje jednorodny układ równań liniowych, 
-którego fundamentalnym układem rozwiązań jest układ wektorów
-:math:`\ (\boldsymbol{x}_1,\boldsymbol{x}_2,\boldsymbol{x}_3),\ ` a także
-:math:`\ (\boldsymbol{y}_1,\boldsymbol{y}_2,\boldsymbol{y}_3),\ ` gdzie
+**Exercise 5.** :math:`\,`
+Does there exist a homogeneous system of linear equations whose fundamental set of solutions
+is given both by the vectors
+:math:`\ (\boldsymbol{x}_1,\boldsymbol{x}_2,\boldsymbol{x}_3)\ ` and
+:math:`\ (\boldsymbol{y}_1,\boldsymbol{y}_2,\boldsymbol{y}_3),\ ` where
 
 .. math::
 
@@ -206,8 +204,8 @@ którego fundamentalnym układem rozwiązań jest układ wektorów
 
 .. (4.4.31)
 
-**Zadanie 6.** :math:`\\`
-Czy istnieje :math:`\ \lambda\in Q,\ ` dla którego układ równań nad ciałem liczb wymiernych
+**Exercise 6.** :math:`\\`
+Does there exist :math:`\ \lambda\in Q\ ` for which the followng system of linear equations  
 
 .. math::
    :nowrap:
@@ -218,14 +216,14 @@ Czy istnieje :math:`\ \lambda\in Q,\ ` dla którego układ równań nad ciałem 
    \,2\,x_1 & \ +\ &    x_2 & \ +\ &          5\,x_3 & \ =\ &  3
    \end{alignat*}
 
-ma nieskończenie wiele rozwiązań ?
+has infinitely many solutions over :math:`\ Q\ `?
 
-**Wskazówka.** :math:`\\` Odpowiedź (negatywną) można dać 
-po wyliczeniu tylko jednego wyznacznika 3. stopnia.
+**Hint.** The (negative) answer may be given by computation of only one 
+determinant of rank 3. 
 
-**Zadanie 7.** :math:`\\`
-Dla jakich :math:`\ \lambda\in R\ ` układ równań nad ciałem :math:`\ R\ `
-ma rozwiązanie ? :math:`\,` Znajdź to rozwiązanie. 
+**Exercise 7.** 
+For which :math:`\ \lambda\in R\ ` the following system of linear equations over the field :math:`\ R\ `
+has a solution? :math:`\,` Find this solution. 
 
 .. math::
    :nowrap:
@@ -236,13 +234,9 @@ ma rozwiązanie ? :math:`\,` Znajdź to rozwiązanie.
       x_1 &\ +\ & 7\,x_2 &\ -\ & 4\,x_3 &\ +\ & 11\,x_4 &\ =\ & \lambda 
    \end{alignat*}
 
-   \;
-   
-   \;
 
-
-**Zadanie 8.** :math:`\,`
-Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
+**Exercise 8.** 
+Describe a solution space of the following systems of equations depending on :math:`\ \lambda`: 
 
 #. .. math::
       :nowrap:
@@ -271,10 +265,10 @@ Przedyskutuj ze względu na :math:`\ \lambda\ ` i rozwiąż układy równań:
       \lambda\,x_1 & \ +\ &          x_2 & \ +\ &          x_3 & \ =\ & 1
       \end{alignat*}
 
-**Zadanie 9.** :math:`\,`
-Wyznacz wszystkie wartości :math:`\ \lambda\in R,\ ` dla których 
-wektor :math:`\ \boldsymbol{b}\ ` wyraża się liniowo 
-przez wektory :math:`\ \boldsymbol{a}_1,\,\boldsymbol{a}_2,\,\boldsymbol{a}_3:`
+**Exercise 9.** :math:`\,`
+Determine all the values of :math:`\ \lambda\in R\ ` for which
+a vector :math:`\ \boldsymbol{b}\ ` may be expressed as a linear combination of vectors
+:math:`\ \boldsymbol{a}_1,\,\boldsymbol{a}_2,\,\boldsymbol{a}_3:`
 
 .. math::
    
@@ -301,29 +295,28 @@ przez wektory :math:`\ \boldsymbol{a}_1,\,\boldsymbol{a}_2,\,\boldsymbol{a}_3:`
    \boldsymbol{b} = \left[\begin{array}{r} 1 \\ 3 \\ 5       \end{array}\right].
    \end{array}
 
-**Wskazówka.** :math:`\,`
-Zbadaj istnienie rozwiązań problemu liniowego o postaci kolumnowej
+**Hint.** :math:`\,`
+Study existence of solutions for a linear problem given in a column form
 
 .. math::
    
    x_1\,\boldsymbol{a}_1+x_2\,\boldsymbol{a}_2+x_3\,\boldsymbol{a}_3=\boldsymbol{b}.
 
-**Zadanie 10.** :math:`\,`
-Rozważmy przestrzeń wektorową wielomianów rzeczywistych zmiennej :math:`\ x\ ` 
-stopnia (nie większego od) :math:`\ n.\ `
-Jaki jest wymiar podprzestrzeni, złożonej z wielomianów spełniających warunki
-:math:`\ w(x_1)=w(x_2)=\ldots=w(x_k)=0,\ ` gdzie :math:`\ x_1,x_2,\ldots,x_k\ `
-są różnymi liczbami :math:`\ (k\le n).`
+**Exercise 10.** 
+Consider a vector space of real polynomials of one variable :math:`\ x\ ` 
+of degree (at most) :math:`\ n.\ `
+What is the dimension of the subspace consisting of polynomials satisfying the conditions 
+:math:`\ w(x_1)=w(x_2)=\ldots=w(x_k)=0,\ ` where :math:`\ x_1,x_2,\ldots,x_k\ `
+are pairwise distinct numbers :math:`\ (k\le n).`
 
 .. (4.4.28) Odpowiedź: n+1-k.
 
-**Wskazówka.** :math:`\,`
-Wykorzystaj wzór dla wyznacznika Vandermonde'a (sekcja 10.4).
+**Hnt.** 
+Use a formula for the Vandermonde determinant (see equation :eq:`Vandermonde`).
 
-**Zadanie 11.** :math:`\,`
-W przestrzeni wielomianów rzeczywistych stopnia (nie większego od) 5
-podaj przykładową bazę podprzestrzeni, utworzonej przez wielomiany spełniające
-warunki :math:`\ w(0)=w(1)=w(2)=w(3)=0.`
+**Exercise 11.** 
+Find a basis for a vector space of real polynomials of one variable of degree (at most) 5
+satisfying the conditions :math:`\ w(0)=w(1)=w(2)=w(3)=0.`
 
 .. (4.4.29)`
 

@@ -304,6 +304,8 @@ we obtain the column picture of a system of linear equations:
    x_1\,\boldsymbol{A}_1\ +\ x_2\,\boldsymbol{A}_2\ +\ \ldots\ + \ 
    x_n\,\boldsymbol{A}_n\ =\ \boldsymbol{b}\,.
 
+.. _`matrix_mult`:
+
 Matrix Multiplication (Product of Two Matrices)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

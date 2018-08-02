@@ -142,6 +142,7 @@ Systems of Linear Equations: Theory and Practice
    teoria_ukladow_rownan
    przyklad_z_dyskusja
    przyklad_ze_statyki
+   regression
    teoria_i_praktyka_ukladow_zadania
 
 Linear Transformations
@@ -162,6 +163,7 @@ Linear Transformations
    przeksztalcenia_lin_macierze
    przeksztalcenia_lin_operatory
    przeksztalcenia_lin_zmiana_bazy
+   linear_transformations_graphics
    przeksztalcenia_lin_zadania
 
 Eigenvalues and Eigenvectors
@@ -180,6 +182,8 @@ Eigenvalues and Eigenvectors
    problem_wlasny_rownania_rozniczkowe
    problem_wlasny_Google
    problem_wlasny_zadania
+
+.. _`Unitary-Spaces`:
 
 Unitary Spaces
 ==============

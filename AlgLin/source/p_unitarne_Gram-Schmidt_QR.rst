@@ -176,6 +176,8 @@ and :math:`\,` an orthonormal basis :math:`\,\mathcal{Q}\,=\,(q_0,\,q_1,\,q_2,\,
                                \dots\ 
                        \right)
 
+.. _`QRdecomposition`:
+
 Orthogonal Matrices and the QR Decomposition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -279,7 +281,8 @@ Our goal is to write the matrix :math:`\ \boldsymbol{A}\ `
 as a product of an orthogonal matrix :math:`\\ \boldsymbol{Q}\,=\,
 [\,\boldsymbol{u}_1\,|\,\boldsymbol{u}_2\,|\,\dots\,|\,\boldsymbol{u}_n\,]\ \,`
 and :math:`\,` certain uppertriangular matrix :math:`\ \boldsymbol{R} :
-\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,.`
+\ \boldsymbol{A}=\boldsymbol{Q}\boldsymbol{R}\,.` 
+Such a decomposition is called a *QR decomposition*.
 
 .. W :math:`\,j`-tym kroku procedury Grama-Schmidta zastosowanej do bazy :math:`\,\mathcal{B}\ \,`
    (:math:`j=2,\dots,n`) :

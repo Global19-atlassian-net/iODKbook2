@@ -203,6 +203,8 @@ leading to the positive answer:
    \right|
    \ \ =\ \ 1\ne 0\,.
 
+.. _`calc_inv_matrix`: 
+
 Calculation of the Inverse of a Matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

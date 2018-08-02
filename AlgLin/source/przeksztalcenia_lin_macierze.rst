@@ -118,6 +118,8 @@ We will generalise this further and define a matrix of linear transformation
 are :math:`\,` *arbitrary* :math:`\,` finite dimensional vector spaces
 over a field :math:`\ K\,,\ ` each with a chosen basis.
 
+.. _`matrix_of_lin_trans`:
+
 Matrix of a Linear Transformation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

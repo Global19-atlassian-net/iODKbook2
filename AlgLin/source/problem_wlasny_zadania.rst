@@ -11,9 +11,22 @@ Consider a web consisting of 4 pages illustrated by the following graph:
 
 where an arrow from page A to page B indicates a link from page A to page B.
 
-1. Write down link matrix for this web and compute an importance score vector of this web using basic approach presented in Example 1., LINK TO SECTION
+1. Write down link matrix for this web and compute an importance score vector of this web using basic approach presented in Example 1., :ref:`PageRank-Algorithm`. You can make the computations in the window below.
 
-2. Compute an importance score vector of this web using formula :eq:`basic_formula`. You can make the computations in the window below. Later compare the result with the importance score vector from point 1.
+.. sagecellserver::
+
+    
+To verify whether the adjacency matrix :math:`A` you use is correct, at the end of your code write 
+
+.. code-block:: python
+
+    sage: W=DiGraph(A)
+    sage: W.relabel({0:'1' , 1:'2', 2:'3', 3:'4'})
+    sage: W.plot()
+
+and check whether the resulting graph is the same as above.
+
+2. Compute an importance score vector of this web using formula :eq:`basic_formula`. Later compare the result with the importance score vector from point 1.
 
 .. sagecellserver::
 
@@ -33,7 +46,7 @@ Now compute the new ranking using formula :eq:`basic_formula`.
 
 
 
-**Exercise 2. [1]_**
+**Exercise 2.** [1]_
 
 Consider again the web from previous exercise with the addition of a page 5 that links to
 page 3, where page 3 also links to page 5:

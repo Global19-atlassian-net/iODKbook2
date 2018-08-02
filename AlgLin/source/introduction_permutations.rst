@@ -104,22 +104,22 @@ We shall check the consecutive axioms in the definition of a group.
      then for each :math:`\,k\in\{1,2,\dots,n\}:`
 
    .. math::
-      
-      [\,\rho\circ(\sigma\circ\tau)\,]\,(k)
-      \ =\ 
-      \rho\,[\,(\sigma\circ\tau)(k)\,]
-      \ =\ 
-      \rho\,\{\,\sigma\,[\,\tau(k)\,]\,\}\,,
+             
+       \left[\,\rho\circ (\sigma\circ\tau )\,\right]\,(k)
+       \ =\ 
+       \rho\,\left[\, (\sigma\circ\tau )(k)\,\right]
+       \ =\ 
+       \rho\,\{\,\sigma\,\left[\,\tau(k)\,\right]\,\}\,,
 
-      [\,(\rho\circ\sigma)\circ\tau\,]\,(k)
-      \ =\ 
-      (\rho\circ\sigma)\,[\,\tau(k)\,]
-      \ =\ 
-      \rho\,\{\,\sigma\,[\,\tau(k)\,]\,\}\,.
+       \left[\, (\rho\circ\sigma )\circ\tau\,\right]\,(k)
+       \ =\ 
+       (\rho\circ\sigma )\,\left[\,\tau(k)\,\right]
+       \ =\ 
+       \rho\,\{\,\sigma\,\left[\,\tau(k)\,\right]\,\}\,.
 
    :math:`\,` Consequently,
-   :math:`\qquad\quad\rho\circ(\sigma\circ\tau)\ =\ 
-   (\rho\circ\sigma)\circ\tau\,,\qquad\forall\ \ \rho,\sigma,\tau\in S_n\,.`
+   :math:`\qquad\quad\rho\circ (\sigma\circ\tau )\ =\ 
+   ( \rho\circ\sigma )\circ\tau\,,\qquad\forall\ \ \rho,\sigma,\tau\in S_n\,.`
 
 2. | :math:`\,` The neutral element for composition 
      is the identity permutation id, 
@@ -364,6 +364,8 @@ when :math:`\,\text{sgn}\,\sigma = +1\,,\ \,` and is :math:`\,` *odd* :math:`\,`
 when :math:`\,\text{sgn}\,\sigma = -1\,.`
 
 .. So, for instance, the permutation in Eq. :eq:`ex` is odd. 
+
+.. _Permutations-in-Sage:
 
 Permutations in Sage
 ~~~~~~~~~~~~~~~~~~~~

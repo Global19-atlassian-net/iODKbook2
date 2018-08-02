@@ -56,7 +56,7 @@ In Sage it is equally simple:
     print 'v + w = ', v + w
     print 'cv =', c*v
     
-Press **Activate** to see the outcome of the code. You can modify the code yourself too. See what happens if the vectors are of different size. In section :ref:`algebra-of-matrices-Sage` we explain how to indicate the underlying field.
+Press **Evaluate** to see the outcome of the code. You can modify the code yourself too. See what happens if the vectors are of different size. In section :ref:`algebra-of-matrices-Sage` we explain how to indicate the underlying field.
 
 The addition and scalar multiplication of column vectors in :math:`\,K^n\,`
 consist in addition and multiplication of scalars in :math:`\,K.\ `

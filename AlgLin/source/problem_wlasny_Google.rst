@@ -1,7 +1,9 @@
+.. _PageRank-Algorithm:
+
 Google's Application - PageRank Algorithm
 -----------------------------------------
 
-A big part of Google's success is its PageRank Algorithm which rates importance of the websites and then presents them accordingly to the user. Quite often most relevant and helpful pages are listed first. It turns out that the reason is yet another disguise of the eigenvector problem. This section is based on an article of Bryan and Leise "The \$25,000,000,000 Eigenvector. The Linear Algebra Behind Google", which is available at https://www.rose-hulman.edu/~bryan/google.html .
+A big part of Google's success is its PageRank Algorithm which rates importance of the websites and then presents them accordingly to the user. Quite often most relevant and helpful pages are listed first. It turns out that the reason is yet another disguise of the eigenvector problem. This section is based on an article of Bryan and Leise "The \$25,000,000,000 Eigenvector. The Linear Algebra Behind Google" [BL]_, which is available at https://www.rose-hulman.edu/~bryan/google.html .
 
 One of the tasks of Google browser is to locate the websites with public access and index them with relevant keywords and phrases. Once this is done, the websites have to be ordered according to their importance. The main idea behind this procedure relies on an assumption that more important web pages are linked by other pages more often. We will call the links to a given page by the *backlinks*.
 
@@ -168,7 +170,7 @@ However, if we look once again at the picture presenting our web, we see that th
 
 Every matrix which arises in the same way as the matrix :math:`A` in the above example will be called a *link matrix*. Note that all the entries of a link matrix are nonnegative and, thanks to the normalisation, the entries in each column sum to one, that is, a link matrix is an example of a *column-stochastic matrix*. 
 
-The problem of existence of an eigenvector with the eigenvalue :math:`1` solves the following proposition (proven in [1]).
+The problem of existence of an eigenvector with the eigenvalue :math:`1` solves the following proposition (proven in [BL]_).
 
 .. admonition:: Proposition.
 
@@ -314,7 +316,7 @@ Assume that a web :math:`\ W\ ` consists of :math:`\ n\ ` pages. Let :math:`\ S\
 
     M = (1−m)A + mS,
     
-where :math:`\ m\in [0,1]\ ` is a certain fixed value. The value of :math:`m` originally used by Google was :math:`0.15`. It is not difficult to check that the matrix :math:`M` is a column-stochastic matrix, and thus it has an eigenvector for the eigenvalue :math:`1 .\,` Moreover, one can prove (c.f. [1])
+where :math:`\ m\in [0,1]\ ` is a certain fixed value. The value of :math:`m` originally used by Google was :math:`0.15`. It is not difficult to check that the matrix :math:`M` is a column-stochastic matrix, and thus it has an eigenvector for the eigenvalue :math:`1 .\,` Moreover, one can prove (c.f. [BL]_)
 
 .. admonition:: Proposition.
 
@@ -376,15 +378,15 @@ We can easily in SageMath determine the eigenvector corresponding to eigenvalue 
 
 we see that the most important website is the second one, and just after it is the third one, which agrees to some extent with both normalised and basic approach.
 
-Already the example above with its lengthy computations lead as to a crucial problem: if currently there are almost :math:`\ 2\cdot 10^9\ ` websites [2]_...
+Thanks to Sage we did not have to spend a lot of time doing unpleasant computations by hand. However, the bigger the matrix is, the longer one has to wait for the answer. And if currently there are almost :math:`\ 2\cdot 10^9\ ` websites [2]_...
 
 .. admonition:: Problem 3.
 
     How to compute an eigenvector of a huge matrix efficiently?
 
-We will discuss, after [1], an idea behind :math:`\,` *the power method* . :math:`\,` This method bases on 
+We will discuss, after [BL]_, an idea behind :math:`\,` *the power method* . :math:`\,` This method bases on 
     
-.. admonition:: Theorem [1].
+.. admonition:: Theorem [BL]_.
 
         The matrix :math:`M` defined by equation :eq:`matrix_M` for a web with no dangling nodes will always be a 
         column-stochastic matrix with positive entries and so have a unique vector :math:`\ q=[q_i]_n\ ` with positive components 
@@ -461,7 +463,7 @@ More general situation of a matrix with non-negative entries is treated in Perro
 
 **Example 6.**
 
-Consider the web illustrated by the follwing graph:
+Consider the web illustrated by the following graph:
 
 .. figure:: figures/PR3.png
    :scale: 70 %
@@ -500,5 +502,6 @@ We will compute an eigenvector of :math:`A` for the greatest eigenvalue using th
     
 
 
-.. [1] K. Bryan and T. Leise, "The \$25,000,000,000 Eigenvector. The Linear Algebra Behind Google". Available at https://www.rose-hulman.edu/~bryan/google.html .
+.. [BL] K. Bryan and T. Leise, "The \$25,000,000,000 Eigenvector. The Linear Algebra Behind Google". Available at https://www.rose-hulman.edu/~bryan/google.html .
+
 .. [2] http://www.internetlivestats.com/watch/websites/ .

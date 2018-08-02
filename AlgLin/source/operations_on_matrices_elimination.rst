@@ -265,6 +265,8 @@ up to the reduced echelon form:
 
    \;
 
+.. _`Practical Elimination in Sage`:
+
 Practical Elimination in Sage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

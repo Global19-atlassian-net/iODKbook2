@@ -17,7 +17,7 @@ Orthogonal Set of Vectors
 .. admonition:: Definition.
    
    A set :math:`\ (x_1,x_2,\dots,x_r)\ ` of pairwise orthogonal non-zero
-   vectors from the space :math:`\,V,`i.e.
+   vectors from the space :math:`\, V`, i.e.
    
    .. math::
       
