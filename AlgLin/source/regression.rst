@@ -1,7 +1,7 @@
 Linear and Polynomial Regression
 --------------------------------
 
-*Regression analysis* is a technique to create statistical models describing the relationshp between *dependent variables* and *explanatory variables* (or *independent variables*). Depending on the type of this relationship (shape of the best fitted curve), the number of dependent and independent variables, and whether they are of continuous or binary nature, one applies different type of regression. If chosen properly, it helps to predict future behaviour basing on a data from the past (e.g. consumption spending, labour demands, goods prices) as well as explore correlation between the objects. Here we disccuss only linear and polynomial dependencies; the interested reader is referred to https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/ for a brief description of a few more methods.
+*Regression analysis* is a technique to create statistical models describing the relationshp between *dependent variables* and *explanatory variables* (or *independent variables*). Depending on the type of this relationship (shape of the best fitted curve), the number of dependent and independent variables, and whether they are of continuous or binary nature, one applies different type of regression. If chosen properly, it helps to predict future behaviour basing on a data from the past (e.g. to assess risk in financial services, goods prices or consumer behaviour) as well as explore correlation between the objects. Here we disccuss only linear and polynomial dependencies; the interested reader is referred to https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/ for a brief description of a few other methods.
 
 Linear Regression
 ~~~~~~~~~~~~~~~~~
@@ -310,21 +310,55 @@ Exercises
 
 **Exercise 1.**
 
-Gather together the code from Example 3 in order to obtain the polynomial of degree 2 that best fits the data on bluegill fish. 
+a). Gather together the code from Example 3 in order to obtain the polynomial of degree 2 that best fits the data on bluegill fish. 
 
 .. sagecellserver::
 
 
-Use linear regression to add the best fitting line to the picture obtained above.
+b). Use linear regression to add the best fitting line to the picture obtained above.
 
 .. sagecellserver::
 
 
-| Add to the data the point :math:`\ (0,0)\ ` which represents additional information that length of the fish at the age 0 is 0.
+c). Add to the data the point :math:`\ (0,0)\ ` which represents additional information that length of the fish at the age 0 is 0.
 
-| (The list ``xlm`` can be extended to contain :math:`0` as its first element by a command :math:`\,` ``xlm=[0]+xlm`` :math:`\,`.)
+    (The list ``xlm`` can be extended to contain :math:`0` as its first element by a command :math:`\,` ``xlm=[0]+xlm`` :math:`\,`.)
 
 .. sagecellserver::
+
+
+**Exercise 2.** [4]_
+
+Indiana State University collected data on height and shoe size of its students. You can access this data by clicking `here`_. 
+
+a). Use the data to verify whether there is a correlation between height and shoe size. Write the code in the window below.
+
+.. sagecellserver::
+
+
+b). Now make another illustration of the data, where the data related to women is marked in a different colour. In order to do this define a separate list ``Fem`` which collects the indices corresponding to women responses. You can refer to these indices by writing ``for i in Set(Fem)`` in place of usual ``for i in range()``.
+
+.. sagecellserver::
+
+
+c). Use least square method to describe correlation between hight and shoe size of men (one line) and women (the other line). Present the results on the same picture.
+
+.. sagecellserver::
+
+
+**Exercise 3.** [5]_
+
+Researchers Mackowiak, Wasserman and Levine collected data on body temperature and heart rate within male and female respondents. A sample of this data is available at http://ww2.amstat.org/publications/jse/datasets/normtemp.dat.txt . First column corresponds to body temperature (degrees Fahrenheit), second to the gender (1 = male, 2= female), and the third to the heart rate (beats per minute). 
+
+a). Use this data to find whether there is a correlation between body temperture and heart beat. 
+
+.. sagecellserver::
+
+
+b). Does it matter whether the respondent is a man or a woman? As in Exercise 2 above, perform separate computations for male and female respondents.
+
+.. sagecellserver::
+
 
 
 
@@ -340,6 +374,14 @@ Use linear regression to add the best fitting line to the picture obtained above
 .. [3] | This example was taken from https://onlinecourses.science.psu.edu/stat501/node/325/ .
        | The picture of a blue gill fish: https://en.wikipedia.org/wiki/Bluegill . 
        
+.. [4] This exercise is based on the article and data of Constance H. McLaren, "Using the Height and Shoe Size Data to Introduce Correlation and Regression" available at http://ww2.amstat.org/publications/jse/v20n3/mclaren.pdf .
+
+.. [5] This exercise is based on the article and data of Allen L. Shoemaker, "What's Normal? - Temperature, Gender, and Heart Rate" available at http://ww2.amstat.org/publications/jse/v4n2/datasets.shoemaker.html .
+
+
 .. _link: https://onlinecourses.science.psu.edu/stat501/sites/onlinecourses.science.psu.edu.stat501/files/data/bluegills/index.txt 
 
 .. _`Wikipedia page`: https://en.wikipedia.org/wiki/Welfare%27s_effect_on_poverty#/media/File:The_Antipoverty_Effect_of_Government_Spending_Vector_Graph.svg
+
+.. _here: https://sage02.icse.us.edu.pl:8000/user/jolanta.marzec/edit/iODKbook2/AlgLin/source/shoesize.txt
+
