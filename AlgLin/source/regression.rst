@@ -329,12 +329,21 @@ c). Add to the data the point :math:`\ (0,0)\ ` which represents additional info
 
 **Exercise 2.** [4]_
 
-Indiana State University collected data on height and shoe size of its students. You can access this data by clicking `here`_. 
+Indiana State University collected data on height and shoe size of its students. You can access this data by clicking `a link <http://visual.icse.us.edu.pl/LA/_static/shoesize.txt>`_. 
 
 a). Use the data to verify whether there is a correlation between height and shoe size. Write the code in the window below.
 
 .. sagecellserver::
 
+	import urllib
+	import csv
+	reader = csv.reader(urllib.urlopen('http://visual.icse.us.edu.pl/LA/_static/shoesize.txt'))
+	
+	L=[]
+	for row in reader:
+	    L.append(row)
+	print L[0]
+	print L[1]
 
 b). Now make another illustration of the data, where the data related to women is marked in a different colour. In order to do this define a separate list ``Fem`` which collects the indices corresponding to women responses. You can refer to these indices by writing ``for i in Set(Fem)`` in place of usual ``for i in range()``.
 
@@ -383,5 +392,4 @@ b). Does it matter whether the respondent is a man or a woman? As in Exercise 2 
 
 .. _`Wikipedia page`: https://en.wikipedia.org/wiki/Welfare%27s_effect_on_poverty#/media/File:The_Antipoverty_Effect_of_Government_Spending_Vector_Graph.svg
 
-.. _here: https://sage02.icse.us.edu.pl:8000/user/jolanta.marzec/edit/iODKbook2/AlgLin/source/shoesize.txt
 
