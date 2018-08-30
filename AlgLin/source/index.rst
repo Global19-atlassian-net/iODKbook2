@@ -143,6 +143,7 @@ Systems of Linear Equations: Theory and Practice
    przyklad_z_dyskusja
    przyklad_ze_statyki
    regression
+   linear_programming
    teoria_i_praktyka_ukladow_zadania
 
 Linear Transformations
