@@ -1,2 +1,4 @@
-# iODKbook2
-Development of an interactive textbook in Linear Algebra and its applications. The initial Polish version is to be successively translated into English, and the Jupyter editor will be implemented in place of Sphinx.
+## Interactive textbooks:
+
+ - [Linear Algebra and its Applications](http://visual.icse.us.edu.pl/LA/)
+ - [Nonlinear Processes in Biology](http://visual.icse.us.edu.pl/NPB/)
