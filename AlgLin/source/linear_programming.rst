@@ -86,6 +86,30 @@ to :math:`\ M_j\ `. Then the problem can be stated as follows:
     & x_{ij}\geq 0 \, ,\quad i\in\left\{ 1,\ldots ,I\right\},\, j\in\left\{ 1,\ldots ,J\right\}\\
     \end{array}
 
+.. note:: 
+
+    Observe that to maximize the values of some function :math:`f(x)` is the same as to minimize the values of :math:`-f(x)`. 
+    Therefore every standard maximum problem can be easily transformed to a standard minimum problem and vice versa:
+    
+    .. math::
+    
+        \begin{array}
+        \text{maximize:} & c_1x_1 + \ldots + c_mx_m \\
+        \text{constraints:} & a_{j1}x_1+ \ldots + a_{jm}x_m \leq b_j\, ,\quad j\in\left\{ 1,\ldots ,n\right\}\\
+        & x_i\geq 0 \, ,\quad i\in\left\{ 1,\ldots ,m\right\}\\
+        \end{array}
+        
+    is equivalent to
+    
+    .. math::
+    
+        \begin{array}
+        \text{minimize:} & -(c_1x_1 + \ldots + c_mx_m)\\
+        \text{constraints:} & -a_{j1}x_1- \ldots - a_{jm}x_m \geq -b_j\, ,\quad j\in\left\{ 1,\ldots ,n\right\}\\
+        & x_i\geq 0 \, ,\quad i\in\left\{ 1,\ldots ,m\right\}\\
+        \end{array}
+    
+
 The Geometric Method
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -180,15 +204,23 @@ may be summarized as follows:
 
 Even though this problem can be still represented geometrically, it is much harder to see what the feasible set is and at which point the cost function :math:`\ c=0.18x + 0.23y + 0.05z\ ` achieves the minimum. 
 
+.. figure:: figures/3d2a.png
+       :align: center
 
-It seems... We'll check it in the next section.
+(To draw the picture we used the function ``implicit_plot3d()``.)
 
-Of course, if the problem is more complex and deals with several variables (what often happens in practice), we need more powerful tool than just illustration of the problem. This is the subject of the next section.
+In this picture the cost surfaces are denoted by the red color. The first plane :math:`0.009x+0.028y= 0.9` is marked by blue, the second by purple, and the last one by green color. The remaining three planes in lighter colours are parallel to the corresponding planes in darker colours and are drawn to facilitate picturing the feasible set; they show direction of the constraints. The yellow ball is the point with maximal coordinates at this picture: :math:`(60,60,160)`. 
+
+The picture suggests that the place at which the red plane touches the feasible set first is located on the intersection of the blue and purple plane: the red planes that are closer to the origin do not contain any feasible points yet as they are below the restriction given by the blue plane.
+
+Of course, if the problem is more complex and deals with several variables (what often happens in practice), we need more powerful tool than just illustration of the problem. And this is where linear algebra comes into play.
 
 The Simplex Method
 ~~~~~~~~~~~~~~~~~~
 
-First we demonstrate a solution of *the Standard Minimum Problem* with :math:`m` unknowns :math:`x_1,\ldots, x_m\geq 0` and :math:`n+m` constraints:
+The algorithm was invented by an American mathematician George Dantzig in 1940s. 
+
+We demonstrate a solution of *the Standard Minimum Problem* with :math:`m` unknowns :math:`x_1,\ldots, x_m\geq 0` and :math:`n+m` constraints:
 
 .. math::
 
@@ -232,7 +264,21 @@ where
    
 and by :math:`\ \boldsymbol{x}\geq 0\ ` (or :math:`\boldsymbol{A}\boldsymbol{x} \geq \boldsymbol{b}`) we mean that each coordinate of the vector :math:`\ \boldsymbol{x}\ ` (or :math:`\boldsymbol{A}\boldsymbol{x}-\boldsymbol{b}`) is greater or equal zero.
 
-**Step I**: Change the constraints :math:`\boldsymbol{A}\boldsymbol{x} \geq \boldsymbol{b}` into equalities by introducing new variables.
+We will explain the consecutive steps along the way by referring to Example 1. discussed above, which we rewrite as the minimization problem:
+
+.. math::
+
+    \begin{array}
+    \text{minimize:} &  -2x -3y\\
+    \text{constraints:} & -2x -4y \geq -40 \,,\\
+    & -3x -2y \geq -24 \,,\\
+    & -3x-y \geq -18 \,,\\
+    & x, y\geq 0 \,.\\
+    \end{array}
+
+.. admonition:: Step I: 
+
+    Change the constraints :math:`\boldsymbol{A}\boldsymbol{x} \geq \boldsymbol{b}` into equalities by introducing new variables.
 
 Observe that the constraint :math:`\ \boldsymbol{A}\boldsymbol{x} \geq \boldsymbol{b}\ ` may be equivalently written as 
 :math:`\ \boldsymbol{w} =\boldsymbol{A}\boldsymbol{x} - \boldsymbol{b}\, ,\quad \boldsymbol{w}\geq 0\ `. 
@@ -269,30 +315,172 @@ so that we have to solve the problem
 
 where :math:`\boldsymbol{A}` is :math:`n\times (m+n)` matrix and :math:`x` has :math:`m+n` components.
 
-**Step II**: Operations on *the tableau*.
+**Example.**
 
-Write down the data in the tableau: :math:`\ T=\left[\begin{array}{cc} \boldsymbol{A} & \boldsymbol{b}\\ \boldsymbol{c} & \boldsymbol{0}\end{array}\right]\ `. Recall that :math:`\boldsymbol{A}` is :math:`n\times (m+n)` matrix, and so it may be written as
-:math:`[\boldsymbol{B}\;\; \boldsymbol{N}]\ ` where :math:`\boldsymbol{B}` is a square matrix of size :math:`n`, and :math:`\boldsymbol{N}` is :math:`n\times m` matrix. Similarly, we can write :math:`\ \boldsymbol{c}=[\boldsymbol{c_B}\;\; \boldsymbol{c_N}]\ `, :math:`\ \boldsymbol{x}=[\boldsymbol{x_B}\;\; \boldsymbol{x_N}]\ `, where 
-:math:`\boldsymbol{c_B}`, :math:`\boldsymbol{x_B}` and :math:`\boldsymbol{c_N}`, :math:`\boldsymbol{x_N}` have respectively :math:`n` and :math:`m` components. In this way,
+In case of Example 1., we obtain
+
+.. math::
+
+    \boldsymbol{A}=\left[\begin{array}{ccccc}
+    -2 & -4 & -1 & 0 & 0\\ 
+    -3 & -2 & 0 & -1 & 0\\
+    -3 & -1 & 0 & 0 & -1\\
+    \end{array}\right],\qquad
+    \boldsymbol{b}=\left[\begin{array}{c} -40 \\ -24 \\ -18 \end{array}\right],\qquad
+    \boldsymbol{c}=\left[\begin{array}{c} -2 \\ -3 \\ 0 \\ 0 \\ 0 \end{array}\right],\qquad
+    \boldsymbol{x}=\left[\begin{array}{c} x \\ y \\ w_1 \\ w_2 \\ w_3 \end{array}\right].
+
+.. admonition:: Step II: 
+
+    Find a point that satisfies the constraints.
+
+It is convenient to write down the data in the tableau: :math:`\ T=\left[\begin{array}{cc} \boldsymbol{A} & \boldsymbol{b}\\ \boldsymbol{c} & 0\end{array}\right]`. Recall that :math:`\boldsymbol{A}` is :math:`n\times (m+n)` matrix, and so it may be written as
+:math:`[\boldsymbol{B}\;\; \boldsymbol{N}]\ ` where :math:`\boldsymbol{B}` is a square matrix of size :math:`n`, and :math:`\boldsymbol{N}` is :math:`n\times m` matrix. Similarly, we can write 
+:math:`\ \boldsymbol{c}=\left[\begin{array}{c}\boldsymbol{c_B}\\ \boldsymbol{c_N}\end{array}\right]`, 
+:math:`\ \boldsymbol{x}=\left[\begin{array}{c}\boldsymbol{x_B}\\ \boldsymbol{x_N}\end{array}\right]`, where 
+:math:`\boldsymbol{c_B}`, :math:`\boldsymbol{x_B}` and :math:`\boldsymbol{c_N}`, :math:`\boldsymbol{x_N}` 
+have respectively :math:`n` and :math:`m` components. In this way,
 
 .. math::
 
     T=\left[\begin{array}{cccc} \boldsymbol{B} & \boldsymbol{N} & | & \boldsymbol{b}\\ 
     \boldsymbol{c_B} & \boldsymbol{c_N} & | & 0\end{array}\right]\,,\qquad 
-    \boldsymbol{x}=\left[\begin{array}{c} \boldsymbol{x_B} \\ \boldsymbol{x_N}\end{array}\right].
+    \boldsymbol{x}=\left[\begin{array}{c} \boldsymbol{x_B} \\ \boldsymbol{x_N}\end{array}\right],
     
-One should read this as 
+which should be interpreted as 
 
 .. math::
 
     \left[\begin{array}{cc} \boldsymbol{B} & \boldsymbol{N}\end{array}\right]
     \left[\begin{array}{c} \boldsymbol{x_B} \\ \boldsymbol{x_N}\end{array}\right]
     =\boldsymbol{b}\,,\qquad
-    \left[\begin{array}{cc} \boldsymbol{c_B} & \boldsymbol{c_N}\end{array}\right]
+    \left[\begin{array}{cc} \boldsymbol{c_B}^T & \boldsymbol{c_N}^T\end{array}\right]
     \left[\begin{array}{c} \boldsymbol{x_B} \\ \boldsymbol{x_N}\end{array}\right]
-    =\boldsymbol{0}
+    =\boldsymbol{0}\, .
 
-**Step IIa**: Reduced tableau.
+In order to find a point :math:`\boldsymbol{x_B}` which satisfies the constraints of the problem it suffices to perform Gauss Jordan elimination on the first :math:`n` rows of :math:`T` (i.e., excluding the last row) so that the submatrix :math:`[\boldsymbol{B}\; \boldsymbol{N}]` is in reduced row echelon form. This is equivalent to multiplication of these rows by :math:`\boldsymbol{B}^{-1}` on the left. We obtain:
+
+.. math::
+
+    T=\left[\begin{array}{cccc} \boldsymbol{I} & \boldsymbol{B}^{-1}\boldsymbol{N} & | & \boldsymbol{B}^{-1}\boldsymbol{b}\\ 
+    \boldsymbol{c_B}^T & \boldsymbol{c_N}^T & | & 0\end{array}\right]\,,
+    
+which means that 
+
+.. math::
+
+        \boldsymbol{x_B} = -\boldsymbol{B}^{-1}\boldsymbol{N}\boldsymbol{x_N}+\boldsymbol{B}^{-1}\boldsymbol{b}\,,
+        \qquad\qquad
+        \text{cost:}\quad \boldsymbol{c_B}^T\boldsymbol{B}^{-1}\boldsymbol{b}\,.
+
+**Example.**
+
+In Example 1.,
+
+.. math::
+
+    T=\left[\begin{array}{ccccccc} 
+    -2 & -4 & -1 & 0 & 0 & | & -40\\ 
+    -3 & -2 & 0 & -1 & 0 & | & -24\\ 
+    -3 & -1 & 0 & 0 & -1 & | & -18\\ 
+    -2 & -3 & 0 & 0 &  0 & | & 0\\
+    \end{array}\right]\,.
+
+We use Sage to determine :math:`\boldsymbol{x_B}` and current cost.
+
+.. code-block:: python
+
+    sage: B=Matrix([[-2,-4,-1],[-3,-2,0],[-3,-1,0]])
+    sage: N=Matrix([[0,0],[-1,0],[0,-1]])
+    sage: b=Matrix([[-40],[-24],[-18]])
+    sage: cB=Matrix([-2,-3,0])
+    sage: cN=Matrix([0, 0])
+    sage: T=block_matrix(QQ,[[B,N,b],[cB, cN, 0]])
+    sage: T
+    
+    [ -2  -4  -1|  0   0|-40]
+    [ -3  -2   0| -1   0|-24]
+    [ -3  -1   0|  0  -1|-18]
+    [-----------+-------+---]
+    [ -2  -3   0|  0   0|  0]
+
+Before we proceed, let's look what is actually happenning. The above table means that we are looking for a solution of the following system of equations:
+
+.. math::
+
+    \begin{alignat*}{7}
+    -2x & \, - \, 4y & \, - \, w_1 & & & \; =\; & -40 \\
+    -3x & \, - \, 2y & & \, - \, w_2 & & \; =\; & -24 \\
+    -3x & \, - \, y & & & \, - \, w_3 & \; =\; & -18 
+    \end{alignat*}
+
+The division means that ultimately we care only about the variables :math:`x,y,w_1` and we will set later :math:`w_2=w_3=0`, 
+that is, we want to solve 
+
+.. math::
+
+    \begin{alignat*}{5}
+    -2x & \, - \, 4y & \, - \, w_1 & \; =\; & -40 \\
+    -3x & \, - \, 2y &  & \; =\; & -24 \\
+    -3x & \, - \, y  &  & \; =\; & -18 
+    \end{alignat*}
+    
+If we look at the first picture from Example 1, this means that we want to compute the intersection point of the blue and the green line and under the condition that the point is under the purple line. 
+
+From another point of view, if we write this system of equation in a column picture, this means that
+we want to find constants :math:`x,y,w_1` so that linear combination of vectors 
+(or points :math:`\ (-2,-3,-3),\, (-4,-2,-1),\, (-1,0,0)\ `) gives the vector :math:`b` (the point :math:`\ (-40,-24,-18)\ `): 
+
+.. math::
+
+    \left[\begin{array}{r} -2\\ -3\\ -3\end{array}\right] x +  
+    \left[\begin{array}{r} -4\\ -2\\ -1\end{array}\right] y +
+    \left[\begin{array}{r} -1\\ 0\\ 0\end{array}\right] w_1 =
+    \left[\begin{array}{r} -40\\ -24\\ -18\end{array}\right]
+
+Geometrically, this means that we consider a plane determined by the points :math:`\ (-2,-3,-3),\, (-4,-2,-1),\, (-1,0,0)\ ` 
+and containing the point :math:`\ (-40,-24,-18)\ `.
+
+We use Sage to compute :math:`x,y,w_1`:
+
+.. code-block:: python
+
+    sage: Tr=block_matrix([[B.inverse(),zero_matrix(3,1)],[zero_matrix(1,3),1]])*T
+    sage: Tr
+    
+    [    1     0     0| -1/3   2/3|    4]
+    [    0     1     0|    1    -1|    6]
+    [    0     0     1|-10/3   8/3|    8]
+    [-----------------+-----------+-----]
+    [   -2    -3     0|    0     0|    0]
+
+Hence,
+
+.. math::
+
+    \begin{alignat*}{3}
+    x &\; =\; & \frac13 w_2 &\, -\,\frac23 w_3 & \, +\, 4\\
+    y &\; =\; & -w_2 & \, +\, w_3 &\, +\, 6\\
+    w_1 &\; =\; & \frac{10}{3} w_2 & \, -\,\frac83 w_3 & \, +\, 8
+    \end{alignat*}
+
+and if we set :math:`w_2=w_3=0`, we obtain :math:`(x,y,w_1)=(4,6,8)` which corresponds to the point :math:`(4,6)`, the intersection of the blue and the green line, as expected.
+
+The cost at this corner is equal to 
+
+.. math::
+
+    \left[\begin{array}{ccc} -2 & -3 & 0 \end{array}\right] \left[\begin{array}{c} 4 \\ 6\\ 8 \end{array}\right]
+    = -24 .
+
+.. admonition:: Step III:
+
+    Is the cost at this point lowest possible?
+
+
+
+
+
 
 
 
