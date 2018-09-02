@@ -211,11 +211,11 @@ div.sphinxsidebar ul
 }
 
 div.sphinxsidebar li {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 
 div.sphinxsidebar li > ul {
-    margin-top: 0px;
+    margin-top: 15px;
 }
 
 div.sphinxsidebar a
