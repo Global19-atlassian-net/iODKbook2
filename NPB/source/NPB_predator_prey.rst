@@ -129,7 +129,7 @@ We will obtain the phase trajectories or phase curves, i.e. the curves
 on the plane :math:`(x, y)`. The phase curves are given by the
 parametric relation :math:`(x(t), y(t))`. To get its form, we devide the
 second equation by the first equation in the set of two Lotka-Volterra
-equations. As a result, one has
+equations. As a result, one has:
 
 .. math:: \frac{dy}{dx}= \frac{\alpha y (x-1)}{x(1-y)}
 
@@ -147,30 +147,34 @@ by initial conditions :math:`(x(0), y(0)`. The minimal value is for the
 initial conditions :math:`(x(0)=1, y(0)=1)`> we insert these value to
 the above equation and get :math:`H_0 = 1+\alpha`. Below we present 3
 phase curves for various values of :math:`H_0` (i.e. for different
-initial conditions) . Because the relation between :math:`y` and
+initial conditions). Because the relation between :math:`y` and
 :math:`x` is an implicit equation its graphical realization can be
 obtained by using of SAGE in the following way:
 
 
-.. figure:: output_3_0.png
-   :scale: 120
+.. figure:: lotka_phase.png
+   :scale: 100
    :align: center
    
-   Phase curves of the Lotka-Volterra system.
+   Phase curves of the Lotka-Volterra system. Red dot denote initial condition.
 
 .. admonition:: Experiment with Sage!
 
-    Create phase curves of the  Lotka-Volterra system.
+    Investigate how parameters: initial condition :math:`x_0,y_0` and :math:`\alpha` change phase curves of the  Lotka-Volterra system.
     
 .. sagecellserver::
     :linked: false
-
-    (x,y) = var('x,y') 
-    p1 = implicit_plot(2*x+y -2*ln(x) - ln(y) -5.5, (x,0, 4), (y, 0, 6), color="violet") 
-    p2 = implicit_plot(2*x+y -2*ln(x) - ln(y) -5, (x,0, 4), (y, 0, 6), color="red")
-    p3 = implicit_plot(2*x+y -2*ln(x) - ln(y) -4, (x,0, 4), (y, 0, 6), color="green",aspect_ratio=1/2)
-    show(p1+p2+p3,figsize=5)
-
+    
+    var('x z a x0 y0')
+    phase_curve = -z + log(z) == a*x - a*x0 - a*log(x) + a*log(x0) - y0 + log(y0)
+    @interact
+    def _(a_=slider(1e-2,2,0.1,default=1.0),
+          x0_=slider(1e-3,4,0.04,default=1),
+          y0_=slider(1e-3,5,0.04,default=1.2)):
+        p = implicit_plot(phase_curve.subs(a==a_,x0==x0_,y0==y0_),(x,0,5),(z,0,5))
+        p += point((x0_,y0_),color='red',size=15,legend_label='ic')
+        p += point( (1,1),color='green',size=20,legend_label='fix point')
+        p.show(figsize=4)
 
 
 
@@ -186,23 +190,33 @@ Time evolution in Lotka-Volterra systems
 The time dependence of :math:`x(t)` and :math:`y(t)` can easily be
 obtained using the SAGE:
 
+
+
+.. fig001:
+
+.. figure:: lotka_voltera_t.png
+   :alt: image
+   :figclass: align-center
+
+   Time evolution in Lotka-Volterra system
+
+
+.. admonition:: Experiment with Sage!
+
+    Investigate how parameters: initial condition :math:`x_0,y_0` and :math:`\alpha` change phase curves
+    of the Lotka-Volterra system.
+   
+    
 .. sagecellserver::
+    :linked: false
 
     var('x,y')    
     a = 2    ## it is the parameter alpha
     T = srange(0,30,0.01)
     sol = desolve_odeint(vector([x-x*y, a*(x*y-y)]), [1, 0.3],T,[x,y]) 
-    lin( zip ( T,sol[:,0]) ,color='green',figsize=(6, 3), legend_label="x")+\
+    line( zip ( T,sol[:,0]) ,color='green',figsize=(6, 3), legend_label="x")+\
      line( zip ( T,sol[:,1]) ,color='black',legend_label="y")
 
-
-.. fig001:
-
-.. figure:: output_5_0.png
-   :alt: image
-   :figclass: align-center
-
-   Time evolution in Lotka-Volterra system
 
 
 
@@ -214,15 +228,6 @@ to food is limited for predators. It causes the lower birth rate for
 predators and larger growth rate for prey. In turn, food resorces for
 predators are greater and their growth rate increases. The cycle starts
 to repeat.
-
-.. sagecellserver::
-
-    @interact
-    
-    def _(x0=slider(0.1,5,0.01)):
-    
-        plt = list_plot(sol.tolist(), plotjoined=True, figsize=(6, 3),ymin=0.1,ymax=2)
-        plt.show()
 
 
 What is the relation between :math:`H_0` and the period of oscillations?
