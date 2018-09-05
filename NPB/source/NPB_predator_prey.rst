@@ -152,7 +152,7 @@ initial conditions). Because the relation between :math:`y` and
 obtained by using of SAGE in the following way:
 
 
-.. figure:: lotka_phase.png
+.. figure:: figs/lotka_phase.png
    :scale: 100
    :align: center
    
@@ -194,7 +194,7 @@ obtained using the SAGE:
 
 .. fig001:
 
-.. figure:: lotka_voltera_t.png
+.. figure:: figs/lotka_voltera_t.png
    :alt: image
    :figclass: align-center
 
@@ -263,15 +263,9 @@ condition is :math:`(1, 0.3) --\gt H2`.
 
 
 
-.. image:: output_13_0.png
+.. image:: figs/output_13_0.png
 
 
-
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_11_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
 
 From both figures we conclude that if :math:`H_1 \lt H_2` then the
 oscillation amplitude is smaller and the oscillations period is smaller
@@ -285,7 +279,7 @@ as well. It corresponds to the phase curves with a smaller perimeter.
 
 
 
-.. image:: output_15_0.png
+.. image:: figs/output_15_0.png
 
 
 

@@ -1,5 +1,5 @@
-Population dynamics: continuous models for single species
-=========================================================
+Continuous models for single species
+====================================
 
 Malthus model
 -------------

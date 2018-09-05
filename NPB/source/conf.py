@@ -43,7 +43,13 @@ extensions = [
 	'sphinx.ext.ifconfig',
 	'sphinx.ext.mathjax',
 	'sphinx.ext.viewcode',
-        'sphinx-sagecell-ext.sagecell' ]
+        'sphinx-sagecell-ext.sagecell',
+    'nbsphinx',
+    'nbsphinx_link',
+    'jupyter_sphinx.embed_widgets']
+    
+    
+
 #	'icsecontrib.sagecellserver'
 #'sphinx.ext.intersphinx',
 
