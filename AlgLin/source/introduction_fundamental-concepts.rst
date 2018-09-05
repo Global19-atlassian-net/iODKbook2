@@ -581,6 +581,8 @@ hence is a basis of :math:`\,V.\ ` :math:`\ \ \bullet`
    aby generowały one całą przestrzeń, 
    a nie jakąś jej właściwą podprzestrzeń.
 
+.. _`intro-dimension`:
+
 Dimension of a Vector Space
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

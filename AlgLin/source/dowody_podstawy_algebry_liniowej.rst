@@ -1,3 +1,4 @@
+.. _`proofs-fund`:
 
 Fundamental Concepts in Linear Algebra
 --------------------------------------
