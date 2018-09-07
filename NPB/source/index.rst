@@ -21,10 +21,13 @@ Population dynamics
 Notebooks:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     notebooks/Lotka_Volterra_with_SAGE
+    notebooks/May_model
+    notebooks/May_model_parameter_space_plot
 
+    
 
 Chemical Kinetics
 =================

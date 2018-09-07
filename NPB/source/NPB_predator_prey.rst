@@ -163,11 +163,14 @@ obtained by using of SAGE in the following way:
    :scale: 100
    :align: center
    
-   Phase curves of the Lotka-Volterra system. Red dots denote initial condition. Integration constant :math:`H_0=2.31,2.61,3.21,3.92,4.70`.
+   Phase curves of the Lotka-Volterra system. Red dots denote initial
+   condition. Integration constant
+   :math:`H_0=2.31,2.61,3.21,3.92,4.70`.
 
 .. admonition:: Experiment with Sage!
 
-    Investigate how parameters: initial condition :math:`x_0,y_0` and :math:`\alpha` change phase curves of the  Lotka-Volterra system.
+    Investigate how parameters: initial condition :math:`x_0,y_0` and
+    :math:`\alpha` change phase curves of the Lotka-Volterra system.
     
 .. sagecellserver::
     :linked: false
@@ -255,8 +258,9 @@ However, it is better to determine the period numerically from the solution and
 
 
 
-We conclude that if the phase curve is boarder i.e. :math:`H_0` increases, then  amplitude  and the oscillations period is growssmaller
-as well. 
+We conclude that if the phase curve is boarder i.e. :math:`H_0`
+increases, then amplitude and the oscillations period is growssmaller
+as well.
 
 
 
@@ -340,7 +344,7 @@ where we have defined the following dimensionless parameters:
 
 This scaling procedure leads to a set of two differential equations with
 only three parameters. The dimensionless time is scaled to the
-reproducinng rate :math:`r` of prey. The parameter :math:`\beta` is the
+reproducing rate :math:`r` of prey. The parameter :math:`\beta` is the
 relation of the reproducing rate of predators :math:`s` to the
 reproducing rate of prey :math:`r`. If :math:`\beta \lt 1` then the
 reproducting tempo of predators is smaller than prey and therefore the
@@ -351,7 +355,8 @@ But because the set of two equations is nonlinear, such simplified
 considerations cannot be fully true. We have to use precise mathematical
 methods to check this.
 
-**STATIONARY STATES**
+Stationary states
+~~~~~~~~~~~~~~~~~
 
 Stationary states are determined by a set of two algebraic equations:
 
@@ -364,7 +369,7 @@ One stationary state can easily be found:
 .. math:: x_1=1, \quad y_1 =0
 
 In theis state there are no predators and the state of prey is the same
-as in the Verhulst system. We should cjeck whether this stse is stable.
+as in the Verhulst system. We should check whether this stse is stable.
 
 From the second equation we find that :math:`y=x` solves this equation.
 We put it in the first equation and then the other stationary states are
@@ -389,7 +394,8 @@ So, the second stationary state is
 Let us note that this state does not depend on the parameter
 :math:`\beta`, i.e. on the birth rate of prey and predators.
 
-**STABILITY OF STATIONARY STATES**
+Stability of stationary states
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A. In the first step, we calculate the Jacobi matrix:
 
@@ -439,7 +445,8 @@ conditions for its negative part reads:
 
 .. math:: \lambda_1 + \lambda_2 \lt 0  \quad \mbox{and} \quad \lambda_1 \; \lambda_2 \gt  0, \quad \quad \mbox{it means that} \quad \mbox{Tr} \, J \lt  0, \quad \quad \mbox{det} \,J \gt  0
 
-**WORK:**
+.. admonition:: Exercise
+
     Show that for arbitrary (positive) values of parameters
     :math:`\alpha, \beta, d`, the second condition
     :math:`\mbox{det} \,J \gt 0` is always fulfiled.
@@ -451,519 +458,126 @@ takes the form:
 
 Because :math:`x_2` depends on 2 parameters :math:`\alpha` and
 :math:`d`, the right-hand side defines the surface in the 3-dimensional
-space.
+space. This surface is a boundary between two qualitatively different behaviours of the system:
 
---------------
+  - below the surface the system has a limit cycle
+  - above the urface the system has a fixpoint (see figure)
 
-.. code:: ipython2
 
-    var('a b d x y')
-    ode_lotka=[x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)];
-    show(ode_lotka)
 
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left[-{\left(x - 1\right)} x - \frac{a x y}{d + x}, -b y {\left(\frac{y}{x} - 1\right)}\right]</script></html>
-
-
-.. math:: \left[-{\left(x - 1\right)} x - \frac{a x y}{d + x}, -{\left(\frac{y}{x} - 1\right)} b y\right]
-
-.. code:: ipython2
-
-    region_plot( solve(ode_lotka,[x,y])[4][1].rhs()>0,(a,-2,2),(d,-2,2) )
-
-
-
-
-.. image:: output_19_0.png
-
-
-
-.. code:: ipython2
-
-    sol = solve(ode_lotka,[x,y])[4]
-
-.. code:: ipython2
-
-    J = jacobian(ode_lotka,[x,y])
-
-.. code:: ipython2
-
-    J.subs(sol).trace()
-
-
-
-
-.. parsed-literal::
-
-    (a + d - sqrt(a^2 + 2*(a + 1)*d + d^2 - 2*a + 1) - 1)^2*a/(a - d - sqrt(a^2 + 2*(a + 1)*d + d^2 - 2*a + 1) - 1)^2 - (a + d - sqrt(a^2 + 2*(a + 1)*d + d^2 - 2*a + 1) - 1)*a/(a - d - sqrt(a^2 + 2*(a + 1)*d + d^2 - 2*a + 1) - 1) + a - b + d - sqrt(a^2 + 2*(a + 1)*d + d^2 - 2*a + 1)
-
-
-
-.. code:: ipython2
-
-    detJ = J.subs(sol).det()
-    trJ = J.subs(sol).trace()
-
-.. code:: ipython2
-
-    eps = 1e-3
-    plot3d( trJ.solve(b)[0].rhs(), (a,eps,2),(d,eps,2) ).show(viewer='tachyon')
-
-
-
-.. image:: output_24_0.png
-
-
-.. code:: ipython2
-
-    eps = 1e-3
-    region_plot( trJ.solve(b)[0].rhs()>0, (a,eps,2),(d,eps,2) )
-
-
-
-
-.. image:: output_25_0.png
-
-
-
-.. code:: ipython2
-
-    region_plot( (detJ/b).expand().full_simplify()>0, (a,-2,2),(d,-2,2) )
-
-
-
-
-.. image:: output_26_0.png
-
-
-
-.. code:: ipython2
-
-    y_z_pierwszego=solve(ode_lotka[0],y,solution_dict=True)[0]
-    drugie=ode_lotka[1].subs(y_z_pierwszego)
-    show(drugie)
-    show(solve(drugie,x,solution_dict=True)[0])
-    x_0=x.subs(solve(drugie,x,solution_dict=True)[1])
-    y_0=y_z_pierwszego[y].subs({x:x_0}).expand()
-    show(x_0)
-    show( y_0 )
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{{\left({\left(d - 1\right)} x + x^{2} - d\right)} b {\left(\frac{{\left(d - 1\right)} x + x^{2} - d}{a x} + 1\right)}}{a}</script></html>
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left\{x : -\frac{1}{2} \, a - \frac{1}{2} \, d - \frac{1}{2} \, \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} + \frac{1}{2}\right\}</script></html>
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{1}{2} \, a - \frac{1}{2} \, d + \frac{1}{2} \, \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} + \frac{1}{2}</script></html>
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{1}{2} \, a - \frac{1}{2} \, d + \frac{1}{2} \, \sqrt{a^{2} + 2 \, a d + d^{2} - 2 \, a + 2 \, d + 1} + \frac{1}{2}</script></html>
-
-
-.. math:: -\frac{{\left(\frac{{\left(d - 1\right)} x + x^{2} - d}{a x} + 1\right)} {\left({\left(d - 1\right)} x + x^{2} - d\right)} b}{a}
-
-.. math:: \left\{x : -\frac{1}{2} \, a - \frac{1}{2} \, d - \frac{1}{2} \, \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} + \frac{1}{2}\right\}
-
-.. math:: -\frac{1}{2} \, a - \frac{1}{2} \, d + \frac{1}{2} \, \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} + \frac{1}{2}
-
-.. math:: -\frac{1}{2} \, a - \frac{1}{2} \, d + \frac{1}{2} \, \sqrt{a^{2} + 2 \, a d + d^{2} - 2 \, a + 2 \, d + 1} + \frac{1}{2}
-
-.. code:: ipython2
-
-    ode_lotka[0].diff(x).show()
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-2 \, x - \frac{a y}{d + x} + \frac{a x y}{{\left(d + x\right)}^{2}} + 1</script></html>
-
-
-.. math:: -\frac{a y}{d + x} + \frac{a x y}{{\left(d + x\right)}^{2}} - 2 \, x + 1
-
-.. code:: ipython2
-
-    JJ = jacobian(ode_lotka,[x,y])
-    show(JJ)
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rr}
-    -2 \, x - \frac{a y}{d + x} + \frac{a x y}{{\left(d + x\right)}^{2}} + 1 & -\frac{a x}{d + x} \\
-    \frac{b y^{2}}{x^{2}} & -b {\left(\frac{y}{x} - 1\right)} - \frac{b y}{x}
-    \end{array}\right)</script></html>
-
-
-.. math::
-
-   \begin{aligned}
-   \left(\begin{array}{rr}
-   -\frac{a y}{d + x} + \frac{a x y}{{\left(d + x\right)}^{2}} - 2 \, x + 1 & -\frac{a x}{d + x} \\
-   \frac{b y^{2}}{x^{2}} & -{\left(\frac{y}{x} - 1\right)} b - \frac{b y}{x}
-   \end{array}\right)
-   \end{aligned}
-
-.. code:: ipython2
-
-    # x0=y0 ;-) 
-    var('x0')
-    JJ0 = JJ.subs({x:x0,y:x0})
-
-.. code:: ipython2
-
-    show(JJ0)
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rr}
-    -\frac{a x_{0}}{d + x_{0}} - 2 \, x_{0} + \frac{a x_{0}^{2}}{{\left(d + x_{0}\right)}^{2}} + 1 & -\frac{a x_{0}}{d + x_{0}} \\
-    b & -b
-    \end{array}\right)</script></html>
-
-
-.. math::
-
-   \begin{aligned}
-   \left(\begin{array}{rr}
-   -\frac{a x_{0}}{d + x_{0}} + \frac{a x_{0}^{2}}{{\left(d + x_{0}\right)}^{2}} - 2 \, x_{0} + 1 & -\frac{a x_{0}}{d + x_{0}} \\
-   b & -b
-   \end{array}\right)
-   \end{aligned}
-
-.. code:: ipython2
-
-    show(JJ0.trace())
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-b - \frac{a x_{0}}{d + x_{0}} - 2 \, x_{0} + \frac{a x_{0}^{2}}{{\left(d + x_{0}\right)}^{2}} + 1</script></html>
-
-
-.. math:: -\frac{a x_{0}}{d + x_{0}} + \frac{a x_{0}^{2}}{{\left(d + x_{0}\right)}^{2}} - b - 2 \, x_{0} + 1
-
-.. math:: b = x_1\left[ \frac{\alpha x_1}{(x_1+d)^2} -1\right]
-
-.. code:: ipython2
-
-    expr_murray = x0*(a*x0/(x0-d)^2-1)
-    expr_murray.show()
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}x_{0} {\left(\frac{a x_{0}}{{\left(d - x_{0}\right)}^{2}} - 1\right)}</script></html>
-
-
-.. math:: {\left(\frac{a x_{0}}{{\left(d - x_{0}\right)}^{2}} - 1\right)} x_{0}
-
-.. code:: ipython2
-
-    show( JJ0.trace().subs({x0:x_0})+b )
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left(a + d - \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} - 1\right)}^{2} a}{{\left(a - d - \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} - 1\right)}^{2}} - \frac{{\left(a + d - \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} - 1\right)} a}{a - d - \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} - 1} + a + d - \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1}</script></html>
-
-
-.. math::
-
-   \begin{aligned}
-   -\frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)} a}{a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1} \\ + \frac{{\left(a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2} a}{{\left(a - d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right)}^{2}} \\ + a + d - \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1}
-   \end{aligned}
-
-.. code:: ipython2
-
-    p={a:1.23,d:1.01}
-    show( JJ0.trace().subs({x0:x_0}).subs(p) )
-    expr_murray.subs({x0:x_0}).subs(p)
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-b - 0.404054289657954</script></html>
-
-
-
-
-.. parsed-literal::
-
-    1.35696399470668
-
-
-
-.. math::
-
-   \begin{aligned}
-   -b - 0.404054289657954 \\
-   1.35696399470668
-   \end{aligned}
-
-.. code:: ipython2
-
-    var('a,d,b,x,y,t')
-    ode_lotka=[x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)];
-    #Murray eq. 3.28
-    f(a,d)=(a-sqrt(  (1-a-d)^2+4*d) )*(1+a+d-sqrt((1-a-d)^2+4*d))/(2*a)
-    @interact
-    def myf(a_in = slider(0,2,0.01,default=1.0),b_in = slider(0,2,0.01,default=0.1),d_in = slider(0,2,0.01,default=0.1) ):
-        p={a:a_in,d:d_in,b:b_in}
-        ode_lotka_num=[i.subs(p) for i in ode_lotka]
-        pkt_osob=solve(ode_lotka_num,x,y, solution_dict=True)
-        x_osobliwy,y_osobliwy=0,0
-        plt_pkt=[]
-        for n_pkt,pkt in enumerate(pkt_osob):
-           x_osobliwy,y_osobliwy=pkt[x].n(),pkt[y].n()
-           plt_pkt.append(point([x_osobliwy,y_osobliwy],size=30,color='red') )
-           JJ=jacobian(ode_lotka_num,[x,y])
-           JJ0=JJ.subs({x:x_osobliwy+1e-8,y:y_osobliwy+1e-8})
-           print n_pkt+1,":",x_osobliwy.n(digits=3),y_osobliwy.n(digits=3),vector(JJ0.eigenvalues()).n(digits=3)
-           if pkt[x]>0 and pkt[y]>0 :
-               print "Czy pkt. jest stabilny?",bool(b_in>f(a_in,d_in))
-        plt1 = plot_vector_field(vector(ode_lotka_num)/vector(ode_lotka_num).norm(),(x,-0.1,2),(y,-0.1,2))
-        #plt2a = implicit_plot(ode_lotka_num[0],(x,-0.10,2),(y,-0.10,2),color='green')
-        plt2a = plot(solve(ode_lotka_num[0],y)[0].rhs(),(x,-0.10,2),ymin=-0.10,ymax=2, color='green')
-        show(ode_lotka_num)
-        plt2b = implicit_plot(ode_lotka_num[1],(x,-0.10,2),(y,-.010,2),color='blue',xmin=-0.03)
-        T = srange(0,123,0.1)
-        sol1=desolve_odeint(vector(ode_lotka_num), [0.82,0.85], T, [x,y])
-        plt_solution = list_plot(sol1.tolist(), plotjoined=True, color='brown')
-        show(sum(plt_pkt)+plt1+plt2a+plt2b+plt_solution)
-
-
-
-.. raw:: html
-
-    <p>Failed to display Jupyter Widget of type <code>sage_interactive</code>.</p>
-    <p>
-      If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
-      that the widgets JavaScript is still loading. If this message persists, it
-      likely means that the widgets JavaScript library is either not installed or
-      not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html">Jupyter
-      Widgets Documentation</a> for setup instructions.
-    </p>
-    <p>
-      If you're reading this message in another frontend (for example, a static
-      rendering on GitHub or <a href="https://nbviewer.jupyter.org/">NBViewer</a>),
-      it may mean that your frontend doesn't currently support widgets.
-    </p>
-
-
-
-.. code:: ipython2
-
-    var('a,d')
-    f(a,d)=(a-sqrt(  (1-a-d)^2+4*d) )*(1+a+d-sqrt((1-a-d)^2+4*d))/(2*a)
-    show(f)
-    implicit_plot( f(a,d),(d,0,.61),(a,0,2),aspect_ratio=0.3,  figsize=(6, 3), axes_labels=[r'$d$','$a$'] )
-
-
-
-.. raw:: html
-
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left( a, d \right) \ {\mapsto} \ \frac{{\left(a + d - \sqrt{{\left(a + d - 1\right)}^{2} + 4 \, d} + 1\right)} {\left(a - \sqrt{{\left(a + d - 1\right)}^{2} + 4 \, d}\right)}}{2 \, a}</script></html>
-
-
-
-
-.. image:: output_45_1.png
-
-
-
-.. math:: \left( a, d \right) \ {\mapsto} \ \frac{{\left(a - \sqrt{{\left(a + d - 1\right)}^{2} + 4 \, d}\right)} {\left(a + d - \sqrt{{\left(a + d - 1\right)}^{2} + 4 \, d} + 1\right)}}{2 \, a}
-
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_20_sage0.png
+.. figure:: figs/May_parameters3d.png
    :alt: image
    :figclass: align-center
 
-   image
-
-Under this plane
-
-.. math:: b = x_1\left[ \frac{\alpha x_1}{(x_1+d)^2} -1\right] = \phi (\alpha, d)
-
-the limit cycle is realized:
-
-.. code:: ipython2
-
-    sage: assume(a>0)
-    sage: sol1=solve(f(a,d)==0, d) 
-    sage: show(sol1)
-    sage: dm_expr=sol1[1].rhs()
-    sage: import sympy
-    sage: import numpy as np
-    sage: b2=np.vectorize( sympy.lambdify((a,d), sympy.sympify( f(a,d)  ) ) )
-    sage: bm=np.vectorize( sympy.lambdify(a,    sympy.sympify( f(a,0)  ) ) )
-    sage: dm=np.vectorize( sympy.lambdify(a,    sympy.sympify( dm_expr ) ) )
-    sage: from mpl_toolkits.mplot3d import Axes3D
-    sage: import matplotlib
-    sage: from matplotlib import cm
-    sage: from matplotlib import pyplot as plt
-    sage: step = 0.04
-    sage: maxval = 1.0
-    sage: fig = plt.figure()
-    sage: ax = fig.add_subplot(111, projection='3d',azim=134)
-    sage: x = np.linspace(0.5,6,115)
-    sage: y = np.linspace(0.00,1.,35)
-    sage: X,Y = np.meshgrid(x,y)
-    sage: # transform them to cartesian system
-    sage: X,Y = X,Y*(np.sqrt(X**2+4*X)-(1.0+X))
-    sage: #Y[:,i((X[7,0]**2+4*X[7,0])**0.5 - (1+X[7,0]) )
-    sage: #0.99*d(:,i)*((a1.^2+4.*a1)^0.5 - (1+a1) )
-    sage: Z = b2(X,Y)
-    sage: ax.plot_surface(X, Y, Z, rstride=2, cstride=2, cmap=cm.jet)
-    sage: #ax.plot_surface(X, Y, Z,  cmap=cm.jet)
-    sage: #ax.plot_wireframe(X, Y, Z)
-    sage: ax.set_zlim3d(0, 1)
-    sage: ax.set_xlim3d(0, 3)
-    sage: ax.set_ylim3d(0, .7)
-    sage: ax.set_xlabel(r'$a$')
-    sage: ax.set_ylabel(r'$d$')
-    sage: ax.set_zlabel(r'$b(a,d)$')
-    sage: ax.plot(x, dm(x), np.zeros_like(x), color=(.6,.1,.92),linewidth=3)
-    sage: ax.plot(x,np.zeros_like(x), bm(x),  color='red',linewidth=3)
-    sage: ax.plot([0],[0],[0])
-    sage: ax.view_init(elev=35, azim=134)
-    sage: plt.show()#plt.savefig("1.png")
+   The surface in the parameters space :math:`(\alpha,d,\beta)`. Below
+   this surface the system has a limit cycle and above it a fixpoint.
 
 
 
 .. raw:: html
 
-    <html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left[d = -a - \sqrt{a^{2} + 4 \, a} - 1, d = -a + \sqrt{a^{2} + 4 \, a} - 1, d = -a + \sqrt{a^{2} + 2 \, {\left(a + 1\right)} d + d^{2} - 2 \, a + 1} - 1\right]</script></html>
+    <iframe src="_static/May_k3d.html" height="500" width="100%"></iframe>
+   
 
 
+Time evolution of the system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: output_47_1.png
+We can analyze the system for particular choice of parameters. There
+are two important examples:
 
 
-.. math:: \left[d = -\sqrt{a + 4} \sqrt{a} - a - 1, d = \sqrt{a + 4} \sqrt{a} - a - 1, d = -a + \sqrt{2 \, {\left(a + 1\right)} d + a^{2} + d^{2} - 2 \, a + 1} - 1\right]
+**Solutions which tend to the limit cycle:**
 
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_21_1.png
+If once chooses the parameters :math:`\alpha = 1,\; \beta =t 0.1,\; d
+= 0.1 0` then the system has a unstable fix point inside the first
+quadrant, at
+:math:`x_0=y_0=\newcommand{\Bold}[1]{\mathbf{#1}}\frac{1}{20} \,
+\sqrt{41} - \frac{1}{20}`. Both eigenvalues of Jacobian in this posit
+have positive real parts, thus the point is unstable.  On the other
+hand the inspection of the vector field indicates that the flow in the
+phase space is transporting into the :math:`(0,1)\times(0,1)`
+region. It suggests that the system can have at least limit cycle. 
+
+.. figure:: figs/May_limit_cycle.png
    :alt: image
    :figclass: align-center
 
-   image
+   The phase portrait of a system and the location of the
+   :math:`\mathrm{Tr}J` and :math:`\det J` respective to critical
+   curve.
 
-**Solution which tends to the stable stationary state:**
-:math:`a \in (0, 0.5), \beta \gt 0, d \gt 0`
-
-.. code:: ipython2
-
-    var('x,y')
-    a, b, d = 0.3, 0.35, 0.1
-    T = srange(0,30,0.01)
-    sol2=desolve_odeint(\
-     vector([x*(1-x) - (a*x*y/(x+d)), b*y*(1-y/x)]),\
-     [0.2, 0.5],T,[x,y])
-    line( zip ( T,sol2[:,0]) ,color='green', figsize=(6, 3), legend_label="x")+\
-     line( zip ( T,sol2[:,1]) ,color='black',legend_label="y")
+Alternatively, one can figure out the stablity of the fix point from
+the sign of trace and determinant of the Jacobian in that point. 
 
 
+.. admonition:: Experiment with Sage!
+
+   Check the sign of trace and determinant of the Jacobian of the fix
+   point for parameters :math:`\alpha = 1,\; \beta =t 0.1,\; d=
+   0.1`. Calculate eigenvalues and compare if the same conclusions on
+   the stablility of the fix point can be drawn. Use:
+
+     - :code:`J.trace()`
+     - :code:`J.det()`
+     - :code:`J.eigenvalues()`
+
+         
+.. sagecellserver::
+
+   var('a,d,b,x,y,t')
+   ode_lotka = vector([x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)]);
+   p = {a:1.0, d:0.1, b:0.1}
+   sol = solve(list(ode_lotka.subs(p)),[x,y])[4]
+   J = jacobian(ode_lotka.subs(p),[x,y]).subs(sol).n()
+   show(J)
 
 
-.. image:: output_49_0.png
+.. admonition:: Experiment with Sage!
+
+   Draw time solution to the system for parameters
+   point :math:`\alpha = 1,\; \beta =0.1,\; d= 0.1`. 
 
 
 
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_22_sage0.png
+.. sagecellserver::
+
+   var('a,d,b,x,y,t')
+   ode_lotka = vector([x*(1-x)-(a*x*y)/(x+d),b*y*(1-y/x)]);
+   p = {a:1.0, d:0.1, b:0.1}
+   T = srange(0,250,0.4)
+   sol = desolve_odeint(ode_lotka.subs(p),[0.4,0.2],T,[x,y])
+   p =  line( zip(T,sol[:,0]),color='green',ymin=0,ymax=1,legend_label='prey')
+   p += line( zip(T,sol[:,1]),color='black',ymin=0,ymax=1,legend_label='predator')
+   show(p,figsize=(10,3))
+
+   
+
+**Solutions which tend to the stable spiral**
+
+If once chooses the parameters :math:`\alpha = 1,\; \beta =t 0.1,\; d
+= 1.` then the system has a unstable fix point inside the first
+quadrant, at
+:math:`x_0=y_0=\newcommand{\Bold}[1]{\mathbf{#1}}\frac{1}{20} \,
+\sqrt{41} - \frac{1}{20}`. Both eigenvalues of Jacobian in this posit
+have positive real parts, thus the point is unstable.  On the other
+hand the inspection of the vector field indicates that the flow in the
+phase space is transporting into the :math:`(0,1)\times(0,1)`
+region. It suggests that the system can have at least limit cycle. 
+
+
+.. figure:: figs/May_stable_node.png
    :alt: image
    :figclass: align-center
 
-   image
+   The phase portrait of a system and the location of the
+   :math:`\mathrm{Tr}J` and :math:`\det J` respective to critical
+   curve.
 
-.. code:: ipython2
+ 
+.. admonition:: Experiment with Sage!
 
-    a, b, d = 0.3, 0.35, 0.1
-    F(x,y)=x*(1-x) - a*x*y/(x+d)
-    G(x,y)= b*y*(1-y/x)
-    T = srange(0,30,0.01)
-    sol1=desolve_odeint(vector([F,G]), [0.2,0.5], T, [x,y])
-    list_plot(sol1.tolist(), plotjoined=True,  figsize=(6, 3))
+   Draw time solution to the system for parameters
+   point :math:`\alpha = 1,\; \beta =0.1,\; d= 1`. 
 
-
-
-
-.. image:: output_51_0.png
-
-
-
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_24_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
-
-**solutions which tend to the limit cycle:**
-:math:`a \gt 0.5 , \beta \gt 0, d \gt 0`
-
-.. code:: ipython2
-
-    var('x,y')
-    a, b, d = 1.3, 0.33, 0.1
-    T = srange(0,200,0.01)
-    sol2=desolve_odeint(\
-     vector([x*(1-x) - (a*x*y/(x+d)), b*y*(1-y/x)]),\
-     [0.2, 0.5],T,[x,y])
-    line( zip ( T,sol2[:,0]) ,color='green', figsize=(6, 3), legend_label="x")+\
-     line( zip ( T,sol2[:,1]) ,color='black',legend_label="y")
-
-
-
-
-.. image:: output_53_0.png
-
-
-
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_26_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
-
-.. code:: ipython2
-
-    a, b, d = 1.3, 0.33, 0.1
-    F(x,y)=x*(1-x) - a*x*y/(x+d)
-    G(x,y)= b*y*(1-y/x)
-    T = srange(0,250,0.01)
-    sol1=desolve_odeint(vector([F,G]), [0.2,0.5], T, [x,y])
-    list_plot(sol1.tolist(), plotjoined=True,  figsize=(6, 3))
-
-
-
-
-.. image:: output_55_0.png
-
-
-
-.. figure:: iCSE_BProcnielin02_z119_ofiara_drapiezca_media/cell_25_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
+   
