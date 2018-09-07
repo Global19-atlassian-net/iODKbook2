@@ -119,6 +119,7 @@ this differential equation.
     sol = desolve(eq,N,ivar = t)
     show(sol)
 
+.. experiment_verhulst:
 
 .. admonition:: Experiment with Sage!
 
@@ -129,17 +130,17 @@ this differential equation.
 
 
 .. sagecellserver::
-   :linked: false
+    :linked: false
 
-   var('t k')
-   assume(t>0)
-   N = function('N')(t)
-   eq = N.diff()== k*N
-   sol = desolve(eq,N,ivar = t,ics=[0,5.0])
+    var('t k')
+    assume(t>0)
+    N = function('N')(t)
+    eq = N.diff()== k*N
+    sol = desolve(eq,N,ivar = t,ics=[0,5.0])
 
-   plot(sol.subs(k==-1),(t,0,3),figsize=(5, 3),legend_label="k=-1")+\
-    plot(sol.subs(k==0),(t,0,3),legend_label="k=0",color='red')+\
-    plot(sol.subs(k==0.5),(t,0,3),legend_label="k=0.5",color='green')
+    plot(sol.subs(k==-1),(t,0,3),figsize=(5, 3),legend_label="k=-1")+\
+        plot(sol.subs(k==0),(t,0,3),legend_label="k=0",color='red')+\
+        plot(sol.subs(k==0.5),(t,0,3),legend_label="k=0.5",color='green')
 
 
 .. admonition:: Experiment with Sage!

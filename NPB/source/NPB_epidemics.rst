@@ -4,8 +4,14 @@ Epidemic model of Kermack-McKendrick
 Epidemic means a widespread outbreak of an infectious disease and many
 people are infected at the same time. The global epidemic is called
 pandemic, i.e. it exists in almost all of an area or in almost all of a
-group of people, animals, or plants. Panˈdemik/: pan means “all”; demic
-(or demographic) means “people.” Throughout history, there have been a
+group of people, animals, or plants. 
+
+.. sidebar:: Panˈdemik/:
+
+     pan means “all”; demic (or demographic) means “people.” 
+
+
+Throughout history, there have been a
 number of pandemics, such as smallpox and tuberculosis. One of the most
 devastating pandemics was the Black Death, which killed over 75 million
 people in 1350. The most recent pandemics include the HIV pandemic as

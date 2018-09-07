@@ -145,9 +145,16 @@ The integration of both sides of this equation yields:
 where :math:`H_0` is the integration constant. Its value is determined
 by initial conditions :math:`(x(0), y(0)`. The minimal value is for the
 initial conditions :math:`(x(0)=1, y(0)=1)`> we insert these value to
-the above equation and get :math:`H_0 = 1+\alpha`. Below we present 3
-phase curves for various values of :math:`H_0` (i.e. for different
-initial conditions). Because the relation between :math:`y` and
+the above equation and get :math:`H_0 = 1+\alpha`. 
+The explicit dependence of the integration constant on initial condition reads:
+
+.. math::
+
+    H_0 = \alpha x_{0} - \alpha \log\left(x_{0}\right) + y_{0} -  
+      \log\left(y_{0}\right)
+
+In a figure we present few phase curves for selected  :math:`H_0`  corresponding to  different
+initial conditions shown as red dot. . Because the relation between :math:`y` and
 :math:`x` is an implicit equation its graphical realization can be
 obtained by using of SAGE in the following way:
 
@@ -156,7 +163,7 @@ obtained by using of SAGE in the following way:
    :scale: 100
    :align: center
    
-   Phase curves of the Lotka-Volterra system. Red dot denote initial condition.
+   Phase curves of the Lotka-Volterra system. Red dots denote initial condition. Integration constant :math:`H_0=2.31,2.61,3.21,3.92,4.70`.
 
 .. admonition:: Experiment with Sage!
 
@@ -192,31 +199,11 @@ obtained using the SAGE:
 
 
 
-.. fig001:
-
 .. figure:: figs/lotka_voltera_t.png
    :alt: image
    :figclass: align-center
 
    Time evolution in Lotka-Volterra system
-
-
-.. admonition:: Experiment with Sage!
-
-    Investigate how parameters: initial condition :math:`x_0,y_0` and :math:`\alpha` change phase curves
-    of the Lotka-Volterra system.
-   
-    
-.. sagecellserver::
-    :linked: false
-
-    var('x,y')    
-    a = 2    ## it is the parameter alpha
-    T = srange(0,30,0.01)
-    sol = desolve_odeint(vector([x-x*y, a*(x*y-y)]), [1, 0.3],T,[x,y]) 
-    line( zip ( T,sol[:,0]) ,color='green',figsize=(6, 3), legend_label="x")+\
-     line( zip ( T,sol[:,1]) ,color='black',legend_label="y")
-
 
 
 
@@ -229,57 +216,47 @@ predators and larger growth rate for prey. In turn, food resorces for
 predators are greater and their growth rate increases. The cycle starts
 to repeat.
 
+   
+ 
 
 What is the relation between :math:`H_0` and the period of oscillations?
 Below we show the influence of initial conditions (i.e. :math:`H_0`) on
-the oscillations period.
-
-One initial condition is :math:`(1, 0.8) --\gt H1`. The second initial
-condition is :math:`(1, 0.3) --\gt H2`.
-
-.. code:: ipython2
-
-    H1=2*(1-ln(1)) + 0.8 - ln(0.8)
-
-.. math:: H1 == 3.02314355131421
-
-.. code:: ipython2
-
-    H2=2*(1-ln(1)) + 0.3 - ln(0.3)
-
-.. math:: H2 == 3.50397280432594
-
-.. code:: ipython2
-
-    var('x,y')
-    a=2
-    T = srange(0,30,0.01)
-    solu=desolve_odeint(\
-     vector([x-x*y, a*(x*y-y)]),\
-     [1, 0.8],T,[x,y])
-    line( zip ( T,sol[:,0]) ,color='green',figsize=(6, 3),legend_label="$H_2$")+\
-     line( zip ( T,solu[:,0]) ,color='black',legend_label="$H_1<H_2$")
+the oscillations period. We can plot several timeseries with Sage and draw some conclusions. 
 
 
 
+.. admonition:: Experiment with Sage!
 
-.. image:: figs/output_13_0.png
+    Investigate how the initial condition (i.e. integration constant)  change phase the frequency of oscillations.
+    
+.. sagecellserver::
+    :linked: false    
+    
+    a_ = 1.0
+    y0_ = 1.
+    T = srange(0,31,0.2)
+    var('x a y', domain='real') 
+    rhs =  vector([x-x*y, a*(x*y-y)])
+    @interact
+    def plot_time_x0(x0_=slider(1.01,6,0.1,default=2.)):
+        sol = desolve_odeint(rhs.subs([a==a_]), [x0_, y0_],T,[x,y])
+        p =  line( zip(T,sol[:,0]),color='green',ymin=0,ymax=6,legend_label='prey')
+        p += line( zip(T,sol[:,1]),color='black',ymin=0,ymax=6,legend_label='predator')
+        p.show(figsize=(8,3))
+   
+
+However, it is better to determine the period numerically from the solution and 
+
+.. figure:: figs/Lotka_T_x0.png
+   :alt: image
+   :figclass: align-center
+
+   The dependence of oscillation period on initial condition aor a fiven dimensionless paramter.
 
 
 
-From both figures we conclude that if :math:`H_1 \lt H_2` then the
-oscillation amplitude is smaller and the oscillations period is smaller
-as well. It corresponds to the phase curves with a smaller perimeter.
-
-.. code:: ipython2
-
-    list_plot(sol.tolist(), plotjoined=True,  color='green',figsize=(6, 3))+\
-     list_plot(solu.tolist(), plotjoined=True,  color='black',figsize=(6, 3))
-
-
-
-
-.. image:: figs/output_15_0.png
+We conclude that if the phase curve is boarder i.e. :math:`H_0` increases, then  amplitude  and the oscillations period is growssmaller
+as well. 
 
 
 

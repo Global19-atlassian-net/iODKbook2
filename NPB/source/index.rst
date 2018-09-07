@@ -13,16 +13,15 @@ Population dynamics
 ===================
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
 
     NPB_1d_models
     NPB_predator_prey 
 
-Notebooks
---------
+Notebooks:
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
 
     notebooks/Lotka_Volterra_with_SAGE
 
@@ -32,7 +31,7 @@ Chemical Kinetics
 
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
 
     NPB_kinetics
     
@@ -42,7 +41,7 @@ Reaction diffusion systems
 
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
 
     NPB_reaction_diffusion
     
@@ -51,7 +50,7 @@ Modelling epidemics
 
 
 .. toctree::
-    :maxdepth: 5
+    :maxdepth: 2
 
     NPB_epidemics
 
