@@ -160,11 +160,6 @@ the same properties as the Verhulst equation.
 .. image:: output_1_0.png
 
 
-.. figure:: iCSE_BProcnielin04_z122_kinetyka_chemiczna_media/cell_39_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
 
 In the above figure, we depict time evolution of the rescaled
 concentration :math:`x = x(s)` for three selected initial conditions. As
