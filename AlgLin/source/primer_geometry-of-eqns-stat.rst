@@ -1,4 +1,5 @@
 .. -*- coding: utf-8 -*-
+.. _geometry-of-eqns:
 
 Geometry of Linear Equations
 ----------------------------

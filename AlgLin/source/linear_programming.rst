@@ -213,7 +213,55 @@ In this picture the cost surfaces are denoted by the red color. The first plane 
 
 The picture suggests that the place at which the red plane touches the feasible set first is located on the intersection of the blue and purple plane: the red planes that are closer to the origin do not contain any feasible points yet as they are below the restriction given by the blue plane.
 
-Of course, if the problem is more complex and deals with several variables (what often happens in practice), we need more powerful tool than just illustration of the problem. And this is where linear algebra comes into play.
+We can compute the intersection of the planes using the formulae introduced in section :ref:`geometry-of-eqns`:
+
+.. code-block:: python
+
+    sage: var('x y z')
+    sage: eq1 = 0.009*x + 0.028*y == 0.9
+    sage: eq2 = 0.52*x + 0.02*y + 0.8*z == 8
+    sage: s = solve([eq1,eq2],[x,y,z])
+    sage: s
+
+    [[x == -1120/719*r1 + 10300/719, y == 360/719*r1 + 19800/719, z == r1]]
+
+The solution is a line depending on parameter ``r1``. We have to choose ``r1`` so that the cost is minimal. First we substitute the solution to the inequality describing the third constraint to verify that it still holds; we obtain 
+
+.. math::
+
+    \begin{align*}
+    2& \left(-\frac{1120}{719} r_1 + \frac{10300}{719}\right) +120\left( \frac{360}{719} r_1 + \frac{19800}{719}\right) +20r_1 -1000 \\
+    &= \frac{55340}{719} r_1 + \frac{1677600}{719}
+    \end{align*}
+    
+which is non-negative for every :math:`r_1\geq 0` as required. At the same time, the cost turns out to be equal to
+
+.. math::
+
+    -0.115229485396384\, r_1 + 8.91237830319889\, .
+    
+It decreases with the growth of parameter :math:`r_1`. However, we can only increase :math:`r_1` as long as :math:`x` remains non-negative. The greatest possible :math:`r_1` is when :math:`x=0`. The quickest way to find it is to use the function ``find_root()`` whose last two arguments denote the range of a variable:
+
+..  sagecellserver::
+
+    var('r1')
+    r = find_root(-1120/719*r1 + 10300/719 == 0, 0, 60)
+    r
+
+We take :math:`z=r` and under this assuption compute the intersection of the two planes, including also an equation for the cost function:
+
+..  sagecellserver::
+
+    var('x y z c')
+    eq1 = 0.009*x+0.028*y==0.9
+    eq2 = 0.52*x+0.02*y+0.8*z==8
+    cost = 0.18*x+0.23*y+0.05*z==c
+    Eqns = [eq1,eq2,cost,z==r]
+    solve(Eqns,[x,y,z,c])
+            
+Since the cost remained positive after taking :math:`z=r`, it seems that the above solution solves our diet problem. However, since this time the picture was not as clear as in the previous example, this solution should be verified by using another method.
+
+The last example already indicated demand for a more rigorous method. And of course, if the problem is more complex and deals with several variables (what often happens in practice), there is no way to obtain a good illustration of the problem. This is where linear algebra comes into play.
 
 The Simplex Method
 ~~~~~~~~~~~~~~~~~~
@@ -569,13 +617,13 @@ For simplicity assume that the *smallest positive* is the :math:`1`-st quotient 
     r_{2i} & 1 & \ldots & 0 & r_{21} & \ldots & 0 & \ldots & r_{2m} & | & b_2'\\
     \vdots & \vdots      & \ddots & \vdots & \vdots & \ddots & \vdots & \ddots & \vdots & | & \vdots\\
     r_{ni} & 0 & \ldots & 1 & r_{n1} & \ldots & 0 & \ldots & r_{nm} & | & b_n'\\
-    c_1'                & 0 & \ldots & 0 & c_2'  & \ldots & 0  & \ldots & c_m'   & | & 
+    c_i'                & 0 & \ldots & 0 & c_1'  & \ldots & 0  & \ldots & c_m'   & | & 
     -\boldsymbol{c_B}^T\boldsymbol{B}^{-1}\boldsymbol{b}
     \end{array}\right]
 
 where :math:`\ \boldsymbol{c_N}^T-\boldsymbol{c_B}^T\boldsymbol{B}^{-1}\boldsymbol{N} = \left[c_1', c_2',\ldots, c_m'\right]`.
 
-Note that one of the things that we have to do in order to write :math:`T` in reduced row echelon form is to divide each row of the matrix by the entries from the first column; this will make the last column equal to :math:`\left[\frac{b_1'}{r_{11}}, \frac{b_2'}{r_{21}},\ldots, \frac{b_n'}{r_{n1}}\right]^T` and because now only the first entry of first :math:`n` entries in the last row of :math:`T` is non-zero, only :math:`\frac{b_1'}{r_{11}}` will contribute to the cost.
+Note that one of the things that we have to do in order to write :math:`T` in reduced row echelon form is to divide each row of the matrix by the entries from the first column; this will make the last column equal to :math:`\left[\frac{b_1'}{r_{1i}}, \frac{b_2'}{r_{2i}},\ldots, \frac{b_n'}{r_{ni}}\right]^T` and because now only the first entry of first :math:`n` entries in the last row of :math:`T` is non-zero, only :math:`\frac{b_1'}{r_{1i}}` will contribute to the cost.
 
 **Example**
 
@@ -628,12 +676,16 @@ We perform the steps II and III again.
     [--------------+---------+----]
     [   0    0    0| 1/4  5/8|  31]
 
-As we can see, now all the entries of the last row are positive, and thus the cost cannot be reduced further. The minimal cost equals :math:`\ -31\ ` and is achieved at the point :math:`\ (2,9)\ ` as expected. Since we changed the original problem of maximalization to minimization, the original cost we wanted to compute is :math:`\ -(-31)=31\ `.
+As we can see, now all the entries of the last row are positive, and thus the cost cannot be reduced further. The minimal cost equals :math:`\ -31\ ` and is achieved at the point :math:`\ (2,9)\ ` as expected. Since we changed the original problem of maximization to minimization, the original cost we wanted to compute is :math:`\ -(-31)=31\ `.
 
 .. admonition:: Step V:
 
     Repeat the steps II-IV until the cost is minimal.
     
+
+The above explanation was partially inspired by an excellent lecture of prof. Craig Tovey, professor in the Georgia Tech Stewart School of Industrial and Systems Engineering. The reader is encouraged to watch that `lecture`_ for further clarification.
+
+
 
 Exercises
 ~~~~~~~~~
@@ -820,3 +872,6 @@ and then present it in the reduced form:
         0 & 0 & 1 & -4267.8571428571395 & -24.999999999999957 & 49.410714285714214 & | & 3041.0714285714234\\
         0 & 0 & 0 & 8.169642857142907  &    0.0625           & 0.07397321428571423 & | & 1.0596997317703043\\
     \end{array}\right]\,.
+
+
+.. _lecture: https://www.youtube.com/watch?v=Ci1vBGn9yRc
