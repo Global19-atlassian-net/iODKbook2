@@ -257,7 +257,10 @@ We take :math:`z=r` and under this assuption compute the intersection of the two
     eq2 = 0.52*x+0.02*y+0.8*z==8
     cost = 0.18*x+0.23*y+0.05*z==c
     Eqns = [eq1,eq2,cost,z==r]
-    solve(Eqns,[x,y,z,c])
+    sol=solve(Eqns,[x,y,z,c])
+    if sol==[]: 
+        print "Execute code in the previous cell!"
+    else: print sol
             
 Since the cost remained positive after taking :math:`z=r`, it seems that the above solution solves our diet problem. However, since this time the picture was not as clear as in the previous example, this solution should be verified by using another method.
 
@@ -690,6 +693,9 @@ The above explanation was partially inspired by an excellent lecture of prof. Cr
 Exercises
 ~~~~~~~~~
 
+**Exercise 1**
+offers 
+One school organizes a trip for 250 people. A shipping company offers coaches of types A, B, C which can take 32, 45 and 60 people resepctively, and cost 600, 800 and 1000 euros respectively. Find out how many coaches of each type the school should hire so that the cost is minimal.
 
 
 
@@ -698,180 +704,6 @@ Exercises
 
 
 
-
-
-
-
-
-**Example.**
-
-Consider Example 2. from the previous section. It can be written in a matrix form as follows:
-
-.. math:: 
-
-    \begin{array}{ll}
-    minimize: & \left[\begin{array}{ccc} 0.18 & 0.23 & 0.05\end{array}\right] 
-    \left[\begin{array}{c} x_1\\ x_2\\ x_3\end{array}\right]\\    
-    \text{constraints:} & 
-    \left[\begin{array}{ccc} 0.009 & 0.028x_2 & 0\\ 0.52 & 0.02 & 0.8x_3\\ 2 & 120 & 20\end{array}\right]
-    \left[\begin{array}{c} x_1\\ x_2\\ x_3\end{array}\right]
-    \geq\left[\begin{array}{c} 0.9\\ 8\\ 1000\end{array}\right]\,,\\    
-    & \quad x_1, x_2, x_3\geq 0
-    \end{array}
-    
-or equivalently:
-
-.. math::
-
-    \begin{array}
-    \text{minimize:} &  \boldsymbol{c}^T\boldsymbol{x}\\
-    \text{constraints:} & \boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}\\
-    & \boldsymbol{x}\geq 0,\\
-    \end{array}
-    
-where
-
-.. math::
-
-    \boldsymbol{c} = \left[\begin{array}{c} 0.18 \\ 0.23 \\ 0.05 \\ 0\\ 0\\ 0\end{array}\right] \,,\quad
-    \boldsymbol{x} = \left[\begin{array}{c} x_1\\ x_2\\ x_3 \\ x_4\\ x_5\\ x_6\end{array}\right]  \,,\quad
-    \boldsymbol{A} = \left[\begin{array}{cccccc} 
-        0.009 & 0.028 & 0 & -1 & 0 & 0\\ 
-        0.52 & 0.02 & 0.8 & 0 & -1 & 0\\ 
-        2 & 120 & 20 & 0 & 0 & -1\end{array}\right]\,,\quad
-    \boldsymbol{b} = \left[\begin{array}{c} 0.9\\ 8\\ 1000 \\ 0\\ 0\\ 0\end{array}\right]\,.
-    
-Therefore the tableau is of the form:
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        0.009 & 0.028 & 0 & -1 & 0 & 0 & | & 0.9\\ 
-        0.52 & 0.02 & 0.8 & 0 & -1 & 0 & | & 8\\
-        2 & 120 & 20 & 0 & 0 & -1 & | & 1000\\
-        0.18 & 0.23 & 0.05 & 0 & 0 & 0 & | & 0\\
-    \end{array}\right]\,.
-    
-To perform the next step we use Sage:
-
-.. code-block:: python
-
-    sage: B = Matrix([[0.009, 0.028, 0],[0.52, 0.02, 0.8],[2, 120, 20]])
-    sage: N = Matrix([[-1, 0, 0],[0, -1, 0],[0, 0, -1]])
-    sage: b = vector([0.9, 8, 1000])
-    sage: print B.inverse()*N, "\n"
-    sage: print B.inverse()*b
-    
-    [   -86.3751355258403   -0.505963136971449   0.0202385254788580]
-    [   -7.95084929526563    0.162631008312252 -0.00650524033249006]
-    [    56.3426093241778   -0.925189736176364  -0.0129924105529454]
-    
-    (61.5468015901699, 12.3599566317311, -30.3144199494037)
-    
-Hence, the tableau is
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1 & 0 & 0 & -86.3751355258403 & -0.505963136971449 &  0.0202385254788580  & | & 61.5468015901699\\ 
-        0 & 1 & 0 & -7.95084929526563 &  0.162631008312252 & -0.00650524033249006 & | & 12.3599566317311\\
-        0 & 0 & 1 & 56.3426093241778  & -0.925189736176364 & -0.0129924105529454  & | & -30.3144199494037)\\
-        0.18 & 0.23 & 0.05 & 0 & 0 & 0 & | & 0\\
-    \end{array}\right]\,.
-    
-After we subtract from the last row the first row multiplied by 
-:math:`\ \boldsymbol{c_B}=\left[\begin{array}{ccc} 0.18 & 0.23 & 0.05\end{array}\right]\ ` from the left, 
-
-.. code-block:: python
-
-    sage: cB = vector([0.18, 0.23, 0.05])
-    sage: cN = vector([0, 0, 0])
-    sage: print cN-cB*B.inverse()*N
-    sage: print -cB*B.inverse()*b
-    
-    (14.5590892663535, 0.0999277195518612, -0.00149710878207445)
-    -12.4054933140585
-
-we obtain
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1 & 0 & 0 & -86.3751355258403 & -0.505963136971449 &  0.0202385254788580  & | & 61.5468015901699\\ 
-        0 & 1 & 0 & -7.95084929526563 &  0.162631008312252 & -0.00650524033249006 & | & 12.3599566317311\\
-        0 & 0 & 1 & 56.3426093241778  & -0.925189736176364 & -0.0129924105529454  & | & -30.3144199494037)\\
-        0 & 0 & 0 & 14.5590892663535  & 0.0999277195518612 & -0.00149710878207445 & | & -12.4054933140585\\
-    \end{array}\right]\,.
-    
-Because one of the entries of :math:`\ \boldsymbol{c_N}=\left[\begin{array}{ccc} 14.5590892663535  & 0.0999277195518612 & -0.00149710878207445\end{array}\right]\ ` is negative, the cost :math:`12.4054933140585` is not optimal.
-
-We look at the column above the negative entry (the 6th column in the tableau): :math:`(0.0202385254788580, -0.00650524033249006, -0.0129924105529454)^T` and consider the quotients :math:`\frac{t_{17}}{t_{16}}, \frac{t_{27}}{t_{26}}, \frac{t_{37}}{t_{36}}`, where :math:`t_{ij}` denote entries in the tableau:
-
-.. math::
-
-    \frac{t_{17}}{t_{16}}=3041.07142857143\,,\qquad
-    \frac{t_{27}}{t_{26}}=-1900.00000000000\,,\qquad
-    \frac{t_{37}}{t_{36}}=2333.24061196106\,.
-    
-Because the third ratio is the smallest positive number, we replace the third column in the tableau with the 6th column:    
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1 & 0 & 0.0202385254788580   & -86.3751355258403 & -0.505963136971449 & 0 & | & 61.5468015901699\\ 
-        0 & 1 & -0.00650524033249006 & -7.95084929526563 &  0.162631008312252 & 0 & | & 12.3599566317311\\
-        0 & 0 & -0.0129924105529454  & 56.3426093241778  & -0.925189736176364 & 1 & | & -30.3144199494037)\\
-        0 & 0 & -0.00149710878207445 & 14.5590892663535  & 0.0999277195518612 & 0 & | & -12.4054933140585\\
-    \end{array}\right]\,.
-    
-We return to the notation 
-
-.. math::
-
-    T=\left[\begin{array}{cccc} \boldsymbol{B} & \boldsymbol{N} & | & \boldsymbol{b}\\ 
-    \boldsymbol{c_B} & \boldsymbol{c_N} & | & 0\end{array}\right].
-    
-and repeat the step above until all the entries of :math:`\boldsymbol{c_N}` are non-negative.
-The next tableau in the reduced form is
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1 & 0 & 0 & 1.39082058414489  & -1.94714881780251  & 1.55771905424201  & | & 14.3254520166897\\ 
-        0 & 1 & 0 & -36.1613351877608 & 0.625869262865092  & -0.500695410292073 & | & 27.5382475660640\\
-        0 & 0 & 1 & -4336.57858136301 & 71.2100139082060   & -76.9680111265648 & | & 2333.24061196106\\
-        0 & 0 & 0 & 8.06675938803897  & 0.206536856745480  & -0.115229485396384 & | & 3.49311501085967\\
-    \end{array}\right]\,.
-
-We see that again not all the entries of :math:`\boldsymbol{c_N}` are non-negative. As before, we compare the quotients:
-
-.. math::
-
-    \frac{t_{17}}{t_{16}}=9.19642857142845\,,\qquad
-    \frac{t_{27}}{t_{26}}=-54.9999999999999\,,\qquad
-    \frac{t_{37}}{t_{36}}=-30.3144199494037\,.
-    
-The smallest positive quotient occurs in the first ratio, so we exchange the first and the 6th column in the tableau:
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1.55771905424201  & 0 & 0 & 1.39082058414489  & -1.94714881780251  & 1 & | & 14.3254520166897\\ 
-        -0.500695410292073 & 1 & 0 & -36.1613351877608 & 0.625869262865092  & 0 & | & 27.5382475660640\\
-        -76.9680111265648 & 0 & 1 & -4336.57858136301 & 71.2100139082060   & 0 & | & 2333.24061196106\\
-        -0.115229485396384 & 0 & 0 & 8.06675938803897  & 0.206536856745480  & 0 & | & 3.49311501085967\\
-    \end{array}\right]\,,
-    
-and then present it in the reduced form:
-
-.. math::
-
-    T=\left[\begin{array}{cccccccc} 
-        1 & 0 & 0 & 0.892857142857297  & -1.2499999999999984 & 0.6419642857142834  & | & 9.196428571428445\\ 
-        0 & 1 & 0 & -35.71428571428568 &      0              & 0.32142857142857084 & | & 32.14285714285711\\
-        0 & 0 & 1 & -4267.8571428571395 & -24.999999999999957 & 49.410714285714214 & | & 3041.0714285714234\\
-        0 & 0 & 0 & 8.169642857142907  &    0.0625           & 0.07397321428571423 & | & 1.0596997317703043\\
-    \end{array}\right]\,.
 
 
 .. _lecture: https://www.youtube.com/watch?v=Ci1vBGn9yRc

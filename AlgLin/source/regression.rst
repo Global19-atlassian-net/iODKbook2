@@ -1,7 +1,7 @@
 Linear and Polynomial Regression
 --------------------------------
 
-*Regression analysis* is a technique to create statistical models describing the relationshp between *dependent variables* and *explanatory variables* (or *independent variables*). Depending on the type of this relationship (shape of the best fitted curve), the number of dependent and independent variables, and whether they are of continuous or binary nature, one applies different type of regression. If chosen properly, it helps to predict future behaviour basing on a data from the past (e.g. to assess risk in financial services, goods prices or consumer behaviour) as well as explore correlation between the objects. Here we disccuss only linear and polynomial dependencies; the interested reader is referred to https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/ for a brief description of a few other methods.
+*Regression analysis* is a technique to create statistical models describing the relationshp between *dependent variables* and *explanatory variables* (or *independent variables*). Depending on the type of this relationship (shape of the best fitted curve), the number of dependent and independent variables, and whether they are of continuous or binary nature, one applies different type of regression. If chosen properly, it helps to predict future behaviour basing on a data from the past (e.g. to assess risk in financial services, goods prices or consumer behaviour) as well as explore correlation between the objects. Here we disccuss only linear and polynomial dependencies; the interested reader is referred to `this article`_ for a brief description of a few other methods.
 
 Linear Regression
 ~~~~~~~~~~~~~~~~~
@@ -42,13 +42,7 @@ On the other hand, if only the (square) matrix :math:`\ X^T\cdot X\ ` is inverti
 **Example 1.** [1]_
 
 Assume that you go for a long trip and want to predict how much money you should allocate for petrol and when you should stop to fill up the tank.
-You have observed the efficiency of your car and collected the following data:
-
-========== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ====== ===== ===== ===== =====
-Total paid 36.66 37.05 34.71 32.5  32.63 34.45 36.79 37.74 38.09 38.09 38.74  39    40    36.21 34.05
----------- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ------ ----- ----- ----- -----
-Distance   390   403   396.5 383.5 321.1 391.3 386.1 371.8 404.3 392.6 386.49 395.2 385.5 372   397 
-========== ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== ====== ===== ===== ===== =====
+You have observed the efficiency of your car and collected `the data`_.
  
 Of course, this data carries an error of measurement and depends on fluctuation of petrol prices, but overall there should be a linear dependence between how much money you pay and how far you can drive with the petrol you bought. This seems to be confirmed by the graph of the data points:
 
@@ -57,23 +51,48 @@ Of course, this data carries an error of measurement and depends on fluctuation 
 
 Hence, it makes sense to apply linear regression.
 
-.. code-block:: python
+However, before we can make any computations on the collected data, we need to open it first by Sage. In order to do this we have to import necessary packages: ``urllib`` (for opening URLs) and ``csv`` (for reading .csv files). We call the accessed file by ``data``.
 
-    sage: xl=[36.66, 37.05, 34.71, 32.5, 32.63, 34.45, 36.79, 37.74, 38.09, 38.09, 38.74, 39, 40, 36.21, 34.05]
-    sage: yl=[390, 403, 396.5, 383.5, 321.1, 391.3, 386.1, 371.8, 404.3, 392.6, 386.49, 395.2, 385.5, 372, 397]
-    sage: X=matrix([[1,xl[i]] for i in range(len(xl))])
-    sage: y=vector(yl)
-    sage: B=(X.transpose()*X).inverse()*X.transpose()*y
-    sage: P=points([(xl[i],yl[i]) for i in range(len(xl))])
-    sage: l=line([(30,B[0]+B[1]*30),(40,B[0]+B[1]*40)],color='red')
-    sage: print 'line: y =', B[0], '+', B[1], '* x'
-    sage: show(P+l,axes_labels=['Total paid','Distance'],axes_labels_size=1,figsize=5) 
-    
-    line: y = 257.569072517769 + 3.49884566266075 * x
-    
-.. figure:: figures/regr2.png
-    :align: center
+.. sagecellserver::
 
+    import urllib
+    import csv
+    data = csv.reader(urllib.urlopen('http://visual.icse.us.edu.pl/LA/_static/Car_efficiency.csv'))
+
+.. note:: 
+
+    If the file ``Car_efficiency.csv`` is already saved in the computer, it suffices to upload it to Sage and write two lines:
+
+    .. code-block:: python
+
+        sage: import csv
+        sage: data = csv.reader(open('Car_efficiency.csv'))
+
+Now that we can access the data with Sage, we interpret it in a form of a table:
+
+.. sagecellserver:: 
+
+    L = []
+    for row in data:
+        L.append(row)
+    if L==[]: 
+        print "Execute code in the previous cell!"
+    else: print L
+
+We are ready to define the vector :math:`y` and the matrix :math:`X`, and thus to find a line which best fits the data.
+
+.. sagecellserver:: 
+
+    xl = [L[i][0] for i in srange(1,16)] # srange: we omit the row L[0]
+    yl = [L[i][1] for i in srange(1,16)]
+    X = matrix(RDF,[[1,xl[i]] for i in range(15)])
+    y = vector(RDF,yl)
+    B = (X.transpose()*X).inverse()*X.transpose()*y
+    P = points([(xl[i],yl[i]) for i in range(len(xl))])
+    l = line([(30,B[0]+B[1]*30),(40,B[0]+B[1]*40)],color='red')
+    print 'line: y =', B[0], '+', B[1], '* x'
+    show(P+l,axes_labels=['Total paid','Distance'],axes_labels_size=1,figsize=5)
+    
 Now it is very easy to find out how much on average one has to pay to drive :math:`y` km:
 
 .. math::
@@ -83,11 +102,12 @@ Now it is very easy to find out how much on average one has to pay to drive :mat
 .. admonition:: Experiment with Sage!
 
     How far would you like to drive? Check the outcome (an average cost) for various values of :math:`y` (distance).
+    What may be the reason for an unsatisfactory answer in case of low values of :math:`y`?
 
 .. sagecellserver::
 
-    y=  # write the distance
-    x=(y-257.569072517769)/3.49884566266075
+    y =  # write the distance
+    x = (y-257.569072517769)/3.49884566266075
     round(x,2) # rounds x to 2 decimal digits 
 
 In the above example we skipped an important moment when one has to decide which variable depends on the other. As we will see below, this is not always a natural choice to make and wrong decision may lead to unreal results.
@@ -104,43 +124,43 @@ This does not lead yet to ridiculous consequences, but clearly it matches the da
 Linear regression may be also used to investigate correlation between two phenomena: we say that two types of behaviour are *correlated* :math:`\,` if they manifest linear dependence.
 
 We will investigate correlation between rate of unemployment in various countries and amount of benefits given by these countries. [2]_
-This time our data is relatively large, so instead of rewriting it by hand, we simply open it with Sage. The data was downloaded [2]_, preprepared and saved in .csv file at the same place as the file we are working with. If the data was less complex and easily available in the internet, we could provide a suitable link or allocation of the file in the code below.
+The data, which can be viewed `here`_, was downloaded and extracted from OECD databases [2]_. This time, however, the symbol separating the consecutive entries is not a comma (as the name Comma-Separeted Values suggests), but a semicolon. This fact has to be mentioned to a function reader in order to open a file:
 
 .. code-block:: python
 
-    import csv
-    file = 'Benefits_and_unemployment_2015.csv' # here we provide the name or the path of our .csv file
-    reader = csv.reader(open(file))
+    sage: import urllib, csv
+    sage: afile = urllib.urlopen('http://visual.icse.us.edu.pl/LA/_static/Benefits_and_unemployment_2015.csv'))
+    sage: data = csv.reader(afile, delimiter=';') 
+
+Of course, this is not enough to make any operations on the data; as before we have to interpret it as a table. The table will consist of four columns: 'LOCATION', 'Country', 'Value-benefits', 'Value-unemployment'. 
+
+First we take an assumption that the unemployment rate depends on the amount of benefits, i.e. the vector :math:`x` contains the values from the column 'Value-benefits', and the vector :math:`y` contains the values from the column 'Value-unemployment'. 
+
+.. admonition:: Experiment with Sage!
+
+    Press **Evaluate** to see ilustration of the data discussed in this example.
+    Then fill in the gap in the code below with the steps of the ordinary least squares method 
+    in order to find a straight line that best fits the set of points :math:`(x_i,y_i)` from the data.
+    (Do not forget to draw the resulting line :math:`l`! 
+    You may do this for example by replacing ``pic`` in the last line of the code with ``pic+l``.)
+
+.. sagecellserver::
+
+    import urllib, csv
+    afile = urllib.urlopen('http://visual.icse.us.edu.pl/LA/_static/Benefits_and_unemployment_2015.csv'))
+    data = csv.reader(afile, delimiter=';') 
     L = []
-    for row in reader:
-        L.append(row) # L is a list in form of a matrix which stores the content of file
-    print L[0] # first row of L (names of the columns)
-    print L[1] # second row of L (example of content)
-
-    ['LOCATION', 'Country', 'Value-benefits', 'Value-unemployment']
-    ['AUS', 'Australia', '57.8', '6.004402']
-
-First we take an assumption that the unemployment rate depends on the amount of benefits.
-
-.. code-block:: python
-
-    # dependent variable: Value-unemployment
-    xl=[L[i][2] for i in srange(1,35)] # srange: we omit the row L[0]
-    yl=[L[i][3] for i in srange(1,35)]
-    X=matrix(RDF,[[1,xl[i]] for i in range(len(xl))])
-    y=vector(RDF,yl)
-    B=(X.transpose()*X).inverse()*X.transpose()*y
-    l=line([(0,B[0]),(90,B[0]+B[1]*90)],color='red')
-    print 'line: y =', B[0], '+', B[1], '* x'
-    pic=l 
-    for i in range(34): # L[i+1][0] with i=0,1,... to omit the row L[0]
-        pic+= text(L[i+1][0],(xl[i], yl[i]),horizontal_alignment='left',color='blue',fontsize='small')
-    show(pic,axes_labels=['Benefits','Unemployment rate'],axes_labels_size=1) 
+    for row in data:
+        L.append(row)
+    xl = [L[i][2] for i in srange(1,35)] 
+    yl = [L[i][3] for i in srange(1,35)]
+    # write the missing code here
     
-    line: y = 12.5620870752 + -0.0859490641839 * x
-
-.. figure:: figures/regr-correlation.png
-    :align: center
+    
+    pic = Graphics() # defines an empty graphics object
+    for i in range(34): # L[i+1][0] with i=0,1,... to omit the row L[0]
+        pic+ = text(L[i+1][0],(xl[i], yl[i]),horizontal_alignment='left',color='blue',fontsize='small')
+    show(pic,axes_labels=['Benefits','Unemployment rate'],axes_labels_size=1) 
     
 For the interested reader we provide explanation of the abbreviations used in the figure:
 
@@ -197,7 +217,9 @@ The researchers (Cook and Weisberg, 1999) measured and recorded the data concern
 They were primarily interested in learning how the length of a bluegill fish is related to its age.
 The data is available under the `link`_ .
 
-We can access the data from the website above by the following code:
+In theory, the procedure described above should be enough to access the data from a desired website. However, sometimes 
+- and this is the case here - one may have to overcome a problem of certificate validation for a given url.
+This may be done by writing the following lines:
 
 .. code-block:: python
 
@@ -206,32 +228,12 @@ We can access the data from the website above by the following code:
     sage: ctx.check_hostname = False
     sage: ctx.verify_mode = ssl.CERT_NONE
 
-    sage: file=urllib2.urlopen("https://onlinecourses.science.psu.edu/stat501/sites/onlinecourses.science.psu.edu.stat501/files/data/bluegills/index.txt", context=ctx)
-    
-The first lines are necessary to overcome a problem of certificate validation for our url.
-However, in order to perform any operations on the data, we have to open it as a .csv file.
-Because the consecutive entries of the file are not separated by a comma but rather by a tabulator,
-we have to specify the separator in the code. We write further:
+    sage: afile=urllib2.urlopen("https://onlinecourses.science.psu.edu/stat501/sites/onlinecourses.science.psu.edu.stat501/files/data/bluegills/index.txt", context=ctx)
 
-.. code-block:: python
+After that one can proceed as previously and rewrite the data in a form of a table. 
+Note though that this time the data is separated by a tabulator; tabulator is denoted in a code by  ``\t`` .
 
-    sage: import csv
-    sage: reader=csv.reader(file, delimiter='\t') # elements in the file are separated by tabulator \t and not by comma
-    sage: L=[]
-    sage: for row in reader:
-    sage:     L.append(row)
-    sage: print L[0], L[1]
-    
-    ['age', 'length'] ['1', '67']
-    
 The analysis starts with illustration of the data:
-
-.. code-block:: python
-
-    sage: xl=[L[i][0] for i in srange(1,len(L))] 
-    sage: yl=[L[i][1] for i in srange(1,len(L))]
-    sage: P=points([(xl[i],yl[i]) for i in range(len(xl))])
-    sage: show(P,axes_labels=['Age','Length'],axes_labels_size=1, xmin=0, ymin=0,figsize=5)
     
 .. figure:: figures/regr-pol.png
     :align: center
@@ -258,7 +260,7 @@ where
     X=\left[\begin{matrix} 1 & x_1 & x_1^2\\ 1 & x_2 & x_2^2\\ \vdots & \vdots \\ 1 & x_n & x_n^2 \end{matrix}\right]\, .
     
 Note that the only change in comparison with linear regression is the third column 
-of matrix :math:`\ B\ ` consisting of second powers of data representing independent variables.
+of the matrix :math:`\ X\ ` consisting of second powers of data representing independent variables.
 In order to find a polynomial of degree :math:`m` that best fits the data, 
 one constructs the matrix :math:`\ X\ ` so that it has :math:`m+1` columns
 and the :math:`j`-th column contains :math:`\ x_i^{j-1}\ `.
@@ -272,11 +274,10 @@ Hence, we can perturb the original age slightly,
 e.g. by :math:`0.001` which corresponds to age difference smaller than a day,
 and still obtain a valid result.
 
-We continue the code with:
+Denote by ``xl`` and ``yl`` lists created from, respectively, the first and the second column of the considered data on the bluegill fish (without the first row). Small perturbation of this data could be implemented as follows:
 
 .. code-block:: python
 
-    sage: # small perturbation of the data so that there's only one fish of a given age
     sage: xlm=[0 for i in range(len(xl))]
     sage: for age in [1..6]:
     sage:     a=0
@@ -285,7 +286,7 @@ We continue the code with:
     sage:             xlm[i]=RDF(xl[i])+0.001*a
     sage:             a=a+1
 
-so that we can apply the ordinary least square method:
+Once this is done, we can apply the ordinary least square method:
 
 .. code-block:: python
 
@@ -387,6 +388,12 @@ b). Does it matter whether the respondent is a man or a woman? As in Exercise 2 
 
 .. [5] This exercise is based on the article and data of Allen L. Shoemaker, "What's Normal? - Temperature, Gender, and Heart Rate" available at http://ww2.amstat.org/publications/jse/v4n2/datasets.shoemaker.html .
 
+
+.. _`this article`: https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
+
+.. _`the data`: http://visual.icse.us.edu.pl/LA/_static/Car_efficiency.csv
+
+.. _`here`: http://visual.icse.us.edu.pl/LA/_static/Benefits_and_unemployment_2015.csv
 
 .. _link: https://onlinecourses.science.psu.edu/stat501/sites/onlinecourses.science.psu.edu.stat501/files/data/bluegills/index.txt 
 
