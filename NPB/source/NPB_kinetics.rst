@@ -144,20 +144,35 @@ form:
 It is exactly the rescaled Verhulst equation! Therefore it has exacly
 the same properties as the Verhulst equation.
 
-.. code:: ipython2
-
-    var('x1, x2, x3, t') 
-    x1 = 0.01*exp(t)/(1+exp(t)-1)
-    x2 = 0.6*exp(t)/(1+0.6*(exp(t)-1)) 
-    x3 = 1.5*exp(t)/(1+1.5*(exp(t)-1)) 
-    p10 = plot(x1,(t,0,10),figsize=(5,3),color='red', legend_label="$x_0=0.01$")
-    p20 = plot(x2,(t,0,10),color='blue',legend_label="$x_0=0.6$")
-    p30 = plot(x3,(t,0,10),color='green',legend_label="$x_0=1.5$",gridlines=[[],[1]])
-    show(p10+p20+p30)
 
 
+.. admonition::   Experiment with Sage!
 
-.. image:: output_1_0.png
+   Scaling can be done wit the help of Sage. The most straightforward
+   possibility is to define derivative as independent symbolic
+   variables and scale them appropriately.
+   
+
+.. sagecellserver::
+
+   var('k1,k2,a,y,x')
+   var('dy_dt',latex_name=r'\frac{dy}{dt}')
+   var('dx_dt',latex_name=r'\frac{dx}{dt}')
+
+   unscaled = dy_dt==k1*a*y*(1-k2/(k1*a)*y)
+   scaled = unscaled.subs([y==k1*a/k2*x,dy_dt==(k1*a)^2/k2*dx_dt]).solve(dx_dt)[0]
+   show(scaled)
+                  
+
+       
+
+   
+   
+.. figure:: figs/autocatalytic_ex1.png
+   :scale: 50%
+   :align: center
+   
+   Time evolution of autocatalytic model for different initial conditions.
 
 
 
@@ -170,6 +185,25 @@ stable stationary state d :math:`x=1` and one unstable state
 increases with time and the concentration of the product increases and
 next it decreases because of smaller concentration of substrat. For long
 time, there is a saturation in concentration of :math:`Y`.
+
+.. admonition::   Experiment with Sage!
+
+   Interact with the code to see how does the concentration behaviour
+   depends on initial condition:
+
+.. sagecellserver::
+
+   var('x0, t') 
+   f(t,x0) = x0*e^t/(x0*(e^t - 1) + 1)
+   @interact
+   def _(x0_=slider(0.01,2,0.01)):
+       p = plot(f(t,x0_),(t,0,10),color='green',\
+                legend_label="$x_0=%0.3f$"%x0_,\
+                gridlines=[[],[1]])
+       show(p,figsize=5,ymin=0,ymax=2.0)
+
+
+
 
 Example 2
 ~~~~~~~~~
@@ -212,7 +246,8 @@ then the parameter :math:`r` takes negative values and we can rewrite
 the differential equation as:
 
 .. math::
-
+   :label: auto_ex2
+           
    \frac{dy}{dt}  =  - r_0 y - k_2 y^2 = f(y), \quad \quad r_0 =
    |k_1 a - k_3 b|
    \gt  0, \quad k_2  \gt  0
@@ -227,38 +262,69 @@ dissapers and the reason is the relation (b): the rate of the first
 reaction is too slow in order to compensate decay of :math:`Y` caused by
 the second reaction.
 
-.. code:: ipython2
+Without loosing generality we can assume that in eq :eq:`auto_ex2`
+:math:`k_2=1`. Then we can solve the ODE:
 
-    var('x, y, z') 
-    T0 = srange(0,2,0.01)
-    f1 = -x*(1+x) 
-    f2 = -2*y*(1+y) 
-    f3 = -3*z*(1+z) 
-    sol5 = desolve_odeint( vector([f1, f2, f3]), [1,1,1],T0,[x,y,z])
+.. math::
+   :label: auto_ex2_r
+   
+   \frac{dy}{dt}  =   r y - y^2
 
-.. code:: ipython2
+   
 
-    line( zip ( T0,sol5[:,0]) ,figsize=5, legend_label="$r_0=1$" ) + \
-      line( zip ( T0,sol5[:,1]) ,color='red',legend_label="$r_0=2$") +\
-      line( zip ( T0,sol5[:,2]) ,color='green', legend_label="$r_0=3$")
+.. admonition::   Experiment with Sage!
+
+   Use Sage to solve analytically ODE :eq:`auto_ex2_r`
+   
+
+.. sagecellserver::
+      
+      var('x0,r,t')
+      X = function('X')(t)
+
+      sol = desolve(X.diff(t)==X*(r-X),X,ics=[0,x0],ivar=t)
+      show( sol.simplify_log().solve(X(t=t))[0])
+
+      
+This ODE has a solution for initial condition :math:`y(0)=y_0`:
 
 
+.. math::
 
 
-.. image:: output_4_0.png
+   y\left(t\right) = \frac{r y_{0} e^{r t}}{y_{0} {\left(e^{r t} - 1\right)} + r}
+
+   
 
 
+.. admonition::   Experiment with Sage!
 
-.. figure:: iCSE_BProcnielin04_z122_kinetyka_chemiczna_media/cell_41_sage0.png
-   :alt: image
-   :figclass: align-center
+   
+   Now we can investigate how solutions for different initial
+   concentrations depend on the parameter :math:`r\in(-1,1)`.
 
-   image
+       - start with :math:`r=1` - there will be a Vehulst solution again.
+       - decrease  :math:`r` to some positive value, the stable solution will change but still will be positive.
+       - go  with :math:`r` below zero - the only stable state will be :math:`x=0`
 
-Above we show time evolution of the concentration :math:`Y` for three
-values of the parameter :math:`r_0 = 1, 2, 3`. In this case the
-concentration of :math:`Y` always tends to zero as time is longer and
-longer.
+
+.. sagecellserver::
+
+   
+   var('x0, t') 
+   f(t,x0,r) = r*x0*e^(r*t)/(x0*(e^(r*t) - 1) + r)
+   @interact
+   def _(r_=slider(-1,1,0.1,default=1.0)):
+       if r_==0:
+           r_ += 1e-5
+       if r_>0:
+           g = r_
+       else:
+           g = 0
+       p = sum( plot(f(t,x0_,r_),(t,0,9),color='green',gridlines=[[],[g]]) for x0_ in srange(0,2,0.1))
+       show(p,figsize=5,ymin=0,ymax=2.0,xmax=10)
+
+
 
 Enzyme reactions
 ================
@@ -286,9 +352,14 @@ enzyme kinetics. Applying the Law of Mass Action one obtains the
 following set of four equations:
 
 .. math::
-
+   :label: MM_kin
+          
    \begin{aligned}
-   \begin{array}{cccccccc} d s / d t &  = &  - &  k_f  e  s &  + &  k_r  c &  \\ d e / d t &  = &  - &  k_f  e  s &  + &  k_r  c &  + &  k_3  c \\ d  c / d t &  = &  + &  k_f  e  s  &  - &  k_r  c &  - &  k_3  c \\ d p / d t &  = &  &  &  + &  k_3 c \end{array}
+   \begin{array}{cccccccc} \displaystyle\frac{ds}{dt} &  = &  - &  k_f  e  s &  + &  k_r  c &  \\
+    \displaystyle\frac{de}{dt} &  = &  - &  k_f  e  s &  + &  k_r  c &  + &  k_3  c \\
+    \displaystyle\frac{dc}{dt} &  = &  + &  k_f  e  s  &  - &  k_r  c &  - &  k_3  c \\
+    \displaystyle\frac{dp}{dt} &  = &  &  &  + &  k_3 c
+    \end{array}
    \end{aligned}
 
 where the small leters denote concentrations of the corresponding
@@ -308,6 +379,8 @@ Below we present a computer program which solves this set of 4
 differential equations. Without a computer, it would be difficult to
 visualise the solutions.
 
+We can use Sage to solve numerically the system :eq:`MM_min`
+
 .. code:: ipython2
 
     var('s e c p') ## it is numerical solution of the above set of 4 differential equations 
@@ -317,26 +390,16 @@ visualise the solutions.
      vector([-kf*e*s+kr*c,-kf*e*s+kr*c+k3*c, kf*e*s-kr*c-k3*c,k3*c]),\
      [1,0.8,0,0],T,[s,e,c,p])
 
-.. code:: ipython2
-
-    line( zip ( T,sol[:,0]) ,figsize=(8,4),legend_label="s (substrate)") +\
-     line( zip ( T,sol[:,1]) ,color='red',legend_label="e (enzyme)")+\
-     line( zip ( T,sol[:,2]) ,color='green',legend_label="c (complex)")+\
-     line( zip ( T,sol[:,3]) ,color='black',legend_label="p (product)") ## graphical visualisation of solutions 
 
 
+.. figure:: figs/MM_kinetics.png
+   :scale: 50%
+   :align: center
+   
+   Time evolution of the substrate, the enzyme, the complex [ES], and the product.
 
 
-.. image:: output_7_0.png
-
-
-
-.. figure:: iCSE_BProcnielin04_z122_kinetyka_chemiczna_media/cell_37_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
-
+   
 Theoretical analysis a’la Michaelis-Menten
 ===========================================
 
@@ -368,7 +431,8 @@ From this relation we get:
 .. math::
 
    \begin{aligned}
-   \begin{array}{cccccccc} d s / d t &  = &  - &  k_f  e   [e_0 - c]  &  + &  k_r  c &  \\  d  c / d t &  = &  +  &  k_f  s [e_0-c]   &  - & ( k_r +  k_3) c   \end{array}
+   \begin{array}{cccccccc} \displaystyle\frac{ds}{dt} &  = &  - &  k_f  s   [e_0 - c]  &  + &  k_r  c &\\
+    \displaystyle\frac{dc}{dt} &  = &  +  &  k_f  s [e_0-c]   &  - & ( k_r +  k_3) c   \end{array}
    \end{aligned}
 
 Let us now rescale these equations to reduce a number of parameters
@@ -393,13 +457,11 @@ The time behavior of the substrat :math:`x(\tau)` and complex
 solution, can also be obtained by heuristic considerations. Let us do
 it:
 
-A. For short time :math:`\tau`, the concentration
-   :math:`y(\tau) \approx 0` because :math:`y(0)=0`. In turn,
-   :math:`dx/d\tau \approx -x \lt 0` because the second term with
-   :math:`y` can be neglected.
-
-If :math:`dx/d\tau \lt 0` then it means that :math:`x(\tau)` decreases
-from the initial value :math:`x(0)=1`.
+A. For short time :math:`\tau`, the concentration :math:`y(\tau)
+   \approx 0` because :math:`y(0)=0`. In turn, :math:`dx/d\tau
+   \approx -x \lt 0` because the second term with :math:`y` can be
+   neglected. If :math:`dx/d\tau \lt 0` then it means that
+   :math:`x(\tau)` decreases from the initial value :math:`x(0)=1`.
 
 B. For small values of :math:`\tau`, the term
    :math:`\epsilon dy/d\tau \approx x \gt 0` because the second term
@@ -417,10 +479,10 @@ or if
 
 C. For this instant :math:`\tau_1`, the derivative
    :math:`dy/ d \tau =0`. In turn,
-   :math:`dx/ d \tau = -\lambda x/[x+K] \lt 0` (we insterted
+   :math:`dx/ d \tau = -\lambda x/[x+K] \lt 0` (we inserted
    :math:`y(\tau_1)` to the first equation for :math:`x`). It means that
-   :math:`x(\tau)` decreases and is maller and smaller approaching zero.
-   For time $ :raw-latex:`\tau `> :raw-latex:`\tau`\_1$ the derivative
+   :math:`x(\tau)` decreases and is smaller and smaller approaching zero.
+   For time :math:`\tau>\tau_1` the derivative
    of :math:`y` changes the sign, :math:`dy/ d\tau \lt 0`, and the
    function :math:`y(\tau)` starts to decrease to zero. It is seen in
    the equation for :math:`y` :
@@ -456,7 +518,7 @@ second equation we can put zero, i.e.,
 .. math::
 
    \begin{aligned}
-   \begin{array}{cccccccc} \frac{dx}{d\tau} & =&   - x +   (x+K-\lambda)  y,  \\  0   & =&  x - (x+K)  y   \quad \quad \mbox{hence} \quad \quad  y \approx \frac{x}{x+K} \end{array}
+   \begin{array}{cccccccc}\displaystyle\frac{dx}{d\tau} & =&   - x +   (x+K-\lambda)  y,  \\  0   & =&  x - (x+K)  y   \quad \quad \mbox{hence} \quad \quad  y \approx \frac{x}{x+K} \end{array}
    \end{aligned}
 
 Inserting the expression :math:`y` to the first eqaution we obtain the
@@ -477,6 +539,33 @@ words, this degree of freedom is close to the stationary state (which is
 approached for :math:`t \to \infty`). This regime is called the
 quasi-steady state hypothesis.
 
+
+
+
+.. figure:: figs/MM_steady_state_0.2.png
+   :scale: 50%
+   :align: center
+   :label: MM_ss_1   
+
+   Time evolution of the substrate, the enzyme, the complex [ES], and
+   the product. Dashed lines denote the quasi-stationary state
+   approximation. The discrepancy is clearly visible (
+   :math:`\epsilon=0.2` - at the beginning of the time evolution.
+
+
+.. figure:: figs/MM_steady_state_0.02.png
+   :scale: 50%
+   :align: center
+   :label: MM_ss_2
+           
+   Time evolution of the substrate, the enzyme, the complex [ES], and
+   the product. Dashed lines denote the quasi-stationary state
+   approximation. The discrepancy is small as we have taken
+   :math:`\epsilon=0.02`.
+
+
+
+         
 Excercises
 ----------
 
@@ -493,7 +582,7 @@ Rate of the enzymatic reaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Finally, let us investigate the rate of formation of the product
-:math:`p`. It is determined by the forth eqaution for the kinetics:
+:math:`p`. It is determined by the forth equation for the kinetics:
 
 .. math:: \frac{dp}{dt}= k_3 c 
 
@@ -523,28 +612,80 @@ In this way we can identify the meaning of the Michaelis constant: >
 :math:`K_m` is the concentration of substracte :math:`s` at which the
 reaction rate :math:`v` takes its half of the maximal value.
 
-.. code:: ipython2
 
-    var('v1, v2, v2, s0') ## the dependence of the reaction v rate on concentration of substrate s 
-    v1 = 3*s0/(s0+0.1)  
-    v2 = 3*s0/(s0+0.5)  
-    v3 = 3*s0/(s0+2)  
-    pv1 = plot(v1,(s0,0,8),figsize=(5,3),color='red', legend_label="$K_m=0.1$")
-    pv2 = plot(v2,(s0,0,8),color='blue',legend_label="$K_m=0.5$")
-    pv3 = plot(v3,(s0,0,8),color='green',legend_label="$K_m=2$",gridlines=[[],[3]])
-    show(pv1+pv2+pv3)
+.. figure:: figs/MM_Km.png
+   :scale: 50%
+   :align: center
+   
+   The rate of production of the product in Michaelis-Menten kinetics
+   as a function of a substrate concentration.
 
 
+On can conclude that given en enzyme concentration there is a
+saturation effect, where adding mode substrate will not give better
+product growth rate. For parameters as in figures :fig:`MM_ss_1` and
+:fig:`MM_ss_2` the production was at 75% of its maximum value at the
+beginning of the reaction course, as we has :math:`K_m=0.3` and
+initial concentration of the substrate equal to one. However, if we
+start with higher concentration of substrate, then it will stay for
+relatively long time in the regime of maximum production rate. We
+depict this situation in figure below.
+   
 
-.. image:: output_9_0.png
+ .. figure:: figs/MM_steady_state_Vmax_conditions2.png
+   :scale: 50%
+   :align: center
+   
+   Enzymatic reaction in conditions of maximum enzyme production. 
+
+   
+
+.. admonition::   Experiment with Sage!
+
+   Below you can find code solving both 4 dimensional kinetic
+   equations as well as the quasi-steaty approximation.
+
+                  
+.. sagecellserver::
+                  
+      var('s e c p kf kr k3')
+      var('s0,l,K,epsilon,x,y')
+      var('e0 t')
+
+      back_scaling  = {K: k3/(kf*s0) + kr/(kf*s0),l:k3/(kf*s0),epsilon:e0/s0,x:s/s0,y:c/e0}
+      params1 = {kf:5,kr:0.5,k3:1,s0:1,e0:.05}
+      ic = vector([s0,e0,0,0]).subs(params1)
+
+      rhs = [-kf*e*s+kr*c,-kf*e*s+kr*c+k3*c, kf*e*s-kr*c-k3*c, k3*c]
+      rhs2_scaled = [(x + K-l)*y - x, 1/epsilon*( -(x + K)*y + x) ]
+
+      steady_rhs = (kf*s0*e0*rhs2_scaled[0]).subs(y==x/(K+x)).full_simplify().subs(back_scaling).simplify()
+      K_num = K.subs(back_scaling).subs(params1)
+
+      T = srange(0.,83,0.02)
+      sol = desolve_odeint(\
+       vector(rhs).subs(params1),\
+       ic,T,[s,e,c,p])
+
+      steady_sol = desolve_odeint(steady_rhs.subs(params1),s0.subs(params1),T,s)
+
+      p = line( zip ( T,sol[:,0]) ,figsize=(6,3),legend_label="s (substrate)") 
+      p += line( zip ( T,10*sol[:,1]) ,color='red',legend_label="e (enzyme)")
+      p += line( zip ( T,10*sol[:,2]) ,color='green',legend_label="c (complex)")
+      p += line( zip ( T,sol[:,3]) ,color='black',legend_label="p (product)") 
+
+      p += line( zip ( T,steady_sol) ,linestyle='dashed',legend_label="s - steady state") 
+      p += line( zip ( T,10*(e0/s0).subs(params1)*steady_sol/(steady_sol+K_num) ) ,linestyle='dashed',\
+                color='green',legend_label="c - steady state") 
+      p += plot((k3*e0).subs(params1)*t,(t,0,20),color='gray' ,linestyle='dashed',legend_label="max theoretical production")
+      p.set_legend_options(loc='right')
+      p.show(title=r'$\epsilon=%0.2f$'%params1[e0])
+
+      
 
 
-.. figure:: iCSE_BProcnielin04_z122_kinetyka_chemiczna_media/cell_38_sage0.png
-   :alt: image
-   :figclass: align-center
-
-   image
-
+   
+   
 Excercises
 ----------
 
@@ -560,9 +701,6 @@ B2. Write equations in the dimensionless form.
 
 B3. Determine stationary states and their stability.
 
-.. raw:: html
-
-   <!-- -->
 
 II. There is a sequence of chemical reactions:
 
