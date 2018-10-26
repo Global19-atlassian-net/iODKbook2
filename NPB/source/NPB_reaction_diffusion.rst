@@ -29,9 +29,11 @@ adding the Laplacian to evolution equations:
 
 .. math::
 
-   \frac{\partial c(\vec r, t)}{\partial t} = D \Delta c(\vec r, t) = D \left[\frac{\partial^2 }{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial ^2}{\partial z^2} \right] c(\vec r, t) = 
+   \frac{\partial c(\vec r, t)}{\partial t} = D \Delta c(\vec r, t) = D \left[\frac{\partial^2 }{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial ^2}{\partial z^2} \right] c(\vec r, t) = \\
+
    D \left[\frac{\partial^2 c(\vec r, t)}{\partial x^2} + \frac{\partial^2 c(\vec r, t)}{\partial y^2} + \frac{\partial ^2 c(\vec r, t)}{\partial z^2} \right] 
 
+      
 where :math:`c(\vec r, t)` is the concentration of the dye particles at
 time :math:`t` in the point of space of coordinates
 :math:`\vec r = (x, y, z)`. Let us note that the diffusion process is
@@ -61,14 +63,17 @@ Its solution reads
 If we want to take into account the spatial spread of population (or
 chemical products), we can formulate the following method:
 
-**One has to add the Laplace operator to evolution equations**
+.. admonition:: Recipe
+   
+   One has to add the Laplace operator to evolution equations
 
+   
 If spread is in 2-dimensional region, we should add the term:
 
 .. math:: +  D \left[ \frac{\partial^2 }{\partial  x^2}  + \frac{\partial^2 }{\partial y^2} \right] c(x, y, t)
 
 Solution of the 2-dimensional diffusion equation is the Gaussian
-function on the form
+function on the form:
 
 .. math:: c(x, y, t) = [4\pi Dt]^{-2/2} \; \exp\left[-\frac{x^2+y^2}{4Dt}\right] =\frac{1}{4\pi Dt}  \; \exp\left[-\frac{x^2+y^2}{4Dt}\right]
 
@@ -82,24 +87,6 @@ function on the form
     def _(viewer=['tachyon','jmol','canvas3d']): 
         show(sum(plts),viewer=viewer)
 
-
-
-
-.. raw:: html
-
-    <p>Failed to display Jupyter Widget of type <code>sage_interactive</code>.</p>
-    <p>
-      If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
-      that the widgets JavaScript is still loading. If this message persists, it
-      likely means that the widgets JavaScript library is either not installed or
-      not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html">Jupyter
-      Widgets Documentation</a> for setup instructions.
-    </p>
-    <p>
-      If you're reading this message in another frontend (for example, a static
-      rendering on GitHub or <a href="https://nbviewer.jupyter.org/">NBViewer</a>),
-      it may mean that your frontend doesn't currently support widgets.
-    </p>
 
 
 
@@ -185,9 +172,9 @@ transferred into new regions.
    :alt: image
    :figclass: align-center
 
-   image
+   Bisamratte
 
-http://pl.wikipedia.org/w/index.php?title=Plik:Bisamratte-drawing.jpg&filetimestamp=20041114193425
+   
 
 In this model, we consider only such cases when
 :math:`N(x, y, t) \ge 0`. Aditionally, we need:
