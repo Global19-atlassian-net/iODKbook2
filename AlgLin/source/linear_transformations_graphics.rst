@@ -654,13 +654,15 @@ The code below generates a rotating triangle. Observe minor changes that had to 
 
 
 
-3-dimensional Graphics
-~~~~~~~~~~~~~~~~~~~~~~
+.. 3-dimensional Graphics
+.. ~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 Exercises
 ~~~~~~~~~
+
+The exercises can be downloaded in a form of a notebook from `here <http://visual.icse.us.edu.pl/LA/Notebooks/Graphics-exercises.ipynb>`_ .
 
 **Exercise 1.**
 

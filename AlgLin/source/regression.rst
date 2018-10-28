@@ -309,6 +309,8 @@ Note that because of lack of information on bluegills at early age, the graph do
 Exercises
 ~~~~~~~~~
 
+The exercises can be downloaded in a form of a notebook from `here <http://visual.icse.us.edu.pl/LA/Notebooks/Regression-exercises.ipynb>`_ .
+
 **Exercise 1.**
 
 a). Gather together the code from Example 3 in order to obtain the polynomial of degree 2 that best fits the data on bluegill fish. 

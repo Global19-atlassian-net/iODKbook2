@@ -1,6 +1,9 @@
 Exercises
 ~~~~~~~~~
 
+The exercises can be downloaded in a form of a notebook from `here <http://visual.icse.us.edu.pl/LA/Notebooks/Problem_wlasny_zadania.ipynb>`_ .
+
+
 **Exercise 1.** [1]_
 
 Consider a web consisting of 4 pages illustrated by the following graph:

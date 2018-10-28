@@ -41,43 +41,33 @@ The last constraint represents the fact that one cannot buy a negative amount of
 
 **The optimal allocation problem**
 
-A company produces :math:`\ n\ ` types of products,  :math:`\ P_1,\ldots , P_n\ `, out of 
-:math:`\ m\ ` types of resources,  :math:`\ R_1,\ldots , R_m\ `.
-One unit of the product :math:`\ P_i\ ` brings :math:`\ p_i\ ` of profit and requires :math:`\ a_{ij}\ `
+A company produces :math:`\ m\ ` types of products,  :math:`\ P_1,\ldots , P_m\ `, out of 
+:math:`\ n\ ` types of resources,  :math:`\ R_1,\ldots , R_n\ `.
+One unit of the product :math:`\ P_i\ ` brings :math:`\ p_i\ ` of profit and requires :math:`\ a_{ji}\ `
 units of the resource :math:`\ R_j\ `, 
-:math:`\ i\in\left\{ 1, 2,\ldots ,n\right\}\, ,\ j\in\left\{ 1, 2,\ldots ,m\right\}\ `.
+:math:`\ i\in\left\{ 1, 2,\ldots ,m\right\}\, ,\ j\in\left\{ 1, 2,\ldots ,n\right\}\ `.
 The problem is to maximize the profit if there are only :math:`\ r_j\ ` units of the resource 
-:math:`\ R_j\ `, :math:`\ j\in\left\{1,\ldots , J\right\}\ `.
+:math:`\ R_j\ `, :math:`\ j\in\left\{1,\ldots , n\right\}\ `.
 
 This problem is very similar to the diet problem, but this time asks for optimal numbers 
-:math:`\ y_i\ ` of products :math:`\ P_i\ ` that should be produced so that the profit is maximal.
+:math:`\ x_i\ ` of products :math:`\ P_i\ ` that should be produced so that the profit is maximal.
 This represents *the Standard Maximum Problem* :
 
 .. math::
 
     \begin{array}
-    \text{maximize:} &  y_1p_1 + \ldots + y_np_n\\
-    \text{constraints:} & y_1a_{1j}+ \ldots + y_na_{nj} \leq r_j\, ,\quad j\in\left\{ 1,\ldots ,m\right\}\\
-    & y_i\geq 0 \, ,\quad i\in\left\{ 1,\ldots ,n\right\}\\
+    \text{maximize:} &  p_1x_1 + \ldots + p_mx_m\\
+    \text{constraints:} & a_{j1}x_1+ \ldots + a_{jm}x_m \leq r_j\, ,\quad j\in\left\{ 1,\ldots ,n\right\}\\
+    & x_i\geq 0 \, ,\quad i\in\left\{ 1,\ldots ,m\right\}\\
     \end{array}
     
-**The transportation problem**
+.. **The transportation problem**
 
-There are :math:`\ I\ ` ports, or production plants, :math:`\ P_1,\ldots , P_I\ `, 
-that supply a certain commodity, and there are :math:`\ J\ ` markets, 
-:math:`\ M_1,\ldots , M_J\ `, to which this commodity must be shipped. 
-Port :math:`\ P_i\ ` possesses an amount :math:`\ s_i\ ` of the commodity 
-(:math:`\ i\in\left\{ 1, 2,\ldots ,I\right\}\ `), and market :math:`\ M_j\ ` 
-must receive the amount :math:`\ r_j\ ` of the commodity 
-(:math:`\ j\in\left\{ 1,\ldots ,J\right\}\ `). 
-Let :math:`\ b_{ij}\ ` be the cost of transporting one unit of the commodity
-from port :math:`\ P_i\ ` to market :math:`\ M_j\ `. The problem is to meet the market requirements at minimum
-transportation cost.
+.. There are :math:`\ I\ ` ports, or production plants, :math:`\ P_1,\ldots , P_I\ `, that supply a certain commodity, and there are :math:`\ J\ ` markets, :math:`\ M_1,\ldots , M_J\ `, to which this commodity must be shipped. Port :math:`\ P_i\ ` possesses an amount :math:`\ s_i\ ` of the commodity (:math:`\ i\in\left\{ 1, 2,\ldots ,I\right\}\ `), and market :math:`\ M_j\ ` must receive the amount :math:`\ r_j\ ` of the commodity (:math:`\ j\in\left\{ 1,\ldots ,J\right\}\ `). Let :math:`\ b_{ij}\ ` be the cost of transporting one unit of the commodity from port :math:`\ P_i\ ` to market :math:`\ M_j\ `. The problem is to meet the market requirements at minimum transportation cost.
 
-Denote by :math:`\ x_{ij}\ ` the amount of commodity that is shipped from :math:`\ P_i\ `
-to :math:`\ M_j\ `. Then the problem can be stated as follows:
+.. Denote by :math:`\ x_{ij}\ ` the amount of commodity that is shipped from :math:`\ P_i\ ` to :math:`\ M_j\ `. Then the problem can be stated as follows:
 
-.. math::
+.. .. math::
 
     \begin{array}
     \text{minimize:} &  \sum_{i=1}^I\sum_{j=1}^J b_{ij}x_{ij}\\
@@ -257,7 +247,7 @@ We take :math:`z=r` and under this assuption compute the intersection of the two
     eq2 = 0.52*x+0.02*y+0.8*z==8
     cost = 0.18*x+0.23*y+0.05*z==c
     Eqns = [eq1,eq2,cost,z==r]
-    sol=solve(Eqns,[x,y,z,c])
+    sol = solve(Eqns,[x,y,z,c])
     if sol==[]: 
         print "Execute code in the previous cell!"
     else: print sol
@@ -693,17 +683,51 @@ The above explanation was partially inspired by an excellent lecture of prof. Cr
 Exercises
 ~~~~~~~~~
 
-**Exercise 1**
-offers 
+Since the solutions of the exercises below require writing a lot of code, it may be better to download them from `here <http://visual.icse.us.edu.pl/LA/Notebooks/Linear-prog-ex.ipynb>`_ in a form of a notebook and then open them e.g. via CoCalc available `here <https://cocalc.com/settings?session=default>`_
+
+**Exercise 1.**
+
 One school organizes a trip for 250 people. A shipping company offers coaches of types A, B, C which can take 32, 45 and 60 people resepctively, and cost 600, 800 and 1000 euros respectively. Find out how many coaches of each type the school should hire so that the cost is minimal.
 
+.. sagecellserver::
 
 
+**Exercise 2.**
+
+Consider the diet problem from Example 2. Use simplex method to verify whether the solution obtained by the geometric method is correct.
+
+.. sagecellserver::
 
 
+**Exercise 3.**
+
+A company Woolwear produces jackets, sweaters and shirts out of wool (:math:`60` units), cotton (:math:`100` units), zips (:math:`50` units), buttons (:math:`60` units) and  fur (:math:`60` units). The following table presents the number of units of each material that is necessary for a production of a given type of clothing:
+
++----------+------+--------+-----+--------+-----+
+|          | Wool | Cotton | Zip | Button | Fur |
++==========+======+========+=====+========+=====+
+| Sweater  | 2    | 5      | 1   | 0      | 1   |
++----------+------+--------+-----+--------+-----+
+| Jacket   | 1    | 7      | 0   | 2      | 3   |
++----------+------+--------+-----+--------+-----+
+| Shirt    | 1    | 1      | 3   | 3      | 1   |
++----------+------+--------+-----+--------+-----+
+
+Each sweater gives :math:`20` euros of profit, jacket gives :math:`30` euros of profit, and shirt :math:`10`. How many sweaters, jackets and shirts the company should produce out of available materials in order to obtain a maximal profit?
+
+.. sagecellserver::
 
 
+.. note::
 
-
+    The simplex method does not necesarily produce integer solutions; this may be the case for this problem. 
+    Try to round the solutions to integer values which satisfy the constraints and so that the resulting profit 
+    differs from the optimal one by less than :math:`10` (note that the profit is always the number divisible by :math:`10`).
+    
+    In general, a linear programming problem where one seeks an integer solution is called an *integer programming problem*.
+    See `wikipedia page <https://en.wikipedia.org/wiki/Integer_programming>`_ for a description and a list of possible algorithms.
+    In fact, in contrast to linear programming problems which can be solved efficiently, 
+    integer programming problems are in may cases *NP-hard*.
+    
 
 .. _lecture: https://www.youtube.com/watch?v=Ci1vBGn9yRc

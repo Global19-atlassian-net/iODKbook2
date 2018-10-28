@@ -346,10 +346,10 @@ The result may be verified by checking remaining pairs (plaintext, ciphertext). 
     N = 26
     
     
-Exercises
-~~~~~~~~~
+.. Exercises
+.. ~~~~~~~~~
 
-**Exercise 1.**
+**Exercise.**
 
 You intercepted the message that was encrypted via Hill's cipher with the key matrix of size :math:`3.` Most probably the plaintext starts with :math:`\ {\tt TOGENERAL}\ ` . Find the key matrix and decrypt the rest of the ciphertext: 
 
