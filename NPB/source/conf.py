@@ -45,8 +45,8 @@ extensions = [
 	'sphinx.ext.viewcode',
         'sphinx-sagecell-ext.sagecell',
     'nbsphinx',
-    'nbsphinx_link',
-    'jupyter_sphinx.embed_widgets']
+    'nbsphinx_link',]
+#    'jupyter_sphinx.embed_widgets']
     
     
 
